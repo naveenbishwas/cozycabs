@@ -1,13 +1,21 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --brandColor: #d80117;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
+} */
+
+@font-face {
+  font-family: "Unbounded";
+  src: url("/Unbounded Font/Unbounded-variableFont_wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
 }
 
 html,
@@ -28,6 +36,8 @@ body {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+
+  font-family: "Unbounded", sans-serif;
 }
 
 a {
