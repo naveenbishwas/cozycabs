@@ -182,46 +182,50 @@ export default function Home() {
 
   const projects = [
     {
-      title: "Eco-Friendly Wash",
-      img: "/car1.webp",
+      title: "Compact cars (Tata Indica)",
+      img: "/compact2.webp",
       link: "/portfolio/eco-wash",
     },
     {
-      title: "Polish Treatment",
-      img: "/car2.webp",
+      title: "Economy SUVs (Mahindra Scorpio",
+      img: "/suv.avif",
       link: "/portfolio/polish-treatment",
     },
     {
-      title: "Engine Bay Cleaning",
-      img: "/car3.webp",
+      title: "Chevrolet Tavera)",
+      img: "/chevrolet.jpg",
       link: "/portfolio/engine-cleaning",
     },
     {
-      title: "Full-Service Detailing",
-      img: "/car4.webp",
+      title: "Economy Sedans (Maruti Swift Dzire",
+      img: "/sedan.jpg",
       link: "/portfolio/full-detailing",
       highlight: true,
     },
     {
-      title: "Eco-Friendly Wash",
-      img: "/car1.webp",
+      title: "Tata Indigo and Mahindra Logan)",
+      img: "/logan.avif",
       link: "/portfolio/eco-wash",
     },
     {
-      title: "Polish Treatment",
-      img: "/car2.webp",
+      title: "Luxury SUVs (Toyota Innova, Mahindra Xylo)",
+      img: "/luxury-suv.avif",
       link: "/portfolio/polish-treatment",
     },
     {
-      title: "Engine Bay Cleaning",
-      img: "/car3.webp",
+      title: "Vans (Tata Winger)",
+      img: "/vans.avif",
       link: "/portfolio/engine-cleaning",
     },
     {
-      title: "Full-Service Detailing",
-      img: "/car4.webp",
+      title: "Luxury Sedans (Toyota Corolla, Honda City)",
+      img: "/toyotal.jpg",
       link: "/portfolio/full-detailing",
-      highlight: true,
+    },
+    {
+      title: "Bus",
+      img: "/bus.jpg",
+      link: "/portfolio/full-detailing",
     },
   ];
 
@@ -408,7 +412,10 @@ export default function Home() {
       <section className="hero">
         <div className="overlay">
           <p className="welcome-text">Welcome To Best Car Wash</p>
-          <h1>Sparkles On Wheels Is Every Car Wash</h1>
+          <h1>
+            Book Reliable & Affordable Cabs in 200+ Cities Across India CTA:
+            Book Now / Get a Quote button
+          </h1>
           <button className="hero-btn">Contact Us</button>
 
           <div className="red-car">
@@ -486,22 +493,6 @@ export default function Home() {
                 unoptimized
               />
             </div>
-          </div>
-
-          <div className="about__right">
-            <p className="about__lead">
-              ake every journey fun. Our sole motive is to enhance the
-              experience of each passenger and provide a chill of relaxation on
-              the way. Mechanically fit & pristine cars and mini-buses are
-              offered to all the valuable clients without any geographical
-              limitation.
-              <br />
-              <br />
-              Mechanically fit & pristine cars and mini-buses are offered to all
-              the valuable clients.
-            </p>
-
-            <hr className="about__divider" />
 
             <ul className="about__checks">
               <li>
@@ -589,6 +580,41 @@ export default function Home() {
                 <span>Engine services</span>
               </li>
             </ul>
+          </div>
+
+          <div className="about__right">
+            <p className="about__lead">
+              Kuldeep Cozy Cabz Pvt Ltd is a renowned online cab service
+              provider in India. After helping thousands of people reach their
+              destinations on time safely through its offline services, it has
+              made its presence online to provide easy 'online cab booking',
+              anytime, anywhere. Online cab booking has never been so easy. You
+              can book a cab/car online in just a few clicks by visiting our
+              website on your mobile or through desktop/laptop. With its
+              efficient and reliable services, Kuldeep Cozy Cabz has left
+              competitions miles behind when it comes to online cab/taxi
+              booking. Cozy Cabz services are available in over 200 + Indian
+              cities which help you reach your destination on time. Our
+              experienced team with in-depth information are available 24x7 to
+              assist you, in case of any queries/help.
+              <br />
+              <br />
+              Kuldeep Cozy Cabz Pvt Ltd is a renowned online cab service
+              provider in India. After helping thousands of people reach their
+              destinations on time safely through its offline services, it has
+              made its presence online to provide easy 'online cab booking',
+              anytime, anywhere. Online cab booking has never been so easy. You
+              can book a cab/car online in just a few clicks by visiting our
+              website on your mobile or through desktop/laptop. With its
+              efficient and reliable services, Kuldeep Cozy Cabz has left
+              competitions miles behind when it comes to online cab/taxi
+              booking. Cozy Cabz services are available in over 200 + Indian
+              cities which help you reach your destination on time. Our
+              experienced team with in-depth information are available 24x7 to
+              assist you, in case of any queries/help.
+            </p>
+
+            <hr className="about__divider" />
 
             <a href="#contact" className="about__cta">
               <span>Read More</span>
@@ -632,41 +658,202 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Services */}
-      <section className="services">
-        <div className="services__toprow">
-          <h3 className="services__eyebrow">Service</h3>
-          <div className="services__rule">
-            <span className="services__dot" />
+      {/* Pricing */}
+      <section className="pricing-wrap" aria-labelledby="pricing-title">
+        <div className="container">
+          <div className="ba__toprow">
+            <h3 className="ba__eyebrow">Pricing Plan</h3>
+            <div className="ba__rule">
+              <span className="ba__dot" />
+            </div>
           </div>
-        </div>
+          <h2 id="pricing-title" className="title">
+            The Most Competitive Pricing Options
+          </h2>
 
-        <h2 className="services__title">Committed To Best Service Quality</h2>
+          <div className="cards">
+            {/* Basic */}
+            <article className="card">
+              <figure className="card-media">
+                <Image
+                  src="/car7.webp"
+                  alt="car-img"
+                  width={0}
+                  height={0}
+                  unoptimized
+                />
+              </figure>
 
-        <div className="services__list">
-          {services.map((s, idx) => (
-            <a
-              href={s.link}
-              key={idx}
-              className={`service ${
-                hoveredServiceIndex === idx ? "active" : ""
-              }`}
-              onMouseEnter={() => setHoveredServiceIndex(idx)}
-              onMouseLeave={() => setHoveredServiceIndex(null)}
-            >
-              <div className="service__icon">
-                <Image src={s.icon} alt="" width={30} height={30} />
+              <div className="card-body">
+                <h3 className="plan-name">Full Day Booking</h3>
+                <p>
+                  Travel worry-free across the city with our 8 hrs/80 km
+                  full-day service, available 24x7 for shopping, meetings,
+                  hospital visits, or sightseeing.
+                </p>
+
+                <ul className="features">
+                  <div className="price-row">
+                    <span className="price">Features:</span>
+                  </div>
+                  <li>8 hrs / 80 km coverage</li>
+                  <li>Available 24x7</li>
+                  <li>
+                    Ideal for city tours, shopping, business & personal trips
+                  </li>
+                </ul>
+
+                <a href="#" className="btn">
+                  Choose Plan
+                </a>
               </div>
-              <div className="service__text">{s.title}</div>
-              <div className="service__arrow">→</div>
+            </article>
 
-              {hoveredServiceIndex === idx && (
-                <div className="service__image">
-                  <Image src={s.img} alt={s.title} width={300} height={200} />
-                </div>
-              )}
-            </a>
-          ))}
+            {/* Standard */}
+            <article className="card">
+              <figure className="card-media">
+                <Image
+                  src="/car4.webp"
+                  alt="car-img"
+                  width={0}
+                  height={0}
+                  unoptimized
+                />
+              </figure>
+
+              <div className="card-body">
+                <h3 className="plan-name">Half Day Booking</h3>
+                <p>
+                  Perfect for shorter commitments, our 4 hrs/40 km package is
+                  great for airport/railway transfers, office meetings, or
+                  interviews. Extra time/kms available at minimal charges.
+                </p>
+
+                <ul className="features">
+                  <div className="price-row">
+                    <span className="price">Features:</span>
+                  </div>
+                  <li>4 hrs / 40 km coverage</li>
+                  <li>Affordable & flexible</li>
+                  <li>Best for airport, office, hospital & local trips</li>
+                </ul>
+
+                <a href="#" className="btn">
+                  Choose Plan
+                </a>
+              </div>
+            </article>
+
+            {/* Premium */}
+            <article className="card">
+              <figure className="card-media">
+                <Image
+                  src="/car8.webp"
+                  alt="car-img"
+                  width={0}
+                  height={0}
+                  unoptimized
+                />
+              </figure>
+
+              <div className="card-body">
+                <h3 className="plan-name">Outstation Travels</h3>
+                <p>
+                  Customized for weekend getaways or family leisure trips
+                  outside city limits. Choose from One-way, Roundtrip, or
+                  Multi-city travel.
+                </p>
+
+                <ul className="features">
+                  <div className="price-row">
+                    <span className="price">Features:</span>
+                  </div>
+                  <li>
+                    One-way Trip: Single drop to one or multiple destinations
+                  </li>
+                  <li>Roundtrip: To & fro journey with flexible stops</li>
+                  <li>
+                    Multi-city Trip: Travel across multiple cities in one
+                    booking
+                  </li>
+                </ul>
+
+                <a href="#" className="btn">
+                  Choose Plan
+                </a>
+              </div>
+            </article>
+
+            {/* Premium */}
+            <article className="card">
+              <figure className="card-media">
+                <Image
+                  src="/car10.webp"
+                  alt="car-img"
+                  width={0}
+                  height={0}
+                  unoptimized
+                />
+              </figure>
+
+              <div className="card-body">
+                <h3 className="plan-name">Corporate Travel</h3>
+                <p>
+                  Tailored packages for corporate clients to ensure timely
+                  travel for meetings, conferences, and delegations. Cars &
+                  buses available as per group size.
+                </p>
+
+                <ul className="features">
+                  <div className="price-row">
+                    <span className="price">Features:</span>
+                  </div>
+                  <li>Fixed-time travel arrangements</li>
+                  <li>Vehicles for conferences & meetings</li>
+                  <li>Options for small or large delegations</li>
+                </ul>
+
+                <a href="#" className="btn">
+                  Choose Plan
+                </a>
+              </div>
+            </article>
+
+            {/* Premium */}
+            <article className="card">
+              <figure className="card-media">
+                <Image
+                  src="/car7.webp"
+                  alt="car-img"
+                  width={0}
+                  height={0}
+                  unoptimized
+                />
+              </figure>
+
+              <div className="card-body">
+                <h3 className="plan-name">Customized Tour Packages</h3>
+                <p>
+                  Specially designed trips by travel experts to suit your
+                  needs—be it leisure, adventure, or spirituality.
+                </p>
+
+                <ul className="features">
+                  <div className="price-row">
+                    <span className="price">Features:</span>
+                  </div>
+                  <li>Adventure tours & eco-tours</li>
+                  <li>Honeymoon & family packages</li>
+                  <li>Pilgrimage & sightseeing trips</li>
+                  <li>Fully personalized on request</li>
+                </ul>
+
+                <a href="#" className="btn">
+                  Choose Plan
+                </a>
+              </div>
+            </article>
+          </div>
         </div>
       </section>
 
@@ -712,6 +899,44 @@ export default function Home() {
               View All Project
             </a>
           </div>
+        </div>
+      </section>
+
+      {/* Services */}
+      <section className="services">
+        <div className="services__toprow">
+          <h3 className="services__eyebrow">Service</h3>
+          <div className="services__rule">
+            <span className="services__dot" />
+          </div>
+        </div>
+
+        <h2 className="services__title">Committed To Best Service Quality</h2>
+
+        <div className="services__list">
+          {services.map((s, idx) => (
+            <a
+              href={s.link}
+              key={idx}
+              className={`service ${
+                hoveredServiceIndex === idx ? "active" : ""
+              }`}
+              onMouseEnter={() => setHoveredServiceIndex(idx)}
+              onMouseLeave={() => setHoveredServiceIndex(null)}
+            >
+              <div className="service__icon">
+                <Image src={s.icon} alt="" width={30} height={30} />
+              </div>
+              <div className="service__text">{s.title}</div>
+              <div className="service__arrow">→</div>
+
+              {hoveredServiceIndex === idx && (
+                <div className="service__image">
+                  <Image src={s.img} alt={s.title} width={300} height={200} />
+                </div>
+              )}
+            </a>
+          ))}
         </div>
       </section>
 
@@ -778,119 +1003,6 @@ export default function Home() {
                 />
               </svg>
             </button>
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing */}
-      <section className="pricing-wrap" aria-labelledby="pricing-title">
-        <div className="container">
-          <div className="ba__toprow">
-            <h3 className="ba__eyebrow">Pricing Plan</h3>
-            <div className="ba__rule">
-              <span className="ba__dot" />
-            </div>
-          </div>
-          <h2 id="pricing-title" className="title">
-            The Most Competitive Pricing Options
-          </h2>
-
-          <div className="cards">
-            {/* Basic */}
-            <article className="card">
-              <figure className="card-media">
-                <Image
-                  src="/car7.webp"
-                  alt="car-img"
-                  width={0}
-                  height={0}
-                  unoptimized
-                />
-              </figure>
-
-              <div className="card-body">
-                <h3 className="plan-name">Basic</h3>
-                <div className="price-row">
-                  <span className="price">$89</span>
-                  <span className="per">/ Per Month</span>
-                </div>
-
-                <ul className="features">
-                  <li>Drying System</li>
-                  <li>High–Pressure Pumps</li>
-                  <li>Water Reclaim System</li>
-                  <li>Brushes and Rollers</li>
-                </ul>
-
-                <a href="#" className="btn">
-                  Choose Plan
-                </a>
-              </div>
-            </article>
-
-            {/* Standard */}
-            <article className="card">
-              <figure className="card-media">
-                <Image
-                  src="/car8.webp"
-                  alt="car-img"
-                  width={0}
-                  height={0}
-                  unoptimized
-                />
-              </figure>
-
-              <div className="card-body">
-                <h3 className="plan-name">Standard</h3>
-                <div className="price-row">
-                  <span className="price">$149</span>
-                  <span className="per">/ Per Month</span>
-                </div>
-
-                <ul className="features">
-                  <li>Quick Shine Wash</li>
-                  <li>Classic Clean Wash</li>
-                  <li>Standard Exterior Wash</li>
-                  <li>High–Pressure Arch</li>
-                </ul>
-
-                <a href="#" className="btn">
-                  Choose Plan
-                </a>
-              </div>
-            </article>
-
-            {/* Premium */}
-            <article className="card">
-              <figure className="card-media">
-                <Image
-                  src="/car10.webp"
-                  alt="car-img"
-                  width={0}
-                  height={0}
-                  unoptimized
-                />
-              </figure>
-
-              <div className="card-body">
-                <h3 className="plan-name">Premium</h3>
-                <div className="price-row">
-                  <span className="price">$189</span>
-                  <span className="per">/ Per Month</span>
-                </div>
-
-                <ul className="features">
-                  <li>Advanced Pre–Soak System</li>
-                  <li>High–Pressure Water Jets</li>
-                  <li>Soft Cloth or Microfiber Brushes</li>
-                  <li>Advanced Rinse System</li>
-                </ul>
-
-                <a href="#" className="btn">
-                  Choose Plan
-                </a>
-              </div>
-            </article>
           </div>
         </div>
       </section>
