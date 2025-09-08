@@ -374,7 +374,7 @@ export default function Home() {
       desc: "Professional car rental services available 24/7 in Mumbai. Book now for reliable transportation solutions.",
       cta: "Book in Mumbai",
       href: "#mumbai",
-      img: "https://images.unsplash.com/photo-1529257414772-1960b4d4a4a3?q=80&w=1600&auto=format&fit=crop",
+      img: "mumbai.png",
       alt: "Marine Drive, Mumbai",
     },
     {
@@ -383,7 +383,7 @@ export default function Home() {
       desc: "Professional car rental services available 24/7 in Jaipur. Book now for reliable transportation solutions.",
       cta: "Book in Jaipur",
       href: "#jaipur",
-      img: "", // no image → shows placeholder state
+      img: "jaipur.png", // no image → shows placeholder state
       alt: "Jaipur",
     },
     {
@@ -392,7 +392,7 @@ export default function Home() {
       desc: "Comfortable and reliable rides across Chandigarh with 24/7 support.",
       cta: "Book in Chandigarh",
       href: "#chandigarh",
-      img: "https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1600&auto=format&fit=crop",
+      img: "chandigarh.png",
       alt: "Hills near Chandigarh",
     },
     {
@@ -410,7 +410,7 @@ export default function Home() {
       desc: "Safe, clean, and comfortable travel across Hyderabad—available round the clock.",
       cta: "Book in Hyderabad",
       href: "#hyderabad",
-      img: "",
+      img: "hyderabad.png",
       alt: "Hyderabad",
     },
   ];
@@ -670,7 +670,7 @@ export default function Home() {
               viewBox="0 0 70 70"
               fill="none"
             >
-              <g clip-path="url(#clip0_1109_117)">
+              <g clipPath="url(#clip0_1109_117)">
                 <path
                   d="M5.46875 9.84375C6.33404 9.84375 7.1799 9.58716 7.89937 9.10643C8.61883 8.6257 9.17959 7.94242 9.51072 7.14299C9.84186 6.34356 9.9285 5.4639 9.75969 4.61523C9.59088 3.76657 9.1742 2.98701 8.56234 2.37516C7.95049 1.76331 7.17094 1.34663 6.32227 1.17782C5.4736 1.00901 4.59394 1.09565 3.79451 1.42678C2.99508 1.75791 2.3118 2.31867 1.83107 3.03813C1.35034 3.7576 1.09375 4.60346 1.09375 5.46875C1.09505 6.62867 1.55641 7.74072 2.3766 8.56091C3.19679 9.38109 4.30883 9.84245 5.46875 9.84375ZM5.46875 3.28125C5.9014 3.28125 6.32433 3.40955 6.68406 3.64991C7.04379 3.89028 7.32417 4.23192 7.48974 4.63163C7.6553 5.03135 7.69862 5.47118 7.61422 5.89551C7.52981 6.31985 7.32147 6.70962 7.01555 7.01555C6.70962 7.32148 6.31984 7.52981 5.89551 7.61422C5.47118 7.69863 5.03134 7.65531 4.63163 7.48974C4.23192 7.32417 3.89028 7.04379 3.64991 6.68406C3.40954 6.32433 3.28125 5.9014 3.28125 5.46875C3.2819 4.88879 3.51258 4.33277 3.92267 3.92268C4.33277 3.51258 4.88879 3.2819 5.46875 3.28125Z"
                   fill="white"
@@ -765,7 +765,7 @@ export default function Home() {
 
             <div className="about__imagewrap">
               <Image
-                src="/car2.webp"
+                src="/about1.png"
                 alt="car-image"
                 fill
                 priority
@@ -784,101 +784,14 @@ export default function Home() {
               made its presence online to provide easy 'online cab booking',
               anytime, anywhere. Online cab booking has never been so easy. You
               can book a cab/car online in just a few clicks by visiting our
-              website on your mobile or through desktop/laptop. With its
-              efficient and reliable services, Kuldeep Cozy Cabz has left
-              competitions miles behind when it comes to online cab/taxi
-              booking. Cozy Cabz services are available in over 200 + Indian
-              cities which help you reach your destination on time. Our
-              experienced team with in-depth information are available 24x7 to
-              assist you, in case of any queries/help.
+              website on your mobile or through desktop/laptop.
+              <br /> <br /> With its efficient and reliable services, Kuldeep
+              Cozy Cabz has left competitions miles behind when it comes to
+              online cab/taxi booking. Cozy Cabz services are available in over
+              200 + Indian cities which help you reach your destination on time.
+              Our experienced team with in-depth information are available 24x7
+              to assist you, in case of any queries/help.
             </p>
-
-            <ul className="about__checks">
-              <li>
-                <span className="check">
-                  <svg
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24"
-                    aria-hidden="true"
-                  >
-                    <circle cx="12" cy="12" r="12" fill="var(--brandColor)" />
-                    <path
-                      d="M7 12.5l3 3 7-7"
-                      fill="none"
-                      stroke="#fff"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </span>
-                <span>Wheel &amp; steering checkup</span>
-              </li>
-              <li>
-                <span className="check">
-                  <svg
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24"
-                    aria-hidden="true"
-                  >
-                    <circle cx="12" cy="12" r="12" fill="var(--brandColor)" />
-                    <path
-                      d="M7 12.5l3 3 7-7"
-                      fill="none"
-                      stroke="#fff"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </span>
-                <span>Engine services</span>
-              </li>
-              <li>
-                <span className="check">
-                  <svg
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24"
-                    aria-hidden="true"
-                  >
-                    <circle cx="12" cy="12" r="12" fill="var(--brandColor)" />
-                    <path
-                      d="M7 12.5l3 3 7-7"
-                      fill="none"
-                      stroke="#fff"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </span>
-                <span>Engine services</span>
-              </li>
-              <li>
-                <span className="check">
-                  <svg
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24"
-                    aria-hidden="true"
-                  >
-                    <circle cx="12" cy="12" r="12" fill="var(--brandColor)" />
-                    <path
-                      d="M7 12.5l3 3 7-7"
-                      fill="none"
-                      stroke="#fff"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </span>
-                <span>Engine services</span>
-              </li>
-            </ul>
 
             <hr className="about__divider" />
 
@@ -907,7 +820,7 @@ export default function Home() {
             <article className="plan-card">
               <figure className="card-media">
                 <Image
-                  src="/car7.webp"
+                  src="/p1.webp"
                   alt="car-img"
                   width={0}
                   height={0}
@@ -944,7 +857,7 @@ export default function Home() {
             <article className="plan-card">
               <figure className="card-media">
                 <Image
-                  src="/car4.webp"
+                  src="/p2.webp"
                   alt="car-img"
                   width={0}
                   height={0}
@@ -979,7 +892,7 @@ export default function Home() {
             <article className="plan-card">
               <figure className="card-media">
                 <Image
-                  src="/car8.webp"
+                  src="/p3.webp"
                   alt="car-img"
                   width={0}
                   height={0}
@@ -1019,7 +932,7 @@ export default function Home() {
             <article className="plan-card">
               <figure className="card-media">
                 <Image
-                  src="/car10.webp"
+                  src="/p4.webp"
                   alt="car-img"
                   width={0}
                   height={0}
@@ -1054,7 +967,7 @@ export default function Home() {
             <article className="plan-card">
               <figure className="card-media">
                 <Image
-                  src="/car7.webp"
+                  src="/p5.webp"
                   alt="car-img"
                   width={0}
                   height={0}
@@ -1863,13 +1776,13 @@ export default function Home() {
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
                       viewBox="0 0 24 24"
-                      stroke-width="1.5"
+                      strokeWidth="1.5"
                       stroke="currentColor"
-                      class="size-6"
+                      className="size-6"
                     >
                       <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
                         d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"
                       />
                     </svg>
