@@ -360,7 +360,7 @@ export default function Home() {
 
   const cities = [
     {
-      name: "Delhi",
+      name: "Agra",
       status: "Car Rental Available",
       desc: "Professional car rental services available 24/7 in Delhi. Book now for reliable transportation solutions.",
       cta: "Book in Delhi",
@@ -374,7 +374,7 @@ export default function Home() {
       desc: "Professional car rental services available 24/7 in Mumbai. Book now for reliable transportation solutions.",
       cta: "Book in Mumbai",
       href: "#mumbai",
-      img: "MUMBAI.png",
+      img: "Mumbai2.png",
       alt: "Marine Drive, Mumbai",
     },
     {
@@ -383,7 +383,7 @@ export default function Home() {
       desc: "Professional car rental services available 24/7 in Jaipur. Book now for reliable transportation solutions.",
       cta: "Book in Jaipur",
       href: "#jaipur",
-      img: "JAIPUR.png", // no image → shows placeholder state
+      img: "Jaipur2.png", // no image → shows placeholder state
       alt: "Jaipur",
     },
     {
@@ -392,7 +392,7 @@ export default function Home() {
       desc: "Comfortable and reliable rides across Chandigarh with 24/7 support.",
       cta: "Book in Chandigarh",
       href: "#chandigarh",
-      img: "CHANDIGARH.png",
+      img: "Chandigarh2.png",
       alt: "Hills near Chandigarh",
     },
     {
@@ -401,7 +401,7 @@ export default function Home() {
       desc: "On-time pickups and well-maintained cars for business and family travel.",
       cta: "Book in Ludhiana",
       href: "#ludhiana",
-      img: "KOLKATA.png",
+      img: "Kolkata2.png",
       alt: "Mountains",
     },
     {
@@ -410,7 +410,7 @@ export default function Home() {
       desc: "Safe, clean, and comfortable travel across Hyderabad—available round the clock.",
       cta: "Book in Hyderabad",
       href: "#hyderabad",
-      img: "HYDERABAD.png",
+      img: "hyderabad2.png",
       alt: "Hyderabad",
     },
   ];
@@ -820,7 +820,7 @@ export default function Home() {
             <article className="plan-card">
               <figure className="card-media">
                 <Image
-                  src="/p1.webp"
+                  src="/car11.png"
                   alt="car-img"
                   width={0}
                   height={0}
@@ -857,7 +857,7 @@ export default function Home() {
             <article className="plan-card">
               <figure className="card-media">
                 <Image
-                  src="/p2.webp"
+                  src="/c12.png"
                   alt="car-img"
                   width={0}
                   height={0}
@@ -892,7 +892,7 @@ export default function Home() {
             <article className="plan-card">
               <figure className="card-media">
                 <Image
-                  src="/p3.webp"
+                  src="/c13.png"
                   alt="car-img"
                   width={0}
                   height={0}
@@ -932,7 +932,7 @@ export default function Home() {
             <article className="plan-card">
               <figure className="card-media">
                 <Image
-                  src="/p4.webp"
+                  src="/c15.png"
                   alt="car-img"
                   width={0}
                   height={0}
@@ -967,7 +967,7 @@ export default function Home() {
             <article className="plan-card">
               <figure className="card-media">
                 <Image
-                  src="/p5.webp"
+                  src="/c16.png"
                   alt="car-img"
                   width={0}
                   height={0}
