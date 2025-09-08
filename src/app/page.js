@@ -141,6 +141,80 @@ export default function Home() {
     if (e.key === "ArrowRight") setBeforeAfterPos((p) => Math.min(100, p + 2));
   };
 
+  // === Feature Card Component ===
+  function TrustFeature({ icon, title, text }) {
+    return (
+      <div className="card">
+        <div className="iconWrap">{icon}</div>
+        <div className="cardTitle">{title}</div>
+        <div className="cardText">{text}</div>
+      </div>
+    );
+  }
+
+  // === Icon Components ===
+  function TrustShieldIcon() {
+    return (
+      <svg width="36" height="36" viewBox="0 0 24 24" fill="none">
+        <path
+          d="M12 2l7 3v6c0 5-3.5 8.5-7 9-3.5-.5-7-4-7-9V5l7-3z"
+          stroke="#fff"
+          strokeWidth="2"
+          strokeLinejoin="round"
+        />
+        <path
+          d="M9 12l2 2 4-4"
+          stroke="#fff"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    );
+  }
+
+  function TrustClockIcon() {
+    return (
+      <svg width="36" height="36" viewBox="0 0 24 24" fill="none">
+        <circle cx="12" cy="12" r="9" stroke="#fff" strokeWidth="2" />
+        <path
+          d="M12 7v5l3 2"
+          stroke="#fff"
+          strokeWidth="2"
+          strokeLinecap="round"
+        />
+      </svg>
+    );
+  }
+
+  function TrustDriverIcon() {
+    return (
+      <svg width="36" height="36" viewBox="0 0 24 24" fill="none">
+        <circle cx="12" cy="7" r="3" stroke="#fff" strokeWidth="2" />
+        <path d="M6 19a6 6 0 0112 0" stroke="#fff" strokeWidth="2" />
+      </svg>
+    );
+  }
+
+  function TrustFleetIcon() {
+    return (
+      <svg width="36" height="36" viewBox="0 0 24 24" fill="none">
+        <rect
+          x="3"
+          y="8"
+          width="18"
+          height="7"
+          rx="2"
+          stroke="#fff"
+          strokeWidth="2"
+        />
+        <path d="M6 8l2-3h8l2 3" stroke="#fff" strokeWidth="2" />
+        <circle cx="7" cy="17" r="2" fill="#fff" />
+        <circle cx="17" cy="17" r="2" fill="#fff" />
+      </svg>
+    );
+  }
+
   // About counters ref
   const aboutCountersRef = useAboutCountersObserver();
 
@@ -180,54 +254,54 @@ export default function Home() {
     },
   ];
 
-  const projects = [
-    {
-      title: "Compact cars (Tata Indica)",
-      img: "/compact2.webp",
-      link: "/portfolio/eco-wash",
-    },
-    {
-      title: "Economy SUVs (Mahindra Scorpio",
-      img: "/suv.avif",
-      link: "/portfolio/polish-treatment",
-    },
-    {
-      title: "Chevrolet Tavera)",
-      img: "/chevrolet.jpg",
-      link: "/portfolio/engine-cleaning",
-    },
-    {
-      title: "Economy Sedans (Maruti Swift Dzire",
-      img: "/sedan.jpg",
-      link: "/portfolio/full-detailing",
-      highlight: true,
-    },
-    {
-      title: "Tata Indigo and Mahindra Logan)",
-      img: "/logan.avif",
-      link: "/portfolio/eco-wash",
-    },
-    {
-      title: "Luxury SUVs (Toyota Innova, Mahindra Xylo)",
-      img: "/luxury-suv.avif",
-      link: "/portfolio/polish-treatment",
-    },
-    {
-      title: "Vans (Tata Winger)",
-      img: "/vans.avif",
-      link: "/portfolio/engine-cleaning",
-    },
-    {
-      title: "Luxury Sedans (Toyota Corolla, Honda City)",
-      img: "/toyotal.jpg",
-      link: "/portfolio/full-detailing",
-    },
-    {
-      title: "Bus",
-      img: "/bus.jpg",
-      link: "/portfolio/full-detailing",
-    },
-  ];
+  // const projects = [
+  //   {
+  //     title: "Compact cars (Tata Indica)",
+  //     img: "/compact2.webp",
+  //     link: "/portfolio/eco-wash",
+  //   },
+  //   {
+  //     title: "Economy SUVs (Mahindra Scorpio",
+  //     img: "/suv.avif",
+  //     link: "/portfolio/polish-treatment",
+  //   },
+  //   {
+  //     title: "Chevrolet Tavera)",
+  //     img: "/chevrolet.jpg",
+  //     link: "/portfolio/engine-cleaning",
+  //   },
+  //   {
+  //     title: "Economy Sedans (Maruti Swift Dzire",
+  //     img: "/sedan.jpg",
+  //     link: "/portfolio/full-detailing",
+  //     highlight: true,
+  //   },
+  //   {
+  //     title: "Tata Indigo and Mahindra Logan)",
+  //     img: "/logan.avif",
+  //     link: "/portfolio/eco-wash",
+  //   },
+  //   {
+  //     title: "Luxury SUVs (Toyota Innova, Mahindra Xylo)",
+  //     img: "/luxury-suv.avif",
+  //     link: "/portfolio/polish-treatment",
+  //   },
+  //   {
+  //     title: "Vans (Tata Winger)",
+  //     img: "/vans.avif",
+  //     link: "/portfolio/engine-cleaning",
+  //   },
+  //   {
+  //     title: "Luxury Sedans (Toyota Corolla, Honda City)",
+  //     img: "/toyotal.jpg",
+  //     link: "/portfolio/full-detailing",
+  //   },
+  //   {
+  //     title: "Bus",
+  //     img: "/bus.jpg",
+  //     link: "/portfolio/full-detailing",
+  //   },
+  // ];
 
   /* ---------------------------------------------------------------- */
   /* Testimonial slider A (two-column with avatar row)                 */
@@ -305,6 +379,196 @@ export default function Home() {
     },
   ];
 
+  const cities = [
+    {
+      name: "Delhi",
+      status: "Car Rental Available",
+      desc: "Professional car rental services available 24/7 in Delhi. Book now for reliable transportation solutions.",
+      cta: "Book in Delhi",
+      href: "#delhi",
+      img: "https://images.unsplash.com/photo-1564507592333-c60657eea523?q=80&w=1600&auto=format&fit=crop",
+      alt: "India Gate, Delhi",
+    },
+    {
+      name: "Mumbai",
+      status: "Car Rental Available",
+      desc: "Professional car rental services available 24/7 in Mumbai. Book now for reliable transportation solutions.",
+      cta: "Book in Mumbai",
+      href: "#mumbai",
+      img: "https://images.unsplash.com/photo-1529257414772-1960b4d4a4a3?q=80&w=1600&auto=format&fit=crop",
+      alt: "Marine Drive, Mumbai",
+    },
+    {
+      name: "Jaipur",
+      status: "Car Rental Available",
+      desc: "Professional car rental services available 24/7 in Jaipur. Book now for reliable transportation solutions.",
+      cta: "Book in Jaipur",
+      href: "#jaipur",
+      img: "", // no image → shows placeholder state
+      alt: "Jaipur",
+    },
+    {
+      name: "Chandigarh",
+      status: "Car Rental Available",
+      desc: "Comfortable and reliable rides across Chandigarh with 24/7 support.",
+      cta: "Book in Chandigarh",
+      href: "#chandigarh",
+      img: "https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1600&auto=format&fit=crop",
+      alt: "Hills near Chandigarh",
+    },
+    {
+      name: "Ludhiana",
+      status: "Car Rental Available",
+      desc: "On-time pickups and well-maintained cars for business and family travel.",
+      cta: "Book in Ludhiana",
+      href: "#ludhiana",
+      img: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1600&auto=format&fit=crop",
+      alt: "Mountains",
+    },
+    {
+      name: "Hyderabad",
+      status: "Car Rental Available",
+      desc: "Safe, clean, and comfortable travel across Hyderabad—available round the clock.",
+      cta: "Book in Hyderabad",
+      href: "#hyderabad",
+      img: "",
+      alt: "Hyderabad",
+    },
+  ];
+
+  function StepCard({ color, icon, step, title, text }) {
+    return (
+      <div className="step">
+        <div className="badge" style={{ backgroundColor: color }}>
+          <div className="badgeIcon">{icon}</div>
+          <span className="badgeStep">Step {step}</span>
+        </div>
+
+        <div className="descCard">
+          <h3 className="descTitle">{title}</h3>
+          <p className="descText">{text}</p>
+        </div>
+      </div>
+    );
+  }
+
+  /* ===== Inline SVG Icons ===== */
+  const PhoneIcon = () => (
+    <svg viewBox="0 0 24 24" width="28" height="28" fill="none">
+      <path
+        d="M6 2h4l1 5-3 2a14 14 0 007 7l2-3 5 1v4c0 1-1 2-2 2A18 18 0 014 4C4 3 5 2 6 2z"
+        stroke="#fff"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+  const PinIcon = () => (
+    <svg viewBox="0 0 24 24" width="28" height="28" fill="none">
+      <path
+        d="M12 22s7-7 7-12a7 7 0 10-14 0c0 5 7 12 7 12z"
+        stroke="#fff"
+        strokeWidth="2"
+      />
+      <circle cx="12" cy="10" r="2.5" stroke="#fff" strokeWidth="2" />
+    </svg>
+  );
+  const CarIcon = () => (
+    <svg viewBox="0 0 24 24" width="28" height="28" fill="none">
+      <path
+        d="M3 13l2-5a3 3 0 012.8-2h8.4A3 3 0 0119 8l2 5v5h-2a2 2 0 01-4 0H9a2 2 0 01-4 0H3v-5z"
+        stroke="#fff"
+        strokeWidth="2"
+        strokeLinejoin="round"
+      />
+      <circle cx="8" cy="18" r="1.6" fill="#fff" />
+      <circle cx="16" cy="18" r="1.6" fill="#fff" />
+    </svg>
+  );
+  const CheckIcon = () => (
+    <svg viewBox="0 0 24 24" width="28" height="28" fill="none">
+      <circle cx="12" cy="12" r="9" stroke="#fff" strokeWidth="2" />
+      <path
+        d="M8 12l3 3 5-5"
+        stroke="#fff"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+  const ClockIcon = () => (
+    <svg viewBox="0 0 24 24" width="28" height="28" fill="none">
+      <circle cx="12" cy="12" r="9" stroke="#fff" strokeWidth="2" />
+      <path
+        d="M12 7v5l3 2"
+        stroke="#fff"
+        strokeWidth="2"
+        strokeLinecap="round"
+      />
+    </svg>
+  );
+
+  function IconStar() {
+    return (
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 3l2.9 5.9 6.5.9-4.7 4.6 1.1 6.4L12 17.9 6.2 20.8l1.1-6.4L2.6 9.8l6.5-.9L12 3z" />
+      </svg>
+    );
+  }
+  function IconCheck() {
+    return (
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path
+          d="M20 6L9 17l-5-5"
+          strokeWidth="2"
+          fill="none"
+          stroke="currentColor"
+        />
+        <circle
+          cx="12"
+          cy="12"
+          r="11"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+        />
+      </svg>
+    );
+  }
+  function IconUsers() {
+    return (
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <circle cx="12" cy="8" r="3" />
+        <path d="M4 20c0-3.3 3.6-5 8-5s8 1.7 8 5" />
+      </svg>
+    );
+  }
+  function IconShield() {
+    return (
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 2l7 3v6c0 5-3.5 8.5-7 9-3.5-.5-7-4-7-9V5l7-3z" />
+      </svg>
+    );
+  }
+  function IconPin() {
+    return (
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 2a7 7 0 017 7c0 5.1-7 13-7 13S5 14.1 5 9a7 7 0 017-7z" />
+        <circle cx="12" cy="9" r="2.5" fill="#fff" />
+      </svg>
+    );
+  }
+  function IconCard() {
+    return (
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <rect x="2" y="5" width="20" height="14" rx="2" />
+        <rect x="4" y="9" width="8" height="2" fill="#fff" />
+      </svg>
+    );
+  }
+
   const [altIndex, setAltIndex] = useState(0);
   const activeAlt = TESTIMONIALS_ALT[altIndex];
 
@@ -347,16 +611,7 @@ export default function Home() {
       </svg>
     );
   }
-  function PhoneIcon() {
-    return (
-      <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
-        <path
-          d="M6.6 10.8a15.9 15.9 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1.1-.24 11.2 11.2 0 0 0 3.5.56 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 8a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.2 11.2 0 0 0 .56 3.5 1 1 0 0 1-.24 1.1Z"
-          fill="currentColor"
-        />
-      </svg>
-    );
-  }
+
   function DocIcon() {
     return (
       <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
@@ -404,6 +659,17 @@ export default function Home() {
       </svg>
     );
   }
+
+  function Feature({ icon, title, text }) {
+    return (
+      <div className="why-card">
+        <div className="why-icon">{icon}</div>
+        <h3 className="why-card-title">{title}</h3>
+        <p className="why-card-text">{text}</p>
+      </div>
+    );
+  }
+
   return (
     <>
       <Header />
@@ -411,12 +677,11 @@ export default function Home() {
       {/* Hero Section */}
       <section className="hero">
         <div className="overlay">
-          <p className="welcome-text">Welcome To Best Car Wash</p>
+          <p className="welcome-text">Welcome To Best Cabs</p>
           <h1>
-            Book Reliable & Affordable Cabs in 200+ Cities Across India CTA:
-            Book Now / Get a Quote button
+            Book Reliable & Affordable Cabs in 200+ Cities Across India CTA
           </h1>
-          <button className="hero-btn">Contact Us</button>
+          <button className="hero-btn">Book Now</button>
 
           <div className="red-car">
             <svg
@@ -465,8 +730,45 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="number-stats" ref={aboutCountersRef} id="about">
+        <div className="about__stats">
+          <div className="stat">
+            <div className="stat__num" data-counter-to="250">
+              0+
+            </div>
+            <div className="stat__label">Cities Covered Around India</div>
+          </div>
+          <div className="stat">
+            <div className="stat__num" data-counter-to="1000">
+              0+
+            </div>
+            <div className="stat__label">Cabs Available Everyday</div>
+          </div>
+          <div className="stat">
+            <div className="stat__num" data-counter-to="10">
+              0+
+            </div>
+            <div className="stat__label">
+              Years of Experience in the Industry
+            </div>
+          </div>
+          <div className="stat">
+            <div className="stat__num" data-counter-to="5000">
+              0+
+            </div>
+            <div className="stat__label">Happy Customers</div>
+          </div>
+          <div className="stat">
+            <div className="stat__num" data-counter-to="1200">
+              0+
+            </div>
+            <div className="stat__label">Vendor Covering the Entire Nation</div>
+          </div>
+        </div>
+      </section>
+
       {/* About Section */}
-      <section className="about" ref={aboutCountersRef} id="about">
+      <section className="about" id="about">
         <div className="about__toprow">
           <h3 className="about__eyebrow">About Us</h3>
           <div className="about__rule">
@@ -493,6 +795,20 @@ export default function Home() {
                 unoptimized
               />
             </div>
+          </div>
+
+          <div className="about__right">
+            <p className="about__lead">
+              Make every journey fun. Our sole motive is to enhance the
+              experience of each passenger and provide a chill of relaxation on
+              the way. Mechanically fit & pristine cars and mini-buses are
+              offered to all the valuable clients without any geographical
+              limitation.
+              <br />
+              <br />
+              Mechanically fit & pristine cars and mini-buses are offered to all
+              the valuable clients.
+            </p>
 
             <ul className="about__checks">
               <li>
@@ -580,80 +896,12 @@ export default function Home() {
                 <span>Engine services</span>
               </li>
             </ul>
-          </div>
-
-          <div className="about__right">
-            <p className="about__lead">
-              Kuldeep Cozy Cabz Pvt Ltd is a renowned online cab service
-              provider in India. After helping thousands of people reach their
-              destinations on time safely through its offline services, it has
-              made its presence online to provide easy 'online cab booking',
-              anytime, anywhere. Online cab booking has never been so easy. You
-              can book a cab/car online in just a few clicks by visiting our
-              website on your mobile or through desktop/laptop. With its
-              efficient and reliable services, Kuldeep Cozy Cabz has left
-              competitions miles behind when it comes to online cab/taxi
-              booking. Cozy Cabz services are available in over 200 + Indian
-              cities which help you reach your destination on time. Our
-              experienced team with in-depth information are available 24x7 to
-              assist you, in case of any queries/help.
-              <br />
-              <br />
-              Kuldeep Cozy Cabz Pvt Ltd is a renowned online cab service
-              provider in India. After helping thousands of people reach their
-              destinations on time safely through its offline services, it has
-              made its presence online to provide easy 'online cab booking',
-              anytime, anywhere. Online cab booking has never been so easy. You
-              can book a cab/car online in just a few clicks by visiting our
-              website on your mobile or through desktop/laptop. With its
-              efficient and reliable services, Kuldeep Cozy Cabz has left
-              competitions miles behind when it comes to online cab/taxi
-              booking. Cozy Cabz services are available in over 200 + Indian
-              cities which help you reach your destination on time. Our
-              experienced team with in-depth information are available 24x7 to
-              assist you, in case of any queries/help.
-            </p>
 
             <hr className="about__divider" />
 
             <a href="#contact" className="about__cta">
               <span>Read More</span>
             </a>
-          </div>
-        </div>
-
-        <div className="about__stats">
-          <div className="stat">
-            <div className="stat__num" data-counter-to="250">
-              0+
-            </div>
-            <div className="stat__label">Cities Covered Around India</div>
-          </div>
-          <div className="stat">
-            <div className="stat__num" data-counter-to="1000">
-              0+
-            </div>
-            <div className="stat__label">Cabs Available Everyday</div>
-          </div>
-          <div className="stat">
-            <div className="stat__num" data-counter-to="10">
-              0+
-            </div>
-            <div className="stat__label">
-              Years of Experience in the Industry
-            </div>
-          </div>
-          <div className="stat">
-            <div className="stat__num" data-counter-to="5000">
-              0+
-            </div>
-            <div className="stat__label">Happy Customers</div>
-          </div>
-          <div className="stat">
-            <div className="stat__num" data-counter-to="1200">
-              0+
-            </div>
-            <div className="stat__label">Vendor Covering the Entire Nation</div>
           </div>
         </div>
       </section>
@@ -673,7 +921,7 @@ export default function Home() {
 
           <div className="cards">
             {/* Basic */}
-            <article className="card">
+            <article className="plan-card">
               <figure className="card-media">
                 <Image
                   src="/car7.webp"
@@ -710,7 +958,7 @@ export default function Home() {
             </article>
 
             {/* Standard */}
-            <article className="card">
+            <article className="plan-card">
               <figure className="card-media">
                 <Image
                   src="/car4.webp"
@@ -745,7 +993,7 @@ export default function Home() {
             </article>
 
             {/* Premium */}
-            <article className="card">
+            <article className="plan-card">
               <figure className="card-media">
                 <Image
                   src="/car8.webp"
@@ -785,7 +1033,7 @@ export default function Home() {
             </article>
 
             {/* Premium */}
-            <article className="card">
+            <article className="plan-card">
               <figure className="card-media">
                 <Image
                   src="/car10.webp"
@@ -820,7 +1068,7 @@ export default function Home() {
             </article>
 
             {/* Premium */}
-            <article className="card">
+            <article className="plan-card">
               <figure className="card-media">
                 <Image
                   src="/car7.webp"
@@ -857,91 +1105,212 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Portfolio */}
-      <section className="portfolio" id="portfolio">
-        <div className="portfolio__toprow">
-          <h3 className="portfolio__eyebrow">Portfolio</h3>
-          <div className="portfolio__rule">
-            <span className="portfolio__dot" />
-          </div>
-        </div>
+      <section className="trust">
+        <div className="wrap">
+          <h2 className="wrap-title">10 Years of Trust</h2>
+          <p className="wrap-subtitle">
+            A decade of excellence in transportation services. We have built our
+            reputation through consistent quality, reliability, and customer
+            satisfaction across India.
+          </p>
 
-        <h2 className="portfolio__title">Discover Our Impressive Portfolio</h2>
-
-        <div className="portfolio__grid">
-          {projects.map((p, idx) => (
-            <a href={p.link} className="project" key={idx}>
-              <div className="project__imagewrap">
-                <Image
-                  src={p.img}
-                  alt={p.title}
-                  width={400}
-                  height={260}
-                  className="project__image"
-                />
-              </div>
-              <div
-                className={
-                  p.highlight
-                    ? "project__title project__title--red"
-                    : "project__title"
-                }
-              >
-                {p.title}
-              </div>
-              <span className="project__arrow">→</span>
-            </a>
-          ))}
-
-          {/* Round button at the end */}
-          <div className="project project--circle">
-            <a href="/portfolio" className="circle-btn">
-              View All Project
-            </a>
+          <div className="grid">
+            <TrustFeature
+              icon={<TrustShieldIcon />}
+              title="Safe & Secure"
+              text="GPS tracking, verified drivers, and comprehensive insurance for your safety"
+            />
+            <TrustFeature
+              icon={<TrustClockIcon />}
+              title="24/7 Service"
+              text="Round-the-clock availability with instant booking and customer support"
+            />
+            <TrustFeature
+              icon={<TrustDriverIcon />}
+              title="Expert Drivers"
+              text="Professional, courteous drivers with extensive local knowledge and experience"
+            />
+            <TrustFeature
+              icon={<TrustFleetIcon />}
+              title="Quality Fleet"
+              text="Well-maintained, premium vehicles regularly serviced for optimal performance"
+            />
           </div>
         </div>
       </section>
 
-      {/* Services */}
-      <section className="services">
-        <div className="services__toprow">
-          <h3 className="services__eyebrow">Service</h3>
-          <div className="services__rule">
-            <span className="services__dot" />
+      <section className="city-grid">
+        <div className="city-grid-df">
+          <div className="cg-header">
+            <h2>Explore India on Wheels</h2>
+            <p>
+              Discover the beauty of India with our premium car rental services.
+              We serve major cities across the nation with reliable and
+              comfortable transportation.
+            </p>
+          </div>
+
+          <div className="cg-grid">
+            {cities.map((c) => (
+              <article className="cg-card" key={c.name}>
+                <div className={`cg-media ${c.img ? "" : "cg-media--empty"}`}>
+                  {c.img ? (
+                    <img src={c.img} alt={c.alt} loading="lazy" />
+                  ) : (
+                    <div className="cg-placeholder" aria-hidden="true">
+                      <span className="cg-ph-icon">🖼️</span>
+                    </div>
+                  )}
+                </div>
+
+                <div className="cg-body">
+                  <header className="cg-title">
+                    <h3>{c.name}</h3>
+                    <div className="cg-status">{c.status}</div>
+                  </header>
+
+                  <p className="cg-desc">{c.desc}</p>
+
+                  <a className="cg-btn" href={c.href} aria-label={c.cta}>
+                    {c.cta}
+                  </a>
+                </div>
+              </article>
+            ))}
           </div>
         </div>
+      </section>
 
-        <h2 className="services__title">Committed To Best Service Quality</h2>
+      {/* Portfolio */}
+      <section className="fleet">
+        {/* Header */}
+        <div className="fleet-header">
+          <h2>Browse Our Fleet</h2>
+          <p>
+            Choose from our diverse fleet of well-maintained vehicles. From
+            economy to luxury, we have the perfect car for every need and
+            budget.
+          </p>
+        </div>
 
-        <div className="services__list">
-          {services.map((s, idx) => (
-            <a
-              href={s.link}
-              key={idx}
-              className={`service ${
-                hoveredServiceIndex === idx ? "active" : ""
-              }`}
-              onMouseEnter={() => setHoveredServiceIndex(idx)}
-              onMouseLeave={() => setHoveredServiceIndex(null)}
-            >
-              <div className="service__icon">
-                <Image src={s.icon} alt="" width={30} height={30} />
+        {/* Fleet Cards */}
+        <div className="fleet-grid">
+          {/* Premium */}
+          <div className="fleet-card">
+            <div className="fleet-image">
+              <img src="/logan.avif" alt="Premium Cars" />
+              <span className="rating">⭐ 4.8</span>
+            </div>
+            <div className="fleet-body">
+              <h3>Premium</h3>
+              <p>Luxury vehicles for executive travel and special occasions</p>
+              <div className="fleet-info">
+                <span>👥 Seating</span>
+                <span>4 Seater</span>
               </div>
-              <div className="service__text">{s.title}</div>
-              <div className="service__arrow">→</div>
+              <div className="fleet-info">
+                <span>🪙 Starting at</span>
+                <span>₹25/km</span>
+              </div>
+              <h4>Key Features:</h4>
+              <ul>
+                <li>Leather Interiors</li>
+                <li>Climate Control</li>
+                <li>Premium Sound System</li>
+              </ul>
+              <button className="btn-primary">View Premium Cars</button>
+            </div>
+          </div>
 
-              {hoveredServiceIndex === idx && (
-                <div className="service__image">
-                  <Image src={s.img} alt={s.title} width={300} height={200} />
-                </div>
-              )}
-            </a>
-          ))}
+          {/* Luxury */}
+          <div className="fleet-card">
+            <div className="fleet-image">
+              <img src="/sedan.jpg" alt="Luxury Cars" />
+              <span className="rating">⭐ 4.8</span>
+            </div>
+            <div className="fleet-body">
+              <h3>Luxury</h3>
+              <p>
+                High-end vehicles with superior comfort and advanced features
+              </p>
+              <div className="fleet-info">
+                <span>👥 Seating</span>
+                <span>4 Seater</span>
+              </div>
+              <div className="fleet-info">
+                <span>🪙 Starting at</span>
+                <span>₹35/km</span>
+              </div>
+              <h4>Key Features:</h4>
+              <ul>
+                <li>Massage Seats</li>
+                <li>Entertainment System</li>
+                <li>Mini Bar</li>
+              </ul>
+              <button className="btn-primary">View Luxury Cars</button>
+            </div>
+          </div>
+
+          {/* Economy */}
+          <div className="fleet-card">
+            <div className="fleet-image">
+              <img src="/suzuki.jpg" alt="Economy Cars" />
+              <span className="rating">⭐ 4.8</span>
+            </div>
+            <div className="fleet-body">
+              <h3>Economy</h3>
+              <p>
+                Comfortable and affordable options for everyday travel needs
+              </p>
+              <div className="fleet-info">
+                <span>👥 Seating</span>
+                <span>4 Seater</span>
+              </div>
+              <div className="fleet-info">
+                <span>🪙 Starting at</span>
+                <span>₹12/km</span>
+              </div>
+              <h4>Key Features:</h4>
+              <ul>
+                <li>Air Conditioning</li>
+                <li>GPS Navigation</li>
+                <li>Clean Interiors</li>
+              </ul>
+              <button className="btn-primary">View Economy Cars</button>
+            </div>
+          </div>
+
+          {/* Buses & Coaches */}
+          <div className="fleet-card">
+            <div className="fleet-image">
+              <img src="/bus.jpg" alt="Buses and Coaches" />
+              <span className="rating">⭐ 4.8</span>
+            </div>
+            <div className="fleet-body">
+              <h3>Buses & Coaches</h3>
+              <p>Large capacity vehicles for group travel and events</p>
+              <div className="fleet-info">
+                <span>👥 Seating</span>
+                <span>12-45 Seater</span>
+              </div>
+              <div className="fleet-info">
+                <span>🪙 Starting at</span>
+                <span>₹18/km</span>
+              </div>
+              <h4>Key Features:</h4>
+              <ul>
+                <li>Spacious Seating</li>
+                <li>Luggage Space</li>
+                <li>Group Travel</li>
+              </ul>
+              <button className="btn-primary">View Buses & Coaches Cars</button>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Before / After comparator */}
-      <section className="ba" id="before-after">
+      {/* <section className="ba" id="before-after">
         <div className="ba__toprow">
           <h3 className="ba__eyebrow">Before After</h3>
           <div className="ba__rule">
@@ -960,7 +1329,7 @@ export default function Home() {
           ref={trackRef}
           style={{ "--pos": `${beforeAfterPos}%` }}
         >
-          {/* BACK (after clean) */}
+
           <Image
             src="/car-clean.webp"
             alt="Car after cleaning"
@@ -970,7 +1339,7 @@ export default function Home() {
             className="ba__img"
           />
 
-          {/* FRONT (before dirty) – clipped */}
+
           <Image
             src="/car-dirty.webp"
             alt="Car before cleaning"
@@ -980,7 +1349,7 @@ export default function Home() {
             className="ba__img ba__img--front"
           />
 
-          {/* Divider + handle */}
+
           <div
             className="ba__divider"
             style={{ left: `var(--pos)` }}
@@ -1003,6 +1372,254 @@ export default function Home() {
                 />
               </svg>
             </button>
+          </div>
+        </div>
+      </section> */}
+
+      <section className="corporate-program">
+        {/* Top Section */}
+        <div className="program-header">
+          <h1>Corporate Program Rental</h1>
+          <p>
+            Comprehensive transportation solutions designed specifically for
+            businesses. From daily employee transport to executive travel and
+            event management.
+          </p>
+          <button className="btn-primary" id="program-btn">
+            WHAT DOES OUR CORPORATE PROGRAM OFFER?
+          </button>
+        </div>
+
+        {/* Banner */}
+        <div className="program-banner-df">
+          <div className="program-banner">
+            <h2>Elevate Your Business Transportation</h2>
+            <p>
+              Professional, reliable, and cost-effective transportation
+              solutions tailored for modern businesses.
+            </p>
+          </div>
+        </div>
+
+        {/* Services Section */}
+        <div className="program-services">
+          <h2>Our Corporate Services</h2>
+          <div className="services-grid">
+            <div className="service-card">
+              <span className="icon">🕒</span>
+              <h3>Hourly Cab Rentals</h3>
+              <p>
+                Get pick & drop service in the local area with flexible hourly
+                booking options for your business needs.
+              </p>
+            </div>
+
+            <div className="service-card">
+              <span className="icon">📍</span>
+              <h3>Travel Services for Outstation Trips</h3>
+              <p>
+                One way or round-way road trips at an affordable cost with
+                professional drivers and premium vehicles.
+              </p>
+            </div>
+
+            <div className="service-card">
+              <span className="icon">✈️</span>
+              <h3>To & From Airport</h3>
+              <p>
+                Make your flight convenient by commuting to or from the airport
+                with your luggage in a spacious cab.
+              </p>
+            </div>
+
+            <div className="service-card">
+              <span className="icon">👥</span>
+              <h3>MICE Arrangement</h3>
+              <p>
+                Whether it's about an office conference or exhibition, we can
+                help in A-Z arrangement including travel, venue, food, etc.
+              </p>
+            </div>
+
+            <div className="service-card">
+              <span className="icon">📅</span>
+              <h3>Holiday Trip</h3>
+              <p>
+                We provide solutions for both local and outstation trips for
+                groups as well as individuals.
+              </p>
+            </div>
+
+            <div className="service-card">
+              <span className="icon">🚕</span>
+              <h3>Monthly Cab Service</h3>
+              <p>
+                If you book a cab every day, we have amazing deals on monthly
+                cab service.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Features */}
+        <div className="program-features-box">
+          <div className="program-features">
+            <div className="feature">
+              <span className="icon">💼</span>
+              <h3>Dedicated Account Manager</h3>
+              <p>
+                Personal relationship manager to handle all your corporate
+                transportation needs.
+              </p>
+            </div>
+
+            <div className="feature">
+              <span className="icon">📊</span>
+              <h3>Monthly Reporting</h3>
+              <p>
+                Detailed monthly reports with usage analytics and cost
+                optimization suggestions.
+              </p>
+            </div>
+
+            <div className="feature">
+              <span className="icon">💰</span>
+              <h3>Volume Discounts</h3>
+              <p>
+                Special pricing for high-volume corporate clients with flexible
+                payment terms.
+              </p>
+            </div>
+          </div>
+
+          {/* CTA Buttons */}
+          <div className="program-cta">
+            <button className="btn-primary" id="btn-two">
+              Get Corporate Quote
+            </button>
+            <button className="btn-outline">Schedule Demo</button>
+          </div>
+        </div>
+      </section>
+
+      <section className="why">
+        <div className="why-wrap">
+          <header className="why-head">
+            <h2>What Makes Us the Best Choice</h2>
+            <p>
+              Our commitment to excellence and customer satisfaction sets us
+              apart. Here’s why thousands of customers trust us with their
+              transportation needs.
+            </p>
+          </header>
+
+          {/* Top row */}
+          <div className="why-grid">
+            <Feature
+              icon={<IconStar />}
+              title="Well Known for Quality Services"
+              text="Recognized across India for our commitment to excellence and premium service standards."
+            />
+            <Feature
+              icon={<IconCheck />}
+              title="Earned Positive Reviews from All Clients"
+              text="Consistent 5-star ratings and testimonials from thousands of satisfied customers."
+            />
+            <Feature
+              icon={<IconUsers />}
+              title="The Largest Network of Drivers"
+              text="Extensive network of professional, verified drivers covering every major city in India."
+            />
+          </div>
+
+          {/* Optional second row — uncomment if you want 3 more cards */}
+          <div className="why-grid">
+            <Feature
+              icon={<IconShield />}
+              title="Safe & Secure"
+              text="Background-verified partners and insured moves for complete peace of mind."
+            />
+            <Feature
+              icon={<IconPin />}
+              title="Nationwide Coverage"
+              text="Strong presence with on-ground support in metros and tier-2/3 cities."
+            />
+            <Feature
+              icon={<IconCard />}
+              title="Transparent Pricing"
+              text="Clear quotes, no hidden charges—ever."
+            />
+          </div>
+
+          {/* Stats ribbon */}
+          <div className="why-stats" role="group" aria-label="Key stats">
+            <div className="stat">
+              <div className="stat-num">1200+</div>
+              <div className="stat-label">Vendors Covering Entire Nation</div>
+            </div>
+            <div className="stat">
+              <div className="stat-num">50,000+</div>
+              <div className="stat-label">Happy Customers</div>
+            </div>
+            <div className="stat">
+              <div className="stat-num">99.8%</div>
+              <div className="stat-label">Customer Satisfaction</div>
+            </div>
+            <div className="stat">
+              <div className="stat-num">24/7</div>
+              <div className="stat-label">Customer Support</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="howto">
+        <div className="howtoWrap">
+          <h2 className="howtoTitle">How to Book Your Ride</h2>
+          <p className="howtoSubtitle">
+            Simple and straightforward booking process. Follow these easy steps
+            to book your ride.
+          </p>
+
+          {/* Connector line behind badges */}
+          <div className="connector" aria-hidden="true" />
+
+          <div className="stepsGrid">
+            <StepCard
+              color="#2563EB"
+              icon={<PhoneIcon />}
+              step={1}
+              title="Contact Our Team"
+              text="Contact our team or register on our website to get started with your booking process."
+            />
+            <StepCard
+              color="#16A34A"
+              icon={<PinIcon />}
+              step={2}
+              title="Share Your Details"
+              text="Share your destination & departure timing along with any specific requirements."
+            />
+            <StepCard
+              color="#8B5CF6"
+              icon={<CarIcon />}
+              step={3}
+              title="Select Car Model"
+              text="Select your preferred car model from our fleet and calculate the fare instantly."
+            />
+            <StepCard
+              color="#F97316"
+              icon={<CheckIcon />}
+              step={4}
+              title="Get Confirmation"
+              text="Get confirmation in few seconds with booking details and driver information."
+            />
+            <StepCard
+              color="#EF4444"
+              icon={<ClockIcon />}
+              step={5}
+              title="Wait for Arrival"
+              text="Relax and wait for your cab to arrive at your place at the scheduled time."
+            />
           </div>
         </div>
       </section>
@@ -1124,6 +1741,44 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Services */}
+      <section className="services">
+        <div className="services__toprow">
+          <h3 className="services__eyebrow">Service</h3>
+          <div className="services__rule">
+            <span className="services__dot" />
+          </div>
+        </div>
+
+        <h2 className="services__title">Committed To Best Service Quality</h2>
+
+        <div className="services__list">
+          {services.map((s, idx) => (
+            <a
+              href={s.link}
+              key={idx}
+              className={`service ${
+                hoveredServiceIndex === idx ? "active" : ""
+              }`}
+              onMouseEnter={() => setHoveredServiceIndex(idx)}
+              onMouseLeave={() => setHoveredServiceIndex(null)}
+            >
+              <div className="service__icon">
+                <Image src={s.icon} alt="" width={30} height={30} />
+              </div>
+              <div className="service__text">{s.title}</div>
+              <div className="service__arrow">→</div>
+
+              {hoveredServiceIndex === idx && (
+                <div className="service__image">
+                  <Image src={s.img} alt={s.title} width={300} height={200} />
+                </div>
+              )}
+            </a>
+          ))}
         </div>
       </section>
 
