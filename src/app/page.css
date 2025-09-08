@@ -298,6 +298,12 @@
   margin: 0 auto 28px;
 }
 
+#phone-no {
+  width: 20px;
+  height: 20px;
+  stroke: #5c5b5b;
+}
+
 .faq-header h2 {
   font-size: 40px;
   margin: 0 0 8px;
