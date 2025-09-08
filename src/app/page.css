@@ -285,170 +285,143 @@
     font-size: 32px;
   }
 }
+/* ===== FAQ (clean, professional) ===== */
 
-.services {
-  padding: 120px 6% 80px;
-  background: #f9f9f9;
+.faq {
+  padding: 50px 20px;
+  font-family: Arial, sans-serif;
 }
 
-.services__toprow {
+.faq-header {
+  text-align: center;
+  max-width: 820px;
+  margin: 0 auto 28px;
+}
+
+.faq-header h2 {
+  font-size: 40px;
+  margin: 0 0 8px;
+  color: #111;
+}
+
+.faq-header p {
+  margin: 0;
+  color: #555;
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+/* List container */
+.faq-list {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  gap: 14px;
+}
+
+/* Item */
+.faq-item {
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: rgba(17, 17, 26, 0.08) 0 2px 8px,
+    rgba(17, 17, 26, 0.03) 0 8px 24px;
+  overflow: hidden; /* for sliding content */
+  border: 1px solid #f0f0f0;
+}
+
+/* Question button */
+.faq-question {
+  width: 100%;
+  text-align: left;
+  background: #fff;
+  border: none;
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-.services__eyebrow {
-  color: var(--brandColor);
-  font-size: 22px;
-  margin: 0 0 8px;
-}
-.services__rule {
-  flex: 1;
-  height: 1px;
-  background: #e9e9e9;
-  margin-left: 20px;
-  position: relative;
-}
-.services__dot {
-  position: absolute;
-  right: 0;
-  top: -5px;
-  width: 10px;
-  height: 10px;
-  background: var(--brandColor);
-  border-radius: 50%;
-}
-
-.services__title {
-  font-size: 40px;
-  font-weight: 800;
-  margin: 30px 0;
-  color: #111;
-}
-
-.services__list {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.service {
-  position: relative;
-  display: flex;
-  align-items: center;
-  padding: 20px 25px;
-  background: #fff;
-  border-radius: 10px;
-  text-decoration: none;
-  font-size: 20px;
-  font-weight: 600;
-  color: #111;
-  border: 1px solid #eee;
-  transition: background 0.3s ease, color 0.3s ease;
-}
-
-.service.active {
-  background: var(--brandColor);
-  color: #fff;
-}
-
-.service__icon {
-  margin-right: 15px;
-}
-
-.service__arrow {
-  margin-left: auto;
-  font-size: 22px;
-  font-weight: bold;
-}
-
-.service__image {
-  position: absolute;
-  right: -20px;
-  top: 50%;
-  transform: translateY(-50%) rotate(-4deg);
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-  transition: opacity 0.3s ease;
-  z-index: 11;
-}
-
-.service__image img {
-  width: 300px;
-  height: auto;
-  display: block;
-}
-
-.service.active .service__arrow {
-  color: #fff;
-}
-
-/* make sure nothing clips the preview */
-.services,
-.services__list,
-.service {
-  overflow: visible;
-}
-
-/* the row */
-.service {
-  position: relative; /* anchor for the hover preview */
-  display: flex;
-  align-items: center;
   gap: 16px;
-  padding: 18px 22px;
-  background: #fff;
-  border: 1px solid #eee;
-  border-radius: 12px;
+  padding: 18px 20px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #222;
+  transition: background 0.15s ease;
 }
 
-/* the centered hover preview */
-.service__hovericon {
+.faq-question:hover {
+  background: #fafafa;
+}
+
+.faq-q-text {
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+/* Plus/Minus icon built with CSS */
+.faq-icon {
+  width: 22px;
+  height: 22px;
+  position: relative;
+  flex: 0 0 22px;
+}
+.faq-icon::before,
+.faq-icon::after {
+  content: "";
   position: absolute;
-  left: 50%;
+  background: #e30000; /* brand red */
+  border-radius: 2px;
   top: 50%;
-  transform: translate(-50%, -50%) scale(0.9) rotate(-4deg);
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.faq-icon::before {
+  width: 14px;
+  height: 2px; /* horizontal line */
+}
+.faq-icon::after {
+  width: 2px;
+  height: 14px; /* vertical line (to make +) */
+  transition: opacity 0.2s ease;
+}
+
+/* When open, show minus */
+.faq-item.open .faq-icon::after {
   opacity: 0;
-  pointer-events: none; /* don't block clicks on the row */
-  z-index: 5;
-  transition: opacity 0.25s ease, transform 0.25s ease;
 }
 
-/* show it on hover (or when .active class is applied) */
-.service:hover .service__hovericon,
-.service.active .service__hovericon {
-  opacity: 1;
-  transform: translate(-50%, -50%) scale(1) rotate(-2deg);
-}
-
-/* optional: give the preview a white card look */
-.service__hovericon svg,
-.service__hovericon img {
-  display: block;
-  width: 220px; /* adjust size as you like */
-  height: auto;
-  filter: drop-shadow(0 16px 30px rgba(0, 0, 0, 0.15));
+/* Answer panel (animated height) */
+.faq-answer {
+  overflow: hidden;
+  transition: max-height 0.28s ease;
+  border-top: 1px solid #f0f0f0;
   background: #fff;
-  border-radius: 14px;
-  padding: 10px; /* keep only for SVGs to add “card” padding */
 }
 
-.service__hovericon {
-  position: fixed;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%) scale(0.9);
-  /* …rest stays the same */
+.faq-answer p {
+  margin: 0;
+  padding: 14px 20px 20px;
+  color: #444;
+  font-size: 15px;
+  line-height: 1.7;
 }
 
-.service__icon img {
-  width: 60px;
-  height: auto;
+/* Focus ring for accessibility */
+.faq-question:focus-visible {
+  outline: 3px solid rgba(227, 0, 0, 0.35);
+  outline-offset: 2px;
 }
 
-.service__text {
-  font-size: 24px;
+/* Responsive tweaks */
+@media (max-width: 640px) {
+  .faq-header h2 {
+    font-size: 26px;
+  }
+  .faq-q-text {
+    font-size: 15px;
+  }
+  .faq-answer p {
+    font-size: 14px;
+  }
 }
+
 /* ===== Fleet Section Styles ===== */
 
 .fleet {
@@ -1771,7 +1744,7 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  top: 233px; /* aligns with badge center on desktop */
+  top: 185px; /* aligns with badge center on desktop */
   width: min(980px, 90vw);
   height: 2px;
   background-image: repeating-linear-gradient(
@@ -1800,8 +1773,8 @@
 
 /* Circular colored badge */
 .badge {
-  width: 132px;
-  height: 132px;
+  width: 102px;
+  height: 102px;
   border-radius: 50%;
   box-shadow: 0 14px 36px rgba(0, 0, 0, 0.18);
   display: grid;
@@ -1997,7 +1970,6 @@
   margin-top: 24px;
   background: var(--why-accent);
   color: #fff;
-  border-radius: 14px;
   padding: 18px 12px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);

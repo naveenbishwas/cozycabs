@@ -43,6 +43,11 @@ export default function Home() {
   const [hoveredServiceIndex, setHoveredServiceIndex] = useState(null);
   const trackRef = useRef(null);
   const [beforeAfterPos, setBeforeAfterPos] = useState(50);
+  const [openIndex, setOpenIndex] = useState(null); // single-open; set to -1 for none
+
+  const toggle = (i) => {
+    setOpenIndex((prev) => (prev === i ? null : i));
+  };
 
   // Counter animation function
   function runCounter(el, to) {
@@ -254,55 +259,6 @@ export default function Home() {
     },
   ];
 
-  // const projects = [
-  //   {
-  //     title: "Compact cars (Tata Indica)",
-  //     img: "/compact2.webp",
-  //     link: "/portfolio/eco-wash",
-  //   },
-  //   {
-  //     title: "Economy SUVs (Mahindra Scorpio",
-  //     img: "/suv.avif",
-  //     link: "/portfolio/polish-treatment",
-  //   },
-  //   {
-  //     title: "Chevrolet Tavera)",
-  //     img: "/chevrolet.jpg",
-  //     link: "/portfolio/engine-cleaning",
-  //   },
-  //   {
-  //     title: "Economy Sedans (Maruti Swift Dzire",
-  //     img: "/sedan.jpg",
-  //     link: "/portfolio/full-detailing",
-  //     highlight: true,
-  //   },
-  //   {
-  //     title: "Tata Indigo and Mahindra Logan)",
-  //     img: "/logan.avif",
-  //     link: "/portfolio/eco-wash",
-  //   },
-  //   {
-  //     title: "Luxury SUVs (Toyota Innova, Mahindra Xylo)",
-  //     img: "/luxury-suv.avif",
-  //     link: "/portfolio/polish-treatment",
-  //   },
-  //   {
-  //     title: "Vans (Tata Winger)",
-  //     img: "/vans.avif",
-  //     link: "/portfolio/engine-cleaning",
-  //   },
-  //   {
-  //     title: "Luxury Sedans (Toyota Corolla, Honda City)",
-  //     img: "/toyotal.jpg",
-  //     link: "/portfolio/full-detailing",
-  //   },
-  //   {
-  //     title: "Bus",
-  //     img: "/bus.jpg",
-  //     link: "/portfolio/full-detailing",
-  //   },
-  // ];
-
   /* ---------------------------------------------------------------- */
   /* Testimonial slider A (two-column with avatar row)                 */
   /* ---------------------------------------------------------------- */
@@ -342,6 +298,29 @@ export default function Home() {
       hero: "/c3.png",
       text: "Impressed with the consistency. Even during rush hours, the workflow stays efficient and the quality never drops.",
       rating: 5,
+    },
+  ];
+
+  const faqs = [
+    {
+      q: "What services are included in the Corporate Program?",
+      a: "Hourly cab rentals, airport transfers, outstation trips, MICE arrangements, monthly cab service, and holiday trips—plus a dedicated account manager and monthly reporting.",
+    },
+    {
+      q: "Can we get invoices consolidated monthly?",
+      a: "Yes. We provide consolidated monthly invoices, detailed usage analytics, and cost-saving recommendations.",
+    },
+    {
+      q: "Do you offer volume discounts?",
+      a: "High-volume and long-term contracts are eligible for special pricing and flexible payment terms.",
+    },
+    {
+      q: "How do we manage bookings for our team?",
+      a: "You’ll get a dedicated account manager and a streamlined booking flow (web/phone/WhatsApp) with priority support for changes or emergencies.",
+    },
+    {
+      q: "Are your vehicles and drivers certified?",
+      a: "All vehicles are well-maintained and insured. Drivers are verified, trained for corporate protocols, and follow punctuality and safety guidelines.",
     },
   ];
 
@@ -799,15 +778,19 @@ export default function Home() {
 
           <div className="about__right">
             <p className="about__lead">
-              Make every journey fun. Our sole motive is to enhance the
-              experience of each passenger and provide a chill of relaxation on
-              the way. Mechanically fit & pristine cars and mini-buses are
-              offered to all the valuable clients without any geographical
-              limitation.
-              <br />
-              <br />
-              Mechanically fit & pristine cars and mini-buses are offered to all
-              the valuable clients.
+              Kuldeep Cozy Cabz Pvt Ltd is a renowned online cab service
+              provider in India. After helping thousands of people reach their
+              destinations on time safely through its offline services, it has
+              made its presence online to provide easy 'online cab booking',
+              anytime, anywhere. Online cab booking has never been so easy. You
+              can book a cab/car online in just a few clicks by visiting our
+              website on your mobile or through desktop/laptop. With its
+              efficient and reliable services, Kuldeep Cozy Cabz has left
+              competitions miles behind when it comes to online cab/taxi
+              booking. Cozy Cabz services are available in over 200 + Indian
+              cities which help you reach your destination on time. Our
+              experienced team with in-depth information are available 24x7 to
+              assist you, in case of any queries/help.
             </p>
 
             <ul className="about__checks">
@@ -1502,6 +1485,26 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Stats ribbon */}
+      <div className="why-stats" role="group" aria-label="Key stats">
+        <div className="stat">
+          <div className="stat-num">1200+</div>
+          <div className="stat-label">Vendors Covering Entire Nation</div>
+        </div>
+        <div className="stat">
+          <div className="stat-num">50,000+</div>
+          <div className="stat-label">Happy Customers</div>
+        </div>
+        <div className="stat">
+          <div className="stat-num">99.8%</div>
+          <div className="stat-label">Customer Satisfaction</div>
+        </div>
+        <div className="stat">
+          <div className="stat-num">24/7</div>
+          <div className="stat-label">Customer Support</div>
+        </div>
+      </div>
+
       <section className="why">
         <div className="why-wrap">
           <header className="why-head">
@@ -1549,26 +1552,6 @@ export default function Home() {
               title="Transparent Pricing"
               text="Clear quotes, no hidden charges—ever."
             />
-          </div>
-
-          {/* Stats ribbon */}
-          <div className="why-stats" role="group" aria-label="Key stats">
-            <div className="stat">
-              <div className="stat-num">1200+</div>
-              <div className="stat-label">Vendors Covering Entire Nation</div>
-            </div>
-            <div className="stat">
-              <div className="stat-num">50,000+</div>
-              <div className="stat-label">Happy Customers</div>
-            </div>
-            <div className="stat">
-              <div className="stat-num">99.8%</div>
-              <div className="stat-label">Customer Satisfaction</div>
-            </div>
-            <div className="stat">
-              <div className="stat-num">24/7</div>
-              <div className="stat-label">Customer Support</div>
-            </div>
           </div>
         </div>
       </section>
@@ -1745,40 +1728,47 @@ export default function Home() {
       </section>
 
       {/* Services */}
-      <section className="services">
-        <div className="services__toprow">
-          <h3 className="services__eyebrow">Service</h3>
-          <div className="services__rule">
-            <span className="services__dot" />
-          </div>
+      <section className="faq">
+        <div className="faq-header">
+          <h2>Frequently Asked Questions</h2>
+          <p>
+            Answers to the most common questions about our corporate
+            transportation program.
+          </p>
         </div>
 
-        <h2 className="services__title">Committed To Best Service Quality</h2>
+        <div className="faq-list" role="list">
+          {faqs.map((item, i) => {
+            const open = openIndex === i;
+            return (
+              <div
+                className={`faq-item ${open ? "open" : ""}`}
+                key={i}
+                role="listitem"
+              >
+                <button
+                  className="faq-question"
+                  aria-expanded={open}
+                  aria-controls={`faq-panel-${i}`}
+                  id={`faq-control-${i}`}
+                  onClick={() => toggle(i)}
+                >
+                  <span className="faq-q-text">{item.q}</span>
+                  <span className="faq-icon" aria-hidden="true" />
+                </button>
 
-        <div className="services__list">
-          {services.map((s, idx) => (
-            <a
-              href={s.link}
-              key={idx}
-              className={`service ${
-                hoveredServiceIndex === idx ? "active" : ""
-              }`}
-              onMouseEnter={() => setHoveredServiceIndex(idx)}
-              onMouseLeave={() => setHoveredServiceIndex(null)}
-            >
-              <div className="service__icon">
-                <Image src={s.icon} alt="" width={30} height={30} />
-              </div>
-              <div className="service__text">{s.title}</div>
-              <div className="service__arrow">→</div>
-
-              {hoveredServiceIndex === idx && (
-                <div className="service__image">
-                  <Image src={s.img} alt={s.title} width={300} height={200} />
+                <div
+                  id={`faq-panel-${i}`}
+                  role="region"
+                  aria-labelledby={`faq-control-${i}`}
+                  className="faq-answer"
+                  style={{ maxHeight: open ? "300px" : "0px" }}
+                >
+                  <p>{item.a}</p>
                 </div>
-              )}
-            </a>
-          ))}
+              </div>
+            );
+          })}
         </div>
       </section>
 
