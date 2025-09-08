@@ -396,12 +396,12 @@ export default function Home() {
       alt: "Hills near Chandigarh",
     },
     {
-      name: "Ludhiana",
+      name: "Kolkata",
       status: "Car Rental Available",
       desc: "On-time pickups and well-maintained cars for business and family travel.",
       cta: "Book in Ludhiana",
       href: "#ludhiana",
-      img: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1600&auto=format&fit=crop",
+      img: "kolkata.png",
       alt: "Mountains",
     },
     {
