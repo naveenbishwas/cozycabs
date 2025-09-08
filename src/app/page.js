@@ -374,7 +374,7 @@ export default function Home() {
       desc: "Professional car rental services available 24/7 in Mumbai. Book now for reliable transportation solutions.",
       cta: "Book in Mumbai",
       href: "#mumbai",
-      img: "mumbai.png",
+      img: "MUMBAI.png",
       alt: "Marine Drive, Mumbai",
     },
     {
@@ -383,7 +383,7 @@ export default function Home() {
       desc: "Professional car rental services available 24/7 in Jaipur. Book now for reliable transportation solutions.",
       cta: "Book in Jaipur",
       href: "#jaipur",
-      img: "jaipur.png", // no image → shows placeholder state
+      img: "JAIPUR.png", // no image → shows placeholder state
       alt: "Jaipur",
     },
     {
@@ -392,7 +392,7 @@ export default function Home() {
       desc: "Comfortable and reliable rides across Chandigarh with 24/7 support.",
       cta: "Book in Chandigarh",
       href: "#chandigarh",
-      img: "chandigarh.png",
+      img: "CHANDIGARH.png",
       alt: "Hills near Chandigarh",
     },
     {
@@ -401,7 +401,7 @@ export default function Home() {
       desc: "On-time pickups and well-maintained cars for business and family travel.",
       cta: "Book in Ludhiana",
       href: "#ludhiana",
-      img: "kolkata.png",
+      img: "KOLKATA.png",
       alt: "Mountains",
     },
     {
@@ -410,7 +410,7 @@ export default function Home() {
       desc: "Safe, clean, and comfortable travel across Hyderabad—available round the clock.",
       cta: "Book in Hyderabad",
       href: "#hyderabad",
-      img: "hyderabad.png",
+      img: "HYDERABAD.png",
       alt: "Hyderabad",
     },
   ];
