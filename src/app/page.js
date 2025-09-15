@@ -392,7 +392,7 @@ export default function Home() {
       desc: "Comfortable and reliable rides across Chandigarh with 24/7 support.",
       cta: "Book in Chandigarh",
       href: "#chandigarh",
-      img: "Chandigarh2.png",
+      img: "chd.png",
       alt: "Hills near Chandigarh",
     },
     {
@@ -776,7 +776,7 @@ export default function Home() {
 
             <div className="about__imagewrap">
               <Image
-                src="/ab-2.png"
+                src="/ab3.png"
                 alt="car-image"
                 fill
                 priority
