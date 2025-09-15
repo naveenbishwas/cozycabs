@@ -267,8 +267,8 @@ export default function Home() {
       id: 1,
       name: "James Hughes",
       role: "TEAM LEADER",
-      avatar: "/t1.png",
-      hero: "/t1.png",
+      avatar: "/tt1.png",
+      hero: "/tt1.png",
       text: "The Car Wash team works in harmony to provide a seamless, high-quality service that meets the needs of every customer, ensuring a clean, polished vehicle every time. They are trained to handle various vehicle types and cleaning techniques, always maintaining a high standard of professionalism, efficiency, and customer care.",
       rating: 5,
     },
@@ -276,8 +276,8 @@ export default function Home() {
       id: 2,
       name: "Ethan Lewis",
       role: "EQUIPMENT TECHNICIANS",
-      avatar: "/c1.png",
-      hero: "/c1.png",
+      avatar: "/tt2.png",
+      hero: "/tt2.png",
       text: "The technician must adhere to safety protocols when performing maintenance work, ensuring that all procedures are done in compliance with industry regulations and safety standards. By keeping all equipment in top shape, the maintenance team helps create a reliable, high-quality service experience for customers.",
       rating: 5,
     },
@@ -285,8 +285,8 @@ export default function Home() {
       id: 3,
       name: "Sara Patel",
       role: "CUSTOMER SUCCESS",
-      avatar: "/c2.png",
-      hero: "/c2.png",
+      avatar: "/tt3.png",
+      hero: "/tt3.png",
       text: "From booking to final rinse, everything felt smooth and well-organized. Friendly staff, clear communication, and a spotless finish. Highly recommended!",
       rating: 5,
     },
@@ -294,8 +294,8 @@ export default function Home() {
       id: 4,
       name: "Marco Díaz",
       role: "OPERATIONS",
-      avatar: "/c3.png",
-      hero: "/c3.png",
+      avatar: "/tt4.png",
+      hero: "/tt4.png",
       text: "Impressed with the consistency. Even during rush hours, the workflow stays efficient and the quality never drops.",
       rating: 5,
     },
@@ -654,7 +654,7 @@ export default function Home() {
       <Header />
 
       {/* Hero Section */}
-      <section className="hero">
+      {/* <section className="hero">
         <div className="overlay">
           <p className="welcome-text">Welcome To Best Cabs</p>
           <h1>
@@ -706,6 +706,17 @@ export default function Home() {
               </g>
             </svg>
           </div>
+        </div>
+      </section> */}
+      <section className="hero">
+        <div className="overlay">
+          <p className="welcome-text">Welcome To Best Cabs</p>
+          <h1>
+            Book Reliable & Affordable Cabs in 200+ Cities Across India CTA
+          </h1>
+          <button className="hero-btn">Book Now</button>
+
+          <div className="red-car">{/* your SVG */}</div>
         </div>
       </section>
 
@@ -765,7 +776,7 @@ export default function Home() {
 
             <div className="about__imagewrap">
               <Image
-                src="/about1.png"
+                src="/ab-2.png"
                 alt="car-image"
                 fill
                 priority
@@ -1094,7 +1105,13 @@ export default function Home() {
           {/* Premium */}
           <div className="fleet-card">
             <div className="fleet-image">
-              <img src="/logan.avif" alt="Premium Cars" />
+              <Image
+                src="/economy.png"
+                alt="car-images"
+                width={0}
+                height={0}
+                unoptimized
+              ></Image>
               <span className="rating">⭐ 4.8</span>
             </div>
             <div className="fleet-body">
@@ -1121,8 +1138,14 @@ export default function Home() {
           {/* Luxury */}
           <div className="fleet-card">
             <div className="fleet-image">
-              <img src="/sedan.jpg" alt="Luxury Cars" />
-              <span className="rating">⭐ 4.8</span>
+              <Image
+                src="/luxury.png"
+                alt="car-images"
+                width={0}
+                height={0}
+                unoptimized
+              ></Image>
+              <span className="rating">⭐ 4.9</span>
             </div>
             <div className="fleet-body">
               <h3>Luxury</h3>
@@ -1150,8 +1173,14 @@ export default function Home() {
           {/* Economy */}
           <div className="fleet-card">
             <div className="fleet-image">
-              <img src="/suzuki.jpg" alt="Economy Cars" />
-              <span className="rating">⭐ 4.8</span>
+              <Image
+                src="/economy2.png"
+                alt="car-images"
+                width={0}
+                height={0}
+                unoptimized
+              ></Image>
+              <span className="rating">⭐ 4.6</span>
             </div>
             <div className="fleet-body">
               <h3>Economy</h3>
@@ -1179,7 +1208,13 @@ export default function Home() {
           {/* Buses & Coaches */}
           <div className="fleet-card">
             <div className="fleet-image">
-              <img src="/bus.jpg" alt="Buses and Coaches" />
+              <Image
+                src="/Bus-image.png"
+                alt="car-images"
+                width={0}
+                height={0}
+                unoptimized
+              ></Image>
               <span className="rating">⭐ 4.8</span>
             </div>
             <div className="fleet-body">
@@ -1706,7 +1741,7 @@ export default function Home() {
           <div className="contact-grid">
             {/* LEFT : map + info */}
             <div className="contact-left">
-              <h3 className="contact-subtitle">Get In Tuch</h3>
+              <h3 className="contact-subtitle">Get In Touch</h3>
               <p className="contact-lead">
                 It is a long established fact that a reader will be distracted
                 of a page when looking at its layout. The point of

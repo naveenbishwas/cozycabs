@@ -4,13 +4,38 @@
   --brandColor: #d80117;
 }
 
-.hero {
+/* .hero {
   height: 100vh;
-  background: url("/banner.png") center/cover no-repeat;
+  background: url("/home-banner.png") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
+} */
+
+.hero {
+  height: 100vh;
+  background: url("/home-banner.png") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgb(0 0 0 / 27%); /* black overlay with 55% opacity */
+  z-index: 1;
+}
+
+/* Make sure overlayed text/content stays above */
+.hero .overlay {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #fff; /* ensures readability */
 }
 
 .car-icons {
@@ -54,7 +79,7 @@
 } */
 
 .hero h1 {
-  font-size: 48px;
+  font-size: 4rem;
   line-height: 1.2;
   margin: 20px 0;
   max-width: 800px;
@@ -219,7 +244,7 @@
 }
 
 .number-stats {
-  padding: 4%;
+  padding: 2%;
 }
 
 /* Stats row (keeps 5 in a row, space-balanced, responsive) */
@@ -1514,10 +1539,10 @@
 }
 
 .iconWrap {
-  width: 88px;
-  height: 88px;
+  width: 80px;
+  height: 70px;
   margin: 0 auto 16px;
-  border-radius: 22px;
+  border-radius: 12px;
   background: radial-gradient(
       100% 100% at 50% 0%,
       var(--red-grad-1) 0%,
@@ -2079,7 +2104,7 @@ p {
 }
 
 .program-banner {
-  background-image: url("/dark-blue.jpeg");
+  background-image: url("/corporate-program.png");
   background-size: cover; /* fill like the screenshot */
   background-position: center; /* keep focal area centered */
   background-repeat: no-repeat;
