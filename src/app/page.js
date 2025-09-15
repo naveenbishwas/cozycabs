@@ -410,7 +410,7 @@ export default function Home() {
       desc: "Safe, clean, and comfortable travel across Hyderabad—available round the clock.",
       cta: "Book in Hyderabad",
       href: "#hyderabad",
-      img: "hyderabad2.png",
+      img: "HYDERABAD.png",
       alt: "Hyderabad",
     },
   ];
