@@ -1,174 +1,380 @@
+// "use client";
+// import React from "react";
+// import "./footer.css";
+
+// export default function Footer() {
+//   function handleNewsletter(e) {
+//     e.preventDefault();
+//     const data = Object.fromEntries(new FormData(e.currentTarget).entries());
+//     console.log("Newsletter:", data);
+//     alert("Thanks! (Check console for captured data)");
+//   }
+
+//   return (
+//     <footer className="site-footer" aria-labelledby="footer-cta">
+//       <div className="ft-container">
+//         {/* Big headline */}
+//         <h2 id="footer-cta" className="ft-hero">
+//           Elevate Your Car’s Look With A
+//           <br /> Fresh Wash
+//         </h2>
+
+//         {/* 4-column grid */}
+//         <div className="ft-grid">
+//           {/* Address */}
+//           <section
+//             className="ft-col ft-col--border"
+//             aria-labelledby="ft-address-h"
+//           >
+//             <h3 id="ft-address-h" className="ft-title">
+//               Address
+//             </h3>
+
+//             <address className="ft-address">
+//               1353 locust st, kansas
+//               <br /> city mo 6452 berline
+//               <br /> 81566
+//             </address>
+
+//             <a href="mailto:abc@gmail.com" className="ft-link">
+//               abc@gmail.com
+//             </a>
+//             <br />
+//             <a href="tel:+18001231234" className="ft-link">
+//               +1800-123-1234
+//             </a>
+//           </section>
+
+//           {/* Navigation */}
+//           <nav className="ft-col ft-col--border" aria-labelledby="ft-nav-h">
+//             <h3 id="ft-nav-h" className="ft-title">
+//               Navigation
+//             </h3>
+//             <ul className="ft-list">
+//               <li>
+//                 <a href="#" className="ft-link">
+//                   Style Guide
+//                 </a>
+//               </li>
+//               <li>
+//                 <a href="#" className="ft-link">
+//                   License
+//                 </a>
+//               </li>
+//               <li>
+//                 <a href="#about" className="ft-link">
+//                   About Us
+//                 </a>
+//               </li>
+//               <li>
+//                 <a href="#contact" className="ft-link">
+//                   Contact Us
+//                 </a>
+//               </li>
+//             </ul>
+//           </nav>
+
+//           {/* Social */}
+//           <section
+//             className="ft-col ft-col--border"
+//             aria-labelledby="ft-social-h"
+//           >
+//             <h3 id="ft-social-h" className="ft-title">
+//               Social Media
+//             </h3>
+//             <ul className="ft-list">
+//               <li>
+//                 <a href="#" className="ft-link">
+//                   Facebook
+//                 </a>
+//               </li>
+//               <li>
+//                 <a href="#" className="ft-link">
+//                   YouTube
+//                 </a>
+//               </li>
+//               <li>
+//                 <a href="#" className="ft-link">
+//                   Dribble
+//                 </a>
+//               </li>
+//               <li>
+//                 <a href="#" className="ft-link">
+//                   Instagram
+//                 </a>
+//               </li>
+//             </ul>
+//           </section>
+
+//           {/* Newsletter */}
+//           <section className="ft-col" aria-labelledby="ft-news-h">
+//             <h3 id="ft-news-h" className="ft-title">
+//               Newsletter
+//             </h3>
+
+//             <form className="ft-newsform" onSubmit={handleNewsletter}>
+//               <label className="ft-input">
+//                 <span className="ft-input-icon">
+//                   <MailIcon />
+//                 </span>
+//                 <input
+//                   type="email"
+//                   name="email"
+//                   placeholder="Enter Your Email"
+//                   required
+//                 />
+//               </label>
+
+//               <label className="ft-check">
+//                 <input type="checkbox" name="agree" required />
+//                 <span className="ft-checkbox" aria-hidden="true" />
+//                 <span className="ft-checktext">
+//                   I Agree{" "}
+//                   <a href="#" className="ft-link ft-link--underline">
+//                     Privacy Policy
+//                   </a>
+//                 </span>
+//               </label>
+
+//               <button className="ft-submit" type="submit">
+//                 Submit
+//               </button>
+//             </form>
+//           </section>
+//         </div>
+
+//         {/* Bottom bar */}
+//         <div className="ft-bottom">
+//           <small>
+//             © Powered by{" "}
+//             <a className="ft-link" href="https://webflow.com">
+//               Webflow
+//             </a>{" "}
+//             created by{" "}
+//             <a className="ft-link" href="https://peacefulqode.com">
+//               PeacefulQode
+//             </a>
+//           </small>
+//         </div>
+//       </div>
+//     </footer>
+//   );
+// }
+
+// /* tiny mail icon */
+// function MailIcon() {
+//   return (
+//     <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+//       <path
+//         d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5L4 8"
+//         fill="currentColor"
+//       />
+//     </svg>
+//   );
+// }
+
+// components/SiteFooter.jsx
 "use client";
 import React from "react";
 import "./footer.css";
 
-export default function Footer() {
-  function handleNewsletter(e) {
-    e.preventDefault();
-    const data = Object.fromEntries(new FormData(e.currentTarget).entries());
-    console.log("Newsletter:", data);
-    alert("Thanks! (Check console for captured data)");
-  }
-
+export default function SiteFooter() {
   return (
-    <footer className="site-footer" aria-labelledby="footer-cta">
-      <div className="ft-container">
-        {/* Big headline */}
-        <h2 id="footer-cta" className="ft-hero">
-          Elevate Your Car’s Look With A
-          <br /> Fresh Wash
-        </h2>
+    <footer className="site-footer" aria-labelledby="footer-title">
+      {/* Top thin red line */}
+      <div className="footer__accent" aria-hidden="true"></div>
 
-        {/* 4-column grid */}
-        <div className="ft-grid">
-          {/* Address */}
-          <section
-            className="ft-col ft-col--border"
-            aria-labelledby="ft-address-h"
-          >
-            <h3 id="ft-address-h" className="ft-title">
-              Address
-            </h3>
+      <div className="footer__container">
+        <div className="footer__grid">
+          {/* Brand / About */}
+          <div className="footer__brand">
+            <div className="brand__row">
+              <div className="brand__logo" aria-hidden="true">
+                {/* Car glyph */}
+                <svg viewBox="0 0 24 24">
+                  <path d="M3 13l1.2-3.6A3 3 0 017.1 7h9.8a3 3 0 012.9 2.4L21 13v5a1 1 0 01-1 1h-1a2 2 0 11-4 0H9a2 2 0 11-4 0H4a1 1 0 01-1-1v-5z" />
+                  <circle cx="7.8" cy="18" r="1.6" />
+                  <circle cx="16.2" cy="18" r="1.6" />
+                </svg>
+              </div>
+              <div>
+                <h3 id="footer-title" className="brand__name">
+                  CarRental
+                </h3>
+                <p className="brand__tag">Premium Transport Solutions</p>
+              </div>
+            </div>
 
-            <address className="ft-address">
-              1353 locust st, kansas
-              <br /> city mo 6452 berline
-              <br /> 81566
-            </address>
+            <p className="brand__about">
+              India&apos;s leading car rental service with 10+ years of
+              experience. We provide safe, reliable, and comfortable
+              transportation across 250+ cities.
+            </p>
 
-            <a href="mailto:abc@gmail.com" className="ft-link">
-              abc@gmail.com
+            <ul className="footer__contacts">
+              <li>
+                <span className="ico" aria-hidden="true">
+                  {/* phone */}
+                  <svg viewBox="0 0 24 24">
+                    <path d="M6 2h4l2 5-3 2a16 16 0 007 7l2-3 5 2v4a2 2 0 01-2 2A18 18 0 012 8 2 2 0 014 6z" />
+                  </svg>
+                </span>
+                <a href="tel:+919876543210">+91 98765-43210</a>
+              </li>
+              <li>
+                <span className="ico" aria-hidden="true">
+                  {/* mail */}
+                  <svg viewBox="0 0 24 24">
+                    <path d="M3 5h18v14H3z" />
+                    <path d="M3 5l9 7 9-7" />
+                  </svg>
+                </span>
+                <a href="mailto:info@carrental.com">info@carrental.com</a>
+              </li>
+              <li>
+                <span className="ico" aria-hidden="true">
+                  {/* pin */}
+                  <svg viewBox="0 0 24 24">
+                    <path d="M12 22s7-6.1 7-12A7 7 0 105 10c0 5.9 7 12 7 12z" />
+                    <circle cx="12" cy="10" r="2.5" />
+                  </svg>
+                </span>
+                <span>123 Business Hub, Delhi, India</span>
+              </li>
+            </ul>
+
+            <div className="footer__social" aria-label="Social links">
+              <a href="#" aria-label="Facebook">
+                <svg viewBox="0 0 24 24">
+                  <path d="M14 9h3V6h-3a3 3 0 00-3 3v2H8v3h3v7h3v-7h3l1-3h-4V9a1 1 0 011-1z" />
+                </svg>
+              </a>
+              <a href="#" aria-label="X (Twitter)">
+                <svg viewBox="0 0 24 24">
+                  <path d="M4 4l7.4 8.1L4.6 20H8l5.2-6 4.3 6H20l-7-9 6.6-7H16l-4.8 5.6L7.3 4H4z" />
+                </svg>
+              </a>
+              <a href="#" aria-label="Instagram">
+                <svg viewBox="0 0 24 24">
+                  <path d="M7 3h10a4 4 0 014 4v10a4 4 0 01-4 4H7a4 4 0 01-4-4V7a4 4 0 014-4z" />
+                  <circle cx="12" cy="12" r="3.6" />
+                  <circle cx="17.5" cy="6.5" r="1.2" />
+                </svg>
+              </a>
+              <a href="#" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24">
+                  <path d="M4 4h4v16H4z" />
+                  <circle cx="6" cy="3" r="1.5" />
+                  <path d="M10 10h4v2a3 3 0 016 0v8h-4v-7a1.8 1.8 0 00-3.6 0V20H10z" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          {/* Column: City Guides */}
+          <nav className="footer__col" aria-label="City Guides">
+            <h4>City Guides</h4>
+            <ul className="linklist">
+              {[
+                "Car Rental in Mumbai",
+                "Car Rental in Delhi",
+                "Car Rental in Bangalore",
+                "Car Rental in Chennai",
+                "Car Rental in Hyderabad",
+                "Car Rental in Pune",
+                "Car Rental in Kolkata",
+                "Car Rental in Ahmedabad",
+              ].map((t) => (
+                <li key={t}>
+                  <a href="#">{t}</a>
+                </li>
+              ))}
+              <li>
+                <a className="link--accent" href="#">
+                  Car Rental in Jaipur
+                </a>
+              </li>
+              <li>
+                <a href="#">Car Rental in Chandigarh</a>
+              </li>
+              <li>
+                <a href="#">Car Rental in Lucknow</a>
+              </li>
+              <li>
+                <a href="#">Car Rental in Indore</a>
+              </li>
+            </ul>
+            <a className="viewall" href="#">
+              View All Cities <span>→</span>
             </a>
-            <br />
-            <a href="tel:+18001231234" className="ft-link">
-              +1800-123-1234
-            </a>
-          </section>
+          </nav>
 
-          {/* Navigation */}
-          <nav className="ft-col ft-col--border" aria-labelledby="ft-nav-h">
-            <h3 id="ft-nav-h" className="ft-title">
-              Navigation
-            </h3>
-            <ul className="ft-list">
-              <li>
-                <a href="#" className="ft-link">
-                  Style Guide
-                </a>
-              </li>
-              <li>
-                <a href="#" className="ft-link">
-                  License
-                </a>
-              </li>
-              <li>
-                <a href="#about" className="ft-link">
-                  About Us
-                </a>
-              </li>
-              <li>
-                <a href="#contact" className="ft-link">
-                  Contact Us
-                </a>
-              </li>
+          {/* Column: Services */}
+          <nav className="footer__col" aria-label="Services">
+            <h4>Services</h4>
+            <ul className="linklist">
+              {[
+                "Corporate Car Rental",
+                "Employee Transport Solutions",
+                "Global Car Rental",
+                "Hotel Travel Desk",
+                "Conference & Delegation",
+                "Event Transportation",
+                "Self Drive",
+                "Wedding Car Rental",
+                "Self Drive Solutions",
+                "Travel Partners Program",
+                "Chauffeured Car Rental Services",
+              ].map((t) => (
+                <li key={t}>
+                  <a href="#">{t}</a>
+                </li>
+              ))}
             </ul>
           </nav>
 
-          {/* Social */}
-          <section
-            className="ft-col ft-col--border"
-            aria-labelledby="ft-social-h"
-          >
-            <h3 id="ft-social-h" className="ft-title">
-              Social Media
-            </h3>
-            <ul className="ft-list">
-              <li>
-                <a href="#" className="ft-link">
-                  Facebook
-                </a>
-              </li>
-              <li>
-                <a href="#" className="ft-link">
-                  YouTube
-                </a>
-              </li>
-              <li>
-                <a href="#" className="ft-link">
-                  Dribble
-                </a>
-              </li>
-              <li>
-                <a href="#" className="ft-link">
-                  Instagram
-                </a>
-              </li>
+          {/* Column: SUV/Big Vans */}
+          <nav className="footer__col" aria-label="SUV/Big Vans">
+            <h4>SUV/Big Vans</h4>
+            <ul className="linklist">
+              {[
+                "Urbania on Rent Mumbai",
+                "Urbania on Rent Delhi",
+                "Urbania on Rent Pune",
+                "Urbania on Rent Bangalore",
+                "Urbania on Rent Chennai",
+                "Urbania on Rent Hyderabad",
+                "Urbania on Rent Kolkata",
+                "Urbania on Rent Kochi",
+                "Innova on Rent Mumbai",
+                "Innova on Rent Delhi",
+                "Innova on Rent Pune",
+                "Innova on Rent Bangalore",
+              ].map((t) => (
+                <li key={t}>
+                  <a href="#">{t}</a>
+                </li>
+              ))}
             </ul>
-          </section>
-
-          {/* Newsletter */}
-          <section className="ft-col" aria-labelledby="ft-news-h">
-            <h3 id="ft-news-h" className="ft-title">
-              Newsletter
-            </h3>
-
-            <form className="ft-newsform" onSubmit={handleNewsletter}>
-              <label className="ft-input">
-                <span className="ft-input-icon">
-                  <MailIcon />
-                </span>
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Enter Your Email"
-                  required
-                />
-              </label>
-
-              <label className="ft-check">
-                <input type="checkbox" name="agree" required />
-                <span className="ft-checkbox" aria-hidden="true" />
-                <span className="ft-checktext">
-                  I Agree{" "}
-                  <a href="#" className="ft-link ft-link--underline">
-                    Privacy Policy
-                  </a>
-                </span>
-              </label>
-
-              <button className="ft-submit" type="submit">
-                Submit
-              </button>
-            </form>
-          </section>
+            <a className="viewall" href="#">
+              View All Vehicles <span>→</span>
+            </a>
+          </nav>
         </div>
 
-        {/* Bottom bar */}
-        <div className="ft-bottom">
-          <small>
-            © Powered by{" "}
-            <a className="ft-link" href="https://webflow.com">
-              Webflow
-            </a>{" "}
-            created by{" "}
-            <a className="ft-link" href="https://peacefulqode.com">
-              PeacefulQode
-            </a>
-          </small>
+        <hr className="footer__rule" />
+
+        {/* Bottom row */}
+        <div className="footer__bottom">
+          <p className="copyright">© 2024 CarRental. All rights reserved.</p>
+          <nav className="footer__legal" aria-label="Legal">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Refund Policy</a>
+            <a href="#">Support</a>
+          </nav>
         </div>
       </div>
     </footer>
-  );
-}
-
-/* tiny mail icon */
-function MailIcon() {
-  return (
-    <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
-      <path
-        d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5L4 8"
-        fill="currentColor"
-      />
-    </svg>
   );
 }

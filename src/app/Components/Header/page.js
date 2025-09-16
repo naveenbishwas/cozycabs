@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import "./header.css";
 import Image from "next/image";
 import { useRef } from "react";
+import Link from "next/link";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -34,16 +35,18 @@ export default function Header() {
 
   return (
     <header className={scrolled ? "header scrolled" : "header"}>
-      <div className="logo">
-        <Image
-          src="/cozy-logo.svg"
-          width={100}
-          height={50}
-          unoptimized
-          alt="logo"
-        ></Image>
-        CozyCabs
-      </div>
+      <Link href="/">
+        <div className="logo">
+          <Image
+            src="/cozy-logo.svg"
+            width={100}
+            height={50}
+            unoptimized
+            alt="logo"
+          ></Image>
+          CozyCabs
+        </div>
+      </Link>
       <nav>
         <a href="#">Home</a>
         <a href="#">Pages</a>
