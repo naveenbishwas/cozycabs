@@ -27,7 +27,7 @@
   background: url("/internal1.webp") center right / cover no-repeat;
 
   /* added: spacing below hero */
-  margin-bottom: var(--section-gap);
+  /* margin-bottom: var(--section-gap); */
 }
 
 /* Full-bleed gradient overlay painted BEHIND content */
@@ -93,7 +93,7 @@
 }
 @media (max-width: 640px) {
   .mobility-hero {
-    margin-bottom: var(--section-gap-sm); /* added */
+    /* margin-bottom: var(--section-gap-sm);  */
   }
 }
 
@@ -118,7 +118,7 @@
   justify-content: center;
 
   /* added: section spacing */
-  margin-bottom: var(--section-gap);
+  /* margin-bottom: var(--section-gap); */
 }
 
 .booking-form__container {
@@ -305,9 +305,9 @@
 @media (max-width: 768px) {
   .booking-form {
     padding: 64px 16px;
-    margin-bottom: var(
+    /* margin-bottom: var(
       --section-gap-md
-    ); /* keep rhythm on tablet/mobile break */
+    );  */
   }
   .booking-form__container {
     padding: 32px 22px;
@@ -338,7 +338,7 @@
   padding: 106px 20px;
 
   /* added spacing below */
-  margin-bottom: var(--section-gap);
+  /* margin-bottom: var(--section-gap); */
 }
 
 .trust__container {
@@ -467,7 +467,7 @@
   position: relative;
 
   /* added spacing below */
-  margin-bottom: var(--section-gap);
+  /* margin-bottom: var(--section-gap); */
 }
 
 .howtoWrap {
@@ -629,7 +629,7 @@
   padding: 70px 20px 90px 20px;
 
   /* added spacing below */
-  margin-bottom: var(--section-gap);
+  /* margin-bottom: var(--section-gap); */
 }
 
 .howrent__container {
@@ -749,7 +749,7 @@
   color: #0a1a2a;
 
   /* added spacing below */
-  margin-bottom: var(--section-gap);
+  /* margin-bottom: var(--section-gap); */
 }
 
 .attractions__container {
@@ -842,7 +842,7 @@
   font-family: Arial, sans-serif;
 
   /* added spacing below */
-  margin-bottom: var(--section-gap);
+  /* margin-bottom: var(--section-gap); */
 }
 
 .faq-header {
