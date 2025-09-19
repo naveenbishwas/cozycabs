@@ -1389,7 +1389,7 @@ export default function Home() {
 
             <div className="service-card">
               <Image
-                src="From-airport.png"
+                src="from-airport.png"
                 width={0}
                 height={0}
                 unoptimized
@@ -1434,7 +1434,7 @@ export default function Home() {
 
             <div className="service-card">
               <Image
-                src="Monthly-cab.png"
+                src="monthly-cab.png"
                 width={0}
                 height={0}
                 unoptimized
