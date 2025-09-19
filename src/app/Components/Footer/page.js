@@ -202,7 +202,7 @@ export default function SiteFooter() {
               </div>
               <div>
                 <h3 id="footer-title" className="brand__name">
-                  CarRental
+                  CozyCabz
                 </h3>
                 <p className="brand__tag">Premium Transport Solutions</p>
               </div>

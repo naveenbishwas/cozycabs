@@ -44,7 +44,7 @@ export default function Header() {
             unoptimized
             alt="logo"
           ></Image>
-          CozyCabs
+          CozyCabz
         </div>
       </Link>
       <nav>
