@@ -2187,11 +2187,11 @@ p {
 .program-features .feature img {
   width: 50px;
   height: auto;
-  /* filter: brightness(0) saturate(100%) invert(16%) sepia(100%) saturate(3000%)
-    hue-rotate(345deg) brightness(90%) contrast(110%); */
+  filter: brightness(0) saturate(100%) invert(16%) sepia(100%) saturate(3000%)
+    hue-rotate(345deg) brightness(90%) contrast(110%);
 
-  filter: brightness(0) saturate(100%) invert(13%) sepia(85%) saturate(2900%)
-    hue-rotate(350deg) brightness(85%) contrast(115%);
+  /* filter: brightness(0) saturate(100%) invert(13%) sepia(85%) saturate(2900%)
+    hue-rotate(350deg) brightness(85%) contrast(115%); */
 }
 
 .service-card h3 {
