@@ -9,6 +9,10 @@ import Footer from "../Components/Footer/page";
 const InternalOne = () => {
   const [openIndex, setOpenIndex] = useState(null);
 
+  const toggle = (i) => {
+    setOpenIndex((prev) => (prev === i ? null : i));
+  };
+
   const items = [
     {
       title: "Verified Drivers",
@@ -217,11 +221,11 @@ const InternalOne = () => {
   return (
     <div>
       <Header />
-      <section className="mobility-hero" aria-label="Car Rental Hero Section">
-        <div className="mobility-hero__copy">
-          <p className="eyebrow">India’s Trusted Car Rental</p>
-          <h1 className="title">Car Rental in Mumbai</h1>
-          <p className="sub">
+      <section className="heroeco" aria-label="Car Rental Hero Section">
+        <div className="heroeco__copy">
+          <p className="heroeco__eyebrow">India’s Trusted Car Rental</p>
+          <h1 className="heroeco__title">Car Rental in Mumbai</h1>
+          <p className="heroeco__sub">
             With ECO Mobility Car Rentals, have a spectacular tour of Mumbai,
             the city of dreams. At the famous Gateway of India, where history
             and the Arabian Sea converge, start your journey.
@@ -363,7 +367,7 @@ const InternalOne = () => {
         </div>
       </section>
 
-      <section className="trust">
+      {/* <section className="trust">
         <div className="trust__container">
           <h2 className="trust__title">
             Why Ride <span>CozyCabs</span>
@@ -377,6 +381,27 @@ const InternalOne = () => {
             {items.map((it, i) => (
               <article className="trust__card" key={i}>
                 <div className="trust__icon">{it.icon}</div>
+                <h3>{it.title}</h3>
+                <p>{it.desc}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section> */}
+      <section className="trustcc">
+        <div className="trustcc__container">
+          <h2 className="trustcc__title">
+            Why Ride <span>CozyCabs</span>
+          </h2>
+          <p className="trustcc__sub">
+            Everything we build is focused on safe, reliable and fairly-priced
+            rides.
+          </p>
+
+          <div className="trustcc__grid">
+            {items.map((it, i) => (
+              <article className="trustcc__card" key={i}>
+                <div className="trustcc__icon">{it.icon}</div>
                 <h3>{it.title}</h3>
                 <p>{it.desc}</p>
               </article>

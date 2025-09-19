@@ -1540,18 +1540,25 @@
 }
 
 .iconWrap {
-  width: 80px;
-  height: 70px;
   margin: 0 auto 16px;
   border-radius: 12px;
-  background: radial-gradient(
-      100% 100% at 50% 0%,
-      var(--red-grad-1) 0%,
-      var(--red-grad-2) 100%
-    ),
-    var(--red);
   display: grid;
   place-items: center;
+}
+
+.iconWrap svg {
+  stroke: #000;
+}
+
+.iconWrap img {
+  width: 50px;
+  height: auto;
+  filter: brightness(0) saturate(100%) invert(13%) sepia(85%) saturate(2900%)
+    hue-rotate(350deg) brightness(85%) contrast(115%);
+}
+
+.iconWrap svg path {
+  fill: #000;
 }
 
 .cardTitle {
@@ -1966,6 +1973,15 @@
   height: 210px;
 }
 
+.why-icon img {
+  width: 50px;
+  height: auto;
+  filter: brightness(0) saturate(100%) invert(13%) sepia(85%) saturate(2900%)
+    hue-rotate(350deg) brightness(85%) contrast(115%);
+  margin-bottom: 10px;
+}
+
+/* 
 .why-icon {
   width: 48px;
   height: 48px;
@@ -1975,7 +1991,7 @@
   border-radius: 12px;
   background: radial-gradient(100% 100% at 30% 20%, #ffe6e6 0%, #fff 100%);
   border: 1px solid #ffd6d6;
-}
+} */
 .why-icon svg {
   width: 28px;
   height: 28px;
@@ -2166,6 +2182,17 @@ p {
   border-radius: 12px;
   text-align: center;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.service-card img,
+.program-features .feature img {
+  width: 50px;
+  height: auto;
+  /* filter: brightness(0) saturate(100%) invert(16%) sepia(100%) saturate(3000%)
+    hue-rotate(345deg) brightness(90%) contrast(110%); */
+
+  filter: brightness(0) saturate(100%) invert(13%) sepia(85%) saturate(2900%)
+    hue-rotate(350deg) brightness(85%) contrast(115%);
 }
 
 .service-card h3 {

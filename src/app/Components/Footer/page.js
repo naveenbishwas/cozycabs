@@ -176,6 +176,8 @@
 // components/SiteFooter.jsx
 "use client";
 import React from "react";
+import Link from "next/link";
+import Image from "next/image";
 import "./footer.css";
 
 export default function SiteFooter() {
@@ -190,12 +192,13 @@ export default function SiteFooter() {
           <div className="footer__brand">
             <div className="brand__row">
               <div className="brand__logo" aria-hidden="true">
-                {/* Car glyph */}
-                <svg viewBox="0 0 24 24">
-                  <path d="M3 13l1.2-3.6A3 3 0 017.1 7h9.8a3 3 0 012.9 2.4L21 13v5a1 1 0 01-1 1h-1a2 2 0 11-4 0H9a2 2 0 11-4 0H4a1 1 0 01-1-1v-5z" />
-                  <circle cx="7.8" cy="18" r="1.6" />
-                  <circle cx="16.2" cy="18" r="1.6" />
-                </svg>
+                {/* Example Image for logo */}
+                <Image
+                  src="/cozy-logo.svg"
+                  alt="CarRental Logo"
+                  width={40}
+                  height={40}
+                />
               </div>
               <div>
                 <h3 id="footer-title" className="brand__name">
@@ -214,26 +217,26 @@ export default function SiteFooter() {
             <ul className="footer__contacts">
               <li>
                 <span className="ico" aria-hidden="true">
-                  {/* phone */}
+                  {/* phone icon */}
                   <svg viewBox="0 0 24 24">
                     <path d="M6 2h4l2 5-3 2a16 16 0 007 7l2-3 5 2v4a2 2 0 01-2 2A18 18 0 012 8 2 2 0 014 6z" />
                   </svg>
                 </span>
-                <a href="tel:+919876543210">+91 98765-43210</a>
+                <Link href="tel:+919876543210">+91 98765-43210</Link>
               </li>
               <li>
                 <span className="ico" aria-hidden="true">
-                  {/* mail */}
+                  {/* mail icon */}
                   <svg viewBox="0 0 24 24">
                     <path d="M3 5h18v14H3z" />
                     <path d="M3 5l9 7 9-7" />
                   </svg>
                 </span>
-                <a href="mailto:info@carrental.com">info@carrental.com</a>
+                <Link href="mailto:info@carrental.com">info@carrental.com</Link>
               </li>
               <li>
                 <span className="ico" aria-hidden="true">
-                  {/* pin */}
+                  {/* pin icon */}
                   <svg viewBox="0 0 24 24">
                     <path d="M12 22s7-6.1 7-12A7 7 0 105 10c0 5.9 7 12 7 12z" />
                     <circle cx="12" cy="10" r="2.5" />
@@ -244,30 +247,30 @@ export default function SiteFooter() {
             </ul>
 
             <div className="footer__social" aria-label="Social links">
-              <a href="#" aria-label="Facebook">
+              <Link href="#" aria-label="Facebook">
                 <svg viewBox="0 0 24 24">
                   <path d="M14 9h3V6h-3a3 3 0 00-3 3v2H8v3h3v7h3v-7h3l1-3h-4V9a1 1 0 011-1z" />
                 </svg>
-              </a>
-              <a href="#" aria-label="X (Twitter)">
+              </Link>
+              <Link href="#" aria-label="X (Twitter)">
                 <svg viewBox="0 0 24 24">
                   <path d="M4 4l7.4 8.1L4.6 20H8l5.2-6 4.3 6H20l-7-9 6.6-7H16l-4.8 5.6L7.3 4H4z" />
                 </svg>
-              </a>
-              <a href="#" aria-label="Instagram">
+              </Link>
+              <Link href="#" aria-label="Instagram">
                 <svg viewBox="0 0 24 24">
                   <path d="M7 3h10a4 4 0 014 4v10a4 4 0 01-4 4H7a4 4 0 01-4-4V7a4 4 0 014-4z" />
                   <circle cx="12" cy="12" r="3.6" />
                   <circle cx="17.5" cy="6.5" r="1.2" />
                 </svg>
-              </a>
-              <a href="#" aria-label="LinkedIn">
+              </Link>
+              <Link href="#" aria-label="LinkedIn">
                 <svg viewBox="0 0 24 24">
                   <path d="M4 4h4v16H4z" />
                   <circle cx="6" cy="3" r="1.5" />
                   <path d="M10 10h4v2a3 3 0 016 0v8h-4v-7a1.8 1.8 0 00-3.6 0V20H10z" />
                 </svg>
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -275,38 +278,48 @@ export default function SiteFooter() {
           <nav className="footer__col" aria-label="City Guides">
             <h4>City Guides</h4>
             <ul className="linklist">
-              {[
-                "Car Rental in Mumbai",
-                "Car Rental in Delhi",
-                "Car Rental in Bangalore",
-                "Car Rental in Chennai",
-                "Car Rental in Hyderabad",
-                "Car Rental in Pune",
-                "Car Rental in Kolkata",
-                "Car Rental in Ahmedabad",
-              ].map((t) => (
-                <li key={t}>
-                  <a href="#">{t}</a>
-                </li>
-              ))}
               <li>
-                <a className="link--accent" href="#">
+                <Link href="/InternalOne">Car Rental in Mumbai</Link>
+              </li>
+              <li>
+                <Link href="/city/delhi">Car Rental in Delhi</Link>
+              </li>
+              <li>
+                <Link href="/city/bangalore">Car Rental in Bangalore</Link>
+              </li>
+              <li>
+                <Link href="/city/chennai">Car Rental in Chennai</Link>
+              </li>
+              <li>
+                <Link href="/city/hyderabad">Car Rental in Hyderabad</Link>
+              </li>
+              <li>
+                <Link href="/city/pune">Car Rental in Pune</Link>
+              </li>
+              <li>
+                <Link href="/city/kolkata">Car Rental in Kolkata</Link>
+              </li>
+              <li>
+                <Link href="/city/ahmedabad">Car Rental in Ahmedabad</Link>
+              </li>
+              <li>
+                <Link className="link--accent" href="/city/jaipur">
                   Car Rental in Jaipur
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#">Car Rental in Chandigarh</a>
+                <Link href="/city/chandigarh">Car Rental in Chandigarh</Link>
               </li>
               <li>
-                <a href="#">Car Rental in Lucknow</a>
+                <Link href="/city/lucknow">Car Rental in Lucknow</Link>
               </li>
               <li>
-                <a href="#">Car Rental in Indore</a>
+                <Link href="/city/indore">Car Rental in Indore</Link>
               </li>
             </ul>
-            <a className="viewall" href="#">
+            <Link className="viewall" href="/cities">
               View All Cities <span>→</span>
-            </a>
+            </Link>
           </nav>
 
           {/* Column: Services */}
@@ -327,7 +340,11 @@ export default function SiteFooter() {
                 "Chauffeured Car Rental Services",
               ].map((t) => (
                 <li key={t}>
-                  <a href="#">{t}</a>
+                  <Link
+                    href={`/services/${t.toLowerCase().replace(/\s+/g, "-")}`}
+                  >
+                    {t}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -352,13 +369,17 @@ export default function SiteFooter() {
                 "Innova on Rent Bangalore",
               ].map((t) => (
                 <li key={t}>
-                  <a href="#">{t}</a>
+                  <Link
+                    href={`/vehicles/${t.toLowerCase().replace(/\s+/g, "-")}`}
+                  >
+                    {t}
+                  </Link>
                 </li>
               ))}
             </ul>
-            <a className="viewall" href="#">
+            <Link className="viewall" href="/vehicles">
               View All Vehicles <span>→</span>
-            </a>
+            </Link>
           </nav>
         </div>
 
@@ -368,10 +389,10 @@ export default function SiteFooter() {
         <div className="footer__bottom">
           <p className="copyright">© 2024 CarRental. All rights reserved.</p>
           <nav className="footer__legal" aria-label="Legal">
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Service</a>
-            <a href="#">Refund Policy</a>
-            <a href="#">Support</a>
+            <Link href="/privacy-policy">Privacy Policy</Link>
+            <Link href="/terms">Terms of Service</Link>
+            <Link href="/refund-policy">Refund Policy</Link>
+            <Link href="/support">Support</Link>
           </nav>
         </div>
       </div>

@@ -147,10 +147,18 @@ export default function Home() {
   };
 
   // === Feature Card Component ===
-  function TrustFeature({ icon, title, text }) {
+  function TrustFeature({ image, title, text }) {
     return (
       <div className="card">
-        <div className="iconWrap">{icon}</div>
+        <div className="iconWrap">
+          <Image
+            src={image}
+            width={0}
+            height={0}
+            unoptimized
+            alt={title}
+          ></Image>
+        </div>
         <div className="cardTitle">{title}</div>
         <div className="cardText">{text}</div>
       </div>
@@ -639,10 +647,18 @@ export default function Home() {
     );
   }
 
-  function Feature({ icon, title, text }) {
+  function Feature({ image, title, text }) {
     return (
       <div className="why-card">
-        <div className="why-icon">{icon}</div>
+        <div className="why-icon">
+          <Image
+            src={image}
+            width={0}
+            height={0}
+            unoptimized
+            alt={title}
+          ></Image>
+        </div>
         <h3 className="why-card-title">{title}</h3>
         <p className="why-card-text">{text}</p>
       </div>
@@ -1023,22 +1039,26 @@ export default function Home() {
 
           <div className="grid">
             <TrustFeature
-              icon={<TrustShieldIcon />}
+              // icon={<TrustShieldIcon />}
+              image="secure.png"
               title="Safe & Secure"
               text="GPS tracking, verified drivers, and comprehensive insurance for your safety"
             />
             <TrustFeature
-              icon={<TrustClockIcon />}
+              // icon={<TrustClockIcon />}
+              image="thumb.png"
               title="24/7 Service"
               text="Round-the-clock availability with instant booking and customer support"
             />
             <TrustFeature
-              icon={<TrustDriverIcon />}
+              // icon={<TrustDriverIcon />}
+              image="expert.png"
               title="Expert Drivers"
               text="Professional, courteous drivers with extensive local knowledge and experience"
             />
             <TrustFeature
-              icon={<TrustFleetIcon />}
+              // icon={<TrustFleetIcon />}
+              image="qualityy.png"
               title="Quality Fleet"
               text="Well-maintained, premium vehicles regularly serviced for optimal performance"
             />
@@ -1337,7 +1357,14 @@ export default function Home() {
           <h2>Our Corporate Services</h2>
           <div className="services-grid">
             <div className="service-card">
-              <span className="icon">🕒</span>
+              {/* <span className="icon">🕒</span> */}
+              <Image
+                src="Hourly-cab.png"
+                width={0}
+                height={0}
+                unoptimized
+                alt=""
+              ></Image>
               <h3>Hourly Cab Rentals</h3>
               <p>
                 Get pick & drop service in the local area with flexible hourly
@@ -1346,7 +1373,13 @@ export default function Home() {
             </div>
 
             <div className="service-card">
-              <span className="icon">📍</span>
+              <Image
+                src="Travel-services.png"
+                width={0}
+                height={0}
+                unoptimized
+                alt=""
+              ></Image>
               <h3>Travel Services for Outstation Trips</h3>
               <p>
                 One way or round-way road trips at an affordable cost with
@@ -1355,7 +1388,13 @@ export default function Home() {
             </div>
 
             <div className="service-card">
-              <span className="icon">✈️</span>
+              <Image
+                src="From-airport.png"
+                width={0}
+                height={0}
+                unoptimized
+                alt=""
+              ></Image>
               <h3>To & From Airport</h3>
               <p>
                 Make your flight convenient by commuting to or from the airport
@@ -1364,7 +1403,13 @@ export default function Home() {
             </div>
 
             <div className="service-card">
-              <span className="icon">👥</span>
+              <Image
+                src="mice.png"
+                width={0}
+                height={0}
+                unoptimized
+                alt=""
+              ></Image>
               <h3>MICE Arrangement</h3>
               <p>
                 Whether it's about an office conference or exhibition, we can
@@ -1373,7 +1418,13 @@ export default function Home() {
             </div>
 
             <div className="service-card">
-              <span className="icon">📅</span>
+              <Image
+                src="Holiday-trip.png"
+                width={0}
+                height={0}
+                unoptimized
+                alt=""
+              ></Image>
               <h3>Holiday Trip</h3>
               <p>
                 We provide solutions for both local and outstation trips for
@@ -1382,7 +1433,13 @@ export default function Home() {
             </div>
 
             <div className="service-card">
-              <span className="icon">🚕</span>
+              <Image
+                src="Monthly-cab.png"
+                width={0}
+                height={0}
+                unoptimized
+                alt=""
+              ></Image>
               <h3>Monthly Cab Service</h3>
               <p>
                 If you book a cab every day, we have amazing deals on monthly
@@ -1396,7 +1453,13 @@ export default function Home() {
         <div className="program-features-box">
           <div className="program-features">
             <div className="feature">
-              <span className="icon">💼</span>
+              <Image
+                src="manager.png"
+                width={0}
+                height={0}
+                unoptimized
+                alt=""
+              ></Image>
               <h3>Dedicated Account Manager</h3>
               <p>
                 Personal relationship manager to handle all your corporate
@@ -1405,7 +1468,14 @@ export default function Home() {
             </div>
 
             <div className="feature">
-              <span className="icon">📊</span>
+              <Image
+                src="monthly-reporting.png"
+                width={0}
+                height={0}
+                unoptimized
+                alt=""
+              ></Image>
+
               <h3>Monthly Reporting</h3>
               <p>
                 Detailed monthly reports with usage analytics and cost
@@ -1414,7 +1484,13 @@ export default function Home() {
             </div>
 
             <div className="feature">
-              <span className="icon">💰</span>
+              <Image
+                src="volume-discount.png"
+                width={0}
+                height={0}
+                unoptimized
+                alt=""
+              ></Image>
               <h3>Volume Discounts</h3>
               <p>
                 Special pricing for high-volume corporate clients with flexible
@@ -1467,17 +1543,17 @@ export default function Home() {
           {/* Top row */}
           <div className="why-grid">
             <Feature
-              icon={<IconStar />}
+              image="/known.png"
               title="Well Known for Quality Services"
               text="Recognized across India for our commitment to excellence and premium service standards."
             />
             <Feature
-              icon={<IconCheck />}
+              image="/postive.png"
               title="Earned Positive Reviews from All Clients"
               text="Consistent 5-star ratings and testimonials from thousands of satisfied customers."
             />
             <Feature
-              icon={<IconUsers />}
+              image="/ntework.png"
               title="The Largest Network of Drivers"
               text="Extensive network of professional, verified drivers covering every major city in India."
             />
@@ -1486,17 +1562,17 @@ export default function Home() {
           {/* Optional second row — uncomment if you want 3 more cards */}
           <div className="why-grid">
             <Feature
-              icon={<IconShield />}
+              image="/safe.png"
               title="Safe & Secure"
               text="Background-verified partners and insured moves for complete peace of mind."
             />
             <Feature
-              icon={<IconPin />}
+              image="/transparent.png"
               title="Nationwide Coverage"
               text="Strong presence with on-ground support in metros and tier-2/3 cities."
             />
             <Feature
-              icon={<IconCard />}
+              image="/known.png"
               title="Transparent Pricing"
               text="Clear quotes, no hidden charges—ever."
             />

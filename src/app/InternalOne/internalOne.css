@@ -12,12 +12,11 @@
   --section-gap-md: 60px; /* ≤ 992px */
   --section-gap-sm: 40px; /* ≤ 640px */
 }
-
 /* --- Section with background image --- */
-.mobility-hero {
-  --header-space: 0px; /* set to your fixed header height if overlapping, e.g. 80px */
+.heroeco {
+  --header-space: 0px;
   position: relative;
-  isolation: isolate; /* ensures overlay stays beneath content */
+  isolation: isolate;
   width: 100%;
   min-height: 90vh;
   padding-top: var(--header-space);
@@ -25,17 +24,13 @@
 
   /* background image */
   background: url("/internal1.webp") center right / cover no-repeat;
-
-  /* added: spacing below hero */
-  /* margin-bottom: var(--section-gap); */
 }
 
-/* Full-bleed gradient overlay painted BEHIND content */
-.mobility-hero::before {
+/* Full-bleed gradient overlay */
+.heroeco::before {
   content: "";
   position: absolute;
   inset: 0;
-  /* left-to-right gradient for readability over image */
   background: linear-gradient(
     90deg,
     rgba(8, 26, 42, 0.92) 0%,
@@ -43,57 +38,57 @@
     rgba(8, 26, 42, 0.5) 60%,
     rgba(8, 26, 42, 0) 100%
   );
-  z-index: -1; /* stays behind text */
+  z-index: -1;
 }
 
 /* --- Content --- */
-.mobility-hero__copy {
-  position: relative; /* sits above overlay */
+.heroeco__copy {
+  position: relative;
   max-width: 1200px;
-  /* margin: 0 auto; */
   padding: 64px 90px;
 }
 
-.mobility-hero .eyebrow {
+.heroeco__eyebrow {
   font-size: 18px;
   opacity: 0.9;
-  margin: 0 0 10px;
-  margin-top: 18%;
+  margin: 18% 0 10px;
+  color: #fff !important;
 }
 
-.mobility-hero .title {
+.heroeco__title {
   font-size: 56px;
   line-height: 1.1;
   font-weight: 700;
   margin: 0 0 16px;
 }
 
-.mobility-hero .sub {
+.heroeco__sub {
   font-size: 18px;
   line-height: 1.65;
   max-width: 50ch;
   margin: 0;
+  color: #fff !important;
 }
 
 /* --- Responsive --- */
 @media (max-width: 992px) {
-  .mobility-hero {
+  .heroeco {
     min-height: 60vh;
-    margin-bottom: var(--section-gap-md); /* added */
+    margin-bottom: var(--section-gap-md);
   }
-  .mobility-hero__copy {
+  .heroeco__copy {
     padding: 32px 24px 40px;
   }
-  .mobility-hero .title {
+  .heroeco__title {
     font-size: 38px;
   }
-  .mobility-hero .sub {
+  .heroeco__sub {
     font-size: 16px;
   }
 }
 @media (max-width: 640px) {
-  .mobility-hero {
-    /* margin-bottom: var(--section-gap-sm);  */
+  .heroeco {
+    /* margin-bottom: var(--section-gap-sm); */
   }
 }
 
@@ -331,32 +326,29 @@
   }
 }
 
-/* -------- Trust section -------- */
-.trust {
+/* -------- Trust section (CozyCabs) -------- */
+.trustcc {
   background: #071a2a; /* deep blue to match your hero */
   color: #e9f1f7;
   padding: 106px 20px;
-
-  /* added spacing below */
-  /* margin-bottom: var(--section-gap); */
 }
 
-.trust__container {
+.trustcc__container {
   max-width: 1160px;
   margin: 0 auto;
 }
 
-.trust__title {
+.trustcc__title {
   text-align: center;
   font-size: 2.5rem;
   font-weight: 800;
   margin: 0 0 8px;
 }
-.trust__title span {
+.trustcc__title span {
   color: #ff3b3b;
 }
 
-.trust__sub {
+.trustcc__sub {
   text-align: center;
   opacity: 0.9;
   margin: 0 auto 28px;
@@ -365,13 +357,13 @@
 }
 
 /* Grid */
-.trust__grid {
+.trustcc__grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 18px;
 }
 
-.trust__card {
+.trustcc__card {
   position: relative;
   background: #0b2439;
   border: 1px solid rgba(255, 255, 255, 0.06);
@@ -381,8 +373,7 @@
   overflow: hidden;
 }
 
-.trust__card::after {
-  /* soft top-right glow */
+.trustcc__card::after {
   content: "";
   position: absolute;
   top: -40px;
@@ -397,14 +388,14 @@
   pointer-events: none;
 }
 
-.trust__card:hover {
+.trustcc__card:hover {
   transform: translateY(-4px);
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
   border-color: rgba(255, 255, 255, 0.14);
 }
 
 /* Icon */
-.trust__icon {
+.trustcc__icon {
   width: 48px;
   height: 48px;
   display: inline-grid;
@@ -414,28 +405,28 @@
   box-shadow: 0 8px 18px rgba(255, 77, 77, 0.25);
   margin-bottom: 14px;
 }
-.trust__icon svg {
+.trustcc__icon svg {
   width: 26px;
   height: 26px;
   fill: #ffffff;
 }
-.trust__icon svg .stroke {
+.trustcc__icon svg .stroke {
   fill: none;
   stroke: #ffffff;
   stroke-width: 2;
   stroke-linecap: round;
   stroke-linejoin: round;
 }
-.trust__icon svg .hole {
+.trustcc__icon svg .hole {
   fill: #071a2a;
 }
 
-.trust__card h3 {
+.trustcc__card h3 {
   margin: 0 0 6px;
   font-size: 18px;
   color: #ffffff;
 }
-.trust__card p {
+.trustcc__card p {
   margin: 0;
   font-size: 14.5px;
   line-height: 1.55;
@@ -444,18 +435,12 @@
 
 /* Responsive */
 @media (max-width: 992px) {
-  .trust {
-    margin-bottom: var(--section-gap-md); /* added */
-  }
-  .trust__grid {
+  .trustcc__grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 @media (max-width: 640px) {
-  .trust {
-    margin-bottom: var(--section-gap-sm); /* added */
-  }
-  .trust__grid {
+  .trustcc__grid {
     grid-template-columns: 1fr;
   }
 }
