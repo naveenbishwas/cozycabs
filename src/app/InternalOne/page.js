@@ -16,7 +16,7 @@ const InternalOne = () => {
   const items = [
     {
       title: "Professional, Verified Drivers",
-      desc: " Our chauffeurs are trained, polite, and know every corner of the city—from the lanes of Andheri to the sea breeze of Marine Drive. If you’re searching for rent a car in Mumbai with driver or car hire in Mumbai with driver, CozyCabz provides you with the most reliable option.",
+      desc: " Our chauffeurs are trained, polite, and know every corner of the city—from the lanes of Andheri to the sea breeze of Marine Drive. If you’re searching for rent a car in Mumbai with driver or car hire in Mumbai with driver, Cozy Cabz provides you with the most reliable option.",
       icon: (
         // Shield check
         <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -205,13 +205,15 @@ const InternalOne = () => {
       <section className="heroeco" aria-label="Car Rental Hero Section">
         <div className="heroeco__copy">
           <p className="heroeco__eyebrow">India’s Trusted Car Rental</p>
-          <h1 className="heroeco__title">
-            CozyCabz Car Rental in Mumbai – Safe, Reliable & Comfortable Rides
-          </h1>
+          <h1 className="heroeco__title">Car Rental in Mumbai </h1>
+          <span className="small-head">
+            <br />
+            <h4>– Safe, Reliable & Comfortable Rides</h4>
+          </span>
           <p className="heroeco__sub">
             Exploring Mumbai can be exciting but also overwhelming with traffic,
-            long distances, and the city’s non-stop energy. That’s where
-            CozyCabz Car Rental in Mumbai makes your journey easier.
+            long distances, and the city’s non-stop energy. That’s where Cozy
+            Cabz Car Rental in Mumbai makes your journey easier.
           </p>
         </div>
       </section>
@@ -374,7 +376,7 @@ const InternalOne = () => {
       <section className="trustcc">
         <div className="trustcc__container">
           <h2 className="trustcc__title">
-            Why Choose CozyCabs in<span> Mumbai?</span>
+            Why Choose Cozy Cabz in<span> Mumbai?</span>
           </h2>
           {/* <p className="trustcc__sub">
             Everything we build is focused on safe, reliable and fairly-priced
@@ -448,7 +450,7 @@ const InternalOne = () => {
         <div className="howrent__container">
           <h2 id="howrent-title">Easy Booking Process</h2>
           <p className="howrent__intro">
-            Booking a rental car in Mumbai with CozyCabz takes just a few steps
+            Booking a rental car in Mumbai with Cozy Cabz takes just a few steps
           </p>
 
           <ul className="howrent__list">
@@ -490,13 +492,13 @@ const InternalOne = () => {
         <div className="attractions__container">
           <header className="attractions__head">
             <h2 id="attractions-title">
-              Must-Visit Places in Mumbai with CozyCabs
+              Must-Visit Places in Mumbai with Cozy Cabz
             </h2>
             <p>
               Mumbai is a city that blends history, culture, glamour, and
               nature—all in one. From colonial-era monuments to vibrant markets,
               spiritual centers, and Bollywood hotspots, there’s so much to
-              explore. With CozyCabz car hire in Mumbai, you can cover these
+              explore. With Cozy Cabz car hire in Mumbai, you can cover these
               places comfortably, without the hassle of traffic, parking, or
               last-minute cab hunting.
             </p>

@@ -2289,6 +2289,16 @@ p {
     padding: 28px 18px;
   }
 
+  .services-grid {
+    grid-template-columns: unset !important;
+  }
+
+  #program-btn,
+  #btn-two,
+  .why-card {
+    width: 100%;
+  }
+
   .program-header h1 {
     font-size: 28px;
   }
