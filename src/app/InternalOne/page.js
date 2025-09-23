@@ -15,8 +15,8 @@ const InternalOne = () => {
 
   const items = [
     {
-      title: "Verified Drivers",
-      desc: "Background-checked, trained and rated after every trip.",
+      title: "Professional, Verified Drivers",
+      desc: " Our chauffeurs are trained, polite, and know every corner of the city—from the lanes of Andheri to the sea breeze of Marine Drive. If you’re searching for rent a car in Mumbai with driver or car hire in Mumbai with driver, CozyCabz provides you with the most reliable option.",
       icon: (
         // Shield check
         <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -26,8 +26,8 @@ const InternalOne = () => {
       ),
     },
     {
-      title: "New, Clean Fleet",
-      desc: "Regularly serviced vehicles with real-time quality checks.",
+      title: "Well-Maintained Fleet",
+      desc: "Choose from hatchbacks, sedans, SUVs, and premium cars. Whether you need an economy rental car in Mumbai, a 7 seater car on rent in Mumbai, or a luxury car rental Mumbai with driver, we’ve got it covered.",
       icon: (
         // Sedan
         <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -37,8 +37,8 @@ const InternalOne = () => {
       ),
     },
     {
-      title: "Transparent Pricing",
-      desc: "No surge surprises. See fare breakdown before you book.",
+      title: "Transparent & Affordable Pricing",
+      desc: "Get clear estimates with no hidden charges. From eco car rental to monthly car rental Mumbai, we share all details on per km rates, tolls, and driver allowances upfront.",
       icon: (
         // Tag
         <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -48,8 +48,8 @@ const InternalOne = () => {
       ),
     },
     {
-      title: "On-Time Guarantee",
-      desc: "Punctual pick-ups with live tracking and ETA updates.",
+      title: "24×7 Availability",
+      desc: " Mumbai never sleeps—and neither do we. Be it airport pickups at night or one day car rental Mumbai, our services are available around the clock.",
       icon: (
         // Clock + tick
         <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -60,8 +60,8 @@ const InternalOne = () => {
       ),
     },
     {
-      title: "24/7 Support",
-      desc: "Human support over call, chat, and WhatsApp—anytime.",
+      title: "Safety & Hygiene First",
+      desc: " Every ride is sanitized, insured, and GPS-enabled. From private car rental in Mumbai to car with driver Mumbai, your safety and comfort remain our top priority.",
       icon: (
         // Headset
         <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -69,78 +69,59 @@ const InternalOne = () => {
         </svg>
       ),
     },
-    {
-      title: "Ride Insurance",
-      desc: "Every trip covered with accident & liability protection.",
-      icon: (
-        // Umbrella
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M12 3a8 8 0 018 8H4a8 8 0 018-8z" />
-          <path d="M12 11v6a3 3 0 01-3 3" className="stroke" />
-        </svg>
-      ),
-    },
   ];
 
   const spots = [
     {
-      title: "The Gateway of India",
+      title: "Gateway of India & Colaba Causeway",
       img: "/g1.webp",
       alt: "The Gateway of India at sunrise",
       paragraphs: [
-        "An iconic monument on the Arabian Sea, the Gateway of India stands as a symbol of Mumbai’s grand history. Built to commemorate the royal visit of King George V and Queen Mary in 1911, its Indo-Saracenic arches and intricate details form a captivating silhouette.",
-        "A bustling hub for locals and visitors alike, the promenade around the Gateway is especially magical at sunset. Nearby, the Taj Mahal Palace Hotel adds to the area’s blend of heritage and elegance.",
+        "Standing tall by the Arabian Sea, the Gateway of India is Mumbai’s most iconic landmark. Built during the British era, it’s not just a tourist attraction but a piece of history. Just a short walk away lies Colaba Causeway, a bustling market street filled with trendy clothes, antique jewelry, handicrafts, and cozy cafés. With our car rental with driver, you can explore both spots in one go—without the stress of crowded lanes or parking issues",
       ],
     },
     {
-      title: "Marine Drive",
+      title: "Marine Drive & Girgaon Chowpatty",
       img: "/g2.webp",
       alt: "Marine Drive during a colorful sunset",
       paragraphs: [
-        "Often called the “Queen’s Necklace,” Marine Drive is a 3.6-km boulevard curving along the Arabian Sea. Palm trees, art-deco buildings, and the soothing sound of waves make it perfect for leisurely strolls.",
-        "During monsoon and at sunset, the promenade comes alive with a glow of city lights and crashing waves — a serene, picture-perfect slice of Mumbai.",
+        "Known as the Queen’s Necklace because of its glittering night view, Marine Drive is perfect for long seaside walks, photography, and sunset views. Close by is Girgaon Chowpatty, a popular beach where you can indulge in Mumbai’s famous street food like pav bhaji, bhel puri, and ice gola. Booking a car on rent in Mumbai ensures you enjoy the evening at your own pace, without worrying about transport after dark.",
       ],
     },
     {
-      title: "Shree Siddhivinayak Temple",
+      title: "Siddhivinayak Temple & Haji Ali Dargah",
       img: "/g3.webp",
       alt: "Golden sanctum of Shree Siddhivinayak Temple",
       paragraphs: [
-        "Dedicated to Lord Ganesha, this revered temple draws millions each year. The gilded dome, ornate carvings, and sacred iconography create an atmosphere of devotion and calm amid the city’s bustle.",
-        "Festive days like Ganesh Chaturthi transform the temple into a vibrant epicenter of celebration — a must-visit for both spiritual seekers and culture enthusiasts.",
+        "Mumbai is as spiritual as it is fast-paced. The Siddhivinayak Temple, dedicated to Lord Ganesha, attracts lakhs of devotees every week. Equally famous is the Haji Ali Dargah, located on a small islet in the Arabian Sea, offering both peace and breathtaking views. With our car rental service in Mumbai, you can plan your visit conveniently, avoiding long waits and ensuring you reach at the best times of the day.",
       ],
     },
     {
-      title: "Elephanta Caves",
+      title: "Elephanta Caves & Sanjay Gandhi National Park",
       img: "/g4.webp",
       alt: "Rock-cut Elephanta Caves surrounded by greenery",
       paragraphs: [
-        "A short ferry ride from Mumbai takes you to the UNESCO-listed Elephanta Caves on Elephanta Island. Carved into basalt between the 5th and 7th centuries, the caves showcase the zenith of rock-cut architecture.",
-        "Inside, magnificent sculptures and reliefs — including the famed 20-foot Trimurti — evoke timeless artistry and spiritual depth.",
+        "If you want to step away from the chaos of the city, Elephanta Caves and Sanjay Gandhi National Park are perfect day trips. The Elephanta Caves, a UNESCO World Heritage site, house ancient rock-cut temples dedicated to Lord Shiva. Meanwhile, Sanjay Gandhi National Park offers greenery, trekking trails, and a mini train ride, making it a favorite for nature lovers and families. By booking a rental car in Mumbai with driver, you can comfortably plan a full-day outing, knowing your car and driver will be with you throughout the trip.",
       ],
     },
   ];
 
   const faqs = [
     {
-      q: "What services are included in the Corporate Program?",
-      a: "Hourly cab rentals, airport transfers, outstation trips, MICE arrangements, monthly cab service, and holiday trips—plus a dedicated account manager and monthly reporting.",
+      q: "How much does a cab cost in Mumbai per km?",
+      a: "Economy rides start at ₹12/km, premium cars at ₹25/km, and luxury at ₹35/km. Whether you need a cheap car rental Mumbai or a luxury car rental in Mumbai, we provide a transparent fare estimate before booking.",
     },
     {
-      q: "Can we get invoices consolidated monthly?",
-      a: "Yes. We provide consolidated monthly invoices, detailed usage analytics, and cost-saving recommendations.",
+      q: " Can I book a cab from Mumbai to other cities?",
+      a: "Yes. Popular outstation routes include Mumbai–Pune, Mumbai–Nashik, Lonavala, Shirdi, and Mumbai–Goa. Our car rental in Mumbai for outstation offers both one-way and round-trip options.",
     },
     {
-      q: "Do you offer volume discounts?",
-      a: "High-volume and long-term contracts are eligible for special pricing and flexible payment terms.",
+      q: "Do you provide airport pickups at night?",
+      a: "Absolutely. Our Mumbai airport cab service runs 24×7 for both Domestic (T1) and International (T2) terminals.",
     },
     {
-      q: "How do we manage bookings for our team?",
-      a: "You’ll get a dedicated account manager and a streamlined booking flow (web/phone/WhatsApp) with priority support for changes or emergencies.",
-    },
-    {
-      q: "Are your vehicles and drivers certified?",
-      a: "All vehicles are well-maintained and insured. Drivers are verified, trained for corporate protocols, and follow punctuality and safety guidelines.",
+      q: "Is there a package for full-day Mumbai sightseeing?",
+      a: "Yes, we offer 8 hr / 80 km full day car rental in Mumbai with driver, ideal for sightseeing tours covering all major attractions.",
     },
   ];
 
@@ -224,11 +205,13 @@ const InternalOne = () => {
       <section className="heroeco" aria-label="Car Rental Hero Section">
         <div className="heroeco__copy">
           <p className="heroeco__eyebrow">India’s Trusted Car Rental</p>
-          <h1 className="heroeco__title">Car Rental in Mumbai</h1>
+          <h1 className="heroeco__title">
+            CozyCabz Car Rental in Mumbai – Safe, Reliable & Comfortable Rides
+          </h1>
           <p className="heroeco__sub">
-            With ECO Mobility Car Rentals, have a spectacular tour of Mumbai,
-            the city of dreams. At the famous Gateway of India, where history
-            and the Arabian Sea converge, start your journey.
+            Exploring Mumbai can be exciting but also overwhelming with traffic,
+            long distances, and the city’s non-stop energy. That’s where
+            CozyCabz Car Rental in Mumbai makes your journey easier.
           </p>
         </div>
       </section>
@@ -391,12 +374,12 @@ const InternalOne = () => {
       <section className="trustcc">
         <div className="trustcc__container">
           <h2 className="trustcc__title">
-            Why Ride <span>CozyCabs</span>
+            Why Choose CozyCabs in<span> Mumbai?</span>
           </h2>
-          <p className="trustcc__sub">
+          {/* <p className="trustcc__sub">
             Everything we build is focused on safe, reliable and fairly-priced
             rides.
-          </p>
+          </p> */}
 
           <div className="trustcc__grid">
             {items.map((it, i) => (
@@ -463,49 +446,40 @@ const InternalOne = () => {
 
       <section className="howrent" aria-labelledby="howrent-title">
         <div className="howrent__container">
-          <h2 id="howrent-title">How to rent a car in Mumbai?</h2>
+          <h2 id="howrent-title">Easy Booking Process</h2>
           <p className="howrent__intro">
-            It only takes a few minutes to book your ride with us. Choose the
-            booking method that suits you best—website, chat, email, or our 24/7
-            call center. Your convenience comes first.
+            Booking a rental car in Mumbai with CozyCabz takes just a few steps
           </p>
 
           <ul className="howrent__list">
             <li className="howrent__item">
-              <h3>Website</h3>
+              <h3>Enter Your Trip Details</h3>
               <p>
-                Booking via our website is quick and easy—fill your details and
-                submit your enquiry. Use the call and chat options on the page
-                if you need help.
+                Add pickup, drop, timings, and trip type—whether it’s local,
+                outstation, or airport
               </p>
             </li>
 
             <li className="howrent__item">
-              <h3>Chat</h3>
+              <h3>Choose Your Vehicle</h3>
               <p>
-                Ask questions or share requirements in the website chat window.
-                Our team responds in minutes and guides you through the booking.
+                From economy rental cars to luxury car hire in Mumbai with
+                driver, select what suits your budget and comfort.
               </p>
             </li>
 
             <li className="howrent__item">
-              <h3>Email</h3>
+              <h3>Get Instant Confirmation</h3>
               <p>
-                Prefer email? Write to{" "}
-                <a href="mailto:sales@ecosmobility.com">
-                  sales@ecosmobility.com
-                </a>{" "}
-                with your dates, route, and car preferences—we’ll confirm with a
-                quotation.
+                Receive driver details, car model, and arrival time instantly.
               </p>
             </li>
 
             <li className="howrent__item">
-              <h3>24/7 Call Center</h3>
+              <h3>Enjoy a Stress-Free Ride</h3>
               <p>
-                Call us anytime at{" "}
-                <a href="tel:+919654999666">+91-9654999666</a>. Our human
-                support will help you book and answer any specifics right away.
+                Sit back, relax, and let our driver handle Mumbai’s traffic
+                while you travel in comfort.
               </p>
             </li>
           </ul>
@@ -516,12 +490,15 @@ const InternalOne = () => {
         <div className="attractions__container">
           <header className="attractions__head">
             <h2 id="attractions-title">
-              Top Attractions and Sightseeing in Mumbai
+              Must-Visit Places in Mumbai with CozyCabs
             </h2>
             <p>
-              Explore Mumbai’s icons in comfort with our rental cabs — from the
-              Gateway of India and Marine Drive to Siddhivinayak Temple and the
-              Elephanta Caves.
+              Mumbai is a city that blends history, culture, glamour, and
+              nature—all in one. From colonial-era monuments to vibrant markets,
+              spiritual centers, and Bollywood hotspots, there’s so much to
+              explore. With CozyCabz car hire in Mumbai, you can cover these
+              places comfortably, without the hassle of traffic, parking, or
+              last-minute cab hunting.
             </p>
           </header>
 

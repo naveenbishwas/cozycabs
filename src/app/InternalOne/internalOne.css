@@ -18,7 +18,7 @@
   position: relative;
   isolation: isolate;
   width: 100%;
-  min-height: 90vh;
+  min-height: 100vh;
   padding-top: var(--header-space);
   color: #fff;
 
@@ -51,7 +51,7 @@
 .heroeco__eyebrow {
   font-size: 18px;
   opacity: 0.9;
-  margin: 18% 0 10px;
+  margin: 16% 0 10px;
   color: #fff !important;
 }
 
@@ -60,6 +60,7 @@
   line-height: 1.1;
   font-weight: 700;
   margin: 0 0 16px;
+  max-width: 80%;
 }
 
 .heroeco__sub {
@@ -428,9 +429,11 @@
 }
 .trustcc__card p {
   margin: 0;
-  font-size: 14.5px;
+  font-size: 13.5px;
   line-height: 1.55;
   color: #cfe0ea;
+  overflow: hidden;
+  margin-top: 14px;
 }
 
 /* Responsive */
