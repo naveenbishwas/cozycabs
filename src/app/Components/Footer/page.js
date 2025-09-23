@@ -275,6 +275,52 @@ export default function SiteFooter() {
           </div>
 
           {/* Column: City Guides */}
+          <nav className="footer__col" aria-label="City Guides">
+            <h4>City Guides</h4>
+            <ul className="linklist">
+              <li>
+                <Link href="/InternalOne">Car Rental in Mumbai</Link>
+              </li>
+              <li>
+                <Link href="/InDelhi">Car Rental in Delhi</Link>
+              </li>
+              <li>
+                <Link href="/Inbanglore">Car Rental in Bangalore</Link>
+              </li>
+              <li>
+                <Link href="/Inchennai">Car Rental in Chennai</Link>
+              </li>
+              <li>
+                <Link href="/Inhyderabad">Car Rental in Hyderabad</Link>
+              </li>
+              <li>
+                <Link href="/InPune">Car Rental in Pune</Link>
+              </li>
+              <li>
+                <Link href="/InKolkata">Car Rental in Kolkata</Link>
+              </li>
+              <li>
+                <Link href="/InAhmedabad">Car Rental in Ahmedabad</Link>
+              </li>
+              <li>
+                <Link className="link--accent" href="/InJaipur">
+                  Car Rental in Jaipur
+                </Link>
+              </li>
+              <li>
+                <Link href="/city/chandigarh">Car Rental in Chandigarh</Link>
+              </li>
+              <li>
+                <Link href="/city/lucknow">Car Rental in Lucknow</Link>
+              </li>
+              <li>
+                <Link href="/city/indore">Car Rental in Indore</Link>
+              </li>
+            </ul>
+            <Link className="viewall" href="/cities">
+              View All Cities <span>→</span>
+            </Link>
+          </nav>
 
           {/* Column: Services */}
           <nav className="footer__col" aria-label="Services">
@@ -304,94 +350,35 @@ export default function SiteFooter() {
             </ul>
           </nav>
 
-          <nav className="footer__col" aria-label="City Guides">
-            <h4>City Guides</h4>
+          {/* Column: SUV/Big Vans */}
+          <nav className="footer__col" aria-label="SUV/Big Vans">
+            <h4>SUV/Big Vans</h4>
             <ul className="linklist">
-              <li>
-                <Link href="/InternalOne">Car Rental in Mumbai</Link>
-              </li>
-              <li>
-                <Link href="/InDelhi">Car Rental in Delhi</Link>
-              </li>
-              <li>
-                <Link href="/city/bangalore">Car Rental in Bangalore</Link>
-              </li>
-              <li>
-                <Link href="/city/chennai">Car Rental in Chennai</Link>
-              </li>
-              <li>
-                <Link href="/city/hyderabad">Car Rental in Hyderabad</Link>
-              </li>
-              <li>
-                <Link href="/city/pune">Car Rental in Pune</Link>
-              </li>
-              <li>
-                <Link href="/city/kolkata">Car Rental in Kolkata</Link>
-              </li>
-              <li>
-                <Link href="/city/ahmedabad">Car Rental in Ahmedabad</Link>
-              </li>
-              <li>
-                <Link className="link--accent" href="/city/jaipur">
-                  Car Rental in Jaipur
-                </Link>
-              </li>
-              <li>
-                <Link href="/city/chandigarh">Car Rental in Chandigarh</Link>
-              </li>
-              <li>
-                <Link href="/city/lucknow">Car Rental in Lucknow</Link>
-              </li>
-              <li>
-                <Link href="/city/indore">Car Rental in Indore</Link>
-              </li>
+              {[
+                "Urbania on Rent Mumbai",
+                "Urbania on Rent Delhi",
+                "Urbania on Rent Pune",
+                "Urbania on Rent Bangalore",
+                "Urbania on Rent Chennai",
+                "Urbania on Rent Hyderabad",
+                "Urbania on Rent Kolkata",
+                "Urbania on Rent Kochi",
+                "Innova on Rent Mumbai",
+                "Innova on Rent Delhi",
+                "Innova on Rent Pune",
+                "Innova on Rent Bangalore",
+              ].map((t) => (
+                <li key={t}>
+                  <Link
+                    href={`/vehicles/${t.toLowerCase().replace(/\s+/g, "-")}`}
+                  >
+                    {t}
+                  </Link>
+                </li>
+              ))}
             </ul>
-          </nav>
-
-          <nav className="footer__col" aria-label="More Cities">
-            <h4>More Cities</h4>
-            <ul className="linklist">
-              <li>
-                <Link href="/city/surat">Car Rental in Surat</Link>
-              </li>
-              <li>
-                <Link href="/city/nagpur">Car Rental in Nagpur</Link>
-              </li>
-              <li>
-                <Link href="/city/coimbatore">Car Rental in Coimbatore</Link>
-              </li>
-              <li>
-                <Link href="/city/vijayawada">Car Rental in Vijayawada</Link>
-              </li>
-              <li>
-                <Link href="/city/vadodara">Car Rental in Vadodara</Link>
-              </li>
-              <li>
-                <Link href="/city/bhopal">Car Rental in Bhopal</Link>
-              </li>
-              <li>
-                <Link href="/city/visakhapatnam">
-                  Car Rental in Visakhapatnam
-                </Link>
-              </li>
-              <li>
-                <Link href="/city/rajkot">Car Rental in Rajkot</Link>
-              </li>
-              <li>
-                <Link href="/city/kanpur">Car Rental in Kanpur</Link>
-              </li>
-              <li>
-                <Link href="/city/patna">Car Rental in Patna</Link>
-              </li>
-              <li>
-                <Link href="/city/guwahati">Car Rental in Guwahati</Link>
-              </li>
-              <li>
-                <Link href="/city/mysore">Car Rental in Mysore</Link>
-              </li>
-            </ul>
-            <Link className="viewall" href="/cities">
-              View All Cities <span>→</span>
+            <Link className="viewall" href="/vehicles">
+              View All Vehicles <span>→</span>
             </Link>
           </nav>
         </div>
