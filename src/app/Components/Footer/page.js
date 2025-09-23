@@ -349,7 +349,7 @@ export default function SiteFooter() {
           </nav>
 
           <nav className="footer__col" aria-label="More Cities">
-            <h4>More Cities</h4>
+            {/* <h4>More Cities</h4> */}
             <ul className="linklist">
               <li>
                 <Link href="/city/surat">Car Rental in Surat</Link>
@@ -390,9 +390,9 @@ export default function SiteFooter() {
                 <Link href="/city/mysore">Car Rental in Mysore</Link>
               </li>
             </ul>
-            <Link className="viewall" href="/cities">
+            {/* <Link className="viewall" href="/cities">
               View All Cities <span>→</span>
-            </Link>
+            </Link> */}
           </nav>
         </div>
 
