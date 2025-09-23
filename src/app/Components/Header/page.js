@@ -1,16 +1,138 @@
+// // "use client";
+// // import { useEffect, useState } from "react";
+// // import "./header.css";
+// // import Image from "next/image";
+// // import { useRef } from "react";
+// // import Link from "next/link";
+
+// // export default function Header() {
+// //   const [scrolled, setScrolled] = useState(false);
+// //   const [showSearch, setShowSearch] = useState(false);
+// //   const [query, setQuery] = useState("");
+// //   const trackRef = useRef(null);
+// //   const [pos, setPos] = useState(50);
+
+// //   useEffect(() => {
+// //     const handleScroll = () => {
+// //       setScrolled(window.scrollY > 50);
+// //     };
+// //     window.addEventListener("scroll", handleScroll);
+// //     return () => window.removeEventListener("scroll", handleScroll);
+// //   }, []);
+
+// //   const handleSearchToggle = () => {
+// //     setShowSearch((prev) => !prev);
+// //     setQuery(""); // reset search field when reopened
+// //   };
+
+// //   const handleSubmit = (e) => {
+// //     e.preventDefault();
+// //     if (query.trim()) {
+// //       console.log("Searching for:", query);
+// //       // 🔹 Replace this with your actual search logic
+// //     }
+// //   };
+
+// //   return (
+// //     <header className={scrolled ? "header scrolled" : "header"}>
+// //       <Link href="/">
+// //         <div className="logo">
+// //           <Image
+// //             src="/cozy-logo.svg"
+// //             width={100}
+// //             height={50}
+// //             unoptimized
+// //             alt="logo"
+// //           ></Image>
+// //           CozyCabz
+// //         </div>
+// //       </Link>
+// //       <nav>
+// //         {/* <a href="#">Home</a>
+// //         <a href="#">Pages</a>
+// //         <a href="#">Service</a>
+// //         <a href="#">Blog</a> */}
+// //         <ul className="nav-list">
+// //           <li>
+// //             <Link href="/">Home</Link>
+// //           </li>
+
+// //           <li
+// //             className="dropdown"
+// //             onMouseEnter={() => setOpen(true)}
+// //             onMouseLeave={() => setOpen(false)}
+// //           >
+// //             <span className="dropbtn">Services ▾</span>
+// //             {open && (
+// //               <ul className="dropdown-content">
+// //                 <li>
+// //                   <Link href="/web">Web Development</Link>
+// //                 </li>
+// //                 <li>
+// //                   <Link href="/design">UI/UX Design</Link>
+// //                 </li>
+// //                 <li>
+// //                   <Link href="/seo">SEO Services</Link>
+// //                 </li>
+// //               </ul>
+// //             )}
+// //           </li>
+
+// //           <li>
+// //             <Link href="/about">About</Link>
+// //           </li>
+// //           <li>
+// //             <Link href="/contact">Contact</Link>
+// //           </li>
+// //         </ul>
+// //       </nav>
+
+// //       <span className="header-cta">
+// //         {/* Search */}
+// //         <form
+// //           className={`search-form ${showSearch ? "active" : ""}`}
+// //           onSubmit={handleSubmit}
+// //         >
+// //           <input
+// //             type="text"
+// //             placeholder="Search..."
+// //             value={query}
+// //             onChange={(e) => setQuery(e.target.value)}
+// //             className="search-input"
+// //           />
+// //         </form>
+
+// //         <button className="search-icons" onClick={handleSearchToggle}>
+// //           <svg
+// //             xmlns="http://www.w3.org/2000/svg"
+// //             fill="none"
+// //             viewBox="0 0 24 24"
+// //             strokeWidth="1.5"
+// //             stroke="currentColor"
+// //             className="size-6"
+// //           >
+// //             <path
+// //               strokeLinecap="round"
+// //               strokeLinejoin="round"
+// //               d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+// //             />
+// //           </svg>
+// //         </button>
+
+// //         <button className="contact-btn">Contact Us</button>
+// //       </span>
+// //     </header>
+// //   );
+// // }
+
 // "use client";
 // import { useEffect, useState } from "react";
 // import "./header.css";
 // import Image from "next/image";
-// import { useRef } from "react";
 // import Link from "next/link";
 
 // export default function Header() {
 //   const [scrolled, setScrolled] = useState(false);
-//   const [showSearch, setShowSearch] = useState(false);
-//   const [query, setQuery] = useState("");
-//   const trackRef = useRef(null);
-//   const [pos, setPos] = useState(50);
 
 //   useEffect(() => {
 //     const handleScroll = () => {
@@ -19,19 +141,6 @@
 //     window.addEventListener("scroll", handleScroll);
 //     return () => window.removeEventListener("scroll", handleScroll);
 //   }, []);
-
-//   const handleSearchToggle = () => {
-//     setShowSearch((prev) => !prev);
-//     setQuery(""); // reset search field when reopened
-//   };
-
-//   const handleSubmit = (e) => {
-//     e.preventDefault();
-//     if (query.trim()) {
-//       console.log("Searching for:", query);
-//       // 🔹 Replace this with your actual search logic
-//     }
-//   };
 
 //   return (
 //     <header className={scrolled ? "header scrolled" : "header"}>
@@ -43,41 +152,56 @@
 //             height={50}
 //             unoptimized
 //             alt="logo"
-//           ></Image>
+//           />
 //           CozyCabz
 //         </div>
 //       </Link>
+
 //       <nav>
-//         {/* <a href="#">Home</a>
-//         <a href="#">Pages</a>
-//         <a href="#">Service</a>
-//         <a href="#">Blog</a> */}
 //         <ul className="nav-list">
 //           <li>
 //             <Link href="/">Home</Link>
 //           </li>
 
-//           <li
-//             className="dropdown"
-//             onMouseEnter={() => setOpen(true)}
-//             onMouseLeave={() => setOpen(false)}
-//           >
-//             <span className="dropbtn">Services ▾</span>
-//             {open && (
-//               <ul className="dropdown-content">
-//                 <li>
-//                   <Link href="/web">Web Development</Link>
-//                 </li>
-//                 <li>
-//                   <Link href="/design">UI/UX Design</Link>
-//                 </li>
-//                 <li>
-//                   <Link href="/seo">SEO Services</Link>
-//                 </li>
-//               </ul>
-//             )}
+//           {/* Dropdown */}
+//           <li className="dropdown">
+//             <span className="dropbtn">Our Services ▾</span>
+//             <ul className="dropdown-content">
+//               <li>
+//                 <Link href="/corporate">Corporate Car Rental</Link>
+//               </li>
+//               <li>
+//                 <Link href="/TransportSolution">
+//                   Employee Transport Solutions
+//                 </Link>
+//               </li>
+//               <li>
+//                 <Link href="/global">Global Car Rental</Link>
+//               </li>
+//               <li>
+//                 <Link href="/hotel">Hotel Travel Desk</Link>
+//               </li>
+//               <li>
+//                 <Link href="/conference">Conference & Delegation</Link>
+//               </li>
+//               <li>
+//                 <Link href="/event">Event Transportation</Link>
+//               </li>
+//               <li>
+//                 <Link href="/wedding">Wedding Car Rental</Link>
+//               </li>
+//               <li>
+//                 <Link href="/partners">Travel Partners Program</Link>
+//               </li>
+//               <li>
+//                 <Link href="/chauffeur">Chauffeured Car Rental</Link>
+//               </li>
+//             </ul>
 //           </li>
 
+//           <li>
+//             <Link href="/fleet">Our Fleet</Link>
+//           </li>
 //           <li>
 //             <Link href="/about">About</Link>
 //           </li>
@@ -87,44 +211,14 @@
 //         </ul>
 //       </nav>
 
-//       <span className="header-cta">
-//         {/* Search */}
-//         <form
-//           className={`search-form ${showSearch ? "active" : ""}`}
-//           onSubmit={handleSubmit}
-//         >
-//           <input
-//             type="text"
-//             placeholder="Search..."
-//             value={query}
-//             onChange={(e) => setQuery(e.target.value)}
-//             className="search-input"
-//           />
-//         </form>
-
-//         <button className="search-icons" onClick={handleSearchToggle}>
-//           <svg
-//             xmlns="http://www.w3.org/2000/svg"
-//             fill="none"
-//             viewBox="0 0 24 24"
-//             strokeWidth="1.5"
-//             stroke="currentColor"
-//             className="size-6"
-//           >
-//             <path
-//               strokeLinecap="round"
-//               strokeLinejoin="round"
-//               d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
-//             />
-//           </svg>
+//       <div className="header-cta">
+//         <button className="contact-btn">
+//           <span>91+ 7387382383</span>
 //         </button>
-
-//         <button className="contact-btn">Contact Us</button>
-//       </span>
+//       </div>
 //     </header>
 //   );
 // }
-
 "use client";
 import { useEffect, useState } from "react";
 import "./header.css";
@@ -133,89 +227,189 @@ import Link from "next/link";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
+    const handleScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
-    <header className={scrolled ? "header scrolled" : "header"}>
-      <Link href="/">
-        <div className="logo">
-          <Image
-            src="/cozy-logo.svg"
-            width={100}
-            height={50}
-            unoptimized
-            alt="logo"
-          />
-          CozyCabz
+    <>
+      <header className={scrolled ? "header scrolled" : "header"}>
+        <Link href="/">
+          <div className="logo">
+            <Image
+              src="/cozy-logo.svg"
+              width={100}
+              height={50}
+              unoptimized
+              alt="logo"
+            />
+            CozyCabz
+          </div>
+        </Link>
+
+        {/* Desktop Nav */}
+        <nav>
+          <ul className="nav-list">
+            <li>
+              <Link href="/">Home</Link>
+            </li>
+            <li className="dropdown">
+              <span className="dropbtn">Our Services ▾</span>
+              <ul className="dropdown-content">
+                <li>
+                  <Link href="/corporate">Corporate Car Rental</Link>
+                </li>
+                <li>
+                  <Link href="/transport">Employee Transport Solutions</Link>
+                </li>
+                <li>
+                  <Link href="/global">Global Car Rental</Link>
+                </li>
+                <li>
+                  <Link href="/hotel">Hotel Travel Desk</Link>
+                </li>
+                <li>
+                  <Link href="/conference">Conference & Delegation</Link>
+                </li>
+                <li>
+                  <Link href="/event">Event Transportation</Link>
+                </li>
+                <li>
+                  <Link href="/wedding">Wedding Car Rental</Link>
+                </li>
+                <li>
+                  <Link href="/partners">Travel Partners Program</Link>
+                </li>
+                <li>
+                  <Link href="/chauffeur">Chauffeured Car Rental</Link>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <Link href="/fleet">Our Fleet</Link>
+            </li>
+            <li>
+              <Link href="/about">About</Link>
+            </li>
+            <li>
+              <Link href="/contact">Contact</Link>
+            </li>
+          </ul>
+        </nav>
+
+        {/* CTA (desktop only) */}
+        <div className="header-cta">
+          <button className="contact-btn">
+            <span>91+ 7387382383</span>
+          </button>
         </div>
-      </Link>
 
-      <nav>
-        <ul className="nav-list">
+        {/* Hamburger (mobile) */}
+        <button
+          className={`hamburger ${isOpen ? "active" : ""}`}
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </header>
+
+      {/* Drawer (mobile nav) */}
+      <div className={`drawer ${isOpen ? "open" : ""}`}>
+        {/* Close Button */}
+        <button className="close-btn" onClick={() => setIsOpen(false)}>
+          ×
+        </button>
+
+        <ul>
           <li>
-            <Link href="/">Home</Link>
-          </li>
-
-          {/* Dropdown */}
-          <li className="dropdown">
-            <span className="dropbtn">Our Services ▾</span>
-            <ul className="dropdown-content">
-              <li>
-                <Link href="/corporate">Corporate Car Rental</Link>
-              </li>
-              <li>
-                <Link href="/TransportSolution">
-                  Employee Transport Solutions
-                </Link>
-              </li>
-              <li>
-                <Link href="/global">Global Car Rental</Link>
-              </li>
-              <li>
-                <Link href="/hotel">Hotel Travel Desk</Link>
-              </li>
-              <li>
-                <Link href="/conference">Conference & Delegation</Link>
-              </li>
-              <li>
-                <Link href="/event">Event Transportation</Link>
-              </li>
-              <li>
-                <Link href="/wedding">Wedding Car Rental</Link>
-              </li>
-              <li>
-                <Link href="/partners">Travel Partners Program</Link>
-              </li>
-              <li>
-                <Link href="/chauffeur">Chauffeured Car Rental</Link>
-              </li>
-            </ul>
+            <Link href="/" onClick={() => setIsOpen(false)}>
+              Home
+            </Link>
           </li>
 
+          {/* Our Services - Toggle */}
           <li>
-            <Link href="/fleet">Our Fleet</Link>
+            <button
+              className="submenu-toggle"
+              onClick={() => setServicesOpen(!servicesOpen)}
+            >
+              Our Services {servicesOpen ? "▴" : "▾"}
+            </button>
+            {servicesOpen && (
+              <ul className="submenu" id="submenu">
+                <li>
+                  <Link href="/corporate" onClick={() => setIsOpen(false)}>
+                    Corporate Car Rental
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/transport" onClick={() => setIsOpen(false)}>
+                    Employee Transport Solutions
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/global" onClick={() => setIsOpen(false)}>
+                    Global Car Rental
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/hotel" onClick={() => setIsOpen(false)}>
+                    Hotel Travel Desk
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/conference" onClick={() => setIsOpen(false)}>
+                    Conference & Delegation
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/event" onClick={() => setIsOpen(false)}>
+                    Event Transportation
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/wedding" onClick={() => setIsOpen(false)}>
+                    Wedding Car Rental
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/partners" onClick={() => setIsOpen(false)}>
+                    Travel Partners Program
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/chauffeur" onClick={() => setIsOpen(false)}>
+                    Chauffeured Car Rental
+                  </Link>
+                </li>
+              </ul>
+            )}
+          </li>
+
+          <li>
+            <Link href="/fleet" onClick={() => setIsOpen(false)}>
+              Our Fleet
+            </Link>
           </li>
           <li>
-            <Link href="/about">About</Link>
+            <Link href="/about" onClick={() => setIsOpen(false)}>
+              About
+            </Link>
           </li>
           <li>
-            <Link href="/contact">Contact</Link>
+            <Link href="/contact" onClick={() => setIsOpen(false)}>
+              Contact
+            </Link>
           </li>
         </ul>
-      </nav>
-
-      <div className="header-cta">
-        <button className="contact-btn">
-          <span>91+ 7387382383</span>
-        </button>
       </div>
-    </header>
+    </>
   );
 }

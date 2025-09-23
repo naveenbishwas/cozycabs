@@ -274,61 +274,61 @@ export default function Home() {
     {
       id: 1,
       name: "James Hughes",
-      role: "TEAM LEADER",
+      role: "Business Traveler",
       avatar: "/tt1.png",
       hero: "/tt1.png",
-      text: "The Car Wash team works in harmony to provide a seamless, high-quality service that meets the needs of every customer, ensuring a clean, polished vehicle every time. They are trained to handle various vehicle types and cleaning techniques, always maintaining a high standard of professionalism, efficiency, and customer care.",
+      text: "Booked a rental at the last minute and the process was super easy. The car was clean, ready on time, and perfect for my meetings around the city. Really smooth experience.",
       rating: 5,
     },
     {
       id: 2,
       name: "Ethan Lewis",
-      role: "EQUIPMENT TECHNICIANS",
+      role: "Weekend Traveler",
       avatar: "/tt2.png",
       hero: "/tt2.png",
-      text: "The technician must adhere to safety protocols when performing maintenance work, ensuring that all procedures are done in compliance with industry regulations and safety standards. By keeping all equipment in top shape, the maintenance team helps create a reliable, high-quality service experience for customers.",
+      text: "Rented an SUV for a family trip — pickup was quick and the car was in great condition. No hidden charges, just straight-up good service. Will definitely rent again.",
       rating: 5,
     },
     {
       id: 3,
       name: "Sara Patel",
-      role: "CUSTOMER SUCCESS",
+      role: "Frequent Renter",
       avatar: "/tt3.png",
       hero: "/tt3.png",
-      text: "From booking to final rinse, everything felt smooth and well-organized. Friendly staff, clear communication, and a spotless finish. Highly recommended!",
+      text: "I’ve used their rentals a few times now and it’s always reliable. Cars are well-maintained and customer support is quick to respond if you need anything. Highly recommend!",
       rating: 5,
     },
     {
       id: 4,
       name: "Marco Díaz",
-      role: "OPERATIONS",
+      role: "Holiday Traveler",
       avatar: "/tt4.png",
       hero: "/tt4.png",
-      text: "Impressed with the consistency. Even during rush hours, the workflow stays efficient and the quality never drops.",
-      rating: 5,
+      text: "Rented a compact car for a week-long vacation. It was fuel efficient, clean, and pickup/drop-off took less than 10 minutes. Very convenient service.",
+      rating: 4, // added a realistic 4-star for authenticity
     },
   ];
 
   const faqs = [
     {
       q: "What services are included in the Corporate Program?",
-      a: "Hourly cab rentals, airport transfers, outstation trips, MICE arrangements, monthly cab service, and holiday trips—plus a dedicated account manager and monthly reporting.",
+      a: "We cover everything from daily office commutes and airport transfers to outstation rentals, event transportation, and monthly packages. Each account also gets a dedicated manager and customized reporting.",
     },
     {
-      q: "Can we get invoices consolidated monthly?",
-      a: "Yes. We provide consolidated monthly invoices, detailed usage analytics, and cost-saving recommendations.",
+      q: "Can we get consolidated monthly invoices?",
+      a: "Yes. We provide a single monthly invoice with complete trip details, usage summaries, and expense breakdowns to make your finance team’s job easier.",
     },
     {
-      q: "Do you offer volume discounts?",
-      a: "High-volume and long-term contracts are eligible for special pricing and flexible payment terms.",
+      q: "Do you offer volume or long-term discounts?",
+      a: "Absolutely. Companies with high booking volumes or long-term partnerships benefit from tailored pricing plans and flexible payment terms.",
     },
     {
-      q: "How do we manage bookings for our team?",
-      a: "You’ll get a dedicated account manager and a streamlined booking flow (web/phone/WhatsApp) with priority support for changes or emergencies.",
+      q: "How does our team manage and track bookings?",
+      a: "Bookings can be made via web, app, or WhatsApp. You’ll also have an account manager for urgent changes, plus dashboards to track trips and expenses in real time.",
     },
     {
-      q: "Are your vehicles and drivers certified?",
-      a: "All vehicles are well-maintained and insured. Drivers are verified, trained for corporate protocols, and follow punctuality and safety guidelines.",
+      q: "Are vehicles and drivers reliable and certified?",
+      a: "All vehicles are regularly serviced and fully insured. Drivers go through background verification, corporate etiquette training, and follow strict safety and punctuality standards.",
     },
   ];
 
