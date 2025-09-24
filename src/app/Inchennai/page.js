@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import "../InternalOne/internalOne.css";
+import "../InMumbai/internalOne.css";
 import Image from "next/image";
 import Header from "../Components/Header/page";
 import Footer from "../Components/Footer/page";
@@ -145,18 +145,33 @@ const Inchennai = () => {
 
   const PhoneIcon = () => (
     <svg viewBox="0 0 24 24" width="28" height="28" fill="none">
-      <path d="M6 2h4l1 5-3 2a14 14 0 007 7l2-3 5 1v4c0 1-1 2-2 2A18 18 0 014 4C4 3 5 2 6 2z" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+      <path
+        d="M6 2h4l1 5-3 2a14 14 0 007 7l2-3 5 1v4c0 1-1 2-2 2A18 18 0 014 4C4 3 5 2 6 2z"
+        stroke="#fff"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
     </svg>
   );
   const PinIcon = () => (
     <svg viewBox="0 0 24 24" width="28" height="28" fill="none">
-      <path d="M12 22s7-7 7-12a7 7 0 10-14 0c0 5 7 12 7 12z" stroke="#fff" strokeWidth="2" />
+      <path
+        d="M12 22s7-7 7-12a7 7 0 10-14 0c0 5 7 12 7 12z"
+        stroke="#fff"
+        strokeWidth="2"
+      />
       <circle cx="12" cy="10" r="2.5" stroke="#fff" strokeWidth="2" />
     </svg>
   );
   const CarIcon = () => (
     <svg viewBox="0 0 24 24" width="28" height="28" fill="none">
-      <path d="M3 13l2-5a3 3 0 012.8-2h8.4A3 3 0 0119 8l2 5v5h-2a2 2 0 01-4 0H9a2 2 0 01-4 0H3v-5z" stroke="#fff" strokeWidth="2" strokeLinejoin="round" />
+      <path
+        d="M3 13l2-5a3 3 0 012.8-2h8.4A3 3 0 0119 8l2 5v5h-2a2 2 0 01-4 0H9a2 2 0 01-4 0H3v-5z"
+        stroke="#fff"
+        strokeWidth="2"
+        strokeLinejoin="round"
+      />
       <circle cx="8" cy="18" r="1.6" fill="#fff" />
       <circle cx="16" cy="18" r="1.6" fill="#fff" />
     </svg>
@@ -164,13 +179,24 @@ const Inchennai = () => {
   const CheckIcon = () => (
     <svg viewBox="0 0 24 24" width="28" height="28" fill="none">
       <circle cx="12" cy="12" r="9" stroke="#fff" strokeWidth="2" />
-      <path d="M8 12l3 3 5-5" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+      <path
+        d="M8 12l3 3 5-5"
+        stroke="#fff"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
     </svg>
   );
   const ClockIcon = () => (
     <svg viewBox="0 0 24 24" width="28" height="28" fill="none">
       <circle cx="12" cy="12" r="9" stroke="#fff" strokeWidth="2" />
-      <path d="M12 7v5l3 2" stroke="#fff" strokeWidth="2" strokeLinecap="round" />
+      <path
+        d="M12 7v5l3 2"
+        stroke="#fff"
+        strokeWidth="2"
+        strokeLinecap="round"
+      />
     </svg>
   );
 
@@ -202,7 +228,11 @@ const Inchennai = () => {
             <h4>– Safe, Comfortable & Reliable</h4>
           </span>
           <p className="heroeco__sub">
-            Chennai, the cultural capital of South India, blends ancient temples and colonial landmarks with Marina Beach and buzzing IT corridors. With busy roads and long distances, moving around can feel stressful. That’s where cozy cabz car rental in Chennai with driver comes in—making every journey smooth, safe, and convenient.
+            Chennai, the cultural capital of South India, blends ancient temples
+            and colonial landmarks with Marina Beach and buzzing IT corridors.
+            With busy roads and long distances, moving around can feel
+            stressful. That’s where cozy cabz car rental in Chennai with driver
+            comes in—making every journey smooth, safe, and convenient.
           </p>
         </div>
       </section>
@@ -213,28 +243,65 @@ const Inchennai = () => {
             Book Your <span>Car</span>
           </h2>
 
-          <form className="booking-form__form" onSubmit={(e) => e.preventDefault()}>
+          <form
+            className="booking-form__form"
+            onSubmit={(e) => e.preventDefault()}
+          >
             <div className="form-row">
               <label className="sr-only" htmlFor="bf-name">
                 Your Name
               </label>
-              <input id="bf-name" name="name" type="text" placeholder="Enter Your Name" autoComplete="name" required aria-required="true" />
+              <input
+                id="bf-name"
+                name="name"
+                type="text"
+                placeholder="Enter Your Name"
+                autoComplete="name"
+                required
+                aria-required="true"
+              />
 
               <label className="sr-only" htmlFor="bf-email">
                 Email
               </label>
-              <input id="bf-email" name="email" type="email" placeholder="Enter Email Id" autoComplete="email" required aria-required="true" />
+              <input
+                id="bf-email"
+                name="email"
+                type="email"
+                placeholder="Enter Email Id"
+                autoComplete="email"
+                required
+                aria-required="true"
+              />
 
-              <div className="phone-field" role="group" aria-labelledby="bf-phone-label">
+              <div
+                className="phone-field"
+                role="group"
+                aria-labelledby="bf-phone-label"
+              >
                 <span id="bf-phone-label" className="sr-only">
                   Phone Number
                 </span>
-                <select className="styled-select" name="dial-code" defaultValue="+91" aria-label="Country code">
+                <select
+                  className="styled-select"
+                  name="dial-code"
+                  defaultValue="+91"
+                  aria-label="Country code"
+                >
                   <option value="+91">+91</option>
                   <option value="+1">+1</option>
                   <option value="+44">+44</option>
                 </select>
-                <input id="bf-phone" name="phone" type="tel" inputMode="tel" placeholder="Phone No" autoComplete="tel" required aria-required="true" />
+                <input
+                  id="bf-phone"
+                  name="phone"
+                  type="tel"
+                  inputMode="tel"
+                  placeholder="Phone No"
+                  autoComplete="tel"
+                  required
+                  aria-required="true"
+                />
               </div>
             </div>
 
@@ -242,7 +309,12 @@ const Inchennai = () => {
               <label className="sr-only" htmlFor="bf-date">
                 Pickup Date
               </label>
-              <input id="bf-date" name="date" type="date" placeholder="dd-mm-yyyy" />
+              <input
+                id="bf-date"
+                name="date"
+                type="date"
+                placeholder="dd-mm-yyyy"
+              />
 
               <label className="sr-only" htmlFor="bf-purpose">
                 Rental Purpose
@@ -259,17 +331,30 @@ const Inchennai = () => {
             <label className="sr-only" htmlFor="bf-notes">
               Requirement Details
             </label>
-            <textarea id="bf-notes" name="notes" placeholder="Enter Requirement Details"></textarea>
+            <textarea
+              id="bf-notes"
+              name="notes"
+              placeholder="Enter Requirement Details"
+            ></textarea>
 
             <div className="form-footer">
               <div className="form-agree">
-                <input id="bf-agree" type="checkbox" required aria-required="true" />
+                <input
+                  id="bf-agree"
+                  type="checkbox"
+                  required
+                  aria-required="true"
+                />
                 <label htmlFor="bf-agree">
-                  By clicking "Send Enquiry" button, you agree to our <a href="#">Terms &amp; Conditions</a> and <a href="#">Privacy Policy</a>
+                  By clicking "Send Enquiry" button, you agree to our{" "}
+                  <a href="#">Terms &amp; Conditions</a> and{" "}
+                  <a href="#">Privacy Policy</a>
                 </label>
               </div>
 
-              <div className="captcha" aria-hidden="true">I'm not a robot (Captcha)</div>
+              <div className="captcha" aria-hidden="true">
+                I'm not a robot (Captcha)
+              </div>
 
               <div className="form-actions">
                 <button type="submit" className="btn-submit">
@@ -283,7 +368,9 @@ const Inchennai = () => {
 
       <section className="trustcc">
         <div className="trustcc__container">
-          <h2 className="trustcc__title">Why Choose cozy cabz in<span> Chennai?</span></h2>
+          <h2 className="trustcc__title">
+            Why Choose cozy cabz in<span> Chennai?</span>
+          </h2>
 
           <div className="trustcc__grid">
             {items.map((it, i) => (
@@ -300,16 +387,49 @@ const Inchennai = () => {
       <section className="howto">
         <div className="howtoWrap">
           <h2 className="howtoTitle">How to Book Your Ride</h2>
-          <p className="howtoSubtitle">Simple and straightforward booking process. Follow these easy steps to book your ride.</p>
+          <p className="howtoSubtitle">
+            Simple and straightforward booking process. Follow these easy steps
+            to book your ride.
+          </p>
 
           <div className="connector" aria-hidden="true" />
 
           <div className="stepsGrid">
-            <StepCard color="#2563EB" icon={<PhoneIcon />} step={1} title="Contact Our Team" text="Contact our team or register on our website to get started with your booking process." />
-            <StepCard color="#16A34A" icon={<PinIcon />} step={2} title="Share Your Details" text="Share your destination & departure timing along with any specific requirements." />
-            <StepCard color="#8B5CF6" icon={<CarIcon />} step={3} title="Select Car Model" text="Select your preferred car model from our fleet and calculate the fare instantly." />
-            <StepCard color="#F97316" icon={<CheckIcon />} step={4} title="Get Confirmation" text="Get confirmation in few seconds with booking details and driver information." />
-            <StepCard color="#EF4444" icon={<ClockIcon />} step={5} title="Wait for Arrival" text="Relax and wait for your cab to arrive at your place at the scheduled time." />
+            <StepCard
+              color="#2563EB"
+              icon={<PhoneIcon />}
+              step={1}
+              title="Contact Our Team"
+              text="Contact our team or register on our website to get started with your booking process."
+            />
+            <StepCard
+              color="#16A34A"
+              icon={<PinIcon />}
+              step={2}
+              title="Share Your Details"
+              text="Share your destination & departure timing along with any specific requirements."
+            />
+            <StepCard
+              color="#8B5CF6"
+              icon={<CarIcon />}
+              step={3}
+              title="Select Car Model"
+              text="Select your preferred car model from our fleet and calculate the fare instantly."
+            />
+            <StepCard
+              color="#F97316"
+              icon={<CheckIcon />}
+              step={4}
+              title="Get Confirmation"
+              text="Get confirmation in few seconds with booking details and driver information."
+            />
+            <StepCard
+              color="#EF4444"
+              icon={<ClockIcon />}
+              step={5}
+              title="Wait for Arrival"
+              text="Relax and wait for your cab to arrive at your place at the scheduled time."
+            />
           </div>
         </div>
       </section>
@@ -317,27 +437,41 @@ const Inchennai = () => {
       <section className="howrent" aria-labelledby="howrent-title">
         <div className="howrent__container">
           <h2 id="howrent-title">Easy Booking Process</h2>
-          <p className="howrent__intro">Booking your ride with cozy cabz is fast and hassle-free:</p>
+          <p className="howrent__intro">
+            Booking your ride with cozy cabz is fast and hassle-free:
+          </p>
 
           <ul className="howrent__list">
             <li className="howrent__item">
               <h3>Enter Trip Details</h3>
-              <p>Pickup & drop location, date, time, and trip type—local, outstation, or airport.</p>
+              <p>
+                Pickup & drop location, date, time, and trip type—local,
+                outstation, or airport.
+              </p>
             </li>
 
             <li className="howrent__item">
               <h3>Choose Your Car</h3>
-              <p>Economy cars, premium sedans, SUVs, tempo travelers, or luxury cars.</p>
+              <p>
+                Economy cars, premium sedans, SUVs, tempo travelers, or luxury
+                cars.
+              </p>
             </li>
 
             <li className="howrent__item">
               <h3>Get Instant Confirmation</h3>
-              <p>Driver details, car info, and estimated arrival time shared right away.</p>
+              <p>
+                Driver details, car info, and estimated arrival time shared
+                right away.
+              </p>
             </li>
 
             <li className="howrent__item">
               <h3>Enjoy the Ride</h3>
-              <p>Sit back while our experienced driver takes care of Chennai’s traffic.</p>
+              <p>
+                Sit back while our experienced driver takes care of Chennai’s
+                traffic.
+              </p>
             </li>
           </ul>
         </div>
@@ -346,9 +480,13 @@ const Inchennai = () => {
       <section className="attractions" aria-labelledby="attractions-title">
         <div className="attractions__container">
           <header className="attractions__head">
-            <h2 id="attractions-title">Must-Visit Places in Chennai with Cozy Cabz</h2>
+            <h2 id="attractions-title">
+              Must-Visit Places in Chennai with Cozy Cabz
+            </h2>
             <p>
-              Chennai beautifully blends spirituality, history, and modern culture. Explore the city’s best attractions at your own pace while our professional drivers ensure a smooth ride.
+              Chennai beautifully blends spirituality, history, and modern
+              culture. Explore the city’s best attractions at your own pace
+              while our professional drivers ensure a smooth ride.
             </p>
           </header>
 
@@ -373,14 +511,20 @@ const Inchennai = () => {
       <section className="faq">
         <div className="faq-header">
           <h2>Frequently Asked Questions</h2>
-          <p>Answers to the most common questions about our Chennai services.</p>
+          <p>
+            Answers to the most common questions about our Chennai services.
+          </p>
         </div>
 
         <div className="faq-list" role="list">
           {faqs.map((item, i) => {
             const open = openIndex === i;
             return (
-              <div className={`faq-item ${open ? "open" : ""}`} key={i} role="listitem">
+              <div
+                className={`faq-item ${open ? "open" : ""}`}
+                key={i}
+                role="listitem"
+              >
                 <button
                   className="faq-question"
                   aria-expanded={open}
@@ -413,6 +557,3 @@ const Inchennai = () => {
 };
 
 export default Inchennai;
-
-
-

@@ -1,179 +1,3 @@
-// "use client";
-// import React from "react";
-// import "./footer.css";
-
-// export default function Footer() {
-//   function handleNewsletter(e) {
-//     e.preventDefault();
-//     const data = Object.fromEntries(new FormData(e.currentTarget).entries());
-//     console.log("Newsletter:", data);
-//     alert("Thanks! (Check console for captured data)");
-//   }
-
-//   return (
-//     <footer className="site-footer" aria-labelledby="footer-cta">
-//       <div className="ft-container">
-//         {/* Big headline */}
-//         <h2 id="footer-cta" className="ft-hero">
-//           Elevate Your Car’s Look With A
-//           <br /> Fresh Wash
-//         </h2>
-
-//         {/* 4-column grid */}
-//         <div className="ft-grid">
-//           {/* Address */}
-//           <section
-//             className="ft-col ft-col--border"
-//             aria-labelledby="ft-address-h"
-//           >
-//             <h3 id="ft-address-h" className="ft-title">
-//               Address
-//             </h3>
-
-//             <address className="ft-address">
-//               1353 locust st, kansas
-//               <br /> city mo 6452 berline
-//               <br /> 81566
-//             </address>
-
-//             <a href="mailto:abc@gmail.com" className="ft-link">
-//               abc@gmail.com
-//             </a>
-//             <br />
-//             <a href="tel:+18001231234" className="ft-link">
-//               +1800-123-1234
-//             </a>
-//           </section>
-
-//           {/* Navigation */}
-//           <nav className="ft-col ft-col--border" aria-labelledby="ft-nav-h">
-//             <h3 id="ft-nav-h" className="ft-title">
-//               Navigation
-//             </h3>
-//             <ul className="ft-list">
-//               <li>
-//                 <a href="#" className="ft-link">
-//                   Style Guide
-//                 </a>
-//               </li>
-//               <li>
-//                 <a href="#" className="ft-link">
-//                   License
-//                 </a>
-//               </li>
-//               <li>
-//                 <a href="#about" className="ft-link">
-//                   About Us
-//                 </a>
-//               </li>
-//               <li>
-//                 <a href="#contact" className="ft-link">
-//                   Contact Us
-//                 </a>
-//               </li>
-//             </ul>
-//           </nav>
-
-//           {/* Social */}
-//           <section
-//             className="ft-col ft-col--border"
-//             aria-labelledby="ft-social-h"
-//           >
-//             <h3 id="ft-social-h" className="ft-title">
-//               Social Media
-//             </h3>
-//             <ul className="ft-list">
-//               <li>
-//                 <a href="#" className="ft-link">
-//                   Facebook
-//                 </a>
-//               </li>
-//               <li>
-//                 <a href="#" className="ft-link">
-//                   YouTube
-//                 </a>
-//               </li>
-//               <li>
-//                 <a href="#" className="ft-link">
-//                   Dribble
-//                 </a>
-//               </li>
-//               <li>
-//                 <a href="#" className="ft-link">
-//                   Instagram
-//                 </a>
-//               </li>
-//             </ul>
-//           </section>
-
-//           {/* Newsletter */}
-//           <section className="ft-col" aria-labelledby="ft-news-h">
-//             <h3 id="ft-news-h" className="ft-title">
-//               Newsletter
-//             </h3>
-
-//             <form className="ft-newsform" onSubmit={handleNewsletter}>
-//               <label className="ft-input">
-//                 <span className="ft-input-icon">
-//                   <MailIcon />
-//                 </span>
-//                 <input
-//                   type="email"
-//                   name="email"
-//                   placeholder="Enter Your Email"
-//                   required
-//                 />
-//               </label>
-
-//               <label className="ft-check">
-//                 <input type="checkbox" name="agree" required />
-//                 <span className="ft-checkbox" aria-hidden="true" />
-//                 <span className="ft-checktext">
-//                   I Agree{" "}
-//                   <a href="#" className="ft-link ft-link--underline">
-//                     Privacy Policy
-//                   </a>
-//                 </span>
-//               </label>
-
-//               <button className="ft-submit" type="submit">
-//                 Submit
-//               </button>
-//             </form>
-//           </section>
-//         </div>
-
-//         {/* Bottom bar */}
-//         <div className="ft-bottom">
-//           <small>
-//             © Powered by{" "}
-//             <a className="ft-link" href="https://webflow.com">
-//               Webflow
-//             </a>{" "}
-//             created by{" "}
-//             <a className="ft-link" href="https://peacefulqode.com">
-//               PeacefulQode
-//             </a>
-//           </small>
-//         </div>
-//       </div>
-//     </footer>
-//   );
-// }
-
-// /* tiny mail icon */
-// function MailIcon() {
-//   return (
-//     <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
-//       <path
-//         d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5L4 8"
-//         fill="currentColor"
-//       />
-//     </svg>
-//   );
-// }
-
-// components/SiteFooter.jsx
 "use client";
 import React from "react";
 import Link from "next/link";
@@ -275,11 +99,40 @@ export default function SiteFooter() {
           </div>
 
           {/* Column: City Guides */}
+
+          {/* Column: Services */}
+          <nav className="footer__col" aria-label="Services">
+            <h4>Services</h4>
+            <ul className="linklist">
+              {[
+                "Corporate Car Rental",
+                "Employee Transport Solutions",
+                "Global Car Rental",
+                "Hotel Travel Desk",
+                "Conference & Delegation",
+                "Event Transportation",
+                "Self Drive",
+                "Wedding Car Rental",
+                "Self Drive Solutions",
+                "Travel Partners Program",
+                "Chauffeured Car Rental Services",
+              ].map((t) => (
+                <li key={t}>
+                  <Link
+                    href={`/services/${t.toLowerCase().replace(/\s+/g, "-")}`}
+                  >
+                    {t}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+
           <nav className="footer__col" aria-label="City Guides">
             <h4>City Guides</h4>
             <ul className="linklist">
               <li>
-                <Link href="/InternalOne">Car Rental in Mumbai</Link>
+                <Link href="/InMumbai">Car Rental in Mumbai</Link>
               </li>
               <li>
                 <Link href="/InDelhi">Car Rental in Delhi</Link>
@@ -317,69 +170,49 @@ export default function SiteFooter() {
                 <Link href="/city/indore">Car Rental in Indore</Link>
               </li>
             </ul>
-            <Link className="viewall" href="/cities">
-              View All Cities <span>→</span>
-            </Link>
           </nav>
 
-          {/* Column: Services */}
-          <nav className="footer__col" aria-label="Services">
-            <h4>Services</h4>
-            <ul className="linklist">
-              {[
-                "Corporate Car Rental",
-                "Employee Transport Solutions",
-                "Global Car Rental",
-                "Hotel Travel Desk",
-                "Conference & Delegation",
-                "Event Transportation",
-                "Self Drive",
-                "Wedding Car Rental",
-                "Self Drive Solutions",
-                "Travel Partners Program",
-                "Chauffeured Car Rental Services",
-              ].map((t) => (
-                <li key={t}>
-                  <Link
-                    href={`/services/${t.toLowerCase().replace(/\s+/g, "-")}`}
-                  >
-                    {t}
-                  </Link>
-                </li>
-              ))}
+          <nav className="footer__col" aria-label="More Cities">
+            <ul className="linklist" id="last-column">
+              <li>
+                <Link href="/city/surat">Car Rental in Surat</Link>
+              </li>
+              <li>
+                <Link href="/city/nagpur">Car Rental in Nagpur</Link>
+              </li>
+              <li>
+                <Link href="/city/coimbatore">Car Rental in Coimbatore</Link>
+              </li>
+              <li>
+                <Link href="/city/vijayawada">Car Rental in Vijayawada</Link>
+              </li>
+              <li>
+                <Link href="/city/vadodara">Car Rental in Vadodara</Link>
+              </li>
+              <li>
+                <Link href="/city/bhopal">Car Rental in Bhopal</Link>
+              </li>
+              <li>
+                <Link href="/city/visakhapatnam">
+                  Car Rental in Visakhapatnam
+                </Link>
+              </li>
+              <li>
+                <Link href="/city/rajkot">Car Rental in Rajkot</Link>
+              </li>
+              <li>
+                <Link href="/city/kanpur">Car Rental in Kanpur</Link>
+              </li>
+              <li>
+                <Link href="/city/patna">Car Rental in Patna</Link>
+              </li>
+              <li>
+                <Link href="/city/guwahati">Car Rental in Guwahati</Link>
+              </li>
+              <li>
+                <Link href="/city/mysore">Car Rental in Mysore</Link>
+              </li>
             </ul>
-          </nav>
-
-          {/* Column: SUV/Big Vans */}
-          <nav className="footer__col" aria-label="SUV/Big Vans">
-            <h4>SUV/Big Vans</h4>
-            <ul className="linklist">
-              {[
-                "Urbania on Rent Mumbai",
-                "Urbania on Rent Delhi",
-                "Urbania on Rent Pune",
-                "Urbania on Rent Bangalore",
-                "Urbania on Rent Chennai",
-                "Urbania on Rent Hyderabad",
-                "Urbania on Rent Kolkata",
-                "Urbania on Rent Kochi",
-                "Innova on Rent Mumbai",
-                "Innova on Rent Delhi",
-                "Innova on Rent Pune",
-                "Innova on Rent Bangalore",
-              ].map((t) => (
-                <li key={t}>
-                  <Link
-                    href={`/vehicles/${t.toLowerCase().replace(/\s+/g, "-")}`}
-                  >
-                    {t}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-            <Link className="viewall" href="/vehicles">
-              View All Vehicles <span>→</span>
-            </Link>
           </nav>
         </div>
 

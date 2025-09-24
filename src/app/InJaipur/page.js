@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import "../InternalOne/internalOne.css";
+import "../InMumbai/internalOne.css";
 import Image from "next/image";
 import Header from "../Components/Header/page";
 import Footer from "../Components/Footer/page";
@@ -67,45 +67,135 @@ const InJaipur = () => {
   ];
 
   const services = [
-    { title: "Local Rentals", text: "Hourly and full-day packages for sightseeing, shopping, or business use." },
-    { title: "Airport Transfers", text: "Reliable pickups and drops at Jaipur International Airport." },
-    { title: "Outstation Trips", text: "One-way or round-trip options to Ajmer, Pushkar, Jodhpur, Udaipur and more." },
-    { title: "Luxury & Premium Cars", text: "Hire premium sedans and SUVs for weddings, VIP events, and corporate use." },
-    { title: "Self-Drive Cars", text: "Affordable self-drive cars in Jaipur for privacy and flexible travel." },
-    { title: "Corporate Rentals & Leasing", text: "Long-term vehicle rentals with competitive packages for companies." },
+    {
+      title: "Local Rentals",
+      text: "Hourly and full-day packages for sightseeing, shopping, or business use.",
+    },
+    {
+      title: "Airport Transfers",
+      text: "Reliable pickups and drops at Jaipur International Airport.",
+    },
+    {
+      title: "Outstation Trips",
+      text: "One-way or round-trip options to Ajmer, Pushkar, Jodhpur, Udaipur and more.",
+    },
+    {
+      title: "Luxury & Premium Cars",
+      text: "Hire premium sedans and SUVs for weddings, VIP events, and corporate use.",
+    },
+    {
+      title: "Self-Drive Cars",
+      text: "Affordable self-drive cars in Jaipur for privacy and flexible travel.",
+    },
+    {
+      title: "Corporate Rentals & Leasing",
+      text: "Long-term vehicle rentals with competitive packages for companies.",
+    },
   ];
 
   const spots = [
-    { title: "Amber Fort", img: "/g1.webp", alt: "Amber Fort and Maota Lake", paragraphs: ["Grand monument blending Hindu and Mughal architecture—majestic gates, Sheesh Mahal, and evening cultural shows."] },
-    { title: "City Palace", img: "/g2.webp", alt: "City Palace courtyards", paragraphs: ["At Jaipur’s center, a mix of Rajput and Mughal styles with museums and royal residence."] },
-    { title: "Hawa Mahal", img: "/g3.webp", alt: "Hawa Mahal facade", paragraphs: ["‘Palace of Winds’ with 953 windows—an architectural icon and photographer favorite."] },
-    { title: "Jantar Mantar", img: "/g4.webp", alt: "Jantar Mantar instruments", paragraphs: ["UNESCO World Heritage Site with 19 astronomical instruments, including the world’s largest stone sundial."] },
-    { title: "Jal Mahal", img: "/g1.webp", alt: "Jal Mahal on Man Sagar Lake", paragraphs: ["Picturesque palace in the middle of the lake—stunning at sunrise and sunset."] },
-    { title: "Nahargarh Fort", img: "/g2.webp", alt: "Nahargarh Fort view", paragraphs: ["Hilltop fort with panoramic views of Jaipur—popular for evening outings."] },
+    {
+      title: "Amber Fort",
+      img: "/g1.webp",
+      alt: "Amber Fort and Maota Lake",
+      paragraphs: [
+        "Grand monument blending Hindu and Mughal architecture—majestic gates, Sheesh Mahal, and evening cultural shows.",
+      ],
+    },
+    {
+      title: "City Palace",
+      img: "/g2.webp",
+      alt: "City Palace courtyards",
+      paragraphs: [
+        "At Jaipur’s center, a mix of Rajput and Mughal styles with museums and royal residence.",
+      ],
+    },
+    {
+      title: "Hawa Mahal",
+      img: "/g3.webp",
+      alt: "Hawa Mahal facade",
+      paragraphs: [
+        "‘Palace of Winds’ with 953 windows—an architectural icon and photographer favorite.",
+      ],
+    },
+    {
+      title: "Jantar Mantar",
+      img: "/g4.webp",
+      alt: "Jantar Mantar instruments",
+      paragraphs: [
+        "UNESCO World Heritage Site with 19 astronomical instruments, including the world’s largest stone sundial.",
+      ],
+    },
+    {
+      title: "Jal Mahal",
+      img: "/g1.webp",
+      alt: "Jal Mahal on Man Sagar Lake",
+      paragraphs: [
+        "Picturesque palace in the middle of the lake—stunning at sunrise and sunset.",
+      ],
+    },
+    {
+      title: "Nahargarh Fort",
+      img: "/g2.webp",
+      alt: "Nahargarh Fort view",
+      paragraphs: [
+        "Hilltop fort with panoramic views of Jaipur—popular for evening outings.",
+      ],
+    },
   ];
 
   const faqs = [
-    { q: "How much does car rental in Jaipur cost per km?", a: "Economy cars start at ₹12/km, sedans from ₹25/km, and luxury cars from ₹35/km. Clear and fair Jaipur car rental rates." },
-    { q: "Can I rent a car in Jaipur with driver for outstation trips?", a: "Yes. One-way and round-trip packages are available for nearby cities." },
-    { q: "Do you provide airport transfers in Jaipur?", a: "Yes. 24×7 airport pickups and drops." },
-    { q: "Are self-drive cars available in Jaipur?", a: "Yes, self-drive options are available for privacy and flexibility." },
-    { q: "Do you have SUVs and 7-seater cars for hire?", a: "Absolutely—7 seater car rental in Jaipur and SUVs for families, weddings, and group travel." },
+    {
+      q: "How much does car rental in Jaipur cost per km?",
+      a: "Economy cars start at ₹12/km, sedans from ₹25/km, and luxury cars from ₹35/km. Clear and fair Jaipur car rental rates.",
+    },
+    {
+      q: "Can I rent a car in Jaipur with driver for outstation trips?",
+      a: "Yes. One-way and round-trip packages are available for nearby cities.",
+    },
+    {
+      q: "Do you provide airport transfers in Jaipur?",
+      a: "Yes. 24×7 airport pickups and drops.",
+    },
+    {
+      q: "Are self-drive cars available in Jaipur?",
+      a: "Yes, self-drive options are available for privacy and flexibility.",
+    },
+    {
+      q: "Do you have SUVs and 7-seater cars for hire?",
+      a: "Absolutely—7 seater car rental in Jaipur and SUVs for families, weddings, and group travel.",
+    },
   ];
 
   const PhoneIcon = () => (
     <svg viewBox="0 0 24 24" width="28" height="28" fill="none">
-      <path d="M6 2h4l1 5-3 2a14 14 0 007 7l2-3 5 1v4c0 1-1 2-2 2A18 18 0 014 4C4 3 5 2 6 2z" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+      <path
+        d="M6 2h4l1 5-3 2a14 14 0 007 7l2-3 5 1v4c0 1-1 2-2 2A18 18 0 014 4C4 3 5 2 6 2z"
+        stroke="#fff"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
     </svg>
   );
   const PinIcon = () => (
     <svg viewBox="0 0 24 24" width="28" height="28" fill="none">
-      <path d="M12 22s7-7 7-12a7 7 0 10-14 0c0 5 7 12 7 12z" stroke="#fff" strokeWidth="2" />
+      <path
+        d="M12 22s7-7 7-12a7 7 0 10-14 0c0 5 7 12 7 12z"
+        stroke="#fff"
+        strokeWidth="2"
+      />
       <circle cx="12" cy="10" r="2.5" stroke="#fff" strokeWidth="2" />
     </svg>
   );
   const CarIcon = () => (
     <svg viewBox="0 0 24 24" width="28" height="28" fill="none">
-      <path d="M3 13l2-5a3 3 0 012.8-2h8.4A3 3 0 0119 8l2 5v5h-2a2 2 0 01-4 0H9a2 2 0 01-4 0H3v-5z" stroke="#fff" strokeWidth="2" strokeLinejoin="round" />
+      <path
+        d="M3 13l2-5a3 3 0 012.8-2h8.4A3 3 0 0119 8l2 5v5h-2a2 2 0 01-4 0H9a2 2 0 01-4 0H3v-5z"
+        stroke="#fff"
+        strokeWidth="2"
+        strokeLinejoin="round"
+      />
       <circle cx="8" cy="18" r="1.6" fill="#fff" />
       <circle cx="16" cy="18" r="1.6" fill="#fff" />
     </svg>
@@ -113,13 +203,24 @@ const InJaipur = () => {
   const CheckIcon = () => (
     <svg viewBox="0 0 24 24" width="28" height="28" fill="none">
       <circle cx="12" cy="12" r="9" stroke="#fff" strokeWidth="2" />
-      <path d="M8 12l3 3 5-5" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+      <path
+        d="M8 12l3 3 5-5"
+        stroke="#fff"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
     </svg>
   );
   const ClockIcon = () => (
     <svg viewBox="0 0 24 24" width="28" height="28" fill="none">
       <circle cx="12" cy="12" r="9" stroke="#fff" strokeWidth="2" />
-      <path d="M12 7v5l3 2" stroke="#fff" strokeWidth="2" strokeLinecap="round" />
+      <path
+        d="M12 7v5l3 2"
+        stroke="#fff"
+        strokeWidth="2"
+        strokeLinecap="round"
+      />
     </svg>
   );
 
@@ -151,38 +252,95 @@ const InJaipur = () => {
             <h4>– Reliable, Safe & Affordable</h4>
           </span>
           <p className="heroeco__sub">
-            Jaipur, the Pink City, blends royal heritage with modern comforts. Cozy Cabz offers trusted car rental in Jaipur with driver—safe, comfortable, and affordable for sightseeing, business trips, airport transfers, and weekend getaways.
+            Jaipur, the Pink City, blends royal heritage with modern comforts.
+            Cozy Cabz offers trusted car rental in Jaipur with driver—safe,
+            comfortable, and affordable for sightseeing, business trips, airport
+            transfers, and weekend getaways.
           </p>
         </div>
       </section>
 
       <section className="booking-form" aria-labelledby="booking-form-title">
         <div className="booking-form__container">
-          <h2 id="booking-form-title" className="booking-form__title">Book Your <span>Car</span></h2>
-          <form className="booking-form__form" onSubmit={(e) => e.preventDefault()}>
+          <h2 id="booking-form-title" className="booking-form__title">
+            Book Your <span>Car</span>
+          </h2>
+          <form
+            className="booking-form__form"
+            onSubmit={(e) => e.preventDefault()}
+          >
             <div className="form-row">
-              <label className="sr-only" htmlFor="bf-name">Your Name</label>
-              <input id="bf-name" name="name" type="text" placeholder="Enter Your Name" autoComplete="name" required aria-required="true" />
+              <label className="sr-only" htmlFor="bf-name">
+                Your Name
+              </label>
+              <input
+                id="bf-name"
+                name="name"
+                type="text"
+                placeholder="Enter Your Name"
+                autoComplete="name"
+                required
+                aria-required="true"
+              />
 
-              <label className="sr-only" htmlFor="bf-email">Email</label>
-              <input id="bf-email" name="email" type="email" placeholder="Enter Email Id" autoComplete="email" required aria-required="true" />
+              <label className="sr-only" htmlFor="bf-email">
+                Email
+              </label>
+              <input
+                id="bf-email"
+                name="email"
+                type="email"
+                placeholder="Enter Email Id"
+                autoComplete="email"
+                required
+                aria-required="true"
+              />
 
-              <div className="phone-field" role="group" aria-labelledby="bf-phone-label">
-                <span id="bf-phone-label" className="sr-only">Phone Number</span>
-                <select className="styled-select" name="dial-code" defaultValue="+91" aria-label="Country code">
+              <div
+                className="phone-field"
+                role="group"
+                aria-labelledby="bf-phone-label"
+              >
+                <span id="bf-phone-label" className="sr-only">
+                  Phone Number
+                </span>
+                <select
+                  className="styled-select"
+                  name="dial-code"
+                  defaultValue="+91"
+                  aria-label="Country code"
+                >
                   <option value="+91">+91</option>
                   <option value="+1">+1</option>
                   <option value="+44">+44</option>
                 </select>
-                <input id="bf-phone" name="phone" type="tel" inputMode="tel" placeholder="Phone No" autoComplete="tel" required aria-required="true" />
+                <input
+                  id="bf-phone"
+                  name="phone"
+                  type="tel"
+                  inputMode="tel"
+                  placeholder="Phone No"
+                  autoComplete="tel"
+                  required
+                  aria-required="true"
+                />
               </div>
             </div>
 
             <div className="form-row">
-              <label className="sr-only" htmlFor="bf-date">Pickup Date</label>
-              <input id="bf-date" name="date" type="date" placeholder="dd-mm-yyyy" />
+              <label className="sr-only" htmlFor="bf-date">
+                Pickup Date
+              </label>
+              <input
+                id="bf-date"
+                name="date"
+                type="date"
+                placeholder="dd-mm-yyyy"
+              />
 
-              <label className="sr-only" htmlFor="bf-purpose">Rental Purpose</label>
+              <label className="sr-only" htmlFor="bf-purpose">
+                Rental Purpose
+              </label>
               <select id="bf-purpose" name="purpose" className="styled-select">
                 <option value="">Select Rental Purpose</option>
                 <option>Business</option>
@@ -192,19 +350,38 @@ const InJaipur = () => {
               </select>
             </div>
 
-            <label className="sr-only" htmlFor="bf-notes">Requirement Details</label>
-            <textarea id="bf-notes" name="notes" placeholder="Enter Requirement Details"></textarea>
+            <label className="sr-only" htmlFor="bf-notes">
+              Requirement Details
+            </label>
+            <textarea
+              id="bf-notes"
+              name="notes"
+              placeholder="Enter Requirement Details"
+            ></textarea>
 
             <div className="form-footer">
               <div className="form-agree">
-                <input id="bf-agree" type="checkbox" required aria-required="true" />
-                <label htmlFor="bf-agree">By clicking "Send Enquiry" button, you agree to our <a href="#">Terms &amp; Conditions</a> and <a href="#">Privacy Policy</a></label>
+                <input
+                  id="bf-agree"
+                  type="checkbox"
+                  required
+                  aria-required="true"
+                />
+                <label htmlFor="bf-agree">
+                  By clicking "Send Enquiry" button, you agree to our{" "}
+                  <a href="#">Terms &amp; Conditions</a> and{" "}
+                  <a href="#">Privacy Policy</a>
+                </label>
               </div>
 
-              <div className="captcha" aria-hidden="true">I'm not a robot (Captcha)</div>
+              <div className="captcha" aria-hidden="true">
+                I'm not a robot (Captcha)
+              </div>
 
               <div className="form-actions">
-                <button type="submit" className="btn-submit">Send Enquiry</button>
+                <button type="submit" className="btn-submit">
+                  Send Enquiry
+                </button>
               </div>
             </div>
           </form>
@@ -213,7 +390,9 @@ const InJaipur = () => {
 
       <section className="trustcc">
         <div className="trustcc__container">
-          <h2 className="trustcc__title">Why Choose Cozy Cabz in<span> Jaipur?</span></h2>
+          <h2 className="trustcc__title">
+            Why Choose Cozy Cabz in<span> Jaipur?</span>
+          </h2>
           <div className="trustcc__grid">
             {items.map((it, i) => (
               <article className="trustcc__card" key={i}>
@@ -229,14 +408,47 @@ const InJaipur = () => {
       <section className="howto">
         <div className="howtoWrap">
           <h2 className="howtoTitle">How to Book Your Ride</h2>
-          <p className="howtoSubtitle">Simple and straightforward booking process. Follow these easy steps to book your ride.</p>
+          <p className="howtoSubtitle">
+            Simple and straightforward booking process. Follow these easy steps
+            to book your ride.
+          </p>
           <div className="connector" aria-hidden="true" />
           <div className="stepsGrid">
-            <StepCard color="#2563EB" icon={<PhoneIcon />} step={1} title="Contact Our Team" text="Contact our team or register on our website to get started with your booking process." />
-            <StepCard color="#16A34A" icon={<PinIcon />} step={2} title="Share Your Details" text="Share your destination & departure timing along with any specific requirements." />
-            <StepCard color="#8B5CF6" icon={<CarIcon />} step={3} title="Select Car Model" text="Select your preferred car model from our fleet and calculate the fare instantly." />
-            <StepCard color="#F97316" icon={<CheckIcon />} step={4} title="Get Confirmation" text="Get confirmation in few seconds with booking details and driver information." />
-            <StepCard color="#EF4444" icon={<ClockIcon />} step={5} title="Wait for Arrival" text="Relax and wait for your cab to arrive at your place at the scheduled time." />
+            <StepCard
+              color="#2563EB"
+              icon={<PhoneIcon />}
+              step={1}
+              title="Contact Our Team"
+              text="Contact our team or register on our website to get started with your booking process."
+            />
+            <StepCard
+              color="#16A34A"
+              icon={<PinIcon />}
+              step={2}
+              title="Share Your Details"
+              text="Share your destination & departure timing along with any specific requirements."
+            />
+            <StepCard
+              color="#8B5CF6"
+              icon={<CarIcon />}
+              step={3}
+              title="Select Car Model"
+              text="Select your preferred car model from our fleet and calculate the fare instantly."
+            />
+            <StepCard
+              color="#F97316"
+              icon={<CheckIcon />}
+              step={4}
+              title="Get Confirmation"
+              text="Get confirmation in few seconds with booking details and driver information."
+            />
+            <StepCard
+              color="#EF4444"
+              icon={<ClockIcon />}
+              step={5}
+              title="Wait for Arrival"
+              text="Relax and wait for your cab to arrive at your place at the scheduled time."
+            />
           </div>
         </div>
       </section>
@@ -244,7 +456,10 @@ const InJaipur = () => {
       <section className="howrent" aria-labelledby="howrent-title">
         <div className="howrent__container">
           <h2 id="howrent-title">Different Car Rental Services in Jaipur</h2>
-          <p className="howrent__intro">Cozy Cabz offers a variety of car rental services tailored for every traveler:</p>
+          <p className="howrent__intro">
+            Cozy Cabz offers a variety of car rental services tailored for every
+            traveler:
+          </p>
           <ul className="howrent__list">
             {services.map((s) => (
               <li className="howrent__item" key={s.title}>
@@ -259,8 +474,13 @@ const InJaipur = () => {
       <section className="attractions" aria-labelledby="attractions-title">
         <div className="attractions__container">
           <header className="attractions__head">
-            <h2 id="attractions-title">Must-Visit Places in Jaipur with Cozy Cabz</h2>
-            <p>Explore Jaipur’s rich heritage and cultural landmarks at your own pace, without the stress of traffic or parking.</p>
+            <h2 id="attractions-title">
+              Must-Visit Places in Jaipur with Cozy Cabz
+            </h2>
+            <p>
+              Explore Jaipur’s rich heritage and cultural landmarks at your own
+              pace, without the stress of traffic or parking.
+            </p>
           </header>
           <div className="attractions__grid">
             {spots.map((s) => (
@@ -270,7 +490,9 @@ const InJaipur = () => {
                 </figure>
                 <h3 className="spot__title">{s.title}</h3>
                 {s.paragraphs.map((t, i) => (
-                  <p className="spot__text" key={i}>{t}</p>
+                  <p className="spot__text" key={i}>
+                    {t}
+                  </p>
                 ))}
               </article>
             ))}
@@ -287,12 +509,28 @@ const InJaipur = () => {
           {faqs.map((item, i) => {
             const open = openIndex === i;
             return (
-              <div className={`faq-item ${open ? "open" : ""}`} key={i} role="listitem">
-                <button className="faq-question" aria-expanded={open} aria-controls={`faq-panel-${i}`} id={`faq-control-${i}`} onClick={() => toggle(i)}>
+              <div
+                className={`faq-item ${open ? "open" : ""}`}
+                key={i}
+                role="listitem"
+              >
+                <button
+                  className="faq-question"
+                  aria-expanded={open}
+                  aria-controls={`faq-panel-${i}`}
+                  id={`faq-control-${i}`}
+                  onClick={() => toggle(i)}
+                >
                   <span className="faq-q-text">{item.q}</span>
                   <span className="faq-icon" aria-hidden="true" />
                 </button>
-                <div id={`faq-panel-${i}`} role="region" aria-labelledby={`faq-control-${i}`} className="faq-answer" style={{ maxHeight: open ? "300px" : "0px" }}>
+                <div
+                  id={`faq-panel-${i}`}
+                  role="region"
+                  aria-labelledby={`faq-control-${i}`}
+                  className="faq-answer"
+                  style={{ maxHeight: open ? "300px" : "0px" }}
+                >
                   <p>{item.a}</p>
                 </div>
               </div>
@@ -307,6 +545,3 @@ const InJaipur = () => {
 };
 
 export default InJaipur;
-
-
-

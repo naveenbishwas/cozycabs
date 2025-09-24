@@ -1,12 +1,12 @@
 "use client";
 
 import React, { useState } from "react";
-import "./internalOne.css";
+import "./InternalOne.css";
 import Image from "next/image";
 import Header from "../Components/Header/page";
 import Footer from "../Components/Footer/page";
 
-const InternalOne = () => {
+const InMumbai = () => {
   const [openIndex, setOpenIndex] = useState(null);
 
   const toggle = (i) => {
@@ -571,4 +571,4 @@ const InternalOne = () => {
   );
 };
 
-export default InternalOne;
+export default InMumbai;

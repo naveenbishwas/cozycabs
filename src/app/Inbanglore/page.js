@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import "../InternalOne/internalOne.css";
+import "../InMumbai/internalOne.css";
 import Image from "next/image";
 import Header from "../Components/Header/page";
 import Footer from "../Components/Footer/page";
@@ -128,7 +128,11 @@ const Inbanglore = () => {
   );
   const PinIcon = () => (
     <svg viewBox="0 0 24 24" width="28" height="28" fill="none">
-      <path d="M12 22s7-7 7-12a7 7 0 10-14 0c0 5 7 12 7 12z" stroke="#fff" strokeWidth="2" />
+      <path
+        d="M12 22s7-7 7-12a7 7 0 10-14 0c0 5 7 12 7 12z"
+        stroke="#fff"
+        strokeWidth="2"
+      />
       <circle cx="12" cy="10" r="2.5" stroke="#fff" strokeWidth="2" />
     </svg>
   );
@@ -147,13 +151,24 @@ const Inbanglore = () => {
   const CheckIcon = () => (
     <svg viewBox="0 0 24 24" width="28" height="28" fill="none">
       <circle cx="12" cy="12" r="9" stroke="#fff" strokeWidth="2" />
-      <path d="M8 12l3 3 5-5" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+      <path
+        d="M8 12l3 3 5-5"
+        stroke="#fff"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
     </svg>
   );
   const ClockIcon = () => (
     <svg viewBox="0 0 24 24" width="28" height="28" fill="none">
       <circle cx="12" cy="12" r="9" stroke="#fff" strokeWidth="2" />
-      <path d="M12 7v5l3 2" stroke="#fff" strokeWidth="2" strokeLinecap="round" />
+      <path
+        d="M12 7v5l3 2"
+        stroke="#fff"
+        strokeWidth="2"
+        strokeLinecap="round"
+      />
     </svg>
   );
 
@@ -185,7 +200,13 @@ const Inbanglore = () => {
             <h4>– Comfortable, Safe & Reliable Rides</h4>
           </span>
           <p className="heroeco__sub">
-            Bangalore, also known as the Silicon Valley of India, blends modern IT hubs with lush gardens, historic landmarks, and buzzing nightlife. With heavy traffic and scattered destinations, getting around can be challenging. That’s why cozy cabz Car Rental in Bangalore is the easiest way to travel. With our car rental Bangalore with driver, you get clean cars, verified chauffeurs, transparent pricing, and 24×7 service.
+            Bangalore, also known as the Silicon Valley of India, blends modern
+            IT hubs with lush gardens, historic landmarks, and buzzing
+            nightlife. With heavy traffic and scattered destinations, getting
+            around can be challenging. That’s why cozy cabz Car Rental in
+            Bangalore is the easiest way to travel. With our car rental
+            Bangalore with driver, you get clean cars, verified chauffeurs,
+            transparent pricing, and 24×7 service.
           </p>
         </div>
       </section>
@@ -196,28 +217,65 @@ const Inbanglore = () => {
             Book Your <span>Car</span>
           </h2>
 
-          <form className="booking-form__form" onSubmit={(e) => e.preventDefault()}>
+          <form
+            className="booking-form__form"
+            onSubmit={(e) => e.preventDefault()}
+          >
             <div className="form-row">
               <label className="sr-only" htmlFor="bf-name">
                 Your Name
               </label>
-              <input id="bf-name" name="name" type="text" placeholder="Enter Your Name" autoComplete="name" required aria-required="true" />
+              <input
+                id="bf-name"
+                name="name"
+                type="text"
+                placeholder="Enter Your Name"
+                autoComplete="name"
+                required
+                aria-required="true"
+              />
 
               <label className="sr-only" htmlFor="bf-email">
                 Email
               </label>
-              <input id="bf-email" name="email" type="email" placeholder="Enter Email Id" autoComplete="email" required aria-required="true" />
+              <input
+                id="bf-email"
+                name="email"
+                type="email"
+                placeholder="Enter Email Id"
+                autoComplete="email"
+                required
+                aria-required="true"
+              />
 
-              <div className="phone-field" role="group" aria-labelledby="bf-phone-label">
+              <div
+                className="phone-field"
+                role="group"
+                aria-labelledby="bf-phone-label"
+              >
                 <span id="bf-phone-label" className="sr-only">
                   Phone Number
                 </span>
-                <select className="styled-select" name="dial-code" defaultValue="+91" aria-label="Country code">
+                <select
+                  className="styled-select"
+                  name="dial-code"
+                  defaultValue="+91"
+                  aria-label="Country code"
+                >
                   <option value="+91">+91</option>
                   <option value="+1">+1</option>
                   <option value="+44">+44</option>
                 </select>
-                <input id="bf-phone" name="phone" type="tel" inputMode="tel" placeholder="Phone No" autoComplete="tel" required aria-required="true" />
+                <input
+                  id="bf-phone"
+                  name="phone"
+                  type="tel"
+                  inputMode="tel"
+                  placeholder="Phone No"
+                  autoComplete="tel"
+                  required
+                  aria-required="true"
+                />
               </div>
             </div>
 
@@ -225,7 +283,12 @@ const Inbanglore = () => {
               <label className="sr-only" htmlFor="bf-date">
                 Pickup Date
               </label>
-              <input id="bf-date" name="date" type="date" placeholder="dd-mm-yyyy" />
+              <input
+                id="bf-date"
+                name="date"
+                type="date"
+                placeholder="dd-mm-yyyy"
+              />
 
               <label className="sr-only" htmlFor="bf-purpose">
                 Rental Purpose
@@ -242,17 +305,30 @@ const Inbanglore = () => {
             <label className="sr-only" htmlFor="bf-notes">
               Requirement Details
             </label>
-            <textarea id="bf-notes" name="notes" placeholder="Enter Requirement Details"></textarea>
+            <textarea
+              id="bf-notes"
+              name="notes"
+              placeholder="Enter Requirement Details"
+            ></textarea>
 
             <div className="form-footer">
               <div className="form-agree">
-                <input id="bf-agree" type="checkbox" required aria-required="true" />
+                <input
+                  id="bf-agree"
+                  type="checkbox"
+                  required
+                  aria-required="true"
+                />
                 <label htmlFor="bf-agree">
-                  By clicking "Send Enquiry" button, you agree to our <a href="#">Terms &amp; Conditions</a> and <a href="#">Privacy Policy</a>
+                  By clicking "Send Enquiry" button, you agree to our{" "}
+                  <a href="#">Terms &amp; Conditions</a> and{" "}
+                  <a href="#">Privacy Policy</a>
                 </label>
               </div>
 
-              <div className="captcha" aria-hidden="true">I'm not a robot (Captcha)</div>
+              <div className="captcha" aria-hidden="true">
+                I'm not a robot (Captcha)
+              </div>
 
               <div className="form-actions">
                 <button type="submit" className="btn-submit">
@@ -266,7 +342,9 @@ const Inbanglore = () => {
 
       <section className="trustcc">
         <div className="trustcc__container">
-          <h2 className="trustcc__title">Why Choose cozy cabz in<span> Bangalore?</span></h2>
+          <h2 className="trustcc__title">
+            Why Choose cozy cabz in<span> Bangalore?</span>
+          </h2>
 
           <div className="trustcc__grid">
             {items.map((it, i) => (
@@ -283,7 +361,10 @@ const Inbanglore = () => {
       <section className="howto">
         <div className="howtoWrap">
           <h2 className="howtoTitle">How to Book Your Ride</h2>
-          <p className="howtoSubtitle">Simple and straightforward booking process. Follow these easy steps to book your ride.</p>
+          <p className="howtoSubtitle">
+            Simple and straightforward booking process. Follow these easy steps
+            to book your ride.
+          </p>
 
           <div className="connector" aria-hidden="true" />
 
@@ -330,7 +411,9 @@ const Inbanglore = () => {
       <section className="howrent" aria-labelledby="howrent-title">
         <div className="howrent__container">
           <h2 id="howrent-title">Easy Booking Process</h2>
-          <p className="howrent__intro">Booking your ride with cozy cabz in Bangalore takes just a few steps</p>
+          <p className="howrent__intro">
+            Booking your ride with cozy cabz in Bangalore takes just a few steps
+          </p>
 
           <ul className="howrent__list">
             <li className="howrent__item">
@@ -352,7 +435,8 @@ const Inbanglore = () => {
             <li className="howrent__item">
               <h3>Get Instant Confirmation</h3>
               <p>
-                Receive driver details, car model, and estimated arrival time right away.
+                Receive driver details, car model, and estimated arrival time
+                right away.
               </p>
             </li>
 
@@ -370,9 +454,14 @@ const Inbanglore = () => {
       <section className="attractions" aria-labelledby="attractions-title">
         <div className="attractions__container">
           <header className="attractions__head">
-            <h2 id="attractions-title">Must-Visit Places in Bangalore with Cozy Cabz</h2>
+            <h2 id="attractions-title">
+              Must-Visit Places in Bangalore with Cozy Cabz
+            </h2>
             <p>
-              Discover the charm of Bangalore with cozy cabz—your trusted travel partner. From grand palaces and lush gardens to buzzing shopping hubs and spiritual retreats, the city offers something for everyone.
+              Discover the charm of Bangalore with cozy cabz—your trusted travel
+              partner. From grand palaces and lush gardens to buzzing shopping
+              hubs and spiritual retreats, the city offers something for
+              everyone.
             </p>
           </header>
 
@@ -396,9 +485,17 @@ const Inbanglore = () => {
 
       <section className="trustcc" aria-labelledby="closing-title">
         <div className="trustcc__container">
-          <h2 id="closing-title">cozy cabz – Your Trusted Car Rental in Bangalore</h2>
+          <h2 id="closing-title">
+            cozy cabz – Your Trusted Car Rental in Bangalore
+          </h2>
           <p>
-            Whether you need a car on rent in Bangalore for daily use, a car rental Bangalore with driver for corporate travel, or a 7 seater car for rent in Bangalore for family holidays, cozy cabz has you covered. With affordable rates, professional drivers, and a wide fleet, we are committed to being the best car rental in Bangalore. From cheap car rental in Bangalore to premium luxury rides, every journey with us is safe, reliable, and memorable.
+            Whether you need a car on rent in Bangalore for daily use, a car
+            rental Bangalore with driver for corporate travel, or a 7 seater car
+            for rent in Bangalore for family holidays, cozy cabz has you
+            covered. With affordable rates, professional drivers, and a wide
+            fleet, we are committed to being the best car rental in Bangalore.
+            From cheap car rental in Bangalore to premium luxury rides, every
+            journey with us is safe, reliable, and memorable.
           </p>
         </div>
       </section>
@@ -406,14 +503,20 @@ const Inbanglore = () => {
       <section className="faq">
         <div className="faq-header">
           <h2>Frequently Asked Questions</h2>
-          <p>Answers to the most common questions about our Bangalore services.</p>
+          <p>
+            Answers to the most common questions about our Bangalore services.
+          </p>
         </div>
 
         <div className="faq-list" role="list">
           {faqs.map((item, i) => {
             const open = openIndex === i;
             return (
-              <div className={`faq-item ${open ? "open" : ""}`} key={i} role="listitem">
+              <div
+                className={`faq-item ${open ? "open" : ""}`}
+                key={i}
+                role="listitem"
+              >
                 <button
                   className="faq-question"
                   aria-expanded={open}
@@ -446,5 +549,3 @@ const Inbanglore = () => {
 };
 
 export default Inbanglore;
-
-

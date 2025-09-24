@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import "../InternalOne/internalOne.css";
+import "../InMumbai/internalOne.css";
 import Image from "next/image";
 import Header from "../Components/Header/page";
 import Footer from "../Components/Footer/page";
@@ -227,7 +227,16 @@ const InDelhi = () => {
             <h4>– Safe, Reliable & Comfortable Rides</h4>
           </span>
           <p className="heroeco__sub">
-            Delhi, the capital city of India, is a place where history meets modernity. From ancient forts and UNESCO heritage sites to buzzing markets, high-rise business hubs, and cultural hotspots, every corner of Delhi has something unique to offer. But moving around the city can often feel overwhelming—traffic jams, crowded metro routes, and unpredictable autos. That’s why Cozy Cabz Car Rental in Delhi is your perfect travel companion. With our car rental in Delhi with driver, you get safe rides, verified chauffeurs, transparent pricing, and 24×7 availability—so your journey is as comfortable as the destination.
+            Delhi, the capital city of India, is a place where history meets
+            modernity. From ancient forts and UNESCO heritage sites to buzzing
+            markets, high-rise business hubs, and cultural hotspots, every
+            corner of Delhi has something unique to offer. But moving around the
+            city can often feel overwhelming—traffic jams, crowded metro routes,
+            and unpredictable autos. That’s why Cozy Cabz Car Rental in Delhi is
+            your perfect travel companion. With our car rental in Delhi with
+            driver, you get safe rides, verified chauffeurs, transparent
+            pricing, and 24×7 availability—so your journey is as comfortable as
+            the destination.
           </p>
         </div>
       </section>
@@ -389,7 +398,9 @@ const InDelhi = () => {
       </section> */}
       <section className="trustcc">
         <div className="trustcc__container">
-          <h2 className="trustcc__title">Why Choose Cozy Cabz in<span> Delhi?</span></h2>
+          <h2 className="trustcc__title">
+            Why Choose Cozy Cabz in<span> Delhi?</span>
+          </h2>
           {/* <p className="trustcc__sub">
             Everything we build is focused on safe, reliable and fairly-priced
             rides.
@@ -461,7 +472,10 @@ const InDelhi = () => {
       <section className="howrent" aria-labelledby="howrent-title">
         <div className="howrent__container">
           <h2 id="howrent-title">Easy Booking Process</h2>
-          <p className="howrent__intro">Booking your ride with cozy cabz is quick, simple, and completely hassle-free. Just follow four easy steps:</p>
+          <p className="howrent__intro">
+            Booking your ride with cozy cabz is quick, simple, and completely
+            hassle-free. Just follow four easy steps:
+          </p>
 
           <ul className="howrent__list">
             <li className="howrent__item">
@@ -474,17 +488,27 @@ const InDelhi = () => {
 
             <li className="howrent__item">
               <h3>Choose Your Car</h3>
-              <p>From economy cars to SUVs, premium sedans, or luxury taxis. You can even rent a car in Delhi with driver or opt for car rentals in New Delhi for city tours.</p>
+              <p>
+                From economy cars to SUVs, premium sedans, or luxury taxis. You
+                can even rent a car in Delhi with driver or opt for car rentals
+                in New Delhi for city tours.
+              </p>
             </li>
 
             <li className="howrent__item">
               <h3>Get Instant Confirmation</h3>
-              <p>Receive driver details, car model, and estimated arrival time right away.</p>
+              <p>
+                Receive driver details, car model, and estimated arrival time
+                right away.
+              </p>
             </li>
 
             <li className="howrent__item">
               <h3>Enjoy the Ride</h3>
-              <p>Our experienced drivers handle the traffic so you can relax and travel stress-free.</p>
+              <p>
+                Our experienced drivers handle the traffic so you can relax and
+                travel stress-free.
+              </p>
             </li>
           </ul>
         </div>
@@ -493,9 +517,16 @@ const InDelhi = () => {
       <section className="attractions" aria-labelledby="attractions-title">
         <div className="attractions__container">
           <header className="attractions__head">
-            <h2 id="attractions-title">Must-Visit Places in Delhi with Cozy Cabz</h2>
+            <h2 id="attractions-title">
+              Must-Visit Places in Delhi with Cozy Cabz
+            </h2>
             <p>
-              Delhi is a city where every street has a story to tell. From centuries-old Mughal forts to modern shopping hubs, the capital is a mix of history, culture, spirituality, and vibrant city life. With cozy cabz car rental in Delhi with driver, exploring becomes stress-free—you just sit back and enjoy while we take care of traffic, routes, and parking.
+              Delhi is a city where every street has a story to tell. From
+              centuries-old Mughal forts to modern shopping hubs, the capital is
+              a mix of history, culture, spirituality, and vibrant city life.
+              With cozy cabz car rental in Delhi with driver, exploring becomes
+              stress-free—you just sit back and enjoy while we take care of
+              traffic, routes, and parking.
             </p>
           </header>
 
@@ -516,8 +547,6 @@ const InDelhi = () => {
           </div>
         </div>
       </section>
-
-      
 
       <section className="faq">
         <div className="faq-header">
