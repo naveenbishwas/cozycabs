@@ -50,6 +50,7 @@
   margin: 0;
   font-size: 24px;
   font-weight: 800;
+  color: #fff !important;
 }
 .brand__tag {
   margin: 2px 0 0;
@@ -57,7 +58,7 @@
 }
 
 .brand__about {
-  color: var(--muted);
+  color: #fff;
   line-height: 1.7;
   margin: 12px 0 14px;
 }
