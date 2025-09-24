@@ -347,7 +347,7 @@ const InAhmedabad = () => {
                 <option>Business</option>
                 <option>Leisure</option>
                 <option>Airport Transfer</option>
-                <option>Wedding/Event</option>
+                <option>Wedding/Events</option>
               </select>
             </div>
 
