@@ -6,6 +6,7 @@ import Image from "next/image";
 import Header from "../Components/Header/page";
 import Footer from "../Components/Footer/page";
 
+/// Ahmedabad
 const InAhmedabad = () => {
   const [openIndex, setOpenIndex] = useState(null);
 
