@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import "../InMumbai/internalOne.css";
+// import "../InMumbai/internalOne.css";
 import Image from "next/image";
 import Header from "../Components/Header/page";
 import Footer from "../Components/Footer/page";
