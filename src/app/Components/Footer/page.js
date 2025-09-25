@@ -161,13 +161,13 @@ export default function SiteFooter() {
                 </Link>
               </li>
               <li>
-                <Link href="/city/chandigarh">Car Rental in Chandigarh</Link>
+                <Link href="/InChandigarh">Car Rental in Chandigarh</Link>
               </li>
               <li>
-                <Link href="/city/lucknow">Car Rental in Lucknow</Link>
+                <Link href="/InLucknow">Car Rental in Lucknow</Link>
               </li>
               <li>
-                <Link href="/city/indore">Car Rental in Indore</Link>
+                <Link href="/InIndore">Car Rental in Indore</Link>
               </li>
             </ul>
           </nav>
@@ -175,42 +175,42 @@ export default function SiteFooter() {
           <nav className="footer__col" aria-label="More Cities">
             <ul className="linklist" id="last-column">
               <li>
-                <Link href="/city/surat">Car Rental in Surat</Link>
+                <Link href="/InSurat">Car Rental in Surat</Link>
               </li>
               <li>
-                <Link href="/city/nagpur">Car Rental in Nagpur</Link>
+                <Link href="/InNagpur">Car Rental in Nagpur</Link>
               </li>
               <li>
-                <Link href="/city/coimbatore">Car Rental in Coimbatore</Link>
+                <Link href="/InCoimbatore">Car Rental in Coimbatore</Link>
               </li>
               <li>
-                <Link href="/city/vijayawada">Car Rental in Vijayawada</Link>
+                <Link href="/InVijayawada">Car Rental in Vijayawada</Link>
               </li>
               <li>
-                <Link href="/city/vadodara">Car Rental in Vadodara</Link>
+                <Link href="/InVadodara">Car Rental in Vadodara</Link>
               </li>
               <li>
-                <Link href="/city/bhopal">Car Rental in Bhopal</Link>
+                <Link href="/InBhopal">Car Rental in Bhopal</Link>
               </li>
               <li>
-                <Link href="/city/visakhapatnam">
+                <Link href="/InVisakhapatnam">
                   Car Rental in Visakhapatnam
                 </Link>
               </li>
               <li>
-                <Link href="/city/rajkot">Car Rental in Rajkot</Link>
+                <Link href="/InRajkot">Car Rental in Rajkot</Link>
               </li>
               <li>
-                <Link href="/city/kanpur">Car Rental in Kanpur</Link>
+                <Link href="/InKanpur">Car Rental in Kanpur</Link>
               </li>
               <li>
-                <Link href="/city/patna">Car Rental in Patna</Link>
+                <Link href="/InPatna">Car Rental in Patna</Link>
               </li>
               <li>
-                <Link href="/city/guwahati">Car Rental in Guwahati</Link>
+                <Link href="/InGuwahati">Car Rental in Guwahati</Link>
               </li>
               <li>
-                <Link href="/city/mysore">Car Rental in Mysore</Link>
+                <Link href="/InMysore">Car Rental in Mysore</Link>
               </li>
             </ul>
           </nav>
@@ -231,4 +231,7 @@ export default function SiteFooter() {
       </div>
     </footer>
   );
+
 }
+
+
