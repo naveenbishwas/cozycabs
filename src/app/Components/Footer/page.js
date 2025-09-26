@@ -12,11 +12,9 @@ export default function SiteFooter() {
 
       <div className="footer__container">
         <div className="footer__grid">
-          {/* Brand / About */}
           <div className="footer__brand">
             <div className="brand__row">
               <div className="brand__logo" aria-hidden="true">
-                {/* Example Image for logo */}
                 <Image
                   src="/cozy-logo.svg"
                   alt="CarRental Logo"
@@ -225,9 +223,7 @@ export default function SiteFooter() {
                 <Link href="/InBhopal">Car Rental in Bhopal</Link>
               </li>
               <li>
-                <Link href="/InVisakhapatnam">
-                  Car Rental in Visakhapatnam
-                </Link>
+                <Link href="/InVisakhapatnam">Car Rental in Visakhapatnam</Link>
               </li>
               <li>
                 <Link href="/InRajkot">Car Rental in Rajkot</Link>
@@ -263,7 +259,4 @@ export default function SiteFooter() {
       </div>
     </footer>
   );
-
 }
-
-
