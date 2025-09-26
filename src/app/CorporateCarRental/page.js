@@ -1,39 +1,12 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import Header from "../Components/Header/page";
 import SiteFooter from "../Components/Footer/page";
-import "./TransportSolution.css";
+import "../TransportSolution/TransportSolution.css";
 import Image from "next/image";
 import { FaBuilding, FaUsers, FaBus, FaMapMarkerAlt } from "react-icons/fa";
 import Link from "next/link";
-
-const stats = [
-  {
-    id: 1,
-    icon: <FaBuilding />,
-    value: "500+",
-    label: "Corporate Clients",
-  },
-  {
-    id: 2,
-    icon: <FaUsers />,
-    value: "50,000+",
-    label: "Employees Served",
-  },
-  {
-    id: 3,
-    icon: <FaBus />,
-    value: "1,200+",
-    label: "Fleet Size",
-  },
-  {
-    id: 4,
-    icon: <FaMapMarkerAlt />,
-    value: "25+",
-    label: "Cities Covered",
-  },
-];
 
 function Feature({ image, title, text }) {
   return (
@@ -47,7 +20,7 @@ function Feature({ image, title, text }) {
   );
 }
 
-const TransportSolution = () => {
+const CorporateCarRental = () => {
   const trackRef = useRef(null);
 
   const stats = [
@@ -125,6 +98,7 @@ const TransportSolution = () => {
     return rootRef;
   };
   const aboutCountersRef = useAboutCountersObserver();
+
   return (
     <div>
       <Header />
@@ -132,12 +106,13 @@ const TransportSolution = () => {
       <section className="employee-transport section-container">
         <div className="employee-content">
           <h1>
-            Employee Transport <span>Solutions</span>
+            Corporate Car <span>Rental</span>
           </h1>
           <p>
-            Seamless, safe, and efficient transportation solutions for your
-            workforce. From daily office commutes to corporate events, we ensure
-            your employees travel with comfort and reliability.
+            Seamless, reliable, and scalable car rental solutions designed for
+            your corporate needs. From daily office commutes to inter-branch
+            travel and business events, we ensure your employees travel with
+            comfort, safety, and punctuality.
           </p>
           <div className="cta-buttons">
             <Link href="#quote-section">
@@ -152,7 +127,7 @@ const TransportSolution = () => {
         </div>
         <div className="employee-image">
           <Image
-            src="/bus.jpg"
+            src="/luxury1.jpeg"
             alt="Employee Transport"
             width={600}
             height={400}
@@ -160,8 +135,8 @@ const TransportSolution = () => {
           />
         </div>
       </section>
-      {/* 
-      <section className="stats-section section-container">
+
+      {/* <section className="stats-section section-container">
         <div className="stats-grid">
           {stats.map((item) => (
             <div key={item.id} className="stat-card">
@@ -220,46 +195,29 @@ const TransportSolution = () => {
               className="image"
             />
           </div>
-          {/* Uncomment if sub-images needed
-          <div className="sub-images">
-            <Image
-              src="/ride-van1.jpg"
-              alt="Fleet Van"
-              width={240}
-              height={180}
-              className="image"
-            />
-            <Image
-              src="/ride-van2.jpg"
-              alt="Driver with van"
-              width={240}
-              height={180}
-              className="image"
-            />
-          </div>
-          */}
         </div>
         <div className="ride-content">
           <h2>
-            A <span>smooth</span> ride for your workforce
+            A <span>Smooth</span> Ride for Your Workforce
           </h2>
           <p>
-            Looking for safe, comfortable and reliable employee transportation
-            services for your team? You’ve come to the right place. We
-            understand that assurance of reliable transport boosts employee
-            morale and drives productivity by improving punctuality and
-            eliminating stress.
+            Looking for safe, comfortable, and dependable corporate car rental
+            services for your team? Youre in the right place. At Cozy Cabz, we
+            understand that reliable transport not only boosts employee morale
+            but also drives productivity by ensuring punctuality and reducing
+            stress.
           </p>
           <p>
-            Our large fleet of cars and experienced chauffeurs help businesses
-            put in place systems that save time and energy for employees, and
-            prevent wastage of resources. Regardless of workforce size, we
-            ensure a seamless transition to efficient and reliable transport
-            solutions.
+            Our extensive fleet of well-maintained cars and professional
+            chauffeurs help businesses streamline travel, save time and energy
+            for employees, and eliminate resource wastage. Whether your
+            workforce is small or large, we guarantee a smooth and trustworthy
+            rental experience tailored to your requirements.
           </p>
           <p>
-            Get all your doubts answered with a presentation. Call us to arrange
-            a session at your convenience.
+            Have questions? Schedule a presentation with us, and our team will
+            walk you through the best rental plan designed for your company’s
+            mobility needs.
           </p>
         </div>
       </section>
@@ -269,43 +227,43 @@ const TransportSolution = () => {
           <header className="why-head">
             <h2>What Makes Us the Best Choice</h2>
             <p>
-              Our commitment to excellence and customer satisfaction sets us
-              apart. Here’s why thousands of customers trust us with their
-              transportation needs.
+              Our dedication to quality and customer satisfaction sets us apart.
+              Here’s why corporates across India choose Cozy Cabz for corporate
+              car rental services:
             </p>
           </header>
           <div className="why-grid">
             <Feature
               image="/known.png"
-              title="Well Known for Quality Services"
-              text="Recognized across India for our commitment to excellence and premium service standards."
+              title="Well-Known for Quality Services"
+              text="Recognized nationwide for our commitment to excellence and premium car rental standards."
             />
             <Feature
               image="/postive.png"
-              title="Earned Positive Reviews from All Clients"
-              text="Consistent 5-star ratings and testimonials from thousands of satisfied customers."
+              title="Positive Reviews from Clients"
+              text="Consistent 5-star ratings and testimonials from thousands of satisfied businesses."
             />
             <Feature
               image="/ntework.png"
-              title="The Largest Network of Drivers"
-              text="Extensive network of professional, verified drivers covering every major city in India."
+              title="Largest Network of Drivers"
+              text="A wide pool of professional, background-verified chauffeurs serving every major city."
             />
           </div>
           <div className="why-grid">
             <Feature
               image="/safe.png"
               title="Safe & Secure"
-              text="Background-verified partners and insured moves for complete peace of mind."
+              text="Insured rides and strict driver verification processes for complete peace of mind."
             />
             <Feature
               image="/transparent.png"
               title="Nationwide Coverage"
-              text="Strong presence with on-ground support in metros and tier‑2/3 cities."
+              text="On-ground presence across metros and Tier-2/3 cities to support companies of all sizes."
             />
             <Feature
               image="/known.png"
               title="Transparent Pricing"
-              text="Clear quotes, no hidden charges—ever."
+              text="Upfront quotes with zero hidden costs — giving you total clarity on your rentals."
             />
           </div>
         </div>
@@ -365,4 +323,4 @@ const TransportSolution = () => {
   );
 };
 
-export default TransportSolution;
+export default CorporateCarRental;

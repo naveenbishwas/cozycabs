@@ -847,7 +847,7 @@ export default function Home() {
             <article className="plan-card">
               <figure className="card-media">
                 <Image
-                  src="/car11.png"
+                  src="/f-day.jpeg"
                   alt="car-img"
                   width={0}
                   height={0}
@@ -884,7 +884,7 @@ export default function Home() {
             <article className="plan-card">
               <figure className="card-media">
                 <Image
-                  src="/c12.png"
+                  src="/h-day.jpeg"
                   alt="car-img"
                   width={0}
                   height={0}
@@ -919,7 +919,7 @@ export default function Home() {
             <article className="plan-card">
               <figure className="card-media">
                 <Image
-                  src="/c13.png"
+                  src="/out1.jpeg"
                   alt="car-img"
                   width={0}
                   height={0}
@@ -959,7 +959,7 @@ export default function Home() {
             <article className="plan-card">
               <figure className="card-media">
                 <Image
-                  src="/c15.png"
+                  src="/c-travel.jpeg"
                   alt="car-img"
                   width={0}
                   height={0}
@@ -994,7 +994,7 @@ export default function Home() {
             <article className="plan-card">
               <figure className="card-media">
                 <Image
-                  src="/c16.png"
+                  src="/tp-1.jpeg"
                   alt="car-img"
                   width={0}
                   height={0}
@@ -1126,7 +1126,7 @@ export default function Home() {
           <div className="fleet-card">
             <div className="fleet-image">
               <Image
-                src="/premium.png"
+                src="/pr1.jpeg"
                 alt="car-images"
                 width={0}
                 height={0}
@@ -1159,7 +1159,7 @@ export default function Home() {
           <div className="fleet-card">
             <div className="fleet-image">
               <Image
-                src="/luxury.png"
+                src="/luxury3.jpeg"
                 alt="car-images"
                 width={0}
                 height={0}
@@ -1260,72 +1260,72 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Before / After comparator */}
-      {/* <section className="ba" id="before-after">
-        <div className="ba__toprow">
-          <h3 className="ba__eyebrow">Before After</h3>
-          <div className="ba__rule">
-            <span className="ba__dot" />
-          </div>
-        </div>
+      <section className="teamShowcase">
+        <div className="teamShowcase-container">
+          <div className="teamShowcase-content">
+            <div className="teamShowcase-text" id="meet-title">
+              <h2 className="teamShowcase-title">The People Behind CozyCabz</h2>
+              <p className="teamShowcase-description">
+                Every smooth ride begins with a passionate team. At CozyCabz,
+                our strength lies in the people who work tirelessly to make
+                travel stress-free and dependable. From expert chauffeurs to
+                dedicated support staff, each member brings skill,
+                responsibility, and commitment to delivering safe and punctual
+                journeys.
+              </p>
+              <p>
+                We thrive on innovation, teamwork, and trust — ensuring
+                businesses and individuals can count on us for reliable
+                transportation, anytime, anywhere.
+              </p>
 
-        <h2 className="ba__title">
-          Saw Your Car Before
-          <br />
-          After Cleaning
-        </h2>
+              <div className="teamShowcase-stats" id="team-stats">
+                <div className="teamShowcase-stat">
+                  <h3>250+</h3>
+                  <p>Skilled Team Members</p>
+                </div>
+                <div className="teamShowcase-stat">
+                  <h3>12+</h3>
+                  <p>Years of Service Excellence</p>
+                </div>
+                <div className="teamShowcase-stat">
+                  <h3>200+</h3>
+                  <p>Projects Completed</p>
+                </div>
+              </div>
 
-        <div
-          className="ba__track"
-          ref={trackRef}
-          style={{ "--pos": `${beforeAfterPos}%` }}
-        >
+              <div className="teamShowcase-values">
+                <h3>Our Core Values</h3>
+                <ul>
+                  <li>Innovation and creativity in everything we do</li>
+                  <li>Commitment to quality and excellence</li>
+                  <li>Collaborative spirit and teamwork</li>
+                  <li>Continuous learning and growth</li>
+                </ul>
+              </div>
 
-          <Image
-            src="/car-clean.webp"
-            alt="Car after cleaning"
-            unoptimized
-            width={0}
-            height={0}
-            className="ba__img"
-          />
+              <div className="teamShowcase-btn">
+                <button>Know More</button>
+              </div>
+            </div>
 
-
-          <Image
-            src="/car-dirty.webp"
-            alt="Car before cleaning"
-            unoptimized
-            width={0}
-            height={0}
-            className="ba__img ba__img--front"
-          />
-
-
-          <div
-            className="ba__divider"
-            style={{ left: `var(--pos)` }}
-            role="slider"
-            aria-valuemin={0}
-            aria-valuemax={100}
-            aria-valuenow={Math.round(beforeAfterPos)}
-            tabIndex={0}
-            onKeyDown={handleBeforeAfterKey}
-            aria-label="Drag to compare before and after"
-          >
-            <button className="ba__handle" aria-hidden="true">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-                <path
-                  d="M5 12h14M13 8l4 4-4 4"
-                  stroke="#fff"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
+            <div className="teamShowcase-image">
+              <div className="teamShowcase-imageWrapper">
+                <Image
+                  src="/team.png"
+                  width={0}
+                  height={0}
+                  alt="team-img"
+                  unoptimized
                 />
-              </svg>
-            </button>
+                <div className="teamShowcase-overlay">
+                  <p>Together we achieve more</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </section> */}
+      </section>
 
       <section className="corporate-program">
         {/* Top Section */}
@@ -1567,12 +1567,12 @@ export default function Home() {
               text="Background-verified partners and insured moves for complete peace of mind."
             />
             <Feature
-              image="/transparent.png"
+              image="/nationwide.png"
               title="Nationwide Coverage"
               text="Strong presence with on-ground support in metros and tier-2/3 cities."
             />
             <Feature
-              image="/known.png"
+              image="/transparent.png"
               title="Transparent Pricing"
               text="Clear quotes, no hidden charges—ever."
             />
@@ -1793,6 +1793,34 @@ export default function Home() {
               </div>
             );
           })}
+        </div>
+      </section>
+
+      <section className="prestigious-section section-container">
+        <div className="prestigious-wrap">
+          {/* Image First */}
+          <div className="prestigious-image">
+            <Image
+              src="/pr1.jpeg"
+              alt="DRDO G20 Summit"
+              width={600}
+              height={400}
+              className="image"
+            />
+          </div>
+
+          {/* Content Second */}
+          <div className="prestigious-content">
+            <h2>
+              Prestigious <span>Associations</span>
+            </h2>
+            <p>
+              Cozy Cabz is proud to have provided cab services for the DRDO
+              department during the prestigious G20 Summit. Our reliable fleet
+              and professional service ensured seamless travel support for
+              dignitaries and officials.
+            </p>
+          </div>
         </div>
       </section>
 

@@ -113,16 +113,16 @@ a {
   font-size: 56px;
   line-height: 1.1;
   font-weight: 700;
-  margin: 0 0 16px;
+  margin: 0 0 26px !important;
   max-width: 80%;
 }
 
-.heroeco__sub {
+.heroeco__copy .heroeco__sub {
   font-size: 18px;
   line-height: 1.65;
   max-width: 50ch;
   margin: 0;
-  color: #fff !important;
+  color: #e2e2e2 !important;
 }
 
 /* --- Responsive --- */
@@ -649,7 +649,7 @@ a {
   padding: 5px 0;
 }
 
-.small-head {
+.heroeco__sub {
   font-size: 28px;
 }
 

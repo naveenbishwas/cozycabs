@@ -207,8 +207,7 @@ const InMumbai = () => {
           <p className="heroeco__eyebrow">India’s Trusted Car Rental</p>
           <h1 className="heroeco__title">Car Rental in Mumbai </h1>
           <span className="small-head">
-            <br />
-            <h4>– Safe, Reliable & Comfortable Rides</h4>
+            <h4>Safe, Reliable & Comfortable Rides</h4>
           </span>
           <p className="heroeco__sub">
             Exploring Mumbai can be exciting but also overwhelming with traffic,
@@ -450,30 +449,32 @@ const InMumbai = () => {
         <div className="howrent__container">
           <h2 id="howrent-title">Easy Booking Process</h2>
           <p className="howrent__intro">
-            Booking a rental car in Mumbai with Cozy Cabz takes just a few steps
+            Simple and straightforward booking process. Follow these easy steps
+            to book your ride with Cozy Cabz in Mumbai.
           </p>
 
           <ul className="howrent__list">
             <li className="howrent__item">
               <h3>Enter Your Trip Details</h3>
               <p>
-                Add pickup, drop, timings, and trip type—whether it’s local,
-                outstation, or airport
+                Add pickup & drop location, date, timings, and trip type (local,
+                outstation, or airport)
               </p>
             </li>
 
             <li className="howrent__item">
               <h3>Choose Your Vehicle</h3>
               <p>
-                From economy rental cars to luxury car hire in Mumbai with
-                driver, select what suits your budget and comfort.
+                Pick from economy rental cars, SUVs, or luxury car hire in
+                Mumbai with driver based on your comfort and budget.
               </p>
             </li>
 
             <li className="howrent__item">
               <h3>Get Instant Confirmation</h3>
               <p>
-                Receive driver details, car model, and arrival time instantly.
+                Receive booking details instantly, including car model, driver
+                information, and estimated arrival time.
               </p>
             </li>
 
