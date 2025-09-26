@@ -203,7 +203,12 @@ export default function SiteFooter() {
           </nav>
 
           <nav className="footer__col" aria-label="More Cities">
+
             <ul className="linklist" id="last-column">
+
+            {/* <h4>More Cities</h4> */}
+
+
               <li>
                 <Link href="/InSurat">Car Rental in Surat</Link>
               </li>
@@ -241,6 +246,7 @@ export default function SiteFooter() {
                 <Link href="/InMysore">Car Rental in Mysore</Link>
               </li>
             </ul>
+
           </nav>
         </div>
 

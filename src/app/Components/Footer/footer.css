@@ -33,6 +33,10 @@
   gap: 36px 28px;
 }
 
+.footer__grid .footer__col:last-of-type {
+  margin-top: 13%;
+}
+
 /* Brand block */
 .footer__brand .brand__row {
   display: flex;

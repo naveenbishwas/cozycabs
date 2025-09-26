@@ -114,6 +114,7 @@
   z-index: 1;
 }
 
+
 .contact-btn span {
   position: relative;
   z-index: 2;
@@ -212,11 +213,7 @@
   100% {
     transform: scale(1);
   }
-}
 
-.contact-btn {
-  animation: jelly 2.5s infinite;
-} */
 
 .contact-btn {
   position: relative;
@@ -229,13 +226,14 @@
   font-weight: bold;
   z-index: 1;
   overflow: hidden;
+
   display: flex;
   align-items: center;
   gap: 10px;
 
   /* Wave / breathing effect */
-  animation: waveScale 2.5s infinite ease-in-out;
-}
+/*   animation: waveScale 2.5s infinite ease-in-out;
+} */
 
 /* Inner span */
 .contact-btn span {
@@ -243,15 +241,42 @@
   z-index: 2;
 }
 
-@keyframes waveScale {
+.contact-btn svg {
+  display: inline-block;
+  font-size: 20px; /* adjust as needed */
+  color: #fff; /* or var(--brandColor) */
+  animation: phone-ring 1.5s infinite ease-in-out;
+  transform-origin: center center;
+}
+
+/* Keyframes for realistic ringing */
+@keyframes phone-ring {
   0% {
-    transform: scale(0.95);
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(15deg);
+  }
+  20% {
+    transform: rotate(-15deg);
+  }
+  30% {
+    transform: rotate(10deg);
+  }
+  40% {
+    transform: rotate(-10deg);
   }
   50% {
-    transform: scale(1.05);
+    transform: rotate(5deg);
+  }
+  60% {
+    transform: rotate(-5deg);
+  }
+  70% {
+    transform: rotate(0deg);
   }
   100% {
-    transform: scale(0.95);
+    transform: rotate(0deg);
   }
 }
 
@@ -268,6 +293,14 @@
   color: white;
   z-index: 1000;
   transition: background 0.3s ease;
+}
+
+.contact-btn:hover .contact-btn svg path {
+  fill: #d80117;
+}
+
+.contact-btn:hover .contact-btn svg {
+  stroke: #d80117;
 }
 
 /* Logo always flex center inside its space */
@@ -306,8 +339,8 @@
   color: var(--brandColor);
 }
 
-/* CTA button */
 .contact-btn {
+  position: relative;
   background: var(--brandColor);
   color: white;
   border: 2px solid var(--brandColor);
@@ -315,19 +348,17 @@
   border-radius: 25px;
   cursor: pointer;
   font-weight: bold;
-  animation: waveScale 2.5s infinite ease-in-out;
+  overflow: hidden;
+  transition: color 0.3s ease, transform 0.3s ease, background 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-@keyframes waveScale {
-  0% {
-    transform: scale(0.95);
-  }
-  50% {
-    transform: scale(1.05);
-  }
-  100% {
-    transform: scale(0.95);
-  }
+.contact-btn:hover {
+  background: #fff;
+  color: var(--brandColor);
+  transform: translateY(-2px);
 }
 
 /* --- Hamburger --- */
@@ -569,4 +600,21 @@
 
 .submenu a:hover {
   color: var(--brandColor);
+}
+
+/* Default phone icon */
+.contact-btn svg {
+  width: 20px;
+  height: 20px;
+  fill: #fff; /* white by default */
+  stroke: #fff; /* fallback */
+  animation: phone-ring 1.5s infinite ease-in-out;
+  transform-origin: center center;
+  transition: fill 0.3s ease, stroke 0.3s ease;
+}
+
+/* On hover – make phone red */
+.contact-btn:hover svg {
+  fill: var(--brandColor);
+  stroke: var(--brandColor);
 }
