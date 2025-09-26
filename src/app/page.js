@@ -1109,7 +1109,7 @@ export default function Home() {
       </section>
 
       {/* Portfolio */}
-      <section className="fleet">
+      <section className="fleet" id="fleet">
         {/* Header */}
         <div className="fleet-header">
           <h2>Browse Our Fleet</h2>
@@ -1126,7 +1126,7 @@ export default function Home() {
           <div className="fleet-card">
             <div className="fleet-image">
               <Image
-                src="/economy.png"
+                src="/premium.png"
                 alt="car-images"
                 width={0}
                 height={0}
@@ -1194,7 +1194,7 @@ export default function Home() {
           <div className="fleet-card">
             <div className="fleet-image">
               <Image
-                src="/economy2.png"
+                src="/economy2.jpeg"
                 alt="car-images"
                 width={0}
                 height={0}
@@ -1229,7 +1229,7 @@ export default function Home() {
           <div className="fleet-card">
             <div className="fleet-image">
               <Image
-                src="/Bus-image.png"
+                src="/bus2.jpeg"
                 alt="car-images"
                 width={0}
                 height={0}

@@ -1,12 +1,12 @@
 "use client";
 
 import React, { useState } from "react";
-import "./internalOne.css";
+// import "../InMumbai/internalOne.css";
 import Image from "next/image";
 import Header from "../Components/Header/page";
 import Footer from "../Components/Footer/page";
 
-const InternalOne = () => {
+const Inbanglore = () => {
   const [openIndex, setOpenIndex] = useState(null);
 
   const toggle = (i) => {
@@ -15,10 +15,9 @@ const InternalOne = () => {
 
   const items = [
     {
-      title: "Professional, Verified Drivers",
-      desc: " Our chauffeurs are trained, polite, and know every corner of the city—from the lanes of Andheri to the sea breeze of Marine Drive. If you’re searching for rent a car in Mumbai with driver or car hire in Mumbai with driver, Cozy Cabz provides you with the most reliable option.",
+      title: "Professional & Verified Drivers",
+      desc: "Our chauffeurs know Bangalore’s busy roads inside out—whether it’s the traffic-heavy lanes of Silk Board, the tech parks in Whitefield, or the scenic drives to Nandi Hills. Each driver is background-checked, polite, and well-trained to ensure your journey is safe and stress-free. If you’re looking for car rental Bangalore with driver or want to hire a car in Bangalore for work or leisure, cozy cabz is your trusted partner.",
       icon: (
-        // Shield check
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <path d="M12 2l7 3v6c0 5-3.5 9-7 11-3.5-2-7-6-7-11V5l7-3z" />
           <path d="M9.2 12.6l2.1 2.1 4.5-4.5" className="stroke" />
@@ -26,10 +25,9 @@ const InternalOne = () => {
       ),
     },
     {
-      title: "Well-Maintained Fleet",
-      desc: "Choose from hatchbacks, sedans, SUVs, and premium cars. Whether you need an economy rental car in Mumbai, a 7 seater car on rent in Mumbai, or a luxury car rental Mumbai with driver, we’ve got it covered.",
+      title: "Wide Range of Vehicles",
+      desc: "Need a compact car for rent in Bangalore for local travel, a premium sedan for meetings, or a 7 seater car rental Bangalore for family trips? We’ve got options for every requirement. From luxury cars rental in Bangalore, our fleet ensures the right fit for your comfort and budget.",
       icon: (
-        // Sedan
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <path d="M3 13l1.2-3.6A3 3 0 017.1 7h9.8a3 3 0 012.9 2.4L21 13v5a1 1 0 01-1 1h-1a2 2 0 11-4 0H9a2 2 0 11-4 0H4a1 1 0 01-1-1v-5z" />
           <path d="M6 13h12" className="stroke" />
@@ -37,10 +35,9 @@ const InternalOne = () => {
       ),
     },
     {
-      title: "Transparent & Affordable Pricing",
-      desc: "Get clear estimates with no hidden charges. From eco car rental to monthly car rental Mumbai, we share all details on per km rates, tolls, and driver allowances upfront.",
+      title: "Transparent Pricing – No Hidden Costs",
+      desc: "With cozy cabz, you always know what you’re paying for. We provide upfront estimates covering per km charges, driver fees, tolls, and parking. Whether you’re booking a car on rent in Bangalore for a day or planning a long rental car service in Bangalore for an outstation trip, there are no hidden surprises.",
       icon: (
-        // Tag
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <path d="M3 12l9-9 9 9-9 9-9-9z" />
           <circle cx="15" cy="9" r="1.6" className="hole" />
@@ -48,10 +45,9 @@ const InternalOne = () => {
       ),
     },
     {
-      title: "24×7 Availability",
-      desc: " Mumbai never sleeps—and neither do we. Be it airport pickups at night or one day car rental Mumbai, our services are available around the clock.",
+      title: "Available 24×7, Anytime You Need",
+      desc: "Bangalore runs around the clock—and so do we. From early-morning airport drops to late-night returns after a business dinner or weekend outing, our Bangalore car rentals are available 24×7. You can rent a car in Bangalore anytime with quick confirmations and reliable service.",
       icon: (
-        // Clock + tick
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <circle cx="10.5" cy="10.5" r="7.5" />
           <path d="M10.5 6.5v4.2l3.2 2" className="stroke" />
@@ -59,73 +55,66 @@ const InternalOne = () => {
         </svg>
       ),
     },
-    {
-      title: "Safety & Hygiene First",
-      desc: " Every ride is sanitized, insured, and GPS-enabled. From private car rental in Mumbai to car with driver Mumbai, your safety and comfort remain our top priority.",
-      icon: (
-        // Headset
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M4 12a8 8 0 1116 0v5a2 2 0 01-2 2h-3v-4h3v-3a6 6 0 10-12 0v3h3v4H6a2 2 0 01-2-2v-5z" />
-        </svg>
-      ),
-    },
   ];
 
   const spots = [
     {
-      title: "Gateway of India & Colaba Causeway",
+      title: "Bangalore Palace",
       img: "/g1.webp",
-      alt: "The Gateway of India at sunrise",
+      alt: "Bangalore Palace exterior",
       paragraphs: [
-        "Standing tall by the Arabian Sea, the Gateway of India is Mumbai’s most iconic landmark. Built during the British era, it’s not just a tourist attraction but a piece of history. Just a short walk away lies Colaba Causeway, a bustling market street filled with trendy clothes, antique jewelry, handicrafts, and cozy cafés. With our car rental with driver, you can explore both spots in one go—without the stress of crowded lanes or parking issues",
+        "An iconic landmark with Tudor-style architecture, sprawling lawns, and regal interiors from Victorian, Edwardian, and Neo-Classical periods—offering a glimpse into Bangalore’s royal past.",
       ],
     },
     {
-      title: "Marine Drive & Girgaon Chowpatty",
+      title: "Vidhana Soudha",
       img: "/g2.webp",
-      alt: "Marine Drive during a colorful sunset",
+      alt: "Vidhana Soudha lit up at night",
       paragraphs: [
-        "Known as the Queen’s Necklace because of its glittering night view, Marine Drive is perfect for long seaside walks, photography, and sunset views. Close by is Girgaon Chowpatty, a popular beach where you can indulge in Mumbai’s famous street food like pav bhaji, bhel puri, and ice gola. Booking a car on rent in Mumbai ensures you enjoy the evening at your own pace, without worrying about transport after dark.",
+        "The pride of Karnataka and India’s largest legislative building. Built in Neo-Dravidian style, it glows beautifully on Sundays and public holidays—showcasing the city’s grandeur.",
       ],
     },
     {
-      title: "Siddhivinayak Temple & Haji Ali Dargah",
+      title: "Lalbagh Botanical Garden",
       img: "/g3.webp",
-      alt: "Golden sanctum of Shree Siddhivinayak Temple",
+      alt: "Lalbagh Glass House and gardens",
       paragraphs: [
-        "Mumbai is as spiritual as it is fast-paced. The Siddhivinayak Temple, dedicated to Lord Ganesha, attracts lakhs of devotees every week. Equally famous is the Haji Ali Dargah, located on a small islet in the Arabian Sea, offering both peace and breathtaking views. With our car rental service in Mumbai, you can plan your visit conveniently, avoiding long waits and ensuring you reach at the best times of the day.",
+        "Spread across 240 acres, Lalbagh features the famed Glass House, a serene lake, rich tropical plant collections, and the ancient Lalbagh Rock—perfect for nature lovers and families.",
       ],
     },
     {
-      title: "Elephanta Caves & Sanjay Gandhi National Park",
+      title: "Cubbon Park & Seshadri Iyer Memorial Hall",
       img: "/g4.webp",
-      alt: "Rock-cut Elephanta Caves surrounded by greenery",
+      alt: "Cubbon Park greenery and red library building",
       paragraphs: [
-        "If you want to step away from the chaos of the city, Elephanta Caves and Sanjay Gandhi National Park are perfect day trips. The Elephanta Caves, a UNESCO World Heritage site, house ancient rock-cut temples dedicated to Lord Shiva. Meanwhile, Sanjay Gandhi National Park offers greenery, trekking trails, and a mini train ride, making it a favorite for nature lovers and families. By booking a rental car in Mumbai with driver, you can comfortably plan a full-day outing, knowing your car and driver will be with you throughout the trip.",
+        "A peaceful green escape in the heart of the city. Wander leafy trails, then visit the striking red Seshadri Iyer Memorial Hall housing the Central Library with rare manuscripts.",
       ],
     },
   ];
 
   const faqs = [
     {
-      q: "How much does a cab cost in Mumbai per km?",
-      a: "Economy rides start at ₹12/km, premium cars at ₹25/km, and luxury at ₹35/km. Whether you need a cheap car rental Mumbai or a luxury car rental in Mumbai, we provide a transparent fare estimate before booking.",
+      q: "How much does a car rental in Bangalore cost per km?",
+      a: "Economy rides usually start at ₹12–₹15 per km, premium cars at ₹25 per km, and luxury cars from ₹35 per km. With cozy cabz, you’ll always get a transparent fare estimate before confirming your booking, whether it’s for a car rental in Bangalore with driver or an outstation trip.",
     },
     {
-      q: " Can I book a cab from Mumbai to other cities?",
-      a: "Yes. Popular outstation routes include Mumbai–Pune, Mumbai–Nashik, Lonavala, Shirdi, and Mumbai–Goa. Our car rental in Mumbai for outstation offers both one-way and round-trip options.",
+      q: "Can I rent a car in Bangalore for outstation travel?",
+      a: "Yes, absolutely. cozy cabz offers car rentals in Bangalore for routes like Bangalore to Mysore, Coorg, Chikmagalur, and Nandi Hills. Choose one-way or round-trip packages as per your plan.",
     },
     {
-      q: "Do you provide airport pickups at night?",
-      a: "Absolutely. Our Mumbai airport cab service runs 24×7 for both Domestic (T1) and International (T2) terminals.",
+      q: "Do you provide airport pickup and drop services in Bangalore?",
+      a: "Yes. Our 24×7 car hire in Bangalore covers Kempegowda International Airport, ensuring on-time pickups and drops even during late-night or early-morning flights.",
     },
     {
-      q: "Is there a package for full-day Mumbai sightseeing?",
-      a: "Yes, we offer 8 hr / 80 km full day car rental in Mumbai with driver, ideal for sightseeing tours covering all major attractions.",
+      q: "Can I book a car for a full day in Bangalore?",
+      a: "Definitely. We offer half-day and full-day rental packages like 8 hrs/80 km—ideal for sightseeing, business travel, or family outings. 7 seater options are available for group travel.",
+    },
+    {
+      q: "What types of cars are available for rent in Bangalore?",
+      a: "Our fleet includes economy sedans, premium sedans, SUVs, luxury cars, tempo travelers, and minibuses. Whether it’s short city trips or weekend getaways, we have you covered.",
     },
   ];
 
-  /* ===== Inline SVG Icons ===== */
   const PhoneIcon = () => (
     <svg viewBox="0 0 24 24" width="28" height="28" fill="none">
       <path
@@ -205,15 +194,19 @@ const InternalOne = () => {
       <section className="heroeco" aria-label="Car Rental Hero Section">
         <div className="heroeco__copy">
           <p className="heroeco__eyebrow">India’s Trusted Car Rental</p>
-          <h1 className="heroeco__title">Car Rental in Mumbai </h1>
+          <h1 className="heroeco__title">Car Rental in Bangalore</h1>
           <span className="small-head">
             <br />
-            <h4>– Safe, Reliable & Comfortable Rides</h4>
+            <h4>– Comfortable, Safe & Reliable Rides</h4>
           </span>
           <p className="heroeco__sub">
-            Exploring Mumbai can be exciting but also overwhelming with traffic,
-            long distances, and the city’s non-stop energy. That’s where Cozy
-            Cabz Car Rental in Mumbai makes your journey easier.
+            Bangalore, also known as the Silicon Valley of India, blends modern
+            IT hubs with lush gardens, historic landmarks, and buzzing
+            nightlife. With heavy traffic and scattered destinations, getting
+            around can be challenging. That’s why cozy cabz Car Rental in
+            Bangalore is the easiest way to travel. With our car rental
+            Bangalore with driver, you get clean cars, verified chauffeurs,
+            transparent pricing, and 24×7 service.
           </p>
         </div>
       </section>
@@ -228,7 +221,6 @@ const InternalOne = () => {
             className="booking-form__form"
             onSubmit={(e) => e.preventDefault()}
           >
-            {/* Row 1 */}
             <div className="form-row">
               <label className="sr-only" htmlFor="bf-name">
                 Your Name
@@ -287,7 +279,6 @@ const InternalOne = () => {
               </div>
             </div>
 
-            {/* Row 2 */}
             <div className="form-row">
               <label className="sr-only" htmlFor="bf-date">
                 Pickup Date
@@ -311,7 +302,6 @@ const InternalOne = () => {
               </select>
             </div>
 
-            {/* Requirement */}
             <label className="sr-only" htmlFor="bf-notes">
               Requirement Details
             </label>
@@ -321,7 +311,6 @@ const InternalOne = () => {
               placeholder="Enter Requirement Details"
             ></textarea>
 
-            {/* Footer row */}
             <div className="form-footer">
               <div className="form-agree">
                 <input
@@ -337,7 +326,6 @@ const InternalOne = () => {
                 </label>
               </div>
 
-              {/* Captcha placeholder (hide until you wire the real widget) */}
               <div className="captcha" aria-hidden="true">
                 I'm not a robot (Captcha)
               </div>
@@ -352,36 +340,11 @@ const InternalOne = () => {
         </div>
       </section>
 
-      {/* <section className="trust">
-        <div className="trust__container">
-          <h2 className="trust__title">
-            Why Ride <span>CozyCabs</span>
-          </h2>
-          <p className="trust__sub">
-            Everything we build is focused on safe, reliable and fairly-priced
-            rides.
-          </p>
-
-          <div className="trust__grid">
-            {items.map((it, i) => (
-              <article className="trust__card" key={i}>
-                <div className="trust__icon">{it.icon}</div>
-                <h3>{it.title}</h3>
-                <p>{it.desc}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section> */}
       <section className="trustcc">
         <div className="trustcc__container">
           <h2 className="trustcc__title">
-            Why Choose Cozy Cabz in<span> Mumbai?</span>
+            Why Choose cozy cabz in<span> Bangalore?</span>
           </h2>
-          {/* <p className="trustcc__sub">
-            Everything we build is focused on safe, reliable and fairly-priced
-            rides.
-          </p> */}
 
           <div className="trustcc__grid">
             {items.map((it, i) => (
@@ -403,7 +366,6 @@ const InternalOne = () => {
             to book your ride.
           </p>
 
-          {/* Connector line behind badges */}
           <div className="connector" aria-hidden="true" />
 
           <div className="stepsGrid">
@@ -450,7 +412,7 @@ const InternalOne = () => {
         <div className="howrent__container">
           <h2 id="howrent-title">Easy Booking Process</h2>
           <p className="howrent__intro">
-            Booking a rental car in Mumbai with Cozy Cabz takes just a few steps
+            Booking your ride with cozy cabz in Bangalore takes just a few steps
           </p>
 
           <ul className="howrent__list">
@@ -465,22 +427,23 @@ const InternalOne = () => {
             <li className="howrent__item">
               <h3>Choose Your Vehicle</h3>
               <p>
-                From economy rental cars to luxury car hire in Mumbai with
-                driver, select what suits your budget and comfort.
+                From economy cars to SUVs, premium sedans, or luxury taxis—pick
+                what suits your budget and comfort.
               </p>
             </li>
 
             <li className="howrent__item">
               <h3>Get Instant Confirmation</h3>
               <p>
-                Receive driver details, car model, and arrival time instantly.
+                Receive driver details, car model, and estimated arrival time
+                right away.
               </p>
             </li>
 
             <li className="howrent__item">
               <h3>Enjoy a Stress-Free Ride</h3>
               <p>
-                Sit back, relax, and let our driver handle Mumbai’s traffic
+                Sit back, relax, and let our driver handle Bangalore’s traffic
                 while you travel in comfort.
               </p>
             </li>
@@ -492,15 +455,13 @@ const InternalOne = () => {
         <div className="attractions__container">
           <header className="attractions__head">
             <h2 id="attractions-title">
-              Must-Visit Places in Mumbai with Cozy Cabz
+              Must-Visit Places in Bangalore with Cozy Cabz
             </h2>
             <p>
-              Mumbai is a city that blends history, culture, glamour, and
-              nature—all in one. From colonial-era monuments to vibrant markets,
-              spiritual centers, and Bollywood hotspots, there’s so much to
-              explore. With Cozy Cabz car hire in Mumbai, you can cover these
-              places comfortably, without the hassle of traffic, parking, or
-              last-minute cab hunting.
+              Discover the charm of Bangalore with cozy cabz—your trusted travel
+              partner. From grand palaces and lush gardens to buzzing shopping
+              hubs and spiritual retreats, the city offers something for
+              everyone.
             </p>
           </header>
 
@@ -522,12 +483,28 @@ const InternalOne = () => {
         </div>
       </section>
 
+      <section className="trustcc" aria-labelledby="closing-title">
+        <div className="trustcc__container">
+          <h2 id="closing-title">
+            cozy cabz – Your Trusted Car Rental in Bangalore
+          </h2>
+          <p>
+            Whether you need a car on rent in Bangalore for daily use, a car
+            rental Bangalore with driver for corporate travel, or a 7 seater car
+            for rent in Bangalore for family holidays, cozy cabz has you
+            covered. With affordable rates, professional drivers, and a wide
+            fleet, we are committed to being the best car rental in Bangalore.
+            From cheap car rental in Bangalore to premium luxury rides, every
+            journey with us is safe, reliable, and memorable.
+          </p>
+        </div>
+      </section>
+
       <section className="faq">
         <div className="faq-header">
           <h2>Frequently Asked Questions</h2>
           <p>
-            Answers to the most common questions about our corporate
-            transportation program.
+            Answers to the most common questions about our Bangalore services.
           </p>
         </div>
 
@@ -571,4 +548,4 @@ const InternalOne = () => {
   );
 };
 
-export default InternalOne;
+export default Inbanglore;

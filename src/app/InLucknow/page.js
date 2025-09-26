@@ -1,12 +1,12 @@
 "use client";
 
 import React, { useState } from "react";
-// import "../InMumbai/internalOne.css";
+// import "./InternalOne.css";
 import Image from "next/image";
 import Header from "../Components/Header/page";
 import Footer from "../Components/Footer/page";
 
-const InDelhi = () => {
+const InLucknow = () => {
   const [openIndex, setOpenIndex] = useState(null);
 
   const toggle = (i) => {
@@ -16,7 +16,7 @@ const InDelhi = () => {
   const items = [
     {
       title: "Professional & Verified Drivers",
-      desc: "Our drivers know Delhi’s roads inside out—whether it’s the bustling lanes of Chandni Chowk, the wide stretches of Rajpath, or the quick routes to Gurugram and Noida. Every chauffeur is background-checked, trained, and committed to making your ride smooth and safe. If you’re looking for driver services in Delhi or want to hire a car in Delhi, Cozy Cabz is here to help.",
+      desc: "Our chauffeurs are trained, background-checked, and know Lucknow’s routes—from Chowk to Gomti Nagar, Hazratganj to Charbagh Railway Station. For dependable car hire in Lucknow, Cozy Cabz is the right choice.",
       icon: (
         // Shield check
         <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -27,7 +27,7 @@ const InDelhi = () => {
     },
     {
       title: "Wide Range of Vehicles",
-      desc: "Need a small car for rent in Delhi for short trips, a premium sedan for corporate meetings, or a 7-seater SUV for family outings? We’ve got you covered. From budget-friendly options to luxury car hire in Delhi, our fleet includes the right vehicle for every occasion.",
+      desc: "From hatchbacks and sedans to SUVs and tempo travelers, our fleet covers all needs. Whether you’re looking for a car on rent in Lucknow for a day or a self drive car in Lucknow for privacy, Cozy Cabz has flexible options.",
       icon: (
         // Sedan
         <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -37,8 +37,8 @@ const InDelhi = () => {
       ),
     },
     {
-      title: "Transparent Pricing – No Hidden Costs",
-      desc: "You’ll always know what you’re paying for. We provide fare estimates up front, covering per km rates, driver charges, parking, and tolls. Whether it’s a car on hire in Delhi for one day or a long car rental from Delhi to other cities, you’ll never face hidden costs.",
+      title: "Transparent & Affordable Pricing",
+      desc: "With Cozy Cabz, you get upfront quotes with no hidden charges. Our Lucknow car rental services include driver fees, tolls, parking, and fuel estimates—making us one of the best car rental in Lucknow.",
       icon: (
         // Tag
         <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -48,8 +48,8 @@ const InDelhi = () => {
       ),
     },
     {
-      title: "Available 24×7, Anytime You Need",
-      desc: "Delhi never stops, and neither do we. Be it an early-morning airport drop, a late-night pickup from Connaught Place, or a last-minute car booking in Delhi for outstation travel, our service is available round the clock.",
+      title: "24×7 Availability",
+      desc: "Need a late-night pickup or early-morning airport transfer? Our rental cars in Lucknow are available round the clock to fit your schedule.",
       icon: (
         // Clock + tick
         <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -61,7 +61,7 @@ const InDelhi = () => {
     },
     {
       title: "Safety & Hygiene First",
-      desc: "Every vehicle is sanitized, GPS-enabled, and insured. Your safety matters to us, so we follow strict hygiene and security protocols—perfect for families, business travelers, and tourists who depend on reliable Delhi car service.",
+      desc: "Every vehicle is sanitized after each trip, GPS-enabled, and fully insured. Families, corporates, and tourists trust Cozy Cabz for safe car rentals in Lucknow.",
       icon: (
         // Headset
         <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -73,71 +73,76 @@ const InDelhi = () => {
 
   const spots = [
     {
-      title: "Red Fort & Chandni Chowk",
+      title: "Bara Imambara",
       img: "/g1.webp",
-      alt: "Historic Red Fort and bustling Chandni Chowk",
+      alt: "Bara Imambara, Lucknow",
       paragraphs: [
-        "Begin your journey at the majestic Red Fort, a UNESCO World Heritage site that symbolizes India’s rich history. Just nearby is Chandni Chowk, one of Delhi’s oldest and busiest markets—perfect for heritage lovers and foodies alike.",
+        "Built in 1784 by Nawab Asaf-ud-Daula, Bara Imambara is an architectural masterpiece of the Mughal era. Famous for its central hall, which is one of the largest arched constructions without support beams, it also houses the fascinating Bhool Bhulaiya (labyrinth). It’s a must-visit for history enthusiasts and culture seekers.",
       ],
     },
     {
-      title: "Qutub Minar & Humayun’s Tomb",
+      title: "Chota Imambara",
       img: "/g2.webp",
-      alt: "Qutub Minar complex and Humayun’s Tomb gardens",
+      alt: "Chota Imambara, Lucknow",
       paragraphs: [
-        "For architecture admirers, Qutub Minar and Humayun’s Tomb are must-visits. The tallest brick minaret and the Mughal-era tomb that inspired the Taj Mahal make for stunning photography spots.",
+        "Often called the Hussainabad Imambara, this monument is admired for its stunning chandeliers, calligraphy, and intricate decoration. Constructed in the 19th century, it reflects Lucknow’s Nawabi culture and grandeur. At night, when lit up, the building glows beautifully, earning it the title “Palace of Lights.”",
       ],
     },
     {
-      title: "India Gate & Rajpath",
+      title: "Rumi Darwaza",
       img: "/g3.webp",
-      alt: "India Gate illuminated in the evening",
+      alt: "Rumi Darwaza, Lucknow",
       paragraphs: [
-        "At the heart of the city, India Gate stands tall as a war memorial. An evening walk along Rajpath with glowing lights is truly memorable and iconic.",
+        "Standing 60 feet tall, Rumi Darwaza is one of Lucknow’s most iconic landmarks. Built in 1784, this Mughal-style gateway is often referred to as the “Gateway to Lucknow.” Its unique design and historical charm make it one of the most photographed spots in the city.",
       ],
     },
     {
-      title: "Lotus Temple & Akshardham",
+      title: "Hazratganj Market",
       img: "/g4.webp",
-      alt: "Lotus Temple and Akshardham complex",
+      alt: "Hazratganj Market, Lucknow",
       paragraphs: [
-        "Seek peace at the Lotus Temple or explore the grand Akshardham Temple—both blend spirituality, art, and culture, ideal for travelers seeking calm and beauty.",
+        "Hazratganj is Lucknow’s most popular shopping district, blending tradition with modernity. From chikankari clothing and jewelry to branded stores and cafés, it has something for everyone. It’s also a foodie’s delight, offering delicious street snacks and authentic Awadhi cuisine.",
       ],
     },
     {
-      title: "Connaught Place & Khan Market",
-      img: "/g1.webp",
-      alt: "Connaught Place market circles and shops",
+      title: "Ambedkar Memorial Park",
+      img: "/g3.webp",
+      alt: "Ambedkar Memorial Park, Lucknow",
       paragraphs: [
-        "For shopping and city vibes, Connaught Place is packed with branded stores and eateries, while Khan Market offers upscale cafés, bookstores, and boutiques.",
+        "Spread across 107 acres, Ambedkar Memorial Park is a grand structure built with red sandstone. Dedicated to Dr. B.R. Ambedkar and other social reformers, it features statues, museums, and impressive architecture. The park is a modern symbol of Lucknow’s cultural pride and vision.",
       ],
     },
     {
-      title: "Lodhi Gardens & Hauz Khas Village",
-      img: "/g2.webp",
-      alt: "Lodhi Gardens greenery and Hauz Khas fort",
+      title: "Lucknow Zoo",
+      img: "/g4.webp",
+      alt: "Lucknow Zoo (Nawab Wajid Ali Shah Zoological Garden)",
       paragraphs: [
-        "Enjoy a natural and cultural mix at Lodhi Gardens and Hauz Khas Village—perfect for walks, heritage tombs, art galleries, cafés, and nightlife.",
+        "Also known as Nawab Wajid Ali Shah Zoological Garden, Lucknow Zoo is a family favorite. Home to tigers, lions, elephants, and rare birds, it offers both education and entertainment. The zoo also has a toy train and nature museum, making it ideal for children and wildlife lovers.",
+        "With Lucknow car rental services from Cozy Cabz, visiting these attractions becomes comfortable, convenient, and enjoyable, giving you the freedom to discover the city’s charm.",
       ],
     },
   ];
 
   const faqs = [
     {
-      q: "How much does a car rental in Delhi cost per km?",
-      a: "Economy rides start from around ₹12–₹15/km, premium cars from ₹25/km, and luxury cars from ₹35/km. Whether you choose a car rental service in Delhi for local trips or a car hire Delhi with driver for longer journeys, you’ll always get a transparent fare estimate.",
+      q: "How much does car rental in Lucknow cost?",
+      a: "Economy rides start at ₹12/km, sedans at ₹25/km, and luxury cars at ₹35/km. Cozy Cabz offers transparent Lucknow car rental rates.",
     },
     {
-      q: "Can I book a cab from Delhi to other cities?",
-      a: "Yes. Popular routes include Delhi to Agra, Jaipur, Rishikesh, Shimla, and Manali. Our car rentals New Delhi also provide one-way and round-trip options.",
+      q: "Can I book a car rental in Lucknow with driver for outstation trips?",
+      a: "Yes. Cozy Cabz provides one-way and round-trip rental cars in Lucknow for nearby destinations.",
     },
     {
-      q: "Do you provide 24×7 airport transfers in Delhi?",
-      a: "Absolutely. We cover all terminals at Indira Gandhi International Airport. Our premium taxi service in Delhi and luxury taxi service in Delhi ensure timely pickups and drops, even during late nights or early mornings.",
+      q: "Do you provide airport transfers in Lucknow?",
+      a: "Absolutely. Our car hire Lucknow includes 24×7 airport pickups and drops.",
     },
     {
-      q: "Is there a package for Delhi sightseeing?",
-      a: "Yes. We provide half-day and full-day rental packages, such as 8 hrs/80 km, where you can cover Delhi’s top attractions in comfort.",
+      q: "Are self-drive cars available in Lucknow?",
+      a: "Yes. Cozy Cabz offers Lucknow car rental self drive options for those who prefer privacy.",
+    },
+    {
+      q: "Do you provide drivers for personal cars?",
+      a: "Yes, Cozy Cabz offers driver on rent in Lucknow, making your personal travel safe and easy.",
     },
   ];
 
@@ -221,22 +226,14 @@ const InDelhi = () => {
       <section className="heroeco" aria-label="Car Rental Hero Section">
         <div className="heroeco__copy">
           <p className="heroeco__eyebrow">India’s Trusted Car Rental</p>
-          <h1 className="heroeco__title">Car Rental in Delhi</h1>
+          <h1 className="heroeco__title">Car Rental in Lucknow </h1>
           <span className="small-head">
             <br />
-            <h4>– Safe, Reliable & Comfortable Rides</h4>
+            <h4>– Safe, Reliable & Affordable
+            </h4>
           </span>
           <p className="heroeco__sub">
-            Delhi, the capital city of India, is a place where history meets
-            modernity. From ancient forts and UNESCO heritage sites to buzzing
-            markets, high-rise business hubs, and cultural hotspots, every
-            corner of Delhi has something unique to offer. But moving around the
-            city can often feel overwhelming—traffic jams, crowded metro routes,
-            and unpredictable autos. That’s why Cozy Cabz Car Rental in Delhi is
-            your perfect travel companion. With our car rental in Delhi with
-            driver, you get safe rides, verified chauffeurs, transparent
-            pricing, and 24×7 availability—so your journey is as comfortable as
-            the destination.
+          Lucknow, the City of Nawabs, is known for its rich culture, Mughal-era architecture, and mouthwatering cuisine. From historic monuments like Bara Imambara to bustling Hazratganj markets, the city is a delight for travelers. But exploring it can be tough without the right transport. That’s why Cozy Cabz offers car rental in Lucknow with driver, ensuring every trip is safe, smooth, and hassle-free. Whether you’re a tourist, a corporate traveler, or a family, our fleet of rental cars in Lucknow is designed to make your journey stress-free.
           </p>
         </div>
       </section>
@@ -399,7 +396,7 @@ const InDelhi = () => {
       <section className="trustcc">
         <div className="trustcc__container">
           <h2 className="trustcc__title">
-            Why Choose Cozy Cabz in<span> Delhi?</span>
+            Why Choose Cozy Cabz in<span> Lucknow?</span>
           </h2>
           {/* <p className="trustcc__sub">
             Everything we build is focused on safe, reliable and fairly-priced
@@ -420,10 +417,9 @@ const InDelhi = () => {
 
       <section className="howto">
         <div className="howtoWrap">
-          <h2 className="howtoTitle">How to Book Your Ride</h2>
+          <h2 className="howtoTitle">Easy Booking Process – Car Rental in Lucknow</h2>
           <p className="howtoSubtitle">
-            Simple and straightforward booking process. Follow these easy steps
-            to book your ride.
+            Simple and straightforward. Follow these steps to book your ride in Lucknow.
           </p>
 
           {/* Connector line behind badges */}
@@ -435,35 +431,35 @@ const InDelhi = () => {
               icon={<PhoneIcon />}
               step={1}
               title="Contact Our Team"
-              text="Contact our team or register on our website to get started with your booking process."
+              text="Call us or book online to start your car rental in Lucknow quickly and easily."
             />
             <StepCard
               color="#16A34A"
               icon={<PinIcon />}
               step={2}
               title="Share Your Details"
-              text="Share your destination & departure timing along with any specific requirements."
+              text="Enter pickup & drop locations, travel date, time, and trip type—local, airport, or outstation."
             />
             <StepCard
               color="#8B5CF6"
               icon={<CarIcon />}
               step={3}
-              title="Select Car Model"
-              text="Select your preferred car model from our fleet and calculate the fare instantly."
+              title="Select Your Car"
+              text="Choose sedans, SUVs, tempo travelers, or rent a car in Lucknow with driver."
             />
             <StepCard
               color="#F97316"
               icon={<CheckIcon />}
               step={4}
               title="Get Confirmation"
-              text="Get confirmation in few seconds with booking details and driver information."
+              text="Receive instant booking details, including driver info, car model, and ETA."
             />
             <StepCard
               color="#EF4444"
               icon={<ClockIcon />}
               step={5}
-              title="Wait for Arrival"
-              text="Relax and wait for your cab to arrive at your place at the scheduled time."
+              title="Enjoy the Ride"
+              text="Sit back while our professional chauffeurs handle Lucknow’s busy traffic."
             />
           </div>
         </div>
@@ -471,45 +467,57 @@ const InDelhi = () => {
 
       <section className="howrent" aria-labelledby="howrent-title">
         <div className="howrent__container">
-          <h2 id="howrent-title">Easy Booking Process</h2>
+          <h2 id="howrent-title">Car Rental Services in Lucknow</h2>
           <p className="howrent__intro">
-            Booking your ride with cozy cabz is quick, simple, and completely
-            hassle-free. Just follow four easy steps:
+          At Cozy Cabz, our car rental service in Lucknow is designed to fit every travel requirement:
           </p>
 
           <ul className="howrent__list">
             <li className="howrent__item">
-              <h3>Enter Your Trip Details</h3>
+              <h3>Local Rentals</h3>
               <p>
-                Add pickup, drop, timings, and trip type—whether it’s local,
-                outstation, or airport
+              Hourly or full-day packages for shopping, sightseeing, or work trips.
               </p>
             </li>
 
             <li className="howrent__item">
-              <h3>Choose Your Car</h3>
+              <h3>Airport Transfers</h3>
               <p>
-                From economy cars to SUVs, premium sedans, or luxury taxis. You
-                can even rent a car in Delhi with driver or opt for car rentals
-                in New Delhi for city tours.
+              Hassle-free rides to and from Chaudhary Charan Singh Airport with quick car booking in Lucknow.
+
               </p>
             </li>
 
             <li className="howrent__item">
-              <h3>Get Instant Confirmation</h3>
+              <h3>Outstation Trips </h3>
               <p>
-                Receive driver details, car model, and estimated arrival time
-                right away.
+              Book rent car in Lucknow for weekend getaways to Ayodhya, Varanasi, Kanpur, or Agra.
               </p>
             </li>
 
             <li className="howrent__item">
-              <h3>Enjoy the Ride</h3>
+              <h3>
+
+Self-Drive Cars –</h3>
               <p>
-                Our experienced drivers handle the traffic so you can relax and
-                travel stress-free.
+              Affordable self drive car in Lucknow for customers who prefer independence.
+
+
               </p>
             </li>
+            <li className="howrent__item">
+              <h3>Luxury & Premium Cars</h3>
+              <p>
+              Hire rental cars in Lucknow for weddings, VIP transfers, and corporate events.
+              </p>
+            </li>
+            <li className="howrent__item">
+              <h3>Driver on Hire</h3>
+              <p>
+              Cozy Cabz also provides driver on rent in Lucknow for your own vehicle.
+              </p>
+            </li>
+          
           </ul>
         </div>
       </section>
@@ -518,15 +526,10 @@ const InDelhi = () => {
         <div className="attractions__container">
           <header className="attractions__head">
             <h2 id="attractions-title">
-              Must-Visit Places in Delhi with Cozy Cabz
+            Must-Visit Places in Lucknow with Cozy Cabz
             </h2>
             <p>
-              Delhi is a city where every street has a story to tell. From
-              centuries-old Mughal forts to modern shopping hubs, the capital is
-              a mix of history, culture, spirituality, and vibrant city life.
-              With cozy cabz car rental in Delhi with driver, exploring becomes
-              stress-free—you just sit back and enjoy while we take care of
-              traffic, routes, and parking.
+            With Cozy Cabz car rental Lucknow, exploring the city’s cultural gems and modern attractions becomes easy and stress-free. You can travel at your own pace without worrying about parking or traffic.
             </p>
           </header>
 
@@ -597,4 +600,4 @@ const InDelhi = () => {
   );
 };
 
-export default InDelhi;
+export default InLucknow;

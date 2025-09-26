@@ -1,12 +1,12 @@
 "use client";
 
 import React, { useState } from "react";
-// import "../InMumbai/internalOne.css";
+// import "./InternalOne.css";
 import Image from "next/image";
 import Header from "../Components/Header/page";
 import Footer from "../Components/Footer/page";
 
-const InDelhi = () => {
+const InSurat = () => {
   const [openIndex, setOpenIndex] = useState(null);
 
   const toggle = (i) => {
@@ -16,7 +16,7 @@ const InDelhi = () => {
   const items = [
     {
       title: "Professional & Verified Drivers",
-      desc: "Our drivers know Delhi’s roads inside out—whether it’s the bustling lanes of Chandni Chowk, the wide stretches of Rajpath, or the quick routes to Gurugram and Noida. Every chauffeur is background-checked, trained, and committed to making your ride smooth and safe. If you’re looking for driver services in Delhi or want to hire a car in Delhi, Cozy Cabz is here to help.",
+      desc: "Our drivers are trained, background-checked, and know Surat’s roads—from Ring Road and textile markets to Dumas Beach and the airport. For secure car hire in Surat, Cozy Cabz is your trusted partner.",
       icon: (
         // Shield check
         <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -27,18 +27,18 @@ const InDelhi = () => {
     },
     {
       title: "Wide Range of Vehicles",
-      desc: "Need a small car for rent in Delhi for short trips, a premium sedan for corporate meetings, or a 7-seater SUV for family outings? We’ve got you covered. From budget-friendly options to luxury car hire in Delhi, our fleet includes the right vehicle for every occasion.",
+      desc: "Choose from hatchbacks, sedans, SUVs, tempo travelers, and luxury cars. Whether it’s a self drive car on rent in Surat for privacy or a luxury car rental in Surat for events, we provide vehicles for every purpose.",
       icon: (
         // Sedan
         <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M3 13l1.2-3.6A3 3 0 017.1 7h9.8a3 3 0 012.9 2.4L21 13v5a1 1 0 01-1 1h-1a2 2 0 11-4 0H9a2 2 0 11-4 0H4a1 1 0 01-1-1v-5z" />
+          <path d="M3 13l1.2-3.6A3 3 0 017.1 7h9.8a3 3 0 012.9 2.4L21 13v5a1 1 0 01-1 1h-1a2 2 0 11-4 0H9a2 2 0 11-4 0H3v-5z" />
           <path d="M6 13h12" className="stroke" />
         </svg>
       ),
     },
     {
-      title: "Transparent Pricing – No Hidden Costs",
-      desc: "You’ll always know what you’re paying for. We provide fare estimates up front, covering per km rates, driver charges, parking, and tolls. Whether it’s a car on hire in Delhi for one day or a long car rental from Delhi to other cities, you’ll never face hidden costs.",
+      title: "Transparent & Affordable Pricing",
+      desc: "Our Surat car rental services come with clear, upfront pricing—covering fuel, tolls, driver charges, and parking. No hidden costs, just honest fares.",
       icon: (
         // Tag
         <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -48,8 +48,8 @@ const InDelhi = () => {
       ),
     },
     {
-      title: "Available 24×7, Anytime You Need",
-      desc: "Delhi never stops, and neither do we. Be it an early-morning airport drop, a late-night pickup from Connaught Place, or a last-minute car booking in Delhi for outstation travel, our service is available round the clock.",
+      title: "24×7 Availability",
+      desc: "From early-morning airport transfers to late-night pickups, Cozy Cabz provides car rental Surat services round the clock.",
       icon: (
         // Clock + tick
         <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -61,7 +61,7 @@ const InDelhi = () => {
     },
     {
       title: "Safety & Hygiene First",
-      desc: "Every vehicle is sanitized, GPS-enabled, and insured. Your safety matters to us, so we follow strict hygiene and security protocols—perfect for families, business travelers, and tourists who depend on reliable Delhi car service.",
+      desc: "Every car is sanitized, GPS-enabled, and insured for passenger safety. Families, corporates, and tourists trust Cozy Cabz for rental cars in Surat.",
       icon: (
         // Headset
         <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -73,71 +73,76 @@ const InDelhi = () => {
 
   const spots = [
     {
-      title: "Red Fort & Chandni Chowk",
+      title: "Surat Castle",
       img: "/g1.webp",
-      alt: "Historic Red Fort and bustling Chandni Chowk",
+      alt: "Surat Castle, Surat",
       paragraphs: [
-        "Begin your journey at the majestic Red Fort, a UNESCO World Heritage site that symbolizes India’s rich history. Just nearby is Chandni Chowk, one of Delhi’s oldest and busiest markets—perfect for heritage lovers and foodies alike.",
+        "Built in the 16th century by Sultan Mahmud III, Surat Castle is a grand fort that once protected the city from invasions. Its massive stone walls and strategic riverside location reflect the city’s historic importance. Today, it stands as a popular tourist landmark and heritage site.",
       ],
     },
     {
-      title: "Qutub Minar & Humayun’s Tomb",
+      title: "Sarthana Nature Park & Zoo",
       img: "/g2.webp",
-      alt: "Qutub Minar complex and Humayun’s Tomb gardens",
+      alt: "Sarthana Nature Park and Zoo, Surat",
       paragraphs: [
-        "For architecture admirers, Qutub Minar and Humayun’s Tomb are must-visits. The tallest brick minaret and the Mughal-era tomb that inspired the Taj Mahal make for stunning photography spots.",
+        "Spread over a large green area, this zoo is home to lions, tigers, leopards, and exotic birds. It’s one of the best fun places in Surat for families, offering both entertainment and learning for children. The natural surroundings make it a refreshing getaway within the city.",
       ],
     },
     {
-      title: "India Gate & Rajpath",
+      title: "Dumas Beach",
       img: "/g3.webp",
-      alt: "India Gate illuminated in the evening",
+      alt: "Dumas Beach, Surat",
       paragraphs: [
-        "At the heart of the city, India Gate stands tall as a war memorial. An evening walk along Rajpath with glowing lights is truly memorable and iconic.",
+        "Famous for its unique black sand, Dumas Beach along the Arabian Sea is a favorite evening spot for locals and tourists. Visitors enjoy seaside snacks, sunset views, and the cool breeze. It’s perfect for a peaceful walk or a lively outing with friends and family.",
       ],
     },
     {
-      title: "Lotus Temple & Akshardham",
+      title: "Ambika Niketan Temple",
       img: "/g4.webp",
-      alt: "Lotus Temple and Akshardham complex",
+      alt: "Ambika Niketan Temple, Surat",
       paragraphs: [
-        "Seek peace at the Lotus Temple or explore the grand Akshardham Temple—both blend spirituality, art, and culture, ideal for travelers seeking calm and beauty.",
+        "Dedicated to Goddess Ashtabhuja Ambika, this riverside temple is one of Surat’s most spiritual places. Its calm setting along the Tapi River attracts devotees and tourists seeking peace. Festivals here are celebrated with great devotion, adding to the temple’s charm.",
       ],
     },
     {
-      title: "Connaught Place & Khan Market",
+      title: "Gopi Talav",
       img: "/g1.webp",
-      alt: "Connaught Place market circles and shops",
+      alt: "Gopi Talav, Surat",
       paragraphs: [
-        "For shopping and city vibes, Connaught Place is packed with branded stores and eateries, while Khan Market offers upscale cafés, bookstores, and boutiques.",
+        "Originally built in the 16th century, Gopi Talav is now a lively recreational hub. With boating, gardens, fountains, and food courts, it’s a fun destination for families. The blend of history and modern development makes it a popular attraction in Surat.",
       ],
     },
     {
-      title: "Lodhi Gardens & Hauz Khas Village",
+      title: "Dutch Garden",
       img: "/g2.webp",
-      alt: "Lodhi Gardens greenery and Hauz Khas fort",
+      alt: "Dutch Garden, Surat",
       paragraphs: [
-        "Enjoy a natural and cultural mix at Lodhi Gardens and Hauz Khas Village—perfect for walks, heritage tombs, art galleries, cafés, and nightlife.",
+        "Known for its colonial influence, Dutch Garden is a beautifully landscaped park with historical tombs of Dutch and Armenian traders. Its peaceful lawns and serene atmosphere make it an ideal place for relaxation. It’s a perfect mix of heritage and greenery.",
+        "With Surat car rental services from Cozy Cabz, you can explore these landmarks without hassle, enjoying comfort and flexibility throughout your journey.",
       ],
     },
   ];
 
   const faqs = [
     {
-      q: "How much does a car rental in Delhi cost per km?",
-      a: "Economy rides start from around ₹12–₹15/km, premium cars from ₹25/km, and luxury cars from ₹35/km. Whether you choose a car rental service in Delhi for local trips or a car hire Delhi with driver for longer journeys, you’ll always get a transparent fare estimate.",
+      q: "How much does car rental in Surat cost per day?",
+      a: "Economy rides start at ₹12/km, with options for car on rent for one day or long trips. Luxury cars and SUVs are also available.",
     },
     {
-      q: "Can I book a cab from Delhi to other cities?",
-      a: "Yes. Popular routes include Delhi to Agra, Jaipur, Rishikesh, Shimla, and Manali. Our car rentals New Delhi also provide one-way and round-trip options.",
+      q: "Can I book self drive cars in Surat?",
+      a: "Yes. Cozy Cabz offers self drive car rental in Surat for those who prefer independence.",
     },
     {
-      q: "Do you provide 24×7 airport transfers in Delhi?",
-      a: "Absolutely. We cover all terminals at Indira Gandhi International Airport. Our premium taxi service in Delhi and luxury taxi service in Delhi ensure timely pickups and drops, even during late nights or early mornings.",
+      q: "Do you provide airport transfers in Surat?",
+      a: "Absolutely. Our car hire Surat service includes 24×7 pickups and drops to Surat Airport.",
     },
     {
-      q: "Is there a package for Delhi sightseeing?",
-      a: "Yes. We provide half-day and full-day rental packages, such as 8 hrs/80 km, where you can cover Delhi’s top attractions in comfort.",
+      q: "Are luxury cars available in Surat?",
+      a: "Yes. Cozy Cabz offers luxury car rental in Surat for weddings, events, and VIP transfers.",
+    },
+    {
+      q: "Do you offer cars for outstation travel?",
+      a: "Yes. We provide rental cars in Surat for nearby destinations like Daman, Silvassa, Mumbai, and Ahmedabad.",
     },
   ];
 
@@ -221,22 +226,16 @@ const InDelhi = () => {
       <section className="heroeco" aria-label="Car Rental Hero Section">
         <div className="heroeco__copy">
           <p className="heroeco__eyebrow">India’s Trusted Car Rental</p>
-          <h1 className="heroeco__title">Car Rental in Delhi</h1>
+          <h1 className="heroeco__title">Car Rental in Surat </h1>
           <span className="small-head">
             <br />
-            <h4>– Safe, Reliable & Comfortable Rides</h4>
+            <h4>– Safe, Reliable & Affordable
+            </h4>
           </span>
           <p className="heroeco__sub">
-            Delhi, the capital city of India, is a place where history meets
-            modernity. From ancient forts and UNESCO heritage sites to buzzing
-            markets, high-rise business hubs, and cultural hotspots, every
-            corner of Delhi has something unique to offer. But moving around the
-            city can often feel overwhelming—traffic jams, crowded metro routes,
-            and unpredictable autos. That’s why Cozy Cabz Car Rental in Delhi is
-            your perfect travel companion. With our car rental in Delhi with
-            driver, you get safe rides, verified chauffeurs, transparent
-            pricing, and 24×7 availability—so your journey is as comfortable as
-            the destination.
+          Surat, popularly known as the Diamond City of India, is a vibrant mix of history, trade, and modern living. Famous for being one of the world’s largest diamond polishing hubs and a leading textile center, Surat attracts business travelers, tourists, and families alike. The city offers a unique blend of heritage monuments, buzzing markets, seaside getaways, and modern malls. From exploring Surat Castle and Dutch Garden to shopping in textile markets or relaxing at Dumas Beach, there’s always something to experience here.
+          <br/><br/>
+          But moving around in the city can be tricky with heavy traffic and crowded roads. That’s why Cozy Cabz provides car rental in Surat with driver and self drive car rental in Surat options to make your journey smooth and stress-free. Whether you’re looking for a car on rent in Surat for one day, planning car rental in Surat for outstation trips, or need a luxury car rental in Surat for special occasions, Cozy Cabz has the right solution for you.
           </p>
         </div>
       </section>
@@ -375,36 +374,11 @@ const InDelhi = () => {
         </div>
       </section>
 
-      {/* <section className="trust">
-        <div className="trust__container">
-          <h2 className="trust__title">
-            Why Ride <span>CozyCabs</span>
-          </h2>
-          <p className="trust__sub">
-            Everything we build is focused on safe, reliable and fairly-priced
-            rides.
-          </p>
-
-          <div className="trust__grid">
-            {items.map((it, i) => (
-              <article className="trust__card" key={i}>
-                <div className="trust__icon">{it.icon}</div>
-                <h3>{it.title}</h3>
-                <p>{it.desc}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section> */}
       <section className="trustcc">
         <div className="trustcc__container">
           <h2 className="trustcc__title">
-            Why Choose Cozy Cabz in<span> Delhi?</span>
+            Why Choose Cozy Cabz in<span> Surat?</span>
           </h2>
-          {/* <p className="trustcc__sub">
-            Everything we build is focused on safe, reliable and fairly-priced
-            rides.
-          </p> */}
 
           <div className="trustcc__grid">
             {items.map((it, i) => (
@@ -420,10 +394,9 @@ const InDelhi = () => {
 
       <section className="howto">
         <div className="howtoWrap">
-          <h2 className="howtoTitle">How to Book Your Ride</h2>
+          <h2 className="howtoTitle">Easy Booking Process – Car Rental in Surat</h2>
           <p className="howtoSubtitle">
-            Simple and straightforward booking process. Follow these easy steps
-            to book your ride.
+            Simple and straightforward. Follow these steps to book your ride in Surat.
           </p>
 
           {/* Connector line behind badges */}
@@ -435,35 +408,35 @@ const InDelhi = () => {
               icon={<PhoneIcon />}
               step={1}
               title="Contact Our Team"
-              text="Contact our team or register on our website to get started with your booking process."
+              text="Call us or book online to start your car rental in Surat quickly and easily."
             />
             <StepCard
               color="#16A34A"
               icon={<PinIcon />}
               step={2}
-              title="Share Your Details"
-              text="Share your destination & departure timing along with any specific requirements."
+              title="Share Your Trip Details"
+              text="Provide pickup & drop locations, travel date, time, and trip type—local, airport, or outstation."
             />
             <StepCard
               color="#8B5CF6"
               icon={<CarIcon />}
               step={3}
-              title="Select Car Model"
-              text="Select your preferred car model from our fleet and calculate the fare instantly."
+              title="Select Your Car"
+              text="Choose from economy cars, SUVs, tempo travelers, or 1 day car rental with driver in Surat for flexibility."
             />
             <StepCard
               color="#F97316"
               icon={<CheckIcon />}
               step={4}
               title="Get Confirmation"
-              text="Get confirmation in few seconds with booking details and driver information."
+              text="Receive instant booking details, including driver info, vehicle details, and estimated arrival time."
             />
             <StepCard
               color="#EF4444"
               icon={<ClockIcon />}
               step={5}
-              title="Wait for Arrival"
-              text="Relax and wait for your cab to arrive at your place at the scheduled time."
+              title="Enjoy the Ride"
+              text="Sit back and relax while our experienced chauffeurs handle Surat’s traffic, ensuring a safe and comfortable journey."
             />
           </div>
         </div>
@@ -471,45 +444,57 @@ const InDelhi = () => {
 
       <section className="howrent" aria-labelledby="howrent-title">
         <div className="howrent__container">
-          <h2 id="howrent-title">Easy Booking Process</h2>
+          <h2 id="howrent-title">Car Rental Services in Surat</h2>
           <p className="howrent__intro">
-            Booking your ride with cozy cabz is quick, simple, and completely
-            hassle-free. Just follow four easy steps:
+          At Cozy Cabz, our car rental services in Surat are designed to meet every travel need:
           </p>
 
           <ul className="howrent__list">
             <li className="howrent__item">
-              <h3>Enter Your Trip Details</h3>
+              <h3>Local Rentals</h3>
               <p>
-                Add pickup, drop, timings, and trip type—whether it’s local,
-                outstation, or airport
+              Hourly or daily packages for shopping, office work, or sightseeing.
               </p>
             </li>
 
             <li className="howrent__item">
-              <h3>Choose Your Car</h3>
+              <h3>Airport Transfers</h3>
               <p>
-                From economy cars to SUVs, premium sedans, or luxury taxis. You
-                can even rent a car in Delhi with driver or opt for car rentals
-                in New Delhi for city tours.
+              On-time pickups and drops with easy car booking with driver.
+
               </p>
             </li>
 
             <li className="howrent__item">
-              <h3>Get Instant Confirmation</h3>
+              <h3>Outstation Trips </h3>
               <p>
-                Receive driver details, car model, and estimated arrival time
-                right away.
+              Book car rental in Surat for outstation journeys to nearby cities like Ahmedabad, Vadodara, Daman, or Mumbai.
               </p>
             </li>
 
             <li className="howrent__item">
-              <h3>Enjoy the Ride</h3>
+              <h3>
+
+Self-Drive Options –</h3>
               <p>
-                Our experienced drivers handle the traffic so you can relax and
-                travel stress-free.
+              Affordable self drive cars in Surat for customers who want privacy and independence.
+
+
               </p>
             </li>
+            <li className="howrent__item">
+              <h3>Luxury Cars</h3>
+              <p>
+              Premium sedans and SUVs for weddings, events, or luxury car on rent in Surat.
+              </p>
+            </li>
+            <li className="howrent__item">
+              <h3>Group Travel</h3>
+              <p>
+              Tempo travelers and 8 seater car booking for family trips, events, and weekend getaways.
+              </p>
+            </li>
+          
           </ul>
         </div>
       </section>
@@ -518,15 +503,10 @@ const InDelhi = () => {
         <div className="attractions__container">
           <header className="attractions__head">
             <h2 id="attractions-title">
-              Must-Visit Places in Delhi with Cozy Cabz
+            Must-Visit Places in Surat with Cozy Cabz
             </h2>
             <p>
-              Delhi is a city where every street has a story to tell. From
-              centuries-old Mughal forts to modern shopping hubs, the capital is
-              a mix of history, culture, spirituality, and vibrant city life.
-              With cozy cabz car rental in Delhi with driver, exploring becomes
-              stress-free—you just sit back and enjoy while we take care of
-              traffic, routes, and parking.
+            With Cozy Cabz rent a car in Surat, exploring the city’s top attractions becomes easy and comfortable. From historic forts to beaches and gardens, you can enjoy every corner of the city at your own pace.
             </p>
           </header>
 
@@ -597,4 +577,6 @@ const InDelhi = () => {
   );
 };
 
-export default InDelhi;
+export default InSurat;
+
+

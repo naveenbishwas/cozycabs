@@ -1,12 +1,12 @@
 "use client";
 
 import React, { useState } from "react";
-// import "../InMumbai/internalOne.css";
+// import "./InternalOne.css";
 import Image from "next/image";
 import Header from "../Components/Header/page";
 import Footer from "../Components/Footer/page";
 
-const InDelhi = () => {
+const InChandigarh = () => {
   const [openIndex, setOpenIndex] = useState(null);
 
   const toggle = (i) => {
@@ -15,8 +15,8 @@ const InDelhi = () => {
 
   const items = [
     {
-      title: "Professional & Verified Drivers",
-      desc: "Our drivers know Delhi’s roads inside out—whether it’s the bustling lanes of Chandni Chowk, the wide stretches of Rajpath, or the quick routes to Gurugram and Noida. Every chauffeur is background-checked, trained, and committed to making your ride smooth and safe. If you’re looking for driver services in Delhi or want to hire a car in Delhi, Cozy Cabz is here to help.",
+      title: "Professional, Verified Drivers",
+      desc: " Our chauffeurs are trained, polite, and know every corner of the city—from the lanes of Andheri to the sea breeze of Marine Drive. If you’re searching for rent a car in Mumbai with driver or car hire in Mumbai with driver, Cozy Cabz provides you with the most reliable option.",
       icon: (
         // Shield check
         <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -26,8 +26,8 @@ const InDelhi = () => {
       ),
     },
     {
-      title: "Wide Range of Vehicles",
-      desc: "Need a small car for rent in Delhi for short trips, a premium sedan for corporate meetings, or a 7-seater SUV for family outings? We’ve got you covered. From budget-friendly options to luxury car hire in Delhi, our fleet includes the right vehicle for every occasion.",
+      title: "Well-Maintained Fleet",
+      desc: "Choose from hatchbacks, sedans, SUVs, and premium cars. Whether you need an economy rental car in Mumbai, a 7 seater car on rent in Mumbai, or a luxury car rental Mumbai with driver, we’ve got it covered.",
       icon: (
         // Sedan
         <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -37,8 +37,8 @@ const InDelhi = () => {
       ),
     },
     {
-      title: "Transparent Pricing – No Hidden Costs",
-      desc: "You’ll always know what you’re paying for. We provide fare estimates up front, covering per km rates, driver charges, parking, and tolls. Whether it’s a car on hire in Delhi for one day or a long car rental from Delhi to other cities, you’ll never face hidden costs.",
+      title: "Transparent & Affordable Pricing",
+      desc: "Get clear estimates with no hidden charges. From eco car rental to monthly car rental Mumbai, we share all details on per km rates, tolls, and driver allowances upfront.",
       icon: (
         // Tag
         <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -48,8 +48,8 @@ const InDelhi = () => {
       ),
     },
     {
-      title: "Available 24×7, Anytime You Need",
-      desc: "Delhi never stops, and neither do we. Be it an early-morning airport drop, a late-night pickup from Connaught Place, or a last-minute car booking in Delhi for outstation travel, our service is available round the clock.",
+      title: "24×7 Availability",
+      desc: " Mumbai never sleeps—and neither do we. Be it airport pickups at night or one day car rental Mumbai, our services are available around the clock.",
       icon: (
         // Clock + tick
         <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -61,7 +61,7 @@ const InDelhi = () => {
     },
     {
       title: "Safety & Hygiene First",
-      desc: "Every vehicle is sanitized, GPS-enabled, and insured. Your safety matters to us, so we follow strict hygiene and security protocols—perfect for families, business travelers, and tourists who depend on reliable Delhi car service.",
+      desc: " Every ride is sanitized, insured, and GPS-enabled. From private car rental in Mumbai to car with driver Mumbai, your safety and comfort remain our top priority.",
       icon: (
         // Headset
         <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -73,71 +73,76 @@ const InDelhi = () => {
 
   const spots = [
     {
-      title: "Red Fort & Chandni Chowk",
+      title: "Rock Garden",
       img: "/g1.webp",
-      alt: "Historic Red Fort and bustling Chandni Chowk",
+      alt: "Rock Garden Chandigarh sculptures made from recycled materials",
       paragraphs: [
-        "Begin your journey at the majestic Red Fort, a UNESCO World Heritage site that symbolizes India’s rich history. Just nearby is Chandni Chowk, one of Delhi’s oldest and busiest markets—perfect for heritage lovers and foodies alike.",
+        "Created by Nek Chand, Rock Garden is a surreal sculpture park built from recycled materials. Winding pathways reveal thousands of imaginative statues and installations, turning waste into art. It’s one of Chandigarh’s most beloved attractions and perfect for a relaxed exploration.",
       ],
     },
     {
-      title: "Qutub Minar & Humayun’s Tomb",
+      title: "Sukhna Lake",
       img: "/g2.webp",
-      alt: "Qutub Minar complex and Humayun’s Tomb gardens",
+      alt: "Sukhna Lake promenade with serene waters and walkers",
       paragraphs: [
-        "For architecture admirers, Qutub Minar and Humayun’s Tomb are must-visits. The tallest brick minaret and the Mughal-era tomb that inspired the Taj Mahal make for stunning photography spots.",
+        "This serene man-made lake at the foothills of the Shivalik Range is a favourite for morning walks, boating, and scenic views. The promenade and gardens around the lake offer a calm escape from city bustle and lovely spots for photos and quiet moments.",
       ],
     },
     {
-      title: "India Gate & Rajpath",
+      title: "Rose Garden (Zakir Rose Garden)",
       img: "/g3.webp",
-      alt: "India Gate illuminated in the evening",
+      alt: "Zakir Rose Garden blooms and green lawns in Chandigarh",
       paragraphs: [
-        "At the heart of the city, India Gate stands tall as a war memorial. An evening walk along Rajpath with glowing lights is truly memorable and iconic.",
+        "Spread over 30+ acres, this is Asia’s largest rose garden. With hundreds of rose varieties in full bloom, wide green lawns, and quiet corners, it’s a calm spot for nature lovers and a refreshing contrast to urban life.",
       ],
     },
     {
-      title: "Lotus Temple & Akshardham",
+      title: "Capitol Complex & Open Hand Monument",
       img: "/g4.webp",
-      alt: "Lotus Temple and Akshardham complex",
+      alt: "Chandigarh Capitol Complex and Open Hand Monument",
       paragraphs: [
-        "Seek peace at the Lotus Temple or explore the grand Akshardham Temple—both blend spirituality, art, and culture, ideal for travelers seeking calm and beauty.",
+        "Designed by Le Corbusier, the Capitol Complex is Chandigarh’s UNESCO architectural gem, housing the Legislative Assembly, High Court, and Secretariat. The nearby Open Hand Monument—symbolizing peace and unity—is a striking modern landmark.",
       ],
     },
     {
-      title: "Connaught Place & Khan Market",
+      title: "Government Museum & Art Gallery",
       img: "/g1.webp",
-      alt: "Connaught Place market circles and shops",
+      alt: "Government Museum and Art Gallery exhibits in Chandigarh",
       paragraphs: [
-        "For shopping and city vibes, Connaught Place is packed with branded stores and eateries, while Khan Market offers upscale cafés, bookstores, and boutiques.",
+        "This museum houses rich collections of ancient sculptures, Gandharan art, Pahari paintings, and modern Indian works. It’s a cultural hub that showcases Chandigarh’s heritage and its progressive spirit.",
       ],
     },
     {
-      title: "Lodhi Gardens & Hauz Khas Village",
+      title: "Japanese Garden",
       img: "/g2.webp",
-      alt: "Lodhi Gardens greenery and Hauz Khas fort",
+      alt: "Japanese Garden pagoda, waterfalls, and landscaped paths",
       paragraphs: [
-        "Enjoy a natural and cultural mix at Lodhi Gardens and Hauz Khas Village—perfect for walks, heritage tombs, art galleries, cafés, and nightlife.",
+        "Located in Sector 31, the Japanese Garden offers a peaceful oasis in the city. With waterfalls, pagoda structures, themed gardens, and a meditation centre, it’s a tranquil place to unwind and connect with nature.",
+        "With Cozy Cabz car rental Chandigarh, enjoying these attractions becomes effortless, letting you soak in the city’s beauty without the stress of driving or parking.",
       ],
     },
   ];
 
   const faqs = [
     {
-      q: "How much does a car rental in Delhi cost per km?",
-      a: "Economy rides start from around ₹12–₹15/km, premium cars from ₹25/km, and luxury cars from ₹35/km. Whether you choose a car rental service in Delhi for local trips or a car hire Delhi with driver for longer journeys, you’ll always get a transparent fare estimate.",
+      q: "What are the charges for car rental in Chandigarh?",
+      a: "Economy rides start at ₹12–₹15/km, premium sedans from ₹25/km, and luxury cars from ₹35/km. Cozy Cabz offers transparent Chandigarh car rental rates.",
     },
     {
-      q: "Can I book a cab from Delhi to other cities?",
-      a: "Yes. Popular routes include Delhi to Agra, Jaipur, Rishikesh, Shimla, and Manali. Our car rentals New Delhi also provide one-way and round-trip options.",
+      q: "Can I rent a car in Chandigarh with driver for outstation trips?",
+      a: "Yes, we provide rental cars in Chandigarh for one-way and round-trip travel to nearby cities.",
     },
     {
-      q: "Do you provide 24×7 airport transfers in Delhi?",
-      a: "Absolutely. We cover all terminals at Indira Gandhi International Airport. Our premium taxi service in Delhi and luxury taxi service in Delhi ensure timely pickups and drops, even during late nights or early mornings.",
+      q: "Do you provide airport transfers in Chandigarh?",
+      a: "Absolutely. Our car rental Chandigarh with driver includes 24×7 airport pickups and drops.",
     },
     {
-      q: "Is there a package for Delhi sightseeing?",
-      a: "Yes. We provide half-day and full-day rental packages, such as 8 hrs/80 km, where you can cover Delhi’s top attractions in comfort.",
+      q: "Are self-drive cars available in Chandigarh?",
+      a: "Yes. Cozy Cabz offers self drive cars in Chandigarh for those who prefer privacy and independence.",
+    },
+    {
+      q: "Do you offer SUVs or tempo travelers for group travel?",
+      a: "Yes, Cozy Cabz provides SUVs and 7-seater car rental in Chandigarh for family or corporate trips.",
     },
   ];
 
@@ -221,22 +226,15 @@ const InDelhi = () => {
       <section className="heroeco" aria-label="Car Rental Hero Section">
         <div className="heroeco__copy">
           <p className="heroeco__eyebrow">India’s Trusted Car Rental</p>
-          <h1 className="heroeco__title">Car Rental in Delhi</h1>
+          <h1 className="heroeco__title">Car Rental in Chandigardh </h1>
           <span className="small-head">
             <br />
-            <h4>– Safe, Reliable & Comfortable Rides</h4>
+            <h4>– Safe, Reliable & Affordable
+            </h4>
           </span>
           <p className="heroeco__sub">
-            Delhi, the capital city of India, is a place where history meets
-            modernity. From ancient forts and UNESCO heritage sites to buzzing
-            markets, high-rise business hubs, and cultural hotspots, every
-            corner of Delhi has something unique to offer. But moving around the
-            city can often feel overwhelming—traffic jams, crowded metro routes,
-            and unpredictable autos. That’s why Cozy Cabz Car Rental in Delhi is
-            your perfect travel companion. With our car rental in Delhi with
-            driver, you get safe rides, verified chauffeurs, transparent
-            pricing, and 24×7 availability—so your journey is as comfortable as
-            the destination.
+          Chandigarh, the City Beautiful, is known for its clean roads, planned architecture, and modern lifestyle. From Le Corbusier’s masterpieces to scenic gardens and lakes, it is one of India’s most unique cities. But getting around can be time-consuming without the right ride. That’s why Cozy Cabz offers car rental in Chandigarh with driver, ensuring your travel is smooth, safe, and stress-free. Whether it’s local sightseeing, business meetings, airport transfers, or weekend trips from Chandigarh, our well-maintained fleet and trained drivers are here for you.
+
           </p>
         </div>
       </section>
@@ -399,7 +397,7 @@ const InDelhi = () => {
       <section className="trustcc">
         <div className="trustcc__container">
           <h2 className="trustcc__title">
-            Why Choose Cozy Cabz in<span> Delhi?</span>
+            Why Choose Cozy Cabz in<span>Chandigarh?</span>
           </h2>
           {/* <p className="trustcc__sub">
             Everything we build is focused on safe, reliable and fairly-priced
@@ -471,45 +469,51 @@ const InDelhi = () => {
 
       <section className="howrent" aria-labelledby="howrent-title">
         <div className="howrent__container">
-          <h2 id="howrent-title">Easy Booking Process</h2>
+          <h2 id="howrent-title">Car Rental Services in Chandigarh</h2>
           <p className="howrent__intro">
-            Booking your ride with cozy cabz is quick, simple, and completely
-            hassle-free. Just follow four easy steps:
+          At Cozy Cabz, our car rental services in Chandigarh are tailored to meet all travel needs:
           </p>
 
           <ul className="howrent__list">
             <li className="howrent__item">
-              <h3>Enter Your Trip Details</h3>
+              <h3>Local Rentals</h3>
               <p>
-                Add pickup, drop, timings, and trip type—whether it’s local,
-                outstation, or airport
+              Hourly or daily packages for shopping, meetings, or sightseeing.
               </p>
             </li>
 
             <li className="howrent__item">
-              <h3>Choose Your Car</h3>
+              <h3>Airport Transfers</h3>
               <p>
-                From economy cars to SUVs, premium sedans, or luxury taxis. You
-                can even rent a car in Delhi with driver or opt for car rentals
-                in New Delhi for city tours.
+              Reliable pickups and drops from Chandigarh Airport with Chandigarh car booking.
+
               </p>
             </li>
 
             <li className="howrent__item">
-              <h3>Get Instant Confirmation</h3>
+              <h3>Outstation Trips </h3>
               <p>
-                Receive driver details, car model, and estimated arrival time
-                right away.
+              One-way or round-trip rides to Shimla, Manali, Amritsar, or Delhi with car rental in Chandigarh with driver.
               </p>
             </li>
 
             <li className="howrent__item">
-              <h3>Enjoy the Ride</h3>
+              <h3>
+
+Self-Drive Cars –</h3>
               <p>
-                Our experienced drivers handle the traffic so you can relax and
-                travel stress-free.
+              Affordable self drive car rental Chandigarh options for those who prefer flexibility.
+
+
               </p>
             </li>
+            <li className="howrent__item">
+              <h3>LCorporate & Leasing</h3>
+              <p>
+              Long-term vehicle on rent in Chandigarh with competitive pricing for businesses.
+              </p>
+            </li>
+          
           </ul>
         </div>
       </section>
@@ -518,15 +522,10 @@ const InDelhi = () => {
         <div className="attractions__container">
           <header className="attractions__head">
             <h2 id="attractions-title">
-              Must-Visit Places in Delhi with Cozy Cabz
+            Must-Visit Places in Chandigarh with Cozy Cabz
             </h2>
             <p>
-              Delhi is a city where every street has a story to tell. From
-              centuries-old Mughal forts to modern shopping hubs, the capital is
-              a mix of history, culture, spirituality, and vibrant city life.
-              With cozy cabz car rental in Delhi with driver, exploring becomes
-              stress-free—you just sit back and enjoy while we take care of
-              traffic, routes, and parking.
+            With Cozy Cabz rent a car in Chandigarh, you can explore the city’s iconic landmarks comfortably and at your own pace.
             </p>
           </header>
 
@@ -597,4 +596,4 @@ const InDelhi = () => {
   );
 };
 
-export default InDelhi;
+export default InChandigarh;

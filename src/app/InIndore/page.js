@@ -1,12 +1,12 @@
 "use client";
 
 import React, { useState } from "react";
-// import "../InMumbai/internalOne.css";
+// import "./InternalOne.css";
 import Image from "next/image";
 import Header from "../Components/Header/page";
 import Footer from "../Components/Footer/page";
 
-const InDelhi = () => {
+const InIndore = () => {
   const [openIndex, setOpenIndex] = useState(null);
 
   const toggle = (i) => {
@@ -16,7 +16,7 @@ const InDelhi = () => {
   const items = [
     {
       title: "Professional & Verified Drivers",
-      desc: "Our drivers know Delhi’s roads inside out—whether it’s the bustling lanes of Chandni Chowk, the wide stretches of Rajpath, or the quick routes to Gurugram and Noida. Every chauffeur is background-checked, trained, and committed to making your ride smooth and safe. If you’re looking for driver services in Delhi or want to hire a car in Delhi, Cozy Cabz is here to help.",
+      desc: "Our drivers know Indore’s routes—from Rajwada to Vijay Nagar, Sarafa to the airport—ensuring on-time travel. Each car driver in Indore is trained, background-checked, and courteous, making car hire in Indore with driver completely safe and reliable.",
       icon: (
         // Shield check
         <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -27,7 +27,7 @@ const InDelhi = () => {
     },
     {
       title: "Wide Range of Vehicles",
-      desc: "Need a small car for rent in Delhi for short trips, a premium sedan for corporate meetings, or a 7-seater SUV for family outings? We’ve got you covered. From budget-friendly options to luxury car hire in Delhi, our fleet includes the right vehicle for every occasion.",
+      desc: "From budget hatchbacks to premium sedans, SUVs, tempo travelers, and luxury models, Cozy Cabz has something for every need. Looking for privacy? Choose our car rental Indore self drive option for flexibility.",
       icon: (
         // Sedan
         <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -37,8 +37,8 @@ const InDelhi = () => {
       ),
     },
     {
-      title: "Transparent Pricing – No Hidden Costs",
-      desc: "You’ll always know what you’re paying for. We provide fare estimates up front, covering per km rates, driver charges, parking, and tolls. Whether it’s a car on hire in Delhi for one day or a long car rental from Delhi to other cities, you’ll never face hidden costs.",
+      title: "Transparent & Affordable Pricing",
+      desc: "With Cozy Cabz, what you see is what you pay. Our car rental rates in Indore include driver charges, fuel, tolls, and parking. Whether you need a rental car in Indore for a day or a weekend, we guarantee fair and transparent pricing.",
       icon: (
         // Tag
         <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -48,8 +48,8 @@ const InDelhi = () => {
       ),
     },
     {
-      title: "Available 24×7, Anytime You Need",
-      desc: "Delhi never stops, and neither do we. Be it an early-morning airport drop, a late-night pickup from Connaught Place, or a last-minute car booking in Delhi for outstation travel, our service is available round the clock.",
+      title: "24×7 Availability",
+      desc: "Be it late-night arrivals or early-morning departures, our Indore car rental services are available round the clock.",
       icon: (
         // Clock + tick
         <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -61,7 +61,7 @@ const InDelhi = () => {
     },
     {
       title: "Safety & Hygiene First",
-      desc: "Every vehicle is sanitized, GPS-enabled, and insured. Your safety matters to us, so we follow strict hygiene and security protocols—perfect for families, business travelers, and tourists who depend on reliable Delhi car service.",
+      desc: "All vehicles are sanitized after every ride, GPS-enabled, and fully insured. Families, corporates, and tourists prefer Cozy Cabz for secure car rentals in Indore.",
       icon: (
         // Headset
         <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -73,71 +73,76 @@ const InDelhi = () => {
 
   const spots = [
     {
-      title: "Red Fort & Chandni Chowk",
+      title: "Rajwada Palace",
       img: "/g1.webp",
-      alt: "Historic Red Fort and bustling Chandni Chowk",
+      alt: "Rajwada Palace, Indore",
       paragraphs: [
-        "Begin your journey at the majestic Red Fort, a UNESCO World Heritage site that symbolizes India’s rich history. Just nearby is Chandni Chowk, one of Delhi’s oldest and busiest markets—perfect for heritage lovers and foodies alike.",
+        "Rajwada Palace is a historic seven-story palace built by the Holkars over 200 years ago. It combines Mughal, Maratha, and French styles, making it an architectural gem. Located in the heart of the city, it is a must-visit for history lovers and photographers.",
       ],
     },
     {
-      title: "Qutub Minar & Humayun’s Tomb",
+      title: "Lal Bagh Palace",
       img: "/g2.webp",
-      alt: "Qutub Minar complex and Humayun’s Tomb gardens",
+      alt: "Lal Bagh Palace, Indore",
       paragraphs: [
-        "For architecture admirers, Qutub Minar and Humayun’s Tomb are must-visits. The tallest brick minaret and the Mughal-era tomb that inspired the Taj Mahal make for stunning photography spots.",
+        "Once the residence of the Holkar rulers, Lal Bagh Palace showcases the grandeur of European architecture. The lavish interiors, ornate furniture, and expansive gardens give visitors a glimpse of royal lifestyle. It’s one of Indore’s finest heritage landmarks.",
       ],
     },
     {
-      title: "India Gate & Rajpath",
+      title: "Kanch Mandir",
       img: "/g3.webp",
-      alt: "India Gate illuminated in the evening",
+      alt: "Kanch Mandir, Indore",
       paragraphs: [
-        "At the heart of the city, India Gate stands tall as a war memorial. An evening walk along Rajpath with glowing lights is truly memorable and iconic.",
+        "This Jain temple, made entirely of glass and mirrors, is a dazzling sight. Intricate glasswork covers the walls, ceilings, and floors, creating a unique and spiritual ambiance. It is one of Indore’s most striking and sacred attractions.",
       ],
     },
     {
-      title: "Lotus Temple & Akshardham",
+      title: "Sarafa Bazaar",
       img: "/g4.webp",
-      alt: "Lotus Temple and Akshardham complex",
+      alt: "Sarafa Bazaar, Indore",
       paragraphs: [
-        "Seek peace at the Lotus Temple or explore the grand Akshardham Temple—both blend spirituality, art, and culture, ideal for travelers seeking calm and beauty.",
+        "Sarafa Bazaar is Indore’s most vibrant spot, buzzing with jewelry shops by day and transforming into a food street by night. From chaat to sweets, it’s a paradise for food lovers. Exploring this market is a must for anyone who enjoys nightlife and local flavors.",
       ],
     },
     {
-      title: "Connaught Place & Khan Market",
-      img: "/g1.webp",
-      alt: "Connaught Place market circles and shops",
+      title: "Patalpani Waterfall",
+      img: "/g3.webp",
+      alt: "Patalpani Waterfall, Indore",
       paragraphs: [
-        "For shopping and city vibes, Connaught Place is packed with branded stores and eateries, while Khan Market offers upscale cafés, bookstores, and boutiques.",
+        "Located about 30 km from Indore, Patalpani is a scenic waterfall surrounded by greenery. It’s a popular picnic spot and a great escape from the city. Monsoon season makes the view especially breathtaking, attracting tourists and locals alike.",
       ],
     },
     {
-      title: "Lodhi Gardens & Hauz Khas Village",
-      img: "/g2.webp",
-      alt: "Lodhi Gardens greenery and Hauz Khas fort",
+      title: "Central Museum",
+      img: "/g4.webp",
+      alt: "Central Museum, Indore",
       paragraphs: [
-        "Enjoy a natural and cultural mix at Lodhi Gardens and Hauz Khas Village—perfect for walks, heritage tombs, art galleries, cafés, and nightlife.",
+        "Also known as Indore Museum, this place houses rare artifacts, coins, and sculptures from Madhya Pradesh’s history. It’s a great spot for those interested in archaeology and culture, offering insights into the region’s rich heritage.",
+        "With Indore car hire from Cozy Cabz, visiting these attractions becomes comfortable, safe, and enjoyable, giving you the freedom to experience the best of the city.",
       ],
     },
   ];
 
   const faqs = [
     {
-      q: "How much does a car rental in Delhi cost per km?",
-      a: "Economy rides start from around ₹12–₹15/km, premium cars from ₹25/km, and luxury cars from ₹35/km. Whether you choose a car rental service in Delhi for local trips or a car hire Delhi with driver for longer journeys, you’ll always get a transparent fare estimate.",
+      q: "How much does car rental in Indore cost?",
+      a: "Economy rides start at ₹12/km, sedans from ₹25/km, and luxury cars from ₹35/km. Cozy Cabz offers fair and transparent car rental rates in Indore.",
     },
     {
-      q: "Can I book a cab from Delhi to other cities?",
-      a: "Yes. Popular routes include Delhi to Agra, Jaipur, Rishikesh, Shimla, and Manali. Our car rentals New Delhi also provide one-way and round-trip options.",
+      q: "Can I book car rental in Indore with driver for outstation trips?",
+      a: "Yes. Cozy Cabz provides car rental in Indore for outstation travel with one-way or round-trip options.",
     },
     {
-      q: "Do you provide 24×7 airport transfers in Delhi?",
-      a: "Absolutely. We cover all terminals at Indira Gandhi International Airport. Our premium taxi service in Delhi and luxury taxi service in Delhi ensure timely pickups and drops, even during late nights or early mornings.",
+      q: "Do you provide airport transfers in Indore?",
+      a: "Absolutely. Our Indore car rental service includes 24×7 pickups and drops from the airport.",
     },
     {
-      q: "Is there a package for Delhi sightseeing?",
-      a: "Yes. We provide half-day and full-day rental packages, such as 8 hrs/80 km, where you can cover Delhi’s top attractions in comfort.",
+      q: "Are self-drive cars available in Indore?",
+      a: "Yes. Cozy Cabz offers car rental Indore self drive for customers seeking privacy and flexibility.",
+    },
+    {
+      q: "Do you provide drivers separately in Indore?",
+      a: "Yes. Cozy Cabz also provides driver on rent in Indore for your personal vehicle.",
     },
   ];
 
@@ -221,22 +226,14 @@ const InDelhi = () => {
       <section className="heroeco" aria-label="Car Rental Hero Section">
         <div className="heroeco__copy">
           <p className="heroeco__eyebrow">India’s Trusted Car Rental</p>
-          <h1 className="heroeco__title">Car Rental in Delhi</h1>
+          <h1 className="heroeco__title">Car Rental in Indore </h1>
           <span className="small-head">
             <br />
-            <h4>– Safe, Reliable & Comfortable Rides</h4>
+            <h4>– Safe, Reliable & Affordable
+            </h4>
           </span>
           <p className="heroeco__sub">
-            Delhi, the capital city of India, is a place where history meets
-            modernity. From ancient forts and UNESCO heritage sites to buzzing
-            markets, high-rise business hubs, and cultural hotspots, every
-            corner of Delhi has something unique to offer. But moving around the
-            city can often feel overwhelming—traffic jams, crowded metro routes,
-            and unpredictable autos. That’s why Cozy Cabz Car Rental in Delhi is
-            your perfect travel companion. With our car rental in Delhi with
-            driver, you get safe rides, verified chauffeurs, transparent
-            pricing, and 24×7 availability—so your journey is as comfortable as
-            the destination.
+          Indore, the commercial capital of Madhya Pradesh, is a city that blends tradition with modernity. From bustling Sarafa Bazaar and historic Rajwada Palace to modern IT hubs, Indore has something for everyone. But navigating city traffic can be tiring without the right transport. That’s why Cozy Cabz offers car rental in Indore with driver, making every journey smooth, safe, and hassle-free. Whether it’s business trips, sightseeing, or car rental in Indore for outstation travel, we provide well-maintained cars and professional chauffeurs for a comfortable ride.
           </p>
         </div>
       </section>
@@ -399,7 +396,7 @@ const InDelhi = () => {
       <section className="trustcc">
         <div className="trustcc__container">
           <h2 className="trustcc__title">
-            Why Choose Cozy Cabz in<span> Delhi?</span>
+            Why Choose Cozy Cabz in<span> Indore?</span>
           </h2>
           {/* <p className="trustcc__sub">
             Everything we build is focused on safe, reliable and fairly-priced
@@ -420,10 +417,9 @@ const InDelhi = () => {
 
       <section className="howto">
         <div className="howtoWrap">
-          <h2 className="howtoTitle">How to Book Your Ride</h2>
+          <h2 className="howtoTitle">Easy Booking Process – Car Rental in Indore</h2>
           <p className="howtoSubtitle">
-            Simple and straightforward booking process. Follow these easy steps
-            to book your ride.
+            Simple and straightforward. Follow these steps to book your ride in Indore.
           </p>
 
           {/* Connector line behind badges */}
@@ -435,35 +431,35 @@ const InDelhi = () => {
               icon={<PhoneIcon />}
               step={1}
               title="Contact Our Team"
-              text="Contact our team or register on our website to get started with your booking process."
+              text="Call us or register online to begin your car rental in Indore booking quickly."
             />
             <StepCard
               color="#16A34A"
               icon={<PinIcon />}
               step={2}
-              title="Share Your Details"
-              text="Share your destination & departure timing along with any specific requirements."
+              title="Share Your Trip Details"
+              text="Provide pickup & drop points, travel date, time, and trip type—local, outstation, or airport."
             />
             <StepCard
               color="#8B5CF6"
               icon={<CarIcon />}
               step={3}
-              title="Select Car Model"
-              text="Select your preferred car model from our fleet and calculate the fare instantly."
+              title="Select Your Car"
+              text="Choose from sedans, SUVs, tempo travelers, or rent a car in Indore with driver for extra comfort."
             />
             <StepCard
               color="#F97316"
               icon={<CheckIcon />}
               step={4}
               title="Get Confirmation"
-              text="Get confirmation in few seconds with booking details and driver information."
+              text="Receive instant booking details, including car model, driver info, and estimated arrival time."
             />
             <StepCard
               color="#EF4444"
               icon={<ClockIcon />}
               step={5}
-              title="Wait for Arrival"
-              text="Relax and wait for your cab to arrive at your place at the scheduled time."
+              title="Enjoy the Ride"
+              text="Sit back and relax while our professional chauffeurs handle Indore’s roads for a smooth, stress-free journey."
             />
           </div>
         </div>
@@ -471,45 +467,57 @@ const InDelhi = () => {
 
       <section className="howrent" aria-labelledby="howrent-title">
         <div className="howrent__container">
-          <h2 id="howrent-title">Easy Booking Process</h2>
+          <h2 id="howrent-title">Car Rental Services in Indore</h2>
           <p className="howrent__intro">
-            Booking your ride with cozy cabz is quick, simple, and completely
-            hassle-free. Just follow four easy steps:
+          Cozy Cabz offers flexible car rental services in Indore designed to meet every traveler’s need:
           </p>
 
           <ul className="howrent__list">
             <li className="howrent__item">
-              <h3>Enter Your Trip Details</h3>
+              <h3>Local Rentals</h3>
               <p>
-                Add pickup, drop, timings, and trip type—whether it’s local,
-                outstation, or airport
+              Hourly and daily packages for shopping, office work, and sightseeing.
               </p>
             </li>
 
             <li className="howrent__item">
-              <h3>Choose Your Car</h3>
+              <h3>Airport Transfers</h3>
               <p>
-                From economy cars to SUVs, premium sedans, or luxury taxis. You
-                can even rent a car in Delhi with driver or opt for car rentals
-                in New Delhi for city tours.
+              Reliable pickups and drops from Devi Ahilya Bai Holkar Airport with easy car booking in Indore.
+
               </p>
             </li>
 
             <li className="howrent__item">
-              <h3>Get Instant Confirmation</h3>
+              <h3>Outstation Trips </h3>
               <p>
-                Receive driver details, car model, and estimated arrival time
-                right away.
+              Book car on rent in Indore with driver for journeys to Ujjain, Omkareshwar, Bhopal, or Mandu.
               </p>
             </li>
 
             <li className="howrent__item">
-              <h3>Enjoy the Ride</h3>
+              <h3>
+
+Self-Drive Cars –</h3>
               <p>
-                Our experienced drivers handle the traffic so you can relax and
-                travel stress-free.
+              Affordable car rental Indore self drive for privacy and independence.
+
+
               </p>
             </li>
+            <li className="howrent__item">
+              <h3>Luxury & Premium Cars</h3>
+              <p>
+              Hire premium sedans and SUVs for weddings, corporate travel, or events.
+              </p>
+            </li>
+            <li className="howrent__item">
+              <h3>Driver on Hire</h3>
+              <p>
+              Cozy Cabz also provides driver in Indore services if you prefer to use your own car.
+              </p>
+            </li>
+          
           </ul>
         </div>
       </section>
@@ -518,15 +526,10 @@ const InDelhi = () => {
         <div className="attractions__container">
           <header className="attractions__head">
             <h2 id="attractions-title">
-              Must-Visit Places in Delhi with Cozy Cabz
+            Must-Visit Places in Indore with Cozy Cabz
             </h2>
             <p>
-              Delhi is a city where every street has a story to tell. From
-              centuries-old Mughal forts to modern shopping hubs, the capital is
-              a mix of history, culture, spirituality, and vibrant city life.
-              With cozy cabz car rental in Delhi with driver, exploring becomes
-              stress-free—you just sit back and enjoy while we take care of
-              traffic, routes, and parking.
+            With Cozy Cabz car rental Indore, exploring the city’s cultural and fun places becomes convenient and stress-free. You can travel at your own pace while enjoying comfort and safety.
             </p>
           </header>
 
@@ -597,4 +600,6 @@ const InDelhi = () => {
   );
 };
 
-export default InDelhi;
+export default InIndore;
+
+

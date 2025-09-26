@@ -1,12 +1,12 @@
 "use client";
 
 import React, { useState } from "react";
-// import "../InMumbai/internalOne.css";
+import "./InternalOne.css";
 import Image from "next/image";
 import Header from "../Components/Header/page";
 import Footer from "../Components/Footer/page";
 
-const InDelhi = () => {
+const InMumbai = () => {
   const [openIndex, setOpenIndex] = useState(null);
 
   const toggle = (i) => {
@@ -15,8 +15,8 @@ const InDelhi = () => {
 
   const items = [
     {
-      title: "Professional & Verified Drivers",
-      desc: "Our drivers know Delhi’s roads inside out—whether it’s the bustling lanes of Chandni Chowk, the wide stretches of Rajpath, or the quick routes to Gurugram and Noida. Every chauffeur is background-checked, trained, and committed to making your ride smooth and safe. If you’re looking for driver services in Delhi or want to hire a car in Delhi, Cozy Cabz is here to help.",
+      title: "Professional, Verified Drivers",
+      desc: " Our chauffeurs are trained, polite, and know every corner of the city—from the lanes of Andheri to the sea breeze of Marine Drive. If you’re searching for rent a car in Mumbai with driver or car hire in Mumbai with driver, Cozy Cabz provides you with the most reliable option.",
       icon: (
         // Shield check
         <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -26,8 +26,8 @@ const InDelhi = () => {
       ),
     },
     {
-      title: "Wide Range of Vehicles",
-      desc: "Need a small car for rent in Delhi for short trips, a premium sedan for corporate meetings, or a 7-seater SUV for family outings? We’ve got you covered. From budget-friendly options to luxury car hire in Delhi, our fleet includes the right vehicle for every occasion.",
+      title: "Well-Maintained Fleet",
+      desc: "Choose from hatchbacks, sedans, SUVs, and premium cars. Whether you need an economy rental car in Mumbai, a 7 seater car on rent in Mumbai, or a luxury car rental Mumbai with driver, we’ve got it covered.",
       icon: (
         // Sedan
         <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -37,8 +37,8 @@ const InDelhi = () => {
       ),
     },
     {
-      title: "Transparent Pricing – No Hidden Costs",
-      desc: "You’ll always know what you’re paying for. We provide fare estimates up front, covering per km rates, driver charges, parking, and tolls. Whether it’s a car on hire in Delhi for one day or a long car rental from Delhi to other cities, you’ll never face hidden costs.",
+      title: "Transparent & Affordable Pricing",
+      desc: "Get clear estimates with no hidden charges. From eco car rental to monthly car rental Mumbai, we share all details on per km rates, tolls, and driver allowances upfront.",
       icon: (
         // Tag
         <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -48,8 +48,8 @@ const InDelhi = () => {
       ),
     },
     {
-      title: "Available 24×7, Anytime You Need",
-      desc: "Delhi never stops, and neither do we. Be it an early-morning airport drop, a late-night pickup from Connaught Place, or a last-minute car booking in Delhi for outstation travel, our service is available round the clock.",
+      title: "24×7 Availability",
+      desc: " Mumbai never sleeps—and neither do we. Be it airport pickups at night or one day car rental Mumbai, our services are available around the clock.",
       icon: (
         // Clock + tick
         <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -61,7 +61,7 @@ const InDelhi = () => {
     },
     {
       title: "Safety & Hygiene First",
-      desc: "Every vehicle is sanitized, GPS-enabled, and insured. Your safety matters to us, so we follow strict hygiene and security protocols—perfect for families, business travelers, and tourists who depend on reliable Delhi car service.",
+      desc: " Every ride is sanitized, insured, and GPS-enabled. From private car rental in Mumbai to car with driver Mumbai, your safety and comfort remain our top priority.",
       icon: (
         // Headset
         <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -73,71 +73,55 @@ const InDelhi = () => {
 
   const spots = [
     {
-      title: "Red Fort & Chandni Chowk",
+      title: "Gateway of India & Colaba Causeway",
       img: "/g1.webp",
-      alt: "Historic Red Fort and bustling Chandni Chowk",
+      alt: "The Gateway of India at sunrise",
       paragraphs: [
-        "Begin your journey at the majestic Red Fort, a UNESCO World Heritage site that symbolizes India’s rich history. Just nearby is Chandni Chowk, one of Delhi’s oldest and busiest markets—perfect for heritage lovers and foodies alike.",
+        "Standing tall by the Arabian Sea, the Gateway of India is Mumbai’s most iconic landmark. Built during the British era, it’s not just a tourist attraction but a piece of history. Just a short walk away lies Colaba Causeway, a bustling market street filled with trendy clothes, antique jewelry, handicrafts, and cozy cafés. With our car rental with driver, you can explore both spots in one go—without the stress of crowded lanes or parking issues",
       ],
     },
     {
-      title: "Qutub Minar & Humayun’s Tomb",
+      title: "Marine Drive & Girgaon Chowpatty",
       img: "/g2.webp",
-      alt: "Qutub Minar complex and Humayun’s Tomb gardens",
+      alt: "Marine Drive during a colorful sunset",
       paragraphs: [
-        "For architecture admirers, Qutub Minar and Humayun’s Tomb are must-visits. The tallest brick minaret and the Mughal-era tomb that inspired the Taj Mahal make for stunning photography spots.",
+        "Known as the Queen’s Necklace because of its glittering night view, Marine Drive is perfect for long seaside walks, photography, and sunset views. Close by is Girgaon Chowpatty, a popular beach where you can indulge in Mumbai’s famous street food like pav bhaji, bhel puri, and ice gola. Booking a car on rent in Mumbai ensures you enjoy the evening at your own pace, without worrying about transport after dark.",
       ],
     },
     {
-      title: "India Gate & Rajpath",
+      title: "Siddhivinayak Temple & Haji Ali Dargah",
       img: "/g3.webp",
-      alt: "India Gate illuminated in the evening",
+      alt: "Golden sanctum of Shree Siddhivinayak Temple",
       paragraphs: [
-        "At the heart of the city, India Gate stands tall as a war memorial. An evening walk along Rajpath with glowing lights is truly memorable and iconic.",
+        "Mumbai is as spiritual as it is fast-paced. The Siddhivinayak Temple, dedicated to Lord Ganesha, attracts lakhs of devotees every week. Equally famous is the Haji Ali Dargah, located on a small islet in the Arabian Sea, offering both peace and breathtaking views. With our car rental service in Mumbai, you can plan your visit conveniently, avoiding long waits and ensuring you reach at the best times of the day.",
       ],
     },
     {
-      title: "Lotus Temple & Akshardham",
+      title: "Elephanta Caves & Sanjay Gandhi National Park",
       img: "/g4.webp",
-      alt: "Lotus Temple and Akshardham complex",
+      alt: "Rock-cut Elephanta Caves surrounded by greenery",
       paragraphs: [
-        "Seek peace at the Lotus Temple or explore the grand Akshardham Temple—both blend spirituality, art, and culture, ideal for travelers seeking calm and beauty.",
-      ],
-    },
-    {
-      title: "Connaught Place & Khan Market",
-      img: "/g1.webp",
-      alt: "Connaught Place market circles and shops",
-      paragraphs: [
-        "For shopping and city vibes, Connaught Place is packed with branded stores and eateries, while Khan Market offers upscale cafés, bookstores, and boutiques.",
-      ],
-    },
-    {
-      title: "Lodhi Gardens & Hauz Khas Village",
-      img: "/g2.webp",
-      alt: "Lodhi Gardens greenery and Hauz Khas fort",
-      paragraphs: [
-        "Enjoy a natural and cultural mix at Lodhi Gardens and Hauz Khas Village—perfect for walks, heritage tombs, art galleries, cafés, and nightlife.",
+        "If you want to step away from the chaos of the city, Elephanta Caves and Sanjay Gandhi National Park are perfect day trips. The Elephanta Caves, a UNESCO World Heritage site, house ancient rock-cut temples dedicated to Lord Shiva. Meanwhile, Sanjay Gandhi National Park offers greenery, trekking trails, and a mini train ride, making it a favorite for nature lovers and families. By booking a rental car in Mumbai with driver, you can comfortably plan a full-day outing, knowing your car and driver will be with you throughout the trip.",
       ],
     },
   ];
 
   const faqs = [
     {
-      q: "How much does a car rental in Delhi cost per km?",
-      a: "Economy rides start from around ₹12–₹15/km, premium cars from ₹25/km, and luxury cars from ₹35/km. Whether you choose a car rental service in Delhi for local trips or a car hire Delhi with driver for longer journeys, you’ll always get a transparent fare estimate.",
+      q: "How much does a cab cost in Mumbai per km?",
+      a: "Economy rides start at ₹12/km, premium cars at ₹25/km, and luxury at ₹35/km. Whether you need a cheap car rental Mumbai or a luxury car rental in Mumbai, we provide a transparent fare estimate before booking.",
     },
     {
-      q: "Can I book a cab from Delhi to other cities?",
-      a: "Yes. Popular routes include Delhi to Agra, Jaipur, Rishikesh, Shimla, and Manali. Our car rentals New Delhi also provide one-way and round-trip options.",
+      q: " Can I book a cab from Mumbai to other cities?",
+      a: "Yes. Popular outstation routes include Mumbai–Pune, Mumbai–Nashik, Lonavala, Shirdi, and Mumbai–Goa. Our car rental in Mumbai for outstation offers both one-way and round-trip options.",
     },
     {
-      q: "Do you provide 24×7 airport transfers in Delhi?",
-      a: "Absolutely. We cover all terminals at Indira Gandhi International Airport. Our premium taxi service in Delhi and luxury taxi service in Delhi ensure timely pickups and drops, even during late nights or early mornings.",
+      q: "Do you provide airport pickups at night?",
+      a: "Absolutely. Our Mumbai airport cab service runs 24×7 for both Domestic (T1) and International (T2) terminals.",
     },
     {
-      q: "Is there a package for Delhi sightseeing?",
-      a: "Yes. We provide half-day and full-day rental packages, such as 8 hrs/80 km, where you can cover Delhi’s top attractions in comfort.",
+      q: "Is there a package for full-day Mumbai sightseeing?",
+      a: "Yes, we offer 8 hr / 80 km full day car rental in Mumbai with driver, ideal for sightseeing tours covering all major attractions.",
     },
   ];
 
@@ -221,22 +205,15 @@ const InDelhi = () => {
       <section className="heroeco" aria-label="Car Rental Hero Section">
         <div className="heroeco__copy">
           <p className="heroeco__eyebrow">India’s Trusted Car Rental</p>
-          <h1 className="heroeco__title">Car Rental in Delhi</h1>
+          <h1 className="heroeco__title">Car Rental in Mumbai </h1>
           <span className="small-head">
             <br />
             <h4>– Safe, Reliable & Comfortable Rides</h4>
           </span>
           <p className="heroeco__sub">
-            Delhi, the capital city of India, is a place where history meets
-            modernity. From ancient forts and UNESCO heritage sites to buzzing
-            markets, high-rise business hubs, and cultural hotspots, every
-            corner of Delhi has something unique to offer. But moving around the
-            city can often feel overwhelming—traffic jams, crowded metro routes,
-            and unpredictable autos. That’s why Cozy Cabz Car Rental in Delhi is
-            your perfect travel companion. With our car rental in Delhi with
-            driver, you get safe rides, verified chauffeurs, transparent
-            pricing, and 24×7 availability—so your journey is as comfortable as
-            the destination.
+            Exploring Mumbai can be exciting but also overwhelming with traffic,
+            long distances, and the city’s non-stop energy. That’s where Cozy
+            Cabz Car Rental in Mumbai makes your journey easier.
           </p>
         </div>
       </section>
@@ -399,7 +376,7 @@ const InDelhi = () => {
       <section className="trustcc">
         <div className="trustcc__container">
           <h2 className="trustcc__title">
-            Why Choose Cozy Cabz in<span> Delhi?</span>
+            Why Choose Cozy Cabz in<span> Mumbai?</span>
           </h2>
           {/* <p className="trustcc__sub">
             Everything we build is focused on safe, reliable and fairly-priced
@@ -473,8 +450,7 @@ const InDelhi = () => {
         <div className="howrent__container">
           <h2 id="howrent-title">Easy Booking Process</h2>
           <p className="howrent__intro">
-            Booking your ride with cozy cabz is quick, simple, and completely
-            hassle-free. Just follow four easy steps:
+            Booking a rental car in Mumbai with Cozy Cabz takes just a few steps
           </p>
 
           <ul className="howrent__list">
@@ -487,27 +463,25 @@ const InDelhi = () => {
             </li>
 
             <li className="howrent__item">
-              <h3>Choose Your Car</h3>
+              <h3>Choose Your Vehicle</h3>
               <p>
-                From economy cars to SUVs, premium sedans, or luxury taxis. You
-                can even rent a car in Delhi with driver or opt for car rentals
-                in New Delhi for city tours.
+                From economy rental cars to luxury car hire in Mumbai with
+                driver, select what suits your budget and comfort.
               </p>
             </li>
 
             <li className="howrent__item">
               <h3>Get Instant Confirmation</h3>
               <p>
-                Receive driver details, car model, and estimated arrival time
-                right away.
+                Receive driver details, car model, and arrival time instantly.
               </p>
             </li>
 
             <li className="howrent__item">
-              <h3>Enjoy the Ride</h3>
+              <h3>Enjoy a Stress-Free Ride</h3>
               <p>
-                Our experienced drivers handle the traffic so you can relax and
-                travel stress-free.
+                Sit back, relax, and let our driver handle Mumbai’s traffic
+                while you travel in comfort.
               </p>
             </li>
           </ul>
@@ -518,15 +492,15 @@ const InDelhi = () => {
         <div className="attractions__container">
           <header className="attractions__head">
             <h2 id="attractions-title">
-              Must-Visit Places in Delhi with Cozy Cabz
+              Must-Visit Places in Mumbai with Cozy Cabz
             </h2>
             <p>
-              Delhi is a city where every street has a story to tell. From
-              centuries-old Mughal forts to modern shopping hubs, the capital is
-              a mix of history, culture, spirituality, and vibrant city life.
-              With cozy cabz car rental in Delhi with driver, exploring becomes
-              stress-free—you just sit back and enjoy while we take care of
-              traffic, routes, and parking.
+              Mumbai is a city that blends history, culture, glamour, and
+              nature—all in one. From colonial-era monuments to vibrant markets,
+              spiritual centers, and Bollywood hotspots, there’s so much to
+              explore. With Cozy Cabz car hire in Mumbai, you can cover these
+              places comfortably, without the hassle of traffic, parking, or
+              last-minute cab hunting.
             </p>
           </header>
 
@@ -597,4 +571,4 @@ const InDelhi = () => {
   );
 };
 
-export default InDelhi;
+export default InMumbai;
