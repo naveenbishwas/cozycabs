@@ -104,27 +104,59 @@ export default function SiteFooter() {
           <nav className="footer__col" aria-label="Services">
             <h4>Services</h4>
             <ul className="linklist">
-              {[
-                "Corporate Car Rental",
-                "Employee Transport Solutions",
-                "Global Car Rental",
-                "Hotel Travel Desk",
-                "Conference & Delegation",
-                "Event Transportation",
-                "Self Drive",
-                "Wedding Car Rental",
-                "Self Drive Solutions",
-                "Travel Partners Program",
-                "Chauffeured Car Rental Services",
-              ].map((t) => (
-                <li key={t}>
-                  <Link
-                    href={`/services/${t.toLowerCase().replace(/\s+/g, "-")}`}
-                  >
-                    {t}
-                  </Link>
-                </li>
-              ))}
+              <li>
+                <Link href="/services/corporate-car-rental">
+                  Corporate Car Rental
+                </Link>
+              </li>
+              <li>
+                <Link href="/TransportSolution">
+                  Employee Transport Solutions
+                </Link>
+              </li>
+              <li>
+                <Link href="/services/global-car-rental">
+                  Global Car Rental
+                </Link>
+              </li>
+              <li>
+                <Link href="/services/hotel-travel-desk">
+                  Hotel Travel Desk
+                </Link>
+              </li>
+              <li>
+                <Link href="/services/conference-&-delegation">
+                  Conference & Delegation
+                </Link>
+              </li>
+              <li>
+                <Link href="/services/event-transportation">
+                  Event Transportation
+                </Link>
+              </li>
+              <li>
+                <Link href="/services/self-drive">Self Drive</Link>
+              </li>
+              <li>
+                <Link href="/services/wedding-car-rental">
+                  Wedding Car Rental
+                </Link>
+              </li>
+              <li>
+                <Link href="/services/self-drive-solutions">
+                  Self Drive Solutions
+                </Link>
+              </li>
+              <li>
+                <Link href="/services/travel-partners-program">
+                  Travel Partners Program
+                </Link>
+              </li>
+              <li>
+                <Link href="/services/chauffeured-car-rental-services">
+                  Chauffeured Car Rental Services
+                </Link>
+              </li>
             </ul>
           </nav>
 
