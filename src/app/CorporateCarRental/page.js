@@ -256,12 +256,12 @@ const CorporateCarRental = () => {
               text="Insured rides and strict driver verification processes for complete peace of mind."
             />
             <Feature
-              image="/transparent.png"
+              image="/nationwide.png"
               title="Nationwide Coverage"
               text="On-ground presence across metros and Tier-2/3 cities to support companies of all sizes."
             />
             <Feature
-              image="/known.png"
+              image="/transparent.png"
               title="Transparent Pricing"
               text="Upfront quotes with zero hidden costs — giving you total clarity on your rentals."
             />

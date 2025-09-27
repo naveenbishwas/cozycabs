@@ -118,11 +118,15 @@ a {
 }
 
 .heroeco__copy .heroeco__sub {
-  font-size: 18px;
+  font-size: 17px;
   line-height: 1.65;
   max-width: 50ch;
-  margin: 0;
+  margin-top: 10px;
   color: #e2e2e2 !important;
+}
+
+.small-head {
+  font-size: 28px;
 }
 
 /* --- Responsive --- */
@@ -415,6 +419,7 @@ a {
   background: #071a2a; /* deep blue to match your hero */
   color: #e9f1f7;
   padding: 106px 20px;
+  padding-top: 80px;
 }
 
 .trustcc__container {
@@ -427,6 +432,7 @@ a {
   font-size: 2.5rem;
   font-weight: 800;
   margin: 0 0 8px;
+  padding-bottom: 3%;
 }
 .trustcc__title span {
   color: #ff3b3b;
@@ -489,10 +495,10 @@ a {
   box-shadow: 0 8px 18px rgba(255, 77, 77, 0.25);
   margin-bottom: 14px;
 }
-.trustcc__icon svg {
-  width: 26px;
-  height: 26px;
-  fill: #ffffff;
+.trustcc__icon img {
+  width: 60%;
+  height: auto;
+  filter: brightness(0) invert(1);
 }
 .trustcc__icon svg .stroke {
   fill: none;

@@ -15,45 +15,34 @@ const Inchennai = () => {
 
   const items = [
     {
-      title: "Professional & Verified Drivers",
-      desc: "Our chauffeurs know Chennai’s roads like no one else—be it the narrow lanes around Mylapore temples, the business hubs in OMR, or quick routes to Mahabalipuram. Every driver is background-checked, polite, and trained to provide safe and friendly service. If you’re looking to hire a car in Chennai or need driver services with rental cars in Chennai, cozy cabz is your trusted choice.",
-      icon: (
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M12 2l7 3v6c0 5-3.5 9-7 11-3.5-2-7-6-7-11V5l7-3z" />
-          <path d="M9.2 12.6l2.1 2.1 4.5-4.5" className="stroke" />
-        </svg>
-      ),
+      title: "Well Known for Quality Services",
+      desc: "Recognized across India for our commitment to excellence and premium service standards.",
+      image: "/known.png",
     },
     {
-      title: "Wide Range of Vehicles",
-      desc: "Need a compact car for rent in Chennai for short trips, a premium sedan for meetings, or a spacious SUV for family outings? We’ve got it all. From affordable rental cars in Chennai to luxury car rental in Chennai with driver, our fleet covers every requirement.",
-      icon: (
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M3 13l1.2-3.6A3 3 0 017.1 7h9.8a3 3 0 012.9 2.4L21 13v5a1 1 0 01-1 1h-1a2 2 0 11-4 0H9a2 2 0 11-4 0H4a1 1 0 01-1-1v-5z" />
-          <path d="M6 13h12" className="stroke" />
-        </svg>
-      ),
+      title: "Earned Positive Reviews from All Clients",
+      desc: "Consistent 5-star ratings and testimonials from thousands of satisfied customers.",
+      image: "/postive.png",
     },
     {
-      title: "Transparent Pricing – No Surprises",
-      desc: "With cozy cabz, you know exactly what you’re paying for. We share complete fare details—per km rates, driver charges, tolls, and parking—before your ride begins. Whether it’s a one day car rental in Chennai with driver or a long outstation trip, there are no hidden costs.",
-      icon: (
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M3 12l9-9 9 9-9 9-9-9z" />
-          <circle cx="15" cy="9" r="1.6" className="hole" />
-        </svg>
-      ),
+      title: "The Largest Network of Drivers",
+      desc: "Extensive network of professional, verified drivers covering every major city in India.",
+      image: "/ntework.png",
     },
     {
-      title: "Available 24×7",
-      desc: "Chennai never sleeps, and neither do we. From early morning airport transfers to late-night pickups from Anna Nagar or Besant Nagar, our Chennai car rental with driver is available round the clock.",
-      icon: (
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <circle cx="10.5" cy="10.5" r="7.5" />
-          <path d="M10.5 6.5v4.2l3.2 2" className="stroke" />
-          <path d="M14.5 14.5l2 2 3.5-3.5" className="stroke" />
-        </svg>
-      ),
+      title: "Safe & Secure",
+      desc: "Background-verified partners and insured moves for complete peace of mind.",
+      image: "/safe.png",
+    },
+    {
+      title: "Nationwide Coverage",
+      desc: "Strong presence with on-ground support in metros and tier‑2/3 cities.",
+      image: "/nationwide.png",
+    },
+    {
+      title: "Transparent Pricing",
+      desc: "Clear quotes, no hidden charges—ever.",
+      image: "/transparent.png",
     },
   ];
 
@@ -369,13 +358,22 @@ const Inchennai = () => {
       <section className="trustcc">
         <div className="trustcc__container">
           <h2 className="trustcc__title">
-            Why Choose cozy cabz in<span> Chennai?</span>
+            Why Choose <span>Cozy Cabz</span>
           </h2>
 
           <div className="trustcc__grid">
             {items.map((it, i) => (
               <article className="trustcc__card" key={i}>
-                <div className="trustcc__icon">{it.icon}</div>
+                <div className="trustcc__icon">
+                  {/* {it.icon} */}
+                  <Image
+                    src={it.image}
+                    width={0}
+                    height={0}
+                    alt="Images"
+                    unoptimized
+                  ></Image>
+                </div>
                 <h3>{it.title}</h3>
                 <p>{it.desc}</p>
               </article>

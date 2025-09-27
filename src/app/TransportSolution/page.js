@@ -298,12 +298,12 @@ const TransportSolution = () => {
               text="Background-verified partners and insured moves for complete peace of mind."
             />
             <Feature
-              image="/transparent.png"
+              image="/nationwide.png"
               title="Nationwide Coverage"
               text="Strong presence with on-ground support in metros and tier‑2/3 cities."
             />
             <Feature
-              image="/known.png"
+              image="/transparent.png"
               title="Transparent Pricing"
               text="Clear quotes, no hidden charges—ever."
             />

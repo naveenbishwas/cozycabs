@@ -15,59 +15,34 @@ const InMumbai = () => {
 
   const items = [
     {
-      title: "Professional, Verified Drivers",
-      desc: " Our chauffeurs are trained, polite, and know every corner of the city—from the lanes of Andheri to the sea breeze of Marine Drive. If you’re searching for rent a car in Mumbai with driver or car hire in Mumbai with driver, Cozy Cabz provides you with the most reliable option.",
-      icon: (
-        // Shield check
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M12 2l7 3v6c0 5-3.5 9-7 11-3.5-2-7-6-7-11V5l7-3z" />
-          <path d="M9.2 12.6l2.1 2.1 4.5-4.5" className="stroke" />
-        </svg>
-      ),
+      title: "Well Known for Quality Services",
+      desc: "Recognized across India for our commitment to excellence and premium service standards.",
+      image: "/known.png",
     },
     {
-      title: "Well-Maintained Fleet",
-      desc: "Choose from hatchbacks, sedans, SUVs, and premium cars. Whether you need an economy rental car in Mumbai, a 7 seater car on rent in Mumbai, or a luxury car rental Mumbai with driver, we’ve got it covered.",
-      icon: (
-        // Sedan
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M3 13l1.2-3.6A3 3 0 017.1 7h9.8a3 3 0 012.9 2.4L21 13v5a1 1 0 01-1 1h-1a2 2 0 11-4 0H9a2 2 0 11-4 0H4a1 1 0 01-1-1v-5z" />
-          <path d="M6 13h12" className="stroke" />
-        </svg>
-      ),
+      title: "Earned Positive Reviews from All Clients",
+      desc: "Consistent 5-star ratings and testimonials from thousands of satisfied customers.",
+      image: "/postive.png",
     },
     {
-      title: "Transparent & Affordable Pricing",
-      desc: "Get clear estimates with no hidden charges. From eco car rental to monthly car rental Mumbai, we share all details on per km rates, tolls, and driver allowances upfront.",
-      icon: (
-        // Tag
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M3 12l9-9 9 9-9 9-9-9z" />
-          <circle cx="15" cy="9" r="1.6" className="hole" />
-        </svg>
-      ),
+      title: "The Largest Network of Drivers",
+      desc: "Extensive network of professional, verified drivers covering every major city in India.",
+      image: "/ntework.png",
     },
     {
-      title: "24×7 Availability",
-      desc: " Mumbai never sleeps—and neither do we. Be it airport pickups at night or one day car rental Mumbai, our services are available around the clock.",
-      icon: (
-        // Clock + tick
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <circle cx="10.5" cy="10.5" r="7.5" />
-          <path d="M10.5 6.5v4.2l3.2 2" className="stroke" />
-          <path d="M14.5 14.5l2 2 3.5-3.5" className="stroke" />
-        </svg>
-      ),
+      title: "Safe & Secure",
+      desc: "Background-verified partners and insured moves for complete peace of mind.",
+      image: "/safe.png",
     },
     {
-      title: "Safety & Hygiene First",
-      desc: " Every ride is sanitized, insured, and GPS-enabled. From private car rental in Mumbai to car with driver Mumbai, your safety and comfort remain our top priority.",
-      icon: (
-        // Headset
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M4 12a8 8 0 1116 0v5a2 2 0 01-2 2h-3v-4h3v-3a6 6 0 10-12 0v3h3v4H6a2 2 0 01-2-2v-5z" />
-        </svg>
-      ),
+      title: "Nationwide Coverage",
+      desc: "Strong presence with on-ground support in metros and tier‑2/3 cities.",
+      image: "/nationwide.png",
+    },
+    {
+      title: "Transparent Pricing",
+      desc: "Clear quotes, no hidden charges—ever.",
+      image: "/transparent.png",
     },
   ];
 
@@ -375,17 +350,26 @@ const InMumbai = () => {
       <section className="trustcc">
         <div className="trustcc__container">
           <h2 className="trustcc__title">
-            Why Choose Cozy Cabz in<span> Mumbai?</span>
+            Why Choose <span>Cozy Cabz</span>
           </h2>
           {/* <p className="trustcc__sub">
-            Everything we build is focused on safe, reliable and fairly-priced
-            rides.
-          </p> */}
+               Everything we build is focused on safe, reliable and fairly-priced
+               rides.
+             </p> */}
 
           <div className="trustcc__grid">
             {items.map((it, i) => (
               <article className="trustcc__card" key={i}>
-                <div className="trustcc__icon">{it.icon}</div>
+                <div className="trustcc__icon">
+                  {/* {it.icon} */}
+                  <Image
+                    src={it.image}
+                    width={0}
+                    height={0}
+                    alt="Images"
+                    unoptimized
+                  ></Image>
+                </div>
                 <h3>{it.title}</h3>
                 <p>{it.desc}</p>
               </article>
@@ -398,8 +382,7 @@ const InMumbai = () => {
         <div className="howtoWrap">
           <h2 className="howtoTitle">How to Book Your Ride</h2>
           <p className="howtoSubtitle">
-            Simple and straightforward booking process. Follow these easy steps
-            to book your ride.
+            Simple, quick, and transparent—book in 5 easy steps.
           </p>
 
           {/* Connector line behind badges */}
@@ -411,35 +394,35 @@ const InMumbai = () => {
               icon={<PhoneIcon />}
               step={1}
               title="Contact Our Team"
-              text="Contact our team or register on our website to get started with your booking process."
+              text="Call/WhatsApp or fill the form with pickup, drop, date, and time."
             />
             <StepCard
               color="#16A34A"
               icon={<PinIcon />}
               step={2}
-              title="Share Your Details"
-              text="Share your destination & departure timing along with any specific requirements."
+              title="Share Your Trip Details"
+              text="Tell us route, stops, passenger count, hours/km plan, and any special requests."
             />
             <StepCard
               color="#8B5CF6"
               icon={<CarIcon />}
               step={3}
-              title="Select Car Model"
-              text="Select your preferred car model from our fleet and calculate the fare instantly."
+              title="Select Your Car"
+              text="Choose from hatchbacks, sedans, SUVs, 7/9-seaters, or luxury; view the fare instantly."
             />
             <StepCard
               color="#F97316"
               icon={<CheckIcon />}
               step={4}
               title="Get Confirmation"
-              text="Get confirmation in few seconds with booking details and driver information."
+              text="Receive booking confirmation with vehicle & driver details; pay token/full via UPI/Card."
             />
             <StepCard
               color="#EF4444"
               icon={<ClockIcon />}
               step={5}
               title="Wait for Arrival"
-              text="Relax and wait for your cab to arrive at your place at the scheduled time."
+              text="Track your cab, meet your chauffeur on time, and enjoy a safe, sanitized ride—24×7 support."
             />
           </div>
         </div>
@@ -458,7 +441,7 @@ const InMumbai = () => {
               <h3>Enter Your Trip Details</h3>
               <p>
                 Add pickup & drop location, date, timings, and trip type (local,
-                outstation, or airport)
+                outstation, or airport).
               </p>
             </li>
 
@@ -471,7 +454,7 @@ const InMumbai = () => {
             </li>
 
             <li className="howrent__item">
-              <h3>Get Instant Confirmation</h3>
+              <h3> Get Instant Confirmation</h3>
               <p>
                 Receive booking details instantly, including car model, driver
                 information, and estimated arrival time.
@@ -481,7 +464,7 @@ const InMumbai = () => {
             <li className="howrent__item">
               <h3>Enjoy a Stress-Free Ride</h3>
               <p>
-                Sit back, relax, and let our driver handle Mumbai’s traffic
+                Sit back, unwind, and let our driver handle Mumbai’s traffic
                 while you travel in comfort.
               </p>
             </li>

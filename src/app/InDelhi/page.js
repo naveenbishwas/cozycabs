@@ -15,59 +15,34 @@ const InDelhi = () => {
 
   const items = [
     {
-      title: "Professional & Verified Drivers",
-      desc: "Our drivers know Delhi’s roads inside out—whether it’s the bustling lanes of Chandni Chowk, the wide stretches of Rajpath, or the quick routes to Gurugram and Noida. Every chauffeur is background-checked, trained, and committed to making your ride smooth and safe. If you’re looking for driver services in Delhi or want to hire a car in Delhi, Cozy Cabz is here to help.",
-      icon: (
-        // Shield check
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M12 2l7 3v6c0 5-3.5 9-7 11-3.5-2-7-6-7-11V5l7-3z" />
-          <path d="M9.2 12.6l2.1 2.1 4.5-4.5" className="stroke" />
-        </svg>
-      ),
+      title: "Well Known for Quality Services",
+      desc: "Recognized across India for our commitment to excellence and premium service standards.",
+      image: "/known.png",
     },
     {
-      title: "Wide Range of Vehicles",
-      desc: "Need a small car for rent in Delhi for short trips, a premium sedan for corporate meetings, or a 7-seater SUV for family outings? We’ve got you covered. From budget-friendly options to luxury car hire in Delhi, our fleet includes the right vehicle for every occasion.",
-      icon: (
-        // Sedan
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M3 13l1.2-3.6A3 3 0 017.1 7h9.8a3 3 0 012.9 2.4L21 13v5a1 1 0 01-1 1h-1a2 2 0 11-4 0H9a2 2 0 11-4 0H4a1 1 0 01-1-1v-5z" />
-          <path d="M6 13h12" className="stroke" />
-        </svg>
-      ),
+      title: "Earned Positive Reviews from All Clients",
+      desc: "Consistent 5-star ratings and testimonials from thousands of satisfied customers.",
+      image: "/postive.png",
     },
     {
-      title: "Transparent Pricing – No Hidden Costs",
-      desc: "You’ll always know what you’re paying for. We provide fare estimates up front, covering per km rates, driver charges, parking, and tolls. Whether it’s a car on hire in Delhi for one day or a long car rental from Delhi to other cities, you’ll never face hidden costs.",
-      icon: (
-        // Tag
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M3 12l9-9 9 9-9 9-9-9z" />
-          <circle cx="15" cy="9" r="1.6" className="hole" />
-        </svg>
-      ),
+      title: "The Largest Network of Drivers",
+      desc: "Extensive network of professional, verified drivers covering every major city in India.",
+      image: "/ntework.png",
     },
     {
-      title: "Available 24×7, Anytime You Need",
-      desc: "Delhi never stops, and neither do we. Be it an early-morning airport drop, a late-night pickup from Connaught Place, or a last-minute car booking in Delhi for outstation travel, our service is available round the clock.",
-      icon: (
-        // Clock + tick
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <circle cx="10.5" cy="10.5" r="7.5" />
-          <path d="M10.5 6.5v4.2l3.2 2" className="stroke" />
-          <path d="M14.5 14.5l2 2 3.5-3.5" className="stroke" />
-        </svg>
-      ),
+      title: "Safe & Secure",
+      desc: "Background-verified partners and insured moves for complete peace of mind.",
+      image: "/safe.png",
     },
     {
-      title: "Safety & Hygiene First",
-      desc: "Every vehicle is sanitized, GPS-enabled, and insured. Your safety matters to us, so we follow strict hygiene and security protocols—perfect for families, business travelers, and tourists who depend on reliable Delhi car service.",
-      icon: (
-        // Headset
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M4 12a8 8 0 1116 0v5a2 2 0 01-2 2h-3v-4h3v-3a6 6 0 10-12 0v3h3v4H6a2 2 0 01-2-2v-5z" />
-        </svg>
-      ),
+      title: "Nationwide Coverage",
+      desc: "Strong presence with on-ground support in metros and tier‑2/3 cities.",
+      image: "/nationwide.png",
+    },
+    {
+      title: "Transparent Pricing",
+      desc: "Clear quotes, no hidden charges—ever.",
+      image: "/transparent.png",
     },
   ];
 
@@ -223,20 +198,13 @@ const InDelhi = () => {
           <p className="heroeco__eyebrow">India’s Trusted Car Rental</p>
           <h1 className="heroeco__title">Car Rental in Delhi</h1>
           <span className="small-head">
-            <br />
-            <h4>– Safe, Reliable & Comfortable Rides</h4>
+            <h4>Safe, Reliable & Comfortable Rides</h4>
           </span>
           <p className="heroeco__sub">
-            Delhi, the capital city of India, is a place where history meets
-            modernity. From ancient forts and UNESCO heritage sites to buzzing
-            markets, high-rise business hubs, and cultural hotspots, every
-            corner of Delhi has something unique to offer. But moving around the
-            city can often feel overwhelming—traffic jams, crowded metro routes,
-            and unpredictable autos. That’s why Cozy Cabz Car Rental in Delhi is
-            your perfect travel companion. With our car rental in Delhi with
-            driver, you get safe rides, verified chauffeurs, transparent
-            pricing, and 24×7 availability—so your journey is as comfortable as
-            the destination.
+            Delhi, India’s capital, blends history and modern life with forts,
+            markets, and business hubs. But heavy traffic and crowds make travel
+            stressful. That’s where Cozy Cabz Car Rental in Delhi ensures
+            smooth, safe, and hassle-free journeys every time.
           </p>
         </div>
       </section>
@@ -399,17 +367,22 @@ const InDelhi = () => {
       <section className="trustcc">
         <div className="trustcc__container">
           <h2 className="trustcc__title">
-            Why Choose Cozy Cabz in<span> Delhi?</span>
+            Why Choose <span>Cozy Cabz</span>
           </h2>
-          {/* <p className="trustcc__sub">
-            Everything we build is focused on safe, reliable and fairly-priced
-            rides.
-          </p> */}
 
           <div className="trustcc__grid">
             {items.map((it, i) => (
               <article className="trustcc__card" key={i}>
-                <div className="trustcc__icon">{it.icon}</div>
+                <div className="trustcc__icon">
+                  {/* {it.icon} */}
+                  <Image
+                    src={it.image}
+                    width={0}
+                    height={0}
+                    alt="Images"
+                    unoptimized
+                  ></Image>
+                </div>
                 <h3>{it.title}</h3>
                 <p>{it.desc}</p>
               </article>
@@ -422,8 +395,7 @@ const InDelhi = () => {
         <div className="howtoWrap">
           <h2 className="howtoTitle">How to Book Your Ride</h2>
           <p className="howtoSubtitle">
-            Simple and straightforward booking process. Follow these easy steps
-            to book your ride.
+            Simple, fast, and transparent—just follow these 5 steps.
           </p>
 
           {/* Connector line behind badges */}
@@ -435,35 +407,36 @@ const InDelhi = () => {
               icon={<PhoneIcon />}
               step={1}
               title="Contact Our Team"
-              text="Contact our team or register on our website to get started with your booking process."
+              text="Call us, WhatsApp, or register online to begin your Delhi cab booking."
             />
             <StepCard
               color="#16A34A"
               icon={<PinIcon />}
               step={2}
-              title="Share Your Details"
-              text="Share your destination & departure timing along with any specific requirements."
+              title="Share Your Trip Details"
+              text="Provide pickup point, drop location, travel date, time, and any special requests."
             />
             <StepCard
               color="#8B5CF6"
               icon={<CarIcon />}
               step={3}
-              title="Select Car Model"
-              text="Select your preferred car model from our fleet and calculate the fare instantly."
+              title="Select Your Car"
+              text=" Choose from hatchbacks, sedans, SUVs, tempo travelers, or luxury cars, and get the fare instantly.
+"
             />
             <StepCard
               color="#F97316"
               icon={<CheckIcon />}
               step={4}
               title="Get Confirmation"
-              text="Get confirmation in few seconds with booking details and driver information."
+              text="Receive booking confirmation with driver details and complete fare information."
             />
             <StepCard
               color="#EF4444"
               icon={<ClockIcon />}
               step={5}
               title="Wait for Arrival"
-              text="Relax and wait for your cab to arrive at your place at the scheduled time."
+              text="Relax—your Cozy Cabz driver will arrive on time at the scheduled location."
             />
           </div>
         </div>
@@ -479,35 +452,34 @@ const InDelhi = () => {
 
           <ul className="howrent__list">
             <li className="howrent__item">
-              <h3>Enter Your Trip Details</h3>
+              <h3>Contact Our Team</h3>
               <p>
-                Add pickup, drop, timings, and trip type—whether it’s local,
-                outstation, or airport
+                Reach out to us or register on our website to start your booking
+                process quickly.
               </p>
             </li>
 
             <li className="howrent__item">
-              <h3>Choose Your Car</h3>
+              <h3>Share Your Details</h3>
               <p>
-                From economy cars to SUVs, premium sedans, or luxury taxis. You
-                can even rent a car in Delhi with driver or opt for car rentals
-                in New Delhi for city tours.
+                Provide your pickup & drop points, travel date, time, and trip
+                type (local, outstation, or airport).
               </p>
             </li>
 
             <li className="howrent__item">
-              <h3>Get Instant Confirmation</h3>
+              <h3>Select Car Model</h3>
               <p>
-                Receive driver details, car model, and estimated arrival time
-                right away.
+                Choose from economy cars, SUVs, premium sedans, or luxury taxis,
+                and get your fare instantly.
               </p>
             </li>
 
             <li className="howrent__item">
-              <h3>Enjoy the Ride</h3>
+              <h3>Enjoy a Stress-Free Ride</h3>
               <p>
-                Our experienced drivers handle the traffic so you can relax and
-                travel stress-free.
+                Sit back, unwind, and let our driver handle Mumbai’s traffic
+                while you travel in comfort.
               </p>
             </li>
           </ul>

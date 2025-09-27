@@ -15,45 +15,34 @@ const Inbanglore = () => {
 
   const items = [
     {
-      title: "Professional & Verified Drivers",
-      desc: "Our chauffeurs know Bangalore’s busy roads inside out—whether it’s the traffic-heavy lanes of Silk Board, the tech parks in Whitefield, or the scenic drives to Nandi Hills. Each driver is background-checked, polite, and well-trained to ensure your journey is safe and stress-free. If you’re looking for car rental Bangalore with driver or want to hire a car in Bangalore for work or leisure, cozy cabz is your trusted partner.",
-      icon: (
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M12 2l7 3v6c0 5-3.5 9-7 11-3.5-2-7-6-7-11V5l7-3z" />
-          <path d="M9.2 12.6l2.1 2.1 4.5-4.5" className="stroke" />
-        </svg>
-      ),
+      title: "Well Known for Quality Services",
+      desc: "Recognized across India for our commitment to excellence and premium service standards.",
+      image: "/known.png",
     },
     {
-      title: "Wide Range of Vehicles",
-      desc: "Need a compact car for rent in Bangalore for local travel, a premium sedan for meetings, or a 7 seater car rental Bangalore for family trips? We’ve got options for every requirement. From luxury cars rental in Bangalore, our fleet ensures the right fit for your comfort and budget.",
-      icon: (
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M3 13l1.2-3.6A3 3 0 017.1 7h9.8a3 3 0 012.9 2.4L21 13v5a1 1 0 01-1 1h-1a2 2 0 11-4 0H9a2 2 0 11-4 0H4a1 1 0 01-1-1v-5z" />
-          <path d="M6 13h12" className="stroke" />
-        </svg>
-      ),
+      title: "Earned Positive Reviews from All Clients",
+      desc: "Consistent 5-star ratings and testimonials from thousands of satisfied customers.",
+      image: "/postive.png",
     },
     {
-      title: "Transparent Pricing – No Hidden Costs",
-      desc: "With cozy cabz, you always know what you’re paying for. We provide upfront estimates covering per km charges, driver fees, tolls, and parking. Whether you’re booking a car on rent in Bangalore for a day or planning a long rental car service in Bangalore for an outstation trip, there are no hidden surprises.",
-      icon: (
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M3 12l9-9 9 9-9 9-9-9z" />
-          <circle cx="15" cy="9" r="1.6" className="hole" />
-        </svg>
-      ),
+      title: "The Largest Network of Drivers",
+      desc: "Extensive network of professional, verified drivers covering every major city in India.",
+      image: "/ntework.png",
     },
     {
-      title: "Available 24×7, Anytime You Need",
-      desc: "Bangalore runs around the clock—and so do we. From early-morning airport drops to late-night returns after a business dinner or weekend outing, our Bangalore car rentals are available 24×7. You can rent a car in Bangalore anytime with quick confirmations and reliable service.",
-      icon: (
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <circle cx="10.5" cy="10.5" r="7.5" />
-          <path d="M10.5 6.5v4.2l3.2 2" className="stroke" />
-          <path d="M14.5 14.5l2 2 3.5-3.5" className="stroke" />
-        </svg>
-      ),
+      title: "Safe & Secure",
+      desc: "Background-verified partners and insured moves for complete peace of mind.",
+      image: "/safe.png",
+    },
+    {
+      title: "Nationwide Coverage",
+      desc: "Strong presence with on-ground support in metros and tier‑2/3 cities.",
+      image: "/nationwide.png",
+    },
+    {
+      title: "Transparent Pricing",
+      desc: "Clear quotes, no hidden charges—ever.",
+      image: "/transparent.png",
     },
   ];
 
@@ -196,17 +185,13 @@ const Inbanglore = () => {
           <p className="heroeco__eyebrow">India’s Trusted Car Rental</p>
           <h1 className="heroeco__title">Car Rental in Bangalore</h1>
           <span className="small-head">
-            <br />
-            <h4>– Comfortable, Safe & Reliable Rides</h4>
+            <h4>Comfortable, Safe & Reliable Rides</h4>
           </span>
           <p className="heroeco__sub">
-            Bangalore, also known as the Silicon Valley of India, blends modern
-            IT hubs with lush gardens, historic landmarks, and buzzing
-            nightlife. With heavy traffic and scattered destinations, getting
-            around can be challenging. That’s why cozy cabz Car Rental in
-            Bangalore is the easiest way to travel. With our car rental
-            Bangalore with driver, you get clean cars, verified chauffeurs,
-            transparent pricing, and 24×7 service.
+            Bangalore, the Silicon Valley of India, blends IT hubs, gardens,
+            landmarks, and nightlife. Yet traffic makes travel challenging.
+            That’s where Cozy Cabz Car Rental in Bangalore helps, offering clean
+            cars, verified chauffeurs, transparent pricing, 24×7 service.
           </p>
         </div>
       </section>
@@ -343,13 +328,22 @@ const Inbanglore = () => {
       <section className="trustcc">
         <div className="trustcc__container">
           <h2 className="trustcc__title">
-            Why Choose cozy cabz in<span> Bangalore?</span>
+            Why Choose <span>Cozy Cabz</span>
           </h2>
 
           <div className="trustcc__grid">
             {items.map((it, i) => (
               <article className="trustcc__card" key={i}>
-                <div className="trustcc__icon">{it.icon}</div>
+                <div className="trustcc__icon">
+                  {/* {it.icon} */}
+                  <Image
+                    src={it.image}
+                    width={0}
+                    height={0}
+                    alt="Images"
+                    unoptimized
+                  ></Image>
+                </div>
                 <h3>{it.title}</h3>
                 <p>{it.desc}</p>
               </article>
@@ -362,8 +356,8 @@ const Inbanglore = () => {
         <div className="howtoWrap">
           <h2 className="howtoTitle">How to Book Your Ride</h2>
           <p className="howtoSubtitle">
-            Simple and straightforward booking process. Follow these easy steps
-            to book your ride.
+            Booking a cab in Bangalore is quick and hassle-free—just follow
+            these steps.
           </p>
 
           <div className="connector" aria-hidden="true" />
@@ -374,35 +368,36 @@ const Inbanglore = () => {
               icon={<PhoneIcon />}
               step={1}
               title="Contact Our Team"
-              text="Contact our team or register on our website to get started with your booking process."
+              text=" Call us, WhatsApp, or register online to start your Bangalore cab booking.
+"
             />
             <StepCard
               color="#16A34A"
               icon={<PinIcon />}
               step={2}
               title="Share Your Details"
-              text="Share your destination & departure timing along with any specific requirements."
+              text="Provide pickup and drop points, travel date, time, and any special requirements."
             />
             <StepCard
               color="#8B5CF6"
               icon={<CarIcon />}
               step={3}
               title="Select Car Model"
-              text="Select your preferred car model from our fleet and calculate the fare instantly."
+              text=" Pick from economy hatchbacks, sedans, SUVs, tempo travelers, or luxury rentals—get instant fare details."
             />
             <StepCard
               color="#F97316"
               icon={<CheckIcon />}
               step={4}
               title="Get Confirmation"
-              text="Get confirmation in few seconds with booking details and driver information."
+              text="Receive booking confirmation with car and driver details, plus transparent fare information."
             />
             <StepCard
               color="#EF4444"
               icon={<ClockIcon />}
               step={5}
               title="Wait for Arrival"
-              text="Relax and wait for your cab to arrive at your place at the scheduled time."
+              text="Sit back and relax—your Cozy Cabz driver will reach you on time, ready for a smooth ride."
             />
           </div>
         </div>
@@ -483,7 +478,7 @@ const Inbanglore = () => {
         </div>
       </section>
 
-      <section className="trustcc" aria-labelledby="closing-title">
+      {/* <section className="trustcc" aria-labelledby="closing-title">
         <div className="trustcc__container">
           <h2 id="closing-title">
             cozy cabz – Your Trusted Car Rental in Bangalore
@@ -498,7 +493,7 @@ const Inbanglore = () => {
             journey with us is safe, reliable, and memorable.
           </p>
         </div>
-      </section>
+      </section> */}
 
       <section className="faq">
         <div className="faq-header">
