@@ -412,6 +412,7 @@ export default function Home() {
       img: "Kolkata2.png",
       alt: "Mountains",
     },
+    //Hyderababd///
     {
       name: "Hyderabad",
       status: "Car Rental Available",
