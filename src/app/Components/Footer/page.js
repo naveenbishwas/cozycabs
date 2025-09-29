@@ -44,7 +44,7 @@ export default function SiteFooter() {
                     <path d="M6 2h4l2 5-3 2a16 16 0 007 7l2-3 5 2v4a2 2 0 01-2 2A18 18 0 012 8 2 2 0 014 6z" />
                   </svg>
                 </span>
-                <Link href="tel:+919876543210">+91 92209 94735</Link>
+                <Link href="tel:+919876543210">++91 92209 94735</Link>
               </li>
               <li>
                 <span className="ico" aria-hidden="true">
@@ -106,7 +106,7 @@ export default function SiteFooter() {
           {/* Column: Services */}
           <nav className="footer__col" aria-label="Services">
             <h4>Services</h4>
-            <ul className="linklist">
+            {/* <ul className="linklist">
               <li>
                 <Link href="/services/corporate-car-rental">
                   Corporate Car Rental
@@ -159,6 +159,75 @@ export default function SiteFooter() {
                 <Link href="/services/chauffeured-car-rental-services">
                   Chauffeured Car Rental Services
                 </Link>
+              </li>
+            </ul> */}
+            <ul className="linklist">
+              <li>
+                <Link href="/CorporateCarRental">Corporate Car Rental</Link>
+              </li>
+              <li>
+                <Link href="/TransportSolution">
+                  Employee Transport Solutions
+                </Link>
+              </li>
+              {/* <li>
+                  <Link href="/GcarRental">Global Car Rental</Link>
+                </li>
+                <li>
+                  <Link href="HotelTravelDesk">Hotel Travel Desk</Link>
+                </li>
+                <li>
+                  <Link href="/ConferenceDelegationTravel">
+                    Conference & Delegation
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/EventTransportation">Event Transportation</Link>
+                </li> */}
+              <li>
+                <Link href="/GcarRental">Global Car Rental</Link>
+              </li>
+              <li>
+                <Link href="/HotelTravelDesk">Hotel Travel Desk</Link>
+              </li>
+              <li>
+                <Link href="/ConferenceDelegationTravel">
+                  Conference & Delegation
+                </Link>
+              </li>
+              <li>
+                <Link href="/EventTransportation">Event Transportation</Link>
+              </li>
+
+              {/* <li>
+                  <Link href="/SelfDrive">Self Drive</Link>
+                </li>
+                <li>
+                  <Link href="/WeddingCarRental">Wedding Car Rental</Link>
+                </li>
+                <li>
+                  <Link href="/self-drive-solutions">Self Drive Solutions</Link>
+                </li>
+                <li>
+                  <Link href="/TravelPartnersProgram">
+                    Travel Partners Program
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/ChauffeuredCarRentalServices">
+                    Chauffeured Car Rental Services
+                  </Link>
+                </li> */}
+              <li>
+                <Link href="./WeddingCarRental">Wedding Car Rental</Link>
+              </li>
+              <li>
+                <Link href="./TravelPartnersProgram">
+                  Travel Partners Program
+                </Link>
+              </li>
+              <li>
+                <Link href="./ChauffeurCarRental">Chauffeured Car Rental</Link>
               </li>
             </ul>
           </nav>

@@ -294,56 +294,72 @@ export default function Header() {
               </ul> */}
               <ul className="dropdown-content">
                 <li>
-                  <Link href="/services/corporate-car-rental">
-                    Corporate Car Rental
-                  </Link>
+                  <Link href="/CorporateCarRental">Corporate Car Rental</Link>
                 </li>
                 <li>
                   <Link href="/TransportSolution">
                     Employee Transport Solutions
                   </Link>
                 </li>
-                <li>
-                  <Link href="/services/global-car-rental">
-                    Global Car Rental
-                  </Link>
+                {/* <li>
+                  <Link href="/GcarRental">Global Car Rental</Link>
                 </li>
                 <li>
-                  <Link href="/services/hotel-travel-desk">
-                    Hotel Travel Desk
-                  </Link>
+                  <Link href="HotelTravelDesk">Hotel Travel Desk</Link>
                 </li>
                 <li>
-                  <Link href="/services/conference-&-delegation">
+                  <Link href="/ConferenceDelegationTravel">
                     Conference & Delegation
                   </Link>
                 </li>
                 <li>
-                  <Link href="/services/event-transportation">
-                    Event Transportation
+                  <Link href="/EventTransportation">Event Transportation</Link>
+                </li> */}
+                <li>
+                  <Link href="/GcarRental">Global Car Rental</Link>
+                </li>
+                <li>
+                  <Link href="/HotelTravelDesk">Hotel Travel Desk</Link>
+                </li>
+                <li>
+                  <Link href="/ConferenceDelegationTravel">
+                    Conference & Delegation
                   </Link>
                 </li>
                 <li>
-                  <Link href="/services/self-drive">Self Drive</Link>
+                  <Link href="/EventTransportation">Event Transportation</Link>
+                </li>
+
+                {/* <li>
+                  <Link href="/SelfDrive">Self Drive</Link>
                 </li>
                 <li>
-                  <Link href="/services/wedding-car-rental">
-                    Wedding Car Rental
-                  </Link>
+                  <Link href="/WeddingCarRental">Wedding Car Rental</Link>
                 </li>
                 <li>
-                  <Link href="/services/self-drive-solutions">
-                    Self Drive Solutions
-                  </Link>
+                  <Link href="/self-drive-solutions">Self Drive Solutions</Link>
                 </li>
                 <li>
-                  <Link href="/services/travel-partners-program">
+                  <Link href="/TravelPartnersProgram">
                     Travel Partners Program
                   </Link>
                 </li>
                 <li>
-                  <Link href="/services/chauffeured-car-rental-services">
+                  <Link href="/ChauffeuredCarRentalServices">
                     Chauffeured Car Rental Services
+                  </Link>
+                </li> */}
+                <li>
+                  <Link href="./WeddingCarRental">Wedding Car Rental</Link>
+                </li>
+                <li>
+                  <Link href="./TravelPartnersProgram">
+                    Travel Partners Program
+                  </Link>
+                </li>
+                <li>
+                  <Link href="./ChauffeurCarRental">
+                    Chauffeured Car Rental
                   </Link>
                 </li>
               </ul>
