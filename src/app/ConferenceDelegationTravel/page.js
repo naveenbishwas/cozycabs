@@ -1,0 +1,281 @@
+
+
+"use client";
+
+import React, { useEffect, useRef } from "react";
+import Header from "../Components/Header/page";
+import SiteFooter from "../Components/Footer/page";
+import Image from "next/image";
+import Link from "next/link";
+import "./ConferenceDelegationTravel.css"
+import {
+  FaBuilding,
+  FaUsers,
+  FaGlobe,
+  FaBus,
+  FaUserTie,
+  FaClipboardList,
+} from "react-icons/fa";
+
+function Feature({ icon, title, text }) {
+  return (
+    <div className="why-card">
+      <div className="why-icon">{icon}</div>
+      <h3 className="why-card-title">{title}</h3>
+      <p className="why-card-text">{text}</p>
+    </div>
+  );
+}
+
+const ConferenceDelegationTravel = () => {
+  const aboutCountersRef = useRef(null);
+
+  function runCounter(el, to) {
+    const duration = 1400;
+    let startTs = null;
+    const step = (ts) => {
+      if (!startTs) startTs = ts;
+      const p = Math.min((ts - startTs) / duration, 1);
+      const eased = 1 - Math.pow(1 - p, 3);
+      const val = Math.floor(to * eased);
+      el.textContent = val + "+";
+      if (p < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  }
+
+  useEffect(() => {
+    if (!aboutCountersRef.current) return;
+    const io = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((e) => e.isIntersecting)) {
+          aboutCountersRef.current
+            .querySelectorAll("[data-counter-to]")
+            .forEach((node) => {
+              const to = parseInt(node.getAttribute("data-counter-to"), 10) || 0;
+              runCounter(node, to);
+            });
+        }
+      },
+      { threshold: 0.35 }
+    );
+    io.observe(aboutCountersRef.current);
+    return () => io.disconnect();
+  }, []);
+
+  return (
+    <div>
+      <Header />
+
+      {/* Hero Section */}
+      <section className="employee-transport section-container">
+        <div className="employee-content">
+          <h1>
+            Conference & <span>Delegation Travel</span>
+          </h1>
+          <p>
+            Professional conference & delegation travel services with airport
+            pickups, hotel transfers, and venue shuttles. Ensure smooth,
+            punctual, and comfortable travel for every delegate and VIP guest.
+          </p>
+          <div className="cta-buttons">
+            <Link href="#quote-section">
+              <button className="primary-btn">Get Quote Now →</button>
+            </Link>
+            <a href="tel:+919876543210" className="secondary-btn">
+              Call: +91 98765 43210
+            </a>
+          </div>
+        </div>
+        <div className="employee-image">
+          <Image
+            src="/bus.jpg"
+            alt="Conference & Delegation Travel"
+            width={600}
+            height={400}
+            className="image"
+          />
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="number-stats" ref={aboutCountersRef} id="about">
+  <div className="about__stats">
+    <div className="stat">
+      <div className="stat__num" data-counter-to="250">
+        0+
+      </div>
+      <div className="stat__label">Cities Covered Around India</div>
+    </div>
+    <div className="stat">
+      <div className="stat__num" data-counter-to="1000">
+        0+
+      </div>
+      <div className="stat__label">Cabs Available Everyday</div>
+    </div>
+    <div className="stat">
+      <div className="stat__num" data-counter-to="10">
+        0+
+      </div>
+      <div className="stat__label">Years of Experience in the Industry</div>
+    </div>
+    <div className="stat">
+      <div className="stat__num" data-counter-to="5000">
+        0+
+      </div>
+      <div className="stat__label">Happy Customers</div>
+    </div>
+    <div className="stat">
+      <div className="stat__num" data-counter-to="1200">
+        0+
+      </div>
+      <div className="stat__label">Vendors Covering the Entire Nation</div>
+    </div>
+  </div>
+</section>
+
+
+      {/* Solutions Section */}
+      <section className="smooth-ride section-container">
+        <div className="ride-images">
+          <div className="main-img">
+            <Image
+              src="/s1.webp"
+              alt="Delegates arriving"
+              width={500}
+              height={350}
+              className="image"
+            />
+          </div>
+        </div>
+        <div className="ride-content">
+          <h2>
+            Conference & Delegation <span>Travel Solutions</span>
+          </h2>
+          <p>
+            Organizing a conference or hosting an official delegation demands
+            flawless planning — and smooth travel is at the heart of it. Our
+            conference & delegation travel services are designed to simplify
+            complex logistics, ensuring every participant experiences
+            professionalism, punctuality, and comfort from start to finish.
+          </p>
+          <p>
+            Whether you are welcoming international delegates, transporting
+            keynote speakers, or managing large groups of attendees, we provide
+            end-to-end solutions that cover airport pickups, hotel transfers,
+            venue shuttles, and intercity travel.
+          </p>
+          <p>
+            Our dedicated coordinators, multilingual chauffeurs, and premium
+            fleet make sure your event runs seamlessly while leaving a lasting
+            impression on your guests.
+          </p>
+          <p>
+            With us as your travel partner, you can focus on delivering
+            impactful conferences while we handle the movement of your people —
+            efficiently and reliably.
+          </p>
+        </div>
+      </section>
+
+      {/* Why Us Section */}
+      <section className="why section-container">
+        <header className="why-head">
+          <h2>What Makes Us the Best Choice</h2>
+          <p>
+            Our dedication to corporate travel excellence and event management
+            sets us apart. Here’s why leading organizations trust us.
+          </p>
+        </header>
+        <div className="why-grid">
+          <Feature
+            icon={<FaBuilding />}
+            title="Trusted Corporate Partner"
+            text="Preferred by leading organizations and event planners for professional delegation travel management."
+          />
+          <Feature
+            icon={<FaUsers />}
+            title="Expert Handling of Large Groups"
+            text="Dedicated fleet and on-ground support for handling conferences, seminars, and delegations of all sizes."
+          />
+          <Feature
+            icon={<FaGlobe />}
+            title="Pan-India & International Coverage"
+            text="Strong presence in major Indian cities with arrangements for global conference travel as well."
+          />
+        </div>
+        <div className="why-grid">
+          <Feature
+            icon={<FaBus />}
+            title="Premium Vehicles & Buses"
+            text="Luxury sedans, SUVs, and coaches to ensure VIP comfort and smooth group movement."
+          />
+          <Feature
+            icon={<FaUserTie />}
+            title="Experienced & Verified Chauffeurs"
+            text="Multilingual, professional drivers trained to handle high-profile guests with care."
+          />
+          <Feature
+            icon={<FaClipboardList />}
+            title="Custom Travel Plans"
+            text="Flexible solutions tailored to conference schedules, delegation itineraries, and special requirements."
+          />
+        </div>
+      </section>
+
+      {/* Quote Section with Form */}
+      <section className="quote-section section-container" id="quote-section">
+        <div className="quote-info">
+          <button className="tag-btn">Get Started Today</button>
+          <h2>
+            Request a <span>Custom Quote</span>
+          </h2>
+          <p>
+            Tell us about your conference or delegation travel requirements and
+            we'll provide a tailored solution with competitive pricing.
+          </p>
+          <ul className="benefits-list">
+            <li>Dedicated travel coordinators</li>
+            <li>Custom travel plans based on your event schedule</li>
+            <li>Luxury vehicles and professional chauffeurs</li>
+            <li>24/7 on-ground support</li>
+          </ul>
+        </div>
+
+        <div className="quote-form">
+          <h3>Get Your Quote</h3>
+          <p>
+            Fill out the form below and we'll get back to you within 24 hours.
+          </p>
+          <form>
+            <div className="form-grid">
+              <input type="text" placeholder="Organization / Event Name" required />
+              <input type="text" placeholder="Contact Person" required />
+              <input type="email" placeholder="Email Address" required />
+              <input type="tel" placeholder="+91 98765 43210" required />
+              <select required>
+                <option value="">Travel Type</option>
+                <option>Conference</option>
+                <option>Delegation</option>
+                <option>Seminar / Event</option>
+              </select>
+              <input type="text" placeholder="Cities / Venues" />
+              <textarea
+                placeholder="Tell us about your schedule, group size, and specific requirements..."
+                rows="4"
+              />
+            </div>
+
+            <button type="submit" className="primary-btn">
+              Request Quote →
+            </button>
+          </form>
+        </div>
+      </section>
+
+      <SiteFooter />
+    </div>
+  );
+};
+
+export default ConferenceDelegationTravel;

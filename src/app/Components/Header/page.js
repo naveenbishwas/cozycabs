@@ -271,25 +271,25 @@ export default function Header() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/global">Global Car Rental</Link>
+                  <Link href="/GcarRental">Global Car Rental</Link>
                 </li>
                 <li>
-                  <Link href="/hotel">Hotel Travel Desk</Link>
+                  <Link href="/HotelTravelDesk">Hotel Travel Desk</Link>
                 </li>
                 <li>
-                  <Link href="/conference">Conference & Delegation</Link>
+                  <Link href="/ConferenceDelegationTravel">Conference & Delegation</Link>
                 </li>
                 <li>
-                  <Link href="/event">Event Transportation</Link>
+                  <Link href="/EventTransportation">Event Transportation</Link>
                 </li>
                 <li>
-                  <Link href="/wedding">Wedding Car Rental</Link>
+                  <Link href="./WeddingCarRental">Wedding Car Rental</Link>
                 </li>
                 <li>
-                  <Link href="/partners">Travel Partners Program</Link>
+                  <Link href="./TravelPartnersProgram">Travel Partners Program</Link>
                 </li>
                 <li>
-                  <Link href="/chauffeur">Chauffeured Car Rental</Link>
+                  <Link href="./ChauffeurCarRental">Chauffeured Car Rental</Link>
                 </li>
               </ul>
             </li>
