@@ -44,7 +44,7 @@ export default function SiteFooter() {
                     <path d="M6 2h4l2 5-3 2a16 16 0 007 7l2-3 5 2v4a2 2 0 01-2 2A18 18 0 012 8 2 2 0 014 6z" />
                   </svg>
                 </span>
-                <Link href="tel:+919876543210">+91 98765-43210</Link>
+                <Link href="tel:+919876543210">+91 92209 94735</Link>
               </li>
               <li>
                 <span className="ico" aria-hidden="true">
@@ -54,7 +54,9 @@ export default function SiteFooter() {
                     <path d="M3 5l9 7 9-7" />
                   </svg>
                 </span>
-                <Link href="mailto:info@carrental.com">info@carrental.com</Link>
+                <Link href="mailto:info@carrental.com">
+                  Support@cozycabz.com
+                </Link>
               </li>
               <li>
                 <span className="ico" aria-hidden="true">
@@ -64,7 +66,10 @@ export default function SiteFooter() {
                     <circle cx="12" cy="10" r="2.5" />
                   </svg>
                 </span>
-                <span>123 Business Hub, Delhi, India</span>
+                <span>
+                  Address: 2nd Floor, Plot No-37, behind HDFC Bank, Block A,
+                  Sector 12 Dwarka, Dwarka, New Delhi, Delhi, 110078
+                </span>
               </li>
             </ul>
 
@@ -203,11 +208,8 @@ export default function SiteFooter() {
           </nav>
 
           <nav className="footer__col" aria-label="More Cities">
-
             <ul className="linklist" id="last-column">
-
-            {/* <h4>More Cities</h4> */}
-
+              {/* <h4>More Cities</h4> */}
 
               <li>
                 <Link href="/InSurat">Car Rental in Surat</Link>
@@ -246,7 +248,6 @@ export default function SiteFooter() {
                 <Link href="/InMysore">Car Rental in Mysore</Link>
               </li>
             </ul>
-
           </nav>
         </div>
 
