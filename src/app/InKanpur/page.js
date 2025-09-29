@@ -3,6 +3,9 @@
 import React, { useState } from "react";
 import Header from "../Components/Header/page";
 import Footer from "../Components/Footer/page";
+import Trustcc from "../Components/Trustcc";
+import Howto from "../Components/Howto";
+import Howrent from "../Components/Howrent";
 
 const InKanpur = () => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -211,10 +214,10 @@ const InKanpur = () => {
           <h1 className="heroeco__title">Car Rental in Kanpur</h1>
           <span className="small-head">
             <br />
-            <h4>– Comfortable, Reliable & Flexible</h4>
+            <h4>Comfortable, Reliable & Flexible</h4>
           </span>
           <p className="heroeco__sub">
-            Kanpur, the industrial and cultural hub of Uttar Pradesh, offers riverside ghats, historical monuments, markets, and diverse neighborhoods. Cozy Cabz provides car rental in Kanpur with driver and self drive options—ideal for local commuting, full-day sightseeing, or independent travel.
+            Kanpur, Uttar Pradesh’s industrial and cultural hub, blends ghats, markets, and heritage with the Ganges, JK Temple, and Memorial Church. Exploring can be easy with Cozy Cabz. We offer car rental in Kanpur with driver and self drive car in Kanpur. 
           </p>
         </div>
       </section>
@@ -293,72 +296,9 @@ const InKanpur = () => {
         </div>
       </section>
 
-      <section className="trustcc">
-        <div className="trustcc__container">
-          <h2 className="trustcc__title">
-            Why Choose Cozy Cabz in<span> Kanpur?</span>
-          </h2>
-          <div className="trustcc__grid">
-            {items.map((it, i) => (
-              <article className="trustcc__card" key={i}>
-                <div className="trustcc__icon">{it.icon}</div>
-                <h3>{it.title}</h3>
-                <p>{it.desc}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="howto">
-        <div className="howtoWrap">
-          <h2 className="howtoTitle">Easy Booking Process with Cozy Cabz</h2>
-          <p className="howtoSubtitle">Booking your ride with Cozy Cabz is quick and effortless.</p>
-
-          <div className="connector" aria-hidden="true" />
-
-          <div className="stepsGrid">
-            <StepCard color="#16A34A" icon={<PinIcon />} step={1} title="Enter Trip Details" text="Share your pickup and drop locations, travel date, and time." />
-            <StepCard color="#8B5CF6" icon={<CarIcon />} step={2} title="Select Your Car" text="Choose sedans, SUVs, luxury models, or a self drive car in Kanpur." />
-            <StepCard color="#F97316" icon={<CheckIcon />} step={3} title="Instant Confirmation" text="Get complete booking details, including car and driver information, right away." />
-            <StepCard color="#EF4444" icon={<ClockIcon />} step={4} title="Enjoy the Journey" text="Relax while we handle the traffic, routes, and navigation." />
-          </div>
-        </div>
-      </section>
-
-      <section className="howrent" aria-labelledby="howrent-title">
-        <div className="howrent__container">
-          <h2 id="howrent-title">Car Rental Services in Kanpur</h2>
-          <p className="howrent__intro">Cozy Cabz provides a variety of car rental services in Kanpur tailored to your needs:</p>
-
-          <ul className="howrent__list">
-            <li className="howrent__item">
-              <h3>Local Rentals</h3>
-              <p>Hourly or daily packages for shopping, office work, or city tours.</p>
-            </li>
-            <li className="howrent__item">
-              <h3>Airport Transfers</h3>
-              <p>Reliable pickup and drop-off at Kanpur Airport.</p>
-            </li>
-            <li className="howrent__item">
-              <h3>Outstation Trips</h3>
-              <p>Rent a car for destinations like Bithoor, Lucknow, or Allahabad.</p>
-            </li>
-            <li className="howrent__item">
-              <h3>Luxury & Premium Cars</h3>
-              <p>Hire high-end vehicles for special occasions or VIP travel.</p>
-            </li>
-            <li className="howrent__item">
-              <h3>Self-Drive Cars</h3>
-              <p>Choose self drive car in Kanpur for a more independent travel experience.</p>
-            </li>
-            <li className="howrent__item">
-              <h3>Group Travel</h3>
-              <p>Larger vehicles and multi-seater options for group outings.</p>
-            </li>
-          </ul>
-        </div>
-      </section>
+ <Trustcc />
+     <Howto/>
+    <Howrent />
 
       <section className="attractions" aria-labelledby="attractions-title">
         <div className="attractions__container">

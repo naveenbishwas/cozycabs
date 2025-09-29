@@ -3,6 +3,10 @@
 import React, { useState } from "react";
 // import "../InMumbai/internalOne.css";
 import Image from "next/image";
+import Trustcc from "../Components/Trustcc";
+import Howto from "../Components/Howto";
+import Howrent from "../Components/Howrent";
+
 import Header from "../Components/Header/page";
 import Footer from "../Components/Footer/page";
 
@@ -13,38 +17,38 @@ const InDelhi = () => {
     setOpenIndex((prev) => (prev === i ? null : i));
   };
 
-  const items = [
-    {
-      title: "Well Known for Quality Services",
-      desc: "Recognized across India for our commitment to excellence and premium service standards.",
-      image: "/known.png",
-    },
-    {
-      title: "Earned Positive Reviews from All Clients",
-      desc: "Consistent 5-star ratings and testimonials from thousands of satisfied customers.",
-      image: "/postive.png",
-    },
-    {
-      title: "The Largest Network of Drivers",
-      desc: "Extensive network of professional, verified drivers covering every major city in India.",
-      image: "/ntework.png",
-    },
-    {
-      title: "Safe & Secure",
-      desc: "Background-verified partners and insured moves for complete peace of mind.",
-      image: "/safe.png",
-    },
-    {
-      title: "Nationwide Coverage",
-      desc: "Strong presence with on-ground support in metros and tier‑2/3 cities.",
-      image: "/nationwide.png",
-    },
-    {
-      title: "Transparent Pricing",
-      desc: "Clear quotes, no hidden charges—ever.",
-      image: "/transparent.png",
-    },
-  ];
+  // const items = [
+  //   {
+  //     title: "Well Known for Quality Services",
+  //     desc: "Recognized across India for our commitment to excellence and premium service standards.",
+  //     image: "/known.png",
+  //   },
+  //   {
+  //     title: "Earned Positive Reviews from All Clients",
+  //     desc: "Consistent 5-star ratings and testimonials from thousands of satisfied customers.",
+  //     image: "/postive.png",
+  //   },
+  //   {
+  //     title: "The Largest Network of Drivers",
+  //     desc: "Extensive network of professional, verified drivers covering every major city in India.",
+  //     image: "/ntework.png",
+  //   },
+  //   {
+  //     title: "Safe & Secure",
+  //     desc: "Background-verified partners and insured moves for complete peace of mind.",
+  //     image: "/safe.png",
+  //   },
+  //   {
+  //     title: "Nationwide Coverage",
+  //     desc: "Strong presence with on-ground support in metros and tier‑2/3 cities.",
+  //     image: "/nationwide.png",
+  //   },
+  //   {
+  //     title: "Transparent Pricing",
+  //     desc: "Clear quotes, no hidden charges—ever.",
+  //     image: "/transparent.png",
+  //   },
+  // ];
 
   const spots = [
     {
@@ -363,128 +367,15 @@ const InDelhi = () => {
             ))}
           </div>
         </div>
-      </section> */}
-      <section className="trustcc">
-        <div className="trustcc__container">
-          <h2 className="trustcc__title">
-            Why Choose <span>Cozy Cabz</span>
-          </h2>
+      </section> */}    
 
-          <div className="trustcc__grid">
-            {items.map((it, i) => (
-              <article className="trustcc__card" key={i}>
-                <div className="trustcc__icon">
-                  {/* {it.icon} */}
-                  <Image
-                    src={it.image}
-                    width={0}
-                    height={0}
-                    alt="Images"
-                    unoptimized
-                  ></Image>
-                </div>
-                <h3>{it.title}</h3>
-                <p>{it.desc}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
+       
+     <Trustcc />
+     <Howto />
+    <Howrent />
+     
 
-      <section className="howto">
-        <div className="howtoWrap">
-          <h2 className="howtoTitle">How to Book Your Ride</h2>
-          <p className="howtoSubtitle">
-            Simple, fast, and transparent—just follow these 5 steps.
-          </p>
-
-          {/* Connector line behind badges */}
-          <div className="connector" aria-hidden="true" />
-
-          <div className="stepsGrid">
-            <StepCard
-              color="#2563EB"
-              icon={<PhoneIcon />}
-              step={1}
-              title="Contact Our Team"
-              text="Call us, WhatsApp, or register online to begin your Delhi cab booking."
-            />
-            <StepCard
-              color="#16A34A"
-              icon={<PinIcon />}
-              step={2}
-              title="Share Your Trip Details"
-              text="Provide pickup point, drop location, travel date, time, and any special requests."
-            />
-            <StepCard
-              color="#8B5CF6"
-              icon={<CarIcon />}
-              step={3}
-              title="Select Your Car"
-              text=" Choose from hatchbacks, sedans, SUVs, tempo travelers, or luxury cars, and get the fare instantly.
-"
-            />
-            <StepCard
-              color="#F97316"
-              icon={<CheckIcon />}
-              step={4}
-              title="Get Confirmation"
-              text="Receive booking confirmation with driver details and complete fare information."
-            />
-            <StepCard
-              color="#EF4444"
-              icon={<ClockIcon />}
-              step={5}
-              title="Wait for Arrival"
-              text="Relax—your Cozy Cabz driver will arrive on time at the scheduled location."
-            />
-          </div>
-        </div>
-      </section>
-
-      <section className="howrent" aria-labelledby="howrent-title">
-        <div className="howrent__container">
-          <h2 id="howrent-title">Easy Booking Process</h2>
-          <p className="howrent__intro">
-            Booking your ride with cozy cabz is quick, simple, and completely
-            hassle-free. Just follow four easy steps:
-          </p>
-
-          <ul className="howrent__list">
-            <li className="howrent__item">
-              <h3>Contact Our Team</h3>
-              <p>
-                Reach out to us or register on our website to start your booking
-                process quickly.
-              </p>
-            </li>
-
-            <li className="howrent__item">
-              <h3>Share Your Details</h3>
-              <p>
-                Provide your pickup & drop points, travel date, time, and trip
-                type (local, outstation, or airport).
-              </p>
-            </li>
-
-            <li className="howrent__item">
-              <h3>Select Car Model</h3>
-              <p>
-                Choose from economy cars, SUVs, premium sedans, or luxury taxis,
-                and get your fare instantly.
-              </p>
-            </li>
-
-            <li className="howrent__item">
-              <h3>Enjoy a Stress-Free Ride</h3>
-              <p>
-                Sit back, unwind, and let our driver handle Mumbai’s traffic
-                while you travel in comfort.
-              </p>
-            </li>
-          </ul>
-        </div>
-      </section>
+     
 
       <section className="attractions" aria-labelledby="attractions-title">
         <div className="attractions__container">

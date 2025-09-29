@@ -3,6 +3,9 @@
 import React, { useState } from "react";
 import Header from "../Components/Header/page";
 import Footer from "../Components/Footer/page";
+import Trustcc from "../Components/Trustcc";
+import Howto from "../Components/Howto";
+import Howrent from "../Components/Howrent";
 
 const InVijayawada = () => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -75,7 +78,7 @@ const InVijayawada = () => {
       img: "/g1.webp",
       alt: "Kanaka Durga Temple on Indrakeeladri Hill in Vijayawada",
       paragraphs: [
-        "Perched on Indrakeeladri Hill, Kanaka Durga Temple is Vijayawada’s most famous shrine. Dedicated to Goddess Durga, it offers breathtaking views of the Krishna River and draws pilgrims and tourists alike.",
+        "Perched on Indrakeeladri Hill, Kanaka Durga Temple is Vijayawada’s most famous shrine. Dedicated to Goddess Durga, it offers breathtaking views of the Krishna River. Pilgrims and tourists alike are drawn to its spirituality and scenic surroundings.",
       ],
     },
     {
@@ -107,7 +110,7 @@ const InVijayawada = () => {
       img: "/g3.webp",
       alt: "Gandhi Hill viewpoint and memorial in Vijayawada",
       paragraphs: [
-        "A memorial dedicated to Mahatma Gandhi, Gandhi Hill offers panoramic city views and houses a planetarium, library, and exhibitions—both educational and scenic.",
+        "A memorial dedicated to Mahatma Gandhi, Gandhi Hill offers panoramic city views and houses a planetarium, library, and exhibitions. It’s both educational and scenic, making it a unique attraction in Vijayawada.",
       ],
     },
     {
@@ -211,10 +214,10 @@ const InVijayawada = () => {
           <h1 className="heroeco__title">Car Rental in Vijayawada</h1>
           <span className="small-head">
             <br />
-            <h4>– Safe, Reliable & Affordable</h4>
+            <h4>Safe, Reliable & Affordable</h4>
           </span>
           <p className="heroeco__sub">
-            Vijayawada, often called the “Business Capital of Andhra Pradesh,” is a bustling city on the banks of the Krishna River. Known for its rich culture, ancient temples, and modern lifestyle, it attracts both tourists and professionals. From the sacred Kanaka Durga Temple to the scenic Prakasam Barrage and green Bhavani Island, the city is full of attractions. Getting around comfortably is key, and that’s where Cozy Cabz offers car rental in Vijayawada—making your journey smooth, safe, and stress-free. Whether you need a car on rent in Vijayawada with driver, a self drive car in Vijayawada, or a rental car in Vijayawada for outstation trips, we have the right solution for you.
+            Vijayawada, the Business Capital of Andhra Pradesh, blends culture, temples, and modern life. From Kanaka Durga Temple to Prakasam Barrage and Bhavani Island, the city shines. Cozy Cabz Car Rental in Vijayawada ensures safe, smooth travel for local trips, self drive, and outstation rides.
           </p>
         </div>
       </section>
@@ -293,73 +296,10 @@ const InVijayawada = () => {
         </div>
       </section>
 
-      <section className="trustcc">
-        <div className="trustcc__container">
-          <h2 className="trustcc__title">
-            Why Choose Cozy Cabz in<span> Vijayawada?</span>
-          </h2>
-          <div className="trustcc__grid">
-            {items.map((it, i) => (
-              <article className="trustcc__card" key={i}>
-                <div className="trustcc__icon">{it.icon}</div>
-                <h3>{it.title}</h3>
-                <p>{it.desc}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="howto">
-        <div className="howtoWrap">
-          <h2 className="howtoTitle">Easy Booking Process – Car Rental in Vijayawada</h2>
-          <p className="howtoSubtitle">Simple and straightforward. Follow these steps to book your ride in Vijayawada.</p>
-
-          <div className="connector" aria-hidden="true" />
-
-          <div className="stepsGrid">
-            <StepCard color="#2563EB" icon={<PhoneIcon />} step={1} title="Contact Our Team" text="Call us or book online to start your car rental in Vijayawada quickly and hassle-free." />
-            <StepCard color="#16A34A" icon={<PinIcon />} step={2} title="Share Your Trip Details" text="Provide pickup & drop locations, date, time, and trip type—local, outstation, or airport transfer." />
-            <StepCard color="#8B5CF6" icon={<CarIcon />} step={3} title="Select Your Car" text="Choose from economy cars, SUVs, luxury models, or self drive cars in Vijayawada for added flexibility." />
-            <StepCard color="#F97316" icon={<CheckIcon />} step={4} title="Get Confirmation" text="Get instant booking details, including car model, driver information, and estimated arrival time." />
-            <StepCard color="#EF4444" icon={<ClockIcon />} step={5} title="Enjoy the Ride" text="Sit back and relax while our professional chauffeurs handle Vijayawada’s traffic for a smooth and comfortable journey." />
-          </div>
-        </div>
-      </section>
-
-      <section className="howrent" aria-labelledby="howrent-title">
-        <div className="howrent__container">
-          <h2 id="howrent-title">Car Rental Services in Vijayawada</h2>
-          <p className="howrent__intro">Cozy Cabz offers flexible car rental in Vijayawada to suit every need:</p>
-
-          <ul className="howrent__list">
-            <li className="howrent__item">
-              <h3>Local Rentals</h3>
-              <p>Hourly or daily car hire in Vijayawada for shopping, meetings, or city tours.</p>
-            </li>
-            <li className="howrent__item">
-              <h3>Airport Transfers</h3>
-              <p>Reliable rides to and from Vijayawada International Airport.</p>
-            </li>
-            <li className="howrent__item">
-              <h3>Outstation Trips</h3>
-              <p>Book rental cars in Vijayawada for destinations like Amaravati, Guntur, and Hyderabad.</p>
-            </li>
-            <li className="howrent__item">
-              <h3>Luxury Cars</h3>
-              <p>Premium luxury car rental in Vijayawada for weddings, events, and VIP guests.</p>
-            </li>
-            <li className="howrent__item">
-              <h3>Self Drive Options</h3>
-              <p>Choose self drive car rental Vijayawada for independence and privacy.</p>
-            </li>
-            <li className="howrent__item">
-              <h3>Group Travel</h3>
-              <p>SUVs, tempo travelers, and 7 seater rental cars for family trips.</p>
-            </li>
-          </ul>
-        </div>
-      </section>
+  
+<Trustcc />
+     <Howto/>
+    <Howrent />
 
       <section className="attractions" aria-labelledby="attractions-title">
         <div className="attractions__container">

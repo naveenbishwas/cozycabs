@@ -5,6 +5,10 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Header from "../Components/Header/page";
 import Footer from "../Components/Footer/page";
+import Trustcc from "../Components/Trustcc";
+import Howto from "../Components/Howto";
+import Howrent from "../Components/Howrent";
+
 
 const InChandigarh = () => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -229,11 +233,12 @@ const InChandigarh = () => {
           <h1 className="heroeco__title">Car Rental in Chandigardh </h1>
           <span className="small-head">
             <br />
-            <h4>– Safe, Reliable & Affordable
+            <h4>Safe, Reliable & Affordable
             </h4>
           </span>
           <p className="heroeco__sub">
-          Chandigarh, the City Beautiful, is known for its clean roads, planned architecture, and modern lifestyle. From Le Corbusier’s masterpieces to scenic gardens and lakes, it is one of India’s most unique cities. But getting around can be time-consuming without the right ride. That’s why Cozy Cabz offers car rental in Chandigarh with driver, ensuring your travel is smooth, safe, and stress-free. Whether it’s local sightseeing, business meetings, airport transfers, or weekend trips from Chandigarh, our well-maintained fleet and trained drivers are here for you.
+          Chandigarh, the City Beautiful, is known for its clean roads, planned design, gardens, and lakes. Yet travel can be time-consuming. That’s why Cozy Cabz Car Rental in Chandigarh with driver ensures safe, smooth rides for sightseeing, airport transfers, business trips, and weekend journeys.
+
 
           </p>
         </div>
@@ -394,129 +399,9 @@ const InChandigarh = () => {
           </div>
         </div>
       </section> */}
-      <section className="trustcc">
-        <div className="trustcc__container">
-          <h2 className="trustcc__title">
-            Why Choose Cozy Cabz in<span>Chandigarh?</span>
-          </h2>
-          {/* <p className="trustcc__sub">
-            Everything we build is focused on safe, reliable and fairly-priced
-            rides.
-          </p> */}
-
-          <div className="trustcc__grid">
-            {items.map((it, i) => (
-              <article className="trustcc__card" key={i}>
-                <div className="trustcc__icon">{it.icon}</div>
-                <h3>{it.title}</h3>
-                <p>{it.desc}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="howto">
-        <div className="howtoWrap">
-          <h2 className="howtoTitle">How to Book Your Ride</h2>
-          <p className="howtoSubtitle">
-            Simple and straightforward booking process. Follow these easy steps
-            to book your ride.
-          </p>
-
-          {/* Connector line behind badges */}
-          <div className="connector" aria-hidden="true" />
-
-          <div className="stepsGrid">
-            <StepCard
-              color="#2563EB"
-              icon={<PhoneIcon />}
-              step={1}
-              title="Contact Our Team"
-              text="Contact our team or register on our website to get started with your booking process."
-            />
-            <StepCard
-              color="#16A34A"
-              icon={<PinIcon />}
-              step={2}
-              title="Share Your Details"
-              text="Share your destination & departure timing along with any specific requirements."
-            />
-            <StepCard
-              color="#8B5CF6"
-              icon={<CarIcon />}
-              step={3}
-              title="Select Car Model"
-              text="Select your preferred car model from our fleet and calculate the fare instantly."
-            />
-            <StepCard
-              color="#F97316"
-              icon={<CheckIcon />}
-              step={4}
-              title="Get Confirmation"
-              text="Get confirmation in few seconds with booking details and driver information."
-            />
-            <StepCard
-              color="#EF4444"
-              icon={<ClockIcon />}
-              step={5}
-              title="Wait for Arrival"
-              text="Relax and wait for your cab to arrive at your place at the scheduled time."
-            />
-          </div>
-        </div>
-      </section>
-
-      <section className="howrent" aria-labelledby="howrent-title">
-        <div className="howrent__container">
-          <h2 id="howrent-title">Car Rental Services in Chandigarh</h2>
-          <p className="howrent__intro">
-          At Cozy Cabz, our car rental services in Chandigarh are tailored to meet all travel needs:
-          </p>
-
-          <ul className="howrent__list">
-            <li className="howrent__item">
-              <h3>Local Rentals</h3>
-              <p>
-              Hourly or daily packages for shopping, meetings, or sightseeing.
-              </p>
-            </li>
-
-            <li className="howrent__item">
-              <h3>Airport Transfers</h3>
-              <p>
-              Reliable pickups and drops from Chandigarh Airport with Chandigarh car booking.
-
-              </p>
-            </li>
-
-            <li className="howrent__item">
-              <h3>Outstation Trips </h3>
-              <p>
-              One-way or round-trip rides to Shimla, Manali, Amritsar, or Delhi with car rental in Chandigarh with driver.
-              </p>
-            </li>
-
-            <li className="howrent__item">
-              <h3>
-
-Self-Drive Cars –</h3>
-              <p>
-              Affordable self drive car rental Chandigarh options for those who prefer flexibility.
-
-
-              </p>
-            </li>
-            <li className="howrent__item">
-              <h3>LCorporate & Leasing</h3>
-              <p>
-              Long-term vehicle on rent in Chandigarh with competitive pricing for businesses.
-              </p>
-            </li>
-          
-          </ul>
-        </div>
-      </section>
+    <Trustcc />
+     <Howto/>
+    <Howrent />
 
       <section className="attractions" aria-labelledby="attractions-title">
         <div className="attractions__container">

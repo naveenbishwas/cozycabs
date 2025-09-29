@@ -4,7 +4,10 @@ import React, { useState } from "react";
 import "./InternalOne.css";
 import Image from "next/image";
 import Header from "../Components/Header/page";
-import Footer from "../Components/Footer/page";
+import Footer from "../Components/Footer/page"; 
+import Trustcc from "../Components/Trustcc";
+import Howto from "../Components/Howto";
+import Howrent from "../Components/Howrent";
 
 const InMumbai = () => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -77,6 +80,14 @@ const InMumbai = () => {
       alt: "Rock-cut Elephanta Caves surrounded by greenery",
       paragraphs: [
         "If you want to step away from the chaos of the city, Elephanta Caves and Sanjay Gandhi National Park are perfect day trips. The Elephanta Caves, a UNESCO World Heritage site, house ancient rock-cut temples dedicated to Lord Shiva. Meanwhile, Sanjay Gandhi National Park offers greenery, trekking trails, and a mini train ride, making it a favorite for nature lovers and families. By booking a rental car in Mumbai with driver, you can comfortably plan a full-day outing, knowing your car and driver will be with you throughout the trip.",
+      ],
+    },
+    {
+      title: "Juhu Beach & Bandra Bandstand",
+      img: "/g3.webp",
+      alt: "Juhu Beach & Bandra Bandstand",
+      paragraphs: [
+        "For a taste of Mumbai’s glam life, head to Juhu Beach and Bandra Bandstand. Juhu is buzzing with food stalls, local entertainment, and sometimes even Bollywood celebrity sightings. On the other hand, Bandra Bandstand offers a quieter seaside walk, along with famous attractions like Mannat, Shah Rukh Khan’s residence. Our cars on rent in Mumbai make it easy to cover both locations in one smooth ride, whether for leisure, family outings, or a casual evening.",
       ],
     },
   ];
@@ -347,130 +358,9 @@ const InMumbai = () => {
           </div>
         </div>
       </section> */}
-      <section className="trustcc">
-        <div className="trustcc__container">
-          <h2 className="trustcc__title">
-            Why Choose <span>Cozy Cabz</span>
-          </h2>
-          {/* <p className="trustcc__sub">
-               Everything we build is focused on safe, reliable and fairly-priced
-               rides.
-             </p> */}
-
-          <div className="trustcc__grid">
-            {items.map((it, i) => (
-              <article className="trustcc__card" key={i}>
-                <div className="trustcc__icon">
-                  {/* {it.icon} */}
-                  <Image
-                    src={it.image}
-                    width={0}
-                    height={0}
-                    alt="Images"
-                    unoptimized
-                  ></Image>
-                </div>
-                <h3>{it.title}</h3>
-                <p>{it.desc}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="howto">
-        <div className="howtoWrap">
-          <h2 className="howtoTitle">How to Book Your Ride</h2>
-          <p className="howtoSubtitle">
-            Simple, quick, and transparent—book in 5 easy steps.
-          </p>
-
-          {/* Connector line behind badges */}
-          <div className="connector" aria-hidden="true" />
-
-          <div className="stepsGrid">
-            <StepCard
-              color="#2563EB"
-              icon={<PhoneIcon />}
-              step={1}
-              title="Contact Our Team"
-              text="Call/WhatsApp or fill the form with pickup, drop, date, and time."
-            />
-            <StepCard
-              color="#16A34A"
-              icon={<PinIcon />}
-              step={2}
-              title="Share Your Trip Details"
-              text="Tell us route, stops, passenger count, hours/km plan, and any special requests."
-            />
-            <StepCard
-              color="#8B5CF6"
-              icon={<CarIcon />}
-              step={3}
-              title="Select Your Car"
-              text="Choose from hatchbacks, sedans, SUVs, 7/9-seaters, or luxury; view the fare instantly."
-            />
-            <StepCard
-              color="#F97316"
-              icon={<CheckIcon />}
-              step={4}
-              title="Get Confirmation"
-              text="Receive booking confirmation with vehicle & driver details; pay token/full via UPI/Card."
-            />
-            <StepCard
-              color="#EF4444"
-              icon={<ClockIcon />}
-              step={5}
-              title="Wait for Arrival"
-              text="Track your cab, meet your chauffeur on time, and enjoy a safe, sanitized ride—24×7 support."
-            />
-          </div>
-        </div>
-      </section>
-
-      <section className="howrent" aria-labelledby="howrent-title">
-        <div className="howrent__container">
-          <h2 id="howrent-title">Easy Booking Process</h2>
-          <p className="howrent__intro">
-            Simple and straightforward booking process. Follow these easy steps
-            to book your ride with Cozy Cabz in Mumbai.
-          </p>
-
-          <ul className="howrent__list">
-            <li className="howrent__item">
-              <h3>Enter Your Trip Details</h3>
-              <p>
-                Add pickup & drop location, date, timings, and trip type (local,
-                outstation, or airport).
-              </p>
-            </li>
-
-            <li className="howrent__item">
-              <h3>Choose Your Vehicle</h3>
-              <p>
-                Pick from economy rental cars, SUVs, or luxury car hire in
-                Mumbai with driver based on your comfort and budget.
-              </p>
-            </li>
-
-            <li className="howrent__item">
-              <h3> Get Instant Confirmation</h3>
-              <p>
-                Receive booking details instantly, including car model, driver
-                information, and estimated arrival time.
-              </p>
-            </li>
-
-            <li className="howrent__item">
-              <h3>Enjoy a Stress-Free Ride</h3>
-              <p>
-                Sit back, unwind, and let our driver handle Mumbai’s traffic
-                while you travel in comfort.
-              </p>
-            </li>
-          </ul>
-        </div>
-      </section>
+    <Trustcc/>
+    <Howto/>
+    <Howrent />
 
       <section className="attractions" aria-labelledby="attractions-title">
         <div className="attractions__container">

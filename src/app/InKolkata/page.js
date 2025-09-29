@@ -5,6 +5,9 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Header from "../Components/Header/page";
 import Footer from "../Components/Footer/page";
+import Trustcc from "../Components/Trustcc";
+import Howto from "../Components/Howto";
+import Howrent from "../Components/Howrent";
 
 const InAhmedabad = () => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -99,7 +102,7 @@ const InAhmedabad = () => {
       img: "/g1.webp",
       alt: "Victoria Memorial",
       paragraphs: [
-        "Iconic marble monument with lush gardens and a rich museum showcasing Kolkata’s colonial-era heritage.",
+        "Built in memory of Queen Victoria, this marble monument is one of Kolkata’s most iconic attractions. Surrounded by lush gardens and housing an impressive museum, it offers visitors a chance to admire colonial architecture and explore art, sculptures, and historical exhibits that reflect the city’s royal past.",
       ],
     },
     {
@@ -107,7 +110,7 @@ const InAhmedabad = () => {
       img: "/g2.webp",
       alt: "Howrah Bridge",
       paragraphs: [
-        "Engineering marvel over the Hooghly River—driving across captures the pulse of the city.",
+        "Known as Rabindra Setu, the Howrah Bridge is an engineering marvel and the lifeline of Kolkata. Stretching over the Hooghly River, it carries thousands of vehicles daily. Driving across it is a unique experience that captures the pulse of the city, making it a must for anyone exploring Kolkata",
       ],
     },
     {
@@ -115,7 +118,7 @@ const InAhmedabad = () => {
       img: "/g3.webp",
       alt: "Dakshineswar Temple",
       paragraphs: [
-        "Renowned riverside temple dedicated to Goddess Kali with 12 Shiva shrines and stunning architecture.",
+        "Dedicated to Goddess Kali, Dakshineswar Temple is a renowned pilgrimage spot located on the banks of the Hooghly River. Built in the 19th century, it features stunning architecture with 12 Shiva temples surrounding the main shrine. It is both a spiritual and cultural landmark that attracts visitors from across the country.",
       ],
     },
     {
@@ -123,7 +126,7 @@ const InAhmedabad = () => {
       img: "/g4.webp",
       alt: "Indian Museum",
       paragraphs: [
-        "India’s oldest and largest museum with rare antiques, fossils, paintings, textiles, and an Egyptian mummy.",
+        "Founded in 1814, the Indian Museum is the oldest and largest museum in India. Its vast collection includes rare antiques, fossils, Mughal paintings, textiles, and even an Egyptian mummy. For history and culture enthusiasts, it provides an unmatched journey into India’s past and global heritage.",
       ],
     },
     {
@@ -131,7 +134,7 @@ const InAhmedabad = () => {
       img: "/g1.webp",
       alt: "Science City",
       paragraphs: [
-        "Interactive exhibits, 3D shows, and space theater—education meets entertainment for all ages.",
+        "Science City is one of Asia’s largest science centers, blending education with entertainment. With interactive exhibits, 3D shows, and a space theater, it appeals to students, families, and curious minds. It’s the perfect place to enjoy hands-on learning while spending a fun-filled day.",
       ],
     },
     {
@@ -139,7 +142,7 @@ const InAhmedabad = () => {
       img: "/g2.webp",
       alt: "Marble Palace",
       paragraphs: [
-        "19th-century mansion with neoclassical architecture, European art, and an ornate private collection.",
+        "The Marble Palace is a 19th-century mansion showcasing exquisite neoclassical architecture and stunning art collections. Visitors can admire European paintings, statues, chandeliers, and ornamental birds in its private zoo. It offers a fascinating glimpse into Kolkata’s artistic and aristocratic legacy.",
       ],
     },
   ];
@@ -249,7 +252,7 @@ const InAhmedabad = () => {
           <h1 className="heroeco__title">Car Rental in Kolkata</h1>
           <span className="small-head">
             <br />
-            <h4>– Reliable, Safe & Affordable</h4>
+            <h4>Reliable, Safe & Affordable</h4>
           </span>
           <p className="heroeco__sub">
             Kolkata, the City of Joy, blends colonial architecture, vibrant
@@ -389,88 +392,9 @@ const InAhmedabad = () => {
         </div>
       </section>
 
-      <section className="trustcc">
-        <div className="trustcc__container">
-          <h2 className="trustcc__title">
-            Why Choose Cozy Cabz in<span> Kolkata?</span>
-          </h2>
-          <div className="trustcc__grid">
-            {items.map((it, i) => (
-              <article className="trustcc__card" key={i}>
-                <div className="trustcc__icon">{it.icon}</div>
-                <h3>{it.title}</h3>
-                <p>{it.desc}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="howto">
-        <div className="howtoWrap">
-          <h2 className="howtoTitle">How to Book Your Ride</h2>
-          <p className="howtoSubtitle">
-            Simple and straightforward booking process. Follow these easy steps
-            to book your ride.
-          </p>
-          <div className="connector" aria-hidden="true" />
-          <div className="stepsGrid">
-            <StepCard
-              color="#2563EB"
-              icon={<PhoneIcon />}
-              step={1}
-              title="Contact Our Team"
-              text="Contact our team or register on our website to get started with your booking process."
-            />
-            <StepCard
-              color="#16A34A"
-              icon={<PinIcon />}
-              step={2}
-              title="Share Your Details"
-              text="Share your destination & departure timing along with any specific requirements."
-            />
-            <StepCard
-              color="#8B5CF6"
-              icon={<CarIcon />}
-              step={3}
-              title="Select Car Model"
-              text="Select your preferred car model from our fleet and calculate the fare instantly."
-            />
-            <StepCard
-              color="#F97316"
-              icon={<CheckIcon />}
-              step={4}
-              title="Get Confirmation"
-              text="Get confirmation in few seconds with booking details and driver information."
-            />
-            <StepCard
-              color="#EF4444"
-              icon={<ClockIcon />}
-              step={5}
-              title="Wait for Arrival"
-              text="Relax and wait for your cab to arrive at your place at the scheduled time."
-            />
-          </div>
-        </div>
-      </section>
-
-      <section className="howrent" aria-labelledby="howrent-title">
-        <div className="howrent__container">
-          <h2 id="howrent-title">Different Car Rental Services in Kolkata</h2>
-          <p className="howrent__intro">
-            Tailored car rental services to suit every requirement:
-          </p>
-          <ul className="howrent__list">
-            {services.map((s) => (
-              <li className="howrent__item" key={s.title}>
-                <h3>{s.title}</h3>
-                <p>{s.text}</p>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
-
+<Trustcc />
+     <Howto/>
+    <Howrent />
       <section className="attractions" aria-labelledby="attractions-title">
         <div className="attractions__container">
           <header className="attractions__head">

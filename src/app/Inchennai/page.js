@@ -5,6 +5,9 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Header from "../Components/Header/page";
 import Footer from "../Components/Footer/page";
+import Trustcc from "../Components/Trustcc";
+import Howto from "../Components/Howto";
+import Howrent from "../Components/Howrent";
 
 const Inchennai = () => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -52,7 +55,7 @@ const Inchennai = () => {
       img: "/g1.webp",
       alt: "Waves and shoreline at Marina Beach",
       paragraphs: [
-        "Stretching for over 13 km, Marina Beach is India’s longest urban beach. Perfect for sunrise walks and breezy evenings with lively food stalls and local vendors.",
+        "Stretching for over 13 km, Marina Beach is the longest urban beach in India and a must-visit landmark of Chennai. It’s perfect for morning walks, sunrise views, and evening gatherings, with food stalls and local vendors adding to the lively vibe. Both locals and tourists flock here daily to enjoy the sea breeze and stunning coastal views.",
       ],
     },
     {
@@ -60,7 +63,7 @@ const Inchennai = () => {
       img: "/g2.webp",
       alt: "Colorful gopuram of Kapaleeshwarar Temple",
       paragraphs: [
-        "A stunning example of Dravidian architecture in Mylapore. Its towering gopuram and spiritual ambiance make it a must-visit for culture seekers.",
+        "One of Chennai’s most famous temples, the Kapaleeshwarar Temple in Mylapore is a fine example of Dravidian architecture. Its towering, colorful gopuram is a sight to behold, while the temple’s spiritual atmosphere offers peace to thousands of devotees and visitors every day. Festivals here are celebrated with grandeur, making it a cultural highlight of the city.",
       ],
     },
     {
@@ -68,7 +71,7 @@ const Inchennai = () => {
       img: "/g3.webp",
       alt: "Historic Fort St. George complex",
       paragraphs: [
-        "Built in 1644, this colonial-era fort marks the beginning of British rule in India and houses a museum of rare artifacts and relics.",
+        "Built in 1644, Fort St. George marks the beginning of British rule in India. Today, it serves as a historic monument housing a museum with paintings, coins, weapons, and relics from the colonial era. The fort is not just an architectural marvel but also a reminder of Chennai’s rich past.",
       ],
     },
     {
@@ -76,7 +79,7 @@ const Inchennai = () => {
       img: "/g4.webp",
       alt: "Government Museum building in Chennai",
       paragraphs: [
-        "Founded in 1851, one of India’s oldest museums featuring vast collections in art, archaeology, and anthropology, including rare South Indian bronzes.",
+        "Founded in 1851, the Government Museum is one of India’s oldest and most important cultural institutions. It showcases collections of art, archaeology, and anthropology, including rare South Indian bronzes and paintings. A visit here is perfect for history lovers and art enthusiasts wanting to explore Tamil Nadu’s heritage.",
       ],
     },
     {
@@ -84,7 +87,7 @@ const Inchennai = () => {
       img: "/g1.webp",
       alt: "Kalakshetra cultural campus",
       paragraphs: [
-        "A renowned cultural academy preserving classical dance, music, and arts of South India—offering performances and enriching experiences.",
+        "Kalakshetra is a cultural academy dedicated to preserving classical dance, music, and art forms of South India. Visitors can watch live performances, interact with artists, and experience the essence of Tamil traditions. It’s an inspiring space that reflects Chennai’s deep connection to art and culture.",
       ],
     },
     {
@@ -92,7 +95,7 @@ const Inchennai = () => {
       img: "/g2.webp",
       alt: "T. Nagar shopping area and mall",
       paragraphs: [
-        "Shop silk sarees and jewelry in T. Nagar’s bustling markets, or enjoy a modern retail and entertainment experience at Express Avenue Mall.",
+        "T. Nagar is the busiest shopping hub of Chennai, known for silk sarees, gold jewelry, and buzzing street markets. In contrast, Express Avenue Mall offers a modern shopping and entertainment experience with luxury brands, cafés, and multiplexes. Together, they represent the city’s traditional charm and cosmopolitan lifestyle.",
       ],
     },
     {
@@ -100,7 +103,7 @@ const Inchennai = () => {
       img: "/g3.webp",
       alt: "Shore Temple at Mahabalipuram",
       paragraphs: [
-        "A UNESCO World Heritage destination 60 km from Chennai, famous for rock-cut temples like the Shore Temple, Pancha Rathas, and Arjuna’s Penance.",
+        "Located just 60 km from Chennai, Mahabalipuram is a UNESCO World Heritage site renowned for its rock-cut temples and sculptures. The Shore Temple, Arjuna’s Penance, and Pancha Rathas showcase incredible artistry dating back to the Pallava dynasty. A trip here is a perfect blend of history, spirituality, and coastal beauty",
       ],
     },
     {
@@ -108,7 +111,7 @@ const Inchennai = () => {
       img: "/g4.webp",
       alt: "Greenery inside Guindy National Park",
       paragraphs: [
-        "One of the few national parks within a metro city—home to blackbucks, deer, and diverse birdlife—ideal for nature lovers and families.",
+        "Spread across 600 acres, Guindy National Park is one of the few national parks located inside a metro city. It is home to blackbucks, deer, jackals, and over 130 bird species, making it a favorite for nature enthusiasts. The park also has a children’s park and snake park, making it a family-friendly destination.",
       ],
     },
   ];
@@ -214,14 +217,10 @@ const Inchennai = () => {
           <h1 className="heroeco__title">Car Rental in Chennai</h1>
           <span className="small-head">
             <br />
-            <h4>– Safe, Comfortable & Reliable</h4>
+            <h4>Safe, Comfortable & Reliable</h4>
           </span>
           <p className="heroeco__sub">
-            Chennai, the cultural capital of South India, blends ancient temples
-            and colonial landmarks with Marina Beach and buzzing IT corridors.
-            With busy roads and long distances, moving around can feel
-            stressful. That’s where cozy cabz car rental in Chennai with driver
-            comes in—making every journey smooth, safe, and convenient.
+           Chennai, the cultural capital of South India, blends temples, colonial landmarks, Marina Beach, and IT hubs. But traffic and long distances make travel stressful. That’s where Cozy Cabz Car Rental in Chennai with driver ensures smooth, safe, and convenient rides.
           </p>
         </div>
       </section>
@@ -355,125 +354,9 @@ const Inchennai = () => {
         </div>
       </section>
 
-      <section className="trustcc">
-        <div className="trustcc__container">
-          <h2 className="trustcc__title">
-            Why Choose <span>Cozy Cabz</span>
-          </h2>
-
-          <div className="trustcc__grid">
-            {items.map((it, i) => (
-              <article className="trustcc__card" key={i}>
-                <div className="trustcc__icon">
-                  {/* {it.icon} */}
-                  <Image
-                    src={it.image}
-                    width={0}
-                    height={0}
-                    alt="Images"
-                    unoptimized
-                  ></Image>
-                </div>
-                <h3>{it.title}</h3>
-                <p>{it.desc}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="howto">
-        <div className="howtoWrap">
-          <h2 className="howtoTitle">How to Book Your Ride</h2>
-          <p className="howtoSubtitle">
-            Simple and straightforward booking process. Follow these easy steps
-            to book your ride.
-          </p>
-
-          <div className="connector" aria-hidden="true" />
-
-          <div className="stepsGrid">
-            <StepCard
-              color="#2563EB"
-              icon={<PhoneIcon />}
-              step={1}
-              title="Contact Our Team"
-              text="Contact our team or register on our website to get started with your booking process."
-            />
-            <StepCard
-              color="#16A34A"
-              icon={<PinIcon />}
-              step={2}
-              title="Share Your Details"
-              text="Share your destination & departure timing along with any specific requirements."
-            />
-            <StepCard
-              color="#8B5CF6"
-              icon={<CarIcon />}
-              step={3}
-              title="Select Car Model"
-              text="Select your preferred car model from our fleet and calculate the fare instantly."
-            />
-            <StepCard
-              color="#F97316"
-              icon={<CheckIcon />}
-              step={4}
-              title="Get Confirmation"
-              text="Get confirmation in few seconds with booking details and driver information."
-            />
-            <StepCard
-              color="#EF4444"
-              icon={<ClockIcon />}
-              step={5}
-              title="Wait for Arrival"
-              text="Relax and wait for your cab to arrive at your place at the scheduled time."
-            />
-          </div>
-        </div>
-      </section>
-
-      <section className="howrent" aria-labelledby="howrent-title">
-        <div className="howrent__container">
-          <h2 id="howrent-title">Easy Booking Process</h2>
-          <p className="howrent__intro">
-            Booking your ride with cozy cabz is fast and hassle-free:
-          </p>
-
-          <ul className="howrent__list">
-            <li className="howrent__item">
-              <h3>Enter Trip Details</h3>
-              <p>
-                Pickup & drop location, date, time, and trip type—local,
-                outstation, or airport.
-              </p>
-            </li>
-
-            <li className="howrent__item">
-              <h3>Choose Your Car</h3>
-              <p>
-                Economy cars, premium sedans, SUVs, tempo travelers, or luxury
-                cars.
-              </p>
-            </li>
-
-            <li className="howrent__item">
-              <h3>Get Instant Confirmation</h3>
-              <p>
-                Driver details, car info, and estimated arrival time shared
-                right away.
-              </p>
-            </li>
-
-            <li className="howrent__item">
-              <h3>Enjoy the Ride</h3>
-              <p>
-                Sit back while our experienced driver takes care of Chennai’s
-                traffic.
-              </p>
-            </li>
-          </ul>
-        </div>
-      </section>
+      <Trustcc />
+     <Howto/>
+    <Howrent />
 
       <section className="attractions" aria-labelledby="attractions-title">
         <div className="attractions__container">

@@ -5,6 +5,9 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Header from "../Components/Header/page";
 import Footer from "../Components/Footer/page";
+import Trustcc from "../Components/Trustcc";
+import Howto from "../Components/Howto";
+import Howrent from "../Components/Howrent";
 
 const Inbanglore = () => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -52,31 +55,29 @@ const Inbanglore = () => {
       img: "/g1.webp",
       alt: "Bangalore Palace exterior",
       paragraphs: [
-        "An iconic landmark with Tudor-style architecture, sprawling lawns, and regal interiors from Victorian, Edwardian, and Neo-Classical periods—offering a glimpse into Bangalore’s royal past.",
-      ],
+        "For any visitor, the iconic Bangalore Palace is one of the city’s most fascinating landmarks. Spread across sprawling grounds, the palace instantly transports you into a royal era amidst the bustling modern city. Its Tudor-style architecture, complete with turrets and battlements, makes it look like a fairytale castle right in the heart of Bangalore , Step inside, and the grandeur grows even more. The interiors are adorned with floral motifs, elegant wood carvings, and age-old paintings. Built in 1878, the palace showcases furniture and decor from Victorian, Edwardian, and Neo-Classical periods, making it a true reflection of timeless elegance. A visit here is incomplete without strolling through its lush lawns and experiencing the charm of Bangalore’s regal past "],
     },
     {
       title: "Vidhana Soudha",
       img: "/g2.webp",
       alt: "Vidhana Soudha lit up at night",
       paragraphs: [
-        "The pride of Karnataka and India’s largest legislative building. Built in Neo-Dravidian style, it glows beautifully on Sundays and public holidays—showcasing the city’s grandeur.",
-      ],
+        "When it comes to modern history, Vidhana Soudha is the pride of Karnataka. This majestic building, which houses the state legislature, is often described as an “architectural marvel” for its sheer scale and design. It stands as a symbol of democracy while reflecting the cultural richness of the state. Constructed in 1951, the building follows the Neo-Dravidian style of architecture, with influences of Indo-Saracenic design. Spread over 60 acres, it is the largest legislative building in India. While entry inside is restricted, the entire structure lights up beautifully every Sunday evening and on public holidays, turning into a breathtaking spectacle that highlights Bangalore’s grandeur and heritage."],
     },
     {
       title: "Lalbagh Botanical Garden",
       img: "/g3.webp",
       alt: "Lalbagh Glass House and gardens",
       paragraphs: [
-        "Spread across 240 acres, Lalbagh features the famed Glass House, a serene lake, rich tropical plant collections, and the ancient Lalbagh Rock—perfect for nature lovers and families.",
-      ],
+        "Known as the “green heart” of the city, Lalbagh Botanical Garden spreads across 240 acres and houses one of India’s richest collections of tropical plants. Commissioned by Hyder Ali and later expanded by Tipu Sultan, the garden carries Mughal influences and has been a center of horticultural excellence for centuries.The highlight of Lalbagh is the iconic Glass House, modeled after London’s Crystal Palace, which hosts the famous annual flower shows. The garden also features the historic Lalbagh Rock, dating back 3,000 million years, along with a serene lake and diverse birdlife. Whether you’re a nature enthusiast, a photographer, or a family seeking a quiet retreat, Lalbagh is an unmissable attraction in Bangalore"],
     },
     {
       title: "Cubbon Park & Seshadri Iyer Memorial Hall",
       img: "/g4.webp",
       alt: "Cubbon Park greenery and red library building",
       paragraphs: [
-        "A peaceful green escape in the heart of the city. Wander leafy trails, then visit the striking red Seshadri Iyer Memorial Hall housing the Central Library with rare manuscripts.",
+        "Nestled in the heart of the city, Cubbon Park is a peaceful green escape spread across 300 acres. With walking trails, shady avenues, and beautiful landscapes, it is a favorite spot for morning joggers, families, and tourists alike. The park’s charm lies in its calm ambiance, making it a perfect place to relax amid Bangalore’s busy streets. Within Cubbon Park stands the striking Seshadri Iyer Memorial Hall, a red-colored heritage building that houses the Central Library. Built in 1915, it features classic European architecture and an extensive collection of over 2.5 lakh books, including rare manuscripts and a Braille section. For book lovers and history enthusiasts, this hall adds cultural depth to the lush greenery of Cubbon Park."
+,
       ],
     },
   ];
@@ -325,127 +326,9 @@ const Inbanglore = () => {
         </div>
       </section>
 
-      <section className="trustcc">
-        <div className="trustcc__container">
-          <h2 className="trustcc__title">
-            Why Choose <span>Cozy Cabz</span>
-          </h2>
-
-          <div className="trustcc__grid">
-            {items.map((it, i) => (
-              <article className="trustcc__card" key={i}>
-                <div className="trustcc__icon">
-                  {/* {it.icon} */}
-                  <Image
-                    src={it.image}
-                    width={0}
-                    height={0}
-                    alt="Images"
-                    unoptimized
-                  ></Image>
-                </div>
-                <h3>{it.title}</h3>
-                <p>{it.desc}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="howto">
-        <div className="howtoWrap">
-          <h2 className="howtoTitle">How to Book Your Ride</h2>
-          <p className="howtoSubtitle">
-            Booking a cab in Bangalore is quick and hassle-free—just follow
-            these steps.
-          </p>
-
-          <div className="connector" aria-hidden="true" />
-
-          <div className="stepsGrid">
-            <StepCard
-              color="#2563EB"
-              icon={<PhoneIcon />}
-              step={1}
-              title="Contact Our Team"
-              text=" Call us, WhatsApp, or register online to start your Bangalore cab booking.
-"
-            />
-            <StepCard
-              color="#16A34A"
-              icon={<PinIcon />}
-              step={2}
-              title="Share Your Details"
-              text="Provide pickup and drop points, travel date, time, and any special requirements."
-            />
-            <StepCard
-              color="#8B5CF6"
-              icon={<CarIcon />}
-              step={3}
-              title="Select Car Model"
-              text=" Pick from economy hatchbacks, sedans, SUVs, tempo travelers, or luxury rentals—get instant fare details."
-            />
-            <StepCard
-              color="#F97316"
-              icon={<CheckIcon />}
-              step={4}
-              title="Get Confirmation"
-              text="Receive booking confirmation with car and driver details, plus transparent fare information."
-            />
-            <StepCard
-              color="#EF4444"
-              icon={<ClockIcon />}
-              step={5}
-              title="Wait for Arrival"
-              text="Sit back and relax—your Cozy Cabz driver will reach you on time, ready for a smooth ride."
-            />
-          </div>
-        </div>
-      </section>
-
-      <section className="howrent" aria-labelledby="howrent-title">
-        <div className="howrent__container">
-          <h2 id="howrent-title">Easy Booking Process</h2>
-          <p className="howrent__intro">
-            Booking your ride with cozy cabz in Bangalore takes just a few steps
-          </p>
-
-          <ul className="howrent__list">
-            <li className="howrent__item">
-              <h3>Enter Your Trip Details</h3>
-              <p>
-                Add pickup, drop, timings, and trip type—whether it’s local,
-                outstation, or airport
-              </p>
-            </li>
-
-            <li className="howrent__item">
-              <h3>Choose Your Vehicle</h3>
-              <p>
-                From economy cars to SUVs, premium sedans, or luxury taxis—pick
-                what suits your budget and comfort.
-              </p>
-            </li>
-
-            <li className="howrent__item">
-              <h3>Get Instant Confirmation</h3>
-              <p>
-                Receive driver details, car model, and estimated arrival time
-                right away.
-              </p>
-            </li>
-
-            <li className="howrent__item">
-              <h3>Enjoy a Stress-Free Ride</h3>
-              <p>
-                Sit back, relax, and let our driver handle Bangalore’s traffic
-                while you travel in comfort.
-              </p>
-            </li>
-          </ul>
-        </div>
-      </section>
-
+      <Trustcc />
+     <Howto/>
+    <Howrent />
       <section className="attractions" aria-labelledby="attractions-title">
         <div className="attractions__container">
           <header className="attractions__head">

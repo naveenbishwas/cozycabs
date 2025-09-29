@@ -3,6 +3,9 @@
 import React, { useState } from "react";
 import Header from "../Components/Header/page";
 import Footer from "../Components/Footer/page";
+import Trustcc from "../Components/Trustcc";
+import Howto from "../Components/Howto";
+import Howrent from "../Components/Howrent";
 
 const InGuwahati = () => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -75,7 +78,7 @@ const InGuwahati = () => {
       img: "/g1.webp",
       alt: "Kamakhya Temple Nilachal Hill Guwahati",
       paragraphs: [
-        "One of India’s most revered pilgrimage sites—perched atop Nilachal Hill, known for spiritual significance and grand architecture.",
+        "One of the most revered pilgrimage sites in India, Kamakhya Temple is perched atop Nilachal Hill. Known for its spiritual significance and grand architecture, it is a must-visit for devotees and tourists alike.",
       ],
     },
     {
@@ -83,7 +86,7 @@ const InGuwahati = () => {
       img: "/g2.webp",
       alt: "Umananda Island Brahmaputra river temple",
       paragraphs: [
-        "A small island temple dedicated to Lord Shiva in the middle of the Brahmaputra—serene surroundings for a peaceful day trip.",
+        "Set in the middle of the Brahmaputra River, Umananda is a small island temple dedicated to Lord Shiva. Its natural beauty and serene surroundings make it perfect for a peaceful day trip",
       ],
     },
     {
@@ -91,7 +94,7 @@ const InGuwahati = () => {
       img: "/g3.webp",
       alt: "Assam State Zoo and Botanical Garden one-horned rhino",
       paragraphs: [
-        "Home to one-horned rhinos, tigers, and exotic birds—combined with a botanical garden for greenery and wildlife encounters.",
+        "A favorite among families, this zoo is home to the one-horned rhinoceros, tigers, and exotic birds. Combined with a botanical garden, it offers both wildlife encounters and greenery to enjoy.",
       ],
     },
     {
@@ -99,7 +102,7 @@ const InGuwahati = () => {
       img: "/g4.webp",
       alt: "Pobitora Wildlife Sanctuary rhino day trip from Guwahati",
       paragraphs: [
-        "Short drive from Guwahati, famed for high one-horned rhino population—ideal for a nature day trip.",
+        "Just a short drive from Guwahati, Pobitora is famous for having one of the highest populations of one-horned rhinos. With rental cars in Guwahati, it’s an ideal spot for a day trip into nature.",
       ],
     },
     {
@@ -107,7 +110,7 @@ const InGuwahati = () => {
       img: "/g3.webp",
       alt: "Fancy Bazaar shopping Guwahati handicrafts",
       paragraphs: [
-        "Guwahati’s bustling shopping hub with Assamese handicrafts, clothing, jewelry, and street food—must-visit for shoppers.",
+        "The bustling heart of Guwahati’s shopping scene, Fancy Bazaar is filled with traditional Assamese handicrafts, clothing, jewelry, and souvenirs. A must-visit for shoppers and food lovers.",
       ],
     },
     {
@@ -200,10 +203,10 @@ const InGuwahati = () => {
           <h1 className="heroeco__title">Car Rental in Guwahati</h1>
           <span className="small-head">
             <br />
-            <h4>– Comfortable, Safe & Reliable</h4>
+            <h4>Comfortable, Safe & Reliable</h4>
           </span>
           <p className="heroeco__sub">
-            Guwahati, the gateway to Northeast India, is known for culture, temples, wildlife sanctuaries, and vibrant city life. Cozy Cabz offers car rental in Guwahati with driver and luxury to budget options—safe, clean, and well-maintained cars for every need.
+            Guwahati, the gateway to Northeast India, blends temples, wildlife sanctuaries, and modern city life. Yet traffic makes travel hectic. Cozy Cabz Car Rental in Guwahati with driver ensures safe, reliable journeys with well-maintained cars—covering luxury rentals, affordable rides, airport transfers.
           </p>
         </div>
       </section>
@@ -255,50 +258,9 @@ const InGuwahati = () => {
         </div>
       </section>
 
-      <section className="trustcc">
-        <div className="trustcc__container">
-          <h2 className="trustcc__title">Why Choose Cozy Cabz in<span> Guwahati?</span></h2>
-          <div className="trustcc__grid">
-            {items.map((it, i) => (
-              <article className="trustcc__card" key={i}>
-                <div className="trustcc__icon">{it.icon}</div>
-                <h3>{it.title}</h3>
-                <p>{it.desc}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="howto">
-        <div className="howtoWrap">
-          <h2 className="howtoTitle">Easy Booking Process – Car Rental in Guwahati</h2>
-          <p className="howtoSubtitle">Simple steps to book your ride in Guwahati.</p>
-          <div className="connector" aria-hidden="true" />
-          <div className="stepsGrid">
-            <StepCard color="#2563EB" icon={<PhoneIcon />} step={1} title="Contact Our Team" text="Call us or book online to start your car rental in Guwahati quickly." />
-            <StepCard color="#16A34A" icon={<PinIcon />} step={2} title="Share Your Trip Details" text="Provide pickup & drop locations, travel date, time, and trip type—local, outstation, or airport." />
-            <StepCard color="#8B5CF6" icon={<CarIcon />} step={3} title="Select Your Car" text="Pick from sedans, SUVs, luxury vehicles, or rent a car in Guwahati with driver for convenience." />
-            <StepCard color="#F97316" icon={<CheckIcon />} step={4} title="Get Confirmation" text="Receive instant booking details, including driver contact, vehicle info, and ETA." />
-            <StepCard color="#EF4444" icon={<ClockIcon />} step={5} title="Enjoy the Ride" text="Sit back while our chauffeurs handle Guwahati’s traffic safely and comfortably." />
-          </div>
-        </div>
-      </section>
-
-      <section className="howrent" aria-labelledby="howrent-title">
-        <div className="howrent__container">
-          <h2 id="howrent-title">Car Rental Services in Guwahati</h2>
-          <p className="howrent__intro">Choose from flexible packages that fit your plan:</p>
-          <ul className="howrent__list">
-            <li className="howrent__item"><h3>Local Rentals</h3><p>Hourly or daily packages for city sightseeing, shopping, or meetings.</p></li>
-            <li className="howrent__item"><h3>Airport Transfers</h3><p>Punctual rides to and from Guwahati Airport.</p></li>
-            <li className="howrent__item"><h3>Outstation Trips</h3><p>Book rental cars for Shillong, Cherrapunji, Kaziranga, and more.</p></li>
-            <li className="howrent__item"><h3>Luxury Cars</h3><p>Premium cars for weddings, VIP travel, and business trips.</p></li>
-            <li className="howrent__item"><h3>Self-Drive Options</h3><p>Prefer independence? Choose self-drive car rentals in Guwahati.</p></li>
-            <li className="howrent__item"><h3>Group Travel</h3><p>SUVs, tempo travelers, and multi-seater vehicles for larger groups.</p></li>
-          </ul>
-        </div>
-      </section>
+   <Trustcc />
+     <Howto/>
+    <Howrent />
 
       <section className="attractions" aria-labelledby="attractions-title">
         <div className="attractions__container">

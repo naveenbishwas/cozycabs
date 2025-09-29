@@ -4,6 +4,10 @@ import React, { useState } from "react";
 import Header from "../Components/Header/page";
 import Footer from "../Components/Footer/page";
 
+import Trustcc from "../Components/Trustcc";
+import Howto from "../Components/Howto";
+import Howrent from "../Components/Howrent";
+
 const InVisakhapatnam = () => {
   const [openIndex, setOpenIndex] = useState(null);
 
@@ -211,10 +215,10 @@ const InVisakhapatnam = () => {
           <h1 className="heroeco__title">Car Rental in Visakhapatnam</h1>
           <span className="small-head">
             <br />
-            <h4>– Reliable, Safe & Affordable</h4>
+            <h4>Reliable, Safe & Affordable</h4>
           </span>
           <p className="heroeco__sub">
-            Visakhapatnam (Vizag) blends beaches, hills, heritage temples, and modern life. From Kailasagiri overlooking the Bay of Bengal to ancient Buddhist sites and verdant sanctuaries, the city offers many experiences. Cozy Cabz provides car rental in Visakhapatnam with driver as well as self drive options—safe, convenient, and stress-free.
+            Visakhapatnam, or Vizag, blends beaches, hills, temples, and modern life. From Kailasagiri’s Bay of Bengal views to Buddhist sites and sanctuaries, the city has much to explore. Cozy Cabz offers car rental in Visakhapatnam with driver for smooth journeys.
           </p>
         </div>
       </section>
@@ -293,73 +297,9 @@ const InVisakhapatnam = () => {
         </div>
       </section>
 
-      <section className="trustcc">
-        <div className="trustcc__container">
-          <h2 className="trustcc__title">
-            Why Choose Cozy Cabz in<span> Visakhapatnam?</span>
-          </h2>
-          <div className="trustcc__grid">
-            {items.map((it, i) => (
-              <article className="trustcc__card" key={i}>
-                <div className="trustcc__icon">{it.icon}</div>
-                <h3>{it.title}</h3>
-                <p>{it.desc}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="howto">
-        <div className="howtoWrap">
-          <h2 className="howtoTitle">Easy Booking Process – Car Rental in Visakhapatnam</h2>
-          <p className="howtoSubtitle">Follow these steps to book your ride in Vizag.</p>
-
-          <div className="connector" aria-hidden="true" />
-
-          <div className="stepsGrid">
-            <StepCard color="#2563EB" icon={<PhoneIcon />} step={1} title="Contact Our Team" text="Call us or book online to start your car rental in Visakhapatnam quickly and easily." />
-            <StepCard color="#16A34A" icon={<PinIcon />} step={2} title="Share Your Trip Details" text="Provide pickup & drop points, date, time, and trip type—local, outstation, or airport transfer." />
-            <StepCard color="#8B5CF6" icon={<CarIcon />} step={3} title="Select Your Car" text="Choose from economy cars, SUVs, luxury vehicles, or self-drive options in Visakhapatnam." />
-            <StepCard color="#F97316" icon={<CheckIcon />} step={4} title="Get Confirmation" text="Receive instant booking details including car model, driver info, and ETA." />
-            <StepCard color="#EF4444" icon={<ClockIcon />} step={5} title="Enjoy the Ride" text="Relax while our professional chauffeurs handle the traffic and routes of Vizag." />
-          </div>
-        </div>
-      </section>
-
-      <section className="howrent" aria-labelledby="howrent-title">
-        <div className="howrent__container">
-          <h2 id="howrent-title">Car Rental Services in Visakhapatnam</h2>
-          <p className="howrent__intro">Cozy Cabz offers flexible car rental in Visakhapatnam services to suit every traveler:</p>
-
-          <ul className="howrent__list">
-            <li className="howrent__item">
-              <h3>Local Rentals</h3>
-              <p>Hourly or full-day car hire in Visakhapatnam for city sightseeing, shopping, or meetings.</p>
-            </li>
-            <li className="howrent__item">
-              <h3>Airport Transfers</h3>
-              <p>Punctual rides to and from Visakhapatnam Airport.</p>
-            </li>
-            <li className="howrent__item">
-              <h3>Outstation Trips</h3>
-              <p>Book a rental car for Araku Valley, Paderu, or adjacent hill regions.</p>
-            </li>
-            <li className="howrent__item">
-              <h3>Luxury Cars</h3>
-              <p>Hire high-end vehicles for events, weddings, or VIP travel.</p>
-            </li>
-            <li className="howrent__item">
-              <h3>Self-Drive Options</h3>
-              <p>Prefer control? Opt for self drive car rental in Visakhapatnam.</p>
-            </li>
-            <li className="howrent__item">
-              <h3>Group Travel</h3>
-              <p>SUVs or multi-seater cars for families, friends, or corporate groups.</p>
-            </li>
-          </ul>
-        </div>
-      </section>
+   <Trustcc />
+     <Howto/>
+    <Howrent />
 
       <section className="attractions" aria-labelledby="attractions-title">
         <div className="attractions__container">

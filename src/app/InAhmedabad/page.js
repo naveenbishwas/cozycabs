@@ -5,6 +5,9 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Header from "../Components/Header/page";
 import Footer from "../Components/Footer/page";
+import Trustcc from "../Components/Trustcc";
+import Howto from "../Components/Howto";
+import Howrent from "../Components/Howrent";
 
 /// Ahmedabad
 const InAhmedabad = () => {
@@ -100,7 +103,7 @@ const InAhmedabad = () => {
       img: "/g1.webp",
       alt: "Sabarmati Ashram campus",
       paragraphs: [
-        "Peaceful retreat showcasing India’s freedom struggle—Gandhi’s belongings, letters, and photographs along the river.",
+        "Once the residence of Mahatma Gandhi, Sabarmati Ashram is a peaceful retreat that showcases India’s freedom struggle. Visitors can see Gandhi’s personal belongings, letters, and photographs while walking through the serene campus along the Sabarmati River. It remains one of the most inspiring landmarks in Ahmedabad",
       ],
     },
     {
@@ -108,7 +111,7 @@ const InAhmedabad = () => {
       img: "/g2.webp",
       alt: "Kankaria Lakefront",
       paragraphs: [
-        "Family favorite with boat rides, zoo, toy train, balloon rides, and landscaped gardens—vibrant in the evenings.",
+        "Kankaria Lake is a lively recreational spot perfect for families and tourists. It features boat rides, a zoo, toy train, balloon rides, and landscaped gardens. The lakefront hosts vibrant evening activities, making it a favorite hangout for locals and travelers looking to enjoy a fun-filled day in the city.",
       ],
     },
     {
@@ -116,7 +119,7 @@ const InAhmedabad = () => {
       img: "/g3.webp",
       alt: "Sidi Saiyyed Jali",
       paragraphs: [
-        "Famous for its intricate stone latticework windows—the iconic ‘Tree of Life’—a masterpiece of Indo-Islamic art.",
+        "Built in the 16th century, this mosque is world-famous for its intricate stone latticework windows, especially the iconic “Tree of Life” design. A masterpiece of Indo-Islamic art, it attracts both devotees and history lovers. The mosque remains one of Ahmedabad’s most photographed and celebrated monuments.",
       ],
     },
     {
@@ -124,7 +127,7 @@ const InAhmedabad = () => {
       img: "/g4.webp",
       alt: "Adalaj Stepwell carvings",
       paragraphs: [
-        "Stunning five-story stepwell with Indo-Islamic architecture and ornate carvings—15th-century heritage.",
+        "Adalaj Stepwell is a stunning five-story water reservoir showcasing Indo-Islamic architecture and detailed stone carvings. Built in the 15th century, it was not only a source of water but also a resting place for travelers. Its beautifully sculpted corridors and pillars make it a must-visit for heritage enthusiasts.",
       ],
     },
     {
@@ -132,7 +135,7 @@ const InAhmedabad = () => {
       img: "/g1.webp",
       alt: "Sabarmati Riverfront walkway",
       paragraphs: [
-        "Modern landmark with gardens, cycling tracks, and boating—ideal for walks, leisure, and photography.",
+        "The Sabarmati Riverfront is a modern landmark offering landscaped gardens, cycling tracks, and boating facilities along the river. Stretching for kilometers, it’s ideal for morning walks, evening leisure, or photography. With its blend of nature and urban development, it has become a favorite spot for locals and tourists alike.",
       ],
     },
     {
@@ -140,7 +143,7 @@ const InAhmedabad = () => {
       img: "/g2.webp",
       alt: "Ahmedabad Jama Masjid",
       paragraphs: [
-        "Elegant 15th-century mosque built with yellow sandstone—grand domes, carvings, and a vast courtyard.",
+        "Constructed in the 15th century by Sultan Ahmed Shah, Jama Masjid is one of India’s most elegant mosques. Built with yellow sandstone, it features intricate carvings, grand domes, and a vast courtyard. The mosque reflects the city’s rich architectural heritage and continues to draw devotees and visitors every day.",
       ],
     },
   ];
@@ -250,7 +253,7 @@ const InAhmedabad = () => {
           <h1 className="heroeco__title">Car Rental in Ahmedabad</h1>
           <span className="small-head">
             <br />
-            <h4>– Reliable, Safe & Affordable</h4>
+            <h4>Reliable, Safe & Affordable</h4>
           </span>
           <p className="heroeco__sub">
             Ahmedabad blends heritage with modern living—from Sabarmati Ashram
@@ -388,89 +391,9 @@ const InAhmedabad = () => {
           </form>
         </div>
       </section>
-
-      <section className="trustcc">
-        <div className="trustcc__container">
-          <h2 className="trustcc__title">
-            Why Choose Cozy Cabz in<span> Ahmedabad?</span>
-          </h2>
-          <div className="trustcc__grid">
-            {items.map((it, i) => (
-              <article className="trustcc__card" key={i}>
-                <div className="trustcc__icon">{it.icon}</div>
-                <h3>{it.title}</h3>
-                <p>{it.desc}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="howto">
-        <div className="howtoWrap">
-          <h2 className="howtoTitle">How to Book Your Ride</h2>
-          <p className="howtoSubtitle">
-            Simple and straightforward booking process. Follow these easy steps
-            to book your ride.
-          </p>
-          <div className="connector" aria-hidden="true" />
-          <div className="stepsGrid">
-            <StepCard
-              color="#2563EB"
-              icon={<PhoneIcon />}
-              step={1}
-              title="Contact Our Team"
-              text="Contact our team or register on our website to get started with your booking process."
-            />
-            <StepCard
-              color="#16A34A"
-              icon={<PinIcon />}
-              step={2}
-              title="Share Your Details"
-              text="Share your destination & departure timing along with any specific requirements."
-            />
-            <StepCard
-              color="#8B5CF6"
-              icon={<CarIcon />}
-              step={3}
-              title="Select Car Model"
-              text="Select your preferred car model from our fleet and calculate the fare instantly."
-            />
-            <StepCard
-              color="#F97316"
-              icon={<CheckIcon />}
-              step={4}
-              title="Get Confirmation"
-              text="Get confirmation in few seconds with booking details and driver information."
-            />
-            <StepCard
-              color="#EF4444"
-              icon={<ClockIcon />}
-              step={5}
-              title="Wait for Arrival"
-              text="Relax and wait for your cab to arrive at your place at the scheduled time."
-            />
-          </div>
-        </div>
-      </section>
-
-      <section className="howrent" aria-labelledby="howrent-title">
-        <div className="howrent__container">
-          <h2 id="howrent-title">Different Car Rental Services in Ahmedabad</h2>
-          <p className="howrent__intro">
-            Our car rental services in Ahmedabad are designed to suit every
-            travel need:
-          </p>
-          <ul className="howrent__list">
-            {services.map((s) => (
-              <li className="howrent__item" key={s.title}>
-                <h3>{s.title}</h3>
-                <p>{s.text}</p>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
+<Trustcc />
+     <Howto/>
+    <Howrent />
 
       <section className="attractions" aria-labelledby="attractions-title">
         <div className="attractions__container">

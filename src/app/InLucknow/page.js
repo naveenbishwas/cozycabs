@@ -5,6 +5,9 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Header from "../Components/Header/page";
 import Footer from "../Components/Footer/page";
+import Trustcc from "../Components/Trustcc";
+import Howto from "../Components/Howto";
+import Howrent from "../Components/Howrent";
 
 const InLucknow = () => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -229,11 +232,11 @@ const InLucknow = () => {
           <h1 className="heroeco__title">Car Rental in Lucknow </h1>
           <span className="small-head">
             <br />
-            <h4>– Safe, Reliable & Affordable
+            <h4>Safe, Reliable & Affordable
             </h4>
           </span>
           <p className="heroeco__sub">
-          Lucknow, the City of Nawabs, is known for its rich culture, Mughal-era architecture, and mouthwatering cuisine. From historic monuments like Bara Imambara to bustling Hazratganj markets, the city is a delight for travelers. But exploring it can be tough without the right transport. That’s why Cozy Cabz offers car rental in Lucknow with driver, ensuring every trip is safe, smooth, and hassle-free. Whether you’re a tourist, a corporate traveler, or a family, our fleet of rental cars in Lucknow is designed to make your journey stress-free.
+          Lucknow, the City of Nawabs, blends Mughal architecture, vibrant markets, and rich culture. Yet exploring can be difficult without the right transport. That’s why Cozy Cabz Car Rental in Lucknow with driver ensures safe, smooth rides for tourists, corporates, families, and outstation trips
           </p>
         </div>
       </section>
@@ -393,134 +396,9 @@ const InLucknow = () => {
           </div>
         </div>
       </section> */}
-      <section className="trustcc">
-        <div className="trustcc__container">
-          <h2 className="trustcc__title">
-            Why Choose Cozy Cabz in<span> Lucknow?</span>
-          </h2>
-          {/* <p className="trustcc__sub">
-            Everything we build is focused on safe, reliable and fairly-priced
-            rides.
-          </p> */}
-
-          <div className="trustcc__grid">
-            {items.map((it, i) => (
-              <article className="trustcc__card" key={i}>
-                <div className="trustcc__icon">{it.icon}</div>
-                <h3>{it.title}</h3>
-                <p>{it.desc}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="howto">
-        <div className="howtoWrap">
-          <h2 className="howtoTitle">Easy Booking Process – Car Rental in Lucknow</h2>
-          <p className="howtoSubtitle">
-            Simple and straightforward. Follow these steps to book your ride in Lucknow.
-          </p>
-
-          {/* Connector line behind badges */}
-          <div className="connector" aria-hidden="true" />
-
-          <div className="stepsGrid">
-            <StepCard
-              color="#2563EB"
-              icon={<PhoneIcon />}
-              step={1}
-              title="Contact Our Team"
-              text="Call us or book online to start your car rental in Lucknow quickly and easily."
-            />
-            <StepCard
-              color="#16A34A"
-              icon={<PinIcon />}
-              step={2}
-              title="Share Your Details"
-              text="Enter pickup & drop locations, travel date, time, and trip type—local, airport, or outstation."
-            />
-            <StepCard
-              color="#8B5CF6"
-              icon={<CarIcon />}
-              step={3}
-              title="Select Your Car"
-              text="Choose sedans, SUVs, tempo travelers, or rent a car in Lucknow with driver."
-            />
-            <StepCard
-              color="#F97316"
-              icon={<CheckIcon />}
-              step={4}
-              title="Get Confirmation"
-              text="Receive instant booking details, including driver info, car model, and ETA."
-            />
-            <StepCard
-              color="#EF4444"
-              icon={<ClockIcon />}
-              step={5}
-              title="Enjoy the Ride"
-              text="Sit back while our professional chauffeurs handle Lucknow’s busy traffic."
-            />
-          </div>
-        </div>
-      </section>
-
-      <section className="howrent" aria-labelledby="howrent-title">
-        <div className="howrent__container">
-          <h2 id="howrent-title">Car Rental Services in Lucknow</h2>
-          <p className="howrent__intro">
-          At Cozy Cabz, our car rental service in Lucknow is designed to fit every travel requirement:
-          </p>
-
-          <ul className="howrent__list">
-            <li className="howrent__item">
-              <h3>Local Rentals</h3>
-              <p>
-              Hourly or full-day packages for shopping, sightseeing, or work trips.
-              </p>
-            </li>
-
-            <li className="howrent__item">
-              <h3>Airport Transfers</h3>
-              <p>
-              Hassle-free rides to and from Chaudhary Charan Singh Airport with quick car booking in Lucknow.
-
-              </p>
-            </li>
-
-            <li className="howrent__item">
-              <h3>Outstation Trips </h3>
-              <p>
-              Book rent car in Lucknow for weekend getaways to Ayodhya, Varanasi, Kanpur, or Agra.
-              </p>
-            </li>
-
-            <li className="howrent__item">
-              <h3>
-
-Self-Drive Cars –</h3>
-              <p>
-              Affordable self drive car in Lucknow for customers who prefer independence.
-
-
-              </p>
-            </li>
-            <li className="howrent__item">
-              <h3>Luxury & Premium Cars</h3>
-              <p>
-              Hire rental cars in Lucknow for weddings, VIP transfers, and corporate events.
-              </p>
-            </li>
-            <li className="howrent__item">
-              <h3>Driver on Hire</h3>
-              <p>
-              Cozy Cabz also provides driver on rent in Lucknow for your own vehicle.
-              </p>
-            </li>
-          
-          </ul>
-        </div>
-      </section>
+<Trustcc />
+     <Howto/>
+    <Howrent />
 
       <section className="attractions" aria-labelledby="attractions-title">
         <div className="attractions__container">

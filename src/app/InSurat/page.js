@@ -5,6 +5,9 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Header from "../Components/Header/page";
 import Footer from "../Components/Footer/page";
+import Trustcc from "../Components/Trustcc";
+import Howto from "../Components/Howto";
+import Howrent from "../Components/Howrent";
 
 const InSurat = () => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -229,13 +232,11 @@ const InSurat = () => {
           <h1 className="heroeco__title">Car Rental in Surat </h1>
           <span className="small-head">
             <br />
-            <h4>– Safe, Reliable & Affordable
+            <h4>Safe, Reliable & Affordable
             </h4>
           </span>
           <p className="heroeco__sub">
-          Surat, popularly known as the Diamond City of India, is a vibrant mix of history, trade, and modern living. Famous for being one of the world’s largest diamond polishing hubs and a leading textile center, Surat attracts business travelers, tourists, and families alike. The city offers a unique blend of heritage monuments, buzzing markets, seaside getaways, and modern malls. From exploring Surat Castle and Dutch Garden to shopping in textile markets or relaxing at Dumas Beach, there’s always something to experience here.
-          <br/><br/>
-          But moving around in the city can be tricky with heavy traffic and crowded roads. That’s why Cozy Cabz provides car rental in Surat with driver and self drive car rental in Surat options to make your journey smooth and stress-free. Whether you’re looking for a car on rent in Surat for one day, planning car rental in Surat for outstation trips, or need a luxury car rental in Surat for special occasions, Cozy Cabz has the right solution for you.
+          Surat, the Diamond City of India, blends heritage, trade, markets, and seaside getaways. Exploring is exciting but traffic makes travel challenging. That’s why Cozy Cabz offers car rental in Surat with driver and self drive car rental in Surat.
           </p>
         </div>
       </section>
@@ -374,130 +375,9 @@ const InSurat = () => {
         </div>
       </section>
 
-      <section className="trustcc">
-        <div className="trustcc__container">
-          <h2 className="trustcc__title">
-            Why Choose Cozy Cabz in<span> Surat?</span>
-          </h2>
-
-          <div className="trustcc__grid">
-            {items.map((it, i) => (
-              <article className="trustcc__card" key={i}>
-                <div className="trustcc__icon">{it.icon}</div>
-                <h3>{it.title}</h3>
-                <p>{it.desc}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="howto">
-        <div className="howtoWrap">
-          <h2 className="howtoTitle">Easy Booking Process – Car Rental in Surat</h2>
-          <p className="howtoSubtitle">
-            Simple and straightforward. Follow these steps to book your ride in Surat.
-          </p>
-
-          {/* Connector line behind badges */}
-          <div className="connector" aria-hidden="true" />
-
-          <div className="stepsGrid">
-            <StepCard
-              color="#2563EB"
-              icon={<PhoneIcon />}
-              step={1}
-              title="Contact Our Team"
-              text="Call us or book online to start your car rental in Surat quickly and easily."
-            />
-            <StepCard
-              color="#16A34A"
-              icon={<PinIcon />}
-              step={2}
-              title="Share Your Trip Details"
-              text="Provide pickup & drop locations, travel date, time, and trip type—local, airport, or outstation."
-            />
-            <StepCard
-              color="#8B5CF6"
-              icon={<CarIcon />}
-              step={3}
-              title="Select Your Car"
-              text="Choose from economy cars, SUVs, tempo travelers, or 1 day car rental with driver in Surat for flexibility."
-            />
-            <StepCard
-              color="#F97316"
-              icon={<CheckIcon />}
-              step={4}
-              title="Get Confirmation"
-              text="Receive instant booking details, including driver info, vehicle details, and estimated arrival time."
-            />
-            <StepCard
-              color="#EF4444"
-              icon={<ClockIcon />}
-              step={5}
-              title="Enjoy the Ride"
-              text="Sit back and relax while our experienced chauffeurs handle Surat’s traffic, ensuring a safe and comfortable journey."
-            />
-          </div>
-        </div>
-      </section>
-
-      <section className="howrent" aria-labelledby="howrent-title">
-        <div className="howrent__container">
-          <h2 id="howrent-title">Car Rental Services in Surat</h2>
-          <p className="howrent__intro">
-          At Cozy Cabz, our car rental services in Surat are designed to meet every travel need:
-          </p>
-
-          <ul className="howrent__list">
-            <li className="howrent__item">
-              <h3>Local Rentals</h3>
-              <p>
-              Hourly or daily packages for shopping, office work, or sightseeing.
-              </p>
-            </li>
-
-            <li className="howrent__item">
-              <h3>Airport Transfers</h3>
-              <p>
-              On-time pickups and drops with easy car booking with driver.
-
-              </p>
-            </li>
-
-            <li className="howrent__item">
-              <h3>Outstation Trips </h3>
-              <p>
-              Book car rental in Surat for outstation journeys to nearby cities like Ahmedabad, Vadodara, Daman, or Mumbai.
-              </p>
-            </li>
-
-            <li className="howrent__item">
-              <h3>
-
-Self-Drive Options –</h3>
-              <p>
-              Affordable self drive cars in Surat for customers who want privacy and independence.
-
-
-              </p>
-            </li>
-            <li className="howrent__item">
-              <h3>Luxury Cars</h3>
-              <p>
-              Premium sedans and SUVs for weddings, events, or luxury car on rent in Surat.
-              </p>
-            </li>
-            <li className="howrent__item">
-              <h3>Group Travel</h3>
-              <p>
-              Tempo travelers and 8 seater car booking for family trips, events, and weekend getaways.
-              </p>
-            </li>
-          
-          </ul>
-        </div>
-      </section>
+  <Trustcc />
+     <Howto/>
+    <Howrent />
 
       <section className="attractions" aria-labelledby="attractions-title">
         <div className="attractions__container">

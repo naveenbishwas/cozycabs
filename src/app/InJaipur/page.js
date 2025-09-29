@@ -5,6 +5,9 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Header from "../Components/Header/page";
 import Footer from "../Components/Footer/page";
+import Trustcc from "../Components/Trustcc";
+import Howto from "../Components/Howto";
+import Howrent from "../Components/Howrent";
 
 const InJaipur = () => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -99,7 +102,7 @@ const InJaipur = () => {
       img: "/g1.webp",
       alt: "Amber Fort and Maota Lake",
       paragraphs: [
-        "Grand monument blending Hindu and Mughal architecture—majestic gates, Sheesh Mahal, and evening cultural shows.",
+        "Amber Fort is one of Jaipur’s grandest monuments, known for its artistic blend of Hindu and Mughal architecture. The fort features majestic gates, expansive courtyards, and the breathtaking Sheesh Mahal (Mirror Palace). Overlooking Maota Lake, it offers stunning views and cultural light shows that bring Rajasthan’s history to life.",
       ],
     },
     {
@@ -107,7 +110,7 @@ const InJaipur = () => {
       img: "/g2.webp",
       alt: "City Palace courtyards",
       paragraphs: [
-        "At Jaipur’s center, a mix of Rajput and Mughal styles with museums and royal residence.",
+        "Located at the center of Jaipur, City Palace showcases a fine mix of Rajput and Mughal styles. With grand courtyards, beautifully decorated museums, and a royal residence, it gives visitors a glimpse into the luxurious lifestyle of Jaipur’s rulers. It’s a must-visit for history buffs and culture enthusiasts.",
       ],
     },
     {
@@ -115,7 +118,7 @@ const InJaipur = () => {
       img: "/g3.webp",
       alt: "Hawa Mahal facade",
       paragraphs: [
-        "‘Palace of Winds’ with 953 windows—an architectural icon and photographer favorite.",
+        "Known as the “Palace of Winds,” Hawa Mahal is Jaipur’s most iconic landmark. Its honeycomb façade of 953 windows was designed for royal women to observe city life unseen. Today, it is a favorite for photographers and tourists, offering both cultural significance and architectural brilliance.",
       ],
     },
     {
@@ -123,7 +126,7 @@ const InJaipur = () => {
       img: "/g4.webp",
       alt: "Jantar Mantar instruments",
       paragraphs: [
-        "UNESCO World Heritage Site with 19 astronomical instruments, including the world’s largest stone sundial.",
+        "A UNESCO World Heritage Site, Jantar Mantar is an astronomical wonder built by Maharaja Jai Singh II. It houses 19 instruments, including the world’s largest stone sundial, still accurate today. The observatory is a fascinating site for those interested in science, astronomy, and Indian innovation.",
       ],
     },
     {
@@ -131,7 +134,7 @@ const InJaipur = () => {
       img: "/g1.webp",
       alt: "Jal Mahal on Man Sagar Lake",
       paragraphs: [
-        "Picturesque palace in the middle of the lake—stunning at sunrise and sunset.",
+        "Situated in the middle of Man Sagar Lake, Jal Mahal is a picturesque palace that appears to float on water. Surrounded by the Aravalli hills, it is especially stunning during sunrise and sunset. The peaceful setting makes it an ideal stop for travelers seeking relaxation and scenic views.",
       ],
     },
     {
@@ -139,7 +142,7 @@ const InJaipur = () => {
       img: "/g2.webp",
       alt: "Nahargarh Fort view",
       paragraphs: [
-        "Hilltop fort with panoramic views of Jaipur—popular for evening outings.",
+        "Perched high on the Aravalli hills, Nahargarh Fort provides breathtaking panoramic views of Jaipur city. Once a royal retreat, the fort is now a popular spot for evening outings. Its blend of history, architecture, and natural beauty makes it one of Jaipur’s most visited attractions.",
       ],
     },
   ];
@@ -249,7 +252,7 @@ const InJaipur = () => {
           <h1 className="heroeco__title">Car Rental in Jaipur</h1>
           <span className="small-head">
             <br />
-            <h4>– Reliable, Safe & Affordable</h4>
+            <h4>Reliable, Safe & Affordable</h4>
           </span>
           <p className="heroeco__sub">
             Jaipur, the Pink City, blends royal heritage with modern comforts.
@@ -388,88 +391,9 @@ const InJaipur = () => {
         </div>
       </section>
 
-      <section className="trustcc">
-        <div className="trustcc__container">
-          <h2 className="trustcc__title">
-            Why Choose Cozy Cabz in<span> Jaipur?</span>
-          </h2>
-          <div className="trustcc__grid">
-            {items.map((it, i) => (
-              <article className="trustcc__card" key={i}>
-                <div className="trustcc__icon">{it.icon}</div>
-                <h3>{it.title}</h3>
-                <p>{it.desc}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="howto">
-        <div className="howtoWrap">
-          <h2 className="howtoTitle">How to Book Your Ride</h2>
-          <p className="howtoSubtitle">
-            Simple and straightforward booking process. Follow these easy steps
-            to book your ride.
-          </p>
-          <div className="connector" aria-hidden="true" />
-          <div className="stepsGrid">
-            <StepCard
-              color="#2563EB"
-              icon={<PhoneIcon />}
-              step={1}
-              title="Contact Our Team"
-              text="Contact our team or register on our website to get started with your booking process."
-            />
-            <StepCard
-              color="#16A34A"
-              icon={<PinIcon />}
-              step={2}
-              title="Share Your Details"
-              text="Share your destination & departure timing along with any specific requirements."
-            />
-            <StepCard
-              color="#8B5CF6"
-              icon={<CarIcon />}
-              step={3}
-              title="Select Car Model"
-              text="Select your preferred car model from our fleet and calculate the fare instantly."
-            />
-            <StepCard
-              color="#F97316"
-              icon={<CheckIcon />}
-              step={4}
-              title="Get Confirmation"
-              text="Get confirmation in few seconds with booking details and driver information."
-            />
-            <StepCard
-              color="#EF4444"
-              icon={<ClockIcon />}
-              step={5}
-              title="Wait for Arrival"
-              text="Relax and wait for your cab to arrive at your place at the scheduled time."
-            />
-          </div>
-        </div>
-      </section>
-
-      <section className="howrent" aria-labelledby="howrent-title">
-        <div className="howrent__container">
-          <h2 id="howrent-title">Different Car Rental Services in Jaipur</h2>
-          <p className="howrent__intro">
-            Cozy Cabz offers a variety of car rental services tailored for every
-            traveler:
-          </p>
-          <ul className="howrent__list">
-            {services.map((s) => (
-              <li className="howrent__item" key={s.title}>
-                <h3>{s.title}</h3>
-                <p>{s.text}</p>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
+<Trustcc />
+     <Howto/>
+    <Howrent />
 
       <section className="attractions" aria-labelledby="attractions-title">
         <div className="attractions__container">

@@ -5,6 +5,9 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Header from "../Components/Header/page";
 import Footer from "../Components/Footer/page";
+import Trustcc from "../Components/Trustcc";
+import Howto from "../Components/Howto";
+import Howrent from "../Components/Howrent";
 
 const InIndore = () => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -229,11 +232,11 @@ const InIndore = () => {
           <h1 className="heroeco__title">Car Rental in Indore </h1>
           <span className="small-head">
             <br />
-            <h4>– Safe, Reliable & Affordable
+            <h4>Safe, Reliable & Affordable
             </h4>
           </span>
           <p className="heroeco__sub">
-          Indore, the commercial capital of Madhya Pradesh, is a city that blends tradition with modernity. From bustling Sarafa Bazaar and historic Rajwada Palace to modern IT hubs, Indore has something for everyone. But navigating city traffic can be tiring without the right transport. That’s why Cozy Cabz offers car rental in Indore with driver, making every journey smooth, safe, and hassle-free. Whether it’s business trips, sightseeing, or car rental in Indore for outstation travel, we provide well-maintained cars and professional chauffeurs for a comfortable ride.
+         Indore, Madhya Pradesh’s commercial capital, blends heritage and modern life with Rajwada Palace, Sarafa Bazaar, and IT hubs. Yet traffic can be exhausting. That’s why Cozy Cabz Car Rental in Indore with driver ensures safe, smooth rides for sightseeing, business travel, and outstation journeys.
           </p>
         </div>
       </section>
@@ -393,134 +396,9 @@ const InIndore = () => {
           </div>
         </div>
       </section> */}
-      <section className="trustcc">
-        <div className="trustcc__container">
-          <h2 className="trustcc__title">
-            Why Choose Cozy Cabz in<span> Indore?</span>
-          </h2>
-          {/* <p className="trustcc__sub">
-            Everything we build is focused on safe, reliable and fairly-priced
-            rides.
-          </p> */}
-
-          <div className="trustcc__grid">
-            {items.map((it, i) => (
-              <article className="trustcc__card" key={i}>
-                <div className="trustcc__icon">{it.icon}</div>
-                <h3>{it.title}</h3>
-                <p>{it.desc}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="howto">
-        <div className="howtoWrap">
-          <h2 className="howtoTitle">Easy Booking Process – Car Rental in Indore</h2>
-          <p className="howtoSubtitle">
-            Simple and straightforward. Follow these steps to book your ride in Indore.
-          </p>
-
-          {/* Connector line behind badges */}
-          <div className="connector" aria-hidden="true" />
-
-          <div className="stepsGrid">
-            <StepCard
-              color="#2563EB"
-              icon={<PhoneIcon />}
-              step={1}
-              title="Contact Our Team"
-              text="Call us or register online to begin your car rental in Indore booking quickly."
-            />
-            <StepCard
-              color="#16A34A"
-              icon={<PinIcon />}
-              step={2}
-              title="Share Your Trip Details"
-              text="Provide pickup & drop points, travel date, time, and trip type—local, outstation, or airport."
-            />
-            <StepCard
-              color="#8B5CF6"
-              icon={<CarIcon />}
-              step={3}
-              title="Select Your Car"
-              text="Choose from sedans, SUVs, tempo travelers, or rent a car in Indore with driver for extra comfort."
-            />
-            <StepCard
-              color="#F97316"
-              icon={<CheckIcon />}
-              step={4}
-              title="Get Confirmation"
-              text="Receive instant booking details, including car model, driver info, and estimated arrival time."
-            />
-            <StepCard
-              color="#EF4444"
-              icon={<ClockIcon />}
-              step={5}
-              title="Enjoy the Ride"
-              text="Sit back and relax while our professional chauffeurs handle Indore’s roads for a smooth, stress-free journey."
-            />
-          </div>
-        </div>
-      </section>
-
-      <section className="howrent" aria-labelledby="howrent-title">
-        <div className="howrent__container">
-          <h2 id="howrent-title">Car Rental Services in Indore</h2>
-          <p className="howrent__intro">
-          Cozy Cabz offers flexible car rental services in Indore designed to meet every traveler’s need:
-          </p>
-
-          <ul className="howrent__list">
-            <li className="howrent__item">
-              <h3>Local Rentals</h3>
-              <p>
-              Hourly and daily packages for shopping, office work, and sightseeing.
-              </p>
-            </li>
-
-            <li className="howrent__item">
-              <h3>Airport Transfers</h3>
-              <p>
-              Reliable pickups and drops from Devi Ahilya Bai Holkar Airport with easy car booking in Indore.
-
-              </p>
-            </li>
-
-            <li className="howrent__item">
-              <h3>Outstation Trips </h3>
-              <p>
-              Book car on rent in Indore with driver for journeys to Ujjain, Omkareshwar, Bhopal, or Mandu.
-              </p>
-            </li>
-
-            <li className="howrent__item">
-              <h3>
-
-Self-Drive Cars –</h3>
-              <p>
-              Affordable car rental Indore self drive for privacy and independence.
-
-
-              </p>
-            </li>
-            <li className="howrent__item">
-              <h3>Luxury & Premium Cars</h3>
-              <p>
-              Hire premium sedans and SUVs for weddings, corporate travel, or events.
-              </p>
-            </li>
-            <li className="howrent__item">
-              <h3>Driver on Hire</h3>
-              <p>
-              Cozy Cabz also provides driver in Indore services if you prefer to use your own car.
-              </p>
-            </li>
-          
-          </ul>
-        </div>
-      </section>
+    <Trustcc />
+     <Howto/>
+    <Howrent />
 
       <section className="attractions" aria-labelledby="attractions-title">
         <div className="attractions__container">

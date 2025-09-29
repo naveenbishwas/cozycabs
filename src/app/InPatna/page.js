@@ -3,6 +3,9 @@
 import React, { useState } from "react";
 import Header from "../Components/Header/page";
 import Footer from "../Components/Footer/page";
+import Trustcc from "../Components/Trustcc";
+import Howto from "../Components/Howto";
+import Howrent from "../Components/Howrent";
 
 const InPatna = () => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -75,7 +78,7 @@ const InPatna = () => {
       img: "/g1.webp",
       alt: "Patna Sahib Gurudwara Takht Sri Patna Sahib",
       paragraphs: [
-        "One of the holiest Sikh shrines and birthplace of Guru Gobind Singh Ji—majestic structure, spiritual atmosphere, and rich history.",
+        "One of the holiest Sikh shrines, Patna Sahib is the birthplace of Guru Gobind Singh Ji. Its majestic structure, spiritual atmosphere, and rich history draw pilgrims from across the world, making it a must-visit in Patna.",
       ],
     },
     {
@@ -83,7 +86,7 @@ const InPatna = () => {
       img: "/g2.webp",
       alt: "Golghar granary panoramic view",
       paragraphs: [
-        "Built in 1786, a massive granary with beehive-shaped architecture—climb the spiral staircase for panoramic views of Patna and the Ganges.",
+        "Built in 1786, Golghar is a massive granary with distinctive beehive-shaped architecture. Visitors can climb its spiral staircase to enjoy panoramic views of Patna city and the Ganges River, especially stunning at sunset.",
       ],
     },
     {
@@ -91,7 +94,7 @@ const InPatna = () => {
       img: "/g3.webp",
       alt: "Kumhrar Park Mauryan ruins in Patna",
       paragraphs: [
-        "Archaeological park preserving Mauryan-era remains—Ashokan pillars and ruined monasteries offering a glimpse into Patna’s glorious past.",
+        "This archaeological park preserves the remains of the ancient Mauryan Empire. Featuring Ashokan pillars and ruins of monasteries, Kumhrar offers a glimpse into Patna’s glorious past and is a favorite among history enthusiasts",
       ],
     },
     {
@@ -99,7 +102,7 @@ const InPatna = () => {
       img: "/g4.webp",
       alt: "Patna Zoo wildlife and gardens",
       paragraphs: [
-        "Lush green zoo with tigers, elephants, leopards, boating, and educational exhibits—perfect for families and children.",
+        "Spread over lush green acres, Patna Zoo is home to tigers, elephants, leopards, and many exotic species. With gardens, boating facilities, and educational exhibits, it’s a perfect outing spot for families and children.",
       ],
     },
     {
@@ -107,7 +110,7 @@ const InPatna = () => {
       img: "/g3.webp",
       alt: "Patna Museum Jadu Ghar Didarganj Yakshi",
       paragraphs: [
-        "Displays rare artifacts, sculptures, and coins, including the Didarganj Yakshi—treasure trove for art lovers and heritage seekers.",
+        "Popularly known as Jadu Ghar, Patna Museum displays rare artifacts, sculptures, and coins, including the famous Didarganj Yakshi statue. It’s a treasure trove for art lovers and those interested in Bihar’s heritage.",
       ],
     },
     {
@@ -115,8 +118,7 @@ const InPatna = () => {
       img: "/g4.webp",
       alt: "Gandhi Maidan ground Patna events",
       paragraphs: [
-        "Historic ground tied to India’s freedom movement—now a hub for rallies, cultural events, recreation, and evening walks.",
-        "With Cozy Cabz rent a car in Patna, exploring these attractions is easy, safe, and comfortable.",
+        "A landmark ground associated with India’s freedom movement, Gandhi Maidan is now a hub for political rallies, cultural events, and daily recreation. Its vast open space also makes it ideal for evening walks.",
       ],
     },
   ];
@@ -196,10 +198,10 @@ const InPatna = () => {
           <h1 className="heroeco__title">Car Rental in Patna</h1>
           <span className="small-head">
             <br />
-            <h4>– Safe, Reliable & Affordable</h4>
+            <h4>Safe, Reliable & Affordable</h4>
           </span>
           <p className="heroeco__sub">
-            Patna, the historic capital of Bihar, blends heritage, spirituality, and modern development. From Patna Sahib to Golghar and bustling markets, there’s much to explore. Cozy Cabz offers car rental in Patna with driver, self drive options, and luxury rentals for safe, comfortable, and stress-free travel.
+            Patna, Bihar’s historic capital, blends heritage, spirituality, and modern growth. From Patna Sahib Gurudwara to Golghar and busy markets, the city offers plenty to explore. Cozy Cabz provides car rental in Patna with driver, self drive car rental in Patna, and luxury options
           </p>
         </div>
       </section>
@@ -266,49 +268,9 @@ const InPatna = () => {
         </div>
       </section>
 
-      <section className="trustcc">
-        <div className="trustcc__container">
-          <h2 className="trustcc__title">Why Choose Cozy Cabz in<span> Patna?</span></h2>
-          <div className="trustcc__grid">
-            {items.map((it, i) => (
-              <article className="trustcc__card" key={i}>
-                <div className="trustcc__icon">{it.icon}</div>
-                <h3>{it.title}</h3>
-                <p>{it.desc}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="howto">
-        <div className="howtoWrap">
-          <h2 className="howtoTitle">Easy Booking Process with Cozy Cabz</h2>
-          <p className="howtoSubtitle">Booking your ride with Cozy Cabz is simple, fast, and stress-free.</p>
-          <div className="connector" aria-hidden="true" />
-          <div className="stepsGrid">
-            <StepCard color="#16A34A" icon={<PinIcon />} step={1} title="Enter Trip Details" text="Provide pickup and drop locations, date, time, and trip type (local, outstation, or airport)." />
-            <StepCard color="#8B5CF6" icon={<CarIcon />} step={2} title="Choose Your Car" text="Select sedans, SUVs, premium luxury cars, or a self drive car rental in Patna." />
-            <StepCard color="#F97316" icon={<CheckIcon />} step={3} title="Get Instant Confirmation" text="Receive car info, driver contact, and estimated arrival time immediately." />
-            <StepCard color="#EF4444" icon={<ClockIcon />} step={4} title="Enjoy a Smooth Journey" text="Sit back while our professional drivers handle traffic, navigation, and parking." />
-          </div>
-        </div>
-      </section>
-
-      <section className="howrent" aria-labelledby="howrent-title">
-        <div className="howrent__container">
-          <h2 id="howrent-title">Car Rental Services in Patna</h2>
-          <p className="howrent__intro">Cozy Cabz offers a wide range of car rental services in Patna:</p>
-          <ul className="howrent__list">
-            <li className="howrent__item"><h3>Local Rentals</h3><p>Flexible car booking in Patna for city travel, meetings, or shopping.</p></li>
-            <li className="howrent__item"><h3>Airport Transfers</h3><p>Reliable pickups and drops from Jay Prakash Narayan International Airport.</p></li>
-            <li className="howrent__item"><h3>Outstation Trips</h3><p>Book rental cars for Bodh Gaya, Nalanda, Rajgir, and more.</p></li>
-            <li className="howrent__item"><h3>Self Drive Options</h3><p>Choose a self drive car in Patna for privacy and flexibility.</p></li>
-            <li className="howrent__item"><h3>Luxury & Limo Hire</h3><p>Premium cars and limo hire for weddings, events, and VIP guests.</p></li>
-            <li className="howrent__item"><h3>Group Travel</h3><p>SUVs, tempo travelers, and self driven cars in Patna for family and corporate tours.</p></li>
-          </ul>
-        </div>
-      </section>
+<Trustcc />
+     <Howto/>
+    <Howrent />
 
       <section className="attractions" aria-labelledby="attractions-title">
         <div className="attractions__container">

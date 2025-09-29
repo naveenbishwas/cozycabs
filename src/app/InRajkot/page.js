@@ -3,6 +3,9 @@
 import React, { useState } from "react";
 import Header from "../Components/Header/page";
 import Footer from "../Components/Footer/page";
+import Trustcc from "../Components/Trustcc";
+import Howto from "../Components/Howto";
+import Howrent from "../Components/Howrent";
 
 const InRajkot = () => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -211,10 +214,10 @@ const InRajkot = () => {
           <h1 className="heroeco__title">Car Rental in Rajkot</h1>
           <span className="small-head">
             <br />
-            <h4>– Safe, Reliable & Affordable</h4>
+            <h4>Safe, Reliable & Affordable</h4>
           </span>
           <p className="heroeco__sub">
-            Rajkot blends cultural heritage, business opportunities, and modern living. From Kaba Gandhi No Delo to lakes, temples, and bustling markets, there’s much to explore. Cozy Cabz offers car rental in Rajkot with driver and self drive options—making travel simple, safe, and stress-free.
+           Rajkot, one of Gujarat’s fastest-growing cities, blends culture, business, and modern life. From Kaba Gandhi No Delo to temples, lakes, and markets, it has much to offer. Cozy Cabz Car Rental in Rajkot provides safe, stress-free local trips, self drive, and group travel.
           </p>
         </div>
       </section>
@@ -293,73 +296,9 @@ const InRajkot = () => {
         </div>
       </section>
 
-      <section className="trustcc">
-        <div className="trustcc__container">
-          <h2 className="trustcc__title">
-            Why Choose Cozy Cabz in<span> Rajkot?</span>
-          </h2>
-          <div className="trustcc__grid">
-            {items.map((it, i) => (
-              <article className="trustcc__card" key={i}>
-                <div className="trustcc__icon">{it.icon}</div>
-                <h3>{it.title}</h3>
-                <p>{it.desc}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="howto">
-        <div className="howtoWrap">
-          <h2 className="howtoTitle">Easy Booking Process – Car Rental in Rajkot</h2>
-          <p className="howtoSubtitle">Follow these steps to book your ride in Rajkot.</p>
-
-          <div className="connector" aria-hidden="true" />
-
-          <div className="stepsGrid">
-            <StepCard color="#2563EB" icon={<PhoneIcon />} step={1} title="Contact Our Team" text="Call us or book online to start your car rental in Rajkot quickly and hassle-free." />
-            <StepCard color="#16A34A" icon={<PinIcon />} step={2} title="Share Your Trip Details" text="Enter pickup & drop points, travel date, time, and trip type—local, outstation, or airport transfer." />
-            <StepCard color="#8B5CF6" icon={<CarIcon />} step={3} title="Select Your Vehicle" text="Pick from sedans, SUVs, luxury cars, or self drive cars in Rajkot depending on your comfort and budget." />
-            <StepCard color="#F97316" icon={<CheckIcon />} step={4} title="Get Instant Confirmation" text="Receive complete booking details instantly, including car model, driver info, and estimated arrival time." />
-            <StepCard color="#EF4444" icon={<ClockIcon />} step={5} title="Enjoy a Smooth Ride" text="Relax while our professional chauffeurs handle Rajkot’s traffic and navigation." />
-          </div>
-        </div>
-      </section>
-
-      <section className="howrent" aria-labelledby="howrent-title">
-        <div className="howrent__container">
-          <h2 id="howrent-title">Car Rental Services in Rajkot</h2>
-          <p className="howrent__intro">Our car rental in Rajkot covers every travel need:</p>
-
-          <ul className="howrent__list">
-            <li className="howrent__item">
-              <h3>Local Rentals</h3>
-              <p>Flexible hourly or daily car hire for shopping, business, and sightseeing.</p>
-            </li>
-            <li className="howrent__item">
-              <h3>Airport Transfers</h3>
-              <p>On-time rides to and from Rajkot Airport.</p>
-            </li>
-            <li className="howrent__item">
-              <h3>Outstation Trips</h3>
-              <p>Comfortable rental cars for travel to Dwarka, Somnath, Junagadh, and more.</p>
-            </li>
-            <li className="howrent__item">
-              <h3>Self Drive Cars</h3>
-              <p>Choose self drive cars in Rajkot for independence with transparent pricing.</p>
-            </li>
-            <li className="howrent__item">
-              <h3>Luxury Cars & SUVs</h3>
-              <p>Premium options for weddings, VIP travel, and events.</p>
-            </li>
-            <li className="howrent__item">
-              <h3>Group Travel</h3>
-              <p>SUVs, tempo travelers, and 10 seater rental cars for family or corporate tours.</p>
-            </li>
-          </ul>
-        </div>
-      </section>
+ <Trustcc />
+     <Howto/>
+    <Howrent />
 
       <section className="attractions" aria-labelledby="attractions-title">
         <div className="attractions__container">

@@ -3,6 +3,9 @@
 import React, { useState } from "react";
 import Header from "../Components/Header/page";
 import Footer from "../Components/Footer/page";
+import Trustcc from "../Components/Trustcc";
+import Howto from "../Components/Howto";
+import Howrent from "../Components/Howrent";
 
 const InNagpur = () => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -211,10 +214,10 @@ const InNagpur = () => {
           <h1 className="heroeco__title">Car Rental in Nagpur</h1>
           <span className="small-head">
             <br />
-            <h4>– Reliable, Safe & Affordable</h4>
+            <h4>Reliable, Safe & Affordable</h4>
           </span>
           <p className="heroeco__sub">
-            Nagpur, the Orange City of India, is famous for its central location, rich history, and growing commercial importance. From Deekshabhoomi and Sitabuldi Fort to Futala Lake and modern business hubs, the city offers plenty for travelers. Getting around comfortably can be a challenge, which is why Cozy Cabz provides car rental in Nagpur with driver as well as self drive cars in Nagpur, making every trip safe, convenient, and stress-free. Whether you need a car on rent in Nagpur for a day, self drive car rental in Nagpur for independence, or a luxury car rental in Nagpur for events, Cozy Cabz is here for you.
+            Nagpur, the Orange City of India, blends history, culture, and commerce with Deekshabhoomi, Sitabuldi Fort, Futala Lake, and business hubs.That’s why Cozy Cabz offers car rental in Nagpur with driver and self drive cars in Nagpur. From daily rentals to luxury car rental.
           </p>
         </div>
       </section>
@@ -293,73 +296,9 @@ const InNagpur = () => {
         </div>
       </section>
 
-      <section className="trustcc">
-        <div className="trustcc__container">
-          <h2 className="trustcc__title">
-            Why Choose Cozy Cabz in<span> Nagpur?</span>
-          </h2>
-          <div className="trustcc__grid">
-            {items.map((it, i) => (
-              <article className="trustcc__card" key={i}>
-                <div className="trustcc__icon">{it.icon}</div>
-                <h3>{it.title}</h3>
-                <p>{it.desc}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="howto">
-        <div className="howtoWrap">
-          <h2 className="howtoTitle">Easy Booking Process – Car Rental in Nagpur</h2>
-          <p className="howtoSubtitle">Simple and straightforward. Follow these steps to book your ride in Nagpur.</p>
-
-          <div className="connector" aria-hidden="true" />
-
-          <div className="stepsGrid">
-            <StepCard color="#2563EB" icon={<PhoneIcon />} step={1} title="Contact Our Team" text="Call us or book online to start your car rental in Nagpur quickly and easily." />
-            <StepCard color="#16A34A" icon={<PinIcon />} step={2} title="Share Your Trip Details" text="Provide pickup & drop locations, travel date, time, and trip type—local, airport, or outstation." />
-            <StepCard color="#8B5CF6" icon={<CarIcon />} step={3} title="Select Your Car" text="Choose from sedans, SUVs, tempo travelers, or self drive cars in Nagpur for flexibility." />
-            <StepCard color="#F97316" icon={<CheckIcon />} step={4} title="Get Confirmation" text="Get instant booking details, including driver contact, car model, and estimated arrival time." />
-            <StepCard color="#EF4444" icon={<ClockIcon />} step={5} title="Enjoy the Ride" text="Sit back and relax while our experienced chauffeurs manage Nagpur’s roads for a smooth journey." />
-          </div>
-        </div>
-      </section>
-
-      <section className="howrent" aria-labelledby="howrent-title">
-        <div className="howrent__container">
-          <h2 id="howrent-title">Car Rental Services in Nagpur</h2>
-          <p className="howrent__intro">Cozy Cabz offers a wide range of car rental services in Nagpur tailored for every traveler:</p>
-
-          <ul className="howrent__list">
-            <li className="howrent__item">
-              <h3>Local Rentals</h3>
-              <p>Hourly and daily packages for shopping, business, or city tours.</p>
-            </li>
-            <li className="howrent__item">
-              <h3>Airport Transfers</h3>
-              <p>Reliable rides to Dr. Babasaheb Ambedkar International Airport with easy car booking in Nagpur.</p>
-            </li>
-            <li className="howrent__item">
-              <h3>Outstation Trips</h3>
-              <p>Book car rental in Nagpur for outstation to visit nearby cities like Pench, Kanha, Tadoba, or Wardha.</p>
-            </li>
-            <li className="howrent__item">
-              <h3>Luxury Cars</h3>
-              <p>Hire luxury car rental in Nagpur for weddings, VIP events, and corporate needs.</p>
-            </li>
-            <li className="howrent__item">
-              <h3>Self-Drive Options</h3>
-              <p>Flexible self drive car rental in Nagpur for those who prefer independence.</p>
-            </li>
-            <li className="howrent__item">
-              <h3>Driver on Hire</h3>
-              <p>Cozy Cabz also provides driver on hire in Nagpur if you prefer to use your own vehicle.</p>
-            </li>
-          </ul>
-        </div>
-      </section>
+    <Trustcc />
+     <Howto/>
+    <Howrent />
 
       <section className="attractions" aria-labelledby="attractions-title">
         <div className="attractions__container">

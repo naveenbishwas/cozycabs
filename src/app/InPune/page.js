@@ -5,6 +5,9 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Header from "../Components/Header/page";
 import Footer from "../Components/Footer/page";
+import Trustcc from "../Components/Trustcc";
+import Howto from "../Components/Howto";
+import Howrent from "../Components/Howrent";
 
 const InPune = () => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -72,7 +75,7 @@ const InPune = () => {
       img: "/g1.webp",
       alt: "Shaniwar Wada fort",
       paragraphs: [
-        "Pune’s iconic Peshwa-era fort known for its grand gates, intricate architecture, and evening light show that brings its history alive.",
+        "The grand fort built by the Peshwas, Shaniwar Wada is Pune’s most iconic historical site. Known for its Maratha legacy, it features massive gates, intricate architecture, and tales of royal life. Evening light shows recreate its glorious past, making it a must-see for history enthusiasts.",
       ],
     },
     {
@@ -80,7 +83,7 @@ const InPune = () => {
       img: "/g2.webp",
       alt: "Aga Khan Palace",
       paragraphs: [
-        "A national monument of India’s freedom struggle with exhibits, photographs, and sprawling gardens—peaceful and historic.",
+        "A national monument of India’s freedom struggle, the Aga Khan Palace once served as a prison for Mahatma Gandhi and his associates. Surrounded by sprawling gardens, it is both a memorial and a place of peace. Visitors can explore exhibits, photographs, and Gandhi’s personal belongings.",
       ],
     },
     {
@@ -88,7 +91,7 @@ const InPune = () => {
       img: "/g3.webp",
       alt: "Sinhagad Fort views",
       paragraphs: [
-        "Popular hill fort trek offering panoramic views and rich Maratha history—complete with local food stalls at the top.",
+        "Situated on the Sahyadri hills, Sinhagad Fort is a popular trekking spot offering panoramic views of valleys and mountains. The fort carries rich historical significance, with tales of Maratha bravery. Visitors also enjoy local food stalls at the top, making it a blend of adventure and culture.",
       ],
     },
     {
@@ -96,7 +99,7 @@ const InPune = () => {
       img: "/g4.webp",
       alt: "Osho Ashram greens",
       paragraphs: [
-        "A serene meditation center amidst greenery offering yoga, wellness programs, and tranquil spaces for self-discovery.",
+        "Known worldwide, Osho Ashram is a serene meditation center attracting thousands of visitors. Set amidst lush greenery, it offers yoga, wellness programs, and tranquil spaces for self-discovery. The peaceful environment makes it a unique attraction for those seeking relaxation and spiritual growth.",
       ],
     },
     {
@@ -104,7 +107,7 @@ const InPune = () => {
       img: "/g1.webp",
       alt: "Pataleshwar Cave Temple",
       paragraphs: [
-        "8th-century rock-cut temple dedicated to Lord Shiva—stone pillars and sanctum showcasing ancient craftsmanship.",
+        "Carved from a single rock in the 8th century, this temple is dedicated to Lord Shiva. Its unique cave architecture, stone pillars, and sanctum reflect ancient craftsmanship. Located in the heart of Pune, it’s a quiet retreat for devotees and those interested in historical monuments.",
       ],
     },
     {
@@ -112,7 +115,7 @@ const InPune = () => {
       img: "/g2.webp",
       alt: "Kelkar Museum exhibits",
       paragraphs: [
-        "Fascinating collection of artifacts, instruments, and everyday objects telling stories of India’s cultural traditions.",
+        "This museum houses an impressive collection of artifacts, sculptures, musical instruments, and everyday objects from India’s past. Each display tells a story of India’s rich cultural traditions. It is a fascinating place for students, travelers, and anyone passionate about history and art.",
       ],
     },
     {
@@ -120,7 +123,7 @@ const InPune = () => {
       img: "/g3.webp",
       alt: "Parvati Hill city view",
       paragraphs: [
-        "Scenic hill with temples, a museum, and sweeping views of Pune—best at sunrise or sunset.",
+        "Rising above the city, Parvati Hill is a scenic spot known for its temples, museum, and breathtaking city views. The climb of over 100 steps rewards visitors with panoramic landscapes of Pune. It’s especially popular during sunrise and sunset, offering a peaceful break from city life.",
       ],
     },
   ];
@@ -230,7 +233,7 @@ const InPune = () => {
           <h1 className="heroeco__title">Car Rental in Pune</h1>
           <span className="small-head">
             <br />
-            <h4>– Reliable, Safe & Comfortable</h4>
+            <h4>Reliable, Safe & Comfortable</h4>
           </span>
           <p className="heroeco__sub">
             Pune, the cultural capital of Maharashtra, blends heritage,
@@ -370,115 +373,9 @@ const InPune = () => {
         </div>
       </section>
 
-      <section className="trustcc">
-        <div className="trustcc__container">
-          <h2 className="trustcc__title">
-            Why Choose Cozy Cabz in<span> Pune?</span>
-          </h2>
-          <div className="trustcc__grid">
-            {items.map((it, i) => (
-              <article className="trustcc__card" key={i}>
-                <div className="trustcc__icon">{it.icon}</div>
-                <h3>{it.title}</h3>
-                <p>{it.desc}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="howto">
-        <div className="howtoWrap">
-          <h2 className="howtoTitle">How to Book Your Ride</h2>
-          <p className="howtoSubtitle">
-            Simple and straightforward booking process. Follow these easy steps
-            to book your ride.
-          </p>
-
-          <div className="connector" aria-hidden="true" />
-
-          <div className="stepsGrid">
-            <StepCard
-              color="#2563EB"
-              icon={<PhoneIcon />}
-              step={1}
-              title="Contact Our Team"
-              text="Contact our team or register on our website to get started with your booking process."
-            />
-            <StepCard
-              color="#16A34A"
-              icon={<PinIcon />}
-              step={2}
-              title="Share Your Details"
-              text="Share your destination & departure timing along with any specific requirements."
-            />
-            <StepCard
-              color="#8B5CF6"
-              icon={<CarIcon />}
-              step={3}
-              title="Select Car Model"
-              text="Select your preferred car model from our fleet and calculate the fare instantly."
-            />
-            <StepCard
-              color="#F97316"
-              icon={<CheckIcon />}
-              step={4}
-              title="Get Confirmation"
-              text="Get confirmation in few seconds with booking details and driver information."
-            />
-            <StepCard
-              color="#EF4444"
-              icon={<ClockIcon />}
-              step={5}
-              title="Wait for Arrival"
-              text="Relax and wait for your cab to arrive at your place at the scheduled time."
-            />
-          </div>
-        </div>
-      </section>
-
-      <section className="howrent" aria-labelledby="howrent-title">
-        <div className="howrent__container">
-          <h2 id="howrent-title">Different Car Rental Services in Pune</h2>
-          <p className="howrent__intro">
-            Our car rental services in Pune are designed to suit every travel
-            need:
-          </p>
-
-          <ul className="howrent__list">
-            <li className="howrent__item">
-              <h3>Outstation Trips – Round Trip & One-Way Drops</h3>
-              <p>
-                Travel to Lonavala, Mahabaleshwar, Shirdi, or Mumbai. Choose
-                one-way or round-trip packages.
-              </p>
-            </li>
-            <li className="howrent__item">
-              <h3>Airport Transfers</h3>
-              <p>
-                Skip taxi queues at Pune Airport. Enjoy on-time pickups and
-                drops with professional drivers.
-              </p>
-            </li>
-            <li className="howrent__item">
-              <h3>Local Hourly Rentals</h3>
-              <p>
-                8 hrs/80 km and 12 hrs/120 km packages for meetings, shopping,
-                or sightseeing. Full-day bookings for weddings and corporate
-                events.
-              </p>
-            </li>
-            <li className="howrent__item">
-              <h3>Luxury & Premium Cars</h3>
-              <p>
-                Book luxury cars for weddings, VIP guests, or corporate
-                functions.
-              </p>
-            </li>
-          </ul>
-        </div>
-      </section>
-
+ <Trustcc />
+     <Howto/>
+    <Howrent />
       <section className="attractions" aria-labelledby="attractions-title">
         <div className="attractions__container">
           <header className="attractions__head">

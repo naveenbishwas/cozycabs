@@ -3,6 +3,10 @@
 import React, { useState } from "react";
 import Header from "../Components/Header/page";
 import Footer from "../Components/Footer/page";
+import Trustcc from "../Components/Trustcc";
+import Howto from "../Components/Howto";
+import Howrent from "../Components/Howrent";
+
 
 const InMysore = () => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -75,7 +79,7 @@ const InMysore = () => {
       img: "/g1.webp",
       alt: "Mysore Palace illuminated Indo-Saracenic architecture",
       paragraphs: [
-        "An Indo-Saracenic architectural masterpiece with ornate halls, stained glass, and royal artifacts—glows under thousands of lights on Sundays and during Dussehra.",
+        "The heart of Mysore’s identity, Mysore Palace is an Indo-Saracenic architectural masterpiece. Known for its ornate halls, stained glass windows, and royal artifacts, it offers a glimpse into the grandeur of the Wadiyar dynasty. On Sundays and during festivals like Dussehra, the palace glows under thousands of lights, creating a magical spectacle that attracts visitors worldwide.",
       ],
     },
     {
@@ -83,7 +87,7 @@ const InMysore = () => {
       img: "/g2.webp",
       alt: "Chamundi Hills Chamundeshwari Temple Nandi statue",
       paragraphs: [
-        "A spiritual and scenic landmark with panoramic city views and a giant granite Nandi statue halfway up the hill.",
+        "Located 13 km from the city center, Chamundi Hills is a spiritual and scenic landmark. Atop the hill stands the Chamundeshwari Temple, dedicated to Goddess Chamundi. The panoramic views of Mysore city from here are breathtaking, especially at sunset. A giant Nandi statue carved from a single granite block also sits halfway up the hill, adding to the site’s charm.",
       ],
     },
     {
@@ -91,7 +95,7 @@ const InMysore = () => {
       img: "/g3.webp",
       alt: "Brindavan Gardens musical fountain KRS Dam",
       paragraphs: [
-        "Iconic terraced gardens famous for musical fountains, flower beds, and serene walking paths—especially enchanting in the evening.",
+        "Just outside Mysore lies the iconic Brindavan Gardens, adjoining the Krishnarajasagara (KRS) Dam. Spread over terraces, the gardens are famous for their musical fountain shows, colorful flower beds, and serene walking paths. Evenings here are especially enchanting, making it one of Mysore’s most visited attractions.",
       ],
     },
     {
@@ -99,7 +103,7 @@ const InMysore = () => {
       img: "/g4.webp",
       alt: "Mysore Zoo wildlife and greenery",
       paragraphs: [
-        "One of India’s oldest and best-maintained zoos—home to big cats, elephants, reptiles, and exotic birds with spacious enclosures and greenery.",
+        "Established in 1892, Mysore Zoo is one of India’s oldest and most well-maintained zoological parks. It houses a wide variety of animals, including big cats, elephants, reptiles, and exotic birds. Families love its spacious enclosures, greenery, and educational exhibits, making it an ideal outing for kids and wildlife enthusiasts.",
       ],
     },
     {
@@ -107,7 +111,7 @@ const InMysore = () => {
       img: "/g3.webp",
       alt: "Jaganmohan Palace Art Gallery Raja Ravi Varma works",
       paragraphs: [
-        "Former royal residence turned art gallery—houses South Indian traditional art, works by Raja Ravi Varma, artifacts, and antiques.",
+        "A former royal residence, Jaganmohan Palace now functions as an art gallery displaying one of the largest collections of South Indian traditional art. Visitors can admire works by renowned artists like Raja Ravi Varma, along with rare paintings, artifacts, and antiques that narrate Mysore’s artistic heritage.",
       ],
     },
     {
@@ -115,8 +119,7 @@ const InMysore = () => {
       img: "/g4.webp",
       alt: "Devaraja Market spices flowers silk",
       paragraphs: [
-        "Bustling bazaar with fresh produce, spices, flowers, silk sarees, and handicrafts—a sensory delight and photographer’s favorite.",
-        "With Cozy Cabz car rental in Mysore, cover these at your own pace—comfortably and hassle-free.",
+        "A bustling bazaar in the heart of Mysore, Devaraja Market is a sensory delight. Known for fresh produce, spices, flowers, silk sarees, and handicrafts, it’s the perfect place to experience the city’s local life. The colorful stalls and lively atmosphere make it a photographer’s favorite as well as a shopper’s paradise",
       ],
     },
   ];
@@ -200,10 +203,10 @@ const InMysore = () => {
           <h1 className="heroeco__title">Car Rental in Mysore</h1>
           <span className="small-head">
             <br />
-            <h4>– Comfortable, Reliable & Safe</h4>
+            <h4>Comfortable, Reliable & Safe</h4>
           </span>
           <p className="heroeco__sub">
-            Mysuru is a city of palaces, gardens, temples, and royal heritage. From Mysore Palace and Chamundi Hills to lakes and bustling markets, explore it stress-free with Cozy Cabz car rental in Mysore—driver or self drive options, for sightseeing, local errands, or outstation trips.
+            Mysore, the city of palaces and gardens, blends royal heritage, temples, and bustling markets. From Mysore Palace to Chamundi Hills, there’s much to explore. Cozy Cabz Car Rental in Mysore with driver and self drive options ensures safe, stress-free travel.
           </p>
         </div>
       </section>
@@ -255,49 +258,9 @@ const InMysore = () => {
         </div>
       </section>
 
-      <section className="trustcc">
-        <div className="trustcc__container">
-          <h2 className="trustcc__title">Why Choose Cozy Cabz in<span> Mysore?</span></h2>
-          <div className="trustcc__grid">
-            {items.map((it, i) => (
-              <article className="trustcc__card" key={i}>
-                <div className="trustcc__icon">{it.icon}</div>
-                <h3>{it.title}</h3>
-                <p>{it.desc}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="howto">
-        <div className="howtoWrap">
-          <h2 className="howtoTitle">Easy Booking Process – Car Rental in Mysore</h2>
-          <p className="howtoSubtitle">Simple steps to get going.</p>
-          <div className="connector" aria-hidden="true" />
-          <div className="stepsGrid">
-            <StepCard color="#2563EB" icon={<PhoneIcon />} step={1} title="Contact Us" text="Reach out online or by phone to start your booking." />
-            <StepCard color="#16A34A" icon={<PinIcon />} step={2} title="Enter Trip Details" text="Share pickup & drop locations, date, time, and trip type." />
-            <StepCard color="#8B5CF6" icon={<CarIcon />} step={3} title="Choose Your Car" text="Economy sedans, SUVs, premium models, or self drive cars in Mysore." />
-            <StepCard color="#F97316" icon={<CheckIcon />} step={4} title="Get Instant Confirmation" text="Receive car/driver info and ETA right away." />
-            <StepCard color="#EF4444" icon={<ClockIcon />} step={5} title="Enjoy a Smooth Ride" text="Relax while our chauffeurs handle the roads safely." />
-          </div>
-        </div>
-      </section>
-
-      <section className="howrent" aria-labelledby="howrent-title">
-        <div className="howrent__container">
-          <h2 id="howrent-title">Car Rental Services in Mysore</h2>
-          <p className="howrent__intro">Pick the package that fits your travel plan:</p>
-          <ul className="howrent__list">
-            <li className="howrent__item"><h3>Local Rentals</h3><p>Flexible hourly/daily rentals for sightseeing and errands.</p></li>
-            <li className="howrent__item"><h3>Airport Transfers</h3><p>On-time pickups and drops for a worry-free transfer.</p></li>
-            <li className="howrent__item"><h3>Outstation Trips</h3><p>Coorg, Bandipur, Ooty and more—one-way or round-trip.</p></li>
-            <li className="howrent__item"><h3>Self-Drive Cars</h3><p>Well-maintained self drive options for total freedom.</p></li>
-            <li className="howrent__item"><h3>Luxury Cars</h3><p>Premium models for weddings, VIP travel, and events.</p></li>
-          </ul>
-        </div>
-      </section>
+    <Trustcc />
+     <Howto/>
+    <Howrent />
 
       <section className="attractions" aria-labelledby="attractions-title">
         <div className="attractions__container">

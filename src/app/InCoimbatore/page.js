@@ -4,6 +4,10 @@ import React, { useState } from "react";
 import Header from "../Components/Header/page";
 import Footer from "../Components/Footer/page";
 
+import Trustcc from "../Components/Trustcc";
+import Howto from "../Components/Howto";
+import Howrent from "../Components/Howrent";
+
 const InCoimbatore = () => {
   const [openIndex, setOpenIndex] = useState(null);
 
@@ -211,10 +215,10 @@ const InCoimbatore = () => {
           <h1 className="heroeco__title">Car Rental in Coimbatore</h1>
           <span className="small-head">
             <br />
-            <h4>– Reliable, Safe & Affordable</h4>
+            <h4>Reliable, Safe & Affordable</h4>
           </span>
           <p className="heroeco__sub">
-            Coimbatore, often called the Manchester of South India, is famous for its textile industries, temples, and scenic surroundings. From the iconic Marudamalai Temple and Gass Forest Museum to modern malls and nearby hill stations like Ooty, the city offers something for every traveler. To explore it all without stress, Cozy Cabz provides car rental in Coimbatore with driver, along with options for luxury car rental in Coimbatore and 7 seater car rental in Coimbatore. Whether you need a vehicle for local travel, business, or family trips, Cozy Cabz ensures safe, affordable, and convenient rides.
+            Coimbatore, the Manchester of South India, is known for textiles, temples, malls, and hill stations like Ooty. That’s why Cozy Cabz Car Rental in Coimbatore with driver offers safe, convenient rides, including luxury rentals and 7 seater car rental in Coimbatore.
           </p>
         </div>
       </section>
@@ -293,73 +297,9 @@ const InCoimbatore = () => {
         </div>
       </section>
 
-      <section className="trustcc">
-        <div className="trustcc__container">
-          <h2 className="trustcc__title">
-            Why Choose Cozy Cabz in<span> Coimbatore?</span>
-          </h2>
-          <div className="trustcc__grid">
-            {items.map((it, i) => (
-              <article className="trustcc__card" key={i}>
-                <div className="trustcc__icon">{it.icon}</div>
-                <h3>{it.title}</h3>
-                <p>{it.desc}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="howto">
-        <div className="howtoWrap">
-          <h2 className="howtoTitle">Easy Booking Process – Car Rental in Coimbatore</h2>
-          <p className="howtoSubtitle">Simple and straightforward. Follow these steps to book your ride in Coimbatore.</p>
-
-          <div className="connector" aria-hidden="true" />
-
-          <div className="stepsGrid">
-            <StepCard color="#2563EB" icon={<PhoneIcon />} step={1} title="Contact Our Team" text="Call us or book online to begin your car rental in Coimbatore quickly and hassle-free." />
-            <StepCard color="#16A34A" icon={<PinIcon />} step={2} title="Share Your Trip Details" text="Enter pickup & drop locations, date, time, and trip type—local, airport transfer, or outstation." />
-            <StepCard color="#8B5CF6" icon={<CarIcon />} step={3} title="Select Your Car" text="Choose from sedans, SUVs, luxury vehicles, or Coimbatore travels car options to suit your needs." />
-            <StepCard color="#F97316" icon={<CheckIcon />} step={4} title="Get Confirmation" text="Receive instant booking details with car model, driver information, and estimated arrival time." />
-            <StepCard color="#EF4444" icon={<ClockIcon />} step={5} title="Enjoy the Ride" text="Sit back and relax while our professional chauffeurs handle your journey safely and comfortably." />
-          </div>
-        </div>
-      </section>
-
-      <section className="howrent" aria-labelledby="howrent-title">
-        <div className="howrent__container">
-          <h2 id="howrent-title">Car Rental Services in Coimbatore</h2>
-          <p className="howrent__intro">At Cozy Cabz, our car rental services in Coimbatore are designed to suit every traveler’s needs:</p>
-
-          <ul className="howrent__list">
-            <li className="howrent__item">
-              <h3>Local Rentals</h3>
-              <p>Hourly and full-day packages for sightseeing, shopping, and business.</p>
-            </li>
-            <li className="howrent__item">
-              <h3>Airport Transfers</h3>
-              <p>On-time pickups and drops with easy Coimbatore car booking.</p>
-            </li>
-            <li className="howrent__item">
-              <h3>Outstation Trips</h3>
-              <p>Hire a rental car in Coimbatore for Ooty, Coonoor, Pollachi, or Palakkad.</p>
-            </li>
-            <li className="howrent__item">
-              <h3>Luxury Cars</h3>
-              <p>Premium sedans and SUVs for weddings, events, or luxury car rental in Coimbatore.</p>
-            </li>
-            <li className="howrent__item">
-              <h3>Group Travel</h3>
-              <p>7 seater car rental in Coimbatore and tempo travelers for families and corporates.</p>
-            </li>
-            <li className="howrent__item">
-              <h3>Taxi & Travel Services</h3>
-              <p>We also provide Coimbatore car rental & taxi services for local and long-distance travel.</p>
-            </li>
-          </ul>
-        </div>
-      </section>
+  <Trustcc />
+     <Howto/>
+    <Howrent />
 
       <section className="attractions" aria-labelledby="attractions-title">
         <div className="attractions__container">

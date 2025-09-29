@@ -4,6 +4,10 @@ import React, { useState } from "react";
 import Header from "../Components/Header/page";
 import Footer from "../Components/Footer/page";
 
+import Trustcc from "../Components/Trustcc";
+import Howto from "../Components/Howto";
+import Howrent from "../Components/Howrent";
+
 const InVadodara = () => {
   const [openIndex, setOpenIndex] = useState(null);
 
@@ -107,7 +111,7 @@ const InVadodara = () => {
       img: "/g3.webp",
       alt: "Baroda Museum and Picture Gallery exhibits",
       paragraphs: [
-        "Established in the 19th century, the museum showcases art, sculptures, manuscripts, and global artifacts—an enriching stop for visitors and students alike.",
+        "Established in the 19th century, the Baroda Museum & Picture Gallery showcases art, sculptures, manuscripts, and global artifacts. It provides deep insights into history and culture, making it an enriching stop for visitors. Art lovers and students often find it a must-visit attraction in Vadodara.",
       ],
     },
     {
@@ -211,10 +215,10 @@ const InVadodara = () => {
           <h1 className="heroeco__title">Car Rental in Vadodara</h1>
           <span className="small-head">
             <br />
-            <h4>– Reliable, Safe & Affordable</h4>
+            <h4>Reliable, Safe & Affordable</h4>
           </span>
           <p className="heroeco__sub">
-            Vadodara, also known as Baroda, is one of Gujarat’s most vibrant cities, blending royal heritage with modern charm. From Lakshmi Vilas Palace and Champaner-Pavagadh to thriving industries, the city attracts tourists and business travelers alike. Cozy Cabz offers car rental in Vadodara with driver, plus flexible packages for local, corporate, and outstation needs—safe, affordable, and comfortable.
+           Vadodara, or Baroda, blends royal heritage with modern charm, from Lakshmi Vilas Palace to the Champaner-Pavagadh UNESCO site and industrial hubs. To explore stress-free, Cozy Cabz offers car rental in Vadodara with driver and flexible packages. 
           </p>
         </div>
       </section>
@@ -293,73 +297,9 @@ const InVadodara = () => {
         </div>
       </section>
 
-      <section className="trustcc">
-        <div className="trustcc__container">
-          <h2 className="trustcc__title">
-            Why Choose Cozy Cabz in<span> Vadodara?</span>
-          </h2>
-          <div className="trustcc__grid">
-            {items.map((it, i) => (
-              <article className="trustcc__card" key={i}>
-                <div className="trustcc__icon">{it.icon}</div>
-                <h3>{it.title}</h3>
-                <p>{it.desc}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="howto">
-        <div className="howtoWrap">
-          <h2 className="howtoTitle">Easy Booking Process – Car Rental in Vadodara</h2>
-          <p className="howtoSubtitle">Simple and straightforward. Follow these steps to book your ride in Vadodara.</p>
-
-          <div className="connector" aria-hidden="true" />
-
-          <div className="stepsGrid">
-            <StepCard color="#2563EB" icon={<PhoneIcon />} step={1} title="Contact Our Team" text="Call us or book online to begin your car rental in Vadodara quickly and easily." />
-            <StepCard color="#16A34A" icon={<PinIcon />} step={2} title="Share Your Trip Details" text="Provide pickup & drop locations, date, time, and trip type—local rides, airport transfers, or outstation travel." />
-            <StepCard color="#8B5CF6" icon={<CarIcon />} step={3} title="Select Your Car" text="Choose from sedans, SUVs, tempo travelers, or car on hire with driver packages for convenience." />
-            <StepCard color="#F97316" icon={<CheckIcon />} step={4} title="Get Confirmation" text="Receive booking details instantly, including driver contact, car model, and estimated arrival time." />
-            <StepCard color="#EF4444" icon={<ClockIcon />} step={5} title="Enjoy the Ride" text="Sit back and relax while our professional chauffeurs handle Vadodara’s traffic for a safe and smooth journey." />
-          </div>
-        </div>
-      </section>
-
-      <section className="howrent" aria-labelledby="howrent-title">
-        <div className="howrent__container">
-          <h2 id="howrent-title">Car Rental Services in Vadodara</h2>
-          <p className="howrent__intro">At Cozy Cabz, we offer flexible car rental services in Vadodara to suit every travel need:</p>
-
-          <ul className="howrent__list">
-            <li className="howrent__item">
-              <h3>Local Rentals</h3>
-              <p>Hourly or daily packages for shopping, meetings, and city sightseeing.</p>
-            </li>
-            <li className="howrent__item">
-              <h3>Airport Transfers</h3>
-              <p>Hassle-free rides to and from Vadodara Airport with quick book car with driver options.</p>
-            </li>
-            <li className="howrent__item">
-              <h3>Outstation Trips</h3>
-              <p>Hire car rental in Vadodara Gujarat for trips to Ahmedabad, Surat, or Statue of Unity.</p>
-            </li>
-            <li className="howrent__item">
-              <h3>Corporate & Business Travel</h3>
-              <p>Affordable car hire in Vadodara for meetings, clients, and employees.</p>
-            </li>
-            <li className="howrent__item">
-              <h3>Luxury Cars</h3>
-              <p>Premium luxury car rental in Vadodara for weddings, VIP guests, and events.</p>
-            </li>
-            <li className="howrent__item">
-              <h3>Group Travel</h3>
-              <p>Tempo travelers and SUVs for family trips and corporate travel.</p>
-            </li>
-          </ul>
-        </div>
-      </section>
+  <Trustcc />
+     <Howto/>
+    <Howrent />
 
       <section className="attractions" aria-labelledby="attractions-title">
         <div className="attractions__container">

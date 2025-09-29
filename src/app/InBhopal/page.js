@@ -4,6 +4,11 @@ import React, { useState } from "react";
 import Header from "../Components/Header/page";
 import Footer from "../Components/Footer/page";
 
+import Trustcc from "../Components/Trustcc";
+import Howto from "../Components/Howto";
+import Howrent from "../Components/Howrent";
+
+
 const InBhopal = () => {
   const [openIndex, setOpenIndex] = useState(null);
 
@@ -107,7 +112,7 @@ const InBhopal = () => {
       img: "/g3.webp",
       alt: "Shaukat Mahal and Sadar Manzil heritage architecture",
       paragraphs: [
-        "19th-century architectural wonders mixing Indo-Islamic and European influences—Gothic and post-Renaissance styles with royal durbar history.",
+        "These 19th-century architectural wonders showcase a rare mix of Indo-Islamic and European influences. Shaukat Mahal stands out for its Gothic and post-Renaissance style, while Sadar Manzil served as a royal durbar hall. Both are must-see heritage sites for history lovers.",
       ],
     },
     {
@@ -211,10 +216,10 @@ const InBhopal = () => {
           <h1 className="heroeco__title">Car Rental in Bhopal</h1>
           <span className="small-head">
             <br />
-            <h4>– Safe, Reliable & Affordable</h4>
+            <h4>Safe, Reliable & Affordable</h4>
           </span>
           <p className="heroeco__sub">
-            Bhopal, the City of Lakes, blends heritage, culture, and natural beauty. From Upper Lake to Taj-ul-Masajid, the city offers attractions for everyone. Cozy Cabz provides car rental in Bhopal with well-maintained vehicles and professional chauffeurs—covering car on rent with driver and self drive car rental options for a stress-free journey.
+            Bhopal, the City of Lakes, blends heritage, culture, and natural beauty with sites like Upper Lake and Taj-ul-Masajid. Cozy Cabz Car Rental in Bhopal offers safe, stress-free travel through well-maintained cars, professional chauffeurs, self drive rentals, and flexible car hire options.
           </p>
         </div>
       </section>
@@ -293,73 +298,9 @@ const InBhopal = () => {
         </div>
       </section>
 
-      <section className="trustcc">
-        <div className="trustcc__container">
-          <h2 className="trustcc__title">
-            Why Choose Cozy Cabz in<span> Bhopal?</span>
-          </h2>
-          <div className="trustcc__grid">
-            {items.map((it, i) => (
-              <article className="trustcc__card" key={i}>
-                <div className="trustcc__icon">{it.icon}</div>
-                <h3>{it.title}</h3>
-                <p>{it.desc}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="howto">
-        <div className="howtoWrap">
-          <h2 className="howtoTitle">Easy Booking Process – Car Rental in Bhopal</h2>
-          <p className="howtoSubtitle">Follow these steps to book your ride in Bhopal.</p>
-
-          <div className="connector" aria-hidden="true" />
-
-          <div className="stepsGrid">
-            <StepCard color="#2563EB" icon={<PhoneIcon />} step={1} title="Contact Our Team" text="Call us or book online to begin your car rental in Bhopal quickly and without hassle." />
-            <StepCard color="#16A34A" icon={<PinIcon />} step={2} title="Share Your Trip Details" text="Enter pickup & drop points, travel date, and time to plan your journey." />
-            <StepCard color="#8B5CF6" icon={<CarIcon />} step={3} title="Select Your Car" text="Choose from sedans, SUVs, or self drive rental cars in Bhopal for more freedom and comfort." />
-            <StepCard color="#F97316" icon={<CheckIcon />} step={4} title="Get Confirmation" text="Receive instant booking details with car information, driver contact, and estimated arrival time." />
-            <StepCard color="#EF4444" icon={<ClockIcon />} step={5} title="Enjoy the Ride" text="Sit back and relax while our professional chauffeurs manage the journey smoothly and safely." />
-          </div>
-        </div>
-      </section>
-
-      <section className="howrent" aria-labelledby="howrent-title">
-        <div className="howrent__container">
-          <h2 id="howrent-title">Car Rental Services in Bhopal</h2>
-          <p className="howrent__intro">Our car rental services in Bhopal are designed to cover every travel need:</p>
-
-          <ul className="howrent__list">
-            <li className="howrent__item">
-              <h3>Local Rentals</h3>
-              <p>Hourly and daily rentals for shopping, meetings, or sightseeing.</p>
-            </li>
-            <li className="howrent__item">
-              <h3>Airport Transfers</h3>
-              <p>Hassle-free pickups and drops from Raja Bhoj Airport with easy car booking in Bhopal.</p>
-            </li>
-            <li className="howrent__item">
-              <h3>Outstation Trips</h3>
-              <p>Book rental cars in Bhopal for nearby cities like Indore, Sanchi, and Pachmarhi.</p>
-            </li>
-            <li className="howrent__item">
-              <h3>Self-Drive Cars</h3>
-              <p>Flexible self drive car rental Bhopal for those who prefer privacy.</p>
-            </li>
-            <li className="howrent__item">
-              <h3>Corporate Travel</h3>
-              <p>Affordable car hire in Bhopal for offices and client meetings.</p>
-            </li>
-            <li className="howrent__item">
-              <h3>Driver on Hire</h3>
-              <p>Need just a driver? Cozy Cabz offers professional car and driver rental options in Bhopal.</p>
-            </li>
-          </ul>
-        </div>
-      </section>
+ <Trustcc/>
+     <Howto/>
+    <Howrent />
 
       <section className="attractions" aria-labelledby="attractions-title">
         <div className="attractions__container">
