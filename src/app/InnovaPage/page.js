@@ -37,13 +37,13 @@ const InnovaPage = () => {
     { icon: "⏱️", title: "Engine", detail: "2.4L & 2.7L" },
   ];
 
-  const features = [
-    { icon: "🚐", label: "8 Seats" },
-    { icon: "🧳", label: "4 Bags" },
-    { icon: "🚪", label: "4 Doors" },
-    { icon: "⚙️", label: "Manual" },
-    { icon: "❄️", label: "AC" },
-  ];
+  // const features = [
+  //   { icon: "🚐", label: "8 Seats" },
+  //   { icon: "🧳", label: "4 Bags" },
+  //   { icon: "🚪", label: "4 Doors" },
+  //   { icon: "⚙️", label: "Manual" },
+  //   { icon: "❄️", label: "AC" },
+  // ];
 
   const benefits = [
     { icon: "✓", text: "Professional chauffeurs with local expertise" },
@@ -96,7 +96,7 @@ const InnovaPage = () => {
           borderRadius: "20px",
           padding: "60px 50px",
           margin: "30px auto",
-          maxWidth: "1400px",
+          // maxWidth: "1400px",
           boxShadow: "0 10px 40px rgba(230, 57, 70, 0.1)",
           position: "relative",
           overflow: "hidden",
@@ -181,40 +181,9 @@ const InnovaPage = () => {
             )}
           </div>
 
-          <div
-            style={{
-              display: "flex",
-              gap: "30px",
-              margin: "30px 0",
-              background: "#fff",
-              padding: "25px",
-              borderRadius: "12px",
-              boxShadow: "0 4px 15px rgba(0,0,0,0.08)",
-            }}
-          >
-            <div>
-              <h2 style={{ color: "#e63946", margin: 0, fontSize: "2.2rem" }}>
-                ₹12
-              </h2>
-              <p style={{ margin: "5px 0 0", fontSize: "14px", color: "#666" }}>
-                Per KM (Local)
-              </p>
-            </div>
-            <div
-              style={{ borderLeft: "2px solid #f0f0f0", paddingLeft: "30px" }}
-            >
-              <h2 style={{ color: "#e63946", margin: 0, fontSize: "2.2rem" }}>
-                ₹2,500
-              </h2>
-              <p style={{ margin: "5px 0 0", fontSize: "14px", color: "#666" }}>
-                Full Day (8hrs/80km)
-              </p>
-            </div>
-          </div>
-
           <div style={{ display: "flex", gap: "15px" }}>
             <a
-              href="tel:+919999999999"
+              href="tel:+917387382383"
               style={{
                 padding: "16px 30px",
                 borderRadius: "10px",
@@ -227,7 +196,7 @@ const InnovaPage = () => {
                 transition: "transform 0.2s",
               }}
             >
-              📞 Call Now: +91 9999999999
+              📞 Call Now: 91+ 7387382383
             </a>
             <a
               href="#booking"
@@ -332,10 +301,11 @@ const InnovaPage = () => {
       {/* Benefits Section */}
       <section
         style={{
-          maxWidth: "1400px",
+          // maxWidth: "1400px",
           margin: "50px auto",
-          background: "linear-gradient(135deg, #e63946 0%, #c02a34 100%)",
-          borderRadius: "20px",
+          // background: "linear-gradient(135deg, #e63946 0%, #c02a34 100%)",
+          background: "linear-gradient(135deg, #7c7c7c 0%, #202020 100%)",
+          // borderRadius: "20px",
           padding: "50px",
           color: "#fff",
           position: "relative",
@@ -399,8 +369,8 @@ const InnovaPage = () => {
               <div
                 style={{
                   fontSize: "24px",
-                  background: "#fff",
-                  color: "#e63946",
+                  background: "#d93d3d",
+                  color: "#ffffffff",
                   width: "40px",
                   height: "40px",
                   borderRadius: "50%",
@@ -423,10 +393,10 @@ const InnovaPage = () => {
       {/* Gallery Section */}
       <section
         style={{
-          maxWidth: "1400px",
+          // maxWidth: "1400px",
           margin: "50px auto",
           background: "#fff",
-          borderRadius: "20px",
+          // borderRadius: "20px",
           padding: "40px",
           boxShadow: "0 10px 40px rgba(0,0,0,0.08)",
         }}
@@ -553,7 +523,7 @@ const InnovaPage = () => {
             gap: "20px",
           }}
         >
-          <div style={{ display: "flex", gap: "20px", flexWrap: "wrap" }}>
+          {/* <div style={{ display: "flex", gap: "20px", flexWrap: "wrap" }}>
             {features.map((f, index) => (
               <div
                 key={index}
@@ -588,9 +558,9 @@ const InnovaPage = () => {
                 </p>
               </div>
             ))}
-          </div>
+          </div> */}
 
-          <div
+          {/* <div
             style={{
               background: "linear-gradient(135deg, #fff5f0 0%, #ffe8e0 100%)",
               padding: "15px 30px",
@@ -611,16 +581,16 @@ const InnovaPage = () => {
             >
               16,895 reviews
             </span>
-          </div>
+          </div> */}
         </div>
       </section>
 
       {/* Content Section */}
       <section
         style={{
-          maxWidth: "950px",
+          // maxWidth: "1400px",
           margin: "50px auto",
-          padding: "40px",
+          padding: "40px 100px",
           background: "#fff",
           borderRadius: "20px",
           lineHeight: "1.8",
@@ -744,11 +714,11 @@ const InnovaPage = () => {
       <section
         id="booking"
         style={{
-          maxWidth: "1000px",
+          // maxWidth: "1000px",
           margin: "50px auto",
           background: "#fff",
           borderRadius: "20px",
-          padding: "45px",
+          padding: "45px 100px",
           boxShadow: "0 10px 40px rgba(0, 0, 0, 0.1)",
         }}
       >
@@ -1113,9 +1083,9 @@ const InnovaPage = () => {
       {/* FAQ Section */}
       <section
         style={{
-          maxWidth: "1000px",
+          // maxWidth: "1000px",
           margin: "50px auto",
-          padding: "45px",
+          padding: "45px 150px",
           background: "#fff",
           borderRadius: "20px",
           boxShadow: "0 10px 40px rgba(0,0,0,0.08)",
