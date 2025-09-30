@@ -1632,6 +1632,79 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="prestigious-section section-container">
+        <div className="prestigious-wrap">
+          {/* Image First */}
+          <div className="prestigious-image">
+            <Image
+              src="/pr1.jpeg"
+              alt="DRDO G20 Summit"
+              width={600}
+              height={400}
+              className="image"
+            />
+          </div>
+
+          {/* Content Second */}
+          <div className="prestigious-content">
+            <h2>
+              Prestigious <span>Associations</span>
+            </h2>
+            <p>
+              Cozy Cabz is proud to have provided cab services for the DRDO
+              department during the prestigious G20 Summit. Our reliable fleet
+              and professional service ensured seamless travel support for
+              dignitaries and officials.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Services */}
+      <section className="faq">
+        <div className="faq-header">
+          <h2>Frequently Asked Questions</h2>
+          <p>
+            Answers to the most common questions about our corporate
+            transportation program.
+          </p>
+        </div>
+
+        <div className="faq-list" role="list">
+          {faqs.map((item, i) => {
+            const open = openIndex === i;
+            return (
+              <div
+                className={`faq-item ${open ? "open" : ""}`}
+                key={i}
+                role="listitem"
+              >
+                <button
+                  className="faq-question"
+                  aria-expanded={open}
+                  aria-controls={`faq-panel-${i}`}
+                  id={`faq-control-${i}`}
+                  onClick={() => toggle(i)}
+                >
+                  <span className="faq-q-text">{item.q}</span>
+                  <span className="faq-icon" aria-hidden="true" />
+                </button>
+
+                <div
+                  id={`faq-panel-${i}`}
+                  role="region"
+                  aria-labelledby={`faq-control-${i}`}
+                  className="faq-answer"
+                  style={{ maxHeight: open ? "300px" : "0px" }}
+                >
+                  <p>{item.a}</p>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </section>
+
       {/* Testimonial A */}
       <section className="t-wrap" aria-labelledby="t-title">
         <div className="t-container">
@@ -1748,79 +1821,6 @@ export default function Home() {
                 </button>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Services */}
-      <section className="faq">
-        <div className="faq-header">
-          <h2>Frequently Asked Questions</h2>
-          <p>
-            Answers to the most common questions about our corporate
-            transportation program.
-          </p>
-        </div>
-
-        <div className="faq-list" role="list">
-          {faqs.map((item, i) => {
-            const open = openIndex === i;
-            return (
-              <div
-                className={`faq-item ${open ? "open" : ""}`}
-                key={i}
-                role="listitem"
-              >
-                <button
-                  className="faq-question"
-                  aria-expanded={open}
-                  aria-controls={`faq-panel-${i}`}
-                  id={`faq-control-${i}`}
-                  onClick={() => toggle(i)}
-                >
-                  <span className="faq-q-text">{item.q}</span>
-                  <span className="faq-icon" aria-hidden="true" />
-                </button>
-
-                <div
-                  id={`faq-panel-${i}`}
-                  role="region"
-                  aria-labelledby={`faq-control-${i}`}
-                  className="faq-answer"
-                  style={{ maxHeight: open ? "300px" : "0px" }}
-                >
-                  <p>{item.a}</p>
-                </div>
-              </div>
-            );
-          })}
-        </div>
-      </section>
-
-      <section className="prestigious-section section-container">
-        <div className="prestigious-wrap">
-          {/* Image First */}
-          <div className="prestigious-image">
-            <Image
-              src="/pr1.jpeg"
-              alt="DRDO G20 Summit"
-              width={600}
-              height={400}
-              className="image"
-            />
-          </div>
-
-          {/* Content Second */}
-          <div className="prestigious-content">
-            <h2>
-              Prestigious <span>Associations</span>
-            </h2>
-            <p>
-              Cozy Cabz is proud to have provided cab services for the DRDO
-              department during the prestigious G20 Summit. Our reliable fleet
-              and professional service ensured seamless travel support for
-              dignitaries and officials.
-            </p>
           </div>
         </div>
       </section>

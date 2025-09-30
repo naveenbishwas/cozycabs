@@ -9,7 +9,6 @@ import Trustcc from "../Components/Trustcc";
 import Howto from "../Components/Howto";
 import Howrent from "../Components/Howrent";
 
-
 const InChandigarh = () => {
   const [openIndex, setOpenIndex] = useState(null);
 
@@ -230,16 +229,17 @@ const InChandigarh = () => {
       <section className="heroeco" aria-label="Car Rental Hero Section">
         <div className="heroeco__copy">
           <p className="heroeco__eyebrow">India’s Trusted Car Rental</p>
-          <h1 className="heroeco__title">Car Rental in Chandigardh </h1>
+          <h1 className="heroeco__title">Car Rental in Chandigarh </h1>
           <span className="small-head">
             <br />
-            <h4>Safe, Reliable & Affordable
-            </h4>
+            <h4>Safe, Reliable & Affordable</h4>
           </span>
           <p className="heroeco__sub">
-          Chandigarh, the City Beautiful, is known for its clean roads, planned design, gardens, and lakes. Yet travel can be time-consuming. That’s why Cozy Cabz Car Rental in Chandigarh with driver ensures safe, smooth rides for sightseeing, airport transfers, business trips, and weekend journeys.
-
-
+            Chandigarh, the City Beautiful, is known for its clean roads,
+            planned design, gardens, and lakes. Yet travel can be
+            time-consuming. That’s why Cozy Cabz Car Rental in Chandigarh with
+            driver ensures safe, smooth rides for sightseeing, airport
+            transfers, business trips, and weekend journeys.
           </p>
         </div>
       </section>
@@ -399,18 +399,19 @@ const InChandigarh = () => {
           </div>
         </div>
       </section> */}
-    <Trustcc />
-     <Howto/>
-    <Howrent />
+      <Trustcc />
+      <Howto />
+      <Howrent />
 
       <section className="attractions" aria-labelledby="attractions-title">
         <div className="attractions__container">
           <header className="attractions__head">
             <h2 id="attractions-title">
-            Must-Visit Places in Chandigarh with Cozy Cabz
+              Must-Visit Places in Chandigarh with Cozy Cabz
             </h2>
             <p>
-            With Cozy Cabz rent a car in Chandigarh, you can explore the city’s iconic landmarks comfortably and at your own pace.
+              With Cozy Cabz rent a car in Chandigarh, you can explore the
+              city’s iconic landmarks comfortably and at your own pace.
             </p>
           </header>
 
