@@ -114,7 +114,6 @@
   z-index: 1;
 }
 
-
 .contact-btn span {
   position: relative;
   z-index: 2;
@@ -175,65 +174,6 @@
   z-index: -1;
   transition: transform 0.4s ease;
 }
-
-/* .contact-btn span {
-  position: relative;
-  z-index: 1;
-}
-
-.contact-btn:hover::before {
-  transform: translateY(-100%);
-}
-
-.contact-btn:hover {
-  color: var(--brandColor);
-  background: white;
-  transform: translateY(-3px);
-}
-
-@keyframes jelly {
-  0% {
-    transform: scale(1);
-  }
-  30% {
-    transform: scale(1.25, 0.75);
-  }
-  40% {
-    transform: scale(0.75, 1.25);
-  }
-  50% {
-    transform: scale(1.15, 0.85);
-  }
-  65% {
-    transform: scale(0.95, 1.05);
-  }
-  75% {
-    transform: scale(1.05, 0.95);
-  }
-  100% {
-    transform: scale(1);
-  }
-
-
-.contact-btn {
-  position: relative;
-  background: var(--brandColor);
-  color: white;
-  border: 2px solid var(--brandColor);
-  padding: 10px 18px;
-  border-radius: 25px;
-  cursor: pointer;
-  font-weight: bold;
-  z-index: 1;
-  overflow: hidden;
-
-  display: flex;
-  align-items: center;
-  gap: 10px;
-
-  /* Wave / breathing effect */
-/*   animation: waveScale 2.5s infinite ease-in-out;
-} */
 
 /* Inner span */
 .contact-btn span {
@@ -297,10 +237,12 @@
 
 .contact-btn:hover .contact-btn svg path {
   fill: #d80117;
+  color: white;
 }
 
 .contact-btn:hover .contact-btn svg {
   stroke: #d80117;
+  color: white;
 }
 
 /* Logo always flex center inside its space */
@@ -357,7 +299,7 @@
 
 .contact-btn:hover {
   background: #fff;
-  color: var(--brandColor);
+  /* color: var(--brandColor); */
   transform: translateY(-2px);
 }
 
@@ -614,7 +556,3 @@
 }
 
 /* On hover – make phone red */
-.contact-btn:hover svg {
-  fill: var(--brandColor);
-  stroke: var(--brandColor);
-}
