@@ -16,18 +16,18 @@ export default function SiteFooter() {
             <div className="brand__row">
               <div className="brand__logo" aria-hidden="true">
                 <Image
-                  src="/cozy-logo.svg"
+                  src="/white.png"
                   alt="CarRental Logo"
-                  width={40}
-                  height={40}
+                  width={150}
+                  height={50}
                 />
               </div>
-              <div>
+              {/* <div>
                 <h3 id="footer-title" className="brand__name">
                   CozyCabz
                 </h3>
                 <p className="brand__tag">Premium Transport Solutions</p>
-              </div>
+              </div> */}
             </div>
 
             <p className="brand__about">
