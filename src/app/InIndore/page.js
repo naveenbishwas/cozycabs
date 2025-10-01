@@ -77,7 +77,7 @@ const InIndore = () => {
   const spots = [
     {
       title: "Rajwada Palace",
-      img: "/g1.webp",
+      img: "/inindore/Rajwada.png",
       alt: "Rajwada Palace, Indore",
       paragraphs: [
         "Rajwada Palace is a historic seven-story palace built by the Holkars over 200 years ago. It combines Mughal, Maratha, and French styles, making it an architectural gem. Located in the heart of the city, it is a must-visit for history lovers and photographers.",
@@ -85,7 +85,7 @@ const InIndore = () => {
     },
     {
       title: "Lal Bagh Palace",
-      img: "/g2.webp",
+      img: "/inindore/Lal.png",
       alt: "Lal Bagh Palace, Indore",
       paragraphs: [
         "Once the residence of the Holkar rulers, Lal Bagh Palace showcases the grandeur of European architecture. The lavish interiors, ornate furniture, and expansive gardens give visitors a glimpse of royal lifestyle. It’s one of Indore’s finest heritage landmarks.",
@@ -93,7 +93,7 @@ const InIndore = () => {
     },
     {
       title: "Kanch Mandir",
-      img: "/g3.webp",
+      img: "/inindore/Kanch.png",
       alt: "Kanch Mandir, Indore",
       paragraphs: [
         "This Jain temple, made entirely of glass and mirrors, is a dazzling sight. Intricate glasswork covers the walls, ceilings, and floors, creating a unique and spiritual ambiance. It is one of Indore’s most striking and sacred attractions.",
@@ -101,7 +101,7 @@ const InIndore = () => {
     },
     {
       title: "Sarafa Bazaar",
-      img: "/g4.webp",
+      img: "/inindore/Sarafa.png",
       alt: "Sarafa Bazaar, Indore",
       paragraphs: [
         "Sarafa Bazaar is Indore’s most vibrant spot, buzzing with jewelry shops by day and transforming into a food street by night. From chaat to sweets, it’s a paradise for food lovers. Exploring this market is a must for anyone who enjoys nightlife and local flavors.",
@@ -109,7 +109,7 @@ const InIndore = () => {
     },
     {
       title: "Patalpani Waterfall",
-      img: "/g3.webp",
+      img: "/inindore/Patalpani.png",
       alt: "Patalpani Waterfall, Indore",
       paragraphs: [
         "Located about 30 km from Indore, Patalpani is a scenic waterfall surrounded by greenery. It’s a popular picnic spot and a great escape from the city. Monsoon season makes the view especially breathtaking, attracting tourists and locals alike.",
@@ -117,7 +117,7 @@ const InIndore = () => {
     },
     {
       title: "Central Museum",
-      img: "/g4.webp",
+      img: "/inindore/Central.png",
       alt: "Central Museum, Indore",
       paragraphs: [
         "Also known as Indore Museum, this place houses rare artifacts, coins, and sculptures from Madhya Pradesh’s history. It’s a great spot for those interested in archaeology and culture, offering insights into the region’s rich heritage.",

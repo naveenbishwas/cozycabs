@@ -75,7 +75,7 @@ const InNagpur = () => {
   const spots = [
     {
       title: "Deekshabhoomi",
-      img: "/g1.webp",
+      img: "/innagpur/Deekshabhoomi.png",
       alt: "Deekshabhoomi stupa in Nagpur",
       paragraphs: [
         "Deekshabhoomi is a sacred Buddhist monument where Dr. B.R. Ambedkar embraced Buddhism in 1956. The massive stupa here is a symbol of peace, equality, and social justice, drawing visitors and devotees from around the world.",

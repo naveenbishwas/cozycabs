@@ -99,7 +99,7 @@ const InJaipur = () => {
   const spots = [
     {
       title: "Amber Fort",
-      img: "/g1.webp",
+      img: "/injaipur/Amber.png",
       alt: "Amber Fort and Maota Lake",
       paragraphs: [
         "Amber Fort is one of Jaipur’s grandest monuments, known for its artistic blend of Hindu and Mughal architecture. The fort features majestic gates, expansive courtyards, and the breathtaking Sheesh Mahal (Mirror Palace). Overlooking Maota Lake, it offers stunning views and cultural light shows that bring Rajasthan’s history to life.",
@@ -107,7 +107,7 @@ const InJaipur = () => {
     },
     {
       title: "City Palace",
-      img: "/g2.webp",
+      img: "/injaipur/City-Palace.png",
       alt: "City Palace courtyards",
       paragraphs: [
         "Located at the center of Jaipur, City Palace showcases a fine mix of Rajput and Mughal styles. With grand courtyards, beautifully decorated museums, and a royal residence, it gives visitors a glimpse into the luxurious lifestyle of Jaipur’s rulers. It’s a must-visit for history buffs and culture enthusiasts.",
@@ -115,7 +115,7 @@ const InJaipur = () => {
     },
     {
       title: "Hawa Mahal",
-      img: "/g3.webp",
+      img: "/injaipur/Hawa.png",
       alt: "Hawa Mahal facade",
       paragraphs: [
         "Known as the “Palace of Winds,” Hawa Mahal is Jaipur’s most iconic landmark. Its honeycomb façade of 953 windows was designed for royal women to observe city life unseen. Today, it is a favorite for photographers and tourists, offering both cultural significance and architectural brilliance.",
@@ -123,7 +123,7 @@ const InJaipur = () => {
     },
     {
       title: "Jantar Mantar",
-      img: "/g4.webp",
+      img: "/injaipur/Jantar.png",
       alt: "Jantar Mantar instruments",
       paragraphs: [
         "A UNESCO World Heritage Site, Jantar Mantar is an astronomical wonder built by Maharaja Jai Singh II. It houses 19 instruments, including the world’s largest stone sundial, still accurate today. The observatory is a fascinating site for those interested in science, astronomy, and Indian innovation.",
@@ -131,7 +131,7 @@ const InJaipur = () => {
     },
     {
       title: "Jal Mahal",
-      img: "/g1.webp",
+      img: "/injaipur/Jal.png",
       alt: "Jal Mahal on Man Sagar Lake",
       paragraphs: [
         "Situated in the middle of Man Sagar Lake, Jal Mahal is a picturesque palace that appears to float on water. Surrounded by the Aravalli hills, it is especially stunning during sunrise and sunset. The peaceful setting makes it an ideal stop for travelers seeking relaxation and scenic views.",
@@ -139,7 +139,7 @@ const InJaipur = () => {
     },
     {
       title: "Nahargarh Fort",
-      img: "/g2.webp",
+      img: "/injaipur/Nahargarh.png",
       alt: "Nahargarh Fort view",
       paragraphs: [
         "Perched high on the Aravalli hills, Nahargarh Fort provides breathtaking panoramic views of Jaipur city. Once a royal retreat, the fort is now a popular spot for evening outings. Its blend of history, architecture, and natural beauty makes it one of Jaipur’s most visited attractions.",

@@ -77,7 +77,7 @@ const InChandigarh = () => {
   const spots = [
     {
       title: "Rock Garden",
-      img: "/g1.webp",
+      img: "/inchandigarh/Rock.png",
       alt: "Rock Garden Chandigarh sculptures made from recycled materials",
       paragraphs: [
         "Created by Nek Chand, Rock Garden is a surreal sculpture park built from recycled materials. Winding pathways reveal thousands of imaginative statues and installations, turning waste into art. It’s one of Chandigarh’s most beloved attractions and perfect for a relaxed exploration.",
@@ -85,7 +85,7 @@ const InChandigarh = () => {
     },
     {
       title: "Sukhna Lake",
-      img: "/g2.webp",
+      img: "/inchandigarh/Sukhna.png",
       alt: "Sukhna Lake promenade with serene waters and walkers",
       paragraphs: [
         "This serene man-made lake at the foothills of the Shivalik Range is a favourite for morning walks, boating, and scenic views. The promenade and gardens around the lake offer a calm escape from city bustle and lovely spots for photos and quiet moments.",
@@ -93,7 +93,7 @@ const InChandigarh = () => {
     },
     {
       title: "Rose Garden (Zakir Rose Garden)",
-      img: "/g3.webp",
+      img: "/inchandigarh/Rose.png",
       alt: "Zakir Rose Garden blooms and green lawns in Chandigarh",
       paragraphs: [
         "Spread over 30+ acres, this is Asia’s largest rose garden. With hundreds of rose varieties in full bloom, wide green lawns, and quiet corners, it’s a calm spot for nature lovers and a refreshing contrast to urban life.",
@@ -101,7 +101,7 @@ const InChandigarh = () => {
     },
     {
       title: "Capitol Complex & Open Hand Monument",
-      img: "/g4.webp",
+      img: "/inchandigarh/Capitol.png",
       alt: "Chandigarh Capitol Complex and Open Hand Monument",
       paragraphs: [
         "Designed by Le Corbusier, the Capitol Complex is Chandigarh’s UNESCO architectural gem, housing the Legislative Assembly, High Court, and Secretariat. The nearby Open Hand Monument—symbolizing peace and unity—is a striking modern landmark.",
@@ -109,7 +109,7 @@ const InChandigarh = () => {
     },
     {
       title: "Government Museum & Art Gallery",
-      img: "/g1.webp",
+      img: "inchandigarh/Government.png",
       alt: "Government Museum and Art Gallery exhibits in Chandigarh",
       paragraphs: [
         "This museum houses rich collections of ancient sculptures, Gandharan art, Pahari paintings, and modern Indian works. It’s a cultural hub that showcases Chandigarh’s heritage and its progressive spirit.",
@@ -117,7 +117,7 @@ const InChandigarh = () => {
     },
     {
       title: "Japanese Garden",
-      img: "/g2.webp",
+      img: "inchandigarh/Japanese.png",
       alt: "Japanese Garden pagoda, waterfalls, and landscaped paths",
       paragraphs: [
         "Located in Sector 31, the Japanese Garden offers a peaceful oasis in the city. With waterfalls, pagoda structures, themed gardens, and a meditation centre, it’s a tranquil place to unwind and connect with nature.",

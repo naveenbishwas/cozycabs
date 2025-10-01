@@ -52,7 +52,7 @@ const Inchennai = () => {
   const spots = [
     {
       title: "Marina Beach",
-      img: "/g1.webp",
+      img: "/inchennai/Marina-Beach.png",
       alt: "Waves and shoreline at Marina Beach",
       paragraphs: [
         "Stretching for over 13 km, Marina Beach is the longest urban beach in India and a must-visit landmark of Chennai. It’s perfect for morning walks, sunrise views, and evening gatherings, with food stalls and local vendors adding to the lively vibe. Both locals and tourists flock here daily to enjoy the sea breeze and stunning coastal views.",
@@ -60,7 +60,7 @@ const Inchennai = () => {
     },
     {
       title: "Kapaleeshwarar Temple",
-      img: "/g2.webp",
+      img: "/inchennai/Kapaleeshwarar.png",
       alt: "Colorful gopuram of Kapaleeshwarar Temple",
       paragraphs: [
         "One of Chennai’s most famous temples, the Kapaleeshwarar Temple in Mylapore is a fine example of Dravidian architecture. Its towering, colorful gopuram is a sight to behold, while the temple’s spiritual atmosphere offers peace to thousands of devotees and visitors every day. Festivals here are celebrated with grandeur, making it a cultural highlight of the city.",
@@ -68,7 +68,7 @@ const Inchennai = () => {
     },
     {
       title: "Fort St. George",
-      img: "/g3.webp",
+      img: "/inchennai/Fort-St..png",
       alt: "Historic Fort St. George complex",
       paragraphs: [
         "Built in 1644, Fort St. George marks the beginning of British rule in India. Today, it serves as a historic monument housing a museum with paintings, coins, weapons, and relics from the colonial era. The fort is not just an architectural marvel but also a reminder of Chennai’s rich past.",
@@ -76,7 +76,7 @@ const Inchennai = () => {
     },
     {
       title: "Government Museum",
-      img: "/g4.webp",
+      img: "/inchennai/Government-Museum.png",
       alt: "Government Museum building in Chennai",
       paragraphs: [
         "Founded in 1851, the Government Museum is one of India’s oldest and most important cultural institutions. It showcases collections of art, archaeology, and anthropology, including rare South Indian bronzes and paintings. A visit here is perfect for history lovers and art enthusiasts wanting to explore Tamil Nadu’s heritage.",
@@ -84,7 +84,7 @@ const Inchennai = () => {
     },
     {
       title: "Kalakshetra Foundation",
-      img: "/g1.webp",
+      img: "/inchennai/Kalakshetra.png",
       alt: "Kalakshetra cultural campus",
       paragraphs: [
         "Kalakshetra is a cultural academy dedicated to preserving classical dance, music, and art forms of South India. Visitors can watch live performances, interact with artists, and experience the essence of Tamil traditions. It’s an inspiring space that reflects Chennai’s deep connection to art and culture.",
@@ -92,7 +92,7 @@ const Inchennai = () => {
     },
     {
       title: "T. Nagar & Express Avenue Mall",
-      img: "/g2.webp",
+      img: "/inchennai/T.-Nagar.png",
       alt: "T. Nagar shopping area and mall",
       paragraphs: [
         "T. Nagar is the busiest shopping hub of Chennai, known for silk sarees, gold jewelry, and buzzing street markets. In contrast, Express Avenue Mall offers a modern shopping and entertainment experience with luxury brands, cafés, and multiplexes. Together, they represent the city’s traditional charm and cosmopolitan lifestyle.",
@@ -100,7 +100,7 @@ const Inchennai = () => {
     },
     {
       title: "Mahabalipuram",
-      img: "/g3.webp",
+      img: "/inchennai/Mahabalipuram.png",
       alt: "Shore Temple at Mahabalipuram",
       paragraphs: [
         "Located just 60 km from Chennai, Mahabalipuram is a UNESCO World Heritage site renowned for its rock-cut temples and sculptures. The Shore Temple, Arjuna’s Penance, and Pancha Rathas showcase incredible artistry dating back to the Pallava dynasty. A trip here is a perfect blend of history, spirituality, and coastal beauty",
@@ -108,7 +108,7 @@ const Inchennai = () => {
     },
     {
       title: "Guindy National Park",
-      img: "/g4.webp",
+      img: "/inchennai/Guindy.png",
       alt: "Greenery inside Guindy National Park",
       paragraphs: [
         "Spread across 600 acres, Guindy National Park is one of the few national parks located inside a metro city. It is home to blackbucks, deer, jackals, and over 130 bird species, making it a favorite for nature enthusiasts. The park also has a children’s park and snake park, making it a family-friendly destination.",

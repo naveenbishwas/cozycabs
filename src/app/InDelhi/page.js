@@ -53,7 +53,7 @@ const InDelhi = () => {
   const spots = [
     {
       title: "Red Fort & Chandni Chowk",
-      img: "/g1.webp",
+      img: "/indelhi/Red-Fort.png",
       alt: "Historic Red Fort and bustling Chandni Chowk",
       paragraphs: [
         "Begin your journey at the majestic Red Fort, a UNESCO World Heritage site that symbolizes India’s rich history. Just nearby is Chandni Chowk, one of Delhi’s oldest and busiest markets—perfect for heritage lovers and foodies alike.",
@@ -61,7 +61,7 @@ const InDelhi = () => {
     },
     {
       title: "Qutub Minar & Humayun’s Tomb",
-      img: "/g2.webp",
+      img: "/indelhi/Qutub-Minar.png",
       alt: "Qutub Minar complex and Humayun’s Tomb gardens",
       paragraphs: [
         "For architecture admirers, Qutub Minar and Humayun’s Tomb are must-visits. The tallest brick minaret and the Mughal-era tomb that inspired the Taj Mahal make for stunning photography spots.",
@@ -69,7 +69,7 @@ const InDelhi = () => {
     },
     {
       title: "India Gate & Rajpath",
-      img: "/g3.webp",
+      img: "/indelhi/India-Gate (1).png",
       alt: "India Gate illuminated in the evening",
       paragraphs: [
         "At the heart of the city, India Gate stands tall as a war memorial. An evening walk along Rajpath with glowing lights is truly memorable and iconic.",
@@ -77,7 +77,7 @@ const InDelhi = () => {
     },
     {
       title: "Lotus Temple & Akshardham",
-      img: "/g4.webp",
+      img: "/indelhi/Lotus-Temple (1).png",
       alt: "Lotus Temple and Akshardham complex",
       paragraphs: [
         "Seek peace at the Lotus Temple or explore the grand Akshardham Temple—both blend spirituality, art, and culture, ideal for travelers seeking calm and beauty.",
@@ -85,7 +85,7 @@ const InDelhi = () => {
     },
     {
       title: "Connaught Place & Khan Market",
-      img: "/g1.webp",
+      img: "/indelhi/Connaught (1).png",
       alt: "Connaught Place market circles and shops",
       paragraphs: [
         "For shopping and city vibes, Connaught Place is packed with branded stores and eateries, while Khan Market offers upscale cafés, bookstores, and boutiques.",
@@ -93,7 +93,7 @@ const InDelhi = () => {
     },
     {
       title: "Lodhi Gardens & Hauz Khas Village",
-      img: "/g2.webp",
+      img: "/indelhi/Lodhi-Gardens (1).png",
       alt: "Lodhi Gardens greenery and Hauz Khas fort",
       paragraphs: [
         "Enjoy a natural and cultural mix at Lodhi Gardens and Hauz Khas Village—perfect for walks, heritage tombs, art galleries, cafés, and nightlife.",

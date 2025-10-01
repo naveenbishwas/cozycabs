@@ -100,7 +100,7 @@ const InAhmedabad = () => {
   const spots = [
     {
       title: "Sabarmati Ashram",
-      img: "/g1.webp",
+      img: "/inahmedabad/Sabarmati.png",
       alt: "Sabarmati Ashram campus",
       paragraphs: [
         "Once the residence of Mahatma Gandhi, Sabarmati Ashram is a peaceful retreat that showcases India’s freedom struggle. Visitors can see Gandhi’s personal belongings, letters, and photographs while walking through the serene campus along the Sabarmati River. It remains one of the most inspiring landmarks in Ahmedabad",
@@ -108,7 +108,7 @@ const InAhmedabad = () => {
     },
     {
       title: "Kankaria Lake",
-      img: "/g2.webp",
+      img: "/inahmedabad/Kankaria.png",
       alt: "Kankaria Lakefront",
       paragraphs: [
         "Kankaria Lake is a lively recreational spot perfect for families and tourists. It features boat rides, a zoo, toy train, balloon rides, and landscaped gardens. The lakefront hosts vibrant evening activities, making it a favorite hangout for locals and travelers looking to enjoy a fun-filled day in the city.",
@@ -116,7 +116,7 @@ const InAhmedabad = () => {
     },
     {
       title: "Sidi Saiyyed Mosque",
-      img: "/g3.webp",
+      img: "/inahmedabad/Sidi.png",
       alt: "Sidi Saiyyed Jali",
       paragraphs: [
         "Built in the 16th century, this mosque is world-famous for its intricate stone latticework windows, especially the iconic “Tree of Life” design. A masterpiece of Indo-Islamic art, it attracts both devotees and history lovers. The mosque remains one of Ahmedabad’s most photographed and celebrated monuments.",
@@ -124,7 +124,7 @@ const InAhmedabad = () => {
     },
     {
       title: "Adalaj Stepwell",
-      img: "/g4.webp",
+      img: "/inahmedabad/Adalaj.png",
       alt: "Adalaj Stepwell carvings",
       paragraphs: [
         "Adalaj Stepwell is a stunning five-story water reservoir showcasing Indo-Islamic architecture and detailed stone carvings. Built in the 15th century, it was not only a source of water but also a resting place for travelers. Its beautifully sculpted corridors and pillars make it a must-visit for heritage enthusiasts.",
@@ -132,7 +132,7 @@ const InAhmedabad = () => {
     },
     {
       title: "Sabarmati Riverfront",
-      img: "/g1.webp",
+      img: "/inahmedabad/Sabarmati-Riverfront.png",
       alt: "Sabarmati Riverfront walkway",
       paragraphs: [
         "The Sabarmati Riverfront is a modern landmark offering landscaped gardens, cycling tracks, and boating facilities along the river. Stretching for kilometers, it’s ideal for morning walks, evening leisure, or photography. With its blend of nature and urban development, it has become a favorite spot for locals and tourists alike.",
@@ -140,7 +140,7 @@ const InAhmedabad = () => {
     },
     {
       title: "Jama Masjid",
-      img: "/g2.webp",
+      img: "/inahmedabad/Jama-Masjid.png",
       alt: "Ahmedabad Jama Masjid",
       paragraphs: [
         "Constructed in the 15th century by Sultan Ahmed Shah, Jama Masjid is one of India’s most elegant mosques. Built with yellow sandstone, it features intricate carvings, grand domes, and a vast courtyard. The mosque reflects the city’s rich architectural heritage and continues to draw devotees and visitors every day.",

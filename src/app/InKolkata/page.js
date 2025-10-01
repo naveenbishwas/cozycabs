@@ -9,7 +9,7 @@ import Trustcc from "../Components/Trustcc";
 import Howto from "../Components/Howto";
 import Howrent from "../Components/Howrent";
 
-const InAhmedabad = () => {
+const InKolkata= () => {
   const [openIndex, setOpenIndex] = useState(null);
 
   const toggle = (i) => {
@@ -99,7 +99,7 @@ const InAhmedabad = () => {
   const spots = [
     {
       title: "Victoria Memorial",
-      img: "/g1.webp",
+      img: "/inkolkata/Victoria.png",
       alt: "Victoria Memorial",
       paragraphs: [
         "Built in memory of Queen Victoria, this marble monument is one of Kolkata’s most iconic attractions. Surrounded by lush gardens and housing an impressive museum, it offers visitors a chance to admire colonial architecture and explore art, sculptures, and historical exhibits that reflect the city’s royal past.",
@@ -107,7 +107,7 @@ const InAhmedabad = () => {
     },
     {
       title: "Howrah Bridge",
-      img: "/g2.webp",
+      img: "/inkolkata/Howrah.png",
       alt: "Howrah Bridge",
       paragraphs: [
         "Known as Rabindra Setu, the Howrah Bridge is an engineering marvel and the lifeline of Kolkata. Stretching over the Hooghly River, it carries thousands of vehicles daily. Driving across it is a unique experience that captures the pulse of the city, making it a must for anyone exploring Kolkata",
@@ -115,7 +115,7 @@ const InAhmedabad = () => {
     },
     {
       title: "Dakshineswar Kali Temple",
-      img: "/g3.webp",
+      img: "/inkolkata/Dakshineswar.png",
       alt: "Dakshineswar Temple",
       paragraphs: [
         "Dedicated to Goddess Kali, Dakshineswar Temple is a renowned pilgrimage spot located on the banks of the Hooghly River. Built in the 19th century, it features stunning architecture with 12 Shiva temples surrounding the main shrine. It is both a spiritual and cultural landmark that attracts visitors from across the country.",
@@ -131,7 +131,7 @@ const InAhmedabad = () => {
     },
     {
       title: "Science City",
-      img: "/g1.webp",
+      img: "/inkolkata/Science.png",
       alt: "Science City",
       paragraphs: [
         "Science City is one of Asia’s largest science centers, blending education with entertainment. With interactive exhibits, 3D shows, and a space theater, it appeals to students, families, and curious minds. It’s the perfect place to enjoy hands-on learning while spending a fun-filled day.",
@@ -139,7 +139,7 @@ const InAhmedabad = () => {
     },
     {
       title: "Marble Palace",
-      img: "/g2.webp",
+      img: "/inkolkata/Marble.png",
       alt: "Marble Palace",
       paragraphs: [
         "The Marble Palace is a 19th-century mansion showcasing exquisite neoclassical architecture and stunning art collections. Visitors can admire European paintings, statues, chandeliers, and ornamental birds in its private zoo. It offers a fascinating glimpse into Kolkata’s artistic and aristocratic legacy.",
@@ -468,4 +468,4 @@ const InAhmedabad = () => {
   );
 };
 
-export default InAhmedabad;
+export default InKolkata;

@@ -77,7 +77,7 @@ const InLucknow = () => {
   const spots = [
     {
       title: "Bara Imambara",
-      img: "/g1.webp",
+      img: "/inlucknow/Bara.png",
       alt: "Bara Imambara, Lucknow",
       paragraphs: [
         "Built in 1784 by Nawab Asaf-ud-Daula, Bara Imambara is an architectural masterpiece of the Mughal era. Famous for its central hall, which is one of the largest arched constructions without support beams, it also houses the fascinating Bhool Bhulaiya (labyrinth). It’s a must-visit for history enthusiasts and culture seekers.",
@@ -85,7 +85,7 @@ const InLucknow = () => {
     },
     {
       title: "Chota Imambara",
-      img: "/g2.webp",
+      img: "/inlucknow/Chota.png",
       alt: "Chota Imambara, Lucknow",
       paragraphs: [
         "Often called the Hussainabad Imambara, this monument is admired for its stunning chandeliers, calligraphy, and intricate decoration. Constructed in the 19th century, it reflects Lucknow’s Nawabi culture and grandeur. At night, when lit up, the building glows beautifully, earning it the title “Palace of Lights.”",
@@ -93,7 +93,7 @@ const InLucknow = () => {
     },
     {
       title: "Rumi Darwaza",
-      img: "/g3.webp",
+      img: "/inlucknow/Rumi.png",
       alt: "Rumi Darwaza, Lucknow",
       paragraphs: [
         "Standing 60 feet tall, Rumi Darwaza is one of Lucknow’s most iconic landmarks. Built in 1784, this Mughal-style gateway is often referred to as the “Gateway to Lucknow.” Its unique design and historical charm make it one of the most photographed spots in the city.",
@@ -101,7 +101,7 @@ const InLucknow = () => {
     },
     {
       title: "Hazratganj Market",
-      img: "/g4.webp",
+      img: "/inlucknow/Hazratganj.png",
       alt: "Hazratganj Market, Lucknow",
       paragraphs: [
         "Hazratganj is Lucknow’s most popular shopping district, blending tradition with modernity. From chikankari clothing and jewelry to branded stores and cafés, it has something for everyone. It’s also a foodie’s delight, offering delicious street snacks and authentic Awadhi cuisine.",
@@ -109,7 +109,7 @@ const InLucknow = () => {
     },
     {
       title: "Ambedkar Memorial Park",
-      img: "/g3.webp",
+      img: "/inlucknow/Ambedkar.png",
       alt: "Ambedkar Memorial Park, Lucknow",
       paragraphs: [
         "Spread across 107 acres, Ambedkar Memorial Park is a grand structure built with red sandstone. Dedicated to Dr. B.R. Ambedkar and other social reformers, it features statues, museums, and impressive architecture. The park is a modern symbol of Lucknow’s cultural pride and vision.",
@@ -117,7 +117,7 @@ const InLucknow = () => {
     },
     {
       title: "Lucknow Zoo",
-      img: "/g4.webp",
+      img: "/inlucknow/Lucknow-Zoo.png",
       alt: "Lucknow Zoo (Nawab Wajid Ali Shah Zoological Garden)",
       paragraphs: [
         "Also known as Nawab Wajid Ali Shah Zoological Garden, Lucknow Zoo is a family favorite. Home to tigers, lions, elephants, and rare birds, it offers both education and entertainment. The zoo also has a toy train and nature museum, making it ideal for children and wildlife lovers.",

@@ -77,7 +77,7 @@ const InSurat = () => {
   const spots = [
     {
       title: "Surat Castle",
-      img: "/g1.webp",
+      img: "/insurat/Surat-Castle.png",
       alt: "Surat Castle, Surat",
       paragraphs: [
         "Built in the 16th century by Sultan Mahmud III, Surat Castle is a grand fort that once protected the city from invasions. Its massive stone walls and strategic riverside location reflect the city’s historic importance. Today, it stands as a popular tourist landmark and heritage site.",
@@ -85,7 +85,7 @@ const InSurat = () => {
     },
     {
       title: "Sarthana Nature Park & Zoo",
-      img: "/g2.webp",
+      img: "/insurat/Sarthana.png",
       alt: "Sarthana Nature Park and Zoo, Surat",
       paragraphs: [
         "Spread over a large green area, this zoo is home to lions, tigers, leopards, and exotic birds. It’s one of the best fun places in Surat for families, offering both entertainment and learning for children. The natural surroundings make it a refreshing getaway within the city.",
@@ -93,7 +93,7 @@ const InSurat = () => {
     },
     {
       title: "Dumas Beach",
-      img: "/g3.webp",
+      img: "/insurat/Dumas.png",
       alt: "Dumas Beach, Surat",
       paragraphs: [
         "Famous for its unique black sand, Dumas Beach along the Arabian Sea is a favorite evening spot for locals and tourists. Visitors enjoy seaside snacks, sunset views, and the cool breeze. It’s perfect for a peaceful walk or a lively outing with friends and family.",
@@ -101,7 +101,7 @@ const InSurat = () => {
     },
     {
       title: "Ambika Niketan Temple",
-      img: "/g4.webp",
+      img: "/insurat/Ambika.png",
       alt: "Ambika Niketan Temple, Surat",
       paragraphs: [
         "Dedicated to Goddess Ashtabhuja Ambika, this riverside temple is one of Surat’s most spiritual places. Its calm setting along the Tapi River attracts devotees and tourists seeking peace. Festivals here are celebrated with great devotion, adding to the temple’s charm.",
@@ -109,7 +109,7 @@ const InSurat = () => {
     },
     {
       title: "Gopi Talav",
-      img: "/g1.webp",
+      img: "/insurat/Gopi.png",
       alt: "Gopi Talav, Surat",
       paragraphs: [
         "Originally built in the 16th century, Gopi Talav is now a lively recreational hub. With boating, gardens, fountains, and food courts, it’s a fun destination for families. The blend of history and modern development makes it a popular attraction in Surat.",
@@ -117,7 +117,7 @@ const InSurat = () => {
     },
     {
       title: "Dutch Garden",
-      img: "/g2.webp",
+      img: "/insurat/Dutch.png",
       alt: "Dutch Garden, Surat",
       paragraphs: [
         "Known for its colonial influence, Dutch Garden is a beautifully landscaped park with historical tombs of Dutch and Armenian traders. Its peaceful lawns and serene atmosphere make it an ideal place for relaxation. It’s a perfect mix of heritage and greenery.",
