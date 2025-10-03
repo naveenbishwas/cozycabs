@@ -76,7 +76,7 @@ const InVadodara = () => {
   const spots = [
     {
       title: "Lakshmi Vilas Palace",
-      img: "/g1.webp",
+      img: "/invadodara/Lakshmi.png",
       alt: "Lakshmi Vilas Palace in Vadodara",
       paragraphs: [
         "One of the grandest palaces in India, Lakshmi Vilas Palace was built by the Gaekwad dynasty and is said to be four times the size of Buckingham Palace. Its Indo-Saracenic architecture, royal artifacts, and lush gardens make it a cultural treasure.",
@@ -84,7 +84,7 @@ const InVadodara = () => {
     },
     {
       title: "Sayaji Baug (Kamati Baug)",
-      img: "/g2.webp",
+      img: "/invadodara/Sayaji.png",
       alt: "Sayaji Baug gardens and attractions",
       paragraphs: [
         "Spread over 100 acres, Sayaji Baug is a green retreat housing a zoo, planetarium, toy train, and gardens—popular for morning walks, picnics, and family leisure.",
@@ -92,7 +92,7 @@ const InVadodara = () => {
     },
     {
       title: "Champaner-Pavagadh Archaeological Park",
-      img: "/g3.webp",
+      img: "/invadodara/Champaner.png",
       alt: "Champaner-Pavagadh UNESCO site near Vadodara",
       paragraphs: [
         "Located just outside Vadodara, this UNESCO World Heritage Site is known for forts, palaces, mosques, and ancient temples—perfect for history lovers and day trips.",
@@ -100,7 +100,7 @@ const InVadodara = () => {
     },
     {
       title: "EME Temple",
-      img: "/g4.webp",
+      img: "/invadodara/EME.png",
       alt: "EME Dakshinamurthy Temple modern architecture",
       paragraphs: [
         "Also called Dakshinamurthy Temple, the EME Temple is unique for its modern architecture by the Indian Army. Dedicated to Lord Shiva, it blends spirituality with contemporary design.",
@@ -108,7 +108,7 @@ const InVadodara = () => {
     },
     {
       title: "Baroda Museum & Picture Gallery",
-      img: "/g3.webp",
+      img: "/invadodara/Baroda.png",
       alt: "Baroda Museum and Picture Gallery exhibits",
       paragraphs: [
         "Established in the 19th century, the Baroda Museum & Picture Gallery showcases art, sculptures, manuscripts, and global artifacts. It provides deep insights into history and culture, making it an enriching stop for visitors. Art lovers and students often find it a must-visit attraction in Vadodara.",
@@ -116,7 +116,7 @@ const InVadodara = () => {
     },
     {
       title: "Sursagar Lake",
-      img: "/g4.webp",
+      img:"/invadodara/Sursagar.png",
       alt: "Sursagar Lake with Shiva statue in Vadodara",
       paragraphs: [
         "Situated in the heart of the city, Sursagar Lake is ideal for relaxation and boating. Evenings are magical when the lake is lit up, with a towering Shiva statue adding to its charm.",

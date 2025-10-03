@@ -75,7 +75,7 @@ const InKanpur = () => {
   const spots = [
     {
       title: "Kanpur Zoological Park (Allen Forest Zoo)",
-      img: "/g1.webp",
+      img: "/inkanpur/Kanpur.png",
       alt: "Kanpur Zoological Park Allen Forest Zoo",
       paragraphs: [
         "Covering more than 110 hectares, this open-air wildlife sanctuary features big cats, exotic birds, and serene nature walks amid the city.",
@@ -83,7 +83,7 @@ const InKanpur = () => {
     },
     {
       title: "Nana Rao Park",
-      img: "/g2.webp",
+      img: "/inkanpur/Nana.png",
       alt: "Nana Rao Park green oasis in Kanpur",
       paragraphs: [
         "A historic city park on Mall Road—great for morning walks, quiet reflection, and enjoying the urban greenery tied to India’s freedom struggle.",
@@ -91,7 +91,7 @@ const InKanpur = () => {
     },
     {
       title: "Moti Jheel",
-      img: "/g3.webp",
+      img: "/inkanpur/Moti.png",
       alt: "Moti Jheel lake and gardens in Kanpur",
       paragraphs: [
         "An artificial lake with gardens and play areas—perfect for boating and evening strolls along landscaped banks.",
@@ -99,7 +99,7 @@ const InKanpur = () => {
     },
     {
       title: "JK Temple",
-      img: "/g4.webp",
+      img: "/inkanpur/JK.png",
       alt: "JK Temple architecture in Kanpur",
       paragraphs: [
         "Blending ancient and modern styles, JK Temple offers a calm spiritual ambiance and a glimpse into Kanpur’s architectural diversity.",
@@ -107,7 +107,7 @@ const InKanpur = () => {
     },
     {
       title: "Kanpur Memorial Church",
-      img: "/g3.webp",
+      img: "/inkanpur/Kanpur-Memorial.png",
       alt: "Kanpur Memorial Church Gothic style",
       paragraphs: [
         "Built in Gothic style with elegant stained-glass windows, this serene memorial honors soldiers from the 1857 uprising.",
@@ -115,7 +115,7 @@ const InKanpur = () => {
     },
     {
       title: "Blue World Theme Park",
-      img: "/g4.webp",
+      img: "/inkanpur/Blue.png",
       alt: "Blue World Theme Park rides and water attractions",
       paragraphs: [
         "A top family destination on the outskirts—rides, water attractions, and themed zones for thrill-seekers and kids alike.",

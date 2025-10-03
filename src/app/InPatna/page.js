@@ -75,7 +75,7 @@ const InPatna = () => {
   const spots = [
     {
       title: "Takht Sri Patna Sahib Gurudwara",
-      img: "/g1.webp",
+      img: "/inpatna/Takht.png",
       alt: "Patna Sahib Gurudwara Takht Sri Patna Sahib",
       paragraphs: [
         "One of the holiest Sikh shrines, Patna Sahib is the birthplace of Guru Gobind Singh Ji. Its majestic structure, spiritual atmosphere, and rich history draw pilgrims from across the world, making it a must-visit in Patna.",
@@ -83,7 +83,7 @@ const InPatna = () => {
     },
     {
       title: "Golghar",
-      img: "/g2.webp",
+      img: "/inpatna/Golghar.png",
       alt: "Golghar granary panoramic view",
       paragraphs: [
         "Built in 1786, Golghar is a massive granary with distinctive beehive-shaped architecture. Visitors can climb its spiral staircase to enjoy panoramic views of Patna city and the Ganges River, especially stunning at sunset.",
@@ -91,7 +91,7 @@ const InPatna = () => {
     },
     {
       title: "Kumhrar Park",
-      img: "/g3.webp",
+      img: "/inpatna/Kumhrar.png",
       alt: "Kumhrar Park Mauryan ruins in Patna",
       paragraphs: [
         "This archaeological park preserves the remains of the ancient Mauryan Empire. Featuring Ashokan pillars and ruins of monasteries, Kumhrar offers a glimpse into Patna’s glorious past and is a favorite among history enthusiasts",
@@ -99,7 +99,7 @@ const InPatna = () => {
     },
     {
       title: "Sanjay Gandhi Biological Park (Patna Zoo)",
-      img: "/g4.webp",
+      img: "/inpatna/Sanjay.png",
       alt: "Patna Zoo wildlife and gardens",
       paragraphs: [
         "Spread over lush green acres, Patna Zoo is home to tigers, elephants, leopards, and many exotic species. With gardens, boating facilities, and educational exhibits, it’s a perfect outing spot for families and children.",
@@ -107,7 +107,7 @@ const InPatna = () => {
     },
     {
       title: "Patna Museum (Jadu Ghar)",
-      img: "/g3.webp",
+      img: "/inpatna/Patna.png",
       alt: "Patna Museum Jadu Ghar Didarganj Yakshi",
       paragraphs: [
         "Popularly known as Jadu Ghar, Patna Museum displays rare artifacts, sculptures, and coins, including the famous Didarganj Yakshi statue. It’s a treasure trove for art lovers and those interested in Bihar’s heritage.",
@@ -115,7 +115,7 @@ const InPatna = () => {
     },
     {
       title: "Gandhi Maidan",
-      img: "/g4.webp",
+      img: "/inpatna/Gandhi.png",
       alt: "Gandhi Maidan ground Patna events",
       paragraphs: [
         "A landmark ground associated with India’s freedom movement, Gandhi Maidan is now a hub for political rallies, cultural events, and daily recreation. Its vast open space also makes it ideal for evening walks.",

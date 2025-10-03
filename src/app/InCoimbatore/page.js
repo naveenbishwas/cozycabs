@@ -76,7 +76,7 @@ const InCoimbatore = () => {
   const spots = [
     {
       title: "Marudamalai Temple",
-      img: "/g1.webp",
+      img: "/incoimbatore/Marudamalai.png",
       alt: "Marudamalai Temple hilltop in Coimbatore",
       paragraphs: [
         "Situated on a scenic hilltop, Marudamalai Temple is dedicated to Lord Murugan and is one of Coimbatore’s most sacred sites. The temple’s peaceful atmosphere and panoramic city views make it a favourite for devotees and tourists alike.",
@@ -84,7 +84,7 @@ const InCoimbatore = () => {
     },
     {
       title: "Gass Forest Museum",
-      img: "/g2.webp",
+      img: "/incoimbatore/Gass.png",
       alt: "Gass Forest Museum exhibits in Coimbatore",
       paragraphs: [
         "Gass Forest Museum offers a fascinating collection of preserved animals, birds, and plants. It’s an educational hotspot where students, researchers, and families can learn about biodiversity.",
@@ -92,7 +92,7 @@ const InCoimbatore = () => {
     },
     {
       title: "VOC Park & Zoo",
-      img: "/g3.webp",
+      img: "/incoimbatore/VOC.png",
       alt: "VOC Park and Zoo family attraction in Coimbatore",
       paragraphs: [
         "A lively recreation spot, VOC Park & Zoo is home to animal enclosures, lush gardens, and children’s play areas—perfect for families spending a relaxed day outdoors.",
@@ -100,7 +100,7 @@ const InCoimbatore = () => {
     },
     {
       title: "Perur Pateeswarar Temple",
-      img: "/g4.webp",
+      img: "/incoimbatore/Perur.png",
       alt: "Perur Pateeswarar Temple pillars in Coimbatore",
       paragraphs: [
         "Perur Temple, dedicated to Lord Shiva, is a centuries-old shrine renowned for its beautifully carved pillars and spiritual ambiance—one of the most significant pilgrimage spots in Coimbatore.",
@@ -108,7 +108,7 @@ const InCoimbatore = () => {
     },
     {
       title: "Black Thunder Water Park",
-      img: "/g3.webp",
+      img:  "/incoimbatore/Black.png",
       alt: "Black Thunder Water Park slides near Coimbatore",
       paragraphs: [
         "Located near Mettupalayam, Black Thunder is one of India’s largest water parks with thrilling slides, wave pools, and entertainment zones—a hotspot for youngsters and families.",
@@ -116,7 +116,7 @@ const InCoimbatore = () => {
     },
     {
       title: "Brookefields Mall",
-      img: "/g4.webp",
+      img: "/incoimbatore/Brookefields.png",
       alt: "Brookefields Mall shopping and leisure in Coimbatore",
       paragraphs: [
         "Brookefields Mall is Coimbatore’s top shopping and entertainment hub with branded outlets, restaurants, and a multiplex—perfect to unwind after sightseeing.",

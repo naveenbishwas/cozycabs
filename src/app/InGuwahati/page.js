@@ -75,7 +75,7 @@ const InGuwahati = () => {
   const spots = [
     {
       title: "Kamakhya Temple",
-      img: "/g1.webp",
+      img: "/inguwahati/Kamakhya.png",
       alt: "Kamakhya Temple Nilachal Hill Guwahati",
       paragraphs: [
         "One of the most revered pilgrimage sites in India, Kamakhya Temple is perched atop Nilachal Hill. Known for its spiritual significance and grand architecture, it is a must-visit for devotees and tourists alike.",
@@ -83,7 +83,7 @@ const InGuwahati = () => {
     },
     {
       title: "Umananda Island",
-      img: "/g2.webp",
+      img: "/inguwahati/Umananda.png",
       alt: "Umananda Island Brahmaputra river temple",
       paragraphs: [
         "Set in the middle of the Brahmaputra River, Umananda is a small island temple dedicated to Lord Shiva. Its natural beauty and serene surroundings make it perfect for a peaceful day trip",
@@ -91,7 +91,7 @@ const InGuwahati = () => {
     },
     {
       title: "Assam State Zoo & Botanical Garden",
-      img: "/g3.webp",
+      img: "/inguwahati/Assam.png",
       alt: "Assam State Zoo and Botanical Garden one-horned rhino",
       paragraphs: [
         "A favorite among families, this zoo is home to the one-horned rhinoceros, tigers, and exotic birds. Combined with a botanical garden, it offers both wildlife encounters and greenery to enjoy.",
@@ -99,29 +99,29 @@ const InGuwahati = () => {
     },
     {
       title: "Pobitora Wildlife Sanctuary",
-      img: "/g4.webp",
+      img: "/inguwahati/Pobitora.png",
       alt: "Pobitora Wildlife Sanctuary rhino day trip from Guwahati",
       paragraphs: [
         "Just a short drive from Guwahati, Pobitora is famous for having one of the highest populations of one-horned rhinos. With rental cars in Guwahati, it’s an ideal spot for a day trip into nature.",
       ],
     },
-    {
-      title: "Fancy Bazaar",
-      img: "/g3.webp",
-      alt: "Fancy Bazaar shopping Guwahati handicrafts",
-      paragraphs: [
-        "The bustling heart of Guwahati’s shopping scene, Fancy Bazaar is filled with traditional Assamese handicrafts, clothing, jewelry, and souvenirs. A must-visit for shoppers and food lovers.",
-      ],
-    },
-    {
-      title: "Srimanta Sankardev Kalakshetra",
-      img: "/g4.webp",
-      alt: "Srimanta Sankardev Kalakshetra cultural complex",
-      paragraphs: [
-        "Cultural center with museums, art galleries, and open-air theaters—celebrating Assam’s art, culture, and traditions.",
-        "With Cozy Cabz rent a car in Guwahati, explore these comfortably and stress-free.",
-      ],
-    },
+    // {
+    //   title: "Fancy Bazaar",
+    //   img: "/g3.webp",
+    //   alt: "Fancy Bazaar shopping Guwahati handicrafts",
+    //   paragraphs: [
+    //     "The bustling heart of Guwahati’s shopping scene, Fancy Bazaar is filled with traditional Assamese handicrafts, clothing, jewelry, and souvenirs. A must-visit for shoppers and food lovers.",
+    //   ],
+    // },
+    // {
+    //   title: "Srimanta Sankardev Kalakshetra",
+    //   img: "/g4.webp",
+    //   alt: "Srimanta Sankardev Kalakshetra cultural complex",
+    //   paragraphs: [
+    //     "Cultural center with museums, art galleries, and open-air theaters—celebrating Assam’s art, culture, and traditions.",
+    //     "With Cozy Cabz rent a car in Guwahati, explore these comfortably and stress-free.",
+    //   ],
+    // },
   ];
 
   const faqs = [

@@ -77,7 +77,7 @@ const InBhopal = () => {
   const spots = [
     {
       title: "Upper Lake & Lower Lake",
-      img: "/g1.webp",
+      img: "/inbhopal/Upper.png",
       alt: "Upper Lake Bhojtal and Lower Lake in Bhopal",
       paragraphs: [
         "Known as Bhojtal, Upper Lake is one of the oldest man-made lakes in India—ideal for boating, sunsets, and peaceful surroundings. The adjoining Lower Lake enhances the city’s charm, making the twin lakes a must-visit.",
@@ -85,7 +85,7 @@ const InBhopal = () => {
     },
     {
       title: "Taj-ul-Masajid",
-      img: "/g2.webp",
+      img:"/inbhopal/Taj.png",
       alt: "Taj-ul-Masajid mosque architecture in Bhopal",
       paragraphs: [
         "Among the largest mosques in Asia, admired for Mughal-style domes, tall minarets, and sprawling courtyards—a spiritual and architectural landmark of Bhopal.",
@@ -93,7 +93,7 @@ const InBhopal = () => {
     },
     {
       title: "Van Vihar National Park",
-      img: "/g3.webp",
+      img: "/inbhopal/Van.png",
       alt: "Van Vihar National Park wildlife near Upper Lake",
       paragraphs: [
         "A protected reserve beside Upper Lake, home to tigers, leopards, crocodiles, and exotic birds—animals live in near-natural habitats.",
@@ -101,7 +101,7 @@ const InBhopal = () => {
     },
     {
       title: "Bharat Bhavan",
-      img: "/g4.webp",
+      img: "/inbhopal/Bharat.png",
       alt: "Bharat Bhavan multi-arts complex in Bhopal",
       paragraphs: [
         "A multi-arts complex celebrating creativity with galleries, libraries, theaters, and workshops—a cultural hotspot in Bhopal.",
@@ -109,7 +109,7 @@ const InBhopal = () => {
     },
     {
       title: "Shaukat Mahal & Sadar Manzil",
-      img: "/g3.webp",
+      img: "/inbhopal/Shaukat.png",
       alt: "Shaukat Mahal and Sadar Manzil heritage architecture",
       paragraphs: [
         "These 19th-century architectural wonders showcase a rare mix of Indo-Islamic and European influences. Shaukat Mahal stands out for its Gothic and post-Renaissance style, while Sadar Manzil served as a royal durbar hall. Both are must-see heritage sites for history lovers.",
@@ -117,7 +117,7 @@ const InBhopal = () => {
     },
     {
       title: "State Museum Bhopal",
-      img: "/g4.webp",
+      img: "/inbhopal/State.png",
       alt: "State Museum artifacts and exhibits in Bhopal",
       paragraphs: [
         "Artifacts, sculptures, coins, and manuscripts reflecting Madhya Pradesh’s rich past—from prehistoric findings to tribal art.",

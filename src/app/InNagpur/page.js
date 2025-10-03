@@ -83,7 +83,7 @@ const InNagpur = () => {
     },
     {
       title: "Sitabuldi Fort",
-      img: "/g2.webp",
+      img: "/innagpur/Sitabuldi.png",
       alt: "Sitabuldi Fort in Nagpur city",
       paragraphs: [
         "Built in the early 19th century, Sitabuldi Fort is a historic site reflecting Nagpur’s military legacy. Located on twin hills, it offers panoramic views of the city and a glimpse into its storied past.",
@@ -91,7 +91,7 @@ const InNagpur = () => {
     },
     {
       title: "Futala Lake",
-      img: "/g3.webp",
+      img: "/innagpur/Futala.png",
       alt: "Futala Lake evening fountains in Nagpur",
       paragraphs: [
         "Futala Lake is one of Nagpur’s most popular hangout spots, famous for its colorful light fountains, food stalls, and peaceful surroundings—perfect for families, couples, and friends.",
@@ -99,7 +99,7 @@ const InNagpur = () => {
     },
     {
       title: "Maharaj Bagh Zoo",
-      img: "/g4.webp",
+      img: "/innagpur/Maharaj.png",
       alt: "Maharaj Bagh Zoo fauna in Nagpur",
       paragraphs: [
         "Originally established by the Bhonsle kings, Maharaj Bagh Zoo is home to tigers, lions, leopards, and exotic birds. Its lush greenery offers a refreshing break from the city rush.",
@@ -107,7 +107,7 @@ const InNagpur = () => {
     },
     {
       title: "Ambazari Lake & Garden",
-      img: "/g3.webp",
+      img: "/innagpur/Ambazari.png",
       alt: "Ambazari Lake and garden in Nagpur",
       paragraphs: [
         "Ambazari Lake, the largest in Nagpur, is surrounded by a beautiful garden with walking paths and boating. It’s ideal for morning walks, picnics, and nature outings.",
@@ -115,7 +115,7 @@ const InNagpur = () => {
     },
     {
       title: "Raman Science Centre",
-      img: "/g4.webp",
+      img: "/innagpur/Raman.png",
       alt: "Raman Science Centre exhibits in Nagpur",
       paragraphs: [
         "Raman Science Centre is a must-visit for students and science lovers. With interactive exhibits, fun experiments, and a planetarium, it makes learning exciting for families and school groups.",

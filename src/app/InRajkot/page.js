@@ -75,7 +75,7 @@ const InRajkot = () => {
   const spots = [
     {
       title: "Kaba Gandhi No Delo",
-      img: "/g1.webp",
+      img: "/inrajkot/Kaba.png",
       alt: "Kaba Gandhi No Delo museum in Rajkot",
       paragraphs: [
         "Mahatma Gandhi’s childhood home, now a museum with photographs, writings, and personal belongings—offering deep insights into India’s freedom movement.",
@@ -83,7 +83,7 @@ const InRajkot = () => {
     },
     {
       title: "Watson Museum",
-      img: "/g2.webp",
+      img: "/inrajkot/Watson.png",
       alt: "Watson Museum in Jubilee Garden, Rajkot",
       paragraphs: [
         "Inside Jubilee Garden, this museum showcases sculptures, coins, artifacts, and paintings from different eras—highlighting Rajkot’s cultural heritage.",
@@ -91,7 +91,7 @@ const InRajkot = () => {
     },
     {
       title: "Rotary Dolls Museum",
-      img: "/g3.webp",
+      img:  "/inrajkot/Rotary.png",
       alt: "Rotary Dolls Museum international dolls collection",
       paragraphs: [
         "With 1,500+ dolls from 100+ countries, this colorful museum introduces diverse cultures through miniature costumes and displays—fun and educational.",
@@ -99,7 +99,7 @@ const InRajkot = () => {
     },
     {
       title: "Nyari Dam",
-      img: "/g4.webp",
+      img: "/inrajkot/Nyari.png",
       alt: "Nyari Dam green retreat near Rajkot",
       paragraphs: [
         "A calm retreat surrounded by greenery—ideal for picnics, evening outings, and nature photography away from the city buzz.",
@@ -107,7 +107,7 @@ const InRajkot = () => {
     },
     {
       title: "Prem Mandir",
-      img: "/g3.webp",
+      img: "/inrajkot/Prem.png",
       alt: "Prem Mandir temple architecture in Rajkot",
       paragraphs: [
         "A beautiful temple known for intricate carvings and peaceful ambiance, drawing devotees and tourists alike.",
@@ -115,7 +115,7 @@ const InRajkot = () => {
     },
     {
       title: "Aji Dam & Garden",
-      img: "/g4.webp",
+      img: "/inrajkot/Aji.png",
       alt: "Aji Dam and Garden family spot in Rajkot",
       paragraphs: [
         "A popular recreational spot with lush gardens, fountains, and play areas—great for picnics, boating, and evening strolls, especially scenic during monsoon.",

@@ -75,7 +75,7 @@ const InVijayawada = () => {
   const spots = [
     {
       title: "Kanaka Durga Temple",
-      img: "/g1.webp",
+      img: "/invijayawada/Kanaka.png",
       alt: "Kanaka Durga Temple on Indrakeeladri Hill in Vijayawada",
       paragraphs: [
         "Perched on Indrakeeladri Hill, Kanaka Durga Temple is Vijayawada’s most famous shrine. Dedicated to Goddess Durga, it offers breathtaking views of the Krishna River. Pilgrims and tourists alike are drawn to its spirituality and scenic surroundings.",
@@ -83,7 +83,7 @@ const InVijayawada = () => {
     },
     {
       title: "Prakasam Barrage",
-      img: "/g2.webp",
+      img: "/invijayawada/Prakasam.png",
       alt: "Prakasam Barrage across Krishna River at night",
       paragraphs: [
         "Stretching across the Krishna River, Prakasam Barrage is both an engineering marvel and a popular tourist spot. The illuminated bridge at night is stunning—perfect for evening visits and photography.",
@@ -91,7 +91,7 @@ const InVijayawada = () => {
     },
     {
       title: "Undavalli Caves",
-      img: "/g3.webp",
+      img: "/invijayawada/Undavalli.png",
       alt: "Ancient Undavalli Caves rock-cut architecture",
       paragraphs: [
         "Dating back to the 4th century, the Undavalli Caves are rock-cut wonders featuring ancient sculptures and intricate carvings. Overlooking the Krishna River, they are a must-visit for history lovers and explorers.",
@@ -99,7 +99,7 @@ const InVijayawada = () => {
     },
     {
       title: "Bhavani Island",
-      img: "/g4.webp",
+      img: "/invijayawada/Bhavani.png",
       alt: "Green Bhavani Island on Krishna River",
       paragraphs: [
         "One of India’s largest river islands, Bhavani Island is a green retreat ideal for boating, picnics, and nature walks. Surrounded by the Krishna River, it’s an ideal weekend spot for families and couples.",
@@ -107,7 +107,7 @@ const InVijayawada = () => {
     },
     {
       title: "Gandhi Hill",
-      img: "/g3.webp",
+      img: "/invijayawada/Gandhi.png",
       alt: "Gandhi Hill viewpoint and memorial in Vijayawada",
       paragraphs: [
         "A memorial dedicated to Mahatma Gandhi, Gandhi Hill offers panoramic city views and houses a planetarium, library, and exhibitions. It’s both educational and scenic, making it a unique attraction in Vijayawada.",
@@ -115,7 +115,7 @@ const InVijayawada = () => {
     },
     {
       title: "Rajiv Gandhi Park",
-      img: "/g4.webp",
+      img: "/invijayawada/Rajiv.png",
       alt: "Rajiv Gandhi Park gardens and fountains",
       paragraphs: [
         "Located at the entrance of the city, Rajiv Gandhi Park is a landscaped garden with musical fountains and children’s play areas—a peaceful spot for evening strolls and family outings.",

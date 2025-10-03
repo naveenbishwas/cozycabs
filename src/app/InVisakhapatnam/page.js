@@ -76,7 +76,7 @@ const InVisakhapatnam = () => {
   const spots = [
     {
       title: "Kailasagiri Hill",
-      img: "/g1.webp",
+      img: "/invisakhapatnam/Kailasagiri.png",
       alt: "Kailasagiri Hill viewpoint over Vizag",
       paragraphs: [
         "Perched above the city, Kailasagiri offers panoramic views of mountains and sea. Ropeway rides, gardens, and giant statues make it a favourite for all ages.",
@@ -84,7 +84,7 @@ const InVisakhapatnam = () => {
     },
     {
       title: "Submarine Museum & INS Kursura",
-      img: "/g2.webp",
+      img: "/invisakhapatnam/Submarine.png",
       alt: "INS Kursura Submarine Museum in Vizag",
       paragraphs: [
         "A decommissioned submarine turned museum where you can walk through compartments and learn about naval life—adjacent to a maritime museum.",
@@ -92,7 +92,7 @@ const InVisakhapatnam = () => {
     },
     {
       title: "Simhachalam Temple",
-      img: "/g3.webp",
+      img: "/invisakhapatnam/Simhachalam.png",
       alt: "Simhachalam Temple hill shrine in Visakhapatnam",
       paragraphs: [
         "Dedicated to Lord Narasimha, this ancient hill temple combines spiritual significance with scenic beauty, set amidst lush green hills.",
@@ -100,7 +100,7 @@ const InVisakhapatnam = () => {
     },
     {
       title: "Thotlakonda & Pavuralakonda",
-      img: "/g4.webp",
+      img: "/invisakhapatnam/Thotlakonda.png",
       alt: "Buddhist sites Thotlakonda Pavuralakonda near Vizag",
       paragraphs: [
         "Ancient Buddhist monastic complexes on hilltops near Vizag—ruins, stupas, and coastal views ideal for history and nature lovers.",
@@ -108,7 +108,7 @@ const InVisakhapatnam = () => {
     },
     {
       title: "Yarada & Rushikonda Beaches",
-      img: "/g3.webp",
+      img: "/invisakhapatnam/Yarada.png",
       alt: "Yarada and Rushikonda beaches in Vizag",
       paragraphs: [
         "Soft sands, clear waters, and water activities draw families and tourists alike—top coastal relaxation spots.",
@@ -116,7 +116,7 @@ const InVisakhapatnam = () => {
     },
     {
       title: "Dwaraka Tirumala & ISKCON Vizag",
-      img: "/g4.webp",
+      img: "/invisakhapatnam/Dwaraka.png",
       alt: "Hilltop temple and ISKCON in Vizag",
       paragraphs: [
         "A tranquil hilltop spiritual center offering sunrise views and peaceful worship ambience—an escape from the city bustle.",
