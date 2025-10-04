@@ -1,0 +1,100 @@
+/* ===== Booking Section ===== */
+.innova-booking-section {
+  margin: 50px auto;
+  background: #fff;
+  border-radius: 20px;
+  padding: 45px 200px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.innova-booking-header {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.innova-booking-header h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.innova-booking-header p {
+  font-size: 16px;
+  color: #666;
+}
+
+.innova-booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.innova-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.innova-form-grid label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.innova-form-grid input,
+.innova-form-grid textarea {
+  width: 100%;
+  padding: 14px;
+  border: 2px solid #e5e5e5;
+  border-radius: 10px;
+  font-size: 14px;
+  background-color: #fff;
+  color: #000;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.innova-booking-form textarea {
+  resize: none;
+  height: 100px;
+}
+
+.innova-btn-primary {
+  padding: 16px 30px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  background: #e63946;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(230, 57, 70, 0.3);
+}
+
+.innova-btn-outline {
+  padding: 16px 30px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  border: 2px solid #e63946;
+  color: #e63946;
+  background: #fff;
+  text-decoration: none;
+  text-align: center;
+}
+
+.innova-btn-outline {
+  border: 2px solid #e63946;
+  color: #e63946;
+  background: #fff;
+}
+
+.innova-btn-outline,
+.innova-btn-primary {
+  padding: 16px 30px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+}

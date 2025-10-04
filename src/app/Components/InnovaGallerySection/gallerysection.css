@@ -1,0 +1,45 @@
+/* ===== Gallery Section ===== */
+.innova-gallery-section {
+  margin: 50px auto;
+  background: #fff;
+  padding: 40px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+}
+
+.innova-section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+.innova-section-title span {
+  color: #e63946;
+}
+
+.innova-gallery-content {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 35px;
+}
+
+.innova-gallery-main {
+  flex: 2;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.innova-gallery-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.innova-gallery-thumb {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  min-height: 110px;
+  position: relative;
+}

@@ -1,0 +1,34 @@
+/* ===== Specs Grid ===== */
+.innova-specs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  padding: 35px;
+  margin: 40px auto;
+  gap: 25px;
+}
+
+.innova-spec-card {
+  text-align: center;
+  background: #fff;
+  padding: 30px 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+  border: 1px solid #f0f0f0;
+}
+
+.innova-spec-icon {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.innova-spec-title {
+  font-size: 17px;
+  margin: 10px 0;
+  font-weight: 600;
+}
+
+.innova-spec-detail {
+  font-size: 14px;
+  color: #666;
+}

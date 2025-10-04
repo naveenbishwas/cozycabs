@@ -70,6 +70,7 @@
 .innova-cta-buttons {
   display: flex;
   gap: 15px;
+  justify-content: center;
 }
 
 .innova-btn-primary {
@@ -117,30 +118,6 @@
   width: 100%;
   height: auto;
   border-radius: 8px;
-}
-
-/* ===== Number Stats ===== */
-.innova-number-stats {
-  padding: 40px 20px;
-}
-
-.innova-about-stats {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 5%;
-  text-align: center;
-}
-
-.innova-stat-num {
-  font-size: 2.2rem;
-  font-weight: 700;
-  color: #e63946;
-}
-
-.innova-stat-label {
-  font-size: 14px;
-  color: #333;
 }
 
 /* ===== Gallery Section ===== */
@@ -264,6 +241,15 @@
 .innova-why-head {
   text-align: center;
   margin-bottom: 30px;
+}
+
+.innova-why {
+  padding: 3% 0;
+}
+
+.innova-why-head h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
 }
 
 .innova-why-grid {
@@ -468,6 +454,21 @@ section.innova-why {
   color: #555;
   line-height: 1.7;
   font-size: 15px;
+}
+
+#banner-btnn {
+  justify-content: unset !important;
+}
+
+.innova-feature-tag {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.feature-icon {
+  object-fit: contain;
+  filter: invert(29%) sepia(97%) saturate(500%) hue-rotate(342deg)
+    brightness(106%) contrast(102%);
 }
 
 /* ===== Responsive ===== */
