@@ -61,7 +61,7 @@
   text-align: left;
   color: white;
   width: 100%;
-  padding: 0 6%;
+  padding: 0 4%;
 }
 
 .welcome-text {
@@ -123,8 +123,8 @@
 
 /* Section shell */
 .about {
-  padding: 30px 6% 72px; /* tightened top/bottom */
-  background: #fff;
+  padding: 50px 6% 72px; /* tightened top/bottom */
+  background: #f2f2f2;
 }
 
 /* Top line + dot */
@@ -300,7 +300,7 @@
 /* Responsive */
 @media (max-width: 1100px) {
   .about__title {
-    font-size: 38px;
+    font-size: 1.5rem;
   }
   .stat__num {
     font-size: 36px;
@@ -310,18 +310,19 @@
 @media (max-width: 900px) {
   .about__grid {
     grid-template-columns: 1fr;
+    gap: 26px;
+    margin-top: 0;
   }
-  .about__title {
-    font-size: 34px;
-  }
+
   .about__stats {
     grid-template-columns: repeat(3, minmax(140px, 1fr));
+    margin: 20px 0 15px;
   }
 }
 
 @media (max-width: 600px) {
   .about {
-    padding: 96px 5% 64px;
+    padding: 46px 5% 34px;
   }
   .about__stats {
     grid-template-columns: repeat(2, minmax(120px, 1fr));
@@ -896,7 +897,7 @@
 }
 @media (max-width: 640px) {
   .title {
-    font-size: 34px;
+    font-size: 1.5rem;
   }
   .cards {
     grid-template-columns: 1fr;
@@ -1083,13 +1084,22 @@
 /* Responsive */
 @media (max-width: 1024px) {
   .t-frame {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .t-hero,
+  .t-content {
+    border-radius: 0;
+    overflow: unset;
   }
   .t-hero img {
     min-height: 320px;
+    border-radius: 0 !important;
   }
   .t-title {
-    font-size: 36px;
+    font-size: 1.5rem;
   }
 }
 @media (max-width: 640px) {
@@ -1258,6 +1268,15 @@
   .t2-arrow {
     width: 50px;
     height: 50px;
+  }
+
+  .t-arrows {
+    position: absolute;
+    right: unset !important;
+    bottom: -88px;
+    display: flex;
+    gap: 14px;
+    transform: translate(65%, -50%) !important;
   }
 }
 
@@ -1495,7 +1514,7 @@
     grid-template-columns: 1fr;
   }
   .contact-title {
-    font-size: 32px;
+    font-size: 1.5rem;
   }
 }
 
@@ -1600,24 +1619,55 @@
 }
 
 @media (max-width: 640px) {
-  .title {
-    font-size: 34px;
-  }
   .subtitle {
     font-size: 18px;
   }
+
+  .wrap-title {
+    font-size: 1.5rem;
+  }
+
+  .trust {
+    background: var(--bg);
+    padding: 42px 16px;
+  }
+
+  .cg-header h2,
+  .fleet-header h2 {
+    font-size: 1.5rem !important;
+  }
+
+  p.wrap-subtitle,
+  .cg-header p,
+  .fleet-header p {
+    font-size: 14px !important;
+  }
+
+  .teamShowcase-text {
+    text-align: left;
+  }
+
+  #pricing-title {
+    margin-top: 8%;
+    margin-bottom: 4%;
+    padding: 0;
+  }
   .grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: auto auto;
+    margin-top: 9%;
+  }
+  .card {
+    padding: 18px 14px 12px;
   }
   .iconWrap {
     width: 76px;
-    height: 76px;
+    height: auto;
   }
   .cardTitle {
-    font-size: 24px;
+    font-size: 16px;
   }
   .cardText {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 
@@ -1901,8 +1951,40 @@
     font-size: 34px;
   }
   .howtoSubtitle {
-    font-size: 17px;
+    font-size: 14px;
     margin-bottom: 34px;
+  }
+
+  .prestigious-section {
+    display: unset;
+    padding: 30px 20px !important;
+  }
+
+  .prestigious-wrap {
+    display: flex;
+    align-items: center;
+    gap: 20px !important;
+    flex-wrap: wrap;
+    max-width: 100%;
+    flex-direction: column-reverse;
+  }
+
+  .prestigious-image .image {
+    width: 100%;
+    height: auto;
+  }
+
+  .prestigious-content h2 {
+    font-size: 1.5rem !important;
+    margin-bottom: 10px !important;
+  }
+
+  .prestigious-content p {
+    font-size: 15px !important;
+  }
+
+  .step {
+    flex-direction: row;
   }
   .badge {
     width: 110px;
@@ -2300,10 +2382,14 @@ p {
   }
 
   .program-header h1 {
-    font-size: 28px;
+    font-size: 1.5rem;
   }
   .program-header p {
-    font-size: 15px;
+    font-size: 14px;
+  }
+
+  .stat-label {
+    font-size: 12px;
   }
 
   .program-banner {
@@ -2554,7 +2640,7 @@ p {
   }
 
   .teamShowcase-stats {
-    flex-direction: column;
+    /* flex-direction: column; */
     gap: 16px;
   }
 }

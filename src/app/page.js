@@ -44,6 +44,21 @@ export default function Home() {
   const trackRef = useRef(null);
   const [beforeAfterPos, setBeforeAfterPos] = useState(50);
   const [openIndex, setOpenIndex] = useState(null); // single-open; set to -1 for none
+  const [showBubble, setShowBubble] = useState(true);
+  const [bounce, setBounce] = useState(true);
+
+  useEffect(() => {
+    // Hide typing bubble after 9s
+    const bubbleTimer = setTimeout(() => setShowBubble(false), 9000);
+
+    // Stop bounce after 12s
+    const bounceTimer = setTimeout(() => setBounce(false), 12000);
+
+    return () => {
+      clearTimeout(bubbleTimer);
+      clearTimeout(bounceTimer);
+    };
+  }, []);
 
   const toggle = (i) => {
     setOpenIndex((prev) => (prev === i ? null : i));
@@ -819,6 +834,12 @@ export default function Home() {
               200 + Indian cities which help you reach your destination on time.
               Our experienced team with in-depth information are available 24x7
               to assist you, in case of any queries/help.
+              <br />
+              <br />
+              With its efficient and reliable services, Kuldeep Cozy Cabz has
+              left competitors miles behind when it comes to online cab/taxi
+              booking. Cozy Cabz services are available in over 200+ Indian
+              cities, helping you reach your destination on time.
             </p>
 
             <hr className="about__divider" />
@@ -826,6 +847,138 @@ export default function Home() {
             <a href="#contact" className="about__cta">
               <span>Read More</span>
             </a>
+          </div>
+        </div>
+      </section>
+
+      <section
+        className="contact-wrap"
+        id="contact"
+        aria-labelledby="contact-title"
+      >
+        <div className="contact-container">
+          {/* Eyebrow + rule */}
+          <div className="contact-toprow">
+            <h3 className="contact-eyebrow">Location</h3>
+            <div className="contact-rule">
+              <span className="contact-dot" />
+            </div>
+          </div>
+
+          <h2 id="contact-title" className="contact-title">
+            Car Washing &amp; Car Point
+          </h2>
+
+          <div className="contact-grid">
+            {/* LEFT : map + info */}
+            <div className="contact-left">
+              <h3 className="contact-subtitle">Get In Touch</h3>
+              <p className="contact-lead">
+                It is a long established fact that a reader will be distracted
+                of a page when looking at its layout. The point of
+                using&nbsp;more–or–less.
+              </p>
+
+              <a href="tel:+0208571234" className="contact-phone">
+                + (020) 857 1234
+              </a>
+
+              <ul className="contact-social">
+                <li>
+                  <a href="#" aria-label="Facebook" className="soc soc--fb">
+                    <FbIcon />
+                  </a>
+                </li>
+                <li>
+                  <a href="#" aria-label="Twitter/X" className="soc soc--tw">
+                    <TwIcon />
+                  </a>
+                </li>
+                <li>
+                  <a href="#" aria-label="LinkedIn" className="soc soc--in">
+                    <InIcon />
+                  </a>
+                </li>
+              </ul>
+
+              {/* World map bg + pins */}
+              <div className="contact-map">
+                <img src="/images/world-map-light.svg" alt="" />
+                <span className="pin pin-1" />
+                <span className="pin pin-2" />
+                <span className="pin pin-3" />
+                <span className="pin pin-4" />
+              </div>
+            </div>
+
+            {/* RIGHT : form */}
+            <form className="contact-form" onSubmit={handleSubmit}>
+              <div className="form-row">
+                <label className="field">
+                  <span className="field-icon">
+                    <UserIcon />
+                  </span>
+                  <input name="name" type="text" placeholder="Name" required />
+                </label>
+
+                <label className="field">
+                  <span className="field-icon">
+                    <MailIcon />
+                  </span>
+                  <input
+                    name="email"
+                    type="email"
+                    placeholder="Email"
+                    required
+                  />
+                </label>
+              </div>
+
+              <div className="form-row">
+                <label className="field">
+                  <span className="field-icon">
+                    <svg
+                      id="phone-no"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth="1.5"
+                      stroke="currentColor"
+                      className="size-6"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"
+                      />
+                    </svg>
+                  </span>
+                  <input name="phone" type="tel" placeholder="Phone" />
+                </label>
+
+                <label className="field">
+                  <span className="field-icon">
+                    <DocIcon />
+                  </span>
+                  <input name="subject" type="text" placeholder="Subject" />
+                </label>
+              </div>
+
+              <label className="field field--full">
+                <span className="field-icon">
+                  <MsgIcon />
+                </span>
+                <textarea
+                  name="message"
+                  rows={5}
+                  placeholder="How Can I Help You?"
+                />
+              </label>
+
+              <button className="contact-submit" type="submit">
+                Submit
+              </button>
+            </form>
           </div>
         </div>
       </section>
@@ -1067,6 +1220,73 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="teamShowcase">
+        <div className="teamShowcase-container">
+          <div className="teamShowcase-content">
+            <div className="teamShowcase-text" id="meet-title">
+              <h2 className="teamShowcase-title">The People Behind CozyCabz</h2>
+              <p className="teamShowcase-description">
+                Every smooth ride begins with a passionate team. At CozyCabz,
+                our strength lies in the people who work tirelessly to make
+                travel stress-free and dependable. From expert chauffeurs to
+                dedicated support staff, each member brings skill,
+                responsibility, and commitment to delivering safe and punctual
+                journeys.
+              </p>
+              <p>
+                We thrive on innovation, teamwork, and trust — ensuring
+                businesses and individuals can count on us for reliable
+                transportation, anytime, anywhere.
+              </p>
+
+              <div className="teamShowcase-stats" id="team-stats">
+                <div className="teamShowcase-stat">
+                  <h3>250+</h3>
+                  <p>Skilled Team Members</p>
+                </div>
+                <div className="teamShowcase-stat">
+                  <h3>12+</h3>
+                  <p>Years of Service Excellence</p>
+                </div>
+                <div className="teamShowcase-stat">
+                  <h3>200+</h3>
+                  <p>Projects Completed</p>
+                </div>
+              </div>
+
+              <div className="teamShowcase-values">
+                <h3>Our Core Values</h3>
+                <ul>
+                  <li>Innovation and creativity in everything we do</li>
+                  <li>Commitment to quality and excellence</li>
+                  <li>Collaborative spirit and teamwork</li>
+                  <li>Continuous learning and growth</li>
+                </ul>
+              </div>
+
+              <div className="teamShowcase-btn">
+                <button>Know More</button>
+              </div>
+            </div>
+
+            <div className="teamShowcase-image">
+              <div className="teamShowcase-imageWrapper">
+                <Image
+                  src="/team.png"
+                  width={0}
+                  height={0}
+                  alt="team-img"
+                  unoptimized
+                />
+                <div className="teamShowcase-overlay">
+                  <p>Together we achieve more</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="city-grid">
         <div className="city-grid-df">
           <div className="cg-header">
@@ -1256,73 +1476,6 @@ export default function Home() {
                 <li>Group Travel</li>
               </ul>
               <button className="btn-primary">View Buses & Coaches Cars</button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="teamShowcase">
-        <div className="teamShowcase-container">
-          <div className="teamShowcase-content">
-            <div className="teamShowcase-text" id="meet-title">
-              <h2 className="teamShowcase-title">The People Behind CozyCabz</h2>
-              <p className="teamShowcase-description">
-                Every smooth ride begins with a passionate team. At CozyCabz,
-                our strength lies in the people who work tirelessly to make
-                travel stress-free and dependable. From expert chauffeurs to
-                dedicated support staff, each member brings skill,
-                responsibility, and commitment to delivering safe and punctual
-                journeys.
-              </p>
-              <p>
-                We thrive on innovation, teamwork, and trust — ensuring
-                businesses and individuals can count on us for reliable
-                transportation, anytime, anywhere.
-              </p>
-
-              <div className="teamShowcase-stats" id="team-stats">
-                <div className="teamShowcase-stat">
-                  <h3>250+</h3>
-                  <p>Skilled Team Members</p>
-                </div>
-                <div className="teamShowcase-stat">
-                  <h3>12+</h3>
-                  <p>Years of Service Excellence</p>
-                </div>
-                <div className="teamShowcase-stat">
-                  <h3>200+</h3>
-                  <p>Projects Completed</p>
-                </div>
-              </div>
-
-              <div className="teamShowcase-values">
-                <h3>Our Core Values</h3>
-                <ul>
-                  <li>Innovation and creativity in everything we do</li>
-                  <li>Commitment to quality and excellence</li>
-                  <li>Collaborative spirit and teamwork</li>
-                  <li>Continuous learning and growth</li>
-                </ul>
-              </div>
-
-              <div className="teamShowcase-btn">
-                <button>Know More</button>
-              </div>
-            </div>
-
-            <div className="teamShowcase-image">
-              <div className="teamShowcase-imageWrapper">
-                <Image
-                  src="/team.png"
-                  width={0}
-                  height={0}
-                  alt="team-img"
-                  unoptimized
-                />
-                <div className="teamShowcase-overlay">
-                  <p>Together we achieve more</p>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -1706,7 +1859,7 @@ export default function Home() {
       </section>
 
       {/* Testimonial A */}
-      <section className="t-wrap" aria-labelledby="t-title">
+      {/* <section className="t-wrap" aria-labelledby="t-title">
         <div className="t-container">
           <p className="t-eyebrow">Testimonial</p>
           <div className="ba__rule">
@@ -1717,7 +1870,6 @@ export default function Home() {
           </h2>
 
           <div className="t-frame">
-            {/* Left: hero image */}
             <figure className="t-hero">
               <Image
                 src={activePrimary.hero}
@@ -1741,9 +1893,7 @@ export default function Home() {
               </div>
             </figure>
 
-            {/* Right: content */}
             <div className="t-content">
-              {/* avatars selector */}
               <div
                 className="t-avatars"
                 role="tablist"
@@ -1764,10 +1914,8 @@ export default function Home() {
                 ))}
               </div>
 
-              {/* text */}
               <p className="t-text">{activePrimary.text}</p>
 
-              {/* rating */}
               <div
                 className="t-stars"
                 aria-label={`${activePrimary.rating} out of 5 stars`}
@@ -1788,7 +1936,7 @@ export default function Home() {
                 ))}
               </div>
 
-              {/* person */}
+
               <div className="t-person">
                 <Image
                   className="t-person-avatar"
@@ -1796,6 +1944,7 @@ export default function Home() {
                   alt="client"
                   width={0}
                   height={0}
+                  unoptimized
                 />
                 <div>
                   <div className="t-person-name">{activePrimary.name}</div>
@@ -1803,7 +1952,7 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* arrows */}
+
               <div className="t-arrows">
                 <button
                   className="t-arrow"
@@ -1823,140 +1972,44 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
-      <section
-        className="contact-wrap"
-        id="contact"
-        aria-labelledby="contact-title"
-      >
-        <div className="contact-container">
-          {/* Eyebrow + rule */}
-          <div className="contact-toprow">
-            <h3 className="contact-eyebrow">Location</h3>
-            <div className="contact-rule">
-              <span className="contact-dot" />
+      <div className="wa-container">
+        {/* Bubble */}
+        {showBubble && (
+          <div className="wa-typing">
+            <div className="bubble">
+              Chat with us
+              <span className="typing-dots">
+                <span className="dot"></span>
+                <span className="dot"></span>
+                <span className="dot"></span>
+              </span>
             </div>
           </div>
+        )}
 
-          <h2 id="contact-title" className="contact-title">
-            Car Washing &amp; Car Point
-          </h2>
-
-          <div className="contact-grid">
-            {/* LEFT : map + info */}
-            <div className="contact-left">
-              <h3 className="contact-subtitle">Get In Touch</h3>
-              <p className="contact-lead">
-                It is a long established fact that a reader will be distracted
-                of a page when looking at its layout. The point of
-                using&nbsp;more–or–less.
-              </p>
-
-              <a href="tel:+0208571234" className="contact-phone">
-                + (020) 857 1234
-              </a>
-
-              <ul className="contact-social">
-                <li>
-                  <a href="#" aria-label="Facebook" className="soc soc--fb">
-                    <FbIcon />
-                  </a>
-                </li>
-                <li>
-                  <a href="#" aria-label="Twitter/X" className="soc soc--tw">
-                    <TwIcon />
-                  </a>
-                </li>
-                <li>
-                  <a href="#" aria-label="LinkedIn" className="soc soc--in">
-                    <InIcon />
-                  </a>
-                </li>
-              </ul>
-
-              {/* World map bg + pins */}
-              <div className="contact-map">
-                <img src="/images/world-map-light.svg" alt="" />
-                <span className="pin pin-1" />
-                <span className="pin pin-2" />
-                <span className="pin pin-3" />
-                <span className="pin pin-4" />
-              </div>
-            </div>
-
-            {/* RIGHT : form */}
-            <form className="contact-form" onSubmit={handleSubmit}>
-              <div className="form-row">
-                <label className="field">
-                  <span className="field-icon">
-                    <UserIcon />
-                  </span>
-                  <input name="name" type="text" placeholder="Name" required />
-                </label>
-
-                <label className="field">
-                  <span className="field-icon">
-                    <MailIcon />
-                  </span>
-                  <input
-                    name="email"
-                    type="email"
-                    placeholder="Email"
-                    required
-                  />
-                </label>
-              </div>
-
-              <div className="form-row">
-                <label className="field">
-                  <span className="field-icon">
-                    <svg
-                      id="phone-no"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      strokeWidth="1.5"
-                      stroke="currentColor"
-                      className="size-6"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"
-                      />
-                    </svg>
-                  </span>
-                  <input name="phone" type="tel" placeholder="Phone" />
-                </label>
-
-                <label className="field">
-                  <span className="field-icon">
-                    <DocIcon />
-                  </span>
-                  <input name="subject" type="text" placeholder="Subject" />
-                </label>
-              </div>
-
-              <label className="field field--full">
-                <span className="field-icon">
-                  <MsgIcon />
-                </span>
-                <textarea
-                  name="message"
-                  rows={5}
-                  placeholder="How Can I Help You?"
-                />
-              </label>
-
-              <button className="contact-submit" type="submit">
-                Submit
-              </button>
-            </form>
-          </div>
-        </div>
-      </section>
-
+        {/* WhatsApp Button */}
+        <a
+          href="https://wa.me/7387382383?text=Hello%20there!%20I%20need%20help."
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Chat on WhatsApp"
+          className={`wa-btn ${bounce ? "animate-bounce" : ""}`}
+        >
+          {/* WhatsApp SVG Icon */}
+          <svg className="wa-icon" viewBox="0 0 24 24">
+            <path
+              fill="#fff"
+              d="M20.52 3.48A11.86 11.86 0 0 0 12 .5C6.21.5 1.3 4.84.25 10.01c-.5 2.23.13 4.6 1.96 6.43L.5 23.5l7.41-1.78a11.85 11.85 0 0 0 4.1.72c5.79 0 10.7-4.34 11.75-9.51.55-2.46.08-5.03-1.2-7.45zM12 21.5c-1.2 0-2.38-.2-3.48-.6l-.25-.1-4.44 1.07 1.07-4.33-.09-.26A8.5 8.5 0 1 1 20.5 12a8.39 8.39 0 0 1-8.5 9.5z"
+            />
+            <path
+              fill="#fff"
+              d="M17.2 14.1c-.3-.15-1.8-.89-2.07-.99-.27-.1-.46-.15-.66.15s-.76.99-.93 1.2c-.17.21-.33.24-.62.09-.3-.15-1.14-.42-2.17-1.34-.8-.7-1.34-1.56-1.5-1.86-.16-.3-.02-.46.13-.61.13-.12.3-.33.45-.5.15-.16.2-.28.3-.47.09-.19.04-.36-.02-.5-.07-.15-.66-1.6-.9-2.2-.24-.58-.48-.5-.66-.5-.17 0-.36 0-.55 0-.19 0-.5.07-.76.36-.26.29-1 1-1 2.43 0 1.43 1.03 2.82 1.17 3.02.14.2 2.02 3.18 4.9 4.46 2.88 1.28 2.88.85 3.4.8.52-.05 1.69-.69 1.93-1.36.24-.66.24-1.22.17-1.36-.06-.14-.23-.19-.53-.33z"
+            />
+          </svg>
+        </a>
+      </div>
       <Footer />
     </>
   );

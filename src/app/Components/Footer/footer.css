@@ -186,7 +186,7 @@
 }
 .footer__legal {
   display: flex;
-  gap: 24px;
+  gap: 44px;
   flex-wrap: wrap;
 }
 .footer__legal a {
@@ -214,5 +214,19 @@
   .footer__bottom {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .footer__legal {
+    gap: 10px !important;
+    display: grid !important;
+    padding: 0 5%;
+  }
+
+  .benefits-list li {
+    padding: 0 !important;
+  }
+
+  .quote-form {
+    padding: 17px !important;
   }
 }

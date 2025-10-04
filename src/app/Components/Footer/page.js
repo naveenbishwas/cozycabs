@@ -326,10 +326,24 @@ export default function SiteFooter() {
         <div className="footer__bottom">
           <p className="copyright">© 2024 CarRental. All rights reserved.</p>
           <nav className="footer__legal" aria-label="Legal">
-            <Link href="/privacy-policy">Privacy Policy</Link>
-            <Link href="/terms">Terms of Service</Link>
-            <Link href="/refund-policy">Refund Policy</Link>
-            <Link href="/support">Support</Link>
+            <Link href="/privacy-policy">
+              <li>Privacy Policy</li>
+            </Link>
+            <Link href="/about-us">
+              <li>About us</li>
+            </Link>
+            <Link href="/contact-us">
+              <li>Contact us</li>
+            </Link>
+            <Link href="/terms">
+              <li>Terms of Service</li>
+            </Link>
+            <Link href="/refund-policy">
+              <li>Refund Policy</li>
+            </Link>
+            <Link href="/support">
+              <li>Support</li>
+            </Link>
           </nav>
         </div>
       </div>
