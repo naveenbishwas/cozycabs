@@ -5,6 +5,7 @@ import "./page.css";
 import Header from "./Components/Header/page";
 import { useState, useEffect, useRef } from "react";
 import Footer from "./Components/Footer/page";
+import Link from "next/link";
 
 /* ------------------------------------------------------------------ */
 /* Small inline icon components (single set used by both sliders)     */
@@ -844,147 +845,80 @@ export default function Home() {
 
             <hr className="about__divider" />
 
-            <a href="#contact" className="about__cta">
+            <a href="/about" className="about__cta">
               <span>Read More</span>
             </a>
           </div>
         </div>
       </section>
 
-      <section
-        className="contact-wrap"
-        id="contact"
-        aria-labelledby="contact-title"
-      >
-        <div className="contact-container">
-          {/* Eyebrow + rule */}
-          <div className="contact-toprow">
-            <h3 className="contact-eyebrow">Location</h3>
-            <div className="contact-rule">
-              <span className="contact-dot" />
+      <section className="bookcar-section" id="book-your-car">
+        <h2 className="bookcar-title">
+          Book Your <span>Car</span>
+        </h2>
+
+        <form className="bookcar-form">
+          <div className="form-row">
+            <input type="text" placeholder="Enter Your Name" required />
+            <input type="email" placeholder="Enter Email Id" required />
+            <div className="phone-group">
+              <select>
+                <option>+91</option>
+                <option>+1</option>
+                <option>+44</option>
+              </select>
+              <input type="tel" placeholder="Phone No" required />
             </div>
           </div>
 
-          <h2 id="contact-title" className="contact-title">
-            Car Washing &amp; Car Point
-          </h2>
+          <div className="form-row">
+            <select>
+              <option>Chauffeur Driven</option>
+            </select>
+            <select>
+              <option>India</option>
+            </select>
+            <input type="date" placeholder="dd-mm-yyyy" />
+          </div>
 
-          <div className="contact-grid">
-            {/* LEFT : map + info */}
-            <div className="contact-left">
-              <h3 className="contact-subtitle">Get In Touch</h3>
-              <p className="contact-lead">
-                It is a long established fact that a reader will be distracted
-                of a page when looking at its layout. The point of
-                using&nbsp;more–or–less.
+          <div className="form-row">
+            <select>
+              <option>Select Service Type</option>
+            </select>
+            <select>
+              <option>Select Vehicle Type</option>
+            </select>
+            <input type="text" placeholder="Enter City Name" />
+          </div>
+
+          <div className="form-row">
+            <input type="number" placeholder="No. of Travellers" />
+          </div>
+
+          <textarea
+            placeholder="Any specific requirement / itinerary"
+            rows="3"
+          ></textarea>
+
+          <div className="form-footer">
+            <div className="terms">
+              <input type="checkbox" />
+              <p>
+                By clicking <strong>"Send Enquiry"</strong> button, you agree to
+                our <a href="#">Terms & Conditions</a> and{" "}
+                <a href="#">Privacy Policy</a>.
               </p>
-
-              <a href="tel:+0208571234" className="contact-phone">
-                + (020) 857 1234
-              </a>
-
-              <ul className="contact-social">
-                <li>
-                  <a href="#" aria-label="Facebook" className="soc soc--fb">
-                    <FbIcon />
-                  </a>
-                </li>
-                <li>
-                  <a href="#" aria-label="Twitter/X" className="soc soc--tw">
-                    <TwIcon />
-                  </a>
-                </li>
-                <li>
-                  <a href="#" aria-label="LinkedIn" className="soc soc--in">
-                    <InIcon />
-                  </a>
-                </li>
-              </ul>
-
-              {/* World map bg + pins */}
-              <div className="contact-map">
-                <img src="/images/world-map-light.svg" alt="" />
-                <span className="pin pin-1" />
-                <span className="pin pin-2" />
-                <span className="pin pin-3" />
-                <span className="pin pin-4" />
-              </div>
             </div>
-
-            {/* RIGHT : form */}
-            <form className="contact-form" onSubmit={handleSubmit}>
-              <div className="form-row">
-                <label className="field">
-                  <span className="field-icon">
-                    <UserIcon />
-                  </span>
-                  <input name="name" type="text" placeholder="Name" required />
-                </label>
-
-                <label className="field">
-                  <span className="field-icon">
-                    <MailIcon />
-                  </span>
-                  <input
-                    name="email"
-                    type="email"
-                    placeholder="Email"
-                    required
-                  />
-                </label>
-              </div>
-
-              <div className="form-row">
-                <label className="field">
-                  <span className="field-icon">
-                    <svg
-                      id="phone-no"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      strokeWidth="1.5"
-                      stroke="currentColor"
-                      className="size-6"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"
-                      />
-                    </svg>
-                  </span>
-                  <input name="phone" type="tel" placeholder="Phone" />
-                </label>
-
-                <label className="field">
-                  <span className="field-icon">
-                    <DocIcon />
-                  </span>
-                  <input name="subject" type="text" placeholder="Subject" />
-                </label>
-              </div>
-
-              <label className="field field--full">
-                <span className="field-icon">
-                  <MsgIcon />
-                </span>
-                <textarea
-                  name="message"
-                  rows={5}
-                  placeholder="How Can I Help You?"
-                />
-              </label>
-
-              <button className="contact-submit" type="submit">
-                Submit
-              </button>
-            </form>
+            <div className="captcha">[reCAPTCHA Placeholder]</div>
+            <button type="submit" className="submit-btn">
+              Send Enquiry
+            </button>
           </div>
-        </div>
+        </form>
       </section>
 
       {/* Pricing */}
-      <section className="pricing-wrap" aria-labelledby="pricing-title">
+      {/* <section className="pricing-wrap" aria-labelledby="pricing-title">
         <div className="container">
           <div className="ba__toprow">
             <h3 className="ba__eyebrow">Pricing Plan</h3>
@@ -997,7 +931,6 @@ export default function Home() {
           </h2>
 
           <div className="cards">
-            {/* Basic */}
             <article className="plan-card">
               <figure className="card-media">
                 <Image
@@ -1034,7 +967,6 @@ export default function Home() {
               </div>
             </article>
 
-            {/* Standard */}
             <article className="plan-card">
               <figure className="card-media">
                 <Image
@@ -1069,7 +1001,6 @@ export default function Home() {
               </div>
             </article>
 
-            {/* Premium */}
             <article className="plan-card">
               <figure className="card-media">
                 <Image
@@ -1109,7 +1040,6 @@ export default function Home() {
               </div>
             </article>
 
-            {/* Premium */}
             <article className="plan-card">
               <figure className="card-media">
                 <Image
@@ -1144,7 +1074,6 @@ export default function Home() {
               </div>
             </article>
 
-            {/* Premium */}
             <article className="plan-card">
               <figure className="card-media">
                 <Image
@@ -1180,7 +1109,7 @@ export default function Home() {
             </article>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className="trust">
         <div className="wrap">
@@ -1329,6 +1258,57 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="why">
+        <div className="why-wrap">
+          <header className="why-head">
+            <h2>What Makes Us the Best Choice</h2>
+            <p>
+              Our commitment to excellence and customer satisfaction sets us
+              apart. Here’s why thousands of customers trust us with their
+              transportation needs.
+            </p>
+          </header>
+
+          {/* Top row */}
+          <div className="why-grid">
+            <Feature
+              image="/known.png"
+              title="Well Known for Quality Services"
+              text="Recognized across India for our commitment to excellence and premium service standards."
+            />
+            <Feature
+              image="/postive.png"
+              title="Earned Positive Reviews from All Clients"
+              text="Consistent 5-star ratings and testimonials from thousands of satisfied customers."
+            />
+            <Feature
+              image="/ntework.png"
+              title="The Largest Network of Drivers"
+              text="Extensive network of professional, verified drivers covering every major city in India."
+            />
+          </div>
+
+          {/* Optional second row — uncomment if you want 3 more cards */}
+          <div className="why-grid">
+            <Feature
+              image="/safe.png"
+              title="Safe & Secure"
+              text="Background-verified partners and insured moves for complete peace of mind."
+            />
+            <Feature
+              image="/nationwide.png"
+              title="Nationwide Coverage"
+              text="Strong presence with on-ground support in metros and tier-2/3 cities."
+            />
+            <Feature
+              image="/transparent.png"
+              title="Transparent Pricing"
+              text="Clear quotes, no hidden charges—ever."
+            />
+          </div>
+        </div>
+      </section>
+
       {/* Portfolio */}
       <section className="fleet" id="fleet">
         {/* Header */}
@@ -1347,7 +1327,7 @@ export default function Home() {
           <div className="fleet-card">
             <div className="fleet-image">
               <Image
-                src="/pr1.jpeg"
+                src="/ty2.png"
                 alt="car-images"
                 width={0}
                 height={0}
@@ -1380,7 +1360,7 @@ export default function Home() {
           <div className="fleet-card">
             <div className="fleet-image">
               <Image
-                src="/luxury3.jpeg"
+                src="/mc.avif"
                 alt="car-images"
                 width={0}
                 height={0}
@@ -1415,7 +1395,7 @@ export default function Home() {
           <div className="fleet-card">
             <div className="fleet-image">
               <Image
-                src="/economy2.jpeg"
+                src="/dz.avif"
                 alt="car-images"
                 width={0}
                 height={0}
@@ -1450,7 +1430,7 @@ export default function Home() {
           <div className="fleet-card">
             <div className="fleet-image">
               <Image
-                src="/bus2.jpeg"
+                src="/tmp.jpg"
                 alt="car-images"
                 width={0}
                 height={0}
@@ -1476,6 +1456,46 @@ export default function Home() {
                 <li>Group Travel</li>
               </ul>
               <button className="btn-primary">View Buses & Coaches Cars</button>
+            </div>
+          </div>
+
+          {/* Innova Crysta */}
+          <div className="fleet-card">
+            <div className="fleet-image">
+              <Image
+                src="/ty.webp"
+                alt="Innova Crysta rental car"
+                width={0}
+                height={0}
+                unoptimized
+              />
+              <span className="rating">⭐ 4.9</span>
+            </div>
+
+            <div className="fleet-body">
+              <h3>Innova Crysta</h3>
+              <p>A luxury MPV combining comfort and top-notch performance.</p>
+
+              <div className="fleet-info">
+                <span>👥 Seating</span>
+                <span>7 + 1 Seater</span>
+              </div>
+
+              <div className="fleet-info">
+                <span>🪙 Starting at</span>
+                <span>₹14/km</span>
+              </div>
+
+              <h4>Key Features:</h4>
+              <ul>
+                <li>Premium Leather Interior</li>
+                <li>Dual-Zone Climate Control</li>
+                <li>Spacious Cabin with Reclining Seats</li>
+              </ul>
+
+              <button className="btn-primary">
+                View Innova Crysta Rentals
+              </button>
             </div>
           </div>
         </div>
@@ -1655,16 +1675,18 @@ export default function Home() {
 
           {/* CTA Buttons */}
           <div className="program-cta">
-            <button className="btn-primary" id="btn-two">
-              Get Corporate Quote
-            </button>
+            <Link href="#book-your-car">
+              <button className="btn-primary" id="btn-two">
+                Get Corporate Quote
+              </button>
+            </Link>
             <button className="btn-outline">Schedule Demo</button>
           </div>
         </div>
       </section>
 
       {/* Stats ribbon */}
-      <div className="why-stats" role="group" aria-label="Key stats">
+      {/* <div className="why-stats" role="group" aria-label="Key stats">
         <div className="stat">
           <div className="stat-num">1200+</div>
           <div className="stat-label">Vendors Covering Entire Nation</div>
@@ -1681,58 +1703,7 @@ export default function Home() {
           <div className="stat-num">24/7</div>
           <div className="stat-label">Customer Support</div>
         </div>
-      </div>
-
-      <section className="why">
-        <div className="why-wrap">
-          <header className="why-head">
-            <h2>What Makes Us the Best Choice</h2>
-            <p>
-              Our commitment to excellence and customer satisfaction sets us
-              apart. Here’s why thousands of customers trust us with their
-              transportation needs.
-            </p>
-          </header>
-
-          {/* Top row */}
-          <div className="why-grid">
-            <Feature
-              image="/known.png"
-              title="Well Known for Quality Services"
-              text="Recognized across India for our commitment to excellence and premium service standards."
-            />
-            <Feature
-              image="/postive.png"
-              title="Earned Positive Reviews from All Clients"
-              text="Consistent 5-star ratings and testimonials from thousands of satisfied customers."
-            />
-            <Feature
-              image="/ntework.png"
-              title="The Largest Network of Drivers"
-              text="Extensive network of professional, verified drivers covering every major city in India."
-            />
-          </div>
-
-          {/* Optional second row — uncomment if you want 3 more cards */}
-          <div className="why-grid">
-            <Feature
-              image="/safe.png"
-              title="Safe & Secure"
-              text="Background-verified partners and insured moves for complete peace of mind."
-            />
-            <Feature
-              image="/nationwide.png"
-              title="Nationwide Coverage"
-              text="Strong presence with on-ground support in metros and tier-2/3 cities."
-            />
-            <Feature
-              image="/transparent.png"
-              title="Transparent Pricing"
-              text="Clear quotes, no hidden charges—ever."
-            />
-          </div>
-        </div>
-      </section>
+      </div> */}
 
       <section className="howto">
         <div className="howtoWrap">

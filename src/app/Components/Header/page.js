@@ -146,10 +146,10 @@ export default function Header() {
               <Link href="/#fleet">Our Fleet</Link>
             </li>
             <li>
-              <Link href="/about">About</Link>
+              <Link href="/About">About</Link>
             </li>
             <li>
-              <Link href="/contact">Contact</Link>
+              <Link href="/Contact">Contact</Link>
             </li>
           </ul>
         </nav>
@@ -293,12 +293,12 @@ export default function Header() {
             </Link>
           </li>
           <li>
-            <Link href="/about" onClick={() => setIsOpen(false)}>
+            <Link href="/About" onClick={() => setIsOpen(false)}>
               About
             </Link>
           </li>
           <li>
-            <Link href="/contact" onClick={() => setIsOpen(false)}>
+            <Link href="/Contact" onClick={() => setIsOpen(false)}>
               Contact
             </Link>
           </li>
