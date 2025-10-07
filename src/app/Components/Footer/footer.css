@@ -29,12 +29,12 @@
 /* Grid */
 .footer__grid {
   display: grid;
-  grid-template-columns: 1.3fr 1fr 1fr 1fr;
+  grid-template-columns: 1.3fr 1fr 1.6fr;
   gap: 36px 28px;
 }
 
 .footer__grid .footer__col:last-of-type {
-  margin-top: 13%;
+  /* margin-top: 13%; */
 }
 
 /* Brand block */
@@ -228,5 +228,116 @@
 
   .quote-form {
     padding: 17px !important;
+  }
+}
+
+.footer__toggle {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.footer__toggle button {
+  background: #1a1a1a;
+  border: 1px solid #333;
+  color: #cbd1d8;
+  padding: 6px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.footer__toggle button.active {
+  background: var(--brand);
+  border-color: var(--brand);
+  color: #fff;
+}
+
+.footer__toggle button:hover {
+  background: #2a2a2a;
+  color: #fff;
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+  .footer__toggle {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .footer__toggle button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* ---- City Filter Styles ---- */
+.footer__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.footer__toggle {
+  display: flex;
+  gap: 8px;
+}
+
+.footer__toggle button {
+  background: transparent;
+  border: 1px solid #333;
+  color: #ccc;
+  padding: 5px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: all 0.2s ease;
+}
+
+.footer__toggle button.active {
+  background: var(--brand);
+  color: #fff;
+  border-color: var(--brand);
+}
+
+.footer__toggle button:hover {
+  background: #222;
+}
+
+/* City list columns */
+.city-lists {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  transition: opacity 0.4s ease;
+}
+
+.city-column {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.fade-in {
+  opacity: 1;
+}
+
+.fade-out {
+  opacity: 1;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .footer__toggle {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .city-lists {
+    flex-direction: column;
+    gap: 16px;
   }
 }
