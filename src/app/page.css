@@ -288,7 +288,7 @@ html {
 .stat__num {
   font-size: 40px;
   font-weight: 800;
-  color: #ffffff; /* white for contrast on black */
+  color: #ffffff !important; /* white for contrast on black */
   letter-spacing: 0.5px;
   line-height: 1.1;
   margin-bottom: 6px;

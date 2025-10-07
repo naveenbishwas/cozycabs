@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import "./InternalOne.css";
 import Image from "next/image";
 import Header from "../Components/Header/page";
-import Footer from "../Components/Footer/page"; 
+import Footer from "../Components/Footer/page";
 import Trustcc from "../Components/Trustcc";
 import Howto from "../Components/Howto";
 import Howrent from "../Components/Howrent";
@@ -84,7 +84,7 @@ const InMumbai = () => {
     },
     {
       title: "Juhu Beach & Bandra Bandstand",
-      img: "/g3.webp",
+      img: "/m1.jpg",
       alt: "Juhu Beach & Bandra Bandstand",
       paragraphs: [
         "For a taste of Mumbai’s glam life, head to Juhu Beach and Bandra Bandstand. Juhu is buzzing with food stalls, local entertainment, and sometimes even Bollywood celebrity sightings. On the other hand, Bandra Bandstand offers a quieter seaside walk, along with famous attractions like Mannat, Shah Rukh Khan’s residence. Our cars on rent in Mumbai make it easy to cover both locations in one smooth ride, whether for leisure, family outings, or a casual evening.",
@@ -358,9 +358,9 @@ const InMumbai = () => {
           </div>
         </div>
       </section> */}
-    <Trustcc/>
-    <Howto/>
-    <Howrent />
+      <Trustcc />
+      <Howto />
+      <Howrent />
 
       <section className="attractions" aria-labelledby="attractions-title">
         <div className="attractions__container">

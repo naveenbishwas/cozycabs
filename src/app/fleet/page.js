@@ -61,32 +61,32 @@ function Feature({ image, title, text }) {
 
 const benefits = [
   {
-    icon: "❄️",
+    image: "./climate-controlled.png",
     title: "Climate Controlled",
     text: "Premium AC systems for comfortable journeys in all weather conditions",
   },
   {
-    icon: "📶",
+    image: "./wifi-enabled.png",
     title: "WiFi Enabled",
     text: "Stay connected with complimentary WiFi in select premium vehicles",
   },
   {
-    icon: "🎵",
+    image: "./verified-drivers.png",
     title: "Entertainment",
     text: "Premium music systems and entertainment options for your comfort",
   },
   {
-    icon: "☕",
+    image: "refreshments.png",
     title: "Refreshments",
     text: "Complimentary water bottles and refreshments on request",
   },
   {
-    icon: "💼",
+    image: "./business-ready.png",
     title: "Business Ready",
     text: "Perfect for corporate travel with professional service",
   },
   {
-    icon: "❤️",
+    image: "./sanitized-fleet.png",
     title: "Sanitized Fleet",
     text: "Vehicles thoroughly cleaned and sanitized before every trip",
   },
@@ -233,7 +233,15 @@ const Fleet = () => {
         <div className="benefits-grid">
           {benefits.map((item, i) => (
             <div key={i} className="benefit-card">
-              <div className="benefit-icon">{item.icon}</div>
+              <div className="benefit-icon">
+                <Image
+                  src={item.image}
+                  width={30}
+                  height={30}
+                  unoptimized
+                  alt="images"
+                />
+              </div>
               <h3 className="benefit-title">{item.title}</h3>
               <p className="benefit-text">{item.text}</p>
             </div>
