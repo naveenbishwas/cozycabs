@@ -4,7 +4,6 @@ import React, { useEffect, useRef, useState } from "react";
 import SiteFooter from "../Components/Footer/page";
 import Header from "../Components/Header/page";
 import Image from "next/image";
-import "./Innova.css";
 import NumberCounter from "../Components/NumberCounter/page";
 import InnovaBanner from "../Components/InnovaBanner/page";
 import InnovaSpecsCard from "../Components/InnovaSpecsCard/page";
@@ -12,7 +11,7 @@ import InnovaBestChoice from "../Components/InnovaBestChoice/page";
 import InnovaBookingForm from "../Components/InnovaBookingForm/page";
 import InnovaGallerySection from "../Components/InnovaGallerySection/page";
 
-const InnovaPage = () => {
+const Innovaincoimbatore = () => {
   const [openIndex, setOpenIndex] = useState(null);
   const toggle = (i) => setOpenIndex((prev) => (prev === i ? null : i));
 
@@ -62,24 +61,24 @@ const InnovaPage = () => {
 
   const faqs = [
     {
-      q: "What services are included in the Corporate Program?",
-      a: "We cover everything from daily office commutes and airport transfers to outstation rentals, event transportation, and monthly packages. Each account also gets a dedicated manager and customized reporting.",
+      q: "Can I book an Innova for Coimbatore Airport pickup or drop?",
+      a: "Yes, we provide Innova Crysta and Hycross rentals for the airport in Coimbatore. Our drivers ensure timely airport pickups and drops with complete comfort and reliability.",
     },
     {
-      q: "Can we get consolidated monthly invoices?",
-      a: "Yes. We provide a single monthly invoice with complete trip details, usage summaries, and expense breakdowns to make your finance team's job easier.",
+      q: "Do you offer Innova rental for sightseeing in Coimbatore?",
+      a: "Absolutely! You can hire an Innova for local sightseeing across Coimbatore, covering popular landmarks and attractions in and around the city.",
     },
     {
-      q: "Do you offer volume or long-term discounts?",
-      a: "Absolutely. Companies with high booking volumes or long-term partnerships benefit from tailored pricing plans and flexible payment terms.",
+      q: "Is Innova available for outstation trips from Coimbatore?",
+      a: "Yes. We provide Innova car rentals for outstation travel from Coimbatore to nearby destinations with one-way or round-trip travel options.",
     },
     {
-      q: "How does our team manage and track bookings?",
-      a: "Bookings can be made via web, app, or WhatsApp. You'll also have an account manager for urgent changes, plus dashboards to track trips and expenses in real time.",
+      q: "Are your Innovas clean and well-maintained?",
+      a: "Yes, all our vehicles are regularly sanitized, fully insured, and maintained to premium standards, ensuring a safe and comfortable travel experience for all passengers.",
     },
     {
-      q: "Are vehicles and drivers reliable and certified?",
-      a: "All vehicles are regularly serviced and fully insured. Drivers go through background verification, corporate etiquette training, and follow strict safety and punctuality standards.",
+      q: "How can I book an Innova cab in Coimbatore?",
+      a: "You can easily book online through our website or call our team at 7387382383 for instant booking confirmation and 24×7 travel assistance.",
     },
   ];
 
@@ -90,7 +89,6 @@ const InnovaPage = () => {
     "/innova-10.png",
   ];
 
-  // Reusable Feature Card
   function Feature({ image, title, text }) {
     return (
       <div className="innova-feature-card">
@@ -108,13 +106,13 @@ const InnovaPage = () => {
       <Header />
 
       {/* Hero Section */}
-      <InnovaBanner />
+      <InnovaBanner city="Coimbatore" />
 
       {/* Number Counters */}
       <NumberCounter />
 
       {/* Gallery Section */}
-      <InnovaGallerySection />
+      <InnovaGallerySection city="Coimbatore" />
 
       {/* Specs */}
       <InnovaSpecsCard />
@@ -122,38 +120,33 @@ const InnovaPage = () => {
       {/* Content Section */}
       <section className="innova-content-section">
         <h2 className="innova-description-heading">
-          Experience Unmatched Comfort with{" "}
-          <span>Toyota Innova Crysta Rental</span> Service
+          Innova Car Rental in <span>Coimbatore</span>
         </h2>
         <p>
-          Delhi, a city that is a mixture of history, culture, and modernity,
-          requires a comfortable travel solution. Whether you're planning to
-          visit iconic landmarks like the Red Fort, India Gate, or Humayun's
-          Tomb or exploring Delhi's busy markets and business hubs, renting an
-          Innova car in Delhi offers the perfect combination of comfort,
-          convenience, and efficiency.
+          Experience premium comfort and reliability with India’s most trusted
+          MPV. Perfect for family trips, corporate travel, and special occasions.
         </p>
         <div className="innova-highlight-box">
           <p>
-            The Toyota Innova, famous for its spacious interiors, smooth ride
-            quality, and luxurious, is a popular choice among travelers. With
-            the capacity to comfortably accommodate up to seven passengers, it
-            is ideal for families, corporate teams, and tourist groups..
+            Coimbatore, one of India’s major cities, offers a unique mix of culture,
+            business, and lifestyle. Whether you’re traveling for work,
+            sightseeing, or leisure, Cozy Cabz Innova car rental in Coimbatore
+            ensures a safe, comfortable, and convenient journey.
           </p>
         </div>
         <p>
-          Rental services in Delhi provide well-maintained Innovas with
-          professional chauffeurs who are adept at navigating the city's traffic
-          and routes. Whether you need a car for airport transfers, city tours,
-          or long-distance travel to nearby attractions like Agra or Jaipur,
-          Innova car rentals cater to all your requirements.
+          The Toyota Innova on rent in Coimbatore is known for its spacious
+          interiors and smooth ride. Whether you’re a tourist exploring or on an
+          outstation trip, it’s ideal for families, corporate groups, or friends.
+          With seating for up to 7 passengers, every journey becomes easy and
+          enjoyable.
         </p>
-        <h3>Innova Crysta: Options to Suit Every Journey</h3>
         <p>
-          Traveling in Delhi becomes a breeze with the versatile Toyota lineup,
-          which includes the Innova and Innova Crysta. Each vehicle caters to
-          different travel needs, from local commutes to long journeys, ensuring
-          that your experience is nothing short of exceptional.
+          In Coimbatore’s busy roads, booking an Innova with driver in Coimbatore
+          gives you complete peace of mind. Cozy Cabz provides professional
+          chauffeurs and flexible rental packages – from airport transfers to day
+          trips and multi-day tours – making every ride simple, safe, and
+          stress-free.
         </p>
       </section>
 
@@ -208,4 +201,4 @@ const InnovaPage = () => {
   );
 };
 
-export default InnovaPage;
+export default Innovaincoimbatore;
