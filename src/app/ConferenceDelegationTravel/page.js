@@ -1,5 +1,3 @@
-
-
 "use client";
 
 import React, { useEffect, useRef } from "react";
@@ -7,7 +5,7 @@ import Header from "../Components/Header/page";
 import SiteFooter from "../Components/Footer/page";
 import Image from "next/image";
 import Link from "next/link";
-import "./ConferenceDelegationTravel.css"
+import "./ConferenceDelegationTravel.css";
 import {
   FaBuilding,
   FaUsers,
@@ -52,7 +50,8 @@ const ConferenceDelegationTravel = () => {
           aboutCountersRef.current
             .querySelectorAll("[data-counter-to]")
             .forEach((node) => {
-              const to = parseInt(node.getAttribute("data-counter-to"), 10) || 0;
+              const to =
+                parseInt(node.getAttribute("data-counter-to"), 10) || 0;
               runCounter(node, to);
             });
         }
@@ -68,7 +67,7 @@ const ConferenceDelegationTravel = () => {
       <Header />
 
       {/* Hero Section */}
-      <section className="employee-transport section-container">
+      {/* <section className="employee-transport section-container">
         <div className="employee-content">
           <h1>
             Conference & <span>Delegation Travel</span>
@@ -96,44 +95,67 @@ const ConferenceDelegationTravel = () => {
             className="image"
           />
         </div>
+      </section> */}
+      <section className="employee-transport section-container" id="desktop">
+        <Image
+          src="./inn3.png"
+          width={1440}
+          height={600}
+          className="innova-backgound"
+          alt="Background-img"
+          unoptimized
+        />
+      </section>
+      <section className="employee-transport section-container" id="mobile">
+        <Image
+          src="./5.png"
+          width={1440}
+          height={600}
+          className="innova-backgound"
+          alt="Background-img"
+          unoptimized
+        />
       </section>
 
       {/* Stats Section */}
       <section className="number-stats" ref={aboutCountersRef} id="about">
-  <div className="about__stats">
-    <div className="stat">
-      <div className="stat__num" data-counter-to="250">
-        0+
-      </div>
-      <div className="stat__label">Cities Covered Around India</div>
-    </div>
-    <div className="stat">
-      <div className="stat__num" data-counter-to="1000">
-        0+
-      </div>
-      <div className="stat__label">Cabs Available Everyday</div>
-    </div>
-    <div className="stat">
-      <div className="stat__num" data-counter-to="10">
-        0+
-      </div>
-      <div className="stat__label">Years of Experience in the Industry</div>
-    </div>
-    <div className="stat">
-      <div className="stat__num" data-counter-to="5000">
-        0+
-      </div>
-      <div className="stat__label">Happy Customers</div>
-    </div>
-    <div className="stat">
-      <div className="stat__num" data-counter-to="1200">
-        0+
-      </div>
-      <div className="stat__label">Vendors Covering the Entire Nation</div>
-    </div>
-  </div>
-</section>
-
+        <div className="about__stats">
+          <div className="stat">
+            <div className="stat__num" data-counter-to="250">
+              0+
+            </div>
+            <div className="stat__label">Cities Covered Around India</div>
+          </div>
+          <div className="stat">
+            <div className="stat__num" data-counter-to="1000">
+              0+
+            </div>
+            <div className="stat__label">Cabs Available Everyday</div>
+          </div>
+          <div className="stat">
+            <div className="stat__num" data-counter-to="10">
+              0+
+            </div>
+            <div className="stat__label">
+              Years of Experience in the Industry
+            </div>
+          </div>
+          <div className="stat">
+            <div className="stat__num" data-counter-to="5000">
+              0+
+            </div>
+            <div className="stat__label">Happy Customers</div>
+          </div>
+          <div className="stat">
+            <div className="stat__num" data-counter-to="1200">
+              0+
+            </div>
+            <div className="stat__label">
+              Vendors Covering the Entire Nation
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Solutions Section */}
       <section className="smooth-ride section-container">
@@ -249,7 +271,11 @@ const ConferenceDelegationTravel = () => {
           </p>
           <form>
             <div className="form-grid">
-              <input type="text" placeholder="Organization / Event Name" required />
+              <input
+                type="text"
+                placeholder="Organization / Event Name"
+                required
+              />
               <input type="text" placeholder="Contact Person" required />
               <input type="email" placeholder="Email Address" required />
               <input type="tel" placeholder="+91 98765 43210" required />

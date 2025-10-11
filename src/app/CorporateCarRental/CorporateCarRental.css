@@ -30,14 +30,9 @@ a {
 
 /* UTILITY: container padding */
 
-.section-container {
-  padding: 80px 5%;
-}
-
-@media (max-width: 992px) {
-  .section-container {
-    padding: 60px 4%;
-  }
+.employee-transport .section-container {
+  margin-top: 3%;
+  padding: 0 !important;
 }
 
 @media (max-width: 576px) {

@@ -5,7 +5,7 @@ import Header from "../Components/Header/page";
 import SiteFooter from "../Components/Footer/page";
 import Image from "next/image";
 import Link from "next/link";
-import "./TravelPartnersProgram.css"
+import "./TravelPartnersProgram.css";
 import {
   FaGlobe,
   FaHandshake,
@@ -50,7 +50,8 @@ const TravelPartnersProgram = () => {
           aboutCountersRef.current
             .querySelectorAll("[data-counter-to]")
             .forEach((node) => {
-              const to = parseInt(node.getAttribute("data-counter-to"), 10) || 0;
+              const to =
+                parseInt(node.getAttribute("data-counter-to"), 10) || 0;
               runCounter(node, to);
             });
         }
@@ -66,35 +67,26 @@ const TravelPartnersProgram = () => {
       <Header />
 
       {/* Hero Section */}
-      <section className="employee-transport section-container">
-        <div className="employee-content">
-          <h1>
-            Travel <span>Partners Program</span>
-          </h1>
-          <p>
-            Expand your opportunities by joining our Travel Partners Program.
-            Designed for hotels, corporates, and travel agencies, we offer
-            seamless collaboration that brings reliable transportation services
-            to your clients and guests.
-          </p>
-          <div className="cta-buttons">
-            <Link href="#quote-section">
-              <button className="primary-btn">Join Program →</button>
-            </Link>
-            <a href="tel:+919876543210" className="secondary-btn">
-              Call: +91 98765 43210
-            </a>
-          </div>
-        </div>
-        <div className="employee-image">
-          <Image
-            src="/bus.jpg"
-            alt="Travel Partners Program"
-            width={600}
-            height={400}
-            className="image"
-          />
-        </div>
+      <section className="employee-transport section-container" id="desktop">
+        <Image
+          src="./inn6.png"
+          width={1440}
+          height={600}
+          className="innova-backgound"
+          alt="Background-img"
+          unoptimized
+        />
+      </section>
+
+      <section className="employee-transport section-container" id="mobile">
+        <Image
+          src="./8.png"
+          width={1440}
+          height={600}
+          className="innova-backgound "
+          alt="Background-img"
+          unoptimized
+        />
       </section>
 
       {/* Stats Section */}

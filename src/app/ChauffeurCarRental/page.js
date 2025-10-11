@@ -5,7 +5,7 @@ import Header from "../Components/Header/page";
 import SiteFooter from "../Components/Footer/page";
 import Image from "next/image";
 import Link from "next/link";
-import "./ChauffeurCarRental.css"
+import "./ChauffeurCarRental.css";
 import {
   FaCar,
   FaUserTie,
@@ -50,7 +50,8 @@ const ChauffeurCarRental = () => {
           aboutCountersRef.current
             .querySelectorAll("[data-counter-to]")
             .forEach((node) => {
-              const to = parseInt(node.getAttribute("data-counter-to"), 10) || 0;
+              const to =
+                parseInt(node.getAttribute("data-counter-to"), 10) || 0;
               runCounter(node, to);
             });
         }
@@ -66,35 +67,26 @@ const ChauffeurCarRental = () => {
       <Header />
 
       {/* Hero Section */}
-      <section className="employee-transport section-container">
-        <div className="employee-content">
-          <h1>
-            Chauffeur <span>Car Rental</span>
-          </h1>
-          <p>
-            Experience the luxury of stress-free travel with our chauffeur car
-            rental services. Whether it’s for business meetings, airport
-            transfers, weddings, or city tours, our professional chauffeurs
-            ensure you travel in comfort, style, and safety.
-          </p>
-          <div className="cta-buttons">
-            <Link href="#quote-section">
-              <button className="primary-btn">Get Quote Now →</button>
-            </Link>
-            <a href="tel:+919876543210" className="secondary-btn">
-              Call: +91 98765 43210
-            </a>
-          </div>
-        </div>
-        <div className="employee-image">
-          <Image
-            src="/bus.jpg"
-            alt="Chauffeur Car Rental"
-            width={600}
-            height={400}
-            className="image"
-          />
-        </div>
+      <section className="employee-transport section-container" id="desktop">
+        <Image
+          src="./inn7.png"
+          width={1440}
+          height={600}
+          className="innova-backgound"
+          alt="Background-img"
+          unoptimized
+        />
+      </section>
+
+      <section className="employee-transport section-container" id="mobile">
+        <Image
+          src="./9.png"
+          width={1440}
+          height={600}
+          className="innova-backgound "
+          alt="Background-img"
+          unoptimized
+        />
       </section>
 
       {/* Stats Section */}
@@ -169,9 +161,9 @@ const ChauffeurCarRental = () => {
             safety, punctuality, and courtesy.
           </p>
           <p>
-            From airport pickups and hotel transfers to intercity trips and
-            city tours, we take care of logistics while you focus on what
-            matters most.
+            From airport pickups and hotel transfers to intercity trips and city
+            tours, we take care of logistics while you focus on what matters
+            most.
           </p>
         </div>
       </section>

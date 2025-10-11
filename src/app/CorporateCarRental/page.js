@@ -103,7 +103,7 @@ const CorporateCarRental = () => {
     <div>
       <Header />
 
-      <section className="employee-transport section-container">
+      {/* <section className="employee-transport section-container">
         <div className="employee-content">
           <h1>
             Corporate Car <span>Rental</span>
@@ -134,19 +134,28 @@ const CorporateCarRental = () => {
             className="image"
           />
         </div>
+      </section> */}
+      <section className="employee-transport section-container" id="desktop">
+        <Image
+          src="./inn8.jpg"
+          width={1440}
+          height={600}
+          className="innova-backgound"
+          alt="Background-img"
+          unoptimized
+        />
+      </section>
+      <section className="employee-transport section-container" id="mobile">
+        <Image
+          src="./1.png"
+          width={1440}
+          height={600}
+          className="innova-backgound"
+          alt="Background-img"
+          unoptimized
+        />
       </section>
 
-      {/* <section className="stats-section section-container">
-        <div className="stats-grid">
-          {stats.map((item) => (
-            <div key={item.id} className="stat-card">
-              <div className="stat-icon">{item.icon}</div>
-              <h3>{item.value}</h3>
-              <p>{item.label}</p>
-            </div>
-          ))}
-        </div>
-      </section> */}
       <section className="number-stats" ref={aboutCountersRef} id="about">
         <div className="about__stats">
           <div className="stat">

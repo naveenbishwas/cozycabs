@@ -1500,12 +1500,7 @@ a {
   }
 }
 
-
-
-
-/* ///////FOR INNOVA PAGE /////////// */ 
-
-
+/* ///////FOR INNOVA PAGE /////////// */
 
 .innova-page {
   font-family: system-ui, -apple-system, sans-serif;
@@ -2048,4 +2043,24 @@ section.innova-why {
 
 .innova-faq-question span {
   color: #474747;
+}
+
+#mobile {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  #desktop {
+    display: none;
+  }
+
+  #mobile {
+    display: block;
+    padding: 0 !important;
+  }
+
+  #mobile img {
+    width: 100%;
+    height: auto;
+  }
 }

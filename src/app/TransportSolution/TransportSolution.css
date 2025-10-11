@@ -29,7 +29,7 @@ a {
 }
 
 /* UTILITY: container padding */
-
+/* 
 .section-container {
   padding: 80px 5%;
 }
@@ -38,7 +38,7 @@ a {
   .section-container {
     padding: 60px 4%;
   }
-}
+} */
 
 @media (max-width: 576px) {
   .section-container {

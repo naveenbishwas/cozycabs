@@ -5,7 +5,7 @@ import Header from "../Components/Header/page";
 import SiteFooter from "../Components/Footer/page";
 import Image from "next/image";
 import Link from "next/link";
-import "./WeddingCarRental.css"
+import "./WeddingCarRental.css";
 import {
   FaCar,
   FaHeart,
@@ -50,7 +50,8 @@ const WeddingCarRental = () => {
           aboutCountersRef.current
             .querySelectorAll("[data-counter-to]")
             .forEach((node) => {
-              const to = parseInt(node.getAttribute("data-counter-to"), 10) || 0;
+              const to =
+                parseInt(node.getAttribute("data-counter-to"), 10) || 0;
               runCounter(node, to);
             });
         }
@@ -66,36 +67,26 @@ const WeddingCarRental = () => {
       <Header />
 
       {/* Hero Section */}
-      <section className="employee-transport section-container">
-        <div className="employee-content">
-          <h1>
-            Wedding <span>Car Rental</span>
-          </h1>
-          <p>
-            Make your wedding day unforgettable with our premium wedding car
-            rental services. From luxurious sedans to stylish SUVs and vintage
-            classics, we provide the perfect ride for your big day. Whether it’s
-            for the bride, groom, or special guests, we ensure a royal and
-            comfortable journey.
-          </p>
-          <div className="cta-buttons">
-            <Link href="#quote-section">
-              <button className="primary-btn">Get Quote Now →</button>
-            </Link>
-            <a href="tel:+919876543210" className="secondary-btn">
-              Call: +91 98765 43210
-            </a>
-          </div>
-        </div>
-        <div className="employee-image">
-          <Image
-            src="/bus.jpg"
-            alt="Wedding Car Rental"
-            width={600}
-            height={400}
-            className="image"
-          />
-        </div>
+      <section className="employee-transport section-container" id="desktop">
+        <Image
+          src="./inn5.png"
+          width={1440}
+          height={600}
+          className="innova-backgound"
+          alt="Background-img"
+          unoptimized
+        />
+      </section>
+
+      <section className="employee-transport section-container" id="mobile">
+        <Image
+          src="./10.png"
+          width={1440}
+          height={600}
+          className="innova-backgound "
+          alt="Background-img"
+          unoptimized
+        />
       </section>
 
       {/* Stats Section */}
@@ -178,8 +169,8 @@ const WeddingCarRental = () => {
         <header className="why-head">
           <h2>What Makes Us the Best Choice</h2>
           <p>
-            Our dedication to wedding travel excellence sets us apart. Here’s why
-            couples and families trust us for their big day.
+            Our dedication to wedding travel excellence sets us apart. Here’s
+            why couples and families trust us for their big day.
           </p>
         </header>
         <div className="why-grid">
