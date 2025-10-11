@@ -11,7 +11,7 @@ import InnovaBestChoice from "../Components/InnovaBestChoice/page";
 import InnovaBookingForm from "../Components/InnovaBookingForm/page";
 import InnovaGallerySection from "../Components/InnovaGallerySection/page";
 
-const Innovainkanpur = () => {
+const Innovainkolkata = () => {
   const [openIndex, setOpenIndex] = useState(null);
   const toggle = (i) => setOpenIndex((prev) => (prev === i ? null : i));
 
@@ -61,24 +61,24 @@ const Innovainkanpur = () => {
 
   const faqs = [
     {
-      q: "Can I book an Innova for Kanpur Airport pickup or drop?",
-      a: "Yes, we offer Innova Crysta cabs for Kanpur Airport with reliable and punctual drivers.",
+      q: "Can I book an Innova for Kolkata Airport pickup or drop?",
+      a: "Yes, we provide Innova Crysta and Hycross rentals for the airport in Kolkata. Our drivers ensure timely airport pickups and drops with complete comfort and reliability.",
     },
     {
-      q: "Do you offer Innova rental for sightseeing in Kanpur?",
-      a: "Yes, hire an Innova to explore Blue World Theme Park, ISKCON Temple, and Allen Forest Zoo.",
+      q: "Do you offer Innova rental for sightseeing in Kolkata?",
+      a: "Absolutely! You can hire an Innova for local sightseeing across Kolkata, covering popular landmarks and attractions in and around the city.",
     },
     {
-      q: "Is Innova available for outstation trips from Kanpur?",
-      a: "Yes, you can rent Innovas for trips to Lucknow, Agra, or Delhi.",
+      q: " Is Innova available for outstation trips from Kolkata?",
+      a: "Yes. We provide Innova car rentals for outstation travel from Kolkata to nearby destinations with one-way or round-trip travel options.",
     },
     {
       q: "Are your Innovas clean and well-maintained?",
-      a: "Yes, our vehicles undergo daily checks and sanitization.",
+      a: "Yes, all our vehicles are regularly sanitized, fully insured, and maintained to premium standards, ensuring a safe and comfortable travel experience for all passengers.",
     },
     {
-      q: "How can I book an Innova cab in Kanpur?",
-      a: "Visit our website or call 7387382383 to confirm your booking instantly.",
+      q: "How can I book an Innova cab in Kolkata?",
+      a: "You can easily book online through our website or call our team at ■ 7387382383 for instant booking confirmation and 24×7 travel assistance.",
     },
   ];
 
@@ -106,13 +106,13 @@ const Innovainkanpur = () => {
       <Header />
 
       {/* Hero Section */}
-      <InnovaBanner city="Kanpur" />
+      <InnovaBanner city="Kolkata" />
 
       {/* Number Counters */}
       <NumberCounter />
 
       {/* Gallery Section */}
-      <InnovaGallerySection city="Kanpur" />
+      <InnovaGallerySection city="Kolkata" />
 
       {/* Specs */}
       <InnovaSpecsCard />
@@ -120,18 +120,25 @@ const Innovainkanpur = () => {
       {/* Content Section */}
       <section className="innova-content-section">
         <h2 className="innova-description-heading">
-          Innova Car Rental in <span>Kanpur</span>
+          Innova Car Rental in <span>Kolkata</span>
         </h2>
         <p>
-          Experience premium comfort and reliability with India’s most trusted
-          MPV. Perfect for family trips, corporate travel, and special
-          occasions.
+          Kolkata, one of India’s major cities, offers a unique mix of culture,
+          business, and lifestyle. Whether you’re traveling for work,
+          sightseeing, or leisure, Cozy Cabz Innova car rental in Kolkata
+          ensures a safe, comfortable, and convenient journey. The Toyota Innova
+          on rent in Kolkata is known for its spacious interiors and smooth
+          ride. Whether you’re a tourist exploring or on an outstation trip,
+          it’s ideal for families, corporate groups, or friends. With seating
+          for up to 7 passengers, every journey becomes easy and enjoyable.
         </p>
         <div className="innova-highlight-box">
           <p>
-            Kanpur, a commercial and educational city, deserves a comfortable
-            travel companion. Cozy Cabz Innova car rental in Kanpur makes it
-            easy for family outings, airport pickups, or business travel.
+            In Kolkata’s busy roads, booking an Innova with driver in Kolkata
+            gives you complete peace of mind. Cozy Cabz provides professional
+            chauffeurs and flexible rental packages – from airport transfers to
+            day trips and multi-day tours – making every ride simple, safe, and
+            stress-free.
           </p>
         </div>
       </section>
@@ -187,4 +194,4 @@ const Innovainkanpur = () => {
   );
 };
 
-export default Innovainkanpur;
+export default Innovainkolkata;
