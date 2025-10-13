@@ -788,11 +788,11 @@ export default function Home() {
             </p>
 
             <hr className="about__divider" />
-
+            {/* /////Read More//////// */}
             <span className="about__cta-div">
-              <a href="/about" className="about__cta">
+              <Link href="/About" className="about__cta">
                 <span>Read More</span>
-              </a>
+              </Link>
             </span>
           </div>
         </div>
