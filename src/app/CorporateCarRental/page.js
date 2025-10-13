@@ -280,7 +280,6 @@ const CorporateCarRental = () => {
 
       <section className="quote-section section-container" id="quote-section">
         <div className="quote-info">
-          <button className="tag-btn">Get Started Today</button>
           <h2>
             Request a <span>Custom Quote</span>
           </h2>
@@ -294,6 +293,7 @@ const CorporateCarRental = () => {
             <li>Flexible contracts with no hidden fees</li>
             <li>24/7 support and real‑time tracking</li>
           </ul>
+          <button className="tag-btn">Get Started Today</button>
         </div>
 
         <div className="quote-form">

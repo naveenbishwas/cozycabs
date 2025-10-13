@@ -384,9 +384,9 @@ export default function Home() {
 
   const cities = [
     {
-      name: "Banglore",
+      name: "Bangalore",
       status: "Car Rental Available",
-      desc: "Professional car rental services available 24/7 in Agra. Book now for reliable transportation solutions.",
+      desc: "Explore hassle-free rides with 24/7 car rental—perfect for daily commutes or weekend getaways.",
       cta: "Book in Banglore",
       href: "/Inbanglore",
       img: "./banglore.jpg",
@@ -395,7 +395,7 @@ export default function Home() {
     {
       name: "Mumbai",
       status: "Car Rental Available",
-      desc: "Professional car rental services available 24/7 in Mumbai. Book now for reliable transportation solutions.",
+      desc: "Experience seamless travel with our reliable and affordable car —available round the clock.",
       cta: "Book in Mumbai",
       href: "/InMumbai",
       img: "Mumbai2.png",
@@ -404,7 +404,7 @@ export default function Home() {
     {
       name: "Jaipur",
       status: "Car Rental Available",
-      desc: "Professional car rental services available 24/7 in Jaipur. Book now for reliable transportation solutions.",
+      desc: "Discover the Pink City in comfort with our premium car rental services—available anytime, anywhere in Jaipur.",
       cta: "Book in Jaipur",
       href: "/InJaipur",
       img: "Jaipur2.png", // no image → shows placeholder state
@@ -686,68 +686,14 @@ export default function Home() {
     <>
       <Header />
 
-      {/* Hero Section */}
-      {/* <section className="hero">
-        <div className="overlay">
-          <p className="welcome-text">Welcome To Best Cabs</p>
-          <h1>
-            Book Reliable & Affordable Cabs in 200+ Cities Across India CTA
-          </h1>
-          <button className="hero-btn">Book Now</button>
-
-          <div className="red-car">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="70"
-              height="70"
-              viewBox="0 0 70 70"
-              fill="none"
-            >
-              <g clipPath="url(#clip0_1109_117)">
-                <path
-                  d="M5.46875 9.84375C6.33404 9.84375 7.1799 9.58716 7.89937 9.10643C8.61883 8.6257 9.17959 7.94242 9.51072 7.14299C9.84186 6.34356 9.9285 5.4639 9.75969 4.61523C9.59088 3.76657 9.1742 2.98701 8.56234 2.37516C7.95049 1.76331 7.17094 1.34663 6.32227 1.17782C5.4736 1.00901 4.59394 1.09565 3.79451 1.42678C2.99508 1.75791 2.3118 2.31867 1.83107 3.03813C1.35034 3.7576 1.09375 4.60346 1.09375 5.46875C1.09505 6.62867 1.55641 7.74072 2.3766 8.56091C3.19679 9.38109 4.30883 9.84245 5.46875 9.84375ZM5.46875 3.28125C5.9014 3.28125 6.32433 3.40955 6.68406 3.64991C7.04379 3.89028 7.32417 4.23192 7.48974 4.63163C7.6553 5.03135 7.69862 5.47118 7.61422 5.89551C7.52981 6.31985 7.32147 6.70962 7.01555 7.01555C6.70962 7.32148 6.31984 7.52981 5.89551 7.61422C5.47118 7.69863 5.03134 7.65531 4.63163 7.48974C4.23192 7.32417 3.89028 7.04379 3.64991 6.68406C3.40954 6.32433 3.28125 5.9014 3.28125 5.46875C3.2819 4.88879 3.51258 4.33277 3.92267 3.92268C4.33277 3.51258 4.88879 3.2819 5.46875 3.28125Z"
-                  fill="white"
-                />
-                <path
-                  d="M69.4311 5.42337L66.293 3.70701L64.5768 0.568902C64.4826 0.396681 64.3438 0.252979 64.175 0.152872C64.0061 0.0527636 63.8135 -6.10352e-05 63.6172 -6.10352e-05C63.4209 -6.10352e-05 63.2282 0.0527636 63.0594 0.152872C62.8905 0.252979 62.7517 0.396681 62.6576 0.568902L60.9413 3.70701L57.8032 5.42337C57.631 5.51757 57.4874 5.65636 57.3873 5.82519C57.2872 5.99402 57.2344 6.18667 57.2344 6.38294C57.2344 6.5792 57.2872 6.77185 57.3873 6.94068C57.4874 7.10951 57.631 7.2483 57.8032 7.3425L60.9413 9.05886L62.6576 12.197C62.7517 12.3692 62.8905 12.5129 63.0594 12.613C63.2282 12.7131 63.4209 12.7659 63.6172 12.7659C63.8135 12.7659 64.0061 12.7131 64.175 12.613C64.3438 12.5129 64.4826 12.3692 64.5768 12.197L66.293 9.05886L69.4311 7.3425C69.6033 7.2483 69.747 7.10951 69.8471 6.94068C69.9472 6.77185 70 6.5792 70 6.38294C70 6.18667 69.9472 5.99402 69.8471 5.82519C69.747 5.65636 69.6033 5.51757 69.4311 5.42337ZM64.9622 7.29341C64.7787 7.39378 64.6278 7.54467 64.5274 7.72818L63.617 9.39259L62.7068 7.72804C62.6064 7.54453 62.4555 7.39365 62.272 7.29328L60.6074 6.383L62.272 5.47259C62.4555 5.37222 62.6064 5.22134 62.7068 5.03783L63.617 3.37328L64.5274 5.03783C64.6278 5.22134 64.7787 5.37222 64.9622 5.47259L66.6268 6.383L64.9622 7.29341Z"
-                  fill="white"
-                />
-                <path
-                  d="M30.1993 60.9411L28.4831 57.803C28.3889 57.6308 28.2501 57.4871 28.0812 57.387C27.9124 57.2869 27.7197 57.2341 27.5234 57.2341C27.3271 57.2341 27.1345 57.2869 26.9656 57.387C26.7968 57.4871 26.658 57.6308 26.5638 57.803L24.8476 60.9411L21.7095 62.6575C21.5373 62.7517 21.3936 62.8905 21.2935 63.0593C21.1934 63.2282 21.1406 63.4208 21.1406 63.6171C21.1406 63.8133 21.1934 64.006 21.2935 64.1748C21.3936 64.3436 21.5373 64.4824 21.7095 64.5766L24.8476 66.293L26.5638 69.4311C26.658 69.6033 26.7968 69.747 26.9656 69.8471C27.1345 69.9472 27.3271 70.0001 27.5234 70.0001C27.7197 70.0001 27.9124 69.9472 28.0812 69.8471C28.2501 69.747 28.3889 69.6033 28.4831 69.4311L30.1993 66.293L33.3374 64.5766C33.5096 64.4824 33.6532 64.3436 33.7533 64.1748C33.8534 64.006 33.9062 63.8133 33.9062 63.6171C33.9062 63.4208 33.8534 63.2282 33.7533 63.0593C33.6532 62.8905 33.5096 62.7517 33.3374 62.6575L30.1993 60.9411ZM28.8686 64.5274C28.6851 64.6278 28.5342 64.7787 28.4338 64.9622L27.5234 66.6267L26.6132 64.9622C26.5128 64.7787 26.3619 64.6278 26.1784 64.5274L24.5137 63.617L26.1783 62.7066C26.3618 62.6062 26.5126 62.4553 26.613 62.2718L27.5233 60.6073L28.4337 62.2718C28.5341 62.4553 28.685 62.6062 28.8685 62.7066L30.533 63.617L28.8686 64.5274Z"
-                  fill="white"
-                />
-                <path
-                  d="M42.8216 16.3609L39.6835 14.6445L37.9674 11.5064C37.8732 11.3342 37.7345 11.1905 37.5656 11.0904C37.3968 10.9903 37.2041 10.9374 37.0078 10.9374C36.8115 10.9374 36.6188 10.9903 36.45 11.0904C36.2811 11.1905 36.1424 11.3342 36.0482 11.5064L34.3319 14.6445L31.1938 16.3609C31.0217 16.4551 30.878 16.5939 30.7779 16.7627C30.6778 16.9315 30.625 17.1242 30.625 17.3204C30.625 17.5167 30.6778 17.7094 30.7779 17.8782C30.878 18.047 31.0217 18.1858 31.1938 18.28L34.3319 19.9964L36.0482 23.1345C36.1424 23.3067 36.2811 23.4504 36.45 23.5505C36.6188 23.6506 36.8115 23.7034 37.0078 23.7034C37.2041 23.7034 37.3968 23.6506 37.5656 23.5505C37.7345 23.4504 37.8732 23.3067 37.9674 23.1345L39.6837 19.9964L42.8218 18.28C42.994 18.1858 43.1376 18.047 43.2377 17.8782C43.3378 17.7094 43.3906 17.5167 43.3906 17.3204C43.3906 17.1242 43.3378 16.9315 43.2377 16.7627C43.1376 16.5939 42.994 16.4551 42.8218 16.3609H42.8216ZM38.3527 18.2309C38.1692 18.3313 38.0183 18.4822 37.9179 18.6657L37.0078 20.3301L36.0974 18.6655C35.997 18.482 35.8461 18.3311 35.6626 18.2308L33.9981 17.3204L35.6626 16.41C35.8461 16.3096 35.997 16.1587 36.0974 15.9752L37.0078 14.3106L37.9181 15.9752C38.0184 16.1587 38.1693 16.3096 38.3528 16.41L40.0174 17.3204L38.3527 18.2309Z"
-                  fill="white"
-                />
-                <path
-                  d="M27.3438 3.28125H25.1562V5.46875H27.3438V3.28125Z"
-                  fill="white"
-                />
-                <path
-                  d="M9.84375 63.4375H7.65625V65.625H9.84375V63.4375Z"
-                  fill="white"
-                />
-                <path
-                  d="M5.19531 53.5938H6.5625V56.3281C6.56362 57.3431 6.9673 58.3161 7.68497 59.0338C8.40264 59.7514 9.37569 60.1551 10.3906 60.1562H16.9531C17.9681 60.1551 18.9411 59.7514 19.6588 59.0338C20.3764 58.3161 20.7801 57.3431 20.7812 56.3281V53.5938H40.6738C40.8537 53.8239 41.0482 54.0422 41.2563 54.2473L40.604 57.0739C40.4282 57.8354 40.4266 58.6268 40.5991 59.389C40.7716 60.1512 41.1138 60.8647 41.6003 61.4764C42.0869 62.088 42.7051 62.582 43.409 62.9215C44.1129 63.2611 44.8843 63.4374 45.6658 63.4375H50.8338C51.3386 64.0294 51.8963 64.5739 52.5 65.0644V70H54.6875V64.5312C54.6875 64.3615 54.648 64.194 54.572 64.0421C54.4961 63.8902 54.3858 63.7581 54.25 63.6562C50.3993 60.7682 50.3143 57.027 50.3125 56.875C50.3125 56.6564 50.247 56.4428 50.1245 56.2618C50.0019 56.0808 49.8279 55.9406 49.6249 55.8595L44.2001 53.6895C41.9482 52.5453 41.482 50.7075 41.4403 49.5236L52.2123 52.4613C52.3879 52.5092 52.5725 52.5125 52.7497 52.4711C52.9268 52.4296 53.0908 52.3445 53.2268 52.2237L59.9713 46.2286C60.1738 46.0486 60.4178 45.9215 60.6814 45.8588C60.945 45.796 61.22 45.7995 61.4819 45.869C61.7438 45.9385 61.9844 46.0718 62.1823 46.2569C62.3801 46.4421 62.529 46.6733 62.6157 46.9301L65.5367 56.08C65.538 56.0845 65.5396 56.0889 65.5411 56.0937C65.6139 56.3126 65.6398 56.5444 65.6171 56.774C65.5944 57.0036 65.5235 57.2259 65.4091 57.4263C65.4039 57.4353 65.3989 57.4446 65.3939 57.4536L62.4729 62.9223C62.3882 63.0808 62.3438 63.2578 62.3438 63.4375V70H64.5312V63.7109L67.3165 58.4963C67.5793 58.0311 67.742 57.5161 67.794 56.9842C67.846 56.4524 67.7862 55.9156 67.6185 55.4083L65.625 49.1641V30.3516C65.6234 28.9742 65.0756 27.6536 64.1016 26.6796C63.1276 25.7057 61.8071 25.1578 60.4297 25.1562H58.8227L58.5493 24.0625H65.625C65.9151 24.0625 66.1933 23.9473 66.3984 23.7421C66.6035 23.537 66.7188 23.2588 66.7188 22.9687V17.5C66.7188 17.2099 66.6035 16.9317 66.3984 16.7266C66.1933 16.5215 65.9151 16.4062 65.625 16.4062H60.1562C59.9403 16.4063 59.7293 16.4702 59.5496 16.59L57.091 18.2291L55.4833 11.7988C55.1889 10.6149 54.5064 9.56368 53.5448 8.81285C52.5832 8.06203 51.3978 7.65484 50.1778 7.65625H16.3414C15.1751 7.65252 14.0384 8.0234 13.0987 8.71426C12.159 9.40512 11.466 10.3795 11.1217 11.4938L9.12228 17.8922L7.16926 16.5903C6.98961 16.4704 6.77849 16.4063 6.5625 16.4062H1.09375C0.803669 16.4062 0.52547 16.5215 0.320352 16.7266C0.115234 16.9317 0 17.2099 0 17.5L0 22.9687C0 23.2588 0.115234 23.537 0.320352 23.7421C0.52547 23.9473 0.803669 24.0625 1.09375 24.0625H7.194L6.85221 25.1562H5.19531C3.81791 25.1578 2.49736 25.7057 1.52339 26.6796C0.549417 27.6536 0.001556 28.9742 0 30.3516V48.3984C0.001556 49.7758 0.549417 51.0964 1.52339 52.0704C2.49736 53.0443 3.81791 53.5922 5.19531 53.5938ZM18.5938 56.3281C18.5933 56.7631 18.4203 57.1801 18.1127 57.4877C17.8051 57.7953 17.3881 57.9683 16.9531 57.9688H10.3906C9.95565 57.9683 9.53862 57.7953 9.23105 57.4877C8.92347 57.1801 8.75047 56.7631 8.75 56.3281V53.5938H18.5938V56.3281ZM48.1865 57.6406C48.3649 58.9022 48.7604 60.1234 49.3555 61.25H45.6658C45.2134 61.25 44.7667 61.1479 44.3591 60.9514C43.9516 60.7548 43.5936 60.4688 43.3119 60.1147C43.0303 59.7606 42.8321 59.3475 42.7322 58.9062C42.6323 58.4649 42.6333 58.0067 42.735 57.5658L43.183 55.6244C43.2094 55.6381 43.2342 55.6518 43.2608 55.6655C43.2875 55.6791 43.3155 55.6914 43.3437 55.7026L48.1865 57.6406ZM40.7559 47.0698C40.6154 47.0315 40.4687 47.0216 40.3244 47.0407C40.1801 47.0599 40.041 47.1076 39.9154 47.1812C39.7898 47.2547 39.6801 47.3526 39.5928 47.4691C39.5055 47.5856 39.4423 47.7184 39.407 47.8596C39.3861 47.9432 39.3673 48.0327 39.3496 48.1249H7.65625V45.9375H42.1641L42.5128 47.4487C42.5209 47.4838 42.5273 47.5192 42.534 47.5546L40.7559 47.0698ZM52.2155 50.1951L44.7754 48.166C44.7791 47.7592 44.7351 47.3534 44.6443 46.9569L42.7353 38.6843C42.6335 38.2434 42.6325 37.7853 42.7324 37.3439C42.8323 36.9026 43.0304 36.4895 43.3121 36.1354C43.5937 35.7813 43.9517 35.4953 44.3592 35.2987C44.7667 35.1021 45.2134 35 45.6658 35H56.1353C56.5878 35 57.0345 35.1021 57.442 35.2986C57.8496 35.4952 58.2076 35.7812 58.4892 36.1353C58.7709 36.4894 58.9691 36.9025 59.069 37.3438C59.1689 37.7851 59.1679 38.2433 59.0662 38.6842C59.0601 38.711 59.0549 38.7379 59.0507 38.7651L58.1055 44.9604L52.2155 50.1951ZM40.5338 37.1875H20.7812V35H41.43C40.9663 35.6501 40.6595 36.3989 40.5338 37.1875ZM56.1353 32.8125H54.4296C54.8559 32.3362 55.4119 31.9948 56.0294 31.8301C56.647 31.6655 57.2992 31.6847 57.9059 31.8856C58.5127 32.0864 59.0476 32.4601 59.4449 32.9607C59.8422 33.4613 60.0847 34.0671 60.1426 34.7036C59.6567 34.1109 59.0451 33.6337 58.352 33.3066C57.6589 32.9795 56.9017 32.8107 56.1353 32.8125ZM60.4875 18.5937H64.5312V21.875H58.0024L57.6543 20.4825L60.4875 18.5937ZM2.1875 21.875V18.5937H6.23137L8.44238 20.0677L7.8776 21.875H2.1875ZM13.2096 12.1462C13.4163 11.4777 13.8321 10.8931 14.3959 10.4787C14.9597 10.0642 15.6417 9.8416 16.3414 9.84375H50.1778C50.9099 9.84287 51.6211 10.0872 52.1981 10.5377C52.7751 10.9882 53.1846 11.6189 53.3613 12.3293L56.5679 25.1562H9.14389L13.2096 12.1462ZM2.1875 30.3516C2.1884 29.5541 2.50559 28.7896 3.06947 28.2257C3.63335 27.6618 4.39787 27.3447 5.19531 27.3437H60.4297C61.2271 27.3447 61.9917 27.6618 62.5555 28.2257C63.1194 28.7896 63.4366 29.5541 63.4375 30.3516V44.4542C63.0297 44.131 62.5602 43.8943 62.0578 43.7588C61.5554 43.6233 61.0306 43.5918 60.5155 43.6662L61.2073 39.1336C61.277 38.8179 61.3173 38.4966 61.3278 38.1735C61.7722 37.5497 62.0805 36.8395 62.2329 36.0889C62.3854 35.3384 62.3784 34.5641 62.2126 33.8164C62.0467 33.0687 61.7257 32.3641 61.2702 31.7484C60.8147 31.1327 60.235 30.6195 59.5686 30.242C58.9021 29.8646 58.1638 29.6314 57.4015 29.5574C56.6392 29.4835 55.8698 29.5705 55.1433 29.8128C54.4167 30.0551 53.7492 30.4474 53.1839 30.9641C52.6186 31.4809 52.1681 32.1106 51.8617 32.8125H19.6875C19.3974 32.8125 19.1192 32.9277 18.9141 33.1328C18.709 33.338 18.5938 33.6162 18.5938 33.9062V38.2812C18.5938 38.5713 18.709 38.8495 18.9141 39.0546C19.1192 39.2598 19.3974 39.375 19.6875 39.375H40.6495L41.6592 43.75H6.5625C6.27242 43.75 5.99422 43.8652 5.7891 44.0704C5.58398 44.2755 5.46875 44.5537 5.46875 44.8438V49.2188C5.46875 49.5088 5.58398 49.787 5.7891 49.9921C5.99422 50.1973 6.27242 50.3125 6.5625 50.3125H39.3094C39.36 50.6827 39.4396 51.0484 39.5473 51.4062H5.19531C4.39787 51.4053 3.63335 51.0882 3.06947 50.5243C2.50559 49.9604 2.1884 49.1959 2.1875 48.3984V30.3516Z"
-                  fill="white"
-                />
-                <path
-                  d="M9.84375 40.4688C10.9254 40.4688 11.9827 40.148 12.882 39.5471C13.7814 38.9462 14.4823 38.0921 14.8962 37.0928C15.3101 36.0935 15.4184 34.9939 15.2074 33.9331C14.9964 32.8723 14.4756 31.8978 13.7107 31.133C12.9459 30.3682 11.9715 29.8473 10.9107 29.6363C9.84982 29.4253 8.75023 29.5336 7.75095 29.9475C6.75167 30.3615 5.89756 31.0624 5.29665 31.9617C4.69574 32.8611 4.375 33.9184 4.375 35C4.37666 36.4499 4.95337 37.8399 5.9786 38.8652C7.00383 39.8904 8.39386 40.4671 9.84375 40.4688ZM9.84375 31.7188C10.4927 31.7188 11.1271 31.9112 11.6667 32.2717C12.2063 32.6323 12.6269 33.1448 12.8752 33.7443C13.1236 34.3439 13.1886 35.0036 13.062 35.6401C12.9353 36.2766 12.6228 36.8613 12.1639 37.3202C11.7051 37.7791 11.1204 38.0916 10.4839 38.2182C9.84739 38.3448 9.18764 38.2798 8.58807 38.0315C7.9885 37.7831 7.47604 37.3626 7.11549 36.823C6.75494 36.2834 6.5625 35.649 6.5625 35C6.56348 34.1301 6.90949 33.296 7.52464 32.6809C8.13978 32.0657 8.97381 31.7197 9.84375 31.7188Z"
-                  fill="white"
-                />
-              </g>
-            </svg>
-          </div>
-        </div>
-      </section> */}
       <section className="hero">
         <div className="overlay">
           <p className="welcome-text">Welcome To Best Cabs</p>
-          <h1>
-            Book Reliable & Affordable Cabs in 200+ Cities Across India CTA
-          </h1>
-          <button className="hero-btn">Book Now</button>
+          <h1>Book Reliable & Affordable Cabs in 200+ Cities</h1>
+
+          <Link href="#book-your-car">
+            <button className="hero-btn">Book Now</button>
+          </Link>
 
           <div className="red-car">{/* your SVG */}</div>
         </div>
@@ -798,20 +744,18 @@ export default function Home() {
             <span className="about__dot" />
           </div>
         </div>
-
+        <h2 className="about__title">
+          Master The Essentials For Expanding
+          <span className="red-black"> Ideas</span>
+        </h2>
         <div className="about__grid">
           <div className="about__left">
-            <h2 className="about__title">
-              Master The Essentials
-              <br />
-              For Expanding Ideas
-            </h2>
-
             <div className="about__imagewrap">
               <Image
                 src="/ab3.png"
                 alt="car-image"
-                fill
+                width={0}
+                height={0}
                 priority
                 sizes="(min-width:1200px) 560px, (min-width:900px) 48vw, 100vw"
                 className="about__image"
@@ -845,16 +789,18 @@ export default function Home() {
 
             <hr className="about__divider" />
 
-            <a href="/about" className="about__cta">
-              <span>Read More</span>
-            </a>
+            <span className="about__cta-div">
+              <a href="/about" className="about__cta">
+                <span>Read More</span>
+              </a>
+            </span>
           </div>
         </div>
       </section>
 
       <section className="bookcar-section" id="book-your-car">
         <h2 className="bookcar-title">
-          Book Your <span>Car</span>
+          Book Your <span className="red-black">Car</span>
         </h2>
 
         <form className="bookcar-form">
@@ -1113,7 +1059,9 @@ export default function Home() {
 
       <section className="trust">
         <div className="wrap">
-          <h2 className="wrap-title">10 Years of Trust</h2>
+          <h2 className="wrap-title">
+            10 Years of <span className="red-black"> Trust</span>
+          </h2>
           <p className="wrap-subtitle">
             A decade of excellence in transportation services. We have built our
             reputation through consistent quality, reliability, and customer
@@ -1153,7 +1101,9 @@ export default function Home() {
         <div className="teamShowcase-container">
           <div className="teamShowcase-content">
             <div className="teamShowcase-text" id="meet-title">
-              <h2 className="teamShowcase-title">The People Behind CozyCabz</h2>
+              <h2 className="teamShowcase-title">
+                The People Behind <span className="red-black">CozyCabz</span>
+              </h2>
               <p className="teamShowcase-description">
                 Every smooth ride begins with a passionate team. At CozyCabz,
                 our strength lies in the people who work tirelessly to make
@@ -1219,7 +1169,9 @@ export default function Home() {
       <section className="city-grid">
         <div className="city-grid-df">
           <div className="cg-header">
-            <h2>Explore India on Wheels</h2>
+            <h2>
+              Explore India on <span className="red-black">Wheels</span>
+            </h2>
             <p>
               Discover the beauty of India with our premium car rental services.
               We serve major cities across the nation with reliable and
@@ -1261,7 +1213,9 @@ export default function Home() {
       <section className="why">
         <div className="why-wrap">
           <header className="why-head">
-            <h2>What Makes Us the Best Choice</h2>
+            <h2>
+              What Makes Us the <span className="red-black">Best Choice</span>
+            </h2>
             <p>
               Our commitment to excellence and customer satisfaction sets us
               apart. Here’s why thousands of customers trust us with their
@@ -1313,7 +1267,9 @@ export default function Home() {
       <section className="fleet" id="fleet">
         {/* Header */}
         <div className="fleet-header">
-          <h2>Browse Our Fleet</h2>
+          <h2>
+            Browse Our <span className="red-black">Fleet</span>
+          </h2>
           <p>
             Choose from our diverse fleet of well-maintained vehicles. From
             economy to luxury, we have the perfect car for every need and
@@ -1504,7 +1460,9 @@ export default function Home() {
       <section className="corporate-program">
         {/* Top Section */}
         <div className="program-header">
-          <h1>Corporate Program Rental</h1>
+          <h1>
+            Corporate Program <span className="red-black">Rental</span>
+          </h1>
           <p>
             Comprehensive transportation solutions designed specifically for
             businesses. From daily employee transport to executive travel and
@@ -1620,11 +1578,66 @@ export default function Home() {
                 cab service.
               </p>
             </div>
+
+            <div className="service-card">
+              <Image
+                src="manager.png"
+                width={0}
+                height={0}
+                unoptimized
+                alt=""
+              ></Image>
+              <h3>Dedicated Account Manager</h3>
+              <p>
+                Personal relationship manager to handle all your corporate
+                transportation needs.
+              </p>
+            </div>
+
+            <div className="service-card">
+              <Image
+                src="monthly-reporting.png"
+                width={0}
+                height={0}
+                unoptimized
+                alt=""
+              ></Image>
+              <h3>Monthly Reporting</h3>
+              <p>
+                Detailed monthly reports with usage analytics and cost
+                optimization suggestions.
+              </p>
+            </div>
+
+            <div className="service-card">
+              <Image
+                src="volume-discount.png"
+                width={0}
+                height={0}
+                unoptimized
+                alt=""
+              ></Image>
+              <h3>Volume Discounts</h3>
+              <p>
+                Special pricing for high-volume corporate clients with flexible
+                payment terms.
+              </p>
+            </div>
+          </div>
+
+          {/* CTA Buttons */}
+          <div className="program-cta">
+            <Link href="#book-your-car">
+              <button className="btn-primary" id="btn-two">
+                Get Corporate Quote
+              </button>
+            </Link>
+            <button className="btn-outline">Schedule Demo</button>
           </div>
         </div>
 
         {/* Bottom Features */}
-        <div className="program-features-box">
+        {/* <div className="program-features-box">
           <div className="program-features">
             <div className="feature">
               <Image
@@ -1673,16 +1686,8 @@ export default function Home() {
             </div>
           </div>
 
-          {/* CTA Buttons */}
-          <div className="program-cta">
-            <Link href="#book-your-car">
-              <button className="btn-primary" id="btn-two">
-                Get Corporate Quote
-              </button>
-            </Link>
-            <button className="btn-outline">Schedule Demo</button>
-          </div>
-        </div>
+          
+        </div> */}
       </section>
 
       {/* Stats ribbon */}
@@ -1707,7 +1712,9 @@ export default function Home() {
 
       <section className="howto">
         <div className="howtoWrap">
-          <h2 className="howtoTitle">How to Book Your Ride</h2>
+          <h2 className="howtoTitle">
+            How to Book Your <span className="red-black">Ride</span>
+          </h2>
           <p className="howtoSubtitle">
             Simple and straightforward booking process. Follow these easy steps
             to book your ride.
@@ -1787,7 +1794,9 @@ export default function Home() {
       {/* Services */}
       <section className="faq">
         <div className="faq-header">
-          <h2>Frequently Asked Questions</h2>
+          <h2>
+            Frequently Asked <span className="red-black">Questions</span>
+          </h2>
           <p>
             Answers to the most common questions about our corporate
             transportation program.

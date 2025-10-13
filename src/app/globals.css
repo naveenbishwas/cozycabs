@@ -104,7 +104,7 @@ a {
 .heroeco__eyebrow {
   font-size: 18px;
   opacity: 0.9;
-  margin: 16% 0 10px;
+  margin: 14% 0 10px;
   color: #d80117 !important;
   font-weight: bolder;
 }
@@ -113,8 +113,9 @@ a {
   font-size: 56px;
   line-height: 1.1;
   font-weight: 700;
-  margin: 0 0 26px !important;
+  /* margin: 0 0 26px !important; */
   max-width: 80%;
+  margin-top: 2%;
 }
 
 .heroeco__copy .heroeco__sub {
@@ -918,7 +919,7 @@ a {
 .attractions__grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 28px 24px;
+  gap: 28px 40px;
 }
 
 /* Card */
@@ -953,6 +954,7 @@ a {
   color: #344c63;
   line-height: 1.75;
   font-size: 16px;
+  text-align: justify;
 }
 
 /* Responsive */
