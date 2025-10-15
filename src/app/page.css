@@ -2629,6 +2629,10 @@ p {
     padding: 60px 0;
   }
 
+  .about__title {
+    margin-top: 8% !important;
+  }
+
   .phone-group select {
     width: 35%;
   }
