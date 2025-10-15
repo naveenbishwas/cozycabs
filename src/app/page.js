@@ -779,8 +779,8 @@ export default function Home() {
           </div>
         </div>
         <h2 className="about__title">
-          Master The Essentials For Expanding
-          <span className="red-black"> Ideas</span>
+          We Drive You Safely, Wherever Life Takes
+          <span className="red-black"> You</span>
         </h2>
         <div className="about__grid">
           <div className="about__left">
@@ -1119,17 +1119,17 @@ export default function Home() {
           <div className="why-grid">
             <Feature
               image="/known.png"
-              title="Well Known for Quality Services"
+              title="Trusted for Top-Quality Rides"
               text="Recognized across India for our commitment to excellence and premium service standards."
             />
             <Feature
               image="/postive.png"
-              title="Earned Positive Reviews from All Clients"
+              title="Loved by Thousands of Riders"
               text="Consistent 5-star ratings and testimonials from thousands of satisfied customers."
             />
             <Feature
               image="/ntework.png"
-              title="The Largest Network of Drivers"
+              title="India’s Biggest Driver Network"
               text="Extensive network of professional, verified drivers covering every major city in India."
             />
           </div>
@@ -1138,7 +1138,7 @@ export default function Home() {
           <div className="why-grid">
             <Feature
               image="/safe.png"
-              title="Safe & Secure"
+              title="Safety You Can Count On"
               text="Background-verified partners and insured moves for complete peace of mind."
             />
             <Feature

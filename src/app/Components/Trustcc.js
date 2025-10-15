@@ -5,22 +5,22 @@ import Image from "next/image";
 const Trustcc = () => {
   const items = [
     {
-      title: "Well Known for Quality Services",
+      title: "Trusted for Top-Quality Rides",
       desc: "Recognized across India for our commitment to excellence and premium service standards.",
       image: "/known.png",
     },
     {
-      title: "Earned Positive Reviews from All Clients",
+      title: "Loved by Thousands of Riders",
       desc: "Consistent 5-star ratings and testimonials from thousands of satisfied customers.",
       image: "/postive.png",
     },
     {
-      title: "The Largest Network of Drivers",
+      title: "India’s Biggest Driver Network",
       desc: "Extensive network of professional, verified drivers covering every major city in India.",
       image: "/ntework.png",
     },
     {
-      title: "Safe & Secure",
+      title: "Safety You Can Count On",
       desc: "Background-verified partners and insured moves for complete peace of mind.",
       image: "/safe.png",
     },

@@ -2629,6 +2629,19 @@ p {
     padding: 60px 0;
   }
 
+  .phone-group select {
+    width: 35%;
+  }
+
+  .about__imagewrap {
+    width: 100%;
+  }
+
+  .about__image {
+    width: 100%;
+    height: auto;
+  }
+
   .teamShowcase-content {
     flex-direction: column-reverse;
     gap: 40px;
