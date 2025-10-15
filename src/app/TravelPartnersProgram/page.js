@@ -211,7 +211,6 @@ const TravelPartnersProgram = () => {
       {/* Quote Section with Form */}
       <section className="quote-section section-container" id="quote-section">
         <div className="quote-info">
-          <button className="tag-btn">Become a Partner</button>
           <h2>
             Join Our <span>Travel Partners Program</span>
           </h2>
@@ -225,6 +224,7 @@ const TravelPartnersProgram = () => {
             <li>Pan-India presence with reliable support</li>
             <li>Premium vehicles & chauffeurs</li>
           </ul>
+          <button className="tag-btn">Become a Partner</button>
         </div>
 
         <div className="quote-form">

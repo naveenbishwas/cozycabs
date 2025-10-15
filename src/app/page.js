@@ -682,6 +682,40 @@ export default function Home() {
     );
   }
 
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    travellers: "",
+    date: "",
+  });
+
+  // Prevent past date
+  const today = new Date().toISOString().split("T")[0];
+
+  // Allow only letters for name
+  const handleNameChange = (e) => {
+    const value = e.target.value.replace(/[^a-zA-Z\s]/g, "");
+    setFormData({ ...formData, name: value });
+  };
+
+  // Allow only digits up to 15
+  const handlePhoneChange = (e) => {
+    const value = e.target.value.replace(/\D/g, "").slice(0, 15);
+    setFormData({ ...formData, phone: value });
+  };
+
+  // Prevent negative travellers
+  const handleTravellerChange = (e) => {
+    const val = Math.max(1, Number(e.target.value));
+    setFormData({ ...formData, travellers: val });
+  };
+
+  const handleSubmitBookCar = (e) => {
+    e.preventDefault();
+    console.log("Form Data Submitted:", formData);
+  };
+
   return (
     <>
       <Header />
@@ -803,20 +837,42 @@ export default function Home() {
           Book Your <span className="red-black">Car</span>
         </h2>
 
-        <form className="bookcar-form">
+        <form className="bookcar-form" onSubmit={handleSubmitBookCar}>
+          {/* Row 1 */}
           <div className="form-row">
-            <input type="text" placeholder="Enter Your Name" required />
-            <input type="email" placeholder="Enter Email Id" required />
+            <input
+              type="text"
+              placeholder="Enter Your Name"
+              value={formData.name}
+              onChange={handleNameChange}
+              required
+            />
+            <input
+              type="email"
+              placeholder="Enter Email Id"
+              value={formData.email}
+              onChange={(e) =>
+                setFormData({ ...formData, email: e.target.value })
+              }
+              required
+            />
             <div className="phone-group">
               <select>
                 <option>+91</option>
                 <option>+1</option>
                 <option>+44</option>
               </select>
-              <input type="tel" placeholder="Phone No" required />
+              <input
+                type="tel"
+                placeholder="Phone No"
+                value={formData.phone}
+                onChange={handlePhoneChange}
+                required
+              />
             </div>
           </div>
 
+          {/* Row 2 */}
           <div className="form-row">
             <select>
               <option>Chauffeur Driven</option>
@@ -824,21 +880,47 @@ export default function Home() {
             <select>
               <option>India</option>
             </select>
-            <input type="date" placeholder="dd-mm-yyyy" />
+            <input
+              type="date"
+              min={today}
+              value={formData.date}
+              onChange={(e) =>
+                setFormData({ ...formData, date: e.target.value })
+              }
+              required
+            />
           </div>
 
+          {/* Row 3 */}
           <div className="form-row">
             <select>
               <option>Select Service Type</option>
+              <option>Corporate Car Rental</option>
+              <option>Employee Transport Solutions</option>
+              <option>Global Car Rental</option>
+              <option>Hotel Travel Desk</option>
+              <option>Conference & Delegation</option>
+              <option>Event Transportation</option>
+              <option>Wedding Car Rental</option>
+              <option>Travel Partners Program</option>
+              <option>Chauffeured Car Rental</option>
             </select>
             <select>
               <option>Select Vehicle Type</option>
             </select>
-            <input type="text" placeholder="Enter City Name" />
+            <input type="text" placeholder="Enter City Name" required />
           </div>
 
-          <div className="form-row">
-            <input type="number" placeholder="No. of Travellers" />
+          {/* Row 4 */}
+          <div className="form-row" id="travel-input">
+            <input
+              type="number"
+              placeholder="No. of Travellers"
+              value={formData.travellers}
+              onChange={handleTravellerChange}
+              min="1"
+              required
+            />
           </div>
 
           <textarea
@@ -846,227 +928,37 @@ export default function Home() {
             rows="3"
           ></textarea>
 
+          {/* Footer */}
           <div className="form-footer">
             <div className="terms">
-              <input type="checkbox" />
+              <input type="checkbox" required />
               <p>
                 By clicking <strong>"Send Enquiry"</strong> button, you agree to
                 our <a href="#">Terms & Conditions</a> and{" "}
                 <a href="#">Privacy Policy</a>.
               </p>
             </div>
-            <div className="captcha">[reCAPTCHA Placeholder]</div>
-            <button type="submit" className="submit-btn">
-              Send Enquiry
-            </button>
+            <div className="book-form-btn">
+              <button type="submit" className="submit-btn">
+                Send Enquiry
+              </button>
+            </div>
           </div>
         </form>
       </section>
-
-      {/* Pricing */}
-      {/* <section className="pricing-wrap" aria-labelledby="pricing-title">
-        <div className="container">
-          <div className="ba__toprow">
-            <h3 className="ba__eyebrow">Pricing Plan</h3>
-            <div className="ba__rule">
-              <span className="ba__dot" />
-            </div>
-          </div>
-          <h2 id="pricing-title" className="title">
-            The Most Competitive Pricing Options
-          </h2>
-
-          <div className="cards">
-            <article className="plan-card">
-              <figure className="card-media">
-                <Image
-                  src="/f-day.jpeg"
-                  alt="car-img"
-                  width={0}
-                  height={0}
-                  unoptimized
-                />
-              </figure>
-
-              <div className="card-body">
-                <h3 className="plan-name">Full Day Booking</h3>
-                <p>
-                  Travel worry-free across the city with our 8 hrs/80 km
-                  full-day service, available 24x7 for shopping, meetings,
-                  hospital visits, or sightseeing.
-                </p>
-
-                <ul className="features">
-                  <div className="price-row">
-                    <span className="price">Features:</span>
-                  </div>
-                  <li>8 hrs / 80 km coverage</li>
-                  <li>Available 24x7</li>
-                  <li>
-                    Ideal for city tours, shopping, business & personal trips
-                  </li>
-                </ul>
-
-                <a href="#" className="btn">
-                  Choose Plan
-                </a>
-              </div>
-            </article>
-
-            <article className="plan-card">
-              <figure className="card-media">
-                <Image
-                  src="/h-day.jpeg"
-                  alt="car-img"
-                  width={0}
-                  height={0}
-                  unoptimized
-                />
-              </figure>
-
-              <div className="card-body">
-                <h3 className="plan-name">Half Day Booking</h3>
-                <p>
-                  Perfect for shorter commitments, our 4 hrs/40 km package is
-                  great for airport/railway transfers, office meetings, or
-                  interviews. Extra time/kms available at minimal charges.
-                </p>
-
-                <ul className="features">
-                  <div className="price-row">
-                    <span className="price">Features:</span>
-                  </div>
-                  <li>4 hrs / 40 km coverage</li>
-                  <li>Affordable & flexible</li>
-                  <li>Best for airport, office, hospital & local trips</li>
-                </ul>
-
-                <a href="#" className="btn">
-                  Choose Plan
-                </a>
-              </div>
-            </article>
-
-            <article className="plan-card">
-              <figure className="card-media">
-                <Image
-                  src="/out1.jpeg"
-                  alt="car-img"
-                  width={0}
-                  height={0}
-                  unoptimized
-                />
-              </figure>
-
-              <div className="card-body">
-                <h3 className="plan-name">Outstation Travels</h3>
-                <p>
-                  Customized for weekend getaways or family leisure trips
-                  outside city limits. Choose from One-way, Roundtrip, or
-                  Multi-city travel.
-                </p>
-
-                <ul className="features">
-                  <div className="price-row">
-                    <span className="price">Features:</span>
-                  </div>
-                  <li>
-                    One-way Trip: Single drop to one or multiple destinations
-                  </li>
-                  <li>Roundtrip: To & fro journey with flexible stops</li>
-                  <li>
-                    Multi-city Trip: Travel across multiple cities in one
-                    booking
-                  </li>
-                </ul>
-
-                <a href="#" className="btn">
-                  Choose Plan
-                </a>
-              </div>
-            </article>
-
-            <article className="plan-card">
-              <figure className="card-media">
-                <Image
-                  src="/c-travel.jpeg"
-                  alt="car-img"
-                  width={0}
-                  height={0}
-                  unoptimized
-                />
-              </figure>
-
-              <div className="card-body">
-                <h3 className="plan-name">Corporate Travel</h3>
-                <p>
-                  Tailored packages for corporate clients to ensure timely
-                  travel for meetings, conferences, and delegations. Cars &
-                  buses available as per group size.
-                </p>
-
-                <ul className="features">
-                  <div className="price-row">
-                    <span className="price">Features:</span>
-                  </div>
-                  <li>Fixed-time travel arrangements</li>
-                  <li>Vehicles for conferences & meetings</li>
-                  <li>Options for small or large delegations</li>
-                </ul>
-
-                <a href="#" className="btn">
-                  Choose Plan
-                </a>
-              </div>
-            </article>
-
-            <article className="plan-card">
-              <figure className="card-media">
-                <Image
-                  src="/tp-1.jpeg"
-                  alt="car-img"
-                  width={0}
-                  height={0}
-                  unoptimized
-                />
-              </figure>
-
-              <div className="card-body">
-                <h3 className="plan-name">Customized Tour Packages</h3>
-                <p>
-                  Specially designed trips by travel experts to suit your
-                  needs—be it leisure, adventure, or spirituality.
-                </p>
-
-                <ul className="features">
-                  <div className="price-row">
-                    <span className="price">Features:</span>
-                  </div>
-                  <li>Adventure tours & eco-tours</li>
-                  <li>Honeymoon & family packages</li>
-                  <li>Pilgrimage & sightseeing trips</li>
-                  <li>Fully personalized on request</li>
-                </ul>
-
-                <a href="#" className="btn">
-                  Choose Plan
-                </a>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section> */}
 
       <section className="trust">
         <div className="wrap">
           <h2 className="wrap-title">
             10 Years of <span className="red-black"> Trust</span>
           </h2>
-          <p className="wrap-subtitle">
-            A decade of excellence in transportation services. We have built our
-            reputation through consistent quality, reliability, and customer
-            satisfaction across India.
-          </p>
+          <span className="wrap-subtitle">
+            <p>
+              A decade of excellence in transportation services. We have built
+              our reputation through consistent quality, reliability, and
+              customer satisfaction across India.
+            </p>
+          </span>
 
           <div className="grid">
             <TrustFeature
@@ -1430,7 +1322,7 @@ export default function Home() {
 
             <div className="fleet-body">
               <h3>Innova Crysta</h3>
-              <p>A luxury MPV combining comfort and top-notch performance.</p>
+              <p>Luxury MPV with comfort and performance.</p>
 
               <div className="fleet-info">
                 <span>👥 Seating</span>

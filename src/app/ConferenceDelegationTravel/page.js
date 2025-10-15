@@ -248,7 +248,6 @@ const ConferenceDelegationTravel = () => {
       {/* Quote Section with Form */}
       <section className="quote-section section-container" id="quote-section">
         <div className="quote-info">
-          <button className="tag-btn">Get Started Today</button>
           <h2>
             Request a <span>Custom Quote</span>
           </h2>
@@ -262,6 +261,7 @@ const ConferenceDelegationTravel = () => {
             <li>Luxury vehicles and professional chauffeurs</li>
             <li>24/7 on-ground support</li>
           </ul>
+          <button className="tag-btn">Get Started Today</button>
         </div>
 
         <div className="quote-form">

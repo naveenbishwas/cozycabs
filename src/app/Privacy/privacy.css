@@ -1,39 +1,87 @@
-.legal-page {
-  max-width: 900px;
-  margin: 80px auto;
-  padding: 40px 24px;
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.08);
-  color: #222;
-  line-height: 1.7;
-  font-family: "Inter", sans-serif;
+/* ---- Hero Section ---- */
+.privacy-hero {
+  position: relative;
+  background: linear-gradient(120deg, #ff3b3b90, #000000c0),
+    url("/privacy-bg.jpg") center/cover no-repeat;
+  color: #fff;
+  text-align: center;
+  padding: 150px 20px 140px;
+  margin-top: 4%;
 }
-
-.legal-page h1 {
-  color: #d40000;
-  font-size: 36px;
+.privacy-hero .overlay {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.privacy-hero h1 {
+  font-size: 46px;
+  font-weight: 800;
   margin-bottom: 10px;
 }
+.privacy-hero p {
+  font-size: 18px;
+  color: #f1f1f1;
+}
 
-.legal-page h2 {
-  color: #111;
-  font-size: 22px;
-  margin-top: 24px;
+/* ---- Main Wrapper ---- */
+.privacy-wrapper {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 0 24px;
+}
+.privacy-wrapper h2 {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 800;
   margin-bottom: 8px;
 }
+.intro-text {
+  text-align: center;
+  color: #666;
+  margin-bottom: 40px;
+}
 
-.legal-page ul {
+/* ---- Content ---- */
+.privacy-content {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 40px 32px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+.privacy-content h3 {
+  font-size: 20px;
+  color: #111;
+  margin-top: 20px;
+  margin-bottom: 8px;
+}
+.privacy-content p {
+  color: #444;
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+.privacy-content ul {
   padding-left: 20px;
+  margin-bottom: 20px;
 }
-
-.legal-page li {
-  margin-bottom: 6px;
+.privacy-content li {
+  margin-bottom: 8px;
+  color: #444;
+  line-height: 1.7;
 }
-
-.legal-footer {
+.privacy-footer {
   margin-top: 30px;
-  font-weight: 600;
   border-top: 1px solid #eee;
-  padding-top: 12px;
+  padding-top: 16px;
+  font-weight: 600;
+  color: #222;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 900px) {
+  .privacy-hero {
+    padding: 80px 20px 60px;
+  }
+  .privacy-content {
+    padding: 28px 22px;
+  }
 }

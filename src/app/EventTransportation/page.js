@@ -245,7 +245,6 @@ const EventTransportation = () => {
       {/* Quote Section with Form */}
       <section className="quote-section section-container" id="quote-section">
         <div className="quote-info">
-          <button className="tag-btn">Get Started Today</button>
           <h2>
             Request a <span>Custom Quote</span>
           </h2>
@@ -259,6 +258,7 @@ const EventTransportation = () => {
             <li>Customized solutions for corporates & weddings</li>
             <li>24/7 support and on-ground assistance</li>
           </ul>
+          <button className="tag-btn">Get Started Today</button>
         </div>
 
         <div className="quote-form">

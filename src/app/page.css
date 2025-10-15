@@ -239,6 +239,15 @@ html {
   justify-content: center;
 }
 
+.wrap-subtitle p {
+  max-width: 700px;
+}
+
+.wrap-subtitle {
+  display: flex;
+  justify-content: center;
+}
+
 /* CTA button – matches your hero/header style */
 .about__cta {
   display: inline-block;
@@ -1547,7 +1556,7 @@ html {
 }
 
 .trust {
-  /* background: var(--bg); */
+  background: var(--bg);
   padding: 72px 16px;
 }
 
@@ -2088,7 +2097,7 @@ html {
   flex-direction: column;
   min-height: 170px;
   width: 350px;
-  height: 210px;
+  /* height: 210px; */
 }
 
 .why-icon img {
@@ -2724,113 +2733,120 @@ p {
   color: #444;
   text-align: justify;
 }
-
 .bookcar-section {
   background: #fff;
-  padding: 40px 30px;
-  border-radius: 10px;
-  max-width: 1350px;
-  margin: 0 auto;
-  /* box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08); */
+  padding: 60px 20px 80px;
+  text-align: center;
 }
 
 .bookcar-title {
-  font-size: 40px;
-  text-align: center;
-  margin-bottom: 30px;
-  color: #111;
+  font-size: 36px;
   font-weight: 700;
+  margin-bottom: 40px;
 }
 
 .red-black {
-  color: #d40000 !important;
+  color: #ff3b3b;
 }
 
 .bookcar-form {
+  max-width: 1250px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 20px;
 }
 
+/* Grid structure */
 .form-row {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 16px;
-}
-
-.bookcar-form input,
-.bookcar-form select,
-.bookcar-form textarea {
-  width: 100%;
-  padding: 12px 14px;
-  font-size: 15px;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  background-color: #fff;
-  outline: none;
-  color: #333;
-  transition: border-color 0.3s ease;
-}
-
-.bookcar-form input:focus,
-.bookcar-form select:focus,
-.bookcar-form textarea:focus {
-  border-color: #d40000;
-}
-
-input[type="checkbox"] {
-  width: unset !important;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }
 
 .phone-group {
   display: flex;
-  gap: 6px;
+  gap: 10px;
+}
+.phone-group select {
+  width: 25%;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+.phone-group input {
+  width: 75%;
+}
+
+/* Inputs & Textareas */
+.bookcar-form input,
+.bookcar-form select,
+.bookcar-form textarea {
+  padding: 15px 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  width: 100%;
+  outline: none;
+  transition: all 0.3s ease;
+  background-color: #fff;
+  color: #636363;
 }
 
 .phone-group select {
   width: 25%;
 }
 
-.phone-group input {
-  width: 75%;
+#travel-input {
+  display: block;
 }
 
-.bookcar-form textarea {
+.bookcar-form input:focus,
+.bookcar-form select:focus,
+.bookcar-form textarea:focus {
+  border-color: #ff3b3b;
+  box-shadow: 0 0 6px rgba(255, 59, 59, 0.2);
+}
+
+/* Single field row (travellers) */
+.form-row:last-of-type {
+  grid-template-columns: 1fr;
+}
+
+textarea {
   resize: none;
+  min-height: 100px;
 }
 
+/* Footer section */
 .form-footer {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
   justify-content: space-between;
   gap: 20px;
+  text-align: left;
   margin-top: 10px;
 }
-
 .terms {
   display: flex;
-  align-items: center;
+  justify-content: space-between;
   gap: 8px;
   font-size: 14px;
   color: #333;
-  max-width: 420px;
+}
+
+.terms input[type="checkbox"] {
+  width: unset !important;
 }
 
 .terms a {
-  color: #d40000;
-  font-weight: 600;
+  color: #ff3b3b;
   text-decoration: none;
+  font-weight: 600;
+}
+.terms a:hover {
+  text-decoration: underline;
 }
 
-.captcha {
-  color: #888;
-  font-size: 14px;
-  border: 1px dashed #ccc;
-  padding: 8px 14px;
-  border-radius: 6px;
-}
-
+/* Button */
 .submit-btn {
   background: linear-gradient(90deg, #d40000, #a60000);
   color: #fff;
@@ -2842,7 +2858,16 @@ input[type="checkbox"] {
   cursor: pointer;
   transition: all 0.3s ease;
 }
-
 .submit-btn:hover {
-  background: linear-gradient(90deg, #b00000, #8b0000);
+  background: #e03434;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 992px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  .submit-btn {
+    align-self: center;
+  }
 }

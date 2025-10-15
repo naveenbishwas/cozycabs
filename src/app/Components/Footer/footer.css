@@ -345,3 +345,81 @@
     gap: 16px;
   }
 }
+
+/* Limit to two visible columns */
+.city-lists {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+  transition: all 0.4s ease;
+}
+
+.city-column {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 8px;
+  flex: 1;
+  min-width: 180px;
+}
+
+.city-more {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px 95px;
+  margin-top: 20px;
+}
+
+.city-column li a,
+.city-more li a {
+  color: #cbd1d8;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.city-column li a:hover,
+.city-more li a:hover {
+  color: #fff;
+}
+
+.show-more-btn {
+  margin-top: 20px;
+  background: transparent;
+  border: 1px solid #333;
+  color: #e2e2e2;
+  font-weight: bold;
+  font-size: 13px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  float: right;
+  margin-right: 80px;
+}
+
+.city-more li {
+  list-style: none;
+}
+
+.show-more-btn:hover {
+  background: #ff3b3b;
+  color: #fff;
+  border-color: #ff3b3b;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .city-lists {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .city-more {
+    grid-template-columns: 1fr;
+  }
+  .show-more-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
