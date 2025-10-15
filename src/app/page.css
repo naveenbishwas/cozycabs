@@ -2217,6 +2217,10 @@ p {
   transition: all 0.2s ease;
 }
 
+.btn-outline {
+  display: none;
+}
+
 .btn-primary {
   background: #e30000;
   color: #fff;

@@ -2081,3 +2081,9 @@ section.innova-why {
     height: auto;
   }
 }
+
+.tag-btn {
+  display: block;
+  margin: 0 auto;
+  margin-top: 4%;
+}
