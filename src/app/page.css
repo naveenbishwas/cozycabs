@@ -187,13 +187,13 @@ html {
   aspect-ratio: 16 / 10; /* keeps shape + prevents layout shift */
   background: #111; /* pleasant skeleton bg */
   width: 600px;
-  /* height: auto; */
+  height: 500px;
 }
 .about__image {
   object-fit: cover;
   object-position: center;
   width: 100%;
-  height: 600px;
+  height: 500px;
 }
 
 /* Right column */
@@ -541,12 +541,15 @@ html {
 
 .fleet-image {
   position: relative;
+  aspect-ratio: 16 / 9; /* keeps image proportional */
+  overflow: hidden;
 }
 
 .fleet-image img {
   width: 100%;
-  height: 200px;
-  object-fit: cover;
+  height: 100%;
+  object-fit: cover; /* ensures it fills the space nicely */
+  display: block;
 }
 
 .rating {

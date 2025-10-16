@@ -435,7 +435,7 @@ export default function Home() {
       desc: "Safe, clean, and comfortable travel across Hyderabad—available round the clock.",
       cta: "Book in Hyderabad",
       href: "/Inhyderabad",
-      img: "HYDERABAD.png",
+      img: "hyderabad21.jpeg",
       alt: "Hyderabad",
     },
   ];
@@ -786,7 +786,7 @@ export default function Home() {
           <div className="about__left">
             <div className="about__imagewrap">
               <Image
-                src="/ab3.png"
+                src="/about123.jpeg"
                 alt="car-image"
                 width={0}
                 height={0}
@@ -1278,7 +1278,7 @@ export default function Home() {
           <div className="fleet-card">
             <div className="fleet-image">
               <Image
-                src="/tmp.jpg"
+                src="/bus22.jpeg"
                 alt="car-images"
                 width={0}
                 height={0}
