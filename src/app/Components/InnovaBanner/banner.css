@@ -25,6 +25,7 @@
   font-size: 13px;
   margin-bottom: 15px;
   font-weight: 600;
+  border-radius: 6px;
 }
 
 .innova-hero-title {
@@ -49,6 +50,11 @@
   gap: 12px;
   margin-bottom: 30px;
   flex-wrap: wrap;
+}
+
+.innova-feature-tags img {
+  filter: invert(14%) sepia(93%) saturate(6600%) hue-rotate(351deg)
+    brightness(85%) contrast(98%);
 }
 
 .innova-feature-tag {

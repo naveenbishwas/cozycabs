@@ -679,6 +679,7 @@ html {
 
 .number-stats {
   padding: 2%;
+  background-color: #000;
 }
 
 /* Stats row (keeps 5 in a row, space-balanced, responsive) */
@@ -693,6 +694,7 @@ html {
 .about__stats .stat {
   text-align: center; /* matches reference visual */
   padding: 8px 6px;
+  color: #fff !important;
 }
 
 .stat__num {

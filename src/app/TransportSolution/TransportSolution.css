@@ -678,11 +678,12 @@ html {
   align-items: start;
   grid-gap: 24px;
   gap: 24px;
-  margin: 40px 0 0;
+  margin-top: 0 !important;
 }
 
 .number-stats {
   padding: 2%;
+  background-color: #000;
 }
 
 /* Stats row (keeps 5 in a row, space-balanced, responsive) */
@@ -702,7 +703,7 @@ html {
 .stat__num {
   font-size: 40px;
   font-weight: 800;
-  color: #1b1b1b;
+  color: #ffffff;
   letter-spacing: 0.5px;
   line-height: 1.1;
   margin-bottom: 6px;
@@ -711,7 +712,7 @@ html {
   margin: 0;
   font-size: 13px;
   letter-spacing: 0.6px;
-  color: var(--brandColor);
+  color: #fff;
   font-weight: 700;
   text-transform: uppercase;
 }

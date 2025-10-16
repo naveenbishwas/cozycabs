@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./booking.css";
 
 const InnovaBookingForm = () => {
+  const [minDate, setMinDate] = useState("");
+
+  useEffect(() => {
+    const today = new Date();
+    const formatedDate = today.toISOString().split("T")[0];
+    setMinDate(formatedDate);
+  });
   return (
     <div>
       <section id="booking" className="innova-booking-section">
@@ -25,7 +32,7 @@ const InnovaBookingForm = () => {
           <div className="innova-form-grid">
             <div>
               <label>Pickup Date</label>
-              <input type="date" />
+              <input type="date" min={minDate} />
             </div>
             <div>
               <label>Pickup Time</label>
@@ -35,7 +42,7 @@ const InnovaBookingForm = () => {
           <div className="innova-form-grid">
             <div>
               <label>Return Date</label>
-              <input type="date" />
+              <input type="date" min={minDate} />
             </div>
             <div>
               <label>Return Time</label>

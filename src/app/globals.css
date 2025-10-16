@@ -1204,13 +1204,6 @@ a {
   cursor: pointer;
 }
 
-/* Hover highlight effect */
-.why-card:hover {
-  border-color: #ff5a5a;
-  box-shadow: 0 8px 20px rgba(255, 90, 90, 0.2);
-  transform: translateY(-6px);
-}
-
 /* Icon in center */
 .why-icon {
   display: flex;
@@ -1223,12 +1216,6 @@ a {
   height: 64px;
   margin: 0 auto 14px;
   transition: all 0.3s ease;
-}
-
-/* Icon grows slightly on hover */
-.why-card:hover .why-icon {
-  transform: scale(1.1);
-  background: radial-gradient(100% 100% at 30% 20%, #fff3f3 0%, #fff 100%);
 }
 
 /* SVG/Icon color */

@@ -1035,9 +1035,9 @@ export default function Home() {
                 </ul>
               </div>
 
-              <div className="teamShowcase-btn">
+              {/* <div className="teamShowcase-btn">
                 <button>Know More</button>
-              </div>
+              </div> */}
             </div>
 
             <div className="teamShowcase-image">
@@ -1273,7 +1273,9 @@ export default function Home() {
               <button className="btn-primary">View Economy Cars</button>
             </div>
           </div>
+        </div>
 
+        <div className="fleet-grid" id="flex">
           {/* Buses & Coaches */}
           <div className="fleet-card">
             <div className="fleet-image">

@@ -315,7 +315,7 @@
 }
 
 .hamburger span {
-  width: 26px;
+  width: 20px;
   height: 3px;
   background: #fff;
   border-radius: 2px;
@@ -379,7 +379,24 @@
   }
 
   .header-cta {
-    display: none; /* hide CTA on mobile (optional) */
+    display: unset;
+  }
+
+  .contact-btn span {
+    font-size: 12px;
+  }
+
+  .contact-btn span svg {
+    width: 13px;
+    height: 13px;
+  }
+
+  .header {
+    padding: 10px;
+  }
+
+  .contact-btn {
+    padding: 4px 5px;
   }
 
   .logo {

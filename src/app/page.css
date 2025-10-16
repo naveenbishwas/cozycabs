@@ -140,7 +140,7 @@ html {
 }
 .about__eyebrow {
   color: var(--brandColor);
-  font-size: 22px;
+  font-size: 34px;
   margin: 0;
 }
 .about__rule {
@@ -171,7 +171,7 @@ html {
 
 /* Left column */
 .about__title {
-  font-size: 40px;
+  font-size: 32px;
   line-height: 1.22;
   margin: 0 0 18px;
   color: #151515;
@@ -294,7 +294,6 @@ html {
   grid-template-columns: repeat(5, minmax(140px, 1fr));
   align-items: start;
   gap: 24px;
-  background: linear-gradient(180deg, #000000 0%, #1a1a1a 100%);
   border-radius: 8px;
 }
 
@@ -526,6 +525,7 @@ html {
   gap: 25px;
   max-width: 1200px;
   margin: 0 auto;
+  justify-items: center;
 }
 
 /* Card */
@@ -539,6 +539,13 @@ html {
   text-align: left;
 }
 
+/* Hover highlight effect */
+.fleet-card:hover {
+  border-color: #ff5a5a;
+  box-shadow: 0 8px 20px rgba(255, 90, 90, 0.2);
+  transform: translateY(-6px);
+}
+
 .fleet-image {
   position: relative;
   aspect-ratio: 16 / 9; /* keeps image proportional */
@@ -550,6 +557,12 @@ html {
   height: 100%;
   object-fit: cover; /* ensures it fills the space nicely */
   display: block;
+}
+
+.fleet-card:nth-child(4),
+.fleet-card:nth-child(5) {
+  grid-column: span 1;
+  justify-self: center;
 }
 
 .rating {
@@ -617,6 +630,17 @@ html {
   position: absolute;
   left: 0;
   color: red;
+}
+
+#flex {
+  display: flex;
+  justify-content: center;
+  margin-top: 2%;
+}
+
+#flex .fleet-card {
+  width: 380px;
+  height: auto;
 }
 
 #program-btn {
@@ -2642,11 +2666,20 @@ p {
 
   .about__imagewrap {
     width: 100%;
+    height: auto;
   }
 
   .about__image {
     width: 100%;
     height: auto;
+  }
+
+  .about__lead {
+    font-size: 14px;
+  }
+
+  .terms p {
+    font-size: 12px;
   }
 
   .teamShowcase-content {
@@ -2893,5 +2926,9 @@ textarea {
   }
   .submit-btn {
     align-self: center;
+    align-self: center;
+    font-size: 11px;
+    padding: 5px 15px;
+    border-radius: 10px;
   }
 }

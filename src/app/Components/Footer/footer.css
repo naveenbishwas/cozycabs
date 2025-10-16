@@ -33,6 +33,12 @@
   gap: 36px 28px;
 }
 
+.footer__brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 /* Brand block */
 .footer__brand .brand__row {
   display: flex;
@@ -130,6 +136,7 @@
   font-size: 22px;
   font-weight: 800;
   color: #fff;
+  text-align: center;
 }
 .linklist {
   list-style: none;
@@ -137,6 +144,7 @@
   margin: 0;
   display: grid;
   gap: 8px;
+  margin-top: 9%;
 }
 .linklist a {
   color: #cbd1d8;
@@ -270,13 +278,14 @@
 /* ---- City Filter Styles ---- */
 .footer__header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   margin-bottom: 14px;
 }
 
 .footer__toggle {
   display: flex;
+  justify-content: center;
   gap: 8px;
 }
 

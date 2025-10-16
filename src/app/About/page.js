@@ -105,10 +105,7 @@ const About = () => {
 
           {/* 🚘 Side Image */}
           <div className="info-image">
-            <img
-              src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=900&q=60"
-              alt="Cozy Cabz Car"
-            />
+            <img src="./innova-7.jpg" alt="Cozy Cabz Car" />
             {/* 🚖 CTA Section */}
             <div className="cta-section">
               <h3>Ready to ride with us?</h3>

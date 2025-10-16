@@ -2,10 +2,11 @@ import React from "react";
 import Image from "next/image";
 import "./banner.css";
 
-const InnovaBanner = ({ city = "Delhi" }) => {  // 👈 added city prop with default
+const InnovaBanner = ({ city = "Delhi" }) => {
+  // 👈 added city prop with default
   const features = [
     { src: "/seater.png", text: "7+1 Seater" },
-    { src: "/fully-insured.png", text: "Fully Insured" },
+    { src: "/Fully-insured.png", text: "Fully Insured" },
     { src: "/24.png", text: "24/7 Available" },
   ];
 
@@ -14,11 +15,12 @@ const InnovaBanner = ({ city = "Delhi" }) => {  // 👈 added city prop with def
       <div className="innova-hero-content">
         <div className="innova-hero-badge">Premium MPV Rental</div>
         <h1 className="innova-hero-title">
-          Innova <span>Car Rental</span> in {city}
+          InnovaCar Rental in <span>{city}</span>
         </h1>
         <p className="innova-hero-subtitle">
           Experience premium comfort and reliability with India's most trusted
-          MPV. Perfect for family trips, corporate travel, and special occasions.
+          MPV. Perfect for family trips, corporate travel, and special
+          occasions.
         </p>
 
         <div className="innova-feature-tags">
