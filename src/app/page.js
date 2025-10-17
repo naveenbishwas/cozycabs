@@ -374,7 +374,7 @@ export default function Home() {
       name: "Bangalore",
       status: "Car Rental Available",
       desc: "Explore hassle-free rides with 24/7 car rental—perfect for daily commutes or weekend getaways.",
-      cta: "Book in Banglore",
+      cta: "Book in Bangalore",
       href: "/Inbanglore",
       img: "./banglore.jpg",
       alt: "India Gate, Delhi",

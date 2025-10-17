@@ -2089,6 +2089,10 @@ section.innova-why {
   margin-top: 0 !important;
 }
 
+.ride-content p {
+  text-align: justify;
+}
+
 @media screen and (min-width: 768px) and (max-width: 1200px) {
   img.innova-backgound {
     width: 100%;
