@@ -376,7 +376,7 @@ export default function Home() {
       desc: "Explore hassle-free rides with 24/7 car rental—perfect for daily commutes or weekend getaways.",
       cta: "Book in Bangalore",
       href: "/Inbanglore",
-      img: "./banglore.jpg",
+      img: "./bangalore123.jpeg",
       alt: "India Gate, Delhi",
     },
     {
@@ -422,7 +422,7 @@ export default function Home() {
       desc: "Safe, clean, and comfortable travel across Hyderabad—available round the clock.",
       cta: "Book in Hyderabad",
       href: "/Inhyderabad",
-      img: "hyderabad21.jpeg",
+      img: "hyderabad221.jpeg",
       alt: "Hyderabad",
     },
   ];
@@ -1195,7 +1195,7 @@ export default function Home() {
           <div className="fleet-card">
             <div className="fleet-image">
               <Image
-                src="/mc.avif"
+                src="/l123.jpeg"
                 alt="car-images"
                 width={0}
                 height={0}
