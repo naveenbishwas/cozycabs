@@ -2074,3 +2074,34 @@ section.innova-why {
   margin: 0 auto;
   margin-top: 4%;
 }
+
+.number-stats {
+  padding: 2%;
+  background: #000;
+}
+
+.stat__num,
+.stat__label {
+  color: #fff !important;
+}
+
+.about__stats {
+  margin-top: 0 !important;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  img.innova-backgound {
+    width: 100%;
+    height: auto;
+  }
+
+  .heroeco {
+    width: 100%;
+    min-height: 37vh;
+    margin-top: 5%;
+  }
+
+  .heroeco__title {
+    font-size: 36px;
+  }
+}

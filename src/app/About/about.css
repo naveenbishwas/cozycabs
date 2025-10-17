@@ -171,3 +171,19 @@
   background-color: #b33737;
   transform: translateY(-2px);
 }
+
+@media screen and (max-width: 768px) {
+  .info-text h2 {
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .about-hero {
+    height: 35vh;
+  }
+
+  .info-container {
+    flex-wrap: unset !important;
+  }
+}

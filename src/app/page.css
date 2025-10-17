@@ -2932,3 +2932,40 @@ textarea {
     border-radius: 10px;
   }
 }
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .why-card {
+    width: 100% !important;
+  }
+
+  .about__grid {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about__imagewrap {
+    height: auto;
+    width: 100%;
+  }
+
+  .about__image {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: auto;
+  }
+
+  .hero {
+    height: 40vh;
+    background: url(/hm.png) center / cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-top: 6%;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+  }
+}
