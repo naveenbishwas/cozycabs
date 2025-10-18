@@ -688,7 +688,7 @@ export default function Home() {
 
   // Allow only digits up to 15
   const handlePhoneChange = (e) => {
-    const value = e.target.value.replace(/\D/g, "").slice(0, 15);
+    const value = e.target.value.replace(/\D/g, "").slice(0, 10);
     setFormData({ ...formData, phone: value });
   };
 
@@ -1349,11 +1349,7 @@ export default function Home() {
             businesses. From daily employee transport to executive travel and
             event management.
           </p>
-          <button className="btn-primary" id="program-btn">
-            WHAT DOES OUR CORPORATE PROGRAM OFFER?
-          </button>
         </div>
-
         {/* Banner */}
         <div className="program-banner-df">
           <div className="program-banner">
@@ -1364,10 +1360,19 @@ export default function Home() {
             </p>
           </div>
         </div>
-
         {/* Services Section */}
         <div className="program-services">
-          <h2>Our Corporate Services</h2>
+          <span className="program-heading">
+            <h1>
+              What Does Our Corporate Programe
+              <span className="red-black"> Offer?</span>
+            </h1>
+
+            <p>
+              Our Corporate Program offers tailored business solutions designed
+              to boost team performance and brand growth.
+            </p>
+          </span>
           <div className="services-grid">
             <div className="service-card">
               {/* <span className="icon">🕒</span> */}
@@ -1516,80 +1521,7 @@ export default function Home() {
             <button className="btn-outline">Schedule Demo</button>
           </div>
         </div>
-
-        {/* Bottom Features */}
-        {/* <div className="program-features-box">
-          <div className="program-features">
-            <div className="feature">
-              <Image
-                src="manager.png"
-                width={0}
-                height={0}
-                unoptimized
-                alt=""
-              ></Image>
-              <h3>Dedicated Account Manager</h3>
-              <p>
-                Personal relationship manager to handle all your corporate
-                transportation needs.
-              </p>
-            </div>
-
-            <div className="feature">
-              <Image
-                src="monthly-reporting.png"
-                width={0}
-                height={0}
-                unoptimized
-                alt=""
-              ></Image>
-
-              <h3>Monthly Reporting</h3>
-              <p>
-                Detailed monthly reports with usage analytics and cost
-                optimization suggestions.
-              </p>
-            </div>
-
-            <div className="feature">
-              <Image
-                src="volume-discount.png"
-                width={0}
-                height={0}
-                unoptimized
-                alt=""
-              ></Image>
-              <h3>Volume Discounts</h3>
-              <p>
-                Special pricing for high-volume corporate clients with flexible
-                payment terms.
-              </p>
-            </div>
-          </div>
-
-          
-        </div> */}
       </section>
-
-      {/* Stats ribbon */}
-      {/* <div className="why-stats" role="group" aria-label="Key stats">
-        <div className="stat">
-          <div className="stat-num">1200+</div>
-          <div className="stat-label">Vendors Covering Entire Nation</div>
-        </div>
-        <div className="stat">
-          <div className="stat-num">50,000+</div>
-          <div className="stat-label">Happy Customers</div>
-        </div>
-        <div className="stat">
-          <div className="stat-num">99.8%</div>
-          <div className="stat-label">Customer Satisfaction</div>
-        </div>
-        <div className="stat">
-          <div className="stat-num">24/7</div>
-          <div className="stat-label">Customer Support</div>
-        </div>
-      </div> */}
 
       <section className="howto">
         <div className="howtoWrap">

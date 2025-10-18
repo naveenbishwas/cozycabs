@@ -1,8 +1,13 @@
 /* 🌆 Hero Section */
 .about-hero {
   position: relative;
-  background: linear-gradient(120deg, #ff3b3b90, #838383c0),
-    url(/contact-bg.jpg) center / cover no-repeat;
+  background: linear-gradient(
+      120deg,
+      rgba(251, 73, 73, 0.9),
+      rgba(245, 214, 214, 0.965)
+    ),
+    url("/contact-bg.jpg") center / cover no-repeat;
+
   height: 65vh;
   display: flex;
   align-items: center;
