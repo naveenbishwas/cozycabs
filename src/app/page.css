@@ -2733,9 +2733,8 @@ p {
     gap: 16px;
   }
 }
-
 .prestigious-section {
-  padding: 60px 20px;
+  padding: 80px 20px;
   background: #fff;
   display: flex;
   justify-content: center;
@@ -2744,52 +2743,131 @@ p {
 .prestigious-wrap {
   display: flex;
   align-items: center;
-  gap: 40px;
-  flex-wrap: wrap;
-  max-width: 1250px;
-  flex-direction: row-reverse;
-}
-
-/* .prestigious-image {
-  flex: 1;
-  min-width: 300px;
-} */
-
-.prestigious-image .image {
-  border-radius: 12px;
-  object-fit: cover;
-  aspect-ratio: 4 / 3; /* cleaner rectangle */
-}
-
-.prestigious-wrap {
-  display: flex;
-  align-items: center;
   justify-content: space-between;
-  gap: 40px;
+  max-width: 1250px;
+  gap: 60px;
   flex-wrap: wrap;
-  flex-direction: row-reverse; /* 👈 reverses order */
 }
 
+/* ---- Left Text ---- */
 .prestigious-content {
   flex: 1;
-  min-width: 300px;
+  min-width: 320px;
 }
 
 .prestigious-content h2 {
-  font-size: 32px;
+  font-size: 36px;
+  font-weight: 600;
+  color: #111;
   margin-bottom: 20px;
+  line-height: 1.3;
 }
 
 .prestigious-content h2 span {
-  color: #d32f2f; /* highlight color */
+  color: #d32f2f;
 }
 
 .prestigious-content p {
   font-size: 18px;
-  line-height: 1.6;
-  color: #444;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 30px;
   text-align: justify;
 }
+
+.prestigious-btn {
+  background: #dc2f2f;
+  color: #fff;
+  border: none;
+  padding: 12px 28px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.prestigious-btn:hover {
+  background: #000000;
+}
+
+/* ---- Right Images ---- */
+.prestigious-image {
+  display: flex;
+  flex: 1;
+  min-width: 340px;
+  justify-content: center;
+  gap: 24px;
+}
+
+.image-box {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.image-box .image {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  aspect-ratio: 3 / 4;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+/* ---- Media Queries ---- */
+
+/* ✅ Between 768px and 1228px */
+@media (max-width: 1228px) and (min-width: 768px) {
+  .prestigious-wrap {
+    gap: 40px;
+  }
+
+  .prestigious-content h2 {
+    font-size: 30px;
+  }
+
+  .prestigious-content p {
+    font-size: 17px;
+  }
+
+  .prestigious-image {
+    gap: 20px;
+  }
+
+  .image-box .image {
+    aspect-ratio: 3 / 4;
+  }
+}
+
+/* ✅ Below 768px — stack layout */
+@media (max-width: 768px) {
+  .prestigious-wrap {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .prestigious-content h2 {
+    font-size: 26px;
+  }
+
+  .prestigious-content p {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .prestigious-image {
+    flex-direction: row;
+    gap: 16px;
+  }
+
+  .image-box .image {
+    max-width: 45%;
+  }
+
+  .prestigious-btn {
+    margin: 0 auto;
+  }
+}
+
 .bookcar-section {
   background: #fff;
   padding: 60px 20px 80px;

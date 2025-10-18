@@ -1646,18 +1646,7 @@ export default function Home() {
 
       <section className="prestigious-section section-container">
         <div className="prestigious-wrap">
-          {/* Image First */}
-          <div className="prestigious-image">
-            <Image
-              src="/pr1.jpeg"
-              alt="DRDO G20 Summit"
-              width={600}
-              height={400}
-              className="image"
-            />
-          </div>
-
-          {/* Content Second */}
+          {/* Left Content */}
           <div className="prestigious-content">
             <h2>
               Prestigious <span>Associations</span>
@@ -1668,6 +1657,29 @@ export default function Home() {
               and professional service ensured seamless travel support for
               dignitaries and officials.
             </p>
+            <button className="prestigious-btn">Read More</button>
+          </div>
+
+          {/* Right Images */}
+          <div className="prestigious-image">
+            <div className="image-box">
+              <Image
+                src="/partner1.jpeg"
+                alt="DRDO G20 Summit"
+                width={500}
+                height={600}
+                className="image"
+              />
+            </div>
+            <div className="image-box">
+              <Image
+                src="/partner2.jpeg"
+                alt="G20 Event"
+                width={500}
+                height={600}
+                className="image"
+              />
+            </div>
           </div>
         </div>
       </section>
