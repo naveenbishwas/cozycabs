@@ -4,7 +4,7 @@
   background: linear-gradient(
       120deg,
       rgba(251, 73, 73, 0.9),
-      rgba(245, 214, 214, 0.965)
+      rgb(244, 174, 174)
     ),
     url("/contact-bg.jpg") center / cover no-repeat;
 

@@ -2863,6 +2863,26 @@ p {
     text-align: center;
   }
 
+  #flex {
+    flex-direction: column;
+  }
+
+  .program-services h1 {
+    font-size: 24px;
+  }
+
+  .program-heading p {
+    max-width: 350px;
+    margin-top: 10px;
+    font-size: 14px;
+  }
+
+  span.program-heading {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+
   .prestigious-content h2 {
     font-size: 26px;
   }
