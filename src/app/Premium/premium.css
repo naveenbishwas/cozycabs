@@ -446,3 +446,167 @@ button:hover {
     min-width: 230px;
   }
 }
+
+.ride-booking-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px 5%;
+  background-color: #fff;
+  gap: 30px; /* Add space between image and form */
+}
+
+.ride-booking-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+}
+
+.image-wrapper {
+  flex: 1;
+  padding-right: 20px;
+  border-radius: 12px;
+  overflow: hidden; /* Ensure image corners are rounded */
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px; /* Round corners of the image */
+}
+
+.form-wrapper {
+  flex: 1.5;
+  background: #fff;
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.form-wrapper:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2); /* Slightly enlarge the shadow on hover */
+}
+
+.form-wrapper h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.form-wrapper p {
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.form-group textarea {
+  resize: vertical;
+  height: 100px;
+}
+
+.error {
+  color: red;
+  font-size: 0.875rem;
+}
+
+.form-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.btn-primary {
+  background-color: #e00028;
+  color: #fff;
+  border: none;
+  padding: 14px 28px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  width: 100%;
+  text-align: center;
+}
+
+.btn-primary:hover {
+  background-color: #c10021;
+}
+
+.privacy {
+  margin-top: 15px;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+.premium-info {
+  margin-top: 50px;
+  text-align: center;
+  width: 100%;
+}
+
+.premium-info h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #000;
+}
+
+.premium-info ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.premium-info ul li {
+  font-size: 1.1rem;
+  margin: 10px 0;
+  color: #555;
+}
+
+@media (max-width: 768px) {
+  .ride-booking-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ride-booking-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .image-wrapper {
+    margin-bottom: 30px;
+    width: 100%;
+  }
+
+  .form-wrapper {
+    width: 100%;
+    max-width: 450px;
+  }
+
+  .premium-info {
+    margin-top: 30px;
+  }
+}

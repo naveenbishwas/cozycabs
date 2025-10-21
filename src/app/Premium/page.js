@@ -98,8 +98,77 @@ const features = [
   },
 ];
 
+const faqs = [
+  {
+    q: "What services are included in the Corporate Program?",
+    a: "We cover everything from daily office commutes and airport transfers to outstation rentals, event transportation, and monthly packages. Each account also gets a dedicated manager and customized reporting.",
+  },
+  {
+    q: "Can we get consolidated monthly invoices?",
+    a: "Yes. We provide a single monthly invoice with complete trip details, usage summaries, and expense breakdowns to make your finance team’s job easier.",
+  },
+  {
+    q: "Do you offer volume or long-term discounts?",
+    a: "Absolutely. Companies with high booking volumes or long-term partnerships benefit from tailored pricing plans and flexible payment terms.",
+  },
+  {
+    q: "How does our team manage and track bookings?",
+    a: "Bookings can be made via web, app, or WhatsApp. You’ll also have an account manager for urgent changes, plus dashboards to track trips and expenses in real time.",
+  },
+  {
+    q: "Are vehicles and drivers reliable and certified?",
+    a: "All vehicles are regularly serviced and fully insured. Drivers go through background verification, corporate etiquette training, and follow strict safety and punctuality standards.",
+  },
+];
+
 const Premium = () => {
   const [current, setCurrent] = useState(0);
+  const [openIndex, setOpenIndex] = useState(null);
+
+  const [formData, setFormData] = useState({
+    name: "",
+    contact: "",
+    pickup: "",
+    drop: "",
+    date: "",
+    message: "",
+  });
+
+  const [errors, setErrors] = useState({});
+
+  const handleInputChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const validateForm = () => {
+    const newErrors = {};
+    if (!formData.name) newErrors.name = "Full name is required.";
+    if (!formData.contact || !/^\+91\d{10}$/.test(formData.contact)) {
+      newErrors.contact = "Valid contact number is required (+91 XXXXXXXXXX).";
+    }
+    if (!formData.pickup) newErrors.pickup = "Pickup location is required.";
+    if (!formData.drop) newErrors.drop = "Drop location is required.";
+    if (!formData.date) newErrors.date = "Please select a valid date and time.";
+    return newErrors;
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const validationErrors = validateForm();
+    if (Object.keys(validationErrors).length === 0) {
+      console.log("Form data submitted: ", formData);
+      // Handle successful form submission (e.g., API call)
+    } else {
+      setErrors(validationErrors);
+    }
+  };
+
+  const toggle = (i) => {
+    setOpenIndex((prev) => (prev === i ? null : i));
+  };
 
   // Counter animation function
   function runCounter(el, to) {
@@ -290,27 +359,20 @@ const Premium = () => {
                 {car.badge && <div className="badge">{car.badge}</div>}
               </div>
 
-              <div className="fleet-content">
-                <h3>{car.title}</h3>
-                <span className="subtitle">{car.subtitle}</span>
-                <p className="desc">{car.description}</p>
-
-                <div className="icons">
-                  <span>
-                    <FaUsers /> {car.seating}
-                  </span>
-                  <span>
-                    <FaSuitcase /> {car.luggage}
-                  </span>
-                  <span>
-                    <FaGasPump /> {car.fuel}
-                  </span>
-                </div>
-
-                <div className="bottom-row">
-                  <p className="price">{car.price}</p>
-                  <button>Book Now</button>
-                </div>
+              <div className="premium-info">
+                <h3>Why Choose Our Premium Service?</h3>
+                <ul>
+                  <li>
+                    ✔️ 24/7 availability with instant booking confirmation
+                  </li>
+                  <li>
+                    ✔️ Professional, courteous, and background-verified drivers
+                  </li>
+                  <li>
+                    ✔️ Well-maintained, luxury vehicles with premium amenities
+                  </li>
+                  <li>✔️ Transparent pricing with no hidden charges</li>
+                </ul>
               </div>
             </div>
           ))}
@@ -338,6 +400,170 @@ const Premium = () => {
         </div>
       </section>
 
+      {/* Services */}
+      <section className="faq">
+        <div className="faq-header">
+          <h2>
+            Frequently Asked <span className="red-black">Questions</span>
+          </h2>
+          <p>
+            Answers to the most common questions about our corporate
+            transportation program.
+          </p>
+        </div>
+
+        <div className="faq-list" role="list">
+          {faqs.map((item, i) => {
+            const open = openIndex === i;
+            return (
+              <div
+                className={`faq-item ${open ? "open" : ""}`}
+                key={i}
+                role="listitem"
+              >
+                <button
+                  className="faq-question"
+                  aria-expanded={open}
+                  aria-controls={`faq-panel-${i}`}
+                  id={`faq-control-${i}`}
+                  onClick={() => toggle(i)}
+                >
+                  <span className="faq-q-text">{item.q}</span>
+                  <span className="faq-icon" aria-hidden="true" />
+                </button>
+
+                <div
+                  id={`faq-panel-${i}`}
+                  role="region"
+                  aria-labelledby={`faq-control-${i}`}
+                  className="faq-answer"
+                  style={{ maxHeight: open ? "300px" : "0px" }}
+                >
+                  <p>{item.a}</p>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </section>
+
+      <section className="ride-booking-section">
+        <div className="ride-booking-content">
+          <div className="image-wrapper">
+            <img
+              src="https://images.unsplash.com/photo-1577803645773-f96470509666?auto=format&fit=crop&w=800&q=80"
+              alt="Premium Car"
+            />
+          </div>
+
+          <div className="premium-info">
+            <h3>Why Choose Our Premium Service?</h3>
+            <ul>
+              <li>✔️ 24/7 availability with instant booking confirmation</li>
+              <li>
+                ✔️ Professional, courteous, and background-verified drivers
+              </li>
+              <li>
+                ✔️ Well-maintained, luxury vehicles with premium amenities
+              </li>
+              <li>✔️ Transparent pricing with no hidden charges</li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="form-wrapper">
+          <h2>Book Your Premium Ride</h2>
+          <p>We'll get back to you within 10 minutes</p>
+
+          <form onSubmit={handleSubmit}>
+            <div className="form-group">
+              <label htmlFor="name">Full Name *</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                value={formData.name}
+                placeholder="Enter your name"
+                onChange={handleInputChange}
+              />
+              {errors.name && <p className="error">{errors.name}</p>}
+            </div>
+
+            <div className="form-group">
+              <label htmlFor="contact">Contact Number *</label>
+              <input
+                type="text"
+                id="contact"
+                name="contact"
+                value={formData.contact}
+                placeholder="+91 XXXXX XXXXX"
+                onChange={handleInputChange}
+              />
+              {errors.contact && <p className="error">{errors.contact}</p>}
+            </div>
+
+            <div className="form-group">
+              <label htmlFor="pickup">Pickup Location *</label>
+              <input
+                type="text"
+                id="pickup"
+                name="pickup"
+                value={formData.pickup}
+                placeholder="Enter pickup address"
+                onChange={handleInputChange}
+              />
+              {errors.pickup && <p className="error">{errors.pickup}</p>}
+            </div>
+
+            <div className="form-group">
+              <label htmlFor="drop">Drop Location *</label>
+              <input
+                type="text"
+                id="drop"
+                name="drop"
+                value={formData.drop}
+                placeholder="Enter drop address"
+                onChange={handleInputChange}
+              />
+              {errors.drop && <p className="error">{errors.drop}</p>}
+            </div>
+
+            <div className="form-group">
+              <label htmlFor="date">Date & Time *</label>
+              <input
+                type="datetime-local"
+                id="date"
+                name="date"
+                value={formData.date}
+                onChange={handleInputChange}
+              />
+              {errors.date && <p className="error">{errors.date}</p>}
+            </div>
+
+            <div className="form-group">
+              <label htmlFor="message">Additional Message (Optional)</label>
+              <textarea
+                id="message"
+                name="message"
+                value={formData.message}
+                placeholder="Any special requirements or notes..."
+                onChange={handleInputChange}
+              />
+            </div>
+
+            <div className="form-footer">
+              <button type="submit" className="btn-primary">
+                Book Now
+              </button>
+              <p className="privacy">
+                We respect your privacy and never share your data. Your
+                information is secure and will only be used to process your
+                booking.
+              </p>
+            </div>
+          </form>
+        </div>
+      </section>
       <SiteFooter />
     </>
   );
