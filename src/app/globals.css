@@ -1452,6 +1452,7 @@ a {
 
 .bubble {
   background: white;
+  color: #000;
   padding: 8px 10px;
   border-radius: 18px;
   font-size: 13px;
@@ -1978,6 +1979,10 @@ section.innova-why {
   object-fit: contain;
   filter: invert(29%) sepia(97%) saturate(500%) hue-rotate(342deg)
     brightness(106%) contrast(102%);
+}
+
+.red-black {
+  color: #ff3b3b;
 }
 
 /* ===== Responsive ===== */

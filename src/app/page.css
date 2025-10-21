@@ -283,6 +283,7 @@ html {
   color: var(--brandColor);
   transform: translateY(-3px);
 }
+
 .number-stats {
   padding: 2%;
   background: linear-gradient(180deg, #000000 0%, #1a1a1a 100%);
