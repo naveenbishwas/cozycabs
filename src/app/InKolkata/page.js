@@ -9,7 +9,7 @@ import Trustcc from "../Components/Trustcc";
 import Howto from "../Components/Howto";
 import Howrent from "../Components/Howrent";
 
-const InKolkata= () => {
+const InKolkata = () => {
   const [openIndex, setOpenIndex] = useState(null);
 
   const toggle = (i) => {
@@ -123,7 +123,7 @@ const InKolkata= () => {
     },
     {
       title: "Indian Museum",
-      img: "/g4.webp",
+      img: "/indian-museum.jpeg",
       alt: "Indian Museum",
       paragraphs: [
         "Founded in 1814, the Indian Museum is the oldest and largest museum in India. Its vast collection includes rare antiques, fossils, Mughal paintings, textiles, and even an Egyptian mummy. For history and culture enthusiasts, it provides an unmatched journey into India’s past and global heritage.",
@@ -131,7 +131,7 @@ const InKolkata= () => {
     },
     {
       title: "Science City",
-      img: "/inkolkata/Science.png",
+      img: "./science-city.jpeg",
       alt: "Science City",
       paragraphs: [
         "Science City is one of Asia’s largest science centers, blending education with entertainment. With interactive exhibits, 3D shows, and a space theater, it appeals to students, families, and curious minds. It’s the perfect place to enjoy hands-on learning while spending a fun-filled day.",
@@ -392,9 +392,9 @@ const InKolkata= () => {
         </div>
       </section>
 
-<Trustcc />
-     <Howto/>
-    <Howrent />
+      <Trustcc />
+      <Howto />
+      <Howrent />
       <section className="attractions" aria-labelledby="attractions-title">
         <div className="attractions__container">
           <header className="attractions__head">

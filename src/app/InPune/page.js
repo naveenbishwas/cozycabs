@@ -72,7 +72,7 @@ const InPune = () => {
   const spots = [
     {
       title: "Shaniwar Wada",
-      img: "/g1.webp",
+      img: "/inpune/Shaniwar.png",
       alt: "Shaniwar Wada fort",
       paragraphs: [
         "The grand fort built by the Peshwas, Shaniwar Wada is Pune’s most iconic historical site. Known for its Maratha legacy, it features massive gates, intricate architecture, and tales of royal life. Evening light shows recreate its glorious past, making it a must-see for history enthusiasts.",
@@ -80,7 +80,7 @@ const InPune = () => {
     },
     {
       title: "Aga Khan Palace",
-      img: "/g2.webp",
+      img: "/aga-khan.jpeg",
       alt: "Aga Khan Palace",
       paragraphs: [
         "A national monument of India’s freedom struggle, the Aga Khan Palace once served as a prison for Mahatma Gandhi and his associates. Surrounded by sprawling gardens, it is both a memorial and a place of peace. Visitors can explore exhibits, photographs, and Gandhi’s personal belongings.",
@@ -88,7 +88,7 @@ const InPune = () => {
     },
     {
       title: "Sinhagad Fort",
-      img: "/g3.webp",
+      img: "/inpune/Sinhagad.png",
       alt: "Sinhagad Fort views",
       paragraphs: [
         "Situated on the Sahyadri hills, Sinhagad Fort is a popular trekking spot offering panoramic views of valleys and mountains. The fort carries rich historical significance, with tales of Maratha bravery. Visitors also enjoy local food stalls at the top, making it a blend of adventure and culture.",
@@ -96,7 +96,7 @@ const InPune = () => {
     },
     {
       title: "Osho Ashram, Koregaon Park",
-      img: "/g4.webp",
+      img: "/inpune/Osho-ashram.jpeg",
       alt: "Osho Ashram greens",
       paragraphs: [
         "Known worldwide, Osho Ashram is a serene meditation center attracting thousands of visitors. Set amidst lush greenery, it offers yoga, wellness programs, and tranquil spaces for self-discovery. The peaceful environment makes it a unique attraction for those seeking relaxation and spiritual growth.",
@@ -104,7 +104,7 @@ const InPune = () => {
     },
     {
       title: "Pataleshwar Cave Temple",
-      img: "/g1.webp",
+      img: "/inpune/Pataleshwar-cave.jpeg",
       alt: "Pataleshwar Cave Temple",
       paragraphs: [
         "Carved from a single rock in the 8th century, this temple is dedicated to Lord Shiva. Its unique cave architecture, stone pillars, and sanctum reflect ancient craftsmanship. Located in the heart of Pune, it’s a quiet retreat for devotees and those interested in historical monuments.",
@@ -112,7 +112,7 @@ const InPune = () => {
     },
     {
       title: "Raja Dinkar Kelkar Museum",
-      img: "/g2.webp",
+      img: "/inpune/Raja-Dinkar-Kelkar-Museum.jpeg",
       alt: "Kelkar Museum exhibits",
       paragraphs: [
         "This museum houses an impressive collection of artifacts, sculptures, musical instruments, and everyday objects from India’s past. Each display tells a story of India’s rich cultural traditions. It is a fascinating place for students, travelers, and anyone passionate about history and art.",
@@ -120,7 +120,7 @@ const InPune = () => {
     },
     {
       title: "Parvati Hill",
-      img: "/g3.webp",
+      img: "/inpune/Parvati-hill.jpeg",
       alt: "Parvati Hill city view",
       paragraphs: [
         "Rising above the city, Parvati Hill is a scenic spot known for its temples, museum, and breathtaking city views. The climb of over 100 steps rewards visitors with panoramic landscapes of Pune. It’s especially popular during sunrise and sunset, offering a peaceful break from city life.",
@@ -373,9 +373,9 @@ const InPune = () => {
         </div>
       </section>
 
- <Trustcc />
-     <Howto/>
-    <Howrent />
+      <Trustcc />
+      <Howto />
+      <Howrent />
       <section className="attractions" aria-labelledby="attractions-title">
         <div className="attractions__container">
           <header className="attractions__head">

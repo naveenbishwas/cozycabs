@@ -7,7 +7,6 @@ import Trustcc from "../Components/Trustcc";
 import Howto from "../Components/Howto";
 import Howrent from "../Components/Howrent";
 
-
 const InMysore = () => {
   const [openIndex, setOpenIndex] = useState(null);
 
@@ -18,8 +17,7 @@ const InMysore = () => {
   const items = [
     {
       title: "Experienced Drivers",
-      desc:
-        "Our chauffeurs know Mysore’s roads, shortcuts, and tourist circuits intimately.",
+      desc: "Our chauffeurs know Mysore’s roads, shortcuts, and tourist circuits intimately.",
       icon: (
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <path d="M12 2l7 3v6c0 5-3.5 9-7 11-3.5-2-7-6-7-11V5l7-3z" />
@@ -29,8 +27,7 @@ const InMysore = () => {
     },
     {
       title: "Wide Vehicle Choice",
-      desc:
-        "From economy sedans and SUVs to luxury cars or self drive rental cars in Mysore, we’ve got you covered.",
+      desc: "From economy sedans and SUVs to luxury cars or self drive rental cars in Mysore, we’ve got you covered.",
       icon: (
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <path d="M3 13l1.2-3.6A3 3 0 017.1 7h9.8a3 3 0 012.9 2.4L21 13v5a1 1 0 01-1 1h-1a2 2 0 11-4 0H9a2 2 0 11-4 0H4a1 1 0 01-1-1v-5z" />
@@ -40,8 +37,7 @@ const InMysore = () => {
     },
     {
       title: "Transparent Pricing",
-      desc:
-        "Get clear car rental in Mysore price details upfront—no surprises later.",
+      desc: "Get clear car rental in Mysore price details upfront—no surprises later.",
       icon: (
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <path d="M3 12l9-9 9 9-9 9-9-9z" />
@@ -51,8 +47,7 @@ const InMysore = () => {
     },
     {
       title: "Flexible Packages",
-      desc:
-        "Hourly, daily, or outstation trips are available depending on your plan.",
+      desc: "Hourly, daily, or outstation trips are available depending on your plan.",
       icon: (
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <circle cx="10.5" cy="10.5" r="7.5" />
@@ -62,8 +57,7 @@ const InMysore = () => {
     },
     {
       title: "24×7 Service",
-      desc:
-        "Early morning temple visits or night airport transfers—car hire in Mysore is always on.",
+      desc: "Early morning temple visits or night airport transfers—car hire in Mysore is always on.",
       icon: (
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <path d="M14.5 14.5l2 2 3.5-3.5" className="stroke" />
@@ -76,7 +70,7 @@ const InMysore = () => {
   const spots = [
     {
       title: "Mysore Palace",
-      img: "/g1.webp",
+      img: "/mysore-palace.jpeg",
       alt: "Mysore Palace illuminated Indo-Saracenic architecture",
       paragraphs: [
         "The heart of Mysore’s identity, Mysore Palace is an Indo-Saracenic architectural masterpiece. Known for its ornate halls, stained glass windows, and royal artifacts, it offers a glimpse into the grandeur of the Wadiyar dynasty. On Sundays and during festivals like Dussehra, the palace glows under thousands of lights, creating a magical spectacle that attracts visitors worldwide.",
@@ -84,7 +78,7 @@ const InMysore = () => {
     },
     {
       title: "Chamundi Hills & Chamundeshwari Temple",
-      img: "/g2.webp",
+      img: "./Chamundi-Hills&Chamundeshwari-Temple.jpeg",
       alt: "Chamundi Hills Chamundeshwari Temple Nandi statue",
       paragraphs: [
         "Located 13 km from the city center, Chamundi Hills is a spiritual and scenic landmark. Atop the hill stands the Chamundeshwari Temple, dedicated to Goddess Chamundi. The panoramic views of Mysore city from here are breathtaking, especially at sunset. A giant Nandi statue carved from a single granite block also sits halfway up the hill, adding to the site’s charm.",
@@ -92,7 +86,7 @@ const InMysore = () => {
     },
     {
       title: "Brindavan Gardens & KRS Dam",
-      img: "/g3.webp",
+      img: "/Brindavan-Gardens&KRS-Dam.jpeg",
       alt: "Brindavan Gardens musical fountain KRS Dam",
       paragraphs: [
         "Just outside Mysore lies the iconic Brindavan Gardens, adjoining the Krishnarajasagara (KRS) Dam. Spread over terraces, the gardens are famous for their musical fountain shows, colorful flower beds, and serene walking paths. Evenings here are especially enchanting, making it one of Mysore’s most visited attractions.",
@@ -100,7 +94,7 @@ const InMysore = () => {
     },
     {
       title: "Sri Chamarajendra Zoological Gardens (Mysore Zoo)",
-      img: "/g4.webp",
+      img: "/Sri-Chamarajendra-Zoological-Gardens.jpeg",
       alt: "Mysore Zoo wildlife and greenery",
       paragraphs: [
         "Established in 1892, Mysore Zoo is one of India’s oldest and most well-maintained zoological parks. It houses a wide variety of animals, including big cats, elephants, reptiles, and exotic birds. Families love its spacious enclosures, greenery, and educational exhibits, making it an ideal outing for kids and wildlife enthusiasts.",
@@ -108,7 +102,7 @@ const InMysore = () => {
     },
     {
       title: "Jaganmohan Palace & Art Gallery",
-      img: "/g3.webp",
+      img: "/Jaganmohan-Palace&Art-Gallery.jpeg",
       alt: "Jaganmohan Palace Art Gallery Raja Ravi Varma works",
       paragraphs: [
         "A former royal residence, Jaganmohan Palace now functions as an art gallery displaying one of the largest collections of South Indian traditional art. Visitors can admire works by renowned artists like Raja Ravi Varma, along with rare paintings, artifacts, and antiques that narrate Mysore’s artistic heritage.",
@@ -149,18 +143,33 @@ const InMysore = () => {
 
   const PhoneIcon = () => (
     <svg viewBox="0 0 24 24" width="28" height="28" fill="none">
-      <path d="M6 2h4l1 5-3 2a14 14 0 007 7l2-3 5 1v4c0 1-1 2-2 2A18 18 0 014 4C4 3 5 2 6 2z" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+      <path
+        d="M6 2h4l1 5-3 2a14 14 0 007 7l2-3 5 1v4c0 1-1 2-2 2A18 18 0 014 4C4 3 5 2 6 2z"
+        stroke="#fff"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
     </svg>
   );
   const PinIcon = () => (
     <svg viewBox="0 0 24 24" width="28" height="28" fill="none">
-      <path d="M12 22s7-7 7-12a7 7 0 10-14 0c0 5 7 12 7 12z" stroke="#fff" strokeWidth="2" />
+      <path
+        d="M12 22s7-7 7-12a7 7 0 10-14 0c0 5 7 12 7 12z"
+        stroke="#fff"
+        strokeWidth="2"
+      />
       <circle cx="12" cy="10" r="2.5" stroke="#fff" strokeWidth="2" />
     </svg>
   );
   const CarIcon = () => (
     <svg viewBox="0 0 24 24" width="28" height="28" fill="none">
-      <path d="M3 13l2-5a3 3 0 012.8-2h8.4A3 3 0 0119 8l2 5v5h-2a2 2 0 01-4 0H9a2 2 0 01-4 0H3v-5z" stroke="#fff" strokeWidth="2" strokeLinejoin="round" />
+      <path
+        d="M3 13l2-5a3 3 0 012.8-2h8.4A3 3 0 0119 8l2 5v5h-2a2 2 0 01-4 0H9a2 2 0 01-4 0H3v-5z"
+        stroke="#fff"
+        strokeWidth="2"
+        strokeLinejoin="round"
+      />
       <circle cx="8" cy="18" r="1.6" fill="#fff" />
       <circle cx="16" cy="18" r="1.6" fill="#fff" />
     </svg>
@@ -168,13 +177,24 @@ const InMysore = () => {
   const CheckIcon = () => (
     <svg viewBox="0 0 24 24" width="28" height="28" fill="none">
       <circle cx="12" cy="12" r="9" stroke="#fff" strokeWidth="2" />
-      <path d="M8 12l3 3 5-5" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+      <path
+        d="M8 12l3 3 5-5"
+        stroke="#fff"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
     </svg>
   );
   const ClockIcon = () => (
     <svg viewBox="0 0 24 24" width="28" height="28" fill="none">
       <circle cx="12" cy="12" r="9" stroke="#fff" strokeWidth="2" />
-      <path d="M12 7v5l3 2" stroke="#fff" strokeWidth="2" strokeLinecap="round" />
+      <path
+        d="M12 7v5l3 2"
+        stroke="#fff"
+        strokeWidth="2"
+        strokeLinecap="round"
+      />
     </svg>
   );
 
@@ -206,34 +226,91 @@ const InMysore = () => {
             <h4>Comfortable, Reliable & Safe</h4>
           </span>
           <p className="heroeco__sub">
-            Mysore, the city of palaces and gardens, blends royal heritage, temples, and bustling markets. From Mysore Palace to Chamundi Hills, there’s much to explore. Cozy Cabz Car Rental in Mysore with driver and self drive options ensures safe, stress-free travel.
+            Mysore, the city of palaces and gardens, blends royal heritage,
+            temples, and bustling markets. From Mysore Palace to Chamundi Hills,
+            there’s much to explore. Cozy Cabz Car Rental in Mysore with driver
+            and self drive options ensures safe, stress-free travel.
           </p>
         </div>
       </section>
 
       <section className="booking-form" aria-labelledby="booking-form-title">
         <div className="booking-form__container">
-          <h2 id="booking-form-title" className="booking-form__title">Book Your <span>Car</span></h2>
-          <form className="booking-form__form" onSubmit={(e) => e.preventDefault()}>
+          <h2 id="booking-form-title" className="booking-form__title">
+            Book Your <span>Car</span>
+          </h2>
+          <form
+            className="booking-form__form"
+            onSubmit={(e) => e.preventDefault()}
+          >
             <div className="form-row">
-              <label className="sr-only" htmlFor="bf-name">Your Name</label>
-              <input id="bf-name" name="name" type="text" placeholder="Enter Your Name" autoComplete="name" required aria-required="true" />
-              <label className="sr-only" htmlFor="bf-email">Email</label>
-              <input id="bf-email" name="email" type="email" placeholder="Enter Email Id" autoComplete="email" required aria-required="true" />
-              <div className="phone-field" role="group" aria-labelledby="bf-phone-label">
-                <span id="bf-phone-label" className="sr-only">Phone Number</span>
-                <select className="styled-select" name="dial-code" defaultValue="+91" aria-label="Country code">
+              <label className="sr-only" htmlFor="bf-name">
+                Your Name
+              </label>
+              <input
+                id="bf-name"
+                name="name"
+                type="text"
+                placeholder="Enter Your Name"
+                autoComplete="name"
+                required
+                aria-required="true"
+              />
+              <label className="sr-only" htmlFor="bf-email">
+                Email
+              </label>
+              <input
+                id="bf-email"
+                name="email"
+                type="email"
+                placeholder="Enter Email Id"
+                autoComplete="email"
+                required
+                aria-required="true"
+              />
+              <div
+                className="phone-field"
+                role="group"
+                aria-labelledby="bf-phone-label"
+              >
+                <span id="bf-phone-label" className="sr-only">
+                  Phone Number
+                </span>
+                <select
+                  className="styled-select"
+                  name="dial-code"
+                  defaultValue="+91"
+                  aria-label="Country code"
+                >
                   <option value="+91">+91</option>
                   <option value="+1">+1</option>
                   <option value="+44">+44</option>
                 </select>
-                <input id="bf-phone" name="phone" type="tel" inputMode="tel" placeholder="Phone No" autoComplete="tel" required aria-required="true" />
+                <input
+                  id="bf-phone"
+                  name="phone"
+                  type="tel"
+                  inputMode="tel"
+                  placeholder="Phone No"
+                  autoComplete="tel"
+                  required
+                  aria-required="true"
+                />
               </div>
             </div>
             <div className="form-row">
-              <label className="sr-only" htmlFor="bf-date">Pickup Date</label>
-              <input id="bf-date" name="date" type="date" placeholder="dd-mm-yyyy" />
-              <label className="sr-only" htmlFor="bf-purpose">Rental Purpose</label>
+              <label className="sr-only" htmlFor="bf-date">
+                Pickup Date
+              </label>
+              <input
+                id="bf-date"
+                name="date"
+                type="date"
+                placeholder="dd-mm-yyyy"
+              />
+              <label className="sr-only" htmlFor="bf-purpose">
+                Rental Purpose
+              </label>
               <select id="bf-purpose" name="purpose" className="styled-select">
                 <option value="">Select Rental Purpose</option>
                 <option>Business</option>
@@ -242,31 +319,55 @@ const InMysore = () => {
                 <option>Wedding/Event</option>
               </select>
             </div>
-            <label className="sr-only" htmlFor="bf-notes">Requirement Details</label>
-            <textarea id="bf-notes" name="notes" placeholder="Enter Requirement Details"></textarea>
+            <label className="sr-only" htmlFor="bf-notes">
+              Requirement Details
+            </label>
+            <textarea
+              id="bf-notes"
+              name="notes"
+              placeholder="Enter Requirement Details"
+            ></textarea>
             <div className="form-footer">
               <div className="form-agree">
-                <input id="bf-agree" type="checkbox" required aria-required="true" />
-                <label htmlFor="bf-agree">By clicking "Send Enquiry" button, you agree to our <a href="#">Terms &amp; Conditions</a> and <a href="#">Privacy Policy</a></label>
+                <input
+                  id="bf-agree"
+                  type="checkbox"
+                  required
+                  aria-required="true"
+                />
+                <label htmlFor="bf-agree">
+                  By clicking "Send Enquiry" button, you agree to our{" "}
+                  <a href="#">Terms &amp; Conditions</a> and{" "}
+                  <a href="#">Privacy Policy</a>
+                </label>
               </div>
-              <div className="captcha" aria-hidden="true">I'm not a robot (Captcha)</div>
+              <div className="captcha" aria-hidden="true">
+                I'm not a robot (Captcha)
+              </div>
               <div className="form-actions">
-                <button type="submit" className="btn-submit">Send Enquiry</button>
+                <button type="submit" className="btn-submit">
+                  Send Enquiry
+                </button>
               </div>
             </div>
           </form>
         </div>
       </section>
 
-    <Trustcc />
-     <Howto/>
-    <Howrent />
+      <Trustcc />
+      <Howto />
+      <Howrent />
 
       <section className="attractions" aria-labelledby="attractions-title">
         <div className="attractions__container">
           <header className="attractions__head">
-            <h2 id="attractions-title">Must-Visit Places in Mysore with Cozy Cabz</h2>
-            <p>Cover palaces, gardens, temples, and markets comfortably at your pace.</p>
+            <h2 id="attractions-title">
+              Must-Visit Places in Mysore with Cozy Cabz
+            </h2>
+            <p>
+              Cover palaces, gardens, temples, and markets comfortably at your
+              pace.
+            </p>
           </header>
           <div className="attractions__grid">
             {spots.map((s) => (
@@ -276,7 +377,9 @@ const InMysore = () => {
                 </figure>
                 <h3 className="spot__title">{s.title}</h3>
                 {s.paragraphs.map((t, i) => (
-                  <p className="spot__text" key={i}>{t}</p>
+                  <p className="spot__text" key={i}>
+                    {t}
+                  </p>
                 ))}
               </article>
             ))}
@@ -293,12 +396,28 @@ const InMysore = () => {
           {faqs.map((item, i) => {
             const open = openIndex === i;
             return (
-              <div className={`faq-item ${open ? "open" : ""}`} key={i} role="listitem">
-                <button className="faq-question" aria-expanded={open} aria-controls={`faq-panel-${i}`} id={`faq-control-${i}`} onClick={() => toggle(i)}>
+              <div
+                className={`faq-item ${open ? "open" : ""}`}
+                key={i}
+                role="listitem"
+              >
+                <button
+                  className="faq-question"
+                  aria-expanded={open}
+                  aria-controls={`faq-panel-${i}`}
+                  id={`faq-control-${i}`}
+                  onClick={() => toggle(i)}
+                >
                   <span className="faq-q-text">{item.q}</span>
                   <span className="faq-icon" aria-hidden="true" />
                 </button>
-                <div id={`faq-panel-${i}`} role="region" aria-labelledby={`faq-control-${i}`} className="faq-answer" style={{ maxHeight: open ? "300px" : "0px" }}>
+                <div
+                  id={`faq-panel-${i}`}
+                  role="region"
+                  aria-labelledby={`faq-control-${i}`}
+                  className="faq-answer"
+                  style={{ maxHeight: open ? "300px" : "0px" }}
+                >
                   <p>{item.a}</p>
                 </div>
               </div>
@@ -313,5 +432,3 @@ const InMysore = () => {
 };
 
 export default InMysore;
-
-

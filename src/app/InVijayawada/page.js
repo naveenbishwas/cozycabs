@@ -110,7 +110,7 @@ const InVijayawada = () => {
     },
     {
       title: "Rajiv Gandhi Park",
-      img: "/invijayawada/Rajiv.png",
+      img: "/Rajiv-Gandhi-Park.jpeg",
       alt: "Rajiv Gandhi Park gardens and fountains",
       paragraphs: [
         "Located at the entrance of the city, Rajiv Gandhi Park is a landscaped garden with musical fountains and children’s play areas—a peaceful spot for evening strolls and family outings.",

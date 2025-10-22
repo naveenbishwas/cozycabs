@@ -123,7 +123,7 @@ const InJaipur = () => {
     },
     {
       title: "Jantar Mantar",
-      img: "/injaipur/Jantar.png",
+      img: "./jantar-mantar.jpeg",
       alt: "Jantar Mantar instruments",
       paragraphs: [
         "A UNESCO World Heritage Site, Jantar Mantar is an astronomical wonder built by Maharaja Jai Singh II. It houses 19 instruments, including the world’s largest stone sundial, still accurate today. The observatory is a fascinating site for those interested in science, astronomy, and Indian innovation.",
@@ -391,9 +391,9 @@ const InJaipur = () => {
         </div>
       </section>
 
-<Trustcc />
-     <Howto/>
-    <Howrent />
+      <Trustcc />
+      <Howto />
+      <Howrent />
 
       <section className="attractions" aria-labelledby="attractions-title">
         <div className="attractions__container">
