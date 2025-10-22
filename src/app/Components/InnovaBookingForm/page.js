@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import "./booking.css";
+import CityForm from "../CityForm/page";
 
 const InnovaBookingForm = () => {
   const [minDate, setMinDate] = useState("");
@@ -13,7 +14,7 @@ const InnovaBookingForm = () => {
   });
   return (
     <div>
-      <section id="booking" className="innova-booking-section">
+      {/* <section id="booking" className="innova-booking-section">
         <div className="innova-booking-header">
           <h2>Book Your Toyota Innova</h2>
           <p>
@@ -79,7 +80,8 @@ const InnovaBookingForm = () => {
             </a>
           </div>
         </form>
-      </section>
+      </section> */}
+      <CityForm />
     </div>
   );
 };

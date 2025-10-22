@@ -6,6 +6,7 @@ import Footer from "../Components/Footer/page";
 import Trustcc from "../Components/Trustcc";
 import Howto from "../Components/Howto";
 import Howrent from "../Components/Howrent";
+import CityForm from "../Components/CityForm/page";
 
 const InVijayawada = () => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -236,134 +237,7 @@ const InVijayawada = () => {
         </div>
       </section>
 
-      <section className="booking-form" aria-labelledby="booking-form-title">
-        <div className="booking-form__container">
-          <h2 id="booking-form-title" className="booking-form__title">
-            Book Your <span>Car</span>
-          </h2>
-
-          <form
-            className="booking-form__form"
-            onSubmit={(e) => e.preventDefault()}
-          >
-            <div className="form-row">
-              <label className="sr-only" htmlFor="bf-name">
-                Your Name
-              </label>
-              <input
-                id="bf-name"
-                name="name"
-                type="text"
-                placeholder="Enter Your Name"
-                autoComplete="name"
-                required
-                aria-required="true"
-              />
-
-              <label className="sr-only" htmlFor="bf-email">
-                Email
-              </label>
-              <input
-                id="bf-email"
-                name="email"
-                type="email"
-                placeholder="Enter Email Id"
-                autoComplete="email"
-                required
-                aria-required="true"
-              />
-
-              <div
-                className="phone-field"
-                role="group"
-                aria-labelledby="bf-phone-label"
-              >
-                <span id="bf-phone-label" className="sr-only">
-                  Phone Number
-                </span>
-                <select
-                  className="styled-select"
-                  name="dial-code"
-                  defaultValue="+91"
-                  aria-label="Country code"
-                >
-                  <option value="+91">+91</option>
-                  <option value="+1">+1</option>
-                  <option value="+44">+44</option>
-                </select>
-                <input
-                  id="bf-phone"
-                  name="phone"
-                  type="tel"
-                  inputMode="tel"
-                  placeholder="Phone No"
-                  autoComplete="tel"
-                  required
-                  aria-required="true"
-                />
-              </div>
-            </div>
-
-            <div className="form-row">
-              <label className="sr-only" htmlFor="bf-date">
-                Pickup Date
-              </label>
-              <input
-                id="bf-date"
-                name="date"
-                type="date"
-                placeholder="dd-mm-yyyy"
-              />
-
-              <label className="sr-only" htmlFor="bf-purpose">
-                Rental Purpose
-              </label>
-              <select id="bf-purpose" name="purpose" className="styled-select">
-                <option value="">Select Rental Purpose</option>
-                <option>Business</option>
-                <option>Leisure</option>
-                <option>Airport Transfer</option>
-                <option>Wedding/Event</option>
-              </select>
-            </div>
-
-            <label className="sr-only" htmlFor="bf-notes">
-              Requirement Details
-            </label>
-            <textarea
-              id="bf-notes"
-              name="notes"
-              placeholder="Enter Requirement Details"
-            ></textarea>
-
-            <div className="form-footer">
-              <div className="form-agree">
-                <input
-                  id="bf-agree"
-                  type="checkbox"
-                  required
-                  aria-required="true"
-                />
-                <label htmlFor="bf-agree">
-                  By clicking "Send Enquiry" button, you agree to our{" "}
-                  <a href="#">Terms &amp; Conditions</a> and{" "}
-                  <a href="#">Privacy Policy</a>
-                </label>
-              </div>
-
-              <div className="captcha" aria-hidden="true">
-                I'm not a robot (Captcha)
-              </div>
-
-              <div className="form-actions">
-                <button type="submit" className="btn-submit">
-                  Send Enquiry
-                </button>
-              </div>
-            </div>
-          </form>
-        </div>
-      </section>
+      <CityForm />
 
       <Trustcc />
       <Howto />

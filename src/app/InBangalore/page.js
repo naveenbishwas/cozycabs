@@ -8,6 +8,7 @@ import Footer from "../Components/Footer/page";
 import Trustcc from "../Components/Trustcc";
 import Howto from "../Components/Howto";
 import Howrent from "../Components/Howrent";
+import CityForm from "../Components/CityForm/page";
 
 const Inbanglore = () => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -55,29 +56,31 @@ const Inbanglore = () => {
       img: "/inbangalore/Bangalore-Palace.png",
       alt: "Bangalore Palace exterior",
       paragraphs: [
-        "For any visitor, the iconic Bangalore Palace is one of the city’s most fascinating landmarks. Spread across sprawling grounds, the palace instantly transports you into a royal era amidst the bustling modern city. Its Tudor-style architecture, complete with turrets and battlements, makes it look like a fairytale castle right in the heart of Bangalore , Step inside, and the grandeur grows even more. The interiors are adorned with floral motifs, elegant wood carvings, and age-old paintings. Built in 1878, the palace showcases furniture and decor from Victorian, Edwardian, and Neo-Classical periods, making it a true reflection of timeless elegance. A visit here is incomplete without strolling through its lush lawns and experiencing the charm of Bangalore’s regal past "],
+        "For any visitor, the iconic Bangalore Palace is one of the city’s most fascinating landmarks. Spread across sprawling grounds, the palace instantly transports you into a royal era amidst the bustling modern city. Its Tudor-style architecture, complete with turrets and battlements, makes it look like a fairytale castle right in the heart of Bangalore , Step inside, and the grandeur grows even more. The interiors are adorned with floral motifs, elegant wood carvings, and age-old paintings. Built in 1878, the palace showcases furniture and decor from Victorian, Edwardian, and Neo-Classical periods, making it a true reflection of timeless elegance. A visit here is incomplete without strolling through its lush lawns and experiencing the charm of Bangalore’s regal past ",
+      ],
     },
     {
       title: "Vidhana Soudha",
       img: "/inbangalore/Vidhana-Soudha.png",
       alt: "Vidhana Soudha lit up at night",
       paragraphs: [
-        "When it comes to modern history, Vidhana Soudha is the pride of Karnataka. This majestic building, which houses the state legislature, is often described as an “architectural marvel” for its sheer scale and design. It stands as a symbol of democracy while reflecting the cultural richness of the state. Constructed in 1951, the building follows the Neo-Dravidian style of architecture, with influences of Indo-Saracenic design. Spread over 60 acres, it is the largest legislative building in India. While entry inside is restricted, the entire structure lights up beautifully every Sunday evening and on public holidays, turning into a breathtaking spectacle that highlights Bangalore’s grandeur and heritage."],
+        "When it comes to modern history, Vidhana Soudha is the pride of Karnataka. This majestic building, which houses the state legislature, is often described as an “architectural marvel” for its sheer scale and design. It stands as a symbol of democracy while reflecting the cultural richness of the state. Constructed in 1951, the building follows the Neo-Dravidian style of architecture, with influences of Indo-Saracenic design. Spread over 60 acres, it is the largest legislative building in India. While entry inside is restricted, the entire structure lights up beautifully every Sunday evening and on public holidays, turning into a breathtaking spectacle that highlights Bangalore’s grandeur and heritage.",
+      ],
     },
     {
       title: "Lalbagh Botanical Garden",
       img: "/inbangalore/Lalbagh-Botanical.png",
       alt: "Lalbagh Glass House and gardens",
       paragraphs: [
-        "Known as the “green heart” of the city, Lalbagh Botanical Garden spreads across 240 acres and houses one of India’s richest collections of tropical plants. Commissioned by Hyder Ali and later expanded by Tipu Sultan, the garden carries Mughal influences and has been a center of horticultural excellence for centuries.The highlight of Lalbagh is the iconic Glass House, modeled after London’s Crystal Palace, which hosts the famous annual flower shows. The garden also features the historic Lalbagh Rock, dating back 3,000 million years, along with a serene lake and diverse birdlife. Whether you’re a nature enthusiast, a photographer, or a family seeking a quiet retreat, Lalbagh is an unmissable attraction in Bangalore"],
+        "Known as the “green heart” of the city, Lalbagh Botanical Garden spreads across 240 acres and houses one of India’s richest collections of tropical plants. Commissioned by Hyder Ali and later expanded by Tipu Sultan, the garden carries Mughal influences and has been a center of horticultural excellence for centuries.The highlight of Lalbagh is the iconic Glass House, modeled after London’s Crystal Palace, which hosts the famous annual flower shows. The garden also features the historic Lalbagh Rock, dating back 3,000 million years, along with a serene lake and diverse birdlife. Whether you’re a nature enthusiast, a photographer, or a family seeking a quiet retreat, Lalbagh is an unmissable attraction in Bangalore",
+      ],
     },
     {
       title: "Cubbon Park & Seshadri Iyer Memorial Hall",
       img: "/inbangalore/Cubbon-Park.png",
       alt: "Cubbon Park greenery and red library building",
       paragraphs: [
-        "Nestled in the heart of the city, Cubbon Park is a peaceful green escape spread across 300 acres. With walking trails, shady avenues, and beautiful landscapes, it is a favorite spot for morning joggers, families, and tourists alike. The park’s charm lies in its calm ambiance, making it a perfect place to relax amid Bangalore’s busy streets. Within Cubbon Park stands the striking Seshadri Iyer Memorial Hall, a red-colored heritage building that houses the Central Library. Built in 1915, it features classic European architecture and an extensive collection of over 2.5 lakh books, including rare manuscripts and a Braille section. For book lovers and history enthusiasts, this hall adds cultural depth to the lush greenery of Cubbon Park."
-,
+        "Nestled in the heart of the city, Cubbon Park is a peaceful green escape spread across 300 acres. With walking trails, shady avenues, and beautiful landscapes, it is a favorite spot for morning joggers, families, and tourists alike. The park’s charm lies in its calm ambiance, making it a perfect place to relax amid Bangalore’s busy streets. Within Cubbon Park stands the striking Seshadri Iyer Memorial Hall, a red-colored heritage building that houses the Central Library. Built in 1915, it features classic European architecture and an extensive collection of over 2.5 lakh books, including rare manuscripts and a Braille section. For book lovers and history enthusiasts, this hall adds cultural depth to the lush greenery of Cubbon Park.",
       ],
     },
   ];
@@ -197,138 +200,11 @@ const Inbanglore = () => {
         </div>
       </section>
 
-      <section className="booking-form" aria-labelledby="booking-form-title">
-        <div className="booking-form__container">
-          <h2 id="booking-form-title" className="booking-form__title">
-            Book Your <span>Car</span>
-          </h2>
-
-          <form
-            className="booking-form__form"
-            onSubmit={(e) => e.preventDefault()}
-          >
-            <div className="form-row">
-              <label className="sr-only" htmlFor="bf-name">
-                Your Name
-              </label>
-              <input
-                id="bf-name"
-                name="name"
-                type="text"
-                placeholder="Enter Your Name"
-                autoComplete="name"
-                required
-                aria-required="true"
-              />
-
-              <label className="sr-only" htmlFor="bf-email">
-                Email
-              </label>
-              <input
-                id="bf-email"
-                name="email"
-                type="email"
-                placeholder="Enter Email Id"
-                autoComplete="email"
-                required
-                aria-required="true"
-              />
-
-              <div
-                className="phone-field"
-                role="group"
-                aria-labelledby="bf-phone-label"
-              >
-                <span id="bf-phone-label" className="sr-only">
-                  Phone Number
-                </span>
-                <select
-                  className="styled-select"
-                  name="dial-code"
-                  defaultValue="+91"
-                  aria-label="Country code"
-                >
-                  <option value="+91">+91</option>
-                  <option value="+1">+1</option>
-                  <option value="+44">+44</option>
-                </select>
-                <input
-                  id="bf-phone"
-                  name="phone"
-                  type="tel"
-                  inputMode="tel"
-                  placeholder="Phone No"
-                  autoComplete="tel"
-                  required
-                  aria-required="true"
-                />
-              </div>
-            </div>
-
-            <div className="form-row">
-              <label className="sr-only" htmlFor="bf-date">
-                Pickup Date
-              </label>
-              <input
-                id="bf-date"
-                name="date"
-                type="date"
-                placeholder="dd-mm-yyyy"
-              />
-
-              <label className="sr-only" htmlFor="bf-purpose">
-                Rental Purpose
-              </label>
-              <select id="bf-purpose" name="purpose" className="styled-select">
-                <option value="">Select Rental Purpose</option>
-                <option>Business</option>
-                <option>Leisure</option>
-                <option>Airport Transfer</option>
-                <option>Wedding/Event</option>
-              </select>
-            </div>
-
-            <label className="sr-only" htmlFor="bf-notes">
-              Requirement Details
-            </label>
-            <textarea
-              id="bf-notes"
-              name="notes"
-              placeholder="Enter Requirement Details"
-            ></textarea>
-
-            <div className="form-footer">
-              <div className="form-agree">
-                <input
-                  id="bf-agree"
-                  type="checkbox"
-                  required
-                  aria-required="true"
-                />
-                <label htmlFor="bf-agree">
-                  By clicking "Send Enquiry" button, you agree to our{" "}
-                  <a href="#">Terms &amp; Conditions</a> and{" "}
-                  <a href="#">Privacy Policy</a>
-                </label>
-              </div>
-
-              <div className="captcha" aria-hidden="true">
-                I'm not a robot (Captcha)
-              </div>
-
-              <div className="form-actions">
-                <button type="submit" className="btn-submit">
-                  Send Enquiry
-                </button>
-              </div>
-            </div>
-          </form>
-        </div>
-      </section>
+      <CityForm />
 
       <Trustcc />
-     <Howto/>
-    <Howrent />
+      <Howto />
+      <Howrent />
       <section className="attractions" aria-labelledby="attractions-title">
         <div className="attractions__container">
           <header className="attractions__head">

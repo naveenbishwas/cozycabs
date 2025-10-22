@@ -8,6 +8,7 @@ import Footer from "../Components/Footer/page";
 import Trustcc from "../Components/Trustcc";
 import Howto from "../Components/Howto";
 import Howrent from "../Components/Howrent";
+import CityForm from "../Components/CityForm/page";
 
 const InSurat = () => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -232,161 +233,34 @@ const InSurat = () => {
           <h1 className="heroeco__title">Car Rental in Surat </h1>
           <span className="small-head">
             <br />
-            <h4>Safe, Reliable & Affordable
-            </h4>
+            <h4>Safe, Reliable & Affordable</h4>
           </span>
           <p className="heroeco__sub">
-          Surat, the Diamond City of India, blends heritage, trade, markets, and seaside getaways. Exploring is exciting but traffic makes travel challenging. That’s why Cozy Cabz offers car rental in Surat with driver and self drive car rental in Surat.
+            Surat, the Diamond City of India, blends heritage, trade, markets,
+            and seaside getaways. Exploring is exciting but traffic makes travel
+            challenging. That’s why Cozy Cabz offers car rental in Surat with
+            driver and self drive car rental in Surat.
           </p>
         </div>
       </section>
 
-      <section className="booking-form" aria-labelledby="booking-form-title">
-        <div className="booking-form__container">
-          <h2 id="booking-form-title" className="booking-form__title">
-            Book Your <span>Car</span>
-          </h2>
+      <CityForm />
 
-          <form
-            className="booking-form__form"
-            onSubmit={(e) => e.preventDefault()}
-          >
-            {/* Row 1 */}
-            <div className="form-row">
-              <label className="sr-only" htmlFor="bf-name">
-                Your Name
-              </label>
-              <input
-                id="bf-name"
-                name="name"
-                type="text"
-                placeholder="Enter Your Name"
-                autoComplete="name"
-                required
-                aria-required="true"
-              />
-
-              <label className="sr-only" htmlFor="bf-email">
-                Email
-              </label>
-              <input
-                id="bf-email"
-                name="email"
-                type="email"
-                placeholder="Enter Email Id"
-                autoComplete="email"
-                required
-                aria-required="true"
-              />
-
-              <div
-                className="phone-field"
-                role="group"
-                aria-labelledby="bf-phone-label"
-              >
-                <span id="bf-phone-label" className="sr-only">
-                  Phone Number
-                </span>
-                <select
-                  className="styled-select"
-                  name="dial-code"
-                  defaultValue="+91"
-                  aria-label="Country code"
-                >
-                  <option value="+91">+91</option>
-                  <option value="+1">+1</option>
-                  <option value="+44">+44</option>
-                </select>
-                <input
-                  id="bf-phone"
-                  name="phone"
-                  type="tel"
-                  inputMode="tel"
-                  placeholder="Phone No"
-                  autoComplete="tel"
-                  required
-                  aria-required="true"
-                />
-              </div>
-            </div>
-
-            {/* Row 2 */}
-            <div className="form-row">
-              <label className="sr-only" htmlFor="bf-date">
-                Pickup Date
-              </label>
-              <input
-                id="bf-date"
-                name="date"
-                type="date"
-                placeholder="dd-mm-yyyy"
-              />
-
-              <label className="sr-only" htmlFor="bf-purpose">
-                Rental Purpose
-              </label>
-              <select id="bf-purpose" name="purpose" className="styled-select">
-                <option value="">Select Rental Purpose</option>
-                <option>Business</option>
-                <option>Leisure</option>
-                <option>Airport Transfer</option>
-                <option>Wedding/Event</option>
-              </select>
-            </div>
-
-            {/* Requirement */}
-            <label className="sr-only" htmlFor="bf-notes">
-              Requirement Details
-            </label>
-            <textarea
-              id="bf-notes"
-              name="notes"
-              placeholder="Enter Requirement Details"
-            ></textarea>
-
-            {/* Footer row */}
-            <div className="form-footer">
-              <div className="form-agree">
-                <input
-                  id="bf-agree"
-                  type="checkbox"
-                  required
-                  aria-required="true"
-                />
-                <label htmlFor="bf-agree">
-                  By clicking "Send Enquiry" button, you agree to our{" "}
-                  <a href="#">Terms &amp; Conditions</a> and{" "}
-                  <a href="#">Privacy Policy</a>
-                </label>
-              </div>
-
-              {/* Captcha placeholder (hide until you wire the real widget) */}
-              <div className="captcha" aria-hidden="true">
-                I'm not a robot (Captcha)
-              </div>
-
-              <div className="form-actions">
-                <button type="submit" className="btn-submit">
-                  Send Enquiry
-                </button>
-              </div>
-            </div>
-          </form>
-        </div>
-      </section>
-
-  <Trustcc />
-     <Howto/>
-    <Howrent />
+      <Trustcc />
+      <Howto />
+      <Howrent />
 
       <section className="attractions" aria-labelledby="attractions-title">
         <div className="attractions__container">
           <header className="attractions__head">
             <h2 id="attractions-title">
-            Must-Visit Places in Surat with Cozy Cabz
+              Must-Visit Places in Surat with Cozy Cabz
             </h2>
             <p>
-            With Cozy Cabz rent a car in Surat, exploring the city’s top attractions becomes easy and comfortable. From historic forts to beaches and gardens, you can enjoy every corner of the city at your own pace.
+              With Cozy Cabz rent a car in Surat, exploring the city’s top
+              attractions becomes easy and comfortable. From historic forts to
+              beaches and gardens, you can enjoy every corner of the city at
+              your own pace.
             </p>
           </header>
 
@@ -458,5 +332,3 @@ const InSurat = () => {
 };
 
 export default InSurat;
-
-

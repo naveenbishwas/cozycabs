@@ -7,6 +7,7 @@ import Footer from "../Components/Footer/page";
 import Trustcc from "../Components/Trustcc";
 import Howto from "../Components/Howto";
 import Howrent from "../Components/Howrent";
+import CityForm from "../Components/CityForm/page";
 
 const InVisakhapatnam = () => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -18,8 +19,7 @@ const InVisakhapatnam = () => {
   const items = [
     {
       title: "Expert Drivers",
-      desc:
-        "Our chauffeurs are familiar with Visakhapatnam’s roads, including beach roads, hills, and forest stretches.",
+      desc: "Our chauffeurs are familiar with Visakhapatnam’s roads, including beach roads, hills, and forest stretches.",
       icon: (
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <path d="M12 2l7 3v6c0 5-3.5 9-7 11-3.5-2-7-6-7-11V5l7-3z" />
@@ -29,8 +29,7 @@ const InVisakhapatnam = () => {
     },
     {
       title: "Wide Vehicle Range",
-      desc:
-        "From economy cars to SUVs, luxury vehicles, or self drive cars in Visakhapatnam, we have what you need.",
+      desc: "From economy cars to SUVs, luxury vehicles, or self drive cars in Visakhapatnam, we have what you need.",
       icon: (
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <path d="M3 13l1.2-3.6A3 3 0 017.1 7h9.8a3 3 0 012.9 2.4L21 13v5a1 1 0 01-1 1h-1a2 2 0 11-4 0H9a2 2 0 11-4 0H4a1 1 0 01-1-1v-5z" />
@@ -40,8 +39,7 @@ const InVisakhapatnam = () => {
     },
     {
       title: "Transparent Pricing",
-      desc:
-        "Estimates include everything—fuel, tolls, driver charges. No hidden costs.",
+      desc: "Estimates include everything—fuel, tolls, driver charges. No hidden costs.",
       icon: (
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <path d="M3 12l9-9 9 9-9 9-9-9z" />
@@ -51,8 +49,7 @@ const InVisakhapatnam = () => {
     },
     {
       title: "24×7 Service",
-      desc:
-        "Early flights or late-hour rides—our rental cars in Visakhapatnam are available anytime.",
+      desc: "Early flights or late-hour rides—our rental cars in Visakhapatnam are available anytime.",
       icon: (
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <circle cx="10.5" cy="10.5" r="7.5" />
@@ -63,8 +60,7 @@ const InVisakhapatnam = () => {
     },
     {
       title: "Safety & Hygiene",
-      desc:
-        "Cars are sanitized, GPS-enabled, and insured—trusted for both local rides and long trips.",
+      desc: "Cars are sanitized, GPS-enabled, and insured—trusted for both local rides and long trips.",
       icon: (
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <path d="M4 12a8 8 0 1116 0v5a2 2 0 01-2 2h-3v-4h3v-3a6 6 0 10-12 0v3h3v4H6a2 2 0 01-2-2v-5z" />
@@ -161,8 +157,12 @@ const InVisakhapatnam = () => {
   );
   const PinIcon = () => (
     <svg viewBox="0 0 24 24" width="28" height="28" fill="none">
-      <path d="M12 22s7-7 7-12a7 7 0 10-14 0c0 5 7 12 7 12z" stroke="#fff" strokeWidth="2" />
-    	<circle cx="12" cy="10" r="2.5" stroke="#fff" strokeWidth="2" />
+      <path
+        d="M12 22s7-7 7-12a7 7 0 10-14 0c0 5 7 12 7 12z"
+        stroke="#fff"
+        strokeWidth="2"
+      />
+      <circle cx="12" cy="10" r="2.5" stroke="#fff" strokeWidth="2" />
     </svg>
   );
   const CarIcon = () => (
@@ -180,13 +180,24 @@ const InVisakhapatnam = () => {
   const CheckIcon = () => (
     <svg viewBox="0 0 24 24" width="28" height="28" fill="none">
       <circle cx="12" cy="12" r="9" stroke="#fff" strokeWidth="2" />
-      <path d="M8 12l3 3 5-5" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+      <path
+        d="M8 12l3 3 5-5"
+        stroke="#fff"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
     </svg>
   );
   const ClockIcon = () => (
     <svg viewBox="0 0 24 24" width="28" height="28" fill="none">
       <circle cx="12" cy="12" r="9" stroke="#fff" strokeWidth="2" />
-      <path d="M12 7v5l3 2" stroke="#fff" strokeWidth="2" strokeLinecap="round" />
+      <path
+        d="M12 7v5l3 2"
+        stroke="#fff"
+        strokeWidth="2"
+        strokeLinecap="round"
+      />
     </svg>
   );
 
@@ -218,94 +229,30 @@ const InVisakhapatnam = () => {
             <h4>Reliable, Safe & Affordable</h4>
           </span>
           <p className="heroeco__sub">
-            Visakhapatnam, or Vizag, blends beaches, hills, temples, and modern life. From Kailasagiri’s Bay of Bengal views to Buddhist sites and sanctuaries, the city has much to explore. Cozy Cabz offers car rental in Visakhapatnam with driver for smooth journeys.
+            Visakhapatnam, or Vizag, blends beaches, hills, temples, and modern
+            life. From Kailasagiri’s Bay of Bengal views to Buddhist sites and
+            sanctuaries, the city has much to explore. Cozy Cabz offers car
+            rental in Visakhapatnam with driver for smooth journeys.
           </p>
         </div>
       </section>
 
-      <section className="booking-form" aria-labelledby="booking-form-title">
-        <div className="booking-form__container">
-          <h2 id="booking-form-title" className="booking-form__title">
-            Book Your <span>Car</span>
-          </h2>
+      <CityForm />
 
-          <form className="booking-form__form" onSubmit={(e) => e.preventDefault()}>
-            <div className="form-row">
-              <label className="sr-only" htmlFor="bf-name">
-                Your Name
-              </label>
-              <input id="bf-name" name="name" type="text" placeholder="Enter Your Name" autoComplete="name" required aria-required="true" />
-
-              <label className="sr-only" htmlFor="bf-email">
-                Email
-              </label>
-              <input id="bf-email" name="email" type="email" placeholder="Enter Email Id" autoComplete="email" required aria-required="true" />
-
-              <div className="phone-field" role="group" aria-labelledby="bf-phone-label">
-                <span id="bf-phone-label" className="sr-only">
-                  Phone Number
-                </span>
-                <select className="styled-select" name="dial-code" defaultValue="+91" aria-label="Country code">
-                  <option value="+91">+91</option>
-                  <option value="+1">+1</option>
-                  <option value="+44">+44</option>
-                </select>
-                <input id="bf-phone" name="phone" type="tel" inputMode="tel" placeholder="Phone No" autoComplete="tel" required aria-required="true" />
-              </div>
-            </div>
-
-            <div className="form-row">
-              <label className="sr-only" htmlFor="bf-date">
-                Pickup Date
-              </label>
-              <input id="bf-date" name="date" type="date" placeholder="dd-mm-yyyy" />
-
-              <label className="sr-only" htmlFor="bf-purpose">
-                Rental Purpose
-              </label>
-              <select id="bf-purpose" name="purpose" className="styled-select">
-                <option value="">Select Rental Purpose</option>
-                <option>Business</option>
-                <option>Leisure</option>
-                <option>Airport Transfer</option>
-                <option>Wedding/Event</option>
-              </select>
-            </div>
-
-            <label className="sr-only" htmlFor="bf-notes">
-              Requirement Details
-            </label>
-            <textarea id="bf-notes" name="notes" placeholder="Enter Requirement Details"></textarea>
-
-            <div className="form-footer">
-              <div className="form-agree">
-                <input id="bf-agree" type="checkbox" required aria-required="true" />
-                <label htmlFor="bf-agree">
-                  By clicking "Send Enquiry" button, you agree to our <a href="#">Terms &amp; Conditions</a> and <a href="#">Privacy Policy</a>
-                </label>
-              </div>
-
-              <div className="captcha" aria-hidden="true">I'm not a robot (Captcha)</div>
-
-              <div className="form-actions">
-                <button type="submit" className="btn-submit">
-                  Send Enquiry
-                </button>
-              </div>
-            </div>
-          </form>
-        </div>
-      </section>
-
-   <Trustcc />
-     <Howto/>
-    <Howrent />
+      <Trustcc />
+      <Howto />
+      <Howrent />
 
       <section className="attractions" aria-labelledby="attractions-title">
         <div className="attractions__container">
           <header className="attractions__head">
-            <h2 id="attractions-title">Must-Visit Places in Visakhapatnam with Cozy Cabz</h2>
-            <p>Visit top attractions comfortably, without worrying about parking or logistics.</p>
+            <h2 id="attractions-title">
+              Must-Visit Places in Visakhapatnam with Cozy Cabz
+            </h2>
+            <p>
+              Visit top attractions comfortably, without worrying about parking
+              or logistics.
+            </p>
           </header>
 
           <div className="attractions__grid">
@@ -329,14 +276,20 @@ const InVisakhapatnam = () => {
       <section className="faq">
         <div className="faq-header">
           <h2>Frequently Asked Questions</h2>
-          <p>Answers to common questions about our car rental services in Vizag.</p>
+          <p>
+            Answers to common questions about our car rental services in Vizag.
+          </p>
         </div>
 
         <div className="faq-list" role="list">
           {faqs.map((item, i) => {
             const open = openIndex === i;
             return (
-              <div className={`faq-item ${open ? "open" : ""}`} key={i} role="listitem">
+              <div
+                className={`faq-item ${open ? "open" : ""}`}
+                key={i}
+                role="listitem"
+              >
                 <button
                   className="faq-question"
                   aria-expanded={open}
@@ -369,5 +322,3 @@ const InVisakhapatnam = () => {
 };
 
 export default InVisakhapatnam;
-
-
