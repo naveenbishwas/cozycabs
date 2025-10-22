@@ -340,6 +340,125 @@ const Premium = () => {
         </div>
       </section>
 
+      <section className="booking-section">
+        <div className="booking-header">
+          <h2>Book Your Premium Ride</h2>
+          <p>We'll get back to you within 10 minutes</p>
+        </div>
+        <div className="booking-df">
+          <div className="booking-content">
+            <div className="image-wrapper-premium">
+              <img
+                src="https://images.unsplash.com/photo-1577803645773-f96470509666?auto=format&fit=crop&w=800&q=80"
+                alt="Premium Car"
+              />
+            </div>
+
+            <div className="premium-info">
+              <h3>Why Choose Our Premium Service?</h3>
+              <ul>
+                <li>24/7 availability with instant booking confirmation</li>
+                <li>
+                  Professional, courteous, and background-verified drivers
+                </li>
+                <li>Well-maintained, luxury vehicles with premium amenities</li>
+                <li> Transparent pricing with no hidden charges</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="form-wrapper">
+            <form onSubmit={handleSubmit}>
+              <div className="form-group">
+                <label htmlFor="name">Full Name *</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  value={formData.name}
+                  placeholder="Enter your name"
+                  onChange={handleInputChange}
+                />
+                {errors.name && <p className="error">{errors.name}</p>}
+              </div>
+
+              <div className="form-group">
+                <label htmlFor="contact">Contact Number *</label>
+                <input
+                  type="text"
+                  id="contact"
+                  name="contact"
+                  value={formData.contact}
+                  placeholder="+91 XXXXX XXXXX"
+                  onChange={handleInputChange}
+                />
+                {errors.contact && <p className="error">{errors.contact}</p>}
+              </div>
+
+              <div className="form-group">
+                <label htmlFor="pickup">Pickup Location *</label>
+                <input
+                  type="text"
+                  id="pickup"
+                  name="pickup"
+                  value={formData.pickup}
+                  placeholder="Enter pickup address"
+                  onChange={handleInputChange}
+                />
+                {errors.pickup && <p className="error">{errors.pickup}</p>}
+              </div>
+
+              <div className="form-group">
+                <label htmlFor="drop">Drop Location *</label>
+                <input
+                  type="text"
+                  id="drop"
+                  name="drop"
+                  value={formData.drop}
+                  placeholder="Enter drop address"
+                  onChange={handleInputChange}
+                />
+                {errors.drop && <p className="error">{errors.drop}</p>}
+              </div>
+
+              <div className="form-group">
+                <label htmlFor="date">Date & Time *</label>
+                <input
+                  type="datetime-local"
+                  id="date"
+                  name="date"
+                  value={formData.date}
+                  onChange={handleInputChange}
+                />
+                {errors.date && <p className="error">{errors.date}</p>}
+              </div>
+
+              <div className="form-group">
+                <label htmlFor="message">Additional Message (Optional)</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  value={formData.message}
+                  placeholder="Any special requirements or notes..."
+                  onChange={handleInputChange}
+                />
+              </div>
+
+              <div className="form-footer">
+                <button type="submit" className="btn-primary">
+                  Book Now
+                </button>
+                <p className="privacy">
+                  We respect your privacy and never share your data. Your
+                  information is secure and will only be used to process your
+                  booking.
+                </p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
       <section className="fleet-section">
         <div className="fleet-header">
           <h2>
@@ -354,25 +473,74 @@ const Premium = () => {
         <div className="fleet-grid">
           {cars.map((car) => (
             <div key={car.id} className="fleet-card">
-              <div className="image-wrapper">
+              <div className="image-wrapper-premium">
                 <img src={car.image} alt={car.title} />
                 {car.badge && <div className="badge">{car.badge}</div>}
               </div>
 
-              <div className="premium-info">
-                <h3>Why Choose Our Premium Service?</h3>
-                <ul>
-                  <li>
-                    ✔️ 24/7 availability with instant booking confirmation
-                  </li>
-                  <li>
-                    ✔️ Professional, courteous, and background-verified drivers
-                  </li>
-                  <li>
-                    ✔️ Well-maintained, luxury vehicles with premium amenities
-                  </li>
-                  <li>✔️ Transparent pricing with no hidden charges</li>
-                </ul>
+              <div className="fleet-content">
+                <h3>{car.title}</h3>
+                <div className="subtitle">{car.subtitle}</div>
+                <div className="desc">{car.description}</div>
+
+                <div className="icons">
+                  <span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth="1.5"
+                      stroke="currentColor"
+                      className="size-6"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"
+                      />
+                    </svg>
+                    {car.seating}
+                  </span>
+                  <span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth="1.5"
+                      stroke="currentColor"
+                      className="size-6"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"
+                      />
+                    </svg>
+                    {car.luggage}
+                  </span>
+                  <span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth="1.5"
+                      stroke="currentColor"
+                      className="size-6"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0 0 12 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75Z"
+                      />
+                    </svg>
+                    {car.fuel}
+                  </span>
+                </div>
+
+                <div className="bottom-row">
+                  <div className="price">{car.price}</div>
+                  <button>Book Now</button>
+                </div>
               </div>
             </div>
           ))}
@@ -400,8 +568,171 @@ const Premium = () => {
         </div>
       </section>
 
+      <section className="features-section">
+        <h2 className="features-title">Perfect For Every Occasion</h2>
+        <div className="features-row" id="occasion">
+          <div className="feature-box" id="occasion-box">
+            <div className="icon-wrapper">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="lucide lucide-briefcase w-8 h-8 text-[#E50914] group-hover:text-white transition-colors duration-300"
+                aria-hidden="true"
+              >
+                <path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                <rect width="20" height="14" x="2" y="6" rx="2"></rect>
+              </svg>
+            </div>
+            <h3>Corporate Rides</h3>
+            <p>
+              Professional chauffeur service for business meetings, client
+              visits, and executive travel.
+            </p>
+          </div>
+
+          <div className="feature-box">
+            <div className="icon-wrapper">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="lucide lucide-plane w-8 h-8 text-[#E50914] group-hover:text-white transition-colors duration-300"
+                aria-hidden="true"
+              >
+                <path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"></path>
+              </svg>
+            </div>
+            <h3>Airport Transfers</h3>
+            <p>
+              Punctual pickups and drop-offs with flight tracking and
+              meet-and-greet service.
+            </p>
+          </div>
+
+          <div className="feature-box">
+            <div className="icon-wrapper">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="lucide lucide-users w-8 h-8 text-[#E50914] group-hover:text-white transition-colors duration-300"
+                aria-hidden="true"
+              >
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                <path d="M16 3.128a4 4 0 0 1 0 7.744"></path>
+                <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+              </svg>
+            </div>
+            <h3>Group Travel</h3>
+            <p>
+              Spacious vehicles for family trips, team outings, and group
+              adventures.
+            </p>
+          </div>
+
+          <div className="feature-box">
+            <div className="icon-wrapper">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="lucide lucide-heart w-8 h-8 text-[#E50914] group-hover:text-white transition-colors duration-300"
+                aria-hidden="true"
+              >
+                <path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"></path>
+              </svg>
+            </div>
+            <h3>Special Events</h3>
+            <p>
+              Make your weddings, parties, and celebrations memorable with
+              luxury transportation.
+            </p>
+          </div>
+
+          <div className="feature-box">
+            <div className="icon-wrapper">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="lucide lucide-map-pin w-8 h-8 text-[#E50914] group-hover:text-white transition-colors duration-300"
+                aria-hidden="true"
+              >
+                <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <h3>Outstation Trips</h3>
+            <p>
+              Comfortable long-distance travel with experienced drivers who know
+              the routes.
+            </p>
+          </div>
+
+          <div className="feature-box">
+            <div className="icon-wrapper">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="lucide lucide-calendar w-8 h-8 text-[#E50914] group-hover:text-white transition-colors duration-300"
+                aria-hidden="true"
+              >
+                <path d="M8 2v4"></path>
+                <path d="M16 2v4"></path>
+                <rect width="18" height="18" x="3" y="4" rx="2"></rect>
+                <path d="M3 10h18"></path>
+              </svg>
+            </div>
+            <h3>Daily Commute</h3>
+            <p>
+              Reliable everyday transportation for work, shopping, or personal
+              errands.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Services */}
-      <section className="faq">
+      <section className="faq" id="premium-faq">
         <div className="faq-header">
           <h2>
             Frequently Asked <span className="red-black">Questions</span>
@@ -447,123 +778,6 @@ const Premium = () => {
         </div>
       </section>
 
-      <section className="ride-booking-section">
-        <div className="ride-booking-content">
-          <div className="image-wrapper">
-            <img
-              src="https://images.unsplash.com/photo-1577803645773-f96470509666?auto=format&fit=crop&w=800&q=80"
-              alt="Premium Car"
-            />
-          </div>
-
-          <div className="premium-info">
-            <h3>Why Choose Our Premium Service?</h3>
-            <ul>
-              <li>✔️ 24/7 availability with instant booking confirmation</li>
-              <li>
-                ✔️ Professional, courteous, and background-verified drivers
-              </li>
-              <li>
-                ✔️ Well-maintained, luxury vehicles with premium amenities
-              </li>
-              <li>✔️ Transparent pricing with no hidden charges</li>
-            </ul>
-          </div>
-        </div>
-
-        <div className="form-wrapper">
-          <h2>Book Your Premium Ride</h2>
-          <p>We'll get back to you within 10 minutes</p>
-
-          <form onSubmit={handleSubmit}>
-            <div className="form-group">
-              <label htmlFor="name">Full Name *</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                value={formData.name}
-                placeholder="Enter your name"
-                onChange={handleInputChange}
-              />
-              {errors.name && <p className="error">{errors.name}</p>}
-            </div>
-
-            <div className="form-group">
-              <label htmlFor="contact">Contact Number *</label>
-              <input
-                type="text"
-                id="contact"
-                name="contact"
-                value={formData.contact}
-                placeholder="+91 XXXXX XXXXX"
-                onChange={handleInputChange}
-              />
-              {errors.contact && <p className="error">{errors.contact}</p>}
-            </div>
-
-            <div className="form-group">
-              <label htmlFor="pickup">Pickup Location *</label>
-              <input
-                type="text"
-                id="pickup"
-                name="pickup"
-                value={formData.pickup}
-                placeholder="Enter pickup address"
-                onChange={handleInputChange}
-              />
-              {errors.pickup && <p className="error">{errors.pickup}</p>}
-            </div>
-
-            <div className="form-group">
-              <label htmlFor="drop">Drop Location *</label>
-              <input
-                type="text"
-                id="drop"
-                name="drop"
-                value={formData.drop}
-                placeholder="Enter drop address"
-                onChange={handleInputChange}
-              />
-              {errors.drop && <p className="error">{errors.drop}</p>}
-            </div>
-
-            <div className="form-group">
-              <label htmlFor="date">Date & Time *</label>
-              <input
-                type="datetime-local"
-                id="date"
-                name="date"
-                value={formData.date}
-                onChange={handleInputChange}
-              />
-              {errors.date && <p className="error">{errors.date}</p>}
-            </div>
-
-            <div className="form-group">
-              <label htmlFor="message">Additional Message (Optional)</label>
-              <textarea
-                id="message"
-                name="message"
-                value={formData.message}
-                placeholder="Any special requirements or notes..."
-                onChange={handleInputChange}
-              />
-            </div>
-
-            <div className="form-footer">
-              <button type="submit" className="btn-primary">
-                Book Now
-              </button>
-              <p className="privacy">
-                We respect your privacy and never share your data. Your
-                information is secure and will only be used to process your
-                booking.
-              </p>
-            </div>
-          </form>
-        </div>
-      </section>
       <SiteFooter />
     </>
   );

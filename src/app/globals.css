@@ -1451,8 +1451,8 @@ a {
 }
 
 .bubble {
-  background: white;
-  color: #000;
+  background: rgb(6, 5, 5);
+  color: #ffffff;
   padding: 8px 10px;
   border-radius: 18px;
   font-size: 13px;
