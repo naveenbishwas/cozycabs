@@ -247,7 +247,7 @@ const Premium = () => {
               className={`slide ${index === current ? "active" : ""}`}
               style={{ backgroundImage: `url(${slide.image})` }}
             >
-              <div className="overlay"></div>
+              <div className="premium-overlay"></div>
               <div className="slide-content">
                 <h2>{slide.heading}</h2>
                 <p>{slide.subtext}</p>

@@ -1162,7 +1162,8 @@ export default function Home() {
           <div className="fleet-card">
             <div className="fleet-image">
               <Image
-                src="/ty2.png"
+                // src="/ty2.png"
+                src="./p-cars.jpeg"
                 alt="car-images"
                 width={0}
                 height={0}

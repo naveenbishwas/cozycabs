@@ -9,7 +9,7 @@ import Trustcc from "../Components/Trustcc";
 import Howto from "../Components/Howto";
 import Howrent from "../Components/Howrent";
 
-const Inchennai = () => {
+const InChennai = () => {
   const [openIndex, setOpenIndex] = useState(null);
 
   const toggle = (i) => {
@@ -220,7 +220,10 @@ const Inchennai = () => {
             <h4>Safe, Comfortable & Reliable</h4>
           </span>
           <p className="heroeco__sub">
-           Chennai, the cultural capital of South India, blends temples, colonial landmarks, Marina Beach, and IT hubs. But traffic and long distances make travel stressful. That’s where Cozy Cabz Car Rental in Chennai with driver ensures smooth, safe, and convenient rides.
+            Chennai, the cultural capital of South India, blends temples,
+            colonial landmarks, Marina Beach, and IT hubs. But traffic and long
+            distances make travel stressful. That’s where Cozy Cabz Car Rental
+            in Chennai with driver ensures smooth, safe, and convenient rides.
           </p>
         </div>
       </section>
@@ -355,8 +358,8 @@ const Inchennai = () => {
       </section>
 
       <Trustcc />
-     <Howto/>
-    <Howrent />
+      <Howto />
+      <Howrent />
 
       <section className="attractions" aria-labelledby="attractions-title">
         <div className="attractions__container">
@@ -437,4 +440,4 @@ const Inchennai = () => {
   );
 };
 
-export default Inchennai;
+export default InChennai;

@@ -27,7 +27,7 @@
   z-index: 2;
 }
 
-.overlay {
+.premium-overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.7));
@@ -53,6 +53,7 @@
 .slide-content p {
   font-size: 1.1rem;
   opacity: 0.9;
+  color: #fff !important;
 }
 
 @keyframes fadeUp {
@@ -147,6 +148,17 @@
   }
 }
 
+/* Make sure slide-content has a fixed positioning for button */
+.slide-content {
+  position: absolute; /* Fix it in the same position relative to the slide */
+  bottom: 30%; /* Adjust to a consistent distance from the bottom */
+  left: 30%;
+  transform: translate(-50%, 50%); /* Center the button horizontally */
+  text-align: center;
+  color: #fff;
+  z-index: 3;
+}
+
 .slide-content button {
   padding: 10px 15px;
   border: none;
@@ -155,6 +167,14 @@
   border-radius: 5px;
   margin-top: 3%;
   font-size: 17px;
+  position: relative; /* Ensures button stays within the content area */
+  z-index: 4; /* Makes sure the button stays above other elements */
+}
+
+/* Optional: Add hover effect for the button */
+.slide-content button:hover {
+  background-color: #c40023;
+  transition: background-color 0.3s ease;
 }
 
 .number-stats {

@@ -9,7 +9,7 @@ import Trustcc from "../Components/Trustcc";
 import Howto from "../Components/Howto";
 import Howrent from "../Components/Howrent";
 
-const Inhyderabad = () => {
+const InHyderabad = () => {
   const [openIndex, setOpenIndex] = useState(null);
 
   const toggle = (i) => {
@@ -374,9 +374,9 @@ const Inhyderabad = () => {
         </div>
       </section>
 
-<Trustcc />
-     <Howto/>
-    <Howrent />
+      <Trustcc />
+      <Howto />
+      <Howrent />
       <section className="attractions" aria-labelledby="attractions-title">
         <div className="attractions__container">
           <header className="attractions__head">
@@ -456,4 +456,4 @@ const Inhyderabad = () => {
   );
 };
 
-export default Inhyderabad;
+export default InHyderabad;
