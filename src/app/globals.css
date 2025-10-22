@@ -1209,9 +1209,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: radial-gradient(100% 100% at 30% 20%, #ffecec 0%, #fff 100%);
-  border: 1px solid #ffdede;
-  border-radius: 50%;
+
   width: 64px;
   height: 64px;
   margin: 0 auto 14px;
