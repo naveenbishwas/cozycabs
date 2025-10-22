@@ -862,7 +862,9 @@ export default function Home() {
           {/* Row 2 */}
           <div className="form-row">
             <select>
+              <option>Select Service Option</option>
               <option>Chauffeur Driven</option>
+              <option>Self Driven</option>
             </select>
             <select>
               <option>India</option>
@@ -1590,7 +1592,7 @@ export default function Home() {
               and professional service ensured seamless travel support for
               dignitaries and officials.
             </p>
-            <button className="prestigious-btn">Read More</button>
+            {/* <button className="prestigious-btn">Read More</button> */}
           </div>
 
           {/* Right Images */}

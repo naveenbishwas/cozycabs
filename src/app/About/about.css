@@ -21,11 +21,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to bottom right,
-    rgba(0, 0, 0, 0.5),
-    rgba(20, 20, 20, 0.7)
-  );
+  background: linear-gradient(135deg, #ad2e3b 40%, #707070 115%);
 }
 
 .about-hero-content {

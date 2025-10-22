@@ -271,30 +271,42 @@ const ConferenceDelegationTravel = () => {
           </p>
           <form>
             <div className="form-grid">
+              <input type="text" placeholder="Enter Your Name" required />
+              <input type="email" placeholder="Enter Email ID" required />
               <input
-                type="text"
-                placeholder="Organization / Event Name"
+                type="tel"
+                placeholder="Phone No"
                 required
+                pattern="^\+91\s[1-9]{1}[0-9]{9}$"
               />
-              <input type="text" placeholder="Contact Person" required />
-              <input type="email" placeholder="Email Address" required />
-              <input type="tel" placeholder="+91 98765 43210" required />
               <select required>
-                <option value="">Travel Type</option>
-                <option>Conference</option>
-                <option>Delegation</option>
-                <option>Seminar / Event</option>
+                <option value="">Select Service Type</option>
+                <option>Chauffeur Driven</option>
+                <option>Self Drive</option>
               </select>
-              <input type="text" placeholder="Cities / Venues" />
+              <select required>
+                <option value="">Select Vehicle Type</option>
+                <option>SUV</option>
+                <option>Sedan</option>
+                <option>Luxury</option>
+              </select>
+              <input
+                type="number"
+                placeholder="No. of Travellers"
+                required
+                min="1"
+              />
+              <input type="text" placeholder="Enter City Name" required />
+              <input type="date" placeholder="dd/mm/yyyy" required />
               <textarea
-                placeholder="Tell us about your schedule, group size, and specific requirements..."
+                placeholder="Any specific requirement / itinerary"
                 rows="4"
               />
-            </div>
 
-            <button type="submit" className="primary-btn">
-              Request Quote →
-            </button>
+              <button type="submit" className="primary-btn">
+                Request Quote →
+              </button>
+            </div>
           </form>
         </div>
       </section>

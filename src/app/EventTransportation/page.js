@@ -268,28 +268,42 @@ const EventTransportation = () => {
           </p>
           <form>
             <div className="form-grid">
-              <input type="text" placeholder="Event Name" required />
-              <input type="text" placeholder="Contact Person" required />
-              <input type="email" placeholder="Email Address" required />
-              <input type="tel" placeholder="+91 98765 43210" required />
+              <input type="text" placeholder="Enter Your Name" required />
+              <input type="email" placeholder="Enter Email ID" required />
+              <input
+                type="tel"
+                placeholder="Phone No"
+                required
+                pattern="^\+91\s[1-9]{1}[0-9]{9}$"
+              />
               <select required>
-                <option value="">Event Type</option>
-                <option>Corporate Event</option>
-                <option>Wedding</option>
-                <option>Conference</option>
-                <option>Concert / Festival</option>
-                <option>Other</option>
+                <option value="">Select Service Type</option>
+                <option>Chauffeur Driven</option>
+                <option>Self Drive</option>
               </select>
-              <input type="text" placeholder="Venue / City" />
+              <select required>
+                <option value="">Select Vehicle Type</option>
+                <option>SUV</option>
+                <option>Sedan</option>
+                <option>Luxury</option>
+              </select>
+              <input
+                type="number"
+                placeholder="No. of Travellers"
+                required
+                min="1"
+              />
+              <input type="text" placeholder="Enter City Name" required />
+              <input type="date" placeholder="dd/mm/yyyy" required />
               <textarea
-                placeholder="Tell us about your event schedule, number of guests, and special requirements..."
+                placeholder="Any specific requirement / itinerary"
                 rows="4"
               />
-            </div>
 
-            <button type="submit" className="primary-btn">
-              Request Quote →
-            </button>
+              <button type="submit" className="primary-btn">
+                Request Quote →
+              </button>
+            </div>
           </form>
         </div>
       </section>

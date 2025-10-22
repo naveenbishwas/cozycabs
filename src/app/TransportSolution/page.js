@@ -355,7 +355,7 @@ const TransportSolution = () => {
           <p>
             Fill out the form below and we'll get back to you within 24 hours.
           </p>
-          <form>
+          {/* <form>
             <div className="form-grid">
               <input type="text" placeholder="Company Name" required />
               <input type="text" placeholder="Contact Person" required />
@@ -377,6 +377,45 @@ const TransportSolution = () => {
             <button type="submit" className="primary-btn">
               Request Quote →
             </button>
+          </form> */}
+          <form>
+            <div className="form-grid">
+              <input type="text" placeholder="Enter Your Name" required />
+              <input type="email" placeholder="Enter Email ID" required />
+              <input
+                type="tel"
+                placeholder="Phone No"
+                required
+                pattern="^\+91\s[1-9]{1}[0-9]{9}$"
+              />
+              <select required>
+                <option value="">Select Service Type</option>
+                <option>Chauffeur Driven</option>
+                <option>Self Drive</option>
+              </select>
+              <select required>
+                <option value="">Select Vehicle Type</option>
+                <option>SUV</option>
+                <option>Sedan</option>
+                <option>Luxury</option>
+              </select>
+              <input
+                type="number"
+                placeholder="No. of Travellers"
+                required
+                min="1"
+              />
+              <input type="text" placeholder="Enter City Name" required />
+              <input type="date" placeholder="dd/mm/yyyy" required />
+              <textarea
+                placeholder="Any specific requirement / itinerary"
+                rows="4"
+              />
+
+              <button type="submit" className="primary-btn">
+                Request Quote →
+              </button>
+            </div>
           </form>
         </div>
       </section>

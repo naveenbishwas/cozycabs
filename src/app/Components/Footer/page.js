@@ -182,7 +182,7 @@ export default function SiteFooter() {
                     <Link href={`/${showInnova ? "Innova" : "In"}${city}`}>
                       {showInnova
                         ? `Innova Car Rental in ${city}`
-                        : `Car Rental in${city}`}
+                        : `Car Rental in ${city}`}
                     </Link>
                   </li>
                 ))}
