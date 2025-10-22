@@ -8,6 +8,7 @@ import Footer from "../Components/Footer/page";
 import Trustcc from "../Components/Trustcc";
 import Howto from "../Components/Howto";
 import Howrent from "../Components/Howrent";
+import CityForm from "../Components/CityForm/page";
 
 const InLucknow = () => {
   const [openIndex, setOpenIndex] = useState(null);
