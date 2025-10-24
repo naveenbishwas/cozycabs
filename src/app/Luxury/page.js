@@ -33,9 +33,9 @@ const slides = [
 const cars = [
   {
     id: 1,
-    title: "Toyota Fortuner",
+    title: "Audi A6",
     subtitle: "Crysta",
-    image: "ty1.jpg",
+    image: "lu1.jpg",
     badge: "Top Choice",
     description:
       "Perfect for family trips and group travel. Spacious, comfortable, and reliable.",
@@ -46,9 +46,9 @@ const cars = [
   },
   {
     id: 2,
-    title: "Toyota Innova Crysta",
+    title: "Audi Q7",
     subtitle: "Honda City / Verna",
-    image: "ty2.jpg",
+    image: "lu2.jpg",
     badge: "Best for Business Trips",
     description:
       "Ideal for business meetings and airport transfers. Elegant, stylish, and efficient.",
@@ -59,9 +59,34 @@ const cars = [
   },
   {
     id: 3,
-    title: "Toyota Innova Hycross",
+    title: "BMW 5 Series",
     subtitle: "Fortuner / Endeavour",
-    image: "ty3.jpg",
+    image: "lu3.jpg",
+    description:
+      "Make a statement with our premium SUVs. Perfect for special occasions and long drives.",
+    seating: 7,
+    luggage: 5,
+    fuel: "Diesel",
+    price: "₹35/km",
+  },
+  {
+    id: 4,
+    title: "Mercedes GLS",
+    subtitle: "Fortuner / Endeavour",
+    image: "lu4.jpg",
+    description:
+      "Make a statement with our premium SUVs. Perfect for special occasions and long drives.",
+    seating: 7,
+    luggage: 5,
+    fuel: "Diesel",
+    price: "₹35/km",
+  },
+
+  {
+    id: 5,
+    title: "Mercedes-Benz E Class",
+    subtitle: "Fortuner / Endeavour",
+    image: "lu5.jpg",
     description:
       "Make a statement with our premium SUVs. Perfect for special occasions and long drives.",
     seating: 7,

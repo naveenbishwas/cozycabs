@@ -33,9 +33,9 @@ const slides = [
 const cars = [
   {
     id: 1,
-    title: "Toyota Fortuner",
+    title: "45 Seater Volvo",
     subtitle: "Crysta",
-    image: "ty1.jpg",
+    image: "bu1.webp",
     badge: "Top Choice",
     description:
       "Perfect for family trips and group travel. Spacious, comfortable, and reliable.",
@@ -46,9 +46,9 @@ const cars = [
   },
   {
     id: 2,
-    title: "Toyota Innova Crysta",
+    title: "Mercedes Sprinter",
     subtitle: "Honda City / Verna",
-    image: "ty2.jpg",
+    image: "bu2.webp",
     badge: "Best for Business Trips",
     description:
       "Ideal for business meetings and airport transfers. Elegant, stylish, and efficient.",
@@ -59,9 +59,35 @@ const cars = [
   },
   {
     id: 3,
-    title: "Toyota Innova Hycross",
+    title: "Toyota Commuter",
     subtitle: "Fortuner / Endeavour",
-    image: "ty3.jpg",
+    image: "bu3.webp",
+    description:
+      "Make a statement with our premium SUVs. Perfect for special occasions and long drives.",
+    seating: 7,
+    luggage: 5,
+    fuel: "Diesel",
+    price: "₹35/km",
+  },
+
+  {
+    id: 4,
+    title: "Toyota Vellfire",
+    subtitle: "Fortuner / Endeavour",
+    image: "bu4.webp",
+    description:
+      "Make a statement with our premium SUVs. Perfect for special occasions and long drives.",
+    seating: 7,
+    luggage: 5,
+    fuel: "Diesel",
+    price: "₹35/km",
+  },
+
+  {
+    id: 4,
+    title: "Toyota Ventury (V Class)",
+    subtitle: "Fortuner / Endeavour",
+    image: "bu5.webp",
     description:
       "Make a statement with our premium SUVs. Perfect for special occasions and long drives.",
     seating: 7,

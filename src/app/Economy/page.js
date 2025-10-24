@@ -33,9 +33,9 @@ const slides = [
 const cars = [
   {
     id: 1,
-    title: "Toyota Fortuner",
+    title: "Honda City",
     subtitle: "Crysta",
-    image: "ty1.jpg",
+    image: "ec1.jpg",
     badge: "Top Choice",
     description:
       "Perfect for family trips and group travel. Spacious, comfortable, and reliable.",
@@ -46,9 +46,9 @@ const cars = [
   },
   {
     id: 2,
-    title: "Toyota Innova Crysta",
+    title: "Maruti Ciaz",
     subtitle: "Honda City / Verna",
-    image: "ty2.jpg",
+    image: "ec2.jpg",
     badge: "Best for Business Trips",
     description:
       "Ideal for business meetings and airport transfers. Elegant, stylish, and efficient.",
@@ -59,9 +59,9 @@ const cars = [
   },
   {
     id: 3,
-    title: "Toyota Innova Hycross",
+    title: "Maruti Swift Dzire",
     subtitle: "Fortuner / Endeavour",
-    image: "ty3.jpg",
+    image: "ec3.jpg",
     description:
       "Make a statement with our premium SUVs. Perfect for special occasions and long drives.",
     seating: 7,
