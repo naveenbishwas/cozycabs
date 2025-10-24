@@ -342,7 +342,9 @@ const Premium = () => {
 
       <section className="booking-section">
         <div className="booking-header">
-          <h2>Book Your Premium Ride</h2>
+          <h2>
+            Book Your Premium <span className="red-black">Ride</span>
+          </h2>
           <p>We'll get back to you within 10 minutes</p>
         </div>
         <div className="booking-df">
@@ -569,7 +571,9 @@ const Premium = () => {
       </section>
 
       <section className="features-section">
-        <h2 className="features-title">Perfect For Every Occasion</h2>
+        <h2 className="features-title">
+          Perfect For Every <span className="red-black">Occasion</span>
+        </h2>
         <div className="features-row" id="occasion">
           <div className="feature-box" id="occasion-box">
             <div className="icon-wrapper">

@@ -2118,3 +2118,24 @@ section.innova-why {
 .form-grid .form-grid select {
   color: #757575;
 }
+
+.premium-info {
+  display: none;
+}
+
+.booking-content {
+  height: 100vh;
+}
+
+.booking-content img {
+  height: 100vh !important;
+}
+
+.booking-content .image-wrapper-premium {
+  height: 100vh;
+  border-radius: 16px;
+}
+
+.booking-df {
+  align-items: center !important;
+}
