@@ -100,24 +100,24 @@ const features = [
 
 const faqs = [
   {
-    q: "What services are included in the Corporate Program?",
-    a: "We cover everything from daily office commutes and airport transfers to outstation rentals, event transportation, and monthly packages. Each account also gets a dedicated manager and customized reporting.",
+    q: "Can I choose a specific car model?",
+    a: "You can request your preferred model, and we’ll do our best to accommodate it based on availability.",
   },
   {
-    q: "Can we get consolidated monthly invoices?",
-    a: "Yes. We provide a single monthly invoice with complete trip details, usage summaries, and expense breakdowns to make your finance team’s job easier.",
+    q: "Is Wi-Fi available in premium vehicles?",
+    a: "Yes, complimentary Wi-Fi is available in all premium cars.",
   },
   {
-    q: "Do you offer volume or long-term discounts?",
-    a: "Absolutely. Companies with high booking volumes or long-term partnerships benefit from tailored pricing plans and flexible payment terms.",
+    q: "How early should I book a premium car?",
+    a: "We recommend booking at least 24 hours in advance for the best availability.",
   },
   {
-    q: "How does our team manage and track bookings?",
-    a: "Bookings can be made via web, app, or WhatsApp. You’ll also have an account manager for urgent changes, plus dashboards to track trips and expenses in real time.",
+    q: "What is the cancellation policy for premium rides?",
+    a: "You can cancel for free up to 12 hours before the pickup time.",
   },
   {
-    q: "Are vehicles and drivers reliable and certified?",
-    a: "All vehicles are regularly serviced and fully insured. Drivers go through background verification, corporate etiquette training, and follow strict safety and punctuality standards.",
+    q: "Do you offer hourly or full-day bookings?",
+    a: "Yes, you can hire a premium vehicle by the hour or for the entire day.",
   },
 ];
 

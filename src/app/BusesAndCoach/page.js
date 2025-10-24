@@ -75,49 +75,49 @@ const features = [
   {
     id: 1,
     icon: <FaCouch />,
-    title: "Luxurious Comfort",
-    desc: "Leather interiors, whisper-quiet rides, space to unwind.",
+    title: "Comfortable Seating",
+    desc: "Stretch out and relax with spacious seats on every journey.",
   },
   {
     id: 2,
     icon: <FaUserTie />,
-    title: "Professional Drivers",
-    desc: "Courteous, trained, and always punctual.",
+    title: "Safe & Reliable",
+    desc: "Travel with confidence knowing safety is our priority.",
   },
   {
     id: 3,
     icon: <FaClock />,
-    title: "On-Time Guarantee",
-    desc: "Precision scheduling to keep your plans on track.",
+    title: "Scenic Routes",
+    desc: "Enjoy the view while you travel—comfort meets adventure.",
   },
   {
     id: 4,
     icon: <FaShieldAlt />,
-    title: "Verified Safety",
-    desc: "Background-checked drivers and fully insured rides.",
+    title: "Perfect for Groups",
+    desc: "Travel together with friends, family, or colleagues.",
   },
 ];
 
 const faqs = [
   {
-    q: "What services are included in the Corporate Program?",
-    a: "We cover everything from daily office commutes and airport transfers to outstation rentals, event transportation, and monthly packages. Each account also gets a dedicated manager and customized reporting.",
+    q: "How many passengers can each vehicle accommodate?",
+    a: "Depending on the model, our buses and coaches can seat from 12 up to 50 passengers comfortably.",
   },
   {
-    q: "Can we get consolidated monthly invoices?",
-    a: "Yes. We provide a single monthly invoice with complete trip details, usage summaries, and expense breakdowns to make your finance team’s job easier.",
+    q: "Are air conditioning and Wi-Fi available?",
+    a: "Yes, all vehicles come with air conditioning, and select models offer onboard Wi-Fi.",
   },
   {
-    q: "Do you offer volume or long-term discounts?",
-    a: "Absolutely. Companies with high booking volumes or long-term partnerships benefit from tailored pricing plans and flexible payment terms.",
+    q: "Can I book a bus or coach for private events?",
+    a: "Yes, we cater to weddings, tours, corporate functions, school trips, and special events.",
   },
   {
-    q: "How does our team manage and track bookings?",
-    a: "Bookings can be made via web, app, or WhatsApp. You’ll also have an account manager for urgent changes, plus dashboards to track trips and expenses in real time.",
+    q: "Do you provide drivers for all bus and coach bookings?",
+    a: " Yes, every vehicle is operated by a licensed, experienced, and uniformed driver.",
   },
   {
-    q: "Are vehicles and drivers reliable and certified?",
-    a: "All vehicles are regularly serviced and fully insured. Drivers go through background verification, corporate etiquette training, and follow strict safety and punctuality standards.",
+    q: "Are refreshments or amenities provided onboard?",
+    a: "Bottled water is provided, and additional amenities can be arranged upon request.",
   },
 ];
 
@@ -342,7 +342,9 @@ const Premium = () => {
 
       <section className="booking-section">
         <div className="booking-header">
-          <h2>Book Your Premium Ride</h2>
+          <h2>
+            Book Your <span className="red-black">Bus and Coaches</span>
+          </h2>
           <p>We'll get back to you within 10 minutes</p>
         </div>
         <div className="booking-df">
@@ -462,7 +464,8 @@ const Premium = () => {
       <section className="fleet-section">
         <div className="fleet-header">
           <h2>
-            Premium <span className="red-black">Vehicles</span>
+            Buses and
+            <span className="red-black">Coaches</span>
           </h2>
           <p>
             From business travel to weekend getaways, find the right ride for
@@ -550,7 +553,7 @@ const Premium = () => {
       <section className="why-premium-section">
         <div className="why-header">
           <h2>
-            Why Ride <span className="red-black">Premium</span>
+            Why Ride <span className="red-black">Buses and Coaches ?</span>
           </h2>
           <p>
             Because luxury isn’t just a label—it’s how every ride should feel.

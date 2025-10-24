@@ -75,49 +75,49 @@ const features = [
   {
     id: 1,
     icon: <FaCouch />,
-    title: "Luxurious Comfort",
-    desc: "Leather interiors, whisper-quiet rides, space to unwind.",
+    title: "Affordable Travel",
+    desc: "Travel smart without burning a hole in your pocket.",
   },
   {
     id: 2,
     icon: <FaUserTie />,
-    title: "Professional Drivers",
-    desc: "Courteous, trained, and always punctual.",
+    title: "Comfortable Journey",
+    desc: "Enjoy a smooth and cozy ride, even on a budget.",
   },
   {
     id: 3,
     icon: <FaClock />,
-    title: "On-Time Guarantee",
-    desc: "Precision scheduling to keep your plans on track.",
+    title: " Wide Availability",
+    desc: "Economy rides available wherever you need them, anytime.",
   },
   {
     id: 4,
     icon: <FaShieldAlt />,
-    title: "Verified Safety",
-    desc: "Background-checked drivers and fully insured rides.",
+    title: "Quick & Easy Booking",
+    desc: "Get moving fast with instant ride booking.",
   },
 ];
 
 const faqs = [
   {
-    q: "What services are included in the Corporate Program?",
-    a: "We cover everything from daily office commutes and airport transfers to outstation rentals, event transportation, and monthly packages. Each account also gets a dedicated manager and customized reporting.",
+    q: "Are economy cars available for outstation or long-distance travel?",
+    a: "Yes, economy options can be booked for intercity trips at affordable rates.",
   },
   {
-    q: "Can we get consolidated monthly invoices?",
-    a: "Yes. We provide a single monthly invoice with complete trip details, usage summaries, and expense breakdowns to make your finance team’s job easier.",
+    q: "Can I request a specific driver or car model?",
+    a: "Requests are welcome, but assignments depend on real-time availability.",
   },
   {
-    q: "Do you offer volume or long-term discounts?",
-    a: "Absolutely. Companies with high booking volumes or long-term partnerships benefit from tailored pricing plans and flexible payment terms.",
+    q: "Do economy rides include air conditioning?",
+    a: " Yes, every economy vehicle is air-conditioned and well-maintained.",
   },
   {
-    q: "How does our team manage and track bookings?",
-    a: "Bookings can be made via web, app, or WhatsApp. You’ll also have an account manager for urgent changes, plus dashboards to track trips and expenses in real time.",
+    q: "What’s the cancellation policy for economy rides?",
+    a: "Free cancellation is available up to 2 hours before pickup time.",
   },
   {
-    q: "Are vehicles and drivers reliable and certified?",
-    a: "All vehicles are regularly serviced and fully insured. Drivers go through background verification, corporate etiquette training, and follow strict safety and punctuality standards.",
+    q: "Are pets or luggage allowed in economy cars?",
+    a: "Small pets and standard luggage are welcome — just mention it when booking",
   },
 ];
 
@@ -342,7 +342,9 @@ const Premium = () => {
 
       <section className="booking-section">
         <div className="booking-header">
-          <h2>Book Your Premium Ride</h2>
+          <h2>
+            Book Your Economy <span className="red-black"> Ride</span>
+          </h2>
           <p>We'll get back to you within 10 minutes</p>
         </div>
         <div className="booking-df">
@@ -462,7 +464,7 @@ const Premium = () => {
       <section className="fleet-section">
         <div className="fleet-header">
           <h2>
-            Premium <span className="red-black">Vehicles</span>
+            Economy <span className="red-black">Vehicles</span>
           </h2>
           <p>
             From business travel to weekend getaways, find the right ride for
@@ -550,7 +552,7 @@ const Premium = () => {
       <section className="why-premium-section">
         <div className="why-header">
           <h2>
-            Why Ride <span className="red-black">Premium</span>
+            Why Ride <span className="red-black">Economy</span>
           </h2>
           <p>
             Because luxury isn’t just a label—it’s how every ride should feel.

@@ -75,49 +75,45 @@ const features = [
   {
     id: 1,
     icon: <FaCouch />,
-    title: "Luxurious Comfort",
-    desc: "Leather interiors, whisper-quiet rides, space to unwind.",
+    title: "Seamless Experience",
+    desc: "From booking to drop-off, every detail is handled with precision and care.",
   },
   {
     id: 2,
     icon: <FaUserTie />,
-    title: "Professional Drivers",
-    desc: "Courteous, trained, and always punctual.",
+    title: "Safety & Reliability",
+    desc: "Every ride meets top safety standards and undergoes regular maintenance checks.",
   },
   {
     id: 3,
     icon: <FaClock />,
-    title: "On-Time Guarantee",
-    desc: "Precision scheduling to keep your plans on track.",
+    title: "Style That Moves",
+    desc: "Make an impression with world-class vehicles built for elegance and presence.",
   },
   {
     id: 4,
     icon: <FaShieldAlt />,
-    title: "Verified Safety",
-    desc: "Background-checked drivers and fully insured rides.",
+    title: "24/7 Concierge Support",
+    desc: "Our support team is always available for last-minute changes or special requests.",
   },
 ];
 
 const faqs = [
   {
-    q: "What services are included in the Corporate Program?",
-    a: "We cover everything from daily office commutes and airport transfers to outstation rentals, event transportation, and monthly packages. Each account also gets a dedicated manager and customized reporting.",
+    q: "Can I personalize my ride experience?",
+    a: "Absolutely — from preferred music and temperature to specific routes or stops, your comfort comes first.",
   },
   {
-    q: "Can we get consolidated monthly invoices?",
-    a: "Yes. We provide a single monthly invoice with complete trip details, usage summaries, and expense breakdowns to make your finance team’s job easier.",
+    q: "What amenities are offered in luxury vehicles?",
+    a: "Expect premium leather interiors, Wi-Fi, bottled water, phone chargers, and quiet luxury throughout your journey.",
   },
   {
-    q: "Do you offer volume or long-term discounts?",
-    a: "Absolutely. Companies with high booking volumes or long-term partnerships benefit from tailored pricing plans and flexible payment terms.",
+    q: "Do you provide luxury cars for special events?",
+    a: "Yes, our fleet is frequently booked for weddings, corporate travel, red-carpet arrivals, and private transfers.",
   },
   {
-    q: "How does our team manage and track bookings?",
-    a: "Bookings can be made via web, app, or WhatsApp. You’ll also have an account manager for urgent changes, plus dashboards to track trips and expenses in real time.",
-  },
-  {
-    q: "Are vehicles and drivers reliable and certified?",
-    a: "All vehicles are regularly serviced and fully insured. Drivers go through background verification, corporate etiquette training, and follow strict safety and punctuality standards.",
+    q: " Can I rent a luxury vehicle for a full day or multiple days?",
+    a: "Yes, flexible hourly, daily, and multi-day packages are available upon request.",
   },
 ];
 
@@ -342,7 +338,9 @@ const Premium = () => {
 
       <section className="booking-section">
         <div className="booking-header">
-          <h2>Book Your Premium Ride</h2>
+          <h2>
+            Book your Luxury <span className="red-black">Ride</span>
+          </h2>
           <p>We'll get back to you within 10 minutes</p>
         </div>
         <div className="booking-df">
@@ -462,7 +460,7 @@ const Premium = () => {
       <section className="fleet-section">
         <div className="fleet-header">
           <h2>
-            Premium <span className="red-black">Vehicles</span>
+            Luxury <span className="red-black">Vehicles</span>
           </h2>
           <p>
             From business travel to weekend getaways, find the right ride for
@@ -550,7 +548,7 @@ const Premium = () => {
       <section className="why-premium-section">
         <div className="why-header">
           <h2>
-            Why Ride <span className="red-black">Premium</span>
+            Why Ride <span className="red-black">Luxury?</span>
           </h2>
           <p>
             Because luxury isn’t just a label—it’s how every ride should feel.
@@ -569,7 +567,9 @@ const Premium = () => {
       </section>
 
       <section className="features-section">
-        <h2 className="features-title">Perfect For Every Occasion</h2>
+        <h2 className="features-title">
+          Perfect For Every <span className="red-black">Occasion</span>
+        </h2>
         <div className="features-row" id="occasion">
           <div className="feature-box" id="occasion-box">
             <div className="icon-wrapper">
