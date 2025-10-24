@@ -2114,3 +2114,7 @@ section.innova-why {
     font-size: 36px;
   }
 }
+
+.form-grid .form-grid select {
+  color: #757575;
+}
