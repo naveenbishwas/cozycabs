@@ -7,6 +7,7 @@ import "./TransportSolution.css";
 import Image from "next/image";
 import { FaBuilding, FaUsers, FaBus, FaMapMarkerAlt } from "react-icons/fa";
 import Link from "next/link";
+import ServiceBookingForm from "../Components/ServicesBookingForm/page";
 
 const stats = [
   {
@@ -129,49 +130,6 @@ const TransportSolution = () => {
     <div>
       <Header />
 
-      {/* <section className="employee-transport section-container">
-        <div className="employee-content">
-          <h1>
-            Employee Transport <span>Solutions</span>
-          </h1>
-          <p>
-            Seamless, safe, and efficient transportation solutions for your
-            workforce. From daily office commutes to corporate events, we ensure
-            your employees travel with comfort and reliability.
-          </p>
-          <div className="cta-buttons">
-            <Link href="#quote-section">
-              <button className="primary-btn" id="quote-btn">
-                Get Quote Now →
-              </button>
-            </Link>
-            <a href="tel:+919876543210" className="secondary-btn">
-              Call: +91 98765 43210
-            </a>
-          </div>
-        </div>
-        <div className="employee-image">
-          <Image
-            src="/bus.jpg"
-            alt="Employee Transport"
-            width={600}
-            height={400}
-            className="image"
-          />
-        </div>
-      </section> */}
-      {/* 
-      <section className="stats-section section-container">
-        <div className="stats-grid">
-          {stats.map((item) => (
-            <div key={item.id} className="stat-card">
-              <div className="stat-icon">{item.icon}</div>
-              <h3>{item.value}</h3>
-              <p>{item.label}</p>
-            </div>
-          ))}
-        </div>
-      </section> */}
       <section className="employee-transport section-container" id="desktop">
         <Image
           src="./inn1.jpg"
@@ -285,7 +243,7 @@ const TransportSolution = () => {
         </div>
       </section>
 
-      <section className="why section-container">
+      <section className="why section-container" id="service-why-section">
         <div className="why-wrap">
           <header className="why-head">
             <h2>What Makes Us the Best Choice</h2>
@@ -332,93 +290,7 @@ const TransportSolution = () => {
         </div>
       </section>
 
-      <section className="quote-section section-container" id="quote-section">
-        <div className="quote-info">
-          <h2>
-            Request a <span>Custom Quote</span>
-          </h2>
-          <p>
-            Tell us about your employee transport requirements and we'll provide
-            a tailored solution with competitive pricing.
-          </p>
-          <ul className="benefits-list">
-            <li>Free consultation and route assessment</li>
-            <li>Customized pricing based on your needs</li>
-            <li>Flexible contracts with no hidden fees</li>
-            <li>24/7 support and real‑time tracking</li>
-          </ul>
-          <button className="tag-btn">Get Started Today</button>
-        </div>
-
-        <div className="quote-form">
-          <h3>Get Your Quote</h3>
-          <p>
-            Fill out the form below and we'll get back to you within 24 hours.
-          </p>
-          {/* <form>
-            <div className="form-grid">
-              <input type="text" placeholder="Company Name" required />
-              <input type="text" placeholder="Contact Person" required />
-              <input type="email" placeholder="Email Address" required />
-              <input type="tel" placeholder="+91 98765 43210" required />
-              <select required>
-                <option value="">Number of Employees</option>
-                <option>1 - 50</option>
-                <option>51 - 200</option>
-                <option>200+</option>
-              </select>
-              <input type="text" placeholder="Locations / Routes" />
-              <textarea
-                placeholder="Tell us about your specific needs, timings, or special requirements..."
-                rows="4"
-              />
-            </div>
-
-            <button type="submit" className="primary-btn">
-              Request Quote →
-            </button>
-          </form> */}
-          <form>
-            <div className="form-grid">
-              <input type="text" placeholder="Enter Your Name" required />
-              <input type="email" placeholder="Enter Email ID" required />
-              <input
-                type="tel"
-                placeholder="Phone No"
-                required
-                pattern="^\+91\s[1-9]{1}[0-9]{9}$"
-              />
-              <select required>
-                <option value="">Select Service Type</option>
-                <option>Chauffeur Driven</option>
-                <option>Self Drive</option>
-              </select>
-              <select required>
-                <option value="">Select Vehicle Type</option>
-                <option>SUV</option>
-                <option>Sedan</option>
-                <option>Luxury</option>
-              </select>
-              <input
-                type="number"
-                placeholder="No. of Travellers"
-                required
-                min="1"
-              />
-              <input type="text" placeholder="Enter City Name" required />
-              <input type="date" placeholder="dd/mm/yyyy" required />
-              <textarea
-                placeholder="Any specific requirement / itinerary"
-                rows="4"
-              />
-
-              <button type="submit" className="primary-btn">
-                Request Quote →
-              </button>
-            </div>
-          </form>
-        </div>
-      </section>
+      <ServiceBookingForm />
 
       <SiteFooter />
     </div>

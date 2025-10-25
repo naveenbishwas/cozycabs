@@ -169,7 +169,7 @@ const ChauffeurCarRental = () => {
       </section>
 
       {/* Why Us Section */}
-      <section className="why section-container">
+      <section className="why section-container" id="service-why-section">
         <header className="why-head">
           <h2>What Makes Us the Best Choice</h2>
           <p>

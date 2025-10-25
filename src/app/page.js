@@ -1047,183 +1047,197 @@ export default function Home() {
         {/* Fleet Cards */}
         <div className="fleet-grid">
           {/* Premium */}
-          <div className="fleet-card">
-            <div className="fleet-image">
-              <Image
-                // src="/ty2.png"
-                src="./p-cars.jpeg"
-                alt="car-images"
-                width={0}
-                height={0}
-                unoptimized
-              ></Image>
-              <span className="rating">⭐ 4.8</span>
-            </div>
-            <div className="fleet-body">
-              <h3>Premium</h3>
-              <p>Luxury vehicles for executive travel and special occasions</p>
-              <div className="fleet-info">
-                <span>👥 Seating</span>
-                <span>4 Seater</span>
+          <Link href="/Premium">
+            <div className="fleet-card">
+              <div className="fleet-image">
+                <Image
+                  // src="/ty2.png"
+                  src="./p-cars.jpeg"
+                  alt="car-images"
+                  width={0}
+                  height={0}
+                  unoptimized
+                ></Image>
+                <span className="rating">⭐ 4.8</span>
               </div>
-              <div className="fleet-info">
-                <span>🪙 Starting at</span>
-                <span>₹25/km</span>
+              <div className="fleet-body">
+                <h3>Premium</h3>
+                <p>
+                  Luxury vehicles for executive travel and special occasions
+                </p>
+                <div className="fleet-info">
+                  <span>👥 Seating</span>
+                  <span>4 Seater</span>
+                </div>
+                <div className="fleet-info">
+                  <span>🪙 Starting at</span>
+                  <span>₹25/km</span>
+                </div>
+                <h4>Key Features:</h4>
+                <ul>
+                  <li>Leather Interiors</li>
+                  <li>Climate Control</li>
+                  <li>Premium Sound System</li>
+                </ul>
+                <button className="btn-primary">View Premium Cars</button>
               </div>
-              <h4>Key Features:</h4>
-              <ul>
-                <li>Leather Interiors</li>
-                <li>Climate Control</li>
-                <li>Premium Sound System</li>
-              </ul>
-              <button className="btn-primary">View Premium Cars</button>
             </div>
-          </div>
+          </Link>
 
           {/* Luxury */}
-          <div className="fleet-card">
-            <div className="fleet-image">
-              <Image
-                src="/l123.jpeg"
-                alt="car-images"
-                width={0}
-                height={0}
-                unoptimized
-              ></Image>
-              <span className="rating">⭐ 4.9</span>
-            </div>
-            <div className="fleet-body">
-              <h3>Luxury</h3>
-              <p>
-                High-end vehicles with superior comfort and advanced features
-              </p>
-              <div className="fleet-info">
-                <span>👥 Seating</span>
-                <span>4 Seater</span>
+          <Link href="/Luxury">
+            <div className="fleet-card">
+              <div className="fleet-image">
+                <Image
+                  src="/l123.jpeg"
+                  alt="car-images"
+                  width={0}
+                  height={0}
+                  unoptimized
+                ></Image>
+                <span className="rating">⭐ 4.9</span>
               </div>
-              <div className="fleet-info">
-                <span>🪙 Starting at</span>
-                <span>₹35/km</span>
+              <div className="fleet-body">
+                <h3>Luxury</h3>
+                <p>
+                  High-end vehicles with superior comfort and advanced features
+                </p>
+                <div className="fleet-info">
+                  <span>👥 Seating</span>
+                  <span>4 Seater</span>
+                </div>
+                <div className="fleet-info">
+                  <span>🪙 Starting at</span>
+                  <span>₹35/km</span>
+                </div>
+                <h4>Key Features:</h4>
+                <ul>
+                  <li>Massage Seats</li>
+                  <li>Entertainment System</li>
+                  <li>Mini Bar</li>
+                </ul>
+                <button className="btn-primary">View Luxury Cars</button>
               </div>
-              <h4>Key Features:</h4>
-              <ul>
-                <li>Massage Seats</li>
-                <li>Entertainment System</li>
-                <li>Mini Bar</li>
-              </ul>
-              <button className="btn-primary">View Luxury Cars</button>
             </div>
-          </div>
+          </Link>
 
           {/* Economy */}
-          <div className="fleet-card">
-            <div className="fleet-image">
-              <Image
-                src="/dz.avif"
-                alt="car-images"
-                width={0}
-                height={0}
-                unoptimized
-              ></Image>
-              <span className="rating">⭐ 4.6</span>
-            </div>
-            <div className="fleet-body">
-              <h3>Economy</h3>
-              <p>
-                Comfortable and affordable options for everyday travel needs
-              </p>
-              <div className="fleet-info">
-                <span>👥 Seating</span>
-                <span>4 Seater</span>
+          <Link href="/Economy">
+            <div className="fleet-card">
+              <div className="fleet-image">
+                <Image
+                  src="/dz.avif"
+                  alt="car-images"
+                  width={0}
+                  height={0}
+                  unoptimized
+                ></Image>
+                <span className="rating">⭐ 4.6</span>
               </div>
-              <div className="fleet-info">
-                <span>🪙 Starting at</span>
-                <span>₹12/km</span>
+              <div className="fleet-body">
+                <h3>Economy</h3>
+                <p>
+                  Comfortable and affordable options for everyday travel needs
+                </p>
+                <div className="fleet-info">
+                  <span>👥 Seating</span>
+                  <span>4 Seater</span>
+                </div>
+                <div className="fleet-info">
+                  <span>🪙 Starting at</span>
+                  <span>₹12/km</span>
+                </div>
+                <h4>Key Features:</h4>
+                <ul>
+                  <li>Air Conditioning</li>
+                  <li>GPS Navigation</li>
+                  <li>Clean Interiors</li>
+                </ul>
+                <button className="btn-primary">View Economy Cars</button>
               </div>
-              <h4>Key Features:</h4>
-              <ul>
-                <li>Air Conditioning</li>
-                <li>GPS Navigation</li>
-                <li>Clean Interiors</li>
-              </ul>
-              <button className="btn-primary">View Economy Cars</button>
             </div>
-          </div>
+          </Link>
         </div>
 
         <div className="fleet-grid" id="flex">
           {/* Buses & Coaches */}
-          <div className="fleet-card">
-            <div className="fleet-image">
-              <Image
-                src="/bus22.jpeg"
-                alt="car-images"
-                width={0}
-                height={0}
-                unoptimized
-              ></Image>
-              <span className="rating">⭐ 4.8</span>
-            </div>
-            <div className="fleet-body">
-              <h3>Buses & Coaches</h3>
-              <p>Large capacity vehicles for group travel and events</p>
-              <div className="fleet-info">
-                <span>👥 Seating</span>
-                <span>12-45 Seater</span>
+          <Link href="/BusesAndCoach">
+            <div className="fleet-card">
+              <div className="fleet-image">
+                <Image
+                  src="/bus22.jpeg"
+                  alt="car-images"
+                  width={0}
+                  height={0}
+                  unoptimized
+                ></Image>
+                <span className="rating">⭐ 4.8</span>
               </div>
-              <div className="fleet-info">
-                <span>🪙 Starting at</span>
-                <span>₹18/km</span>
+              <div className="fleet-body">
+                <h3>Buses & Coaches</h3>
+                <p>Large capacity vehicles for group travel and events</p>
+                <div className="fleet-info">
+                  <span>👥 Seating</span>
+                  <span>12-45 Seater</span>
+                </div>
+                <div className="fleet-info">
+                  <span>🪙 Starting at</span>
+                  <span>₹18/km</span>
+                </div>
+                <h4>Key Features:</h4>
+                <ul>
+                  <li>Spacious Seating</li>
+                  <li>Luggage Space</li>
+                  <li>Group Travel</li>
+                </ul>
+                <button className="btn-primary">
+                  View Buses & Coaches Cars
+                </button>
               </div>
-              <h4>Key Features:</h4>
-              <ul>
-                <li>Spacious Seating</li>
-                <li>Luggage Space</li>
-                <li>Group Travel</li>
-              </ul>
-              <button className="btn-primary">View Buses & Coaches Cars</button>
             </div>
-          </div>
+          </Link>
 
           {/* Innova Crysta */}
-          <div className="fleet-card">
-            <div className="fleet-image">
-              <Image
-                src="/ty.webp"
-                alt="Innova Crysta rental car"
-                width={0}
-                height={0}
-                unoptimized
-              />
-              <span className="rating">⭐ 4.9</span>
-            </div>
-
-            <div className="fleet-body">
-              <h3>Innova Crysta</h3>
-              <p>Luxury MPV with comfort and performance.</p>
-
-              <div className="fleet-info">
-                <span>👥 Seating</span>
-                <span>7 + 1 Seater</span>
+          <Link href="/InnovaDelhi">
+            <div className="fleet-card">
+              <div className="fleet-image">
+                <Image
+                  src="/ty.webp"
+                  alt="Innova Crysta rental car"
+                  width={0}
+                  height={0}
+                  unoptimized
+                />
+                <span className="rating">⭐ 4.9</span>
               </div>
 
-              <div className="fleet-info">
-                <span>🪙 Starting at</span>
-                <span>₹14/km</span>
+              <div className="fleet-body">
+                <h3>Innova Crysta</h3>
+                <p>Luxury MPV with comfort and performance.</p>
+
+                <div className="fleet-info">
+                  <span>👥 Seating</span>
+                  <span>7 + 1 Seater</span>
+                </div>
+
+                <div className="fleet-info">
+                  <span>🪙 Starting at</span>
+                  <span>₹14/km</span>
+                </div>
+
+                <h4>Key Features:</h4>
+                <ul>
+                  <li>Premium Leather Interior</li>
+                  <li>Dual-Zone Climate Control</li>
+                  <li>Spacious Cabin with Reclining Seats</li>
+                </ul>
+
+                <button className="btn-primary">
+                  View Innova Crysta Rentals
+                </button>
               </div>
-
-              <h4>Key Features:</h4>
-              <ul>
-                <li>Premium Leather Interior</li>
-                <li>Dual-Zone Climate Control</li>
-                <li>Spacious Cabin with Reclining Seats</li>
-              </ul>
-
-              <button className="btn-primary">
-                View Innova Crysta Rentals
-              </button>
             </div>
-          </div>
+          </Link>
         </div>
       </section>
 
@@ -1551,122 +1565,6 @@ export default function Home() {
           })}
         </div>
       </section>
-
-      {/* Testimonial A */}
-      {/* <section className="t-wrap" aria-labelledby="t-title">
-        <div className="t-container">
-          <p className="t-eyebrow">Testimonial</p>
-          <div className="ba__rule">
-            <span className="ba__dot"></span>
-          </div>
-          <h2 id="t-title" className="t-title">
-            What Our Clients Love <br /> About Us
-          </h2>
-
-          <div className="t-frame">
-            <figure className="t-hero">
-              <Image
-                src={activePrimary.hero}
-                alt="testimonial"
-                unoptimized
-                width={0}
-                height={0}
-              />
-              <div className="t-quote">
-                <svg
-                  viewBox="0 0 24 24"
-                  width="28"
-                  height="28"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M9 7H5a1 1 0 0 0-1 1v8h6V8a1 1 0 0 0-1-1Zm10 0h-4a1 1 0 0 0-1 1v8h6V8a1 1 0 0 0-1-1Z"
-                    fill="#fff"
-                  />
-                </svg>
-              </div>
-            </figure>
-
-            <div className="t-content">
-              <div
-                className="t-avatars"
-                role="tablist"
-                aria-label="Select testimonial"
-              >
-                {TESTIMONIALS_PRIMARY.map((person, avatarIdx) => (
-                  <button
-                    key={person.id}
-                    className={`t-avatar ${
-                      avatarIdx === primaryIndex ? "is-active" : ""
-                    }`}
-                    role="tab"
-                    aria-selected={avatarIdx === primaryIndex}
-                    onClick={() => setPrimaryIndex(avatarIdx)}
-                  >
-                    <img src={person.avatar} alt={`${person.name} avatar`} />
-                  </button>
-                ))}
-              </div>
-
-              <p className="t-text">{activePrimary.text}</p>
-
-              <div
-                className="t-stars"
-                aria-label={`${activePrimary.rating} out of 5 stars`}
-              >
-                {Array.from({ length: activePrimary.rating }).map((_, k) => (
-                  <svg
-                    key={k}
-                    viewBox="0 0 24 24"
-                    width="24"
-                    height="24"
-                    aria-hidden="true"
-                  >
-                    <path
-                      d="m12 17.27 6.18 3.73-1.64-7.03L21 9.24l-7.19-.62L12 2 10.19 8.62 3 9.24l4.46 4.73-1.64 7.03L12 17.27Z"
-                      fill="#f0b90b"
-                    />
-                  </svg>
-                ))}
-              </div>
-
-
-              <div className="t-person">
-                <Image
-                  className="t-person-avatar"
-                  src={activePrimary.avatar}
-                  alt="client"
-                  width={0}
-                  height={0}
-                  unoptimized
-                />
-                <div>
-                  <div className="t-person-name">{activePrimary.name}</div>
-                  <div className="t-person-role">{activePrimary.role}</div>
-                </div>
-              </div>
-
-
-              <div className="t-arrows">
-                <button
-                  className="t-arrow"
-                  aria-label="Previous testimonial"
-                  onClick={goPrimaryPrev}
-                >
-                  <ArrowLeftIcon />
-                </button>
-                <button
-                  className="t-arrow"
-                  aria-label="Next testimonial"
-                  onClick={goPrimaryNext}
-                >
-                  <ArrowRightIcon />
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> */}
 
       <Footer />
     </>

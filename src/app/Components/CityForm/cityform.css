@@ -102,6 +102,7 @@ textarea {
 
 .terms input[type="checkbox"] {
   width: unset !important;
+  height: auto !important;
 }
 
 .terms a {

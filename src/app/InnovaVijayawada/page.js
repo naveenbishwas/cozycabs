@@ -124,7 +124,8 @@ const Innovainvijayawada = () => {
         </h2>
         <p>
           Experience premium comfort and reliability with India’s most trusted
-          MPV. Perfect for family trips, corporate travel, and special occasions.
+          MPV. Perfect for family trips, corporate travel, and special
+          occasions.
         </p>
         <div className="innova-highlight-box">
           <p>
@@ -146,34 +147,61 @@ const Innovainvijayawada = () => {
       <section className="innova-faq-section">
         <div className="innova-faq-header">
           <h2>Frequently Asked Questions</h2>
-          <p>Answers to the most common questions...</p>
+          Answers to the most common questions about our corporate
+          transportation program.
         </div>
         <div>
           {faqs.map((item, i) => {
             const open = openIndex === i;
             return (
-              <div key={i} className={`innova-faq-item ${open ? "open" : ""}`}>
+              // <div key={i} className={`innova-faq-item ${open ? "open" : ""}`}>
+              //   <button
+              //     onClick={() => toggle(i)}
+              //     className="innova-faq-question"
+              //   >
+              //     <span>{item.q}</span>
+              //     <svg
+              //       className={`innova-faq-icon ${open ? "rotated" : ""}`}
+              //       xmlns="http://www.w3.org/2000/svg"
+              //       fill="none"
+              //       viewBox="0 0 24 24"
+              //       strokeWidth="1.5"
+              //       stroke="currentColor"
+              //     >
+              //       <path
+              //         strokeLinecap="round"
+              //         strokeLinejoin="round"
+              //         d="m19.5 8.25-7.5 7.5-7.5-7.5"
+              //       />
+              //     </svg>
+              //   </button>
+              //   <div className={`innova-faq-answer ${open ? "show" : ""}`}>
+              //     <p>{item.a}</p>
+              //   </div>
+              // </div>
+              <div
+                className={`faq-item ${open ? "open" : ""}`}
+                key={i}
+                role="listitem"
+              >
                 <button
+                  className="faq-question"
+                  aria-expanded={open}
+                  aria-controls={`faq-panel-${i}`}
+                  id={`faq-control-${i}`}
                   onClick={() => toggle(i)}
-                  className="innova-faq-question"
                 >
-                  <span>{item.q}</span>
-                  <svg
-                    className={`innova-faq-icon ${open ? "rotated" : ""}`}
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth="1.5"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="m19.5 8.25-7.5 7.5-7.5-7.5"
-                    />
-                  </svg>
+                  <span className="faq-q-text">{item.q}</span>
+                  <span className="faq-icon" aria-hidden="true" />
                 </button>
-                <div className={`innova-faq-answer ${open ? "show" : ""}`}>
+
+                <div
+                  id={`faq-panel-${i}`}
+                  role="region"
+                  aria-labelledby={`faq-control-${i}`}
+                  className="faq-answer"
+                  style={{ maxHeight: open ? "300px" : "0px" }}
+                >
                   <p>{item.a}</p>
                 </div>
               </div>

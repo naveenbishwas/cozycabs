@@ -1,0 +1,287 @@
+/* Quote Section */
+
+:root {
+  --brandColor: #d80117;
+  --brandColorDark: #b40013;
+  --textDark: #222222;
+  --textLight: #555555;
+  --mutedBg: #f2f2f2;
+  --sectionBg: #fafafa;
+  --iconBg: #ffe5e8;
+  --cardBg: #ffffff;
+  --cardBorder: #e3e3e3;
+  --shadowLight: rgba(0, 0, 0, 0.05);
+  --shadowStrong: rgba(0, 0, 0, 0.15);
+  --radiusDefault: 12px;
+  --transitionDefault: 0.3s ease;
+}
+
+.quote-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 60px;
+  padding: 80px 5%;
+  background: linear-gradient(135deg, #ffffff 0%, #fbecec 100%);
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radiusDefault);
+  box-shadow: 0 8px 20px var(--shadowLight);
+  margin: 60px auto 80px;
+}
+
+.quote-section::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(
+    circle,
+    rgba(216, 1, 23, 0.08) 0%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.quote-section::after {
+  content: "";
+  position: absolute;
+  bottom: -30%;
+  left: -10%;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(
+    circle,
+    rgba(216, 1, 23, 0.05) 0%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.quote-info {
+  flex: 1;
+  position: relative;
+  z-index: 1;
+}
+
+.tag-btn {
+  background: linear-gradient(135deg, #000000 0%, #333333 100%);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  cursor: default;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.tag-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.5s;
+}
+
+.tag-btn:hover::before {
+  left: 100%;
+}
+
+.quote-info h2 {
+  font-size: 38px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: var(--textDark);
+  line-height: 1.2;
+}
+
+.quote-info h2 span {
+  color: var(--brandColor);
+}
+
+.quote-info p {
+  font-size: 17px;
+  color: var(--textLight);
+  margin-bottom: 30px;
+  line-height: 1.7;
+}
+
+.benefits-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.benefits-list li {
+  font-size: 16px;
+  color: var(--textDark);
+  margin-bottom: 16px;
+  padding: 12px 0;
+  position: relative;
+  padding-left: 35px;
+  transition: all 0.3s ease;
+}
+
+.benefits-list li::before {
+  content: "✅";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.benefits-list li:hover {
+  color: var(--brandColor);
+  padding-left: 40px;
+}
+
+/* Quote Form */
+
+.quote-form {
+  flex: 1;
+  background: var(--cardBg);
+  padding: 40px;
+  border-radius: var(--radiusDefault);
+  box-shadow: 0 20px 40px var(--shadowLight), 0 0 0 1px var(--cardBorder);
+  position: relative;
+  z-index: 1;
+}
+
+.quote-form::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--brandColor) 0%, #ff4757 100%);
+  border-radius: var(--radiusDefault) var(--radiusDefault) 0 0;
+}
+
+.quote-form h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: var(--textDark);
+}
+
+.quote-form p {
+  font-size: 15px;
+  color: var(--textLight);
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.form-grid input,
+.form-grid select,
+textarea {
+  width: 100%;
+  padding: 16px 18px;
+  border: 2px solid var(--cardBorder);
+  border-radius: var(--radiusDefault);
+  font-size: 14px;
+  outline: none;
+  background: var(--sectionBg);
+  color: var(--textDark);
+  transition: all 0.3s ease;
+}
+
+.form-grid input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--brandColor);
+  box-shadow: 0 0 0 4px rgba(216, 1, 23, 0.1), 0 4px 12px var(--shadowLight);
+  transform: translateY(-1px);
+}
+
+.form-grid input:hover,
+textarea:hover,
+select:hover {
+  border-color: var(--textDark);
+  box-shadow: 0 2px 8px var(--shadowLight);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+  grid-column: 1 / -1;
+  margin-bottom: 25px;
+}
+
+/* Quote Form Button */
+
+.quote-form .primary-btn {
+  width: 100%;
+  background: linear-gradient(135deg, var(--brandColor) 0%, #ff4757 100%);
+  color: #fff;
+  border: none;
+  padding: 18px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: var(--radiusDefault);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 8px 25px var(--shadowStrong);
+}
+
+.quote-form .primary-btn:hover {
+  background: linear-gradient(135deg, var(--brandColorDark) 0%, #e63946 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px var(--shadowStrong);
+}
+
+.quote-form .primary-btn:hover::before {
+  /* Optional shimmer effect if you want */
+}
+
+/* Responsiveness for Quote Section */
+
+@media (max-width: 992px) {
+  .quote-section {
+    flex-direction: column;
+    padding: 60px 5%;
+    gap: 40px;
+  }
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+  .quote-info h2 {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 576px) {
+  .quote-section {
+    padding: 40px 3%;
+  }
+  .quote-info h2 {
+    font-size: 28px;
+  }
+}

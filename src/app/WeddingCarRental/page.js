@@ -14,6 +14,7 @@ import {
   FaGlobe,
   FaBalanceScale,
 } from "react-icons/fa";
+import ServiceBookingForm from "../Components/ServicesBookingForm/page";
 
 function Feature({ icon, title, text }) {
   return (
@@ -165,7 +166,7 @@ const WeddingCarRental = () => {
       </section>
 
       {/* Why Us Section */}
-      <section className="why section-container">
+      <section className="why section-container" id="service-why-section">
         <header className="why-head">
           <h2>What Makes Us the Best Choice</h2>
           <p>
@@ -210,71 +211,7 @@ const WeddingCarRental = () => {
       </section>
 
       {/* Quote Section with Form */}
-      <section className="quote-section section-container" id="quote-section">
-        <div className="quote-info">
-          <h2>
-            Request a <span>Custom Quote</span>
-          </h2>
-          <p>
-            Tell us about your wedding travel requirements and we'll provide a
-            tailored package with competitive pricing.
-          </p>
-          <ul className="benefits-list">
-            <li>Luxury & vintage car options</li>
-            <li>Decorated vehicles tailored for weddings</li>
-            <li>Professional chauffeurs in uniform</li>
-            <li>24/7 support and reliable service</li>
-          </ul>
-          <button className="tag-btn">Get Started Today</button>
-        </div>
-
-        <div className="quote-form">
-          <h3>Get Your Quote</h3>
-          <p>
-            Fill out the form below and we'll get back to you within 24 hours.
-          </p>
-          <form>
-            <div className="form-grid">
-              <input type="text" placeholder="Enter Your Name" required />
-              <input type="email" placeholder="Enter Email ID" required />
-              <input
-                type="tel"
-                placeholder="Phone No"
-                required
-                pattern="^\+91\s[1-9]{1}[0-9]{9}$"
-              />
-              <select required>
-                <option value="">Select Service Type</option>
-                <option>Chauffeur Driven</option>
-                <option>Self Drive</option>
-              </select>
-              <select required>
-                <option value="">Select Vehicle Type</option>
-                <option>SUV</option>
-                <option>Sedan</option>
-                <option>Luxury</option>
-              </select>
-              <input
-                type="number"
-                placeholder="No. of Travellers"
-                required
-                min="1"
-              />
-              <input type="text" placeholder="Enter City Name" required />
-              <input type="date" placeholder="dd/mm/yyyy" required />
-              <textarea
-                placeholder="Any specific requirement / itinerary"
-                rows="4"
-              />
-
-              <button type="submit" className="primary-btn">
-                Request Quote →
-              </button>
-            </div>
-          </form>
-        </div>
-      </section>
-
+      <ServiceBookingForm />
       <SiteFooter />
     </div>
   );
