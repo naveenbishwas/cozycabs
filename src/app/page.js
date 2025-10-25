@@ -6,6 +6,7 @@ import Header from "./Components/Header/page";
 import { useState, useEffect, useRef } from "react";
 import Footer from "./Components/Footer/page";
 import Link from "next/link";
+import CityForm from "./Components/CityForm/page";
 
 /* ------------------------------------------------------------------ */
 /* Small inline icon components (single set used by both sliders)     */
@@ -819,122 +820,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bookcar-section" id="book-your-car">
-        <h2 className="bookcar-title">
-          Book Your <span className="red-black">Car</span>
-        </h2>
-
-        <form className="bookcar-form" onSubmit={handleSubmitBookCar}>
-          {/* Row 1 */}
-          <div className="form-row">
-            <input
-              type="text"
-              placeholder="Enter Your Name"
-              value={formData.name}
-              onChange={handleNameChange}
-              required
-            />
-            <input
-              type="email"
-              placeholder="Enter Email Id"
-              value={formData.email}
-              onChange={(e) =>
-                setFormData({ ...formData, email: e.target.value })
-              }
-              required
-            />
-            <div className="phone-group">
-              <select>
-                <option>+91</option>
-                <option>+1</option>
-                <option>+44</option>
-              </select>
-              <input
-                type="tel"
-                placeholder="Phone No"
-                value={formData.phone}
-                onChange={handlePhoneChange}
-                required
-              />
-            </div>
-          </div>
-
-          {/* Row 2 */}
-          <div className="form-row">
-            <select>
-              <option>Select Service Option</option>
-              <option>Chauffeur Driven</option>
-              <option>Self Driven</option>
-            </select>
-            <select>
-              <option>India</option>
-            </select>
-            <input
-              type="date"
-              min={today}
-              value={formData.date}
-              onChange={(e) =>
-                setFormData({ ...formData, date: e.target.value })
-              }
-              required
-            />
-          </div>
-
-          {/* Row 3 */}
-          <div className="form-row">
-            <select>
-              <option>Select Service Type</option>
-              <option>Corporate Car Rental</option>
-              <option>Employee Transport Solutions</option>
-              <option>Global Car Rental</option>
-              <option>Hotel Travel Desk</option>
-              <option>Conference & Delegation</option>
-              <option>Event Transportation</option>
-              <option>Wedding Car Rental</option>
-              <option>Travel Partners Program</option>
-              <option>Chauffeured Car Rental</option>
-            </select>
-            <select>
-              <option>Select Vehicle Type</option>
-            </select>
-            <input type="text" placeholder="Enter City Name" required />
-          </div>
-
-          {/* Row 4 */}
-          <div className="form-row" id="travel-input">
-            <input
-              type="number"
-              placeholder="No. of Travellers"
-              value={formData.travellers}
-              onChange={handleTravellerChange}
-              min="1"
-              required
-            />
-          </div>
-
-          <textarea
-            placeholder="Any specific requirement / itinerary"
-            rows="3"
-          ></textarea>
-
-          {/* Footer */}
-          <div className="form-footer">
-            <div className="terms">
-              <input type="checkbox" required />
-              <p>
-                By clicking <strong>"Send Enquiry"</strong> button, you agree to
-                our <a href="#">Terms & Conditions</a> and{" "}
-                <a href="#">Privacy Policy</a>.
-              </p>
-            </div>
-            <div className="book-form-btn">
-              <button type="submit" className="submit-btn">
-                Send Enquiry
-              </button>
-            </div>
-          </div>
-        </form>
-      </section>
+      <CityForm />
 
       <section className="trust">
         <div className="wrap">

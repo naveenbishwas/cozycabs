@@ -4,6 +4,9 @@ import React, { useState } from "react";
 import "./cityform.css";
 
 const CityForm = () => {
+  const [selectedService, setSelectedService] = useState("");
+  const [vehicleOptions, setVehicleOptions] = useState([]);
+
   function handleSubmit(e) {
     e.preventDefault();
     const data = Object.fromEntries(new FormData(e.currentTarget).entries());
@@ -132,6 +135,35 @@ const CityForm = () => {
     console.log("Form Data Submitted:", formData);
   };
 
+  const serviceToVehicles = {
+    Premium: [
+      "Toyota Fortuner",
+      "Toyota Innova Crysta",
+      "Toyota Innova Hycross",
+    ],
+    Luxury: [
+      "Audi A6",
+      "Audi Q7",
+      "BMW 5 Series",
+      "Mercedes GLS",
+      "Mercedes-Benz E Class",
+    ],
+    Economy: ["Honda City", "Maruti Ciaz", "Maruti Swift Dzire"],
+    "Bus & Coach": [
+      "45 Seater Volvo",
+      "Mercedes Sprinter",
+      "Toyota Commuter",
+      "Toyota Vellfire",
+      "Toyota Ventury (V Class)",
+    ],
+  };
+
+  const handleServiceChange = (e) => {
+    const service = e.target.value;
+    setSelectedService(service);
+    setVehicleOptions(serviceToVehicles[service] || []);
+  };
+
   return (
     <div>
       <section className="bookcar-section" id="book-your-car">
@@ -158,7 +190,7 @@ const CityForm = () => {
               }
               required
             />
-            <div className="phone-group">
+            <div className="phone-group" id="pincode">
               <select>
                 <option>+91</option>
                 <option>+1</option>
@@ -178,27 +210,6 @@ const CityForm = () => {
           <div className="form-row">
             <select>
               <option>Select Service Option</option>
-              <option>Chauffeur Driven</option>
-              <option>Self Driven</option>
-            </select>
-            <select>
-              <option>India</option>
-            </select>
-            <input
-              type="date"
-              min={today}
-              value={formData.date}
-              onChange={(e) =>
-                setFormData({ ...formData, date: e.target.value })
-              }
-              required
-            />
-          </div>
-
-          {/* Row 3 */}
-          <div className="form-row">
-            <select>
-              <option>Select Service Type</option>
               <option>Corporate Car Rental</option>
               <option>Employee Transport Solutions</option>
               <option>Global Car Rental</option>
@@ -209,23 +220,60 @@ const CityForm = () => {
               <option>Travel Partners Program</option>
               <option>Chauffeured Car Rental</option>
             </select>
-            <select>
-              <option>Select Vehicle Type</option>
+
+            <input
+              type="date"
+              min={today}
+              value={formData.date}
+              onChange={(e) =>
+                setFormData({ ...formData, date: e.target.value })
+              }
+              required
+            />
+
+            <div className="form-row" id="travel-input">
+              <input
+                type="number"
+                placeholder="No. of Travellers"
+                value={formData.travellers}
+                onChange={handleTravellerChange}
+                min="1"
+                required
+              />
+            </div>
+          </div>
+
+          {/* Row 3 */}
+
+          <div className="form-row">
+            {/* Service Type */}
+            <select onChange={handleServiceChange} value={selectedService}>
+              <option value="">Select Service Type</option>
+              <option value="Premium">Premium</option>
+              <option value="Luxury">Luxury</option>
+              <option value="Economy">Economy</option>
+              <option value="Bus & Coach">Bus & Coach</option>
             </select>
+
+            {/* Vehicle Type */}
+            <select disabled={!vehicleOptions.length}>
+              <option value="">
+                {vehicleOptions.length
+                  ? "Select Vehicle Type"
+                  : "Select Service First"}
+              </option>
+              {vehicleOptions.map((vehicle, index) => (
+                <option key={index} value={vehicle}>
+                  {vehicle}
+                </option>
+              ))}
+            </select>
+
+            {/* City Input */}
             <input type="text" placeholder="Enter City Name" required />
           </div>
 
           {/* Row 4 */}
-          <div className="form-row" id="travel-input">
-            <input
-              type="number"
-              placeholder="No. of Travellers"
-              value={formData.travellers}
-              onChange={handleTravellerChange}
-              min="1"
-              required
-            />
-          </div>
 
           <textarea
             placeholder="Any specific requirement / itinerary"
