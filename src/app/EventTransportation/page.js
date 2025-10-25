@@ -15,6 +15,7 @@ import {
   FaBalanceScale,
 } from "react-icons/fa";
 import ServiceBookingForm from "../Components/ServicesBookingForm/page";
+import CityForm from "../Components/CityForm/page";
 
 function Feature({ icon, title, text }) {
   return (
@@ -244,7 +245,7 @@ const EventTransportation = () => {
       </section>
 
       {/* Quote Section with Form */}
-      <ServiceBookingForm />
+      <CityForm />
 
       <SiteFooter />
     </div>

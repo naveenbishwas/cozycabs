@@ -14,6 +14,7 @@ import {
   FaGlobe,
   FaBalanceScale,
 } from "react-icons/fa";
+import CityForm from "../Components/CityForm/page";
 
 function Feature({ icon, title, text }) {
   return (
@@ -214,70 +215,7 @@ const ChauffeurCarRental = () => {
       </section>
 
       {/* Quote Section with Form */}
-      <section className="quote-section section-container" id="quote-section">
-        <div className="quote-info">
-          <button className="tag-btn">Get Started Today</button>
-          <h2>
-            Book Your <span>Chauffeur Car</span>
-          </h2>
-          <p>
-            Tell us about your travel needs and we'll provide a customized
-            chauffeur-driven package with clear pricing.
-          </p>
-          <ul className="benefits-list">
-            <li>Luxury sedans, SUVs & premium cars</li>
-            <li>Trained & uniformed chauffeurs</li>
-            <li>Pan-India availability with 24/7 support</li>
-            <li>All-inclusive, transparent packages</li>
-          </ul>
-        </div>
-
-        <div className="quote-form">
-          <h3>Get Your Quote</h3>
-          <p>
-            Fill out the form below and we'll get back to you within 24 hours.
-          </p>
-          <form>
-            <div className="form-grid">
-              <input type="text" placeholder="Enter Your Name" required />
-              <input type="email" placeholder="Enter Email ID" required />
-              <input
-                type="tel"
-                placeholder="Phone No"
-                required
-                pattern="^\+91\s[1-9]{1}[0-9]{9}$"
-              />
-              <select required>
-                <option value="">Select Service Type</option>
-                <option>Chauffeur Driven</option>
-                <option>Self Drive</option>
-              </select>
-              <select required>
-                <option value="">Select Vehicle Type</option>
-                <option>SUV</option>
-                <option>Sedan</option>
-                <option>Luxury</option>
-              </select>
-              <input
-                type="number"
-                placeholder="No. of Travellers"
-                required
-                min="1"
-              />
-              <input type="text" placeholder="Enter City Name" required />
-              <input type="date" placeholder="dd/mm/yyyy" required />
-              <textarea
-                placeholder="Any specific requirement / itinerary"
-                rows="4"
-              />
-
-              <button type="submit" className="primary-btn">
-                Request Quote →
-              </button>
-            </div>
-          </form>
-        </div>
-      </section>
+      <CityForm />
 
       <SiteFooter />
     </div>

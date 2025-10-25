@@ -2489,6 +2489,62 @@ p {
     margin-left: 0;
   }
 }
+
+/* ---------- Banner ---------- */
+.program-banner-df {
+  display: flex;
+  justify-content: center;
+}
+
+.program-banner {
+  position: relative;
+  background-image: url("/ep1.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  max-width: 1000px;
+  width: 100%;
+  height: 400px;
+  color: #fff;
+  padding: 40px;
+  margin: 30px 0;
+  border-radius: 12px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* Add dark overlay for better text visibility */
+.program-banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45); /* Adjust opacity for darkness */
+  border-radius: 12px;
+  z-index: 1;
+}
+
+.program-banner h2,
+.program-banner p {
+  position: relative;
+  z-index: 2;
+  text-align: left;
+}
+
+.program-banner h2 {
+  font-size: 30px;
+  margin-top: 14%;
+  margin-bottom: 10px;
+}
+
+.program-banner p {
+  max-width: 500px;
+  margin-top: 1.5%;
+  color: #e8e8e8;
+}
+
 .teamShowcase {
   padding: 95px 0;
   /* background: linear-gradient(135deg, #343c4e 0%, #111725 100%); */

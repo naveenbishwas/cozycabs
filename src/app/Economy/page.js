@@ -5,6 +5,7 @@ import { FaUsers, FaSuitcase, FaGasPump } from "react-icons/fa";
 import Header from "../Components/Header/page";
 import SiteFooter from "../Components/Footer/page";
 import { FaCouch, FaUserTie, FaClock, FaShieldAlt } from "react-icons/fa";
+import CityForm from "../Components/CityForm/page";
 
 const slides = [
   {
@@ -339,126 +340,7 @@ const Premium = () => {
         </div>
       </section>
 
-      <section className="booking-section">
-        <div className="booking-header">
-          <h2>
-            Book Your Economy <span className="red-black"> Ride</span>
-          </h2>
-          <p>We'll get back to you within 10 minutes</p>
-        </div>
-        <div className="booking-df">
-          <div className="booking-content">
-            <div className="image-wrapper-premium">
-              <img
-                src="https://images.unsplash.com/photo-1577803645773-f96470509666?auto=format&fit=crop&w=800&q=80"
-                alt="Premium Car"
-              />
-            </div>
-
-            <div className="premium-info">
-              <h3>Why Choose Our Premium Service?</h3>
-              <ul>
-                <li>24/7 availability with instant booking confirmation</li>
-                <li>
-                  Professional, courteous, and background-verified drivers
-                </li>
-                <li>Well-maintained, luxury vehicles with premium amenities</li>
-                <li> Transparent pricing with no hidden charges</li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="form-wrapper">
-            <form onSubmit={handleSubmit}>
-              <div className="form-group">
-                <label htmlFor="name">Full Name *</label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  placeholder="Enter your name"
-                  onChange={handleInputChange}
-                />
-                {errors.name && <p className="error">{errors.name}</p>}
-              </div>
-
-              <div className="form-group">
-                <label htmlFor="contact">Contact Number *</label>
-                <input
-                  type="text"
-                  id="contact"
-                  name="contact"
-                  value={formData.contact}
-                  placeholder="+91 XXXXX XXXXX"
-                  onChange={handleInputChange}
-                />
-                {errors.contact && <p className="error">{errors.contact}</p>}
-              </div>
-
-              <div className="form-group">
-                <label htmlFor="pickup">Pickup Location *</label>
-                <input
-                  type="text"
-                  id="pickup"
-                  name="pickup"
-                  value={formData.pickup}
-                  placeholder="Enter pickup address"
-                  onChange={handleInputChange}
-                />
-                {errors.pickup && <p className="error">{errors.pickup}</p>}
-              </div>
-
-              <div className="form-group">
-                <label htmlFor="drop">Drop Location *</label>
-                <input
-                  type="text"
-                  id="drop"
-                  name="drop"
-                  value={formData.drop}
-                  placeholder="Enter drop address"
-                  onChange={handleInputChange}
-                />
-                {errors.drop && <p className="error">{errors.drop}</p>}
-              </div>
-
-              <div className="form-group">
-                <label htmlFor="date">Date & Time *</label>
-                <input
-                  type="datetime-local"
-                  id="date"
-                  name="date"
-                  value={formData.date}
-                  onChange={handleInputChange}
-                />
-                {errors.date && <p className="error">{errors.date}</p>}
-              </div>
-
-              <div className="form-group">
-                <label htmlFor="message">Additional Message (Optional)</label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  placeholder="Any special requirements or notes..."
-                  onChange={handleInputChange}
-                />
-              </div>
-
-              <div className="form-footer">
-                <button type="submit" className="btn-primary">
-                  Book Now
-                </button>
-                <p className="privacy">
-                  We respect your privacy and never share your data. Your
-                  information is secure and will only be used to process your
-                  booking.
-                </p>
-              </div>
-            </form>
-          </div>
-        </div>
-      </section>
+      <CityForm />
 
       <section className="fleet-section">
         <div className="fleet-header">

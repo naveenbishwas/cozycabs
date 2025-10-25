@@ -8,6 +8,7 @@ import Image from "next/image";
 import { FaBuilding, FaUsers, FaBus, FaMapMarkerAlt } from "react-icons/fa";
 import Link from "next/link";
 import ServiceBookingForm from "../Components/ServicesBookingForm/page";
+import CityForm from "../Components/CityForm/page";
 
 const stats = [
   {
@@ -290,7 +291,8 @@ const TransportSolution = () => {
         </div>
       </section>
 
-      <ServiceBookingForm />
+      {/* <ServiceBookingForm /> */}
+      <CityForm />
 
       <SiteFooter />
     </div>

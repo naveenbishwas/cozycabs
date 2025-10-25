@@ -8,6 +8,7 @@ import Image from "next/image";
 import { FaBuilding, FaUsers, FaBus, FaMapMarkerAlt } from "react-icons/fa";
 import Link from "next/link";
 import ServiceBookingForm from "../Components/ServicesBookingForm/page";
+import CityForm from "../Components/CityForm/page";
 
 function Feature({ image, title, text }) {
   return (
@@ -279,7 +280,7 @@ const CorporateCarRental = () => {
         </div>
       </section>
 
-      <ServiceBookingForm />
+      <CityForm />
 
       <SiteFooter />
     </div>
