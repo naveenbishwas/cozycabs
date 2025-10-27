@@ -255,13 +255,13 @@ a {
 }
 
 .ride-images {
-  flex: 1;
+  /* flex: 1; */
 }
 
 .main-img img,
 .sub-images img {
-  width: 100%;
-  height: auto;
+  width: 500px;
+  height: 500px;
   border-radius: var(--radiusDefault);
   box-shadow: 0 8px 20px var(--shadowLight);
 }

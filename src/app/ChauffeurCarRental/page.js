@@ -15,16 +15,7 @@ import {
   FaBalanceScale,
 } from "react-icons/fa";
 import CityForm from "../Components/CityForm/page";
-
-function Feature({ icon, title, text }) {
-  return (
-    <div className="why-card">
-      <div className="why-icon">{icon}</div>
-      <h3 className="why-card-title">{title}</h3>
-      <p className="why-card-text">{text}</p>
-    </div>
-  );
-}
+import CityBestChoice from "../Components/CityBestChoice/page";
 
 const ChauffeurCarRental = () => {
   const aboutCountersRef = useRef(null);
@@ -131,7 +122,7 @@ const ChauffeurCarRental = () => {
         <div className="ride-images">
           <div className="main-img">
             <Image
-              src="/s1.webp"
+              src="/service-car-img.png"
               alt="Chauffeur ride"
               width={500}
               height={350}
@@ -170,49 +161,7 @@ const ChauffeurCarRental = () => {
       </section>
 
       {/* Why Us Section */}
-      <section className="why section-container" id="service-why-section">
-        <header className="why-head">
-          <h2>What Makes Us the Best Choice</h2>
-          <p>
-            Our dedication to premium chauffeur-driven services sets us apart.
-            Here’s why clients trust us nationwide.
-          </p>
-        </header>
-        <div className="why-grid">
-          <Feature
-            icon={<FaCrown />}
-            title="Luxury Fleet at Your Service"
-            text="Choose from luxury sedans, premium SUVs, and high-end cars, perfect for business trips, weddings, airport transfers, and leisure travel."
-          />
-          <Feature
-            icon={<FaUserTie />}
-            title="Professional & Verified Chauffeurs"
-            text="Our chauffeurs are uniformed, background-verified, and trained to provide safe driving, punctual arrivals, and courteous service every time."
-          />
-          <Feature
-            icon={<FaCar />}
-            title="Tailored for Every Need"
-            text="From corporate meetings and VIP transfers to stylish wedding rides and family tours, our rentals are customized to suit every occasion."
-          />
-        </div>
-        <div className="why-grid">
-          <Feature
-            icon={<FaUserShield />}
-            title="Comfort & Convenience"
-            text="Focus on your work or relaxation while our chauffeurs expertly manage routes, traffic, and parking for a stress-free journey."
-          />
-          <Feature
-            icon={<FaGlobe />}
-            title="Pan-India Availability"
-            text="We provide reliable chauffeur-driven car rental services across metros and tier-2/3 cities with on-ground support whenever you need it."
-          />
-          <Feature
-            icon={<FaBalanceScale />}
-            title="Transparent Pricing"
-            text="Our all-inclusive packages cover cars, chauffeurs, and amenities upfront with no hidden charges or last-minute surprises."
-          />
-        </div>
-      </section>
+      <CityBestChoice />
 
       {/* Quote Section with Form */}
       <CityForm />

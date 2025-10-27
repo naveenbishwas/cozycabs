@@ -95,7 +95,7 @@ const InVijayawada = () => {
     },
     {
       title: "Bhavani Island",
-      img: "/invijayawada/Bhavani.png",
+      img: "/Bhavani-Island-Vijayawada.png",
       alt: "Green Bhavani Island on Krishna River",
       paragraphs: [
         "One of India’s largest river islands, Bhavani Island is a green retreat ideal for boating, picnics, and nature walks. Surrounded by the Krishna River, it’s an ideal weekend spot for families and couples.",
@@ -103,7 +103,7 @@ const InVijayawada = () => {
     },
     {
       title: "Gandhi Hill",
-      img: "/invijayawada/Gandhi.png",
+      img: "/Gandhi-Hill-Vijayawada.png",
       alt: "Gandhi Hill viewpoint and memorial in Vijayawada",
       paragraphs: [
         "A memorial dedicated to Mahatma Gandhi, Gandhi Hill offers panoramic city views and houses a planetarium, library, and exhibitions. It’s both educational and scenic, making it a unique attraction in Vijayawada.",

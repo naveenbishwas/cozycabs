@@ -10,22 +10,19 @@ import CityForm from "../Components/CityForm/page";
 const slides = [
   {
     id: 1,
-    image:
-      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1500&q=80",
+    image: "/economy1.png",
     heading: "Luxury at Every Turn",
     subtext: "Experience the elegance of premium cars that define perfection.",
   },
   {
     id: 2,
-    image:
-      "https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?auto=format&fit=crop&w=1500&q=80",
+    image: "/economy2png.png",
     heading: "Performance Meets Power",
     subtext: "Engineered for thrill — crafted for excellence.",
   },
   {
     id: 3,
-    image:
-      "https://images.unsplash.com/photo-1605559424843-9e4c8b3cce98?auto=format&fit=crop&w=1500&q=80",
+    image: "/economy3.png",
     heading: "Drive the Dream",
     subtext: "From streets to highways, own the road with style.",
   },
@@ -36,7 +33,7 @@ const cars = [
     id: 1,
     title: "Honda City",
     subtitle: "Comfort with class.",
-    image: "ec1.jpg",
+    image: "/Honda-City.png",
     description:
       " A favorite among business travelers, the Honda City blends elegant design with smooth performance. Spacious, efficient, and perfect for daily commutes or city-to-city transfers.",
     seating: 5,
@@ -48,7 +45,7 @@ const cars = [
     id: 2,
     title: "Maruti Ciaz",
     subtitle: "Smart, stylish, and dependable.",
-    image: "ec2.jpg",
+    image: "/Maruti-Ciaz.png",
     badge: "Best for Business Trips",
     description:
       "For those who value comfort and economy, the Ciaz offers a refined ride, ample cabin space, and impressive fuel efficiency — ideal for long business drives or family outings.",
@@ -61,7 +58,7 @@ const cars = [
     id: 3,
     title: "Maruti Swift Dzire",
     subtitle: "Simple, efficient, reliable.",
-    image: "ec3.jpg",
+    image: "/Maruti-Swift.png",
     description:
       " Compact, comfortable, and effortlessly economical. The Swift Dzire is India’s go-to sedan for everyday trips, airport transfers, and budget-friendly rides without compromise.",
     seating: 5,

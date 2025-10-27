@@ -53,7 +53,7 @@ const Inbanglore = () => {
   const spots = [
     {
       title: "Bangalore Palace",
-      img: "/inbangalore/Bangalore-Palace.png",
+      img: "/Bangalore-Palace.png",
       alt: "Bangalore Palace exterior",
       paragraphs: [
         "For any visitor, the iconic Bangalore Palace is one of the city’s most fascinating landmarks. Spread across sprawling grounds, the palace instantly transports you into a royal era amidst the bustling modern city. Its Tudor-style architecture, complete with turrets and battlements, makes it look like a fairytale castle right in the heart of Bangalore , Step inside, and the grandeur grows even more. The interiors are adorned with floral motifs, elegant wood carvings, and age-old paintings. Built in 1878, the palace showcases furniture and decor from Victorian, Edwardian, and Neo-Classical periods, making it a true reflection of timeless elegance. A visit here is incomplete without strolling through its lush lawns and experiencing the charm of Bangalore’s regal past ",
@@ -61,7 +61,7 @@ const Inbanglore = () => {
     },
     {
       title: "Vidhana Soudha",
-      img: "/inbangalore/Vidhana-Soudha.png",
+      img: "/Vidhana.png",
       alt: "Vidhana Soudha lit up at night",
       paragraphs: [
         "When it comes to modern history, Vidhana Soudha is the pride of Karnataka. This majestic building, which houses the state legislature, is often described as an “architectural marvel” for its sheer scale and design. It stands as a symbol of democracy while reflecting the cultural richness of the state. Constructed in 1951, the building follows the Neo-Dravidian style of architecture, with influences of Indo-Saracenic design. Spread over 60 acres, it is the largest legislative building in India. While entry inside is restricted, the entire structure lights up beautifully every Sunday evening and on public holidays, turning into a breathtaking spectacle that highlights Bangalore’s grandeur and heritage.",
@@ -69,7 +69,7 @@ const Inbanglore = () => {
     },
     {
       title: "Lalbagh Botanical Garden",
-      img: "/inbangalore/Lalbagh-Botanical.png",
+      img: "/Lalbagh.png",
       alt: "Lalbagh Glass House and gardens",
       paragraphs: [
         "Known as the “green heart” of the city, Lalbagh Botanical Garden spreads across 240 acres and houses one of India’s richest collections of tropical plants. Commissioned by Hyder Ali and later expanded by Tipu Sultan, the garden carries Mughal influences and has been a center of horticultural excellence for centuries.The highlight of Lalbagh is the iconic Glass House, modeled after London’s Crystal Palace, which hosts the famous annual flower shows. The garden also features the historic Lalbagh Rock, dating back 3,000 million years, along with a serene lake and diverse birdlife. Whether you’re a nature enthusiast, a photographer, or a family seeking a quiet retreat, Lalbagh is an unmissable attraction in Bangalore",
@@ -77,7 +77,7 @@ const Inbanglore = () => {
     },
     {
       title: "Cubbon Park & Seshadri Iyer Memorial Hall",
-      img: "/inbangalore/Cubbon-Park.png",
+      img: "/Cubbon.png",
       alt: "Cubbon Park greenery and red library building",
       paragraphs: [
         "Nestled in the heart of the city, Cubbon Park is a peaceful green escape spread across 300 acres. With walking trails, shady avenues, and beautiful landscapes, it is a favorite spot for morning joggers, families, and tourists alike. The park’s charm lies in its calm ambiance, making it a perfect place to relax amid Bangalore’s busy streets. Within Cubbon Park stands the striking Seshadri Iyer Memorial Hall, a red-colored heritage building that houses the Central Library. Built in 1915, it features classic European architecture and an extensive collection of over 2.5 lakh books, including rare manuscripts and a Braille section. For book lovers and history enthusiasts, this hall adds cultural depth to the lush greenery of Cubbon Park.",

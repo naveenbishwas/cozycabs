@@ -10,22 +10,19 @@ import CityForm from "../Components/CityForm/page";
 const slides = [
   {
     id: 1,
-    image:
-      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1500&q=80",
+    image: "premium-banner1.png",
     heading: "Luxury at Every Turn",
     subtext: "Experience the elegance of premium cars that define perfection.",
   },
   {
     id: 2,
-    image:
-      "https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?auto=format&fit=crop&w=1500&q=80",
+    image: "premium-banner2.png",
     heading: "Performance Meets Power",
     subtext: "Engineered for thrill — crafted for excellence.",
   },
   {
     id: 3,
-    image:
-      "https://images.unsplash.com/photo-1605559424843-9e4c8b3cce98?auto=format&fit=crop&w=1500&q=80",
+    image: "premium-banner3.png",
     heading: "Drive the Dream",
     subtext: "From streets to highways, own the road with style.",
   },
@@ -36,7 +33,7 @@ const cars = [
     id: 1,
     title: "Toyota Fortuner",
     subtitle: "Crysta",
-    image: "ty1.jpg",
+    image: "premium-toyota-fortuner.png",
     badge: "Top Choice",
     description:
       "Perfect for family trips and group travel. Spacious, comfortable, and reliable.",
@@ -49,7 +46,7 @@ const cars = [
     id: 2,
     title: "Toyota Innova Crysta",
     subtitle: "Honda City / Verna",
-    image: "ty2.jpg",
+    image: "/premium-toyota-innove-crysta.png",
     badge: "Best for Business Trips",
     description:
       "Ideal for business meetings and airport transfers. Elegant, stylish, and efficient.",
@@ -62,7 +59,7 @@ const cars = [
     id: 3,
     title: "Toyota Innova Hycross",
     subtitle: "Fortuner / Endeavour",
-    image: "ty3.jpg",
+    image: "premium-toyota-innova-hycros.png",
     description:
       "Make a statement with our premium SUVs. Perfect for special occasions and long drives.",
     seating: 7,

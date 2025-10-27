@@ -9,6 +9,7 @@ import { FaBuilding, FaUsers, FaBus, FaMapMarkerAlt } from "react-icons/fa";
 import Link from "next/link";
 import ServiceBookingForm from "../Components/ServicesBookingForm/page";
 import CityForm from "../Components/CityForm/page";
+import CityBestChoice from "../Components/CityBestChoice/page";
 
 const stats = [
   {
@@ -36,18 +37,6 @@ const stats = [
     label: "Cities Covered",
   },
 ];
-
-function Feature({ image, title, text }) {
-  return (
-    <div className="why-card">
-      <div className="why-icon">
-        <Image src={image} alt={title} width={50} height={50} unoptimized />
-      </div>
-      <h3 className="why-card-title">{title}</h3>
-      <p className="why-card-text">{text}</p>
-    </div>
-  );
-}
 
 const TransportSolution = () => {
   const trackRef = useRef(null);
@@ -193,7 +182,7 @@ const TransportSolution = () => {
         <div className="ride-images">
           <div className="main-img">
             <Image
-              src="/s1.webp"
+              src="/service-car-img.png"
               alt="Happy employees commuting"
               width={500}
               height={350}
@@ -244,52 +233,7 @@ const TransportSolution = () => {
         </div>
       </section>
 
-      <section className="why section-container" id="service-why-section">
-        <div className="why-wrap">
-          <header className="why-head">
-            <h2>What Makes Us the Best Choice</h2>
-            <p>
-              Our commitment to excellence and customer satisfaction sets us
-              apart. Here’s why thousands of customers trust us with their
-              transportation needs.
-            </p>
-          </header>
-          <div className="why-grid">
-            <Feature
-              image="/known.png"
-              title="Well Known for Quality Services"
-              text="Recognized across India for our commitment to excellence and premium service standards."
-            />
-            <Feature
-              image="/postive.png"
-              title="Earned Positive Reviews from All Clients"
-              text="Consistent 5-star ratings and testimonials from thousands of satisfied customers."
-            />
-            <Feature
-              image="/ntework.png"
-              title="The Largest Network of Drivers"
-              text="Extensive network of professional, verified drivers covering every major city in India."
-            />
-          </div>
-          <div className="why-grid">
-            <Feature
-              image="/safe.png"
-              title="Safe & Secure"
-              text="Background-verified partners and insured moves for complete peace of mind."
-            />
-            <Feature
-              image="/nationwide.png"
-              title="Nationwide Coverage"
-              text="Strong presence with on-ground support in metros and tier‑2/3 cities."
-            />
-            <Feature
-              image="/transparent.png"
-              title="Transparent Pricing"
-              text="Clear quotes, no hidden charges—ever."
-            />
-          </div>
-        </div>
-      </section>
+      <CityBestChoice />
 
       {/* <ServiceBookingForm /> */}
       <CityForm />

@@ -19,7 +19,7 @@ html {
 
 .hero {
   height: 100vh;
-  background: url("/hm.png") center/cover no-repeat;
+  background: url("/h1.png") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;

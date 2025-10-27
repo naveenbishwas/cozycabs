@@ -111,7 +111,7 @@ const InMysore = () => {
     },
     {
       title: "Devaraja Market",
-      img: "/g4.webp",
+      img: "/Devaraja-Market-mysora.png",
       alt: "Devaraja Market spices flowers silk",
       paragraphs: [
         "A bustling bazaar in the heart of Mysore, Devaraja Market is a sensory delight. Known for fresh produce, spices, flowers, silk sarees, and handicrafts, it’s the perfect place to experience the city’s local life. The colorful stalls and lively atmosphere make it a photographer’s favorite as well as a shopper’s paradise",

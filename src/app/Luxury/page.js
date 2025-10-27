@@ -10,22 +10,19 @@ import CityForm from "../Components/CityForm/page";
 const slides = [
   {
     id: 1,
-    image:
-      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1500&q=80",
+    image: "/banner1.png",
     heading: "Luxury at Every Turn",
     subtext: "Experience the elegance of premium cars that define perfection.",
   },
   {
     id: 2,
-    image:
-      "https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?auto=format&fit=crop&w=1500&q=80",
+    image: "/banner2.png",
     heading: "Performance Meets Power",
     subtext: "Engineered for thrill — crafted for excellence.",
   },
   {
     id: 3,
-    image:
-      "https://images.unsplash.com/photo-1605559424843-9e4c8b3cce98?auto=format&fit=crop&w=1500&q=80",
+    image: "/banner3.png",
     heading: "Drive the Dream",
     subtext: "From streets to highways, own the road with style.",
   },
@@ -36,7 +33,7 @@ const cars = [
     id: 1,
     title: "Audi A6",
     subtitle: "Sophistication in motion",
-    image: "lu1.jpg",
+    image: "/AudiA6.png",
     description:
       "Experience German luxury with seamless comfort, cutting-edge design, and quiet confidence. The Audi A6 turns every drive into a statement of style and class.",
     seating: 5,
@@ -48,7 +45,7 @@ const cars = [
     id: 2,
     title: "Audi Q7",
     subtitle: " Power meets prestige",
-    image: "lu2.jpg",
+    image: "/AudiQ6.png",
     description:
       "Command attention with the Audi Q7 — a full-size luxury SUV built for those who demand performance, space, and unmistakable elegance wherever they go.",
     seating: 7,
@@ -60,7 +57,7 @@ const cars = [
     id: 3,
     title: "BMW 5 Series",
     subtitle: "Drive brilliance",
-    image: "lu3.jpg",
+    image: "/BMW5series.png",
     description:
       "The BMW 5 Series blends executive refinement with thrilling dynamics. Ideal for high-profile meetings, city rides, and making every arrival unforgettable.",
     seating: 5,
@@ -71,8 +68,8 @@ const cars = [
   {
     id: 4,
     title: "Mercedes-Benz GLS",
-    subtitle: " The S-Class of SUVs.",
-    image: "lu4.jpg",
+    subtitle: "The S-Class of SUVs.",
+    image: "/MercedesBenzGLS.png",
     description:
       "Commanding presence meets first-class luxury. The GLS delivers effortless power, unmatched comfort, and a cabin so refined it might just make you late because you won’t want to get out.",
     seating: 7,
@@ -85,7 +82,7 @@ const cars = [
     id: 5,
     title: "Mercedes-Benz E Class",
     subtitle: "Business luxury, perfected",
-    image: "lu5.jpg",
+    image: "/MercedesBenzE]class.png",
     description:
       "A timeless sedan that blends grace with intelligence. The E-Class offers plush interiors, smooth performance, and the kind of quiet confidence executives wish they could rent permanently.",
     seating: 5,

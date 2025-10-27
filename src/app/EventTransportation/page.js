@@ -16,16 +16,7 @@ import {
 } from "react-icons/fa";
 import ServiceBookingForm from "../Components/ServicesBookingForm/page";
 import CityForm from "../Components/CityForm/page";
-
-function Feature({ icon, title, text }) {
-  return (
-    <div className="why-card">
-      <div className="why-icon">{icon}</div>
-      <h3 className="why-card-title">{title}</h3>
-      <p className="why-card-text">{text}</p>
-    </div>
-  );
-}
+import CityBestChoice from "../Components/CityBestChoice/page";
 
 const EventTransportation = () => {
   const aboutCountersRef = useRef(null);
@@ -164,7 +155,7 @@ const EventTransportation = () => {
         <div className="ride-images">
           <div className="main-img">
             <Image
-              src="/s1.webp"
+              src="/service-car-img.png"
               alt="Event guests travel"
               width={500}
               height={350}
@@ -200,50 +191,7 @@ const EventTransportation = () => {
       </section>
 
       {/* Why Us Section */}
-      <section className="why section-container" id="service-why-section">
-        <header className="why-head">
-          <h2>What Makes Us the Best Choice</h2>
-          <p>
-            Our dedication to event travel excellence sets us apart. Here’s why
-            leading planners and corporates trust us for their events.
-          </p>
-        </header>
-        <div className="why-grid">
-          <Feature
-            icon={<FaCalendarAlt />}
-            title="Expert Event Experience"
-            text="Trusted by corporates, wedding planners, and organizers for seamless event travel management."
-          />
-          <Feature
-            icon={<FaStar />}
-            title="Positive Guest Feedback"
-            text="Consistently praised by guests, VIPs, and clients for punctual, safe, and comfortable rides."
-          />
-          <Feature
-            icon={<FaCar />}
-            title="Wide Fleet for All Events"
-            text="Luxury cars, SUVs, and buses available for groups of every size — from small gatherings to mega events."
-          />
-        </div>
-        <div className="why-grid">
-          <Feature
-            icon={<FaUserShield />}
-            title="Safe & Verified Chauffeurs"
-            text="Trained, background-checked, and professional drivers ensuring reliability and peace of mind."
-          />
-          <Feature
-            icon={<FaGlobe />}
-            title="Nationwide Event Coverage"
-            text="Strong presence in metros and tier-2/3 cities with on-ground coordination for events of any scale."
-          />
-          <Feature
-            icon={<FaBalanceScale />}
-            title="Transparent Event Pricing"
-            text="Fair, upfront quotes with no hidden charges, tailored for corporate, social, and cultural events."
-          />
-        </div>
-      </section>
-
+      <CityBestChoice />
       {/* Quote Section with Form */}
       <CityForm />
 

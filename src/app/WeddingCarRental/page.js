@@ -16,6 +16,7 @@ import {
 } from "react-icons/fa";
 import ServiceBookingForm from "../Components/ServicesBookingForm/page";
 import CityForm from "../Components/CityForm/page";
+import CityBestChoice from "../Components/CityBestChoice/page";
 
 function Feature({ icon, title, text }) {
   return (
@@ -132,10 +133,10 @@ const WeddingCarRental = () => {
         <div className="ride-images">
           <div className="main-img">
             <Image
-              src="/s1.webp"
+              src="/service-car-img.png"
               alt="Wedding car ride"
-              width={500}
-              height={350}
+              width={0}
+              height={0}
               className="image"
             />
           </div>
@@ -167,49 +168,7 @@ const WeddingCarRental = () => {
       </section>
 
       {/* Why Us Section */}
-      <section className="why section-container" id="service-why-section">
-        <header className="why-head">
-          <h2>What Makes Us the Best Choice</h2>
-          <p>
-            Our dedication to wedding travel excellence sets us apart. Here’s
-            why couples and families trust us for their big day.
-          </p>
-        </header>
-        <div className="why-grid">
-          <Feature
-            icon={<FaCar />}
-            title="Luxury & Vintage Collection"
-            text="We offer a wide range of premium sedans, SUVs, and vintage classics to perfectly complement your wedding theme and make your entry truly grand."
-          />
-          <Feature
-            icon={<FaHeart />}
-            title="Tailored for Bride & Groom"
-            text="Our wedding cars are specially curated and decorated to add charm and elegance to bridal and groom entries, creating picture-perfect moments."
-          />
-          <Feature
-            icon={<FaUsers />}
-            title="Guest Transportation"
-            text="From close family members to VIP guests, we provide spacious and comfortable vehicles to ensure everyone enjoys a smooth and stress-free ride."
-          />
-        </div>
-        <div className="why-grid">
-          <Feature
-            icon={<FaUserShield />}
-            title="Safe & Professional Chauffeurs"
-            text="All our chauffeurs are trained, uniformed, and background-verified, guaranteeing safety and punctuality."
-          />
-          <Feature
-            icon={<FaGlobe />}
-            title="Pan-India Coverage"
-            text="With a strong presence across metros and tier-2/3 cities, we deliver reliable wedding car rentals and on-ground support no matter where your venue is."
-          />
-          <Feature
-            icon={<FaBalanceScale />}
-            title="Transparent Packages"
-            text="We provide clear, all-inclusive packages with decoration and chauffeur services included, ensuring no hidden costs or last-minute surprises."
-          />
-        </div>
-      </section>
+      <CityBestChoice />
 
       {/* Quote Section with Form */}
 

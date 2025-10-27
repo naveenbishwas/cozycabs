@@ -1202,7 +1202,7 @@ export default function Home() {
             <div className="fleet-card">
               <div className="fleet-image">
                 <Image
-                  src="/ty.webp"
+                  src="/innvo1.png"
                   alt="Innova Crysta rental car"
                   width={0}
                   height={0}

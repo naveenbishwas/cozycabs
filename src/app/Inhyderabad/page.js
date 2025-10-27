@@ -73,7 +73,7 @@ const InHyderabad = () => {
   const spots = [
     {
       title: "Charminar",
-      img: "/inhyderabad/Charminar.png",
+      img: "/charminar.png",
       alt: "Charminar monument",
       paragraphs: [
         "The heart of Old Hyderabad, Charminar is a 16th-century monument and the city’s most recognized landmark. Surrounded by Laad Bazaar and other vibrant markets, it’s the perfect place to shop for pearls, bangles, and handicrafts while tasting authentic Hyderabadi street food.",
@@ -81,7 +81,7 @@ const InHyderabad = () => {
     },
     {
       title: "Golconda Fort",
-      img: "/inhyderabad/Golconda.png",
+      img: "/golconda.png",
       alt: "Golconda Fort view",
       paragraphs: [
         "A majestic structure from the medieval Golconda Sultanate, Golconda Fort is famous for its unique acoustics and breathtaking views of the city. The evening light-and-sound show adds life to its rich history, making it a must-visit for culture and history lovers.",
@@ -97,7 +97,7 @@ const InHyderabad = () => {
     },
     {
       title: "Chowmahalla Palace",
-      img: "/inhyderabad/Chowmahalla.png",
+      img: "/Chowmahalla.png",
       alt: "Chowmahalla Palace interiors",
       paragraphs: [
         "Once the residence of the Nizams, Chowmahalla Palace reflects Mughal and Persian influences in its grand courtyards, halls, and chandeliers. The palace showcases royal artifacts and gives visitors a glimpse into Hyderabad’s regal past.",
@@ -105,7 +105,7 @@ const InHyderabad = () => {
     },
     {
       title: "Ramoji Film City",
-      img: "/inhyderabad/Ramoji.png",
+      img: "/ramoji.png",
       alt: "Ramoji Film City sets",
       paragraphs: [
         "Spread over 2,000 acres, Ramoji Film City is the world’s largest integrated film studio complex. With movie sets, adventure rides, live shows, and gardens, it’s a paradise for cinema lovers and families looking for a fun-filled day.",
@@ -121,7 +121,7 @@ const InHyderabad = () => {
     },
     {
       title: "Salar Jung Museum",
-      img: "/inhyderabad/Salar.png",
+      img: "/Salar.png",
       alt: "Salar Jung Museum gallery",
       paragraphs: [
         "One of the largest museums in India, the Salar Jung Museum houses rare collections of art, manuscripts, weapons, and sculptures gathered by the Salar Jung family. From Persian carpets to European clocks, it’s a treasure trove for history and art enthusiasts.",

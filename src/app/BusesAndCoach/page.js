@@ -10,22 +10,19 @@ import CityForm from "../Components/CityForm/page";
 const slides = [
   {
     id: 1,
-    image:
-      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1500&q=80",
+    image: "/Buscouch1.png",
     heading: "Luxury at Every Turn",
     subtext: "Experience the elegance of premium cars that define perfection.",
   },
   {
     id: 2,
-    image:
-      "https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?auto=format&fit=crop&w=1500&q=80",
+    image: "/Buscouch2.png",
     heading: "Performance Meets Power",
     subtext: "Engineered for thrill — crafted for excellence.",
   },
   {
     id: 3,
-    image:
-      "https://images.unsplash.com/photo-1605559424843-9e4c8b3cce98?auto=format&fit=crop&w=1500&q=80",
+    image: "/Buscouch3.png",
     heading: "Drive the Dream",
     subtext: "From streets to highways, own the road with style.",
   },
@@ -36,7 +33,7 @@ const cars = [
     id: 1,
     title: "45 Seater Volvo",
     subtitle: " Comfort for every seat",
-    image: "bu1.webp",
+    image: "/45SeaterVolvo.png",
     description:
       "Spacious, air-conditioned, and built for long-haul journeys. The 45-Seater Volvo offers plush reclining seats, smooth suspension, and premium interiors that redefine group travel.",
     seating: 45,
@@ -48,7 +45,7 @@ const cars = [
     id: 2,
     title: "Mercedes-Benz Sprinter",
     subtitle: "Luxury on wheels.",
-    image: "bu2.webp",
+    image: "MercedesBenz.png",
     description:
       " The Mercedes Sprinter combines European craftsmanship with modern amenities — reclining captain seats, rear AC vents, and a ride so smooth your passengers might forget it’s a bus.",
     seating: 12 - 15,
@@ -59,8 +56,8 @@ const cars = [
   {
     id: 3,
     title: "Toyota Commuter",
-    subtitle: " Dependable travel, every time.",
-    image: "bu3.webp",
+    subtitle: "Dependable travel, every time.",
+    image: "/ToyotaCommuter.png",
     description:
       " A proven favorite for reliable group transportation. The Toyota Commuter offers generous space, powerful air conditioning, and smooth handling for outstation or airport transfers.",
     seating: 9 - 12,
@@ -73,7 +70,7 @@ const cars = [
     id: 4,
     title: "Toyota Vellfire",
     subtitle: "The definition of elite travel",
-    image: "bu4.webp",
+    image: "/Toyota-vell.png",
     description:
       " Step inside a first-class lounge on wheels. The Toyota Vellfire delivers unmatched luxury with executive seating, ambient lighting, and cutting-edge tech for VIP journeys.",
     seating: 4 - 6,
@@ -86,7 +83,7 @@ const cars = [
     id: 4,
     title: "Toyota Ventury (V-Class Equivalent)",
     subtitle: "Business meets comfort.",
-    image: "bu5.webp",
+    image: "/Toyota-Ventury.png",
     description:
       "  Elegant, versatile, and designed for executives on the move. The Toyota Ventury offers generous legroom, smooth performance, and an interior that feels more boardroom than bus.",
     seating: 7 - 9,

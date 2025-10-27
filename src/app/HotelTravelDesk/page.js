@@ -16,16 +16,7 @@ import {
 } from "react-icons/fa";
 import ServiceBookingForm from "../Components/ServicesBookingForm/page";
 import CityForm from "../Components/CityForm/page";
-
-function Feature({ icon, title, text }) {
-  return (
-    <div className="why-card">
-      <div className="why-icon">{icon}</div>
-      <h3 className="why-card-title">{title}</h3>
-      <p className="why-card-text">{text}</p>
-    </div>
-  );
-}
+import CityBestChoice from "../Components/CityBestChoice/page";
 
 const HotelTravelDesk = () => {
   const aboutCountersRef = useRef(null);
@@ -135,7 +126,7 @@ const HotelTravelDesk = () => {
         <div className="ride-images">
           <div className="main-img">
             <Image
-              src="/s1.webp"
+              src="/service-car-img.png"
               alt="Hotel guest travel"
               width={500}
               height={350}
@@ -169,49 +160,7 @@ const HotelTravelDesk = () => {
       </section>
 
       {/* Why Us Section */}
-      <section className="why section-container" id="service-why-section">
-        <header className="why-head">
-          <h2>What Makes Us the Best Choice</h2>
-          <p>
-            Our dedication to hospitality and guest satisfaction sets us apart.
-            Here’s why leading hotels choose us as their travel desk partner.
-          </p>
-        </header>
-        <div className="why-grid">
-          <Feature
-            icon={<FaHotel />}
-            title="Trusted Hospitality Partner"
-            text="Recognized by leading hotels for premium travel desk services and professional standards."
-          />
-          <Feature
-            icon={<FaStar />}
-            title="5-Star Guest Feedback"
-            text="Consistently rated high by hotel guests for reliable and comfortable journeys."
-          />
-          <Feature
-            icon={<FaMapMarkedAlt />}
-            title="Pan-India Coverage"
-            text="Strong presence across metros and tier-2/3 cities with on-ground support."
-          />
-        </div>
-        <div className="why-grid">
-          <Feature
-            icon={<FaUserShield />}
-            title="Trained & Verified Drivers"
-            text="Background-verified, multilingual, and experienced drivers for complete safety."
-          />
-          <Feature
-            icon={<FaSuitcase />}
-            title="Customized Travel Plans"
-            text="Tailored travel desk solutions to meet leisure, corporate, and event requirements."
-          />
-          <Feature
-            icon={<FaBalanceScale />}
-            title="Transparent Pricing"
-            text="No hidden costs, only clear and fair pricing every time."
-          />
-        </div>
-      </section>
+      <CityBestChoice />
 
       {/* Quote Section with Form */}
       <CityForm />

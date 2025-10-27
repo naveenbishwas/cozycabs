@@ -1,0 +1,9 @@
+.why-icon {
+  margin: 0 !important;
+}
+
+.why-icon img,
+.why-icon svg {
+  width: 50px !important;
+  height: auto !important;
+}
