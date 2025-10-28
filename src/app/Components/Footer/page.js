@@ -412,7 +412,7 @@ export default function SiteFooter() {
                       <Link href="/in-chennai">Car Rental in Chennai</Link>
                     </li>
                     <li>
-                      <Link href="/InHyderabad">Car Rental in Hyderabad</Link>
+                      <Link href="/in-hyderabad">Car Rental in Hyderabad</Link>
                     </li>
                     <li>
                       <Link href="/InPune">Car Rental in Pune</Link>
