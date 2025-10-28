@@ -6,6 +6,7 @@ import Header from "../Components/Header/page";
 import SiteFooter from "../Components/Footer/page";
 import { FaCouch, FaUserTie, FaClock, FaShieldAlt } from "react-icons/fa";
 import CityForm from "../Components/CityForm/page";
+import Image from "next/image";
 
 const slides = [
   {
@@ -72,25 +73,25 @@ const cars = [
 const features = [
   {
     id: 1,
-    icon: <FaCouch />,
+    image: "/premium-luxorious_comfort.png",
     title: "Luxurious Comfort",
     desc: "Leather interiors, whisper-quiet rides, space to unwind.",
   },
   {
     id: 2,
-    icon: <FaUserTie />,
+    image: "/Premium-profssional_driver.png",
     title: "Professional Drivers",
     desc: "Courteous, trained, and always punctual.",
   },
   {
     id: 3,
-    icon: <FaClock />,
+    image: "/premium-ontime-guarntee.png",
     title: "On-Time Guarantee",
     desc: "Precision scheduling to keep your plans on track.",
   },
   {
     id: 4,
-    icon: <FaShieldAlt />,
+    image: "/premium-verified-safety.png",
     title: "Verified Safety",
     desc: "Background-checked drivers and fully insured rides.",
   },
@@ -441,7 +442,15 @@ const Premium = () => {
         <div className="features-row">
           {features.map((feature) => (
             <div key={feature.id} className="feature-box">
-              <div className="icon-wrapper">{feature.icon}</div>
+              <div className="icon-wrapper">
+                <Image
+                  src={feature.image}
+                  alt={feature.title}
+                  width={50}
+                  height={50}
+                  unoptimized
+                />
+              </div>
               <h3>{feature.title}</h3>
               <p>{feature.desc}</p>
             </div>
@@ -456,22 +465,13 @@ const Premium = () => {
         <div className="features-row" id="occasion">
           <div className="feature-box" id="occasion-box">
             <div className="icon-wrapper">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="30"
-                height="30"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="lucide lucide-briefcase w-8 h-8 text-[#E50914] group-hover:text-white transition-colors duration-300"
-                aria-hidden="true"
-              >
-                <path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
-                <rect width="20" height="14" x="2" y="6" rx="2"></rect>
-              </svg>
+              <Image
+                src="/corporate-rides.png"
+                alt="premium"
+                width={60}
+                height={60}
+                unoptimized
+              />
             </div>
             <h3>Corporate Rides</h3>
             <p>
@@ -482,21 +482,13 @@ const Premium = () => {
 
           <div className="feature-box">
             <div className="icon-wrapper">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="30"
-                height="30"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="lucide lucide-plane w-8 h-8 text-[#E50914] group-hover:text-white transition-colors duration-300"
-                aria-hidden="true"
-              >
-                <path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"></path>
-              </svg>
+              <Image
+                src="/Airport-transfers.png"
+                alt="premium"
+                width={60}
+                height={60}
+                unoptimized
+              />
             </div>
             <h3>Airport Transfers</h3>
             <p>
@@ -507,24 +499,13 @@ const Premium = () => {
 
           <div className="feature-box">
             <div className="icon-wrapper">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="30"
-                height="30"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="lucide lucide-users w-8 h-8 text-[#E50914] group-hover:text-white transition-colors duration-300"
-                aria-hidden="true"
-              >
-                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
-                <path d="M16 3.128a4 4 0 0 1 0 7.744"></path>
-                <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
-                <circle cx="9" cy="7" r="4"></circle>
-              </svg>
+              <Image
+                src="/group-travel-1.png"
+                alt="premium"
+                width={60}
+                height={60}
+                unoptimized
+              />
             </div>
             <h3>Group Travel</h3>
             <p>
@@ -535,21 +516,13 @@ const Premium = () => {
 
           <div className="feature-box">
             <div className="icon-wrapper">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="30"
-                height="30"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="lucide lucide-heart w-8 h-8 text-[#E50914] group-hover:text-white transition-colors duration-300"
-                aria-hidden="true"
-              >
-                <path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"></path>
-              </svg>
+              <Image
+                src="/special-event.png"
+                alt="premium"
+                width={60}
+                height={60}
+                unoptimized
+              />
             </div>
             <h3>Special Events</h3>
             <p>
@@ -560,22 +533,13 @@ const Premium = () => {
 
           <div className="feature-box">
             <div className="icon-wrapper">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="30"
-                height="30"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="lucide lucide-map-pin w-8 h-8 text-[#E50914] group-hover:text-white transition-colors duration-300"
-                aria-hidden="true"
-              >
-                <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path>
-                <circle cx="12" cy="10" r="3"></circle>
-              </svg>
+              <Image
+                src="/outstation-trips.png"
+                alt="premium"
+                width={60}
+                height={60}
+                unoptimized
+              />
             </div>
             <h3>Outstation Trips</h3>
             <p>
@@ -586,24 +550,13 @@ const Premium = () => {
 
           <div className="feature-box">
             <div className="icon-wrapper">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="30"
-                height="30"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="lucide lucide-calendar w-8 h-8 text-[#E50914] group-hover:text-white transition-colors duration-300"
-                aria-hidden="true"
-              >
-                <path d="M8 2v4"></path>
-                <path d="M16 2v4"></path>
-                <rect width="18" height="18" x="3" y="4" rx="2"></rect>
-                <path d="M3 10h18"></path>
-              </svg>
+              <Image
+                src="/daily-commute.png"
+                alt="premium"
+                width={60}
+                height={60}
+                unoptimized
+              />
             </div>
             <h3>Daily Commute</h3>
             <p>

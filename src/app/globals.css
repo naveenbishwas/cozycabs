@@ -2298,3 +2298,12 @@ section.innova-why {
 .image-wrapper-premium {
   height: 250px;
 }
+
+.icon-wrapper {
+  background-color: unset !important;
+}
+
+.icon-wrapper img {
+  filter: invert(17%) sepia(96%) saturate(7102%) hue-rotate(352deg)
+    brightness(92%) contrast(86%);
+}

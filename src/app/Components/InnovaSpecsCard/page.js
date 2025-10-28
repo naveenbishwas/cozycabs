@@ -24,6 +24,9 @@ const InnovaSpecsCard = () => {
 
   return (
     <div>
+      <h1 className="spec-heading">
+        Why <span className="red-black">Innova</span>
+      </h1>
       <section className="innova-specs-grid">
         {specs.map((item, index) => (
           <div key={index} className="innova-spec-card">

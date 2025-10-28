@@ -6,7 +6,17 @@
   padding: 35px;
   margin: 40px auto;
   gap: 25px;
+  margin-top: 20px;
 }
+
+.spec-heading {
+  text-align: center;
+}
+
+/* .innova-specs-df {
+  display: flex;
+  justify-content: space-around;
+} */
 
 .innova-spec-card {
   text-align: center;
