@@ -653,6 +653,9 @@ export default function SiteFooter() {
             </li>
           </ul>
         </div>
+        <p id="in-mob" className="copyright">
+          © 2024 CozyCabz. All rights reserved.
+        </p>
       </div>
     </footer>
   );

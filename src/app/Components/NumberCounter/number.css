@@ -53,8 +53,8 @@
   }
 
   .innova-about-stats {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px 10px;
+    grid-template-columns: repeat(3, minmax(140px, 1fr));
+    gap: 20px;
   }
 
   .innova-stat-num {
@@ -67,10 +67,32 @@
   }
 }
 
-/* Small phones (up to 400px) */
-@media (max-width: 400px) {
+/* Scrollable Mobile (up to 600px) */
+@media (max-width: 600px) {
+  .innova-number-stats {
+    padding: 46px 5% 34px;
+  }
+
   .innova-about-stats {
-    grid-template-columns: 1fr;
+    display: grid;
+    grid-template-columns: repeat(
+      5,
+      minmax(140px, 1fr)
+    ); /* wide enough to scroll */
+    overflow-x: auto; /* enables horizontal scroll */
+    scroll-snap-type: x mandatory; /* smooth scroll snaps */
+    gap: 16px;
+    -webkit-overflow-scrolling: touch; /* smooth iOS scroll */
+    padding-bottom: 10px;
+    justify-content: flex-start;
+  }
+
+  .innova-about-stats::-webkit-scrollbar {
+    display: none; /* hides scrollbar */
+  }
+
+  .innova-about-stats > * {
+    scroll-snap-align: start; /* each stat card snaps */
   }
 
   .innova-stat-num {
@@ -78,6 +100,6 @@
   }
 
   .innova-stat-label {
-    font-size: 12px;
+    font-size: 11px;
   }
 }

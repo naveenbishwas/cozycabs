@@ -97,6 +97,21 @@ html {
     max-width: 800px;
   }
 
+  .about__grid {
+    flex-direction: column;
+    display: flex !important;
+    gap: 0 !important;
+    padding-top: 0 !important;
+  }
+
+  #about-people-desc {
+    text-align: justify;
+  }
+
+  #meet-title p {
+    font-size: 14px !important;
+  }
+
   .hero {
     height: 90vh;
   }
@@ -319,41 +334,6 @@ html {
   color: #ffffff; /* red highlight for brand tone */
   font-weight: 700;
   text-transform: uppercase;
-}
-
-/* Responsive */
-@media (max-width: 1100px) {
-  .about__title {
-    font-size: 1.5rem;
-  }
-  .stat__num {
-    font-size: 36px;
-  }
-}
-
-@media (max-width: 900px) {
-  .about__grid {
-    grid-template-columns: 1fr;
-    gap: 26px;
-    margin-top: 0;
-  }
-
-  .about__stats {
-    grid-template-columns: repeat(3, minmax(140px, 1fr));
-    margin: 20px 0 15px;
-  }
-}
-
-@media (max-width: 600px) {
-  .about {
-    padding: 46px 5% 34px;
-  }
-  .about__stats {
-    grid-template-columns: repeat(2, minmax(120px, 1fr));
-  }
-  .stat__num {
-    font-size: 32px;
-  }
 }
 
 /* ===== FAQ (clean, professional) ===== */
@@ -2734,6 +2714,7 @@ p {
 
   .about__title {
     margin-top: 8% !important;
+    font-size: 26px;
   }
 
   .phone-group select {
@@ -2955,11 +2936,11 @@ p {
     gap: 16px;
   }
 
-  .image-box .image {
-    max-width: 45%;
-  }
-
   .prestigious-btn {
     margin: 0 auto;
+  }
+
+  .program-banner {
+    height: auto !important;
   }
 }

@@ -391,7 +391,7 @@ button:hover {
   gap: 25px;
   margin-top: 50px;
   flex-wrap: nowrap; /* Keeps them in one row */
-  overflow-x: auto; /* Horizontal scroll if screen is too small */
+
   scrollbar-width: none;
 }
 
@@ -452,7 +452,7 @@ button:hover {
 @media (max-width: 1024px) {
   .features-row {
     flex-wrap: nowrap;
-    overflow-x: auto;
+
     justify-content: flex-start;
   }
 }
@@ -463,6 +463,10 @@ button:hover {
   }
   .feature-box {
     min-width: 230px;
+  }
+
+  .features-row {
+    overflow-x: unset !important;
   }
 }
 .booking-section {
@@ -727,7 +731,6 @@ button:hover {
     font-size: 0.95rem;
   }
 }
-
 .features-section {
   padding: 80px 5%;
   text-align: center;
@@ -744,8 +747,8 @@ button:hover {
 .features-row {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-  gap: 15px;
+  justify-content: center;
+  gap: 20px;
 }
 
 .feature-box {
@@ -758,7 +761,7 @@ button:hover {
   min-width: 250px;
   max-width: 270px;
   text-align: center;
-  flex: 1;
+  flex: 1 1 250px;
 }
 
 .feature-box:hover {
@@ -792,12 +795,66 @@ button:hover {
   line-height: 1.4;
 }
 
-@media (max-width: 768px) {
+/* ===== Tablet ===== */
+@media (max-width: 1024px) {
   .features-title {
     font-size: 2rem;
   }
   .feature-box {
-    min-width: 230px;
+    min-width: 220px;
+    max-width: 240px;
+  }
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 768px) {
+  .features-section {
+    padding: 60px 4%;
+  }
+  .features-title {
+    font-size: 1.9rem;
+    margin-bottom: 35px;
+  }
+  .features-row {
+    justify-content: center;
+    gap: 18px;
+  }
+  .feature-box {
+    flex: 1 1 45%;
+    min-width: 210px;
+  }
+}
+
+/* ===== Small Phones (Scrollable Row) ===== */
+@media (max-width: 600px) {
+  .features-section {
+    padding: 50px 5% 40px;
+  }
+
+  .features-row {
+    display: flex;
+    flex-wrap: nowrap;
+
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    -webkit-overflow-scrolling: touch;
+    justify-content: flex-start;
+    padding-bottom: 10px;
+  }
+
+  .features-row::-webkit-scrollbar {
+    display: none; /* hide scrollbar */
+  }
+
+  .feature-box {
+    flex: 0 0 auto;
+    min-width: 240px;
+    max-width: 260px;
+    scroll-snap-align: start;
+  }
+
+  .features-title {
+    font-size: 1.7rem;
   }
 }
 

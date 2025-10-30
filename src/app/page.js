@@ -871,7 +871,7 @@ export default function Home() {
               <h2 className="teamShowcase-title">
                 The People Behind <span className="red-black">CozyCabz</span>
               </h2>
-              <p className="teamShowcase-description">
+              <p className="teamShowcase-description" id="about-people-desc">
                 Every smooth ride begins with a passionate team. At CozyCabz,
                 our strength lies in the people who work tirelessly to make
                 travel stress-free and dependable. From expert chauffeurs to
@@ -879,7 +879,7 @@ export default function Home() {
                 responsibility, and commitment to delivering safe and punctual
                 journeys.
               </p>
-              <p>
+              <p id="about-people-desc">
                 We thrive on innovation, teamwork, and trust — ensuring
                 businesses and individuals can count on us for reliable
                 transportation, anytime, anywhere.

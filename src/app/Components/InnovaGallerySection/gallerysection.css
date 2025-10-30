@@ -4,12 +4,14 @@
   background: #fff;
   padding: 40px;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
 }
 
 .innova-section-title {
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 30px;
+  font-weight: 700;
 }
 
 .innova-section-title span {
@@ -20,6 +22,7 @@
   display: flex;
   gap: 20px;
   margin-bottom: 35px;
+  align-items: stretch;
 }
 
 .innova-gallery-main {
@@ -42,4 +45,97 @@
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
   min-height: 110px;
   position: relative;
+}
+
+/* ====== Responsive Adjustments ====== */
+
+/* Tablets (769px – 1024px) */
+@media (max-width: 1024px) {
+  .innova-section-title {
+    font-size: 2rem;
+  }
+
+  .innova-gallery-section {
+    padding: 30px 25px;
+  }
+
+  .innova-gallery-content {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .innova-gallery-main {
+    width: 100%;
+    height: auto;
+  }
+
+  .innova-gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  .innova-gallery-thumb {
+    min-height: 130px;
+  }
+}
+
+/* Mobile (up to 768px) */
+@media (max-width: 768px) {
+  .innova-section-title {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+  }
+
+  .innova-gallery-section {
+    padding: 25px 15px;
+  }
+
+  .innova-gallery-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .innova-gallery-main {
+    width: 100%;
+    height: auto;
+  }
+
+  .innova-gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .innova-gallery-thumb {
+    min-height: 120px;
+  }
+}
+
+/* Small Phones (up to 500px) */
+@media (max-width: 500px) {
+  .innova-section-title {
+    font-size: 1.6rem;
+  }
+
+  .innova-gallery-grid {
+    grid-template-columns: repeat(2, minmax(120px, 1fr));
+    overflow-x: auto; /* enable horizontal scroll */
+    scroll-snap-type: x mandatory;
+    gap: 12px;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 10px;
+  }
+
+  .innova-gallery-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .innova-gallery-grid > * {
+    scroll-snap-align: start;
+  }
+
+  .innova-gallery-thumb {
+    flex: 0 0 auto;
+    min-width: 140px;
+    min-height: 100px;
+  }
 }

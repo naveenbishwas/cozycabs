@@ -1504,7 +1504,7 @@ a {
   height: 6px;
   background: var(--whatsapp-dark);
   border-radius: 50%;
-  animation: typing 1.2s infinite;
+  /* animation: typing 1.2s infinite; */
 }
 
 .dot:nth-child(2) {
@@ -1514,7 +1514,7 @@ a {
   animation-delay: 0.3s;
 }
 
-@keyframes typing {
+/* @keyframes typing {
   0%,
   60%,
   100% {
@@ -1525,7 +1525,7 @@ a {
     transform: translateY(-6px);
     opacity: 1;
   }
-}
+} */
 
 /* ///////FOR INNOVA PAGE /////////// */
 
@@ -2187,6 +2187,10 @@ section.innova-why {
     display: none;
   }
 
+  .innova-why {
+    padding: 3% 5%;
+  }
+
   #mobile {
     display: block;
     padding: 0 !important;
@@ -2195,6 +2199,15 @@ section.innova-why {
   #mobile img {
     width: 100%;
     height: auto;
+  }
+
+  .arrow {
+    display: none !important;
+  }
+
+  .slide-content {
+    left: 0 !important;
+    padding: 0 3%;
   }
 }
 
@@ -2306,4 +2319,53 @@ section.innova-why {
 .icon-wrapper img {
   filter: invert(17%) sepia(96%) saturate(7102%) hue-rotate(352deg)
     brightness(92%) contrast(86%);
+}
+
+@media (max-width: 600px) {
+  .about {
+    padding: 46px 5% 34px;
+  }
+
+  #occasion {
+    display: flex !important;
+  }
+
+  .about__right {
+    margin-top: 20px;
+    padding-top: 0 !important;
+  }
+
+  #flex .fleet-card {
+    width: 100% !important;
+  }
+
+  .stat__num {
+    font-size: 28px !important;
+  }
+
+  .stat__label {
+    font-size: 8px !important;
+  }
+
+  .about__stats {
+    display: grid;
+    overflow-x: auto; /* enables horizontal scroll */
+    scroll-snap-type: x mandatory; /* smooth scroll snaps */
+    gap: 16px;
+    -webkit-overflow-scrolling: touch; /* smooth scroll for iOS */
+    padding-top: 10px;
+    padding-bottom: 0px;
+  }
+
+  .about__stats::-webkit-scrollbar {
+    display: none; /* hides scrollbar for cleaner UI */
+  }
+
+  .about__stats > * {
+    scroll-snap-align: start; /* each stat card snaps neatly */
+  }
+
+  .stat__num {
+    font-size: 32px;
+  }
 }
