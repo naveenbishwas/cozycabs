@@ -2944,3 +2944,29 @@ p {
     height: auto !important;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .badge {
+    flex: unset !important;
+  }
+
+  .step {
+    gap: 0 !important;
+  }
+
+  .fleet-grid {
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)) !important;
+  }
+
+  .hero {
+    height: 90vh !important;
+  }
+
+  #flex {
+    flex-direction: unset !important;
+  }
+
+  #flex .fleet-card {
+    width: 260px;
+    height: auto;
+  }
+}
