@@ -2943,6 +2943,28 @@ p {
   .program-banner {
     height: auto !important;
   }
+
+  .in-desktop {
+    display: none;
+  }
+
+  .in-mobile {
+    display: unset !important;
+  }
+
+  .in-mobile .fleet-grid {
+    display: flex !important;
+    padding: 15px !important;
+    overflow: auto;
+  }
+
+  .fleet-card {
+    width: 280px;
+  }
+
+  .about__stats {
+    scrollbar-color: #ffffff #f6ffdb;
+  }
 }
 @media screen and (min-width: 768px) and (max-width: 1200px) {
   .badge {
@@ -2969,4 +2991,8 @@ p {
     width: 260px;
     height: auto;
   }
+}
+
+.in-mobile {
+  display: none;
 }

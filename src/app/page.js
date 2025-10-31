@@ -1031,7 +1031,7 @@ export default function Home() {
       </section>
 
       {/* Portfolio */}
-      <section className="fleet" id="fleet">
+      <section className="fleet in-desktop" id="fleet">
         {/* Header */}
         <div className="fleet-header">
           <h2>
@@ -1160,6 +1160,214 @@ export default function Home() {
         </div>
 
         <div className="fleet-grid" id="flex">
+          {/* Buses & Coaches */}
+          <Link href="/BusesAndCoach">
+            <div className="fleet-card">
+              <div className="fleet-image">
+                <Image
+                  src="/bus22.jpeg"
+                  alt="car-images"
+                  width={0}
+                  height={0}
+                  unoptimized
+                ></Image>
+                <span className="rating">⭐ 4.8</span>
+              </div>
+              <div className="fleet-body">
+                <h3>Buses & Coaches</h3>
+                <p>Large capacity vehicles for group travel and events</p>
+                <div className="fleet-info">
+                  <span>👥 Seating</span>
+                  <span>12-45 Seater</span>
+                </div>
+                <div className="fleet-info">
+                  <span>🪙 Starting at</span>
+                  <span>₹18/km</span>
+                </div>
+                <h4>Key Features:</h4>
+                <ul>
+                  <li>Spacious Seating</li>
+                  <li>Luggage Space</li>
+                  <li>Group Travel</li>
+                </ul>
+                <button className="btn-primary">
+                  View Buses & Coaches Cars
+                </button>
+              </div>
+            </div>
+          </Link>
+
+          {/* Innova Crysta */}
+          <Link href="/InnovaDelhi">
+            <div className="fleet-card">
+              <div className="fleet-image">
+                <Image
+                  src="/innvo1.png"
+                  alt="Innova Crysta rental car"
+                  width={0}
+                  height={0}
+                  unoptimized
+                />
+                <span className="rating">⭐ 4.9</span>
+              </div>
+
+              <div className="fleet-body">
+                <h3>Innova Crysta</h3>
+                <p>Luxury MPV with comfort and performance.</p>
+
+                <div className="fleet-info">
+                  <span>👥 Seating</span>
+                  <span>7 + 1 Seater</span>
+                </div>
+
+                <div className="fleet-info">
+                  <span>🪙 Starting at</span>
+                  <span>₹14/km</span>
+                </div>
+
+                <h4>Key Features:</h4>
+                <ul>
+                  <li>Premium Leather Interior</li>
+                  <li>Dual-Zone Climate Control</li>
+                  <li>Spacious Cabin with Reclining Seats</li>
+                </ul>
+
+                <button className="btn-primary">
+                  View Innova Crysta Rentals
+                </button>
+              </div>
+            </div>
+          </Link>
+        </div>
+      </section>
+
+      <section className="fleet in-mobile" id="fleet">
+        {/* Header */}
+        <div className="fleet-header">
+          <h2>
+            Browse Our <span className="red-black">Fleet</span>
+          </h2>
+          <p>
+            Choose from our diverse fleet of well-maintained vehicles. From
+            economy to luxury, we have the perfect car for every need and
+            budget.
+          </p>
+        </div>
+
+        {/* Fleet Cards */}
+        <div className="fleet-grid">
+          {/* Premium */}
+          <Link href="/Premium">
+            <div className="fleet-card">
+              <div className="fleet-image">
+                <Image
+                  // src="/ty2.png"
+                  src="./p-cars.jpeg"
+                  alt="car-images"
+                  width={0}
+                  height={0}
+                  unoptimized
+                ></Image>
+                <span className="rating">⭐ 4.8</span>
+              </div>
+              <div className="fleet-body">
+                <h3>Premium</h3>
+                <p>
+                  Luxury vehicles for executive travel and special occasions
+                </p>
+                <div className="fleet-info">
+                  <span>👥 Seating</span>
+                  <span>4 Seater</span>
+                </div>
+                <div className="fleet-info">
+                  <span>🪙 Starting at</span>
+                  <span>₹25/km</span>
+                </div>
+                <h4>Key Features:</h4>
+                <ul>
+                  <li>Leather Interiors</li>
+                  <li>Climate Control</li>
+                  <li>Premium Sound System</li>
+                </ul>
+                <button className="btn-primary">View Premium Cars</button>
+              </div>
+            </div>
+          </Link>
+
+          {/* Luxury */}
+          <Link href="/Luxury">
+            <div className="fleet-card">
+              <div className="fleet-image">
+                <Image
+                  src="/l123.jpeg"
+                  alt="car-images"
+                  width={0}
+                  height={0}
+                  unoptimized
+                ></Image>
+                <span className="rating">⭐ 4.9</span>
+              </div>
+              <div className="fleet-body">
+                <h3>Luxury</h3>
+                <p>
+                  High-end vehicles with superior comfort and advanced features
+                </p>
+                <div className="fleet-info">
+                  <span>👥 Seating</span>
+                  <span>4 Seater</span>
+                </div>
+                <div className="fleet-info">
+                  <span>🪙 Starting at</span>
+                  <span>₹35/km</span>
+                </div>
+                <h4>Key Features:</h4>
+                <ul>
+                  <li>Massage Seats</li>
+                  <li>Entertainment System</li>
+                  <li>Mini Bar</li>
+                </ul>
+                <button className="btn-primary">View Luxury Cars</button>
+              </div>
+            </div>
+          </Link>
+
+          {/* Economy */}
+          <Link href="/Economy">
+            <div className="fleet-card">
+              <div className="fleet-image">
+                <Image
+                  src="/dz.avif"
+                  alt="car-images"
+                  width={0}
+                  height={0}
+                  unoptimized
+                ></Image>
+                <span className="rating">⭐ 4.6</span>
+              </div>
+              <div className="fleet-body">
+                <h3>Economy</h3>
+                <p>
+                  Comfortable and affordable options for everyday travel needs
+                </p>
+                <div className="fleet-info">
+                  <span>👥 Seating</span>
+                  <span>4 Seater</span>
+                </div>
+                <div className="fleet-info">
+                  <span>🪙 Starting at</span>
+                  <span>₹12/km</span>
+                </div>
+                <h4>Key Features:</h4>
+                <ul>
+                  <li>Air Conditioning</li>
+                  <li>GPS Navigation</li>
+                  <li>Clean Interiors</li>
+                </ul>
+                <button className="btn-primary">View Economy Cars</button>
+              </div>
+            </div>
+          </Link>
+
           {/* Buses & Coaches */}
           <Link href="/BusesAndCoach">
             <div className="fleet-card">
