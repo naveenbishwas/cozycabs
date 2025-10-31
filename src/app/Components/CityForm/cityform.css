@@ -220,3 +220,32 @@ textarea {
   border-color: #e63946 !important; /* Red accent */
   box-shadow: 0 0 4px rgba(230, 57, 70, 0.3) !important;
 }
+
+.select-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.select-wrapper select {
+  width: 100%;
+  padding-right: 30px; /* give space for icon */
+  appearance: none; /* remove default arrow */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+.select-wrapper .dropdown-icon {
+  position: absolute;
+  right: 10px;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  color: #666;
+}

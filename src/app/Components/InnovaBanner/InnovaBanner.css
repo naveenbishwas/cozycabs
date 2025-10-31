@@ -1,4 +1,5 @@
-.hero-section {
+/* ========== INNOVA HERO SECTION ========== */
+.innova-hero {
   position: relative;
   width: 100%;
   height: 90vh;
@@ -11,16 +12,8 @@
   color: #fff;
 }
 
-/* .overlay {
-  background: rgba(0, 0, 0, 0.55);
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-} */
-
-.overlay {
+/* Overlay */
+.innova-overlay {
   background: rgba(0, 0, 0, 0.55);
   width: 100%;
   min-height: 100%;
@@ -30,27 +23,28 @@
   flex-direction: column;
 }
 
-.content {
+/* Content */
+.innova-content {
   text-align: center;
   max-width: 850px;
   padding: 20px;
 }
 
-.content h1 {
+.innova-title {
   font-size: 3rem;
   font-weight: 700;
   margin-bottom: 15px;
 }
 
-.content p {
+.innova-subtitle {
   font-size: 1.1rem;
   line-height: 1.6;
   margin-bottom: 35px;
   color: #eee;
 }
 
-/* Feature Boxes */
-.features {
+/* ========== FEATURES ========== */
+.innova-features {
   display: flex;
   justify-content: center;
   gap: 20px;
@@ -59,7 +53,7 @@
   margin-top: 70px;
 }
 
-.feature-box {
+.innova-feature-box {
   background: #fff;
   color: #000;
   display: flex;
@@ -72,20 +66,20 @@
   font-size: 0.95rem;
 }
 
-.feature-box img {
+.innova-feature-box img {
   width: 20px;
   height: 20px;
 }
 
-/* Call To Action Buttons */
-.cta-buttons {
+/* ========== CTA BUTTONS ========== */
+.innova-cta {
   display: flex;
   justify-content: center;
   gap: 20px;
   flex-wrap: wrap;
 }
 
-.call-btn {
+.innova-call-btn {
   background-color: #e74c3c;
   padding: 12px 26px;
   border-radius: 6px;
@@ -95,11 +89,11 @@
   transition: 0.3s;
 }
 
-.call-btn:hover {
+.innova-call-btn:hover {
   background-color: #cf3e2f;
 }
 
-.book-btn {
+.innova-book-btn {
   background-color: transparent;
   border: 2px solid #fff;
   padding: 12px 26px;
@@ -110,51 +104,50 @@
   transition: 0.3s;
 }
 
-.book-btn:hover {
+.innova-book-btn:hover {
   background-color: #fff;
   color: #000;
 }
 
-/* ---------- RESPONSIVE ---------- */
-
+/* ========== RESPONSIVE ========== */
 @media (max-width: 900px) {
-  .hero-section {
+  .innova-hero {
     padding: 60px 0;
   }
 
-  .content {
+  .innova-content {
     padding: 20px 10%;
   }
 
-  .content h1 {
+  .innova-title {
     font-size: 2.4rem;
   }
 
-  .content p {
+  .innova-subtitle {
     font-size: 1rem;
     margin-bottom: 25px;
   }
 
-  .features {
+  .innova-features {
     margin-top: 50px;
   }
 }
 
-/* --- Mobile Scrollable Features --- */
+/* --- MOBILE SCROLLABLE FEATURES --- */
 @media (max-width: 600px) {
-  .content {
+  .innova-content {
     padding: 20px 6%;
   }
 
-  .content h1 {
+  .innova-title {
     font-size: 1.8rem;
   }
 
-  .content p {
+  .innova-subtitle {
     font-size: 0.95rem;
   }
 
-  .features {
+  .innova-features {
     flex-wrap: nowrap;
     overflow-x: auto;
     gap: 14px;
@@ -164,11 +157,11 @@
     padding: 0 5px 10px;
   }
 
-  .features::-webkit-scrollbar {
+  .innova-features::-webkit-scrollbar {
     display: none;
   }
 
-  .feature-box {
+  .innova-feature-box {
     flex: 0 0 auto;
     scroll-snap-align: start;
     min-width: 140px;
@@ -176,27 +169,27 @@
     padding: 10px 14px;
   }
 
-  .cta-buttons {
+  .innova-cta {
     flex-wrap: unset;
     align-items: center;
     gap: 14px;
   }
 
-  .content {
+  .innova-content {
     max-width: 350px;
   }
 
-  .call-btn,
-  .book-btn {
+  .innova-call-btn,
+  .innova-book-btn {
     width: 159px;
     max-width: unset;
     text-align: center;
     font-size: 11px;
   }
 
-  .overlay {
+  .innova-overlay {
     height: auto;
-    min-height: 100vh; /* ensures full screen coverage even when hero auto-sizes */
+    min-height: 100vh;
     padding: 40px 0;
   }
 }

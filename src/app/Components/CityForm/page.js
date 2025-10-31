@@ -101,6 +101,26 @@ const CityForm = () => {
     );
   }
 
+  function DropdownIcon() {
+    return (
+      <svg
+        width="16"
+        height="16"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M7 10l5 5 5-5"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    );
+  }
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -208,18 +228,23 @@ const CityForm = () => {
 
           {/* Row 2 */}
           <div className="form-row">
-            <select>
-              <option>Select Service Option</option>
-              <option>Corporate Car Rental</option>
-              <option>Employee Transport Solutions</option>
-              <option>Global Car Rental</option>
-              <option>Hotel Travel Desk</option>
-              <option>Conference & Delegation</option>
-              <option>Event Transportation</option>
-              <option>Wedding Car Rental</option>
-              <option>Travel Partners Program</option>
-              <option>Chauffeured Car Rental</option>
-            </select>
+            <div className="select-wrapper">
+              <select>
+                <option>Select Service Option</option>
+                <option>Corporate Car Rental</option>
+                <option>Employee Transport Solutions</option>
+                <option>Global Car Rental</option>
+                <option>Hotel Travel Desk</option>
+                <option>Conference & Delegation</option>
+                <option>Event Transportation</option>
+                <option>Wedding Car Rental</option>
+                <option>Travel Partners Program</option>
+                <option>Chauffeured Car Rental</option>
+              </select>
+              <span className="dropdown-icon">
+                <DropdownIcon />
+              </span>
+            </div>
 
             <input
               type="date"
@@ -247,13 +272,22 @@ const CityForm = () => {
 
           <div className="form-row">
             {/* Service Type */}
-            <select onChange={handleServiceChange} value={selectedService}>
-              <option value="">Select Service Type</option>
-              <option value="Premium">Premium</option>
-              <option value="Luxury">Luxury</option>
-              <option value="Economy">Economy</option>
-              <option value="Bus & Coach">Bus & Coach</option>
-            </select>
+            <div className="select-wrapper">
+              <select
+                onChange={handleServiceChange}
+                value={selectedService}
+                className="select-wrapper"
+              >
+                <option value="">Select Service Type</option>
+                <option value="Premium">Premium</option>
+                <option value="Luxury">Luxury</option>
+                <option value="Economy">Economy</option>
+                <option value="Bus & Coach">Bus & Coach</option>
+              </select>
+              <span className="dropdown-icon">
+                <DropdownIcon />
+              </span>
+            </div>
 
             {/* Vehicle Type */}
             <select disabled={!vehicleOptions.length}>
