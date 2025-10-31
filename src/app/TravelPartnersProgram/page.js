@@ -17,6 +17,7 @@ import {
 import ServiceBookingForm from "../Components/ServicesBookingForm/page";
 import CityForm from "../Components/CityForm/page";
 import CityBestChoice from "../Components/CityBestChoice/page";
+import NumberCounter from "../Components/NumberCounter/page";
 
 const TravelPartnersProgram = () => {
   const aboutCountersRef = useRef(null);
@@ -73,7 +74,7 @@ const TravelPartnersProgram = () => {
 
       <section className="employee-transport section-container" id="mobile">
         <Image
-          src="./8.png"
+          src="./traval-partners.jpg"
           width={1440}
           height={600}
           className="innova-backgound "
@@ -83,40 +84,7 @@ const TravelPartnersProgram = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="number-stats" ref={aboutCountersRef} id="about">
-        <div className="about__stats">
-          <div className="stat">
-            <div className="stat__num" data-counter-to="1000">
-              0+
-            </div>
-            <div className="stat__label">Hotels & Corporates Partnered</div>
-          </div>
-          <div className="stat">
-            <div className="stat__num" data-counter-to="5000">
-              0+
-            </div>
-            <div className="stat__label">Clients Served Through Partners</div>
-          </div>
-          <div className="stat">
-            <div className="stat__num" data-counter-to="15">
-              0+
-            </div>
-            <div className="stat__label">Years of Industry Experience</div>
-          </div>
-          <div className="stat">
-            <div className="stat__num" data-counter-to="300">
-              0+
-            </div>
-            <div className="stat__label">Cities Covered Nationwide</div>
-          </div>
-          <div className="stat">
-            <div className="stat__num" data-counter-to="20000">
-              0+
-            </div>
-            <div className="stat__label">Happy Partner Customers</div>
-          </div>
-        </div>
-      </section>
+      <NumberCounter />
 
       {/* Partnership Section */}
       <section className="smooth-ride section-container">

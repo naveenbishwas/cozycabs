@@ -174,8 +174,17 @@
 }
 
 @media screen and (max-width: 768px) {
-  .info-text h2 {
+  .info-text h2,
+  .info-text li {
     text-align: left;
+  }
+
+  .info-text li {
+    font-size: 14px;
+  }
+
+  .info-text ul {
+    padding-left: 0;
   }
 }
 

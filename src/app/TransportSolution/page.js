@@ -10,6 +10,7 @@ import Link from "next/link";
 import ServiceBookingForm from "../Components/ServicesBookingForm/page";
 import CityForm from "../Components/CityForm/page";
 import CityBestChoice from "../Components/CityBestChoice/page";
+import NumberCounter from "../Components/NumberCounter/page";
 
 const stats = [
   {
@@ -141,42 +142,7 @@ const TransportSolution = () => {
         />
       </section>
 
-      <section className="number-stats" ref={aboutCountersRef} id="about">
-        <div className="about__stats">
-          <div className="stat">
-            <div className="stat__num" data-counter-to="250">
-              0+
-            </div>
-            <div className="stat__label">Cities Covered Around India</div>
-          </div>
-          <div className="stat">
-            <div className="stat__num" data-counter-to="1000">
-              0+
-            </div>
-            <div className="stat__label">Cabs Available Everyday</div>
-          </div>
-          <div className="stat">
-            <div className="stat__num" data-counter-to="10">
-              0+
-            </div>
-            <div className="stat__label">
-              Years of Experience in the Industry
-            </div>
-          </div>
-          <div className="stat">
-            <div className="stat__num" data-counter-to="5000">
-              0+
-            </div>
-            <div className="stat__label">Happy Customers</div>
-          </div>
-          <div className="stat">
-            <div className="stat__num" data-counter-to="1200">
-              0+
-            </div>
-            <div className="stat__label">Vendor Covering the Entire Nation</div>
-          </div>
-        </div>
-      </section>
+      <NumberCounter />
 
       <section className="smooth-ride section-container">
         <div className="ride-images">

@@ -74,9 +74,35 @@ a {
   min-height: 100vh;
   padding-top: var(--header-space);
   color: #fff;
+  background: url("/City-banner.png") center right / cover no-repeat;
+}
 
-  /* background image */
-  background: url("/internal1.webp") center right / cover no-repeat;
+.heroeco {
+  --header-space: 0px;
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  min-height: 100vh;
+  padding-top: var(--header-space);
+  color: #fff;
+  background: url("/City-banner.png") center right / cover no-repeat;
+}
+
+/* Mobile version image */
+@media (max-width: 768px) {
+  .heroeco {
+    background: url("/city-banner-mobile.png") center top / cover no-repeat;
+    background-attachment: scroll;
+    min-height: 90vh;
+  }
+
+  .innova-stat {
+    max-width: 110px !important;
+  }
+
+  #mobile {
+    display: block !important;
+  }
 }
 
 /* Full-bleed gradient overlay */
@@ -134,7 +160,6 @@ a {
 @media (max-width: 992px) {
   .heroeco {
     min-height: 90vh;
-    margin-bottom: var(--section-gap-md);
   }
   .heroeco__copy {
     padding: 32px 24px 40px;
@@ -586,11 +611,23 @@ a {
   pointer-events: none;
 }
 
-.stepsGrid {
-  display: grid;
-  gap: 26px;
-  grid-template-columns: repeat(5, 1fr);
-  align-items: start;
+/* Small Mobile (up to 600px) */
+@media (max-width: 600px) {
+  .stepsGrid {
+    gap: 18px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .badge {
+    flex: unset !important;
+    height: 70px !important;
+    width: 90px !important;
+  }
+
+  .badgeStep {
+    display: none;
+  }
 }
 
 /* Each step block */
@@ -666,9 +703,6 @@ a {
     top: 190px;
     width: min(820px, 92vw);
   }
-  .stepsGrid {
-    grid-template-columns: repeat(3, 1fr);
-  }
 }
 @media (max-width: 992px) {
   .howto {
@@ -685,16 +719,9 @@ a {
     flex-direction: unset;
   }
 
-  .badge {
-    flex: 50%;
-  }
   .howtoSubtitle {
     font-size: 15px;
     margin-bottom: 34px;
-  }
-  .badge {
-    width: 110px;
-    height: 110px;
   }
 
   .howrent {
@@ -712,43 +739,17 @@ a {
   .connector {
     display: none;
   } /* hide dotted line on mobile for clarity */
-  .stepsGrid {
-    grid-template-columns: repeat(1, 1fr);
-    gap: 32px;
-  }
+
   .descCard {
     max-width: 520px;
     margin: 0 auto;
   }
 }
 
-.stepsGrid {
-  display: grid;
-  gap: 26px;
-  grid-template-columns: repeat(5, 1fr); /* default desktop */
-  align-items: start;
-}
-
-/* Tablets */
-@media (max-width: 1100px) {
-  .stepsGrid {
-    grid-template-columns: repeat(3, 1fr); /* 3 per row */
-  }
-}
-
 /* Small tablets / large phones */
-@media (max-width: 900px) {
-  .stepsGrid {
-    grid-template-columns: repeat(2, 1fr); /* 2 per row */
-  }
-}
 
 /* Mobile */
 @media (max-width: 640px) {
-  .stepsGrid {
-    grid-template-columns: 1fr; /* 1 per row */
-    gap: 32px;
-  }
   .descCard {
     max-width: 520px;
     margin: 0 auto;
@@ -1243,34 +1244,6 @@ a {
   margin-top: 8px;
 }
 
-/* Stats ribbon */
-.why-stats {
-  margin-top: 24px;
-  background: #000;
-  color: #fff;
-  padding: 18px 12px;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
-  align-items: center;
-  text-align: center;
-}
-
-.stat {
-  text-align: center;
-  padding: 8px 6px;
-}
-.stat-num {
-  font-size: clamp(20px, 3.3vw, 34px);
-  font-weight: 800;
-  line-height: 1.1;
-}
-.stat-label {
-  opacity: 0.95;
-  margin-top: 4px;
-  font-size: 14px;
-}
-
 .main-img img {
   width: 500px !important;
   height: 500px !important;
@@ -1332,15 +1305,6 @@ a {
 
   .cta-buttons {
     align-items: center;
-  }
-
-  .stat__label {
-    font-size: 10px !important;
-  }
-
-  .about__stats {
-    gap: 8px !important;
-    margin-bottom: 20px !important;
   }
 
   .ride-content h2 {
@@ -2113,6 +2077,11 @@ section.innova-why {
     padding: 30px 20px;
   }
 
+  .innova-why-head h2,
+  h1 {
+    font-size: 24px;
+  }
+
   .innova-hero-content {
     padding-right: 0;
     margin-bottom: 30px;
@@ -2178,8 +2147,22 @@ section.innova-why {
   line-height: 1.4;
 }
 
-#mobile {
+/* Default (Desktop visible) */
+.desktop-slider {
+  display: block;
+}
+.mobile-slider {
   display: none;
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+  .desktop-slider {
+    display: none;
+  }
+  .mobile-slider {
+    display: block;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -2204,13 +2187,11 @@ section.innova-why {
   .arrow {
     display: none !important;
   }
-
-  .slide-content {
-    left: 0 !important;
-    padding: 0 3%;
-  }
 }
 
+#mobile {
+  display: none;
+}
 .tag-btn {
   display: block;
   margin: 0 auto;
@@ -2326,6 +2307,10 @@ section.innova-why {
     padding: 46px 5% 34px;
   }
 
+  .main-img img {
+    height: auto !important;
+  }
+
   #occasion {
     display: flex !important;
   }
@@ -2337,35 +2322,5 @@ section.innova-why {
 
   #flex .fleet-card {
     width: 100% !important;
-  }
-
-  .stat__num {
-    font-size: 28px !important;
-  }
-
-  .stat__label {
-    font-size: 8px !important;
-  }
-
-  .about__stats {
-    display: grid;
-    overflow-x: auto; /* enables horizontal scroll */
-    scroll-snap-type: x mandatory; /* smooth scroll snaps */
-    gap: 16px;
-    -webkit-overflow-scrolling: touch; /* smooth scroll for iOS */
-    padding-top: 10px;
-    padding-bottom: 0px;
-  }
-
-  .about__stats::-webkit-scrollbar {
-    display: none; /* hides scrollbar for cleaner UI */
-  }
-
-  .about__stats > * {
-    scroll-snap-align: start; /* each stat card snaps neatly */
-  }
-
-  .stat__num {
-    font-size: 32px;
   }
 }

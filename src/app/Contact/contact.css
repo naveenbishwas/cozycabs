@@ -128,4 +128,12 @@
   .contact-hero {
     padding: 80px 20px 60px;
   }
+
+  .contact-info h4 {
+    text-decoration: underline;
+  }
+
+  .contact-form .note {
+    text-align: left;
+  }
 }

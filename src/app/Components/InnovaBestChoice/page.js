@@ -20,7 +20,9 @@ const InnovaBestChoice = () => {
       <section className="innova-why">
         <div className="innova-why-wrap">
           <header className="innova-why-head">
-            <h2>What Makes Us the Best Choice</h2>
+            <h2>
+              What Makes Us the <span className="red-black">Best Choice</span>
+            </h2>
             <p>
               Our commitment to excellence and customer satisfaction sets us
               apart.

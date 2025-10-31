@@ -8,22 +8,40 @@ html {
   scroll-behavior: smooth;
 }
 
-/* .hero {
-  height: 100vh;
-  background: url("/home-banner.png") center/cover no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-} */
-
-.hero {
+.hero.desktop {
   height: 100vh;
   background: url("/h1.png") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
+}
+
+/* Initially hide mobile */
+.hero.mobile {
+  height: 100vh;
+  background: url("/home-mobile.png") center/cover no-repeat;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* ✅ Show mobile / hide desktop below 768px */
+@media (max-width: 768px) {
+  .hero.desktop {
+    display: none !important;
+  }
+
+  .hero.mobile {
+    display: flex !important;
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+  .hero .desktop {
+    background-position: center top;
+  }
 }
 
 .hero::before {
@@ -302,38 +320,6 @@ html {
 .number-stats {
   padding: 2%;
   background: linear-gradient(180deg, #000000 0%, #1a1a1a 100%);
-}
-
-/* Stats row (keeps 5 in a row, space-balanced, responsive) */
-.about__stats {
-  display: grid;
-  grid-template-columns: repeat(5, minmax(140px, 1fr));
-  align-items: start;
-  gap: 24px;
-  border-radius: 8px;
-}
-
-.about__stats .stat {
-  text-align: center;
-  padding: 8px 6px;
-}
-
-.stat__num {
-  font-size: 40px;
-  font-weight: 800;
-  color: #ffffff !important; /* white for contrast on black */
-  letter-spacing: 0.5px;
-  line-height: 1.1;
-  margin-bottom: 6px;
-}
-
-.stat__label {
-  margin: 0;
-  font-size: 13px;
-  letter-spacing: 0.6px;
-  color: #ffffff; /* red highlight for brand tone */
-  font-weight: 700;
-  text-transform: uppercase;
 }
 
 /* ===== FAQ (clean, professional) ===== */
@@ -2455,7 +2441,7 @@ p {
   }
   .program-banner h2 {
     margin-top: 45%;
-    font-size: 24px;
+    font-size: 22px !important;
   }
   .program-banner p {
     margin-top: 8px;
@@ -2942,6 +2928,11 @@ p {
 
   .program-banner {
     height: auto !important;
+    padding: 40px 15px;
+  }
+
+  .faq-list {
+    gap: 0 !important;
   }
 
   .in-desktop {
@@ -2962,8 +2953,8 @@ p {
     width: 280px;
   }
 
-  .about__stats {
-    scrollbar-color: #ffffff #f6ffdb;
+  .hero-btn {
+    font-size: 13px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1200px) {

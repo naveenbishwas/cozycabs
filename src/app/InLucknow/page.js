@@ -247,27 +247,6 @@ const InLucknow = () => {
 
       <CityForm />
 
-      {/* <section className="trust">
-        <div className="trust__container">
-          <h2 className="trust__title">
-            Why Ride <span>CozyCabs</span>
-          </h2>
-          <p className="trust__sub">
-            Everything we build is focused on safe, reliable and fairly-priced
-            rides.
-          </p>
-
-          <div className="trust__grid">
-            {items.map((it, i) => (
-              <article className="trust__card" key={i}>
-                <div className="trust__icon">{it.icon}</div>
-                <h3>{it.title}</h3>
-                <p>{it.desc}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section> */}
       <Trustcc />
       <Howto />
       <Howrent />

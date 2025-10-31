@@ -49,7 +49,7 @@
 /* Mobile (up to 768px) */
 @media (max-width: 768px) {
   .innova-number-stats {
-    padding: 40px 10px;
+    padding: 15px 5px !important;
   }
 
   .innova-about-stats {
@@ -68,38 +68,48 @@
 }
 
 /* Scrollable Mobile (up to 600px) */
+/* Scrollable Mobile (up to 600px) */
 @media (max-width: 600px) {
   .innova-number-stats {
-    padding: 46px 5% 34px;
+    padding: 50px 6% 36px;
+    background: linear-gradient(180deg, #000, #0b0b0b);
   }
 
   .innova-about-stats {
-    display: grid;
-    grid-template-columns: repeat(
-      5,
-      minmax(140px, 1fr)
-    ); /* wide enough to scroll */
-    overflow-x: auto; /* enables horizontal scroll */
-    scroll-snap-type: x mandatory; /* smooth scroll snaps */
-    gap: 16px;
-    -webkit-overflow-scrolling: touch; /* smooth iOS scroll */
-    padding-bottom: 10px;
-    justify-content: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px 12px;
+    text-align: center;
   }
 
-  .innova-about-stats::-webkit-scrollbar {
-    display: none; /* hides scrollbar */
+  .innova-stat {
+    flex: 1 1 120px;
+    max-width: 130px;
+    padding: 8px 0;
+    border-radius: 10px;
+    /* background: rgba(255, 255, 255, 0.04); */
+    backdrop-filter: blur(4px);
+    transition: transform 0.25s ease, background 0.25s ease;
   }
 
-  .innova-about-stats > * {
-    scroll-snap-align: start; /* each stat card snaps */
+  .innova-stat:hover {
+    transform: translateY(-4px);
+    background: rgba(255, 255, 255, 0.08);
   }
 
   .innova-stat-num {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 4px;
+    letter-spacing: 0.5px;
   }
 
   .innova-stat-label {
     font-size: 11px;
+    text-transform: capitalize;
+    color: #dcdcdc;
+    line-height: 1.4;
   }
 }

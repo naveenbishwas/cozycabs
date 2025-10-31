@@ -249,3 +249,22 @@ textarea {
   align-items: center;
   color: #666;
 }
+
+@media screen and (max-width: 768px) {
+  .bookcar-section .bookcar-form input,
+  .bookcar-section .bookcar-form select,
+  .bookcar-section .bookcar-form textarea {
+    height: 40px !important;
+    font-size: 13px !important;
+    line-height: unset !important;
+  }
+
+  .bookcar-form {
+    gap: 0 !important;
+  }
+
+  .terms p {
+    font-size: 10px;
+    max-width: 80%;
+  }
+}

@@ -154,31 +154,6 @@ const Innovainmumbai = () => {
           {faqs.map((item, i) => {
             const open = openIndex === i;
             return (
-              // <div key={i} className={`innova-faq-item ${open ? "open" : ""}`}>
-              //   <button
-              //     onClick={() => toggle(i)}
-              //     className="innova-faq-question"
-              //   >
-              //     <span>{item.q}</span>
-              //     <svg
-              //       className={`innova-faq-icon ${open ? "rotated" : ""}`}
-              //       xmlns="http://www.w3.org/2000/svg"
-              //       fill="none"
-              //       viewBox="0 0 24 24"
-              //       strokeWidth="1.5"
-              //       stroke="currentColor"
-              //     >
-              //       <path
-              //         strokeLinecap="round"
-              //         strokeLinejoin="round"
-              //         d="m19.5 8.25-7.5 7.5-7.5-7.5"
-              //       />
-              //     </svg>
-              //   </button>
-              //   <div className={`innova-faq-answer ${open ? "show" : ""}`}>
-              //     <p>{item.a}</p>
-              //   </div>
-              // </div>
               <div
                 className={`faq-item ${open ? "open" : ""}`}
                 key={i}

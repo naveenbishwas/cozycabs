@@ -16,6 +16,7 @@ import {
 } from "react-icons/fa";
 import CityForm from "../Components/CityForm/page";
 import CityBestChoice from "../Components/CityBestChoice/page";
+import NumberCounter from "../Components/NumberCounter/page";
 
 const ChauffeurCarRental = () => {
   const aboutCountersRef = useRef(null);
@@ -82,40 +83,7 @@ const ChauffeurCarRental = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="number-stats" ref={aboutCountersRef} id="about">
-        <div className="about__stats">
-          <div className="stat">
-            <div className="stat__num" data-counter-to="15000">
-              0+
-            </div>
-            <div className="stat__label">Rides Managed Nationwide</div>
-          </div>
-          <div className="stat">
-            <div className="stat__num" data-counter-to="5000">
-              0+
-            </div>
-            <div className="stat__label">Luxury Cars & SUVs</div>
-          </div>
-          <div className="stat">
-            <div className="stat__num" data-counter-to="12">
-              0+
-            </div>
-            <div className="stat__label">Years of Service Excellence</div>
-          </div>
-          <div className="stat">
-            <div className="stat__num" data-counter-to="20000">
-              0+
-            </div>
-            <div className="stat__label">Happy Clients & Families</div>
-          </div>
-          <div className="stat">
-            <div className="stat__num" data-counter-to="300">
-              0+
-            </div>
-            <div className="stat__label">Cities Covered Across India</div>
-          </div>
-        </div>
-      </section>
+      <NumberCounter />
 
       {/* Premium Ride Section */}
       <section className="smooth-ride section-container">

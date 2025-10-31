@@ -133,7 +133,8 @@
 /* Responsive */
 @media (max-width: 768px) {
   .slide-content {
-    left: 5%;
+    left: 15% !important;
+
     bottom: 10%;
   }
   .slide-content h2 {
@@ -798,6 +799,14 @@ button:hover {
   }
   .feature-box {
     min-width: 230px;
+  }
+
+  .features-row {
+    flex-wrap: unset !important;
+  }
+
+  #luxury {
+    padding-bottom: 50px;
   }
 }
 

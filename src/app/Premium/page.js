@@ -1,31 +1,53 @@
 "use client";
-import React, { useState, useEffect, useRef } from "react";
-import "./premium.css";
-import { FaUsers, FaSuitcase, FaGasPump } from "react-icons/fa";
+import React, { useState, useEffect } from "react";
+import "./Premium.css";
 import Header from "../Components/Header/page";
 import SiteFooter from "../Components/Footer/page";
-import { FaCouch, FaUserTie, FaClock, FaShieldAlt } from "react-icons/fa";
 import CityForm from "../Components/CityForm/page";
 import Image from "next/image";
+import NumberCounter from "../Components/NumberCounter/page";
 
-const slides = [
+// Desktop slides
+const desktopSlides = [
   {
     id: 1,
-    image: "premium-banner1.png",
+    image: "/premium-banner1.png",
     heading: "Luxury at Every Turn",
     subtext: "Experience the elegance of premium cars that define perfection.",
   },
   {
     id: 2,
-    image: "premium-banner2.png",
+    image: "/premium-banner2.png",
     heading: "Performance Meets Power",
     subtext: "Engineered for thrill — crafted for excellence.",
   },
   {
     id: 3,
-    image: "premium-banner3.png",
+    image: "/premium-banner3.png",
     heading: "Drive the Dream",
     subtext: "From streets to highways, own the road with style.",
+  },
+];
+
+// Mobile slides
+const mobileSlides = [
+  {
+    id: 1,
+    image: "/premium-m1.png",
+    heading: "Ride Smart, Ride Premium",
+    subtext: "Comfort and class in every journey.",
+  },
+  {
+    id: 2,
+    image: "/premium-m2.png",
+    heading: "Book, Relax, Arrive",
+    subtext: "Luxury that moves with you.",
+  },
+  {
+    id: 3,
+    image: "/premium-m3.png",
+    heading: "Your Comfort, Our Priority",
+    subtext: "Every trip feels first-class.",
   },
 ];
 
@@ -34,7 +56,7 @@ const cars = [
     id: 1,
     title: "Toyota Fortuner",
     subtitle: "Crysta",
-    image: "premium-toyota-fortuner.png",
+    image: "/premium-toyota-fortuner.png",
     badge: "Top Choice",
     description:
       "Perfect for family trips and group travel. Spacious, comfortable, and reliable.",
@@ -60,7 +82,7 @@ const cars = [
     id: 3,
     title: "Toyota Innova Hycross",
     subtitle: "Fortuner / Endeavour",
-    image: "premium-toyota-innova-hycros.png",
+    image: "/premium-toyota-innova-hycros.png",
     description:
       "Make a statement with our premium SUVs. Perfect for special occasions and long drives.",
     seating: 7,
@@ -122,125 +144,40 @@ const faqs = [
 
 const Premium = () => {
   const [current, setCurrent] = useState(0);
+  const [currentMobile, setCurrentMobile] = useState(0);
   const [openIndex, setOpenIndex] = useState(null);
 
-  const [formData, setFormData] = useState({
-    name: "",
-    contact: "",
-    pickup: "",
-    drop: "",
-    date: "",
-    message: "",
-  });
-
-  const [errors, setErrors] = useState({});
-
-  const handleInputChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
-
-  const validateForm = () => {
-    const newErrors = {};
-    if (!formData.name) newErrors.name = "Full name is required.";
-    if (!formData.contact || !/^\+91\d{10}$/.test(formData.contact)) {
-      newErrors.contact = "Valid contact number is required (+91 XXXXXXXXXX).";
-    }
-    if (!formData.pickup) newErrors.pickup = "Pickup location is required.";
-    if (!formData.drop) newErrors.drop = "Drop location is required.";
-    if (!formData.date) newErrors.date = "Please select a valid date and time.";
-    return newErrors;
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const validationErrors = validateForm();
-    if (Object.keys(validationErrors).length === 0) {
-      console.log("Form data submitted: ", formData);
-      // Handle successful form submission (e.g., API call)
-    } else {
-      setErrors(validationErrors);
-    }
-  };
-
-  const toggle = (i) => {
-    setOpenIndex((prev) => (prev === i ? null : i));
-  };
-
-  // Counter animation function
-  function runCounter(el, to) {
-    const duration = 1400;
-    let startTs = null;
-
-    const step = (ts) => {
-      if (!startTs) startTs = ts;
-      const p = Math.min((ts - startTs) / duration, 1);
-      const eased = 1 - Math.pow(1 - p, 3); // easeOutCubic
-      const val = Math.floor(to * eased);
-      el.textContent = val + "+";
-      if (p < 1) requestAnimationFrame(step);
-    };
-
-    requestAnimationFrame(step);
-  }
-
-  // Custom hook for About section counters
-  const useAboutCountersObserver = () => {
-    const rootRef = useRef(null);
-    const fired = useRef(false);
-
-    useEffect(() => {
-      if (!rootRef.current) return;
-
-      const io = new IntersectionObserver(
-        (entries) => {
-          if (!fired.current && entries.some((e) => e.isIntersecting)) {
-            fired.current = true;
-            rootRef.current
-              .querySelectorAll("[data-counter-to]")
-              .forEach((node) => {
-                const to =
-                  parseInt(node.getAttribute("data-counter-to"), 10) || 0;
-                runCounter(node, to);
-              });
-          }
-        },
-        { threshold: 0.35 }
-      );
-
-      io.observe(rootRef.current);
-      return () => io.disconnect();
-    }, []);
-
-    return rootRef;
-  };
-
-  const aboutCountersRef = useAboutCountersObserver();
-
-  // Auto slide every 5 seconds
-  useEffect(() => {
-    const interval = setInterval(() => {
-      handleNext();
-    }, 5000);
-    return () => clearInterval(interval);
-  }, [current]);
-
   const handlePrev = () => {
-    setCurrent((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
+    setCurrent((prev) => (prev === 0 ? desktopSlides.length - 1 : prev - 1));
   };
 
   const handleNext = () => {
-    setCurrent((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
+    setCurrent((prev) => (prev === desktopSlides.length - 1 ? 0 : prev + 1));
   };
+
+  useEffect(() => {
+    const interval = setInterval(handleNext, 5000);
+    return () => clearInterval(interval);
+  }, [current]);
+
+  useEffect(() => {
+    const interval = setInterval(
+      () =>
+        setCurrentMobile((prev) =>
+          prev === mobileSlides.length - 1 ? 0 : prev + 1
+        ),
+      5000
+    );
+    return () => clearInterval(interval);
+  }, [currentMobile]);
 
   return (
     <>
       <Header />
       <section className="slideshow-section">
-        <div className="slideshow-container">
-          {slides.map((slide, index) => (
+        {/* Desktop Slider */}
+        <div className="slideshow-container desktop-slider">
+          {desktopSlides.map((slide, index) => (
             <div
               key={slide.id}
               className={`slide ${index === current ? "active" : ""}`}
@@ -255,43 +192,15 @@ const Premium = () => {
             </div>
           ))}
 
-          {/* Navigation Arrows */}
           <button className="arrow left" onClick={handlePrev}>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth="1.5"
-              stroke="currentColor"
-              className="size-6"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M15.75 19.5 8.25 12l7.5-7.5"
-              />
-            </svg>
+            ‹
           </button>
           <button className="arrow right" onClick={handleNext}>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth="1.5"
-              stroke="currentColor"
-              className="size-6"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="m8.25 4.5 7.5 7.5-7.5 7.5"
-              />
-            </svg>
+            ›
           </button>
 
-          {/* Dots Navigation */}
           <div className="dots">
-            {slides.map((_, index) => (
+            {desktopSlides.map((_, index) => (
               <span
                 key={index}
                 className={`dot ${index === current ? "active-dot" : ""}`}
@@ -300,56 +209,47 @@ const Premium = () => {
             ))}
           </div>
         </div>
-      </section>
 
-      <section className="number-stats" ref={aboutCountersRef} id="about">
-        <div className="about__stats">
-          <div className="stat">
-            <div className="stat__num" data-counter-to="250">
-              0+
+        {/* Mobile Slider */}
+        <div className="slideshow-container mobile-slider">
+          {mobileSlides.map((slide, index) => (
+            <div
+              key={slide.id}
+              className={`slide ${index === currentMobile ? "active" : ""}`}
+              style={{ backgroundImage: `url(${slide.image})` }}
+            >
+              <div className="premium-overlay"></div>
+              <div className="slide-content">
+                <h2>{slide.heading}</h2>
+                <p>{slide.subtext}</p>
+                <button>Book Now</button>
+              </div>
             </div>
-            <div className="stat__label">Cities Covered Around India</div>
-          </div>
-          <div className="stat">
-            <div className="stat__num" data-counter-to="1000">
-              0+
-            </div>
-            <div className="stat__label">Cabs Available Everyday</div>
-          </div>
-          <div className="stat">
-            <div className="stat__num" data-counter-to="10">
-              0+
-            </div>
-            <div className="stat__label">
-              Years of Experience in the Industry
-            </div>
-          </div>
-          <div className="stat">
-            <div className="stat__num" data-counter-to="5000">
-              0+
-            </div>
-            <div className="stat__label">Happy Customers</div>
-          </div>
-          <div className="stat">
-            <div className="stat__num" data-counter-to="1200">
-              0+
-            </div>
-            <div className="stat__label">Vendor Covering the Entire Nation</div>
+          ))}
+
+          <div className="dots">
+            {mobileSlides.map((_, index) => (
+              <span
+                key={index}
+                className={`dot ${index === currentMobile ? "active-dot" : ""}`}
+                onClick={() => setCurrentMobile(index)}
+              ></span>
+            ))}
           </div>
         </div>
       </section>
 
+      <NumberCounter />
+
       <CityForm />
 
+      {/* Fleet Section */}
       <section className="fleet-section">
         <div className="fleet-header">
           <h2>
             Premium <span className="red-black">Vehicles</span>
           </h2>
-          <p>
-            From business travel to weekend getaways, find the right ride for
-            your journey.
-          </p>
+          <p>Find the right ride for your journey.</p>
         </div>
 
         <div className="fleet-grid">
@@ -359,66 +259,10 @@ const Premium = () => {
                 <img src={car.image} alt={car.title} />
                 {car.badge && <div className="badge">{car.badge}</div>}
               </div>
-
               <div className="fleet-content">
                 <h3>{car.title}</h3>
                 <div className="subtitle">{car.subtitle}</div>
-                <div className="desc">{car.description}</div>
-
-                <div className="icons">
-                  <span>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      strokeWidth="1.5"
-                      stroke="currentColor"
-                      className="size-6"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"
-                      />
-                    </svg>
-                    {car.seating}
-                  </span>
-                  <span>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      strokeWidth="1.5"
-                      stroke="currentColor"
-                      className="size-6"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"
-                      />
-                    </svg>
-                    {car.luggage}
-                  </span>
-                  <span>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      strokeWidth="1.5"
-                      stroke="currentColor"
-                      className="size-6"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0 0 12 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75Z"
-                      />
-                    </svg>
-                    {car.fuel}
-                  </span>
-                </div>
-
+                <p className="desc">{car.description}</p>
                 <div className="bottom-row">
                   <div className="price">{car.price}</div>
                   <button>Book Now</button>
@@ -429,28 +273,24 @@ const Premium = () => {
         </div>
       </section>
 
+      {/* Why Premium */}
       <section className="why-premium-section">
         <div className="why-header">
           <h2>
-            Why Ride <span className="red-black">Premium</span>
+            Why Ride <span className="red-black">Premium?</span>
           </h2>
-          <p>
-            Because luxury isn’t just a label—it’s how every ride should feel.
-          </p>
+          <p>Because comfort, safety, and class should come standard.</p>
         </div>
-
         <div className="features-row">
           {features.map((feature) => (
             <div key={feature.id} className="feature-box">
-              <div className="icon-wrapper">
-                <Image
-                  src={feature.image}
-                  alt={feature.title}
-                  width={50}
-                  height={50}
-                  unoptimized
-                />
-              </div>
+              <Image
+                src={feature.image}
+                width={50}
+                height={50}
+                alt={feature.title}
+                unoptimized
+              />
               <h3>{feature.title}</h3>
               <p>{feature.desc}</p>
             </div>
@@ -458,159 +298,25 @@ const Premium = () => {
         </div>
       </section>
 
-      <section className="features-section">
-        <h2 className="features-title">
-          Perfect For Every <span className="red-black">Occasion</span>
-        </h2>
-        <div className="features-row" id="occasion">
-          <div className="feature-box" id="occasion-box">
-            <div className="icon-wrapper">
-              <Image
-                src="/corporate-rides.png"
-                alt="premium"
-                width={60}
-                height={60}
-                unoptimized
-              />
-            </div>
-            <h3>Corporate Rides</h3>
-            <p>
-              Professional chauffeur service for business meetings, client
-              visits, and executive travel.
-            </p>
-          </div>
-
-          <div className="feature-box">
-            <div className="icon-wrapper">
-              <Image
-                src="/Airport-transfers.png"
-                alt="premium"
-                width={60}
-                height={60}
-                unoptimized
-              />
-            </div>
-            <h3>Airport Transfers</h3>
-            <p>
-              Punctual pickups and drop-offs with flight tracking and
-              meet-and-greet service.
-            </p>
-          </div>
-
-          <div className="feature-box">
-            <div className="icon-wrapper">
-              <Image
-                src="/group-travel-1.png"
-                alt="premium"
-                width={60}
-                height={60}
-                unoptimized
-              />
-            </div>
-            <h3>Group Travel</h3>
-            <p>
-              Spacious vehicles for family trips, team outings, and group
-              adventures.
-            </p>
-          </div>
-
-          <div className="feature-box">
-            <div className="icon-wrapper">
-              <Image
-                src="/special-event.png"
-                alt="premium"
-                width={60}
-                height={60}
-                unoptimized
-              />
-            </div>
-            <h3>Special Events</h3>
-            <p>
-              Make your weddings, parties, and celebrations memorable with
-              luxury transportation.
-            </p>
-          </div>
-
-          <div className="feature-box">
-            <div className="icon-wrapper">
-              <Image
-                src="/outstation-trips.png"
-                alt="premium"
-                width={60}
-                height={60}
-                unoptimized
-              />
-            </div>
-            <h3>Outstation Trips</h3>
-            <p>
-              Comfortable long-distance travel with experienced drivers who know
-              the routes.
-            </p>
-          </div>
-
-          <div className="feature-box">
-            <div className="icon-wrapper">
-              <Image
-                src="/daily-commute.png"
-                alt="premium"
-                width={60}
-                height={60}
-                unoptimized
-              />
-            </div>
-            <h3>Daily Commute</h3>
-            <p>
-              Reliable everyday transportation for work, shopping, or personal
-              errands.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Services */}
+      {/* FAQ Section */}
       <section className="faq" id="premium-faq">
         <div className="faq-header">
           <h2>
             Frequently Asked <span className="red-black">Questions</span>
           </h2>
-          <p>
-            Answers to the most common questions about our corporate
-            transportation program.
-          </p>
         </div>
-
-        <div className="faq-list" role="list">
-          {faqs.map((item, i) => {
-            const open = openIndex === i;
-            return (
-              <div
-                className={`faq-item ${open ? "open" : ""}`}
-                key={i}
-                role="listitem"
+        <div className="faq-list">
+          {faqs.map((item, i) => (
+            <div className="faq-item" key={i}>
+              <button
+                className="faq-question"
+                onClick={() => setOpenIndex(openIndex === i ? null : i)}
               >
-                <button
-                  className="faq-question"
-                  aria-expanded={open}
-                  aria-controls={`faq-panel-${i}`}
-                  id={`faq-control-${i}`}
-                  onClick={() => toggle(i)}
-                >
-                  <span className="faq-q-text">{item.q}</span>
-                  <span className="faq-icon" aria-hidden="true" />
-                </button>
-
-                <div
-                  id={`faq-panel-${i}`}
-                  role="region"
-                  aria-labelledby={`faq-control-${i}`}
-                  className="faq-answer"
-                  style={{ maxHeight: open ? "300px" : "0px" }}
-                >
-                  <p>{item.a}</p>
-                </div>
-              </div>
-            );
-          })}
+                {item.q}
+              </button>
+              {openIndex === i && <p className="faq-answer">{item.a}</p>}
+            </div>
+          ))}
         </div>
       </section>
 

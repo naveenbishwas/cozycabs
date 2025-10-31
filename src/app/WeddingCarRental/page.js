@@ -17,6 +17,7 @@ import {
 import ServiceBookingForm from "../Components/ServicesBookingForm/page";
 import CityForm from "../Components/CityForm/page";
 import CityBestChoice from "../Components/CityBestChoice/page";
+import NumberCounter from "../Components/NumberCounter/page";
 
 function Feature({ icon, title, text }) {
   return (
@@ -93,40 +94,7 @@ const WeddingCarRental = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="number-stats" ref={aboutCountersRef} id="about">
-        <div className="about__stats">
-          <div className="stat">
-            <div className="stat__num" data-counter-to="5000">
-              0+
-            </div>
-            <div className="stat__label">Weddings Served</div>
-          </div>
-          <div className="stat">
-            <div className="stat__num" data-counter-to="2000">
-              0+
-            </div>
-            <div className="stat__label">Luxury & Vintage Cars Available</div>
-          </div>
-          <div className="stat">
-            <div className="stat__num" data-counter-to="15">
-              0+
-            </div>
-            <div className="stat__label">Years of Wedding Expertise</div>
-          </div>
-          <div className="stat">
-            <div className="stat__num" data-counter-to="10000">
-              0+
-            </div>
-            <div className="stat__label">Happy Couples & Guests</div>
-          </div>
-          <div className="stat">
-            <div className="stat__num" data-counter-to="300">
-              0+
-            </div>
-            <div className="stat__label">Cities Covered Across India</div>
-          </div>
-        </div>
-      </section>
+      <NumberCounter />
 
       {/* Ride Section */}
       <section className="smooth-ride section-container">

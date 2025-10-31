@@ -7,6 +7,7 @@ import { useState, useEffect, useRef } from "react";
 import Footer from "./Components/Footer/page";
 import Link from "next/link";
 import CityForm from "./Components/CityForm/page";
+import NumberCounter from "./Components/NumberCounter/page";
 
 /* ------------------------------------------------------------------ */
 /* Small inline icon components (single set used by both sliders)     */
@@ -708,7 +709,7 @@ export default function Home() {
     <>
       <Header />
 
-      <section className="hero">
+      <section className="hero desktop">
         <div className="overlay">
           <p className="welcome-text">Welcome To Best Cabs</p>
           <h1>Book Reliable & Affordable Cabs in 200+ Cities</h1>
@@ -721,42 +722,20 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="number-stats" ref={aboutCountersRef} id="about">
-        <div className="about__stats">
-          <div className="stat">
-            <div className="stat__num" data-counter-to="250">
-              0+
-            </div>
-            <div className="stat__label">Cities Covered Around India</div>
-          </div>
-          <div className="stat">
-            <div className="stat__num" data-counter-to="1000">
-              0+
-            </div>
-            <div className="stat__label">Cabs Available Everyday</div>
-          </div>
-          <div className="stat">
-            <div className="stat__num" data-counter-to="10">
-              0+
-            </div>
-            <div className="stat__label">
-              Years of Experience in the Industry
-            </div>
-          </div>
-          <div className="stat">
-            <div className="stat__num" data-counter-to="5000">
-              0+
-            </div>
-            <div className="stat__label">Happy Customers</div>
-          </div>
-          <div className="stat">
-            <div className="stat__num" data-counter-to="1200">
-              0+
-            </div>
-            <div className="stat__label">Vendor Covering the Entire Nation</div>
-          </div>
+      <section className="hero mobile">
+        <div className="overlay">
+          <p className="welcome-text">Welcome To Best Cabs</p>
+          <h1>Book Reliable & Affordable Cabs in 200+ Cities</h1>
+
+          <Link href="#book-your-car">
+            <button className="hero-btn">Book Now</button>
+          </Link>
+
+          <div className="red-car">{/* your SVG */}</div>
         </div>
       </section>
+
+      <NumberCounter />
 
       {/* About Section */}
       <section className="about" id="about">
