@@ -256,6 +256,11 @@
   transform: scale(1.05);
 }
 
+.feature-box img {
+  filter: invert(17%) sepia(96%) saturate(7102%) hue-rotate(352deg)
+    brightness(92%) contrast(86%);
+}
+
 .badge {
   display: none;
   position: absolute;

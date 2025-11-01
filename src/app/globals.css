@@ -1047,6 +1047,14 @@ a {
   transition: background 0.15s ease;
 }
 
+.faq-answer p {
+  margin: 0;
+  padding: 14px 20px 20px;
+  color: #444;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
 .faq-question:hover {
   background: #fafafa;
 }
@@ -2424,4 +2432,13 @@ html {
   .stepsGrid {
     grid-template-columns: repeat(3, 1fr);
   }
+}
+
+.feature-box img {
+  filter: invert(17%) sepia(96%) saturate(7102%) hue-rotate(352deg)
+    brightness(92%) contrast(86%);
+}
+
+.fleet-grid a:first-of-type {
+  margin-left: 3%;
 }

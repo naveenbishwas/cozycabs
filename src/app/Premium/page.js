@@ -173,6 +173,8 @@ const Premium = () => {
     return () => clearInterval(interval);
   }, [currentMobile]);
 
+  const toggle = (i) => setOpenIndex((prev) => (prev === i ? null : i));
+
   return (
     <>
       <Header />
@@ -303,24 +305,36 @@ const Premium = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="faq" id="premium-faq">
+      <section className="faq">
         <div className="faq-header">
           <h2>
             Frequently Asked <span className="red-black">Questions</span>
           </h2>
+          <p>Answers to your most common queries about luxury rides.</p>
         </div>
+
         <div className="faq-list">
-          {faqs.map((item, i) => (
-            <div className="faq-item" key={i}>
-              <button
-                className="faq-question"
-                onClick={() => setOpenIndex(openIndex === i ? null : i)}
-              >
-                {item.q}
-              </button>
-              {openIndex === i && <p className="faq-answer">{item.a}</p>}
-            </div>
-          ))}
+          {faqs.map((item, i) => {
+            const open = openIndex === i;
+            return (
+              <div key={i} className={`faq-item ${open ? "open" : ""}`}>
+                <button
+                  className="faq-question"
+                  aria-expanded={open}
+                  onClick={() => toggle(i)}
+                >
+                  <span className="faq-q-text">{item.q}</span>
+                  <span className="faq-icon" aria-hidden="true" />
+                </button>
+                <div
+                  className="faq-answer"
+                  style={{ maxHeight: open ? "300px" : "0px" }}
+                >
+                  <p>{item.a}</p>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </section>
 
