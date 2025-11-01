@@ -118,7 +118,7 @@ const InLucknow = () => {
     },
     {
       title: "Lucknow Zoo",
-      img: "/inlucknow/Lucknow-Zoo.png",
+      img: "/inlucknow/Lucknow-zoo.png",
       alt: "Lucknow Zoo (Nawab Wajid Ali Shah Zoological Garden)",
       paragraphs: [
         "Also known as Nawab Wajid Ali Shah Zoological Garden, Lucknow Zoo is a family favorite. Home to tigers, lions, elephants, and rare birds, it offers both education and entertainment. The zoo also has a toy train and nature museum, making it ideal for children and wildlife lovers.",

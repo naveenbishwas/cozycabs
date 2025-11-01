@@ -7,6 +7,7 @@ import SiteFooter from "../Components/Footer/page";
 import CityForm from "../Components/CityForm/page";
 import Image from "next/image";
 import NumberCounter from "../Components/NumberCounter/page";
+import Link from "next/link";
 
 // Desktop slides
 const desktopSlides = [
@@ -266,7 +267,9 @@ const Premium = () => {
                 <p className="desc">{car.description}</p>
                 <div className="bottom-row">
                   <div className="price">{car.price}</div>
-                  <button>Book Now</button>
+                  <Link href="#book-your-car">
+                    <button>Book Now</button>
+                  </Link>
                 </div>
               </div>
             </div>

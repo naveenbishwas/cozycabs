@@ -2324,3 +2324,11 @@ section.innova-why {
     width: 100% !important;
   }
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+.slide-content {
+  position: unset !important;
+}
