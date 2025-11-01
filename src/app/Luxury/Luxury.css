@@ -142,8 +142,6 @@
 /* Responsive */
 @media (max-width: 768px) {
   .slide-content {
-    left: 15% !important;
-
     bottom: 10%;
   }
   .slide-content h2 {
