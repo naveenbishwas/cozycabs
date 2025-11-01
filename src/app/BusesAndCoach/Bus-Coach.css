@@ -141,6 +141,39 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+  .fleet-grid {
+    display: flex !important;
+    gap: 25px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 10px 5%;
+    scroll-behavior: smooth;
+    scrollbar-width: none; /* Hide scrollbar on Firefox */
+  }
+
+  .fleet-grid::-webkit-scrollbar {
+    display: none; /* Hide scrollbar on Chrome/Safari */
+  }
+
+  .fleet-card {
+    flex: 0 0 290px; /* fixed width per card */
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    scroll-snap-align: start; /* aligns card neatly on scroll */
+  }
+
+  .fleet-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  }
+
+  .fleet-grid .fleet-card:first-of-type {
+    margin-left: 500%;
+  }
+
   .slide-content {
     bottom: 10%;
   }
