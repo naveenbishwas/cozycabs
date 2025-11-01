@@ -2302,9 +2302,21 @@ section.innova-why {
     brightness(92%) contrast(86%);
 }
 
+.mobile {
+  display: none !important;
+}
+
 @media (max-width: 600px) {
   .about {
     padding: 46px 5% 34px;
+  }
+
+  .mobile {
+    display: flex !important;
+  }
+
+  .desktop {
+    display: none !important;
   }
 
   .main-img img {
@@ -2331,4 +2343,85 @@ html {
 
 .slide-content {
   position: unset !important;
+}
+
+.stepsGrid {
+  display: grid;
+  gap: 26px;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: start;
+}
+
+/* Each step block */
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+/* Circular colored badge */
+.badge {
+  width: 102px;
+  height: 102px;
+  border-radius: 50%;
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.18);
+  display: grid;
+  place-items: center;
+  margin-bottom: 22px;
+  border: 6px solid #fff;
+  position: relative;
+  z-index: 1;
+}
+
+.badgeIcon {
+  display: grid;
+  place-items: center;
+}
+
+.badgeStep {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 14px;
+  color: #fff;
+  font-weight: 600;
+  opacity: 0.95;
+}
+
+/* Description card under each badge */
+.descCard {
+  width: 100%;
+  background: var(--card);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  padding: 22px 20px;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.descTitle {
+  margin: 0 0 8px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.descText {
+  margin: 0;
+  font-size: 12px;
+  color: #636363;
+  line-height: 1.65;
+  padding: 5px 0;
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .connector {
+    top: 190px;
+    width: min(820px, 92vw);
+  }
+  .stepsGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }

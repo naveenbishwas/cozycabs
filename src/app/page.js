@@ -1666,7 +1666,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="prestigious-section section-container">
+      <section className="prestigious-section section-container desktop">
         <div className="prestigious-wrap">
           {/* Left Content */}
           <div className="prestigious-content">
@@ -1703,6 +1703,46 @@ export default function Home() {
               />
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="prestigious-section section-container mobile">
+        <div className="prestigious-wrap">
+          {/* Left Content */}
+          <div className="prestigious-content">
+            <p>
+              Cozy Cabz is proud to have provided cab services for the DRDO
+              department during the prestigious G20 Summit. Our reliable fleet
+              and professional service ensured seamless travel support for
+              dignitaries and officials.
+            </p>
+            {/* <button className="prestigious-btn">Read More</button> */}
+          </div>
+
+          {/* Right Images */}
+          <div className="prestigious-image">
+            <div className="image-box">
+              <Image
+                src="/partner1.jpeg"
+                alt="DRDO G20 Summit"
+                width={500}
+                height={600}
+                className="image"
+              />
+            </div>
+            <div className="image-box">
+              <Image
+                src="/partner2.jpeg"
+                alt="G20 Event"
+                width={500}
+                height={600}
+                className="image"
+              />
+            </div>
+          </div>
+          <h2>
+            Prestigious <span className="red-black">Associations</span>
+          </h2>
         </div>
       </section>
 
