@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import "./Premium.css";
+// import "./Premium.css";
+import "./premium.css";
 import Header from "../Components/Header/page";
 import SiteFooter from "../Components/Footer/page";
 import CityForm from "../Components/CityForm/page";
