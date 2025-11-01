@@ -535,21 +535,21 @@
     text-align: left;
   }
 
-  .footer__brand {
-    align-items: flex-start;
-    text-align: left;
+  .footer__brand,
+  .footer__contacts li {
+    align-items: center;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  .linklist,
+  .city-column {
+    text-align: center;
   }
 
   .footer__col h4 {
-    text-align: left;
     font-size: 18px;
-  }
-
-  .footer__contacts li,
-  .brand__about,
-  .city-column li a,
-  .footer__legal a {
-    text-align: left;
   }
 
   .footer__social {
@@ -567,8 +567,7 @@
 
   .show-more-btn {
     float: none;
-    margin: 20px 0 0 0;
-    display: inline-block;
+    display: flex;
   }
 
   .footer__bottom {
