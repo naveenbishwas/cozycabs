@@ -246,6 +246,25 @@ const InJaipur = () => {
 
   return (
     <div>
+      <head>
+        <title>Car Rental in Jaipur | CozyCabz with Driver</title>
+        <meta
+          name="description"
+          content="Book car rental in Jaipur with driver for sightseeing, airport transfers, and outstation trips. Reliable, safe, and affordable rides with CozyCabz – available 24×7."
+        />
+        <meta
+          property="og:title"
+          content="Car Rental in Jaipur | CozyCabz with Driver"
+        />
+        <meta
+          property="og:description"
+          content="Hire cars in Jaipur with professional drivers for local, outstation, or business travel. Transparent pricing, clean vehicles, and 24×7 service."
+        />
+        <meta property="og:image" content="/injaipur/Amber.png" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.cozycabz.com/InJaipur" />
+      </head>
+
       <Header />
       <section className="heroeco" aria-label="Car Rental Hero Section">
         <div className="heroeco__copy">

@@ -226,6 +226,16 @@ const InLucknow = () => {
 
   return (
     <div>
+      <head>
+        <title>
+          Car Rental in Lucknow | Affordable & Reliable Taxi Service – CozyCabz
+        </title>
+        <meta
+          name="description"
+          content="Book car rentals in Lucknow with CozyCabz. Choose from economy, premium, and self-drive cars with professional chauffeurs for airport transfers, city tours, and outstation trips. Transparent pricing and 24×7 service."
+        />
+      </head>
+
       <Header />
       <section className="heroeco" aria-label="Car Rental Hero Section">
         <div className="heroeco__copy">

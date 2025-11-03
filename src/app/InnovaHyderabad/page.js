@@ -103,6 +103,17 @@ const Innovainhyderabad = () => {
 
   return (
     <div className="innova-page">
+      <head>
+        <title>
+          Innova Car Rental in Hyderabad | Innova Crysta & Hycross with Driver –
+          CozyCabz
+        </title>
+        <meta
+          name="description"
+          content="Book Innova car rental in Hyderabad with CozyCabz. Choose Innova Crysta or Hycross for airport transfers, local trips & outstation travel. Clean cars, expert chauffeurs & transparent pricing."
+        />
+      </head>
+
       <Header />
 
       {/* Hero Section */}

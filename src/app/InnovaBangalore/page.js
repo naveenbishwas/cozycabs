@@ -103,6 +103,30 @@ const Innovainbangalore = () => {
 
   return (
     <div className="innova-page">
+      <head>
+        <title>
+          Innova Car Rental in Bangalore | Cozy Cabz with Driver & Self Drive
+        </title>
+        <meta
+          name="description"
+          content="Book Innova Crysta or Hycross in Bangalore with driver or self drive options. Cozy Cabz offers airport pickup, outstation trips, and local sightseeing with verified chauffeurs."
+        />
+        <meta
+          property="og:title"
+          content="Innova Car Rental in Bangalore | Cozy Cabz with Driver & Self Drive"
+        />
+        <meta
+          property="og:description"
+          content="Hire Innova in Bangalore for family, business, or airport travel. Clean, safe, and comfortable rides by Cozy Cabz with 24×7 service support."
+        />
+        <meta property="og:image" content="/innova-1.png" />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content="https://www.cozycabz.com/InBangalore"
+        />
+      </head>
+
       <Header />
 
       {/* Hero Section */}

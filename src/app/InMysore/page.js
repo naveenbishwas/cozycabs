@@ -217,6 +217,27 @@ const InMysore = () => {
 
   return (
     <div>
+      <head>
+        <title>
+          Car Rental in Mysore | CozyCabz with Driver & Self Drive Options
+        </title>
+        <meta
+          name="description"
+          content="Book car rental in Mysore with driver or self drive. Enjoy safe, comfortable, and affordable rides to Mysore Palace, Chamundi Hills, and more with CozyCabz."
+        />
+        <meta
+          property="og:title"
+          content="Car Rental in Mysore | CozyCabz with Driver & Self Drive Options"
+        />
+        <meta
+          property="og:description"
+          content="Hire a car in Mysore with driver or self-drive option. Transparent pricing, sanitized cars, and 24×7 availability for sightseeing or outstation trips."
+        />
+        <meta property="og:image" content="/mysore-palace.jpeg" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.cozycabz.com/InMysore" />
+      </head>
+
       <Header />
       <section className="heroeco" aria-label="Car Rental Hero Section">
         <div className="heroeco__copy">

@@ -218,6 +218,17 @@ const InRajkot = () => {
 
   return (
     <div>
+      <head>
+        <title>
+          Car Rental in Rajkot | Car Hire with Driver & Self Drive Options –
+          CozyCabz
+        </title>
+        <meta
+          name="description"
+          content="Book car rental in Rajkot with CozyCabz. Choose from sedans, SUVs, tempo travelers & luxury cars for local, outstation, or airport rides. Safe, reliable, and 24×7 available service."
+        />
+      </head>
+
       <Header />
       <section className="heroeco" aria-label="Car Rental Hero Section">
         <div className="heroeco__copy">

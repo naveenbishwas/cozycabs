@@ -226,6 +226,28 @@ const InSurat = () => {
 
   return (
     <div>
+      <head>
+        <title>
+          Car Rental in Surat | Cozy Cabz – Self Drive & Luxury Cars
+        </title>
+        <meta
+          name="description"
+          content="Book car rental in Surat with driver or self drive car rental in Surat. Cozy Cabz offers safe, reliable, and affordable car hire in Surat 24×7 for airport transfers, trips, and events."
+        />
+        <meta
+          property="og:title"
+          content="Car Rental in Surat | Cozy Cabz – Reliable Self Drive & Chauffeur Cars"
+        />
+        <meta
+          property="og:description"
+          content="Hire cars in Surat for sightseeing, business travel, and outstation trips. From budget sedans to luxury cars, Cozy Cabz provides transparent pricing and verified drivers."
+        />
+        <meta property="og:image" content="/insurat/Dumas.png" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.cozycabz.com/InSurat" />
+        <meta name="robots" content="index, follow" />
+      </head>
+
       <Header />
       <section className="heroeco" aria-label="Car Rental Hero Section">
         <div className="heroeco__copy">

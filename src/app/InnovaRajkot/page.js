@@ -103,6 +103,28 @@ const Innovainrajkot = () => {
 
   return (
     <div className="innova-page">
+      <head>
+        <title>
+          Innova Car Rental in Rajkot | Cozy Cabz – Crysta & Hycross with Driver
+        </title>
+        <meta
+          name="description"
+          content="Hire Toyota Innova Crysta or Hycross in Rajkot for airport transfers, business trips, and outstation rides. Enjoy 24×7 chauffeur service, clean vehicles, and transparent pricing from Cozy Cabz."
+        />
+        <meta
+          property="og:title"
+          content="Innova Car Rental in Rajkot | Cozy Cabz – Reliable Chauffeur Service"
+        />
+        <meta
+          property="og:description"
+          content="Book Innova in Rajkot for airport pickups, sightseeing, or family trips. Cozy Cabz offers premium comfort, safety, and convenience for every journey."
+        />
+        <meta property="og:image" content="/innova-6.png" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.cozycabz.com/InRajkot" />
+        <meta name="robots" content="index, follow" />
+      </head>
+
       <Header />
 
       {/* Hero Section */}

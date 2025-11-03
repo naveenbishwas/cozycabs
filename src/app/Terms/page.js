@@ -7,6 +7,28 @@ import SiteFooter from "../Components/Footer/page";
 const Terms = () => {
   return (
     <>
+      <head>
+        <title>
+          Terms & Conditions | Cozy Cabz – Reliable Car Rental in India
+        </title>
+        <meta
+          name="description"
+          content="Read the official Terms & Conditions of Cozy Cabz. Learn about our booking policy, payments, cancellations, and travel guidelines for safe car rentals across India."
+        />
+        <meta
+          property="og:title"
+          content="Cozy Cabz Terms & Conditions – Transparent Car Rental Policies"
+        />
+        <meta
+          property="og:description"
+          content="Before booking your next ride with Cozy Cabz, read our updated terms covering usage, payments, liability, and customer support for a seamless travel experience."
+        />
+        <meta property="og:image" content="/terms-banner.jpg" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.cozycabz.com/terms" />
+        <meta name="robots" content="index, follow" />
+      </head>
+
       <Header />
 
       {/* ---- Hero Section ---- */}

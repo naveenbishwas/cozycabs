@@ -103,6 +103,28 @@ const Innovainludhiana = () => {
 
   return (
     <div className="innova-page">
+      <head>
+        <title>
+          Innova Car Rental in Ludhiana | Cozy Cabz – Crysta & Hycross with
+          Driver
+        </title>
+        <meta
+          name="description"
+          content="Book Toyota Innova Crysta or Hycross in Ludhiana for airport transfers, outstation trips, and local sightseeing. Enjoy comfortable, chauffeur-driven rides with Cozy Cabz 24×7 service."
+        />
+        <meta
+          property="og:title"
+          content="Innova Car Rental in Ludhiana | Cozy Cabz – Crysta & Hycross with Driver"
+        />
+        <meta
+          property="og:description"
+          content="Hire an Innova in Ludhiana with professional drivers for family, business, or travel needs. Clean, reliable, and affordable Innova rentals by Cozy Cabz."
+        />
+        <meta property="og:image" content="/innova-3.png" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.cozycabz.com/InLudhiana" />
+      </head>
+
       <Header />
 
       {/* Hero Section */}

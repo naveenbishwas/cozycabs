@@ -7,6 +7,17 @@ import SiteFooter from "../Components/Footer/page";
 const RefundPolicy = () => {
   return (
     <>
+      <head>
+        <title>
+          Refund & Cancellation Policy | Cozy Cabz Pvt Ltd – Transparent Travel
+          Refunds
+        </title>
+        <meta
+          name="description"
+          content="Read Cozy Cabz Pvt Ltd’s refund and cancellation policy. Understand refund timelines, cancellation terms, and how we ensure transparent and fair travel bookings for all customers."
+        />
+      </head>
+
       <Header />
 
       {/* ---- Hero Section ---- */}

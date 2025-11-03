@@ -148,6 +148,24 @@ const Premium = () => {
 
   return (
     <>
+      <head>
+        <title>Bus & Coach Rental | Luxury Buses, Volvo & Mini Coaches</title>
+        <meta
+          name="description"
+          content="Book premium buses and coaches for corporate, group, and outstation travel. Choose from Volvo, Mercedes, Toyota & more with professional drivers."
+        />
+        <meta
+          property="og:title"
+          content="Bus & Coach Rental | Luxury Buses, Volvo & Mini Coaches"
+        />
+        <meta
+          property="og:description"
+          content="Spacious, air-conditioned luxury buses and coaches for events, tours, and business trips. Reliable service with professional chauffeurs."
+        />
+        <meta property="og:image" content="/Buscouch1.png" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.cozycabz.com/Bus-Coach" />
+      </head>
       <Header />
 
       {/* ================= SLIDESHOW SECTION ================= */}

@@ -218,6 +218,16 @@ const InNagpur = () => {
 
   return (
     <div>
+      <head>
+        <title>
+          Car Rental in Nagpur | Affordable Taxi & Chauffeur Service – CozyCabz
+        </title>
+        <meta
+          name="description"
+          content="Book car rentals in Nagpur with CozyCabz. Choose self drive or chauffeur-driven cars for city rides, airport transfers & outstation trips. Transparent pricing & 24×7 support."
+        />
+      </head>
+
       <Header />
       <section className="heroeco" aria-label="Car Rental Hero Section">
         <div className="heroeco__copy">

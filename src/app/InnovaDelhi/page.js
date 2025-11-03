@@ -105,6 +105,27 @@ const Innovaindelhi = () => {
 
   return (
     <div className="innova-page">
+      <head>
+        <title>
+          Innova Car Rental in Delhi | Cozy Cabz - Crysta & Hycross with Driver
+        </title>
+        <meta
+          name="description"
+          content="Hire Toyota Innova Crysta or Hycross in Delhi for airport transfers, corporate travel, sightseeing, and outstation trips. Safe, comfortable rides with verified drivers by Cozy Cabz."
+        />
+        <meta
+          property="og:title"
+          content="Innova Car Rental in Delhi | Cozy Cabz - Crysta & Hycross with Driver"
+        />
+        <meta
+          property="og:description"
+          content="Book Innova rentals in Delhi for business, family, or travel. Fully sanitized, insured, chauffeur-driven vehicles with 24×7 booking support and flexible packages."
+        />
+        <meta property="og:image" content="/innova-1.png" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.cozycabz.com/InDelhi" />
+      </head>
+
       <Header />
 
       {/* Hero Section */}

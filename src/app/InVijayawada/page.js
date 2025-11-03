@@ -218,6 +218,16 @@ const InVijayawada = () => {
 
   return (
     <div>
+      <head>
+        <title>
+          Car Rental in Vijayawada | Self Drive & Chauffeur Service – CozyCabz
+        </title>
+        <meta
+          name="description"
+          content="Book car rental in Vijayawada with CozyCabz. Choose self drive, chauffeur-driven, or luxury cars for local, airport, and outstation trips. Safe, reliable & 24×7 available."
+        />
+      </head>
+
       <Header />
       <section className="heroeco" aria-label="Car Rental Hero Section">
         <div className="heroeco__copy">

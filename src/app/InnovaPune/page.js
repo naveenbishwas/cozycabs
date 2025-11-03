@@ -103,6 +103,17 @@ const Innovainpune = () => {
 
   return (
     <div className="innova-page">
+      <head>
+        <title>
+          Innova Car Rental in Pune | Innova Crysta & Hycross with Driver –
+          CozyCabz
+        </title>
+        <meta
+          name="description"
+          content="Book Innova car rental in Pune with CozyCabz. Choose from Innova Crysta or Hycross for airport transfers, outstation trips & local rides. Clean cars, expert chauffeurs & transparent pricing."
+        />
+      </head>
+
       <Header />
 
       {/* Hero Section */}

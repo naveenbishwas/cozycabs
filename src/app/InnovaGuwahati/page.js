@@ -103,6 +103,28 @@ const Innovainguwahati = () => {
 
   return (
     <div className="innova-page">
+      <head>
+        <title>
+          Innova Car Rental in Guwahati | Cozy Cabz - Crysta & Hycross with
+          Driver
+        </title>
+        <meta
+          name="description"
+          content="Book Toyota Innova Crysta or Hycross in Guwahati for airport transfers, sightseeing, corporate or outstation trips. Comfortable, chauffeur-driven rides by Cozy Cabz."
+        />
+        <meta
+          property="og:title"
+          content="Innova Car Rental in Guwahati | Cozy Cabz - Crysta & Hycross with Driver"
+        />
+        <meta
+          property="og:description"
+          content="Hire an Innova in Guwahati with driver for business, family, or travel needs. 24×7 booking support, sanitized vehicles, and trusted service from Cozy Cabz."
+        />
+        <meta property="og:image" content="/innova-3.png" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.cozycabz.com/InGuwahati" />
+      </head>
+
       <Header />
 
       {/* Hero Section */}

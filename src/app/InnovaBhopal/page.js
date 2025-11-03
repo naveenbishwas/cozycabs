@@ -103,6 +103,17 @@ const Innovainbhopal = () => {
 
   return (
     <div className="innova-page">
+      <head>
+        <title>
+          Innova Car Rental in Bhopal | Affordable Innova Crysta & Hycross –
+          CozyCabz
+        </title>
+        <meta
+          name="description"
+          content="Book Innova car rentals in Bhopal with CozyCabz. Choose Innova Crysta or Hycross for airport transfers, local rides & outstation trips. Professional chauffeurs, clean cars & transparent pricing."
+        />
+      </head>
+
       <Header />
 
       {/* Hero Section */}

@@ -219,6 +219,16 @@ const InBhopal = () => {
 
   return (
     <div>
+      <head>
+        <title>
+          Car Rental in Bhopal | Safe & Affordable Taxi Service – CozyCabz
+        </title>
+        <meta
+          name="description"
+          content="Book car rentals in Bhopal with CozyCabz. Choose from economy, premium, and self drive options with professional chauffeurs for airport transfers, local rides, and outstation trips."
+        />
+      </head>
+
       <Header />
       <section className="heroeco" aria-label="Car Rental Hero Section">
         <div className="heroeco__copy">

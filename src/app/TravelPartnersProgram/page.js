@@ -58,6 +58,28 @@ const TravelPartnersProgram = () => {
 
   return (
     <div>
+      <head>
+        <title>Travel Partners Program | Drive Growth with CozyCabz</title>
+        <meta
+          name="description"
+          content="Join the CozyCabz Travel Partners Program. Collaborate with us to offer premium chauffeur-driven travel services, expand your business & earn more."
+        />
+        <meta
+          property="og:title"
+          content="Travel Partners Program | Drive Growth with CozyCabz"
+        />
+        <meta
+          property="og:description"
+          content="Partner with CozyCabz to deliver reliable, nationwide transportation for hotels, corporates, and agencies. Earn revenue & delight your customers."
+        />
+        <meta property="og:image" content="/service-car-img.png" />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content="https://www.cozycabz.com/TravelPartnersProgram"
+        />
+      </head>
+
       <Header />
 
       {/* Hero Section */}

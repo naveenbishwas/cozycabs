@@ -103,6 +103,17 @@ const Innovainlucknow = () => {
 
   return (
     <div className="innova-page">
+      <head>
+        <title>
+          Innova Car Rental in Lucknow | Innova Crysta & Hycross with Driver –
+          CozyCabz
+        </title>
+        <meta
+          name="description"
+          content="Book Innova car rental in Lucknow with CozyCabz. Choose Innova Crysta or Hycross for airport transfers, local rides & outstation trips. Clean cars, professional chauffeurs & clear pricing."
+        />
+      </head>
+
       <Header />
 
       {/* Hero Section */}

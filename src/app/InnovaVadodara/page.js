@@ -103,6 +103,17 @@ const Innovainvadodara = () => {
 
   return (
     <div className="innova-page">
+      <head>
+        <title>
+          Innova Car Rental in Vadodara | Innova Crysta & Hycross with Driver –
+          CozyCabz
+        </title>
+        <meta
+          name="description"
+          content="Book Innova Crysta or Hycross in Vadodara with CozyCabz. Airport pickup & drop, outstation trips, and local rides with professional drivers. Clean cars and transparent pricing guaranteed."
+        />
+      </head>
+
       <Header />
 
       {/* Hero Section */}

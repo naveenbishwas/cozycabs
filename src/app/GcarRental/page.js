@@ -58,6 +58,30 @@ const GlobalCarRental = () => {
 
   return (
     <div>
+      <head>
+        <title>
+          Global Car Rental | International Car Hire & Chauffeur Services
+        </title>
+        <meta
+          name="description"
+          content="Book worldwide car rentals with Global Car Rental. Enjoy professional chauffeurs, premium cars, flexible packages, and 24/7 global support in 100+ countries."
+        />
+        <meta
+          property="og:title"
+          content="Global Car Rental | International Car Hire & Chauffeur Services"
+        />
+        <meta
+          property="og:description"
+          content="Reliable and affordable international car hire for business and leisure. 100+ cities covered with 24/7 assistance."
+        />
+        <meta property="og:image" content="/service-car-img.png" />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content="https://www.cozycabz.com/GlobalCarRental"
+        />
+      </head>
+
       <Header />
 
       {/* Hero Section */}

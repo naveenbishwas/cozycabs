@@ -103,6 +103,17 @@ const Innovainkolkata = () => {
 
   return (
     <div className="innova-page">
+      <head>
+        <title>
+          Innova Car Rental in Kolkata | Innova Crysta & Hycross with Driver –
+          CozyCabz
+        </title>
+        <meta
+          name="description"
+          content="Book Innova car rental in Kolkata with CozyCabz. Choose Innova Crysta or Hycross for airport transfers, local travel & outstation trips. Clean cars, skilled chauffeurs & transparent pricing."
+        />
+      </head>
+
       <Header />
 
       {/* Hero Section */}

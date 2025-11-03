@@ -103,6 +103,17 @@ const Innovainvijayawada = () => {
 
   return (
     <div className="innova-page">
+      <head>
+        <title>
+          Innova Car Rental in Vijayawada | Innova Crysta & Hycross with Driver
+          – CozyCabz
+        </title>
+        <meta
+          name="description"
+          content="Book Innova car rental in Vijayawada with CozyCabz. Choose Innova Crysta or Hycross for airport transfers, local sightseeing, and outstation trips. Clean cars, expert chauffeurs & reliable rides."
+        />
+      </head>
+
       <Header />
 
       {/* Hero Section */}

@@ -103,6 +103,27 @@ const Innovainkanpur = () => {
 
   return (
     <div className="innova-page">
+      <head>
+        <title>
+          Innova Car Rental in Kanpur | Cozy Cabz – Crysta & Hycross with Driver
+        </title>
+        <meta
+          name="description"
+          content="Book Toyota Innova Crysta or Hycross in Kanpur for airport transfers, sightseeing, and outstation trips. Reliable chauffeur-driven rides with Cozy Cabz 24×7 booking support."
+        />
+        <meta
+          property="og:title"
+          content="Innova Car Rental in Kanpur | Cozy Cabz – Crysta & Hycross with Driver"
+        />
+        <meta
+          property="og:description"
+          content="Hire an Innova in Kanpur with professional drivers for family, corporate, or travel needs. Clean, comfortable, and affordable service by Cozy Cabz."
+        />
+        <meta property="og:image" content="/innova-3.png" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.cozycabz.com/InKanpur" />
+      </head>
+
       <Header />
 
       {/* Hero Section */}

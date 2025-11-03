@@ -246,6 +246,25 @@ const InKolkata = () => {
 
   return (
     <div>
+      <head>
+        <title>Car Rental in Kolkata | CozyCabz with Driver</title>
+        <meta
+          name="description"
+          content="Book car rental in Kolkata with driver for airport transfers, sightseeing, or outstation trips. Reliable, safe, and affordable rides with CozyCabz – available 24×7."
+        />
+        <meta
+          property="og:title"
+          content="Car Rental in Kolkata | CozyCabz with Driver"
+        />
+        <meta
+          property="og:description"
+          content="Hire a car in Kolkata with a professional driver. Transparent pricing, sanitized cars, and 24×7 availability for local and outstation travel."
+        />
+        <meta property="og:image" content="/inkolkata/Victoria.png" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.cozycabz.com/InKolkata" />
+      </head>
+
       <Header />
       <section className="heroeco" aria-label="Car Rental Hero Section">
         <div className="heroeco__copy">

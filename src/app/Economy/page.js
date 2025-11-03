@@ -174,6 +174,17 @@ const Economy = () => {
 
   return (
     <>
+      <head>
+        <title>
+          Economy Car Rental | Affordable & Reliable Rides Across India –
+          CozyCabz
+        </title>
+        <meta
+          name="description"
+          content="Book affordable economy car rentals with CozyCabz. Choose from Swift Dzire, Honda City, and Maruti Ciaz for daily commutes or weekend trips. Comfortable, reliable, and budget-friendly rides in 200+ cities."
+        />
+      </head>
+
       <Header />
 
       {/* ===== SLIDESHOW ===== */}

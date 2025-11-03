@@ -7,6 +7,31 @@ import SiteFooter from "../Components/Footer/page";
 const PrivacyPolicy = () => {
   return (
     <>
+      <head>
+        <title>
+          Privacy Policy | Cozy Cabz – Safe & Secure Car Rental in India
+        </title>
+        <meta
+          name="description"
+          content="Read Cozy Cabz Privacy Policy. Learn how we collect, use, and protect your personal data while providing trusted car rental services across India."
+        />
+        <meta
+          property="og:title"
+          content="Cozy Cabz Privacy Policy – Your Data, Our Responsibility"
+        />
+        <meta
+          property="og:description"
+          content="At Cozy Cabz, your privacy matters. Explore how we safeguard customer data with transparency and industry-standard security practices."
+        />
+        <meta property="og:image" content="/privacy-banner.jpg" />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content="https://www.cozycabz.com/privacy-policy"
+        />
+        <meta name="robots" content="index, follow" />
+      </head>
+
       <Header />
 
       {/* ---- Hero Section ---- */}

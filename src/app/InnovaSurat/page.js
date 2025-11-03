@@ -103,6 +103,28 @@ const Innovainsurat = () => {
 
   return (
     <div className="innova-page">
+      <head>
+        <title>
+          Innova Car Rental in Surat | Cozy Cabz – Crysta & Hycross with Driver
+        </title>
+        <meta
+          name="description"
+          content="Book Innova Crysta or Hycross in Surat for airport transfers, sightseeing, and business travel. Cozy Cabz offers 24×7 chauffeur service, premium comfort, and affordable rates."
+        />
+        <meta
+          property="og:title"
+          content="Innova Car Rental in Surat | Cozy Cabz – Reliable Chauffeur Service"
+        />
+        <meta
+          property="og:description"
+          content="Hire Innova in Surat for airport pickups, outstation trips, and city rides. Enjoy professional drivers, sanitized vehicles, and transparent pricing with Cozy Cabz."
+        />
+        <meta property="og:image" content="/innova-6.png" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.cozycabz.com/InSurat" />
+        <meta name="robots" content="index, follow" />
+      </head>
+
       <Header />
 
       {/* Hero Section */}

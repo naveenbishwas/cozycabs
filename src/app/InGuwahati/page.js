@@ -218,6 +218,16 @@ const InGuwahati = () => {
 
   return (
     <div>
+      <head>
+        <title>
+          Car Rental in Guwahati | Safe & Affordable Taxi Service – CozyCabz
+        </title>
+        <meta
+          name="description"
+          content="Book car rentals in Guwahati with CozyCabz. Choose from economy, premium, and luxury cars with professional chauffeurs for airport transfers, local rides, and outstation trips. 24×7 service with transparent pricing."
+        />
+      </head>
+
       <Header />
       <section className="heroeco" aria-label="Car Rental Hero Section">
         <div className="heroeco__copy">

@@ -57,6 +57,17 @@ const ChauffeurCarRental = () => {
 
   return (
     <div>
+      <head>
+        <title>
+          Chauffeur Car Rental | Luxury Chauffeur-Driven Cars in India –
+          CozyCabz
+        </title>
+        <meta
+          name="description"
+          content="Book professional chauffeur-driven car rentals with CozyCabz. Enjoy luxury sedans, SUVs, and premium cars with trained chauffeurs for meetings, airport transfers, and intercity rides."
+        />
+      </head>
+
       <Header />
 
       {/* Hero Section */}

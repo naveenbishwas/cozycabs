@@ -7,6 +7,16 @@ import SiteFooter from "../Components/Footer/page";
 const Contact = () => {
   return (
     <>
+      <head>
+        <title>
+          Contact CozyCabz | Get in Touch for Bookings & Partnerships
+        </title>
+        <meta
+          name="description"
+          content="Have a question or need a ride? Contact CozyCabz for bookings, corporate travel solutions, or partnerships. Our team is here to assist you 24/7."
+        />
+      </head>
+
       <Header />
       {/* ---- Hero Section ---- */}
       <section className="contact-hero">

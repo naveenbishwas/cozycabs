@@ -247,6 +247,28 @@ const InAhmedabad = () => {
 
   return (
     <div>
+      <head>
+        <title>Car Rental in Ahmedabad | CozyCabz with Driver</title>
+        <meta
+          name="description"
+          content="Book car rental in Ahmedabad with driver for local, airport & outstation trips. Affordable, safe, and 24×7 service with professional chauffeurs."
+        />
+        <meta
+          property="og:title"
+          content="Car Rental in Ahmedabad | CozyCabz with Driver"
+        />
+        <meta
+          property="og:description"
+          content="Rent cars in Ahmedabad for business, family, or leisure travel. Transparent pricing, verified chauffeurs, and comfortable rides by CozyCabz."
+        />
+        <meta property="og:image" content="/inahmedabad/Sabarmati.png" />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content="https://www.cozycabz.com/InAhmedabad"
+        />
+      </head>
+
       <Header />
       <section className="heroeco" aria-label="Car Rental Hero Section">
         <div className="heroeco__copy">

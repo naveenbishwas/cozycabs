@@ -213,6 +213,28 @@ const InPatna = () => {
 
   return (
     <div>
+      <head>
+        <title>
+          Car Rental in Patna | Cozy Cabz – Self Drive & Chauffeur Cars
+        </title>
+        <meta
+          name="description"
+          content="Book car rental in Patna with driver or self-drive options. Cozy Cabz offers safe, clean, and affordable car hire in Patna with luxury and budget vehicles available 24×7."
+        />
+        <meta
+          property="og:title"
+          content="Car Rental in Patna | Cozy Cabz – Reliable Self Drive & Driver Cars"
+        />
+        <meta
+          property="og:description"
+          content="Hire cars in Patna for airport transfers, sightseeing, and long trips. Choose from sedans, SUVs, and luxury cars with Cozy Cabz’s transparent pricing and professional chauffeurs."
+        />
+        <meta property="og:image" content="/inpatna/Golghar.png" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.cozycabz.com/InPatna" />
+        <meta name="robots" content="index, follow" />
+      </head>
+
       <Header />
       <section className="heroeco" aria-label="Car Rental Hero Section">
         <div className="heroeco__copy">

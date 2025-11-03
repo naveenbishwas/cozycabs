@@ -226,6 +226,28 @@ const InChandigarh = () => {
 
   return (
     <div>
+      <head>
+        <title>Car Rental in Chandigarh | CozyCabz with Driver</title>
+        <meta
+          name="description"
+          content="Book car rental in Chandigarh with driver for local trips, airport transfers & outstation travel. Safe, affordable & comfortable rides by CozyCabz."
+        />
+        <meta
+          property="og:title"
+          content="Car Rental in Chandigarh | CozyCabz with Driver"
+        />
+        <meta
+          property="og:description"
+          content="Hire a car with driver in Chandigarh for sightseeing, business, or weekend trips. 24×7 service, verified chauffeurs & transparent pricing."
+        />
+        <meta property="og:image" content="/inchandigarh/Rock.png" />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content="https://www.cozycabz.com/InChandigarh"
+        />
+      </head>
+
       <Header />
       <section className="heroeco" aria-label="Car Rental Hero Section">
         <div className="heroeco__copy">

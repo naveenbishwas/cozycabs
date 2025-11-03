@@ -7,6 +7,14 @@ import SiteFooter from "../Components/Footer/page";
 const Support = () => {
   return (
     <>
+      <head>
+        <title>Customer Support | 24×7 Help & Assistance – Cozy Cabz</title>
+        <meta
+          name="description"
+          content="Need help with your Cozy Cabz booking, refund, or travel query? Contact our 24×7 customer support via call, WhatsApp, or email for fast, friendly assistance."
+        />
+      </head>
+
       <Header />
 
       {/* ---- Hero Section ---- */}

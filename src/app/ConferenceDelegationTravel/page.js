@@ -58,6 +58,17 @@ const ConferenceDelegationTravel = () => {
 
   return (
     <div>
+      <head>
+        <title>
+          Conference & Delegation Travel | Premium Transport for Events & VIPs –
+          CozyCabz
+        </title>
+        <meta
+          name="description"
+          content="Professional conference & delegation travel services with airport pickups, hotel transfers, and venue shuttles. Trusted by top corporates for seamless VIP and group travel across India."
+        />
+      </head>
+
       <Header />
 
       {/* Hero Section */}

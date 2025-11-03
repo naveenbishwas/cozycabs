@@ -226,6 +226,25 @@ const InIndore = () => {
 
   return (
     <div>
+      <head>
+        <title>Car Rental in Indore | CozyCabz with Driver</title>
+        <meta
+          name="description"
+          content="Book car rental in Indore with driver for city travel, airport transfers, and outstation trips. Reliable, affordable, and safe rides with CozyCabz – available 24×7."
+        />
+        <meta
+          property="og:title"
+          content="Car Rental in Indore | CozyCabz with Driver"
+        />
+        <meta
+          property="og:description"
+          content="Hire cars in Indore with verified drivers for local sightseeing, business travel, or outstation trips. Transparent pricing and professional service."
+        />
+        <meta property="og:image" content="/inindore/Rajwada.png" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.cozycabz.com/InIndore" />
+      </head>
+
       <Header />
       <section className="heroeco" aria-label="Car Rental Hero Section">
         <div className="heroeco__copy">

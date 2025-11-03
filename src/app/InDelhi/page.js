@@ -197,6 +197,16 @@ const InDelhi = () => {
 
   return (
     <div>
+      <head>
+        <title>
+          Car Rental in Delhi | Affordable & Safe Taxi Service – CozyCabz
+        </title>
+        <meta
+          name="description"
+          content="Book reliable car rentals in Delhi with CozyCabz. Choose from economy, premium, or luxury cars with verified chauffeurs for airport transfers, local city rides, and outstation trips at transparent rates."
+        />
+      </head>
+
       <Header />
       <section className="heroeco" aria-label="Car Rental Hero Section">
         <div className="heroeco__copy">

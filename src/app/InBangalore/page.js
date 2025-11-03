@@ -183,6 +183,17 @@ const Inbanglore = () => {
 
   return (
     <div>
+      <head>
+        <title>
+          Car Rental in Bangalore | Affordable Taxi & Chauffeur Service –
+          CozyCabz
+        </title>
+        <meta
+          name="description"
+          content="Book reliable car rentals in Bangalore with CozyCabz. Choose economy, premium, or luxury cars with professional drivers for airport transfers, city rides, and outstation travel."
+        />
+      </head>
+
       <Header />
       <section className="heroeco" aria-label="Car Rental Hero Section">
         <div className="heroeco__copy">

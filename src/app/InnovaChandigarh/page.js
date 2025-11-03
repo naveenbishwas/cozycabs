@@ -103,6 +103,31 @@ const Innovainchandigarh = () => {
 
   return (
     <div className="innova-page">
+      <head>
+        <title>
+          Innova Car Rental in Chandigarh | Cozy Cabz - Crysta & Hycross with
+          Driver
+        </title>
+        <meta
+          name="description"
+          content="Book Toyota Innova Crysta or Hycross in Chandigarh for airport transfers, local sightseeing, and outstation trips. Safe, comfortable rides with professional drivers by Cozy Cabz."
+        />
+        <meta
+          property="og:title"
+          content="Innova Car Rental in Chandigarh | Cozy Cabz - Crysta & Hycross with Driver"
+        />
+        <meta
+          property="og:description"
+          content="Hire Innova in Chandigarh for family, business, or travel needs. Clean, insured, and chauffeur-driven vehicles with 24×7 booking support."
+        />
+        <meta property="og:image" content="/innova-1.png" />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content="https://www.cozycabz.com/InChandigarh"
+        />
+      </head>
+
       <Header />
 
       {/* Hero Section */}

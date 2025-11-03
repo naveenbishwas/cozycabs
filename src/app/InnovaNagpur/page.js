@@ -105,6 +105,28 @@ const Innovainnagpur = () => {
 
   return (
     <div className="innova-page">
+      <head>
+        <title>
+          Innova Car Rental in Nagpur | Cozy Cabz – Crysta & Hycross with Driver
+        </title>
+        <meta
+          name="description"
+          content="Hire Toyota Innova Crysta or Hycross in Nagpur for airport transfers, city tours, and outstation trips. 24×7 chauffeur service, clean cars & transparent pricing by Cozy Cabz."
+        />
+        <meta
+          property="og:title"
+          content="Innova Car Rental in Nagpur | Cozy Cabz – Reliable Chauffeur Service"
+        />
+        <meta
+          property="og:description"
+          content="Book Innova car rental in Nagpur for business, family travel, or sightseeing. Cozy Cabz ensures comfort, safety, and affordability for every ride."
+        />
+        <meta property="og:image" content="/innova-6.png" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.cozycabz.com/InNagpur" />
+        <meta name="robots" content="index, follow" />
+      </head>
+
       <Header />
 
       {/* Hero Section */}

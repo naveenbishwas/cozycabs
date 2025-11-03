@@ -103,6 +103,32 @@ const Innovainvisakhapatnam = () => {
 
   return (
     <div className="innova-page">
+      <head>
+        <title>
+          Innova Car Rental in Visakhapatnam | Cozy Cabz – Crysta & Hycross with
+          Driver
+        </title>
+        <meta
+          name="description"
+          content="Book Innova Crysta in Visakhapatnam for airport transfers, sightseeing, and outstation trips. Cozy Cabz offers 24×7 chauffeur service, luxury comfort, and affordable pricing."
+        />
+        <meta
+          property="og:title"
+          content="Innova Car Rental in Visakhapatnam | Cozy Cabz – Reliable Chauffeur Service"
+        />
+        <meta
+          property="og:description"
+          content="Hire Innova Crysta or Hycross in Visakhapatnam for Araku trips, airport rides, and city travel. Clean cars, verified chauffeurs, and 24×7 customer support with Cozy Cabz."
+        />
+        <meta property="og:image" content="/innova-6.png" />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content="https://www.cozycabz.com/InVisakhapatnam"
+        />
+        <meta name="robots" content="index, follow" />
+      </head>
+
       <Header />
 
       {/* Hero Section */}

@@ -8,6 +8,25 @@ import Link from "next/link";
 const About = () => {
   return (
     <>
+      <head>
+        <title>About CozyCabz | India’s Trusted Cab Rental Platform</title>
+        <meta
+          name="description"
+          content="Learn about CozyCabz — India’s most trusted cab rental platform offering premium rides, reliable chauffeurs, and 24/7 customer support across 250+ cities."
+        />
+        <meta
+          property="og:title"
+          content="About CozyCabz | India’s Trusted Cab Rental Platform"
+        />
+        <meta
+          property="og:description"
+          content="Discover CozyCabz — providing safe, comfortable, and affordable chauffeur-driven rides across India for families, corporates, and travelers."
+        />
+        <meta property="og:image" content="/innova-7.jpg" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.cozycabz.com/about" />
+      </head>
+
       <Header />
 
       {/* 🌆 Hero Banner Section */}

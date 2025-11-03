@@ -227,6 +227,28 @@ const InHyderabad = () => {
 
   return (
     <div>
+      <head>
+        <title>Car Rental in Hyderabad | CozyCabz with Driver</title>
+        <meta
+          name="description"
+          content="Rent a car with driver in Hyderabad for airport transfers, local travel & outstation trips. Safe, comfortable rides with professional chauffeurs 24/7."
+        />
+        <meta
+          property="og:title"
+          content="Car Rental in Hyderabad | CozyCabz with Driver"
+        />
+        <meta
+          property="og:description"
+          content="Hyderabad’s trusted car rental service for local, outstation & airport transfers. Choose from sedans, SUVs & luxury cars with trained chauffeurs."
+        />
+        <meta property="og:image" content="/inhyderabad/Hussain.png" />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content="https://www.cozycabz.com/InHyderabad"
+        />
+      </head>
+
       <Header />
       <section className="heroeco" aria-label="Car Rental Hero Section">
         <div className="heroeco__copy">

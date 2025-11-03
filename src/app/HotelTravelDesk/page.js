@@ -58,6 +58,16 @@ const HotelTravelDesk = () => {
 
   return (
     <div>
+      <head>
+        <title>
+          Hotel Travel Desk | Guest Transportation & Chauffeur Services
+        </title>
+        <meta
+          name="description"
+          content="Offer your hotel guests premium travel experiences with our reliable chauffeur-driven cars. Safe airport transfers, city tours & 24/7 guest support."
+        />
+      </head>
+
       <Header />
 
       <section className="employee-transport section-container" id="desktop">

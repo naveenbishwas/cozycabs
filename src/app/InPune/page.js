@@ -227,6 +227,17 @@ const InPune = () => {
 
   return (
     <div>
+      <head>
+        <title>
+          Car Rental in Pune | Car Hire with Driver for Airport & Outstation –
+          CozyCabz
+        </title>
+        <meta
+          name="description"
+          content="Book car rental in Pune with driver from CozyCabz. Enjoy safe airport transfers, local sightseeing & outstation rides with clean cars, verified chauffeurs, and transparent pricing."
+        />
+      </head>
+
       <Header />
       <section className="heroeco" aria-label="Car Rental Hero Section">
         <div className="heroeco__copy">

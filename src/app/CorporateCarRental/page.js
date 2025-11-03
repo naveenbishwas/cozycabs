@@ -93,40 +93,19 @@ const CorporateCarRental = () => {
 
   return (
     <div>
+      <head>
+        <title>
+          Corporate Car Rental | Reliable Employee Transport Across India –
+          CozyCabz
+        </title>
+        <meta
+          name="description"
+          content="CozyCabz provides corporate car rental and employee transport solutions across 25+ cities in India. 500+ corporate clients, 1200+ fleet, and 50,000+ employees served with safety, punctuality, and comfort."
+        />
+      </head>
+
       <Header />
 
-      {/* <section className="employee-transport section-container">
-        <div className="employee-content">
-          <h1>
-            Corporate Car <span>Rental</span>
-          </h1>
-          <p>
-            Seamless, reliable, and scalable car rental solutions designed for
-            your corporate needs. From daily office commutes to inter-branch
-            travel and business events, we ensure your employees travel with
-            comfort, safety, and punctuality.
-          </p>
-          <div className="cta-buttons">
-            <Link href="#quote-section">
-              <button className="primary-btn" id="quote-btn">
-                Get Quote Now →
-              </button>
-            </Link>
-            <a href="tel:+919876543210" className="secondary-btn">
-              Call: +91 98765 43210
-            </a>
-          </div>
-        </div>
-        <div className="employee-image">
-          <Image
-            src="/luxury1.jpeg"
-            alt="Employee Transport"
-            width={600}
-            height={400}
-            className="image"
-          />
-        </div>
-      </section> */}
       <section className="employee-transport section-container" id="desktop">
         <Image
           src="./inn8.jpg"

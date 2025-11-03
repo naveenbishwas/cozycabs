@@ -68,6 +68,16 @@ const WeddingCarRental = () => {
 
   return (
     <div>
+      <head>
+        <title>
+          Wedding Car Rental | Luxury Cars for Your Special Day – CozyCabz
+        </title>
+        <meta
+          name="description"
+          content="Make your wedding unforgettable with CozyCabz. Choose from luxury, vintage, and premium cars with professional chauffeurs for a stylish and seamless ride on your special day."
+        />
+      </head>
+
       <Header />
 
       {/* Hero Section */}

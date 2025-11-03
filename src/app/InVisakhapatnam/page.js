@@ -219,6 +219,17 @@ const InVisakhapatnam = () => {
 
   return (
     <div>
+      <head>
+        <title>
+          Car Rental in Visakhapatnam | Self Drive & Chauffeur Service –
+          CozyCabz
+        </title>
+        <meta
+          name="description"
+          content="Book car rental in Visakhapatnam with CozyCabz. Choose from self drive, chauffeur-driven, or luxury cars for local, airport, and outstation rides. Safe, reliable & available 24×7."
+        />
+      </head>
+
       <Header />
       <section className="heroeco" aria-label="Car Rental Hero Section">
         <div className="heroeco__copy">

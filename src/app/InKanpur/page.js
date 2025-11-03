@@ -218,6 +218,16 @@ const InKanpur = () => {
 
   return (
     <div>
+      <head>
+        <title>
+          Car Rental in Kanpur | Safe & Reliable Taxi Service – CozyCabz
+        </title>
+        <meta
+          name="description"
+          content="Book car rentals in Kanpur with CozyCabz. Choose from economy, premium, and self-drive cars with professional chauffeurs for airport transfers, local travel, and outstation trips. 24×7 service with transparent pricing."
+        />
+      </head>
+
       <Header />
       <section className="heroeco" aria-label="Car Rental Hero Section">
         <div className="heroeco__copy">

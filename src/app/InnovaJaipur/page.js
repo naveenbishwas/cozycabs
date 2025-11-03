@@ -103,6 +103,27 @@ const Innovainjaipur = () => {
 
   return (
     <div className="innova-page">
+      <head>
+        <title>
+          Innova Car Rental in Jaipur | Cozy Cabz - Crysta & Hycross with Driver
+        </title>
+        <meta
+          name="description"
+          content="Book Toyota Innova Crysta or Hycross in Jaipur for airport transfers, sightseeing, or outstation travel. Reliable chauffeur-driven rides with Cozy Cabz 24×7 support."
+        />
+        <meta
+          property="og:title"
+          content="Innova Car Rental in Jaipur | Cozy Cabz - Crysta & Hycross with Driver"
+        />
+        <meta
+          property="og:description"
+          content="Hire an Innova in Jaipur with driver for business, family, or travel needs. 24×7 booking support, sanitized vehicles, and trusted service from Cozy Cabz."
+        />
+        <meta property="og:image" content="/innova-3.png" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.cozycabz.com/InJaipur" />
+      </head>
+
       <Header />
 
       {/* Hero Section */}

@@ -103,6 +103,30 @@ const Innovainahmedabad = () => {
 
   return (
     <div className="innova-page">
+      <head>
+        <title>
+          Innova Car Rental in Ahmedabad | Cozy Cabz with Driver & Self Drive
+        </title>
+        <meta
+          name="description"
+          content="Rent Innova Crysta or Hycross in Ahmedabad with driver or self drive options. Safe, spacious, and comfortable MPV rentals for airport, outstation, and corporate travel."
+        />
+        <meta
+          property="og:title"
+          content="Innova Car Rental in Ahmedabad | Cozy Cabz with Driver & Self Drive"
+        />
+        <meta
+          property="og:description"
+          content="Book Innova on rent in Ahmedabad with Cozy Cabz. Well-maintained Crysta & Hycross models, verified drivers, and 24×7 airport pickup/drop service."
+        />
+        <meta property="og:image" content="/innova-1.png" />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content="https://www.cozycabz.com/InAhmedabad"
+        />
+      </head>
+
       <Header />
 
       {/* Hero Section */}

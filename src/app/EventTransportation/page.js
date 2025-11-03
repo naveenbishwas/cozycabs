@@ -58,6 +58,30 @@ const EventTransportation = () => {
 
   return (
     <div>
+      <head>
+        <title>
+          Event Transportation | Luxury Cars, Buses & Chauffeur Services
+        </title>
+        <meta
+          name="description"
+          content="Plan seamless event travel with CozyCabz. Luxury cars, SUVs & buses for guests and staff with professional chauffeurs and on-time service."
+        />
+        <meta
+          property="og:title"
+          content="Event Transportation | Luxury Cars, Buses & Chauffeur Services"
+        />
+        <meta
+          property="og:description"
+          content="Smooth, comfortable, and reliable event transportation for guests, VIPs & teams. Airport transfers, hotel shuttles, and venue rides managed professionally."
+        />
+        <meta property="og:image" content="/service-car-img.png" />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content="https://www.cozycabz.com/EventTransportation"
+        />
+      </head>
+
       <Header />
 
       {/* Hero Section */}

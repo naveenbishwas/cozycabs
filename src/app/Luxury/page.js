@@ -190,6 +190,16 @@ const Luxury = () => {
 
   return (
     <>
+      <head>
+        <title>
+          Luxury Car Rental | Premium Chauffeur & Business Rides – CozyCabz
+        </title>
+        <meta
+          name="description"
+          content="Experience elegance and comfort with CozyCabz luxury car rentals. Choose from Audi, BMW, and Mercedes vehicles for corporate travel, weddings, and VIP events across India."
+        />
+      </head>
+
       <Header />
 
       {/* ===== SLIDESHOW ===== */}

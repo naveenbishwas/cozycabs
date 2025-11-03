@@ -219,6 +219,28 @@ const InVadodara = () => {
 
   return (
     <div>
+      <head>
+        <title>
+          Car Rental in Vadodara | Cozy Cabz – Self Drive & Chauffeur Cars
+        </title>
+        <meta
+          name="description"
+          content="Book car rental in Vadodara with driver or self drive car rental in Vadodara. Cozy Cabz offers reliable, safe, and affordable car hire in Baroda for airport transfers, city tours, and business trips."
+        />
+        <meta
+          property="og:title"
+          content="Car Rental in Vadodara | Cozy Cabz – Reliable Car Hire in Baroda"
+        />
+        <meta
+          property="og:description"
+          content="Hire cars in Vadodara for sightseeing, corporate travel, and outstation trips. From sedans to luxury cars, Cozy Cabz provides verified drivers and transparent pricing 24×7."
+        />
+        <meta property="og:image" content="/invadodara/Lakshmi.png" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.cozycabz.com/InVadodara" />
+        <meta name="robots" content="index, follow" />
+      </head>
+
       <Header />
       <section className="heroeco" aria-label="Car Rental Hero Section">
         <div className="heroeco__copy">

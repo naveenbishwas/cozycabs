@@ -188,6 +188,16 @@ const InMumbai = () => {
 
   return (
     <div>
+      <head>
+        <title>
+          Car Rental in Mumbai | Affordable Taxi & Chauffeur Service – CozyCabz
+        </title>
+        <meta
+          name="description"
+          content="Book car rentals in Mumbai with CozyCabz. Choose economy, premium, or luxury cars for city rides, airport transfers, and outstation trips. 24×7 service, verified drivers & transparent pricing."
+        />
+      </head>
+
       <Header />
       <section className="heroeco" aria-label="Car Rental Hero Section">
         <div className="heroeco__copy">

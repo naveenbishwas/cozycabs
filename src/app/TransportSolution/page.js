@@ -119,6 +119,15 @@ const TransportSolution = () => {
   const aboutCountersRef = useAboutCountersObserver();
   return (
     <div>
+      <head>
+        <title>
+          Corporate Employee Transport Services | Safe & Reliable Fleet in India
+        </title>
+        <meta
+          name="description"
+          content="Trusted employee transport solutions for businesses. 500+ corporate clients, 1200+ fleet, serving 50,000+ employees across 25+ Indian cities with safe, punctual rides."
+        />
+      </head>
       <Header />
 
       <section className="employee-transport section-container" id="desktop">

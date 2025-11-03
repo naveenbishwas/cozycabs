@@ -211,6 +211,16 @@ const InChennai = () => {
 
   return (
     <div>
+      <head>
+        <title>
+          Car Rental in Chennai | Affordable & Safe Taxi Service – CozyCabz
+        </title>
+        <meta
+          name="description"
+          content="Book reliable car rentals in Chennai with CozyCabz. Choose from economy, premium, and luxury cars with professional drivers for airport transfers, local trips, and outstation travel."
+        />
+      </head>
+
       <Header />
       <section className="heroeco" aria-label="Car Rental Hero Section">
         <div className="heroeco__copy">

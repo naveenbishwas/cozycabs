@@ -177,6 +177,25 @@ const Premium = () => {
 
   return (
     <>
+      <head>
+        <title>Premium Car Rental | Luxury Cars with Chauffeurs</title>
+        <meta
+          name="description"
+          content="Rent luxury cars like Fortuner, Innova Crysta, and Vellfire with CozyCabz. Enjoy comfort, safety & style with professional chauffeurs and on-time service."
+        />
+        <meta
+          property="og:title"
+          content="Premium Car Rental | Luxury Cars with Chauffeurs"
+        />
+        <meta
+          property="og:description"
+          content="Book high-end cars for business, family trips, or special occasions. Premium comfort, reliable chauffeurs & nationwide service with CozyCabz."
+        />
+        <meta property="og:image" content="/premium-banner1.png" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.cozycabz.com/Premium" />
+      </head>
+
       <Header />
       <section className="slideshow-section">
         {/* Desktop Slider */}

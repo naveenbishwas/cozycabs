@@ -219,6 +219,28 @@ const InCoimbatore = () => {
 
   return (
     <div>
+      <head>
+        <title>Car Rental in Coimbatore | CozyCabz with Driver</title>
+        <meta
+          name="description"
+          content="Book car rental in Coimbatore with driver for local, outstation, and airport rides. Reliable, safe, and affordable cars with CozyCabz — available 24×7."
+        />
+        <meta
+          property="og:title"
+          content="Car Rental in Coimbatore | CozyCabz with Driver"
+        />
+        <meta
+          property="og:description"
+          content="Hire a car with driver in Coimbatore for sightseeing, family trips, or business travel. Verified chauffeurs, luxury cars, and transparent pricing."
+        />
+        <meta property="og:image" content="/incoimbatore/Marudamalai.png" />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content="https://www.cozycabz.com/InCoimbatore"
+        />
+      </head>
+
       <Header />
       <section className="heroeco" aria-label="Car Rental Hero Section">
         <div className="heroeco__copy">
