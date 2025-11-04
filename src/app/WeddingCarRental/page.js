@@ -116,6 +116,7 @@ const WeddingCarRental = () => {
               width={0}
               height={0}
               className="image"
+              unoptimized
             />
           </div>
         </div>

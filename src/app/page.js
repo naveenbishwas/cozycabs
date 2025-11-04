@@ -377,7 +377,7 @@ export default function Home() {
       status: "Car Rental Available",
       desc: "Explore hassle-free rides with 24/7 car rental—perfect for daily commutes or weekend getaways.",
       cta: "Book in Bangalore",
-      href: "/Inbanglore",
+      href: "/InBangalore",
       img: "./bangalore123.jpeg",
       alt: "India Gate, Delhi",
     },
@@ -423,7 +423,7 @@ export default function Home() {
       status: "Car Rental Available",
       desc: "Safe, clean, and comfortable travel across Hyderabad—available round the clock.",
       cta: "Book in Hyderabad",
-      href: "/Inhyderabad",
+      href: "/in-hyderabad",
       img: "hyderabad221.jpeg",
       alt: "Hyderabad",
     },
@@ -718,7 +718,7 @@ export default function Home() {
             <button className="hero-btn">Book Now</button>
           </Link>
 
-          <div className="red-car">{/* your SVG */}</div>
+          <div className="red-car"></div>
         </div>
       </section>
 
@@ -727,7 +727,7 @@ export default function Home() {
           <p className="welcome-text">Welcome To Best Cabs</p>
           <h1>Book Reliable & Affordable Cabs in 200+ Cities</h1>
 
-          <Link href="#book-your-car">
+          <Link href="#book-your-car" className="hero-btn-df">
             <button className="hero-btn">Book Now</button>
           </Link>
 

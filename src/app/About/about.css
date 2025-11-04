@@ -179,6 +179,10 @@
     text-align: left;
   }
 
+  .info-page {
+    padding-top: 20px !important;
+  }
+
   .info-text li {
     font-size: 14px;
   }
