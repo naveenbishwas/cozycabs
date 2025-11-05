@@ -128,6 +128,11 @@
     margin-bottom: 25px;
   }
 
+  .innova-hero {
+    background: url("/innova-mobile.png") center/cover no-repeat;
+    /* padding: 80px 20px; */
+  }
+
   .innova-features {
     margin-top: 50px;
   }

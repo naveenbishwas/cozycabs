@@ -1630,16 +1630,17 @@ a {
 
 /* ===== Gallery Section ===== */
 .innova-gallery-section {
-  margin: 50px auto;
+  margin: 0 !important;
   background: #fff;
-  padding: 40px;
+  padding: 80px 40px !important;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  margin-bottom: 4% !important;
 }
 
 .innova-section-title {
   text-align: center;
   font-size: 2.5rem;
-  margin-bottom: 30px;
+  margin-bottom: 50px !important;
 }
 
 .innova-section-title span {
@@ -2110,7 +2111,11 @@ section.innova-why {
     gap: 15px;
     padding: 20px;
   }
-  .innova-gallery-section,
+
+  .innova-gallery-section {
+    padding: 30px 20px !important;
+  }
+
   .innova-content-section,
   .innova-booking-section,
   .innova-faq-section {
@@ -2141,12 +2146,21 @@ section.innova-why {
   .innova-specs-grid {
     grid-template-columns: 1fr;
   }
+
   .innova-section-title {
     font-size: 1.75rem;
   }
   .innova-description-heading {
     font-size: 1.5rem;
     line-height: 1.4;
+  }
+
+  .innova-specs-grid {
+    margin-top: 0px !important;
+  }
+
+  .spec-heading {
+    margin-top: 13%;
   }
 }
 

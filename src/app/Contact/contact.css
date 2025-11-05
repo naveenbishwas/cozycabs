@@ -46,6 +46,7 @@
   grid-template-columns: 1fr 1.2fr;
   gap: 50px;
   align-items: start;
+  margin-top: 4%;
 }
 
 /* ---- Left Info ---- */
@@ -135,5 +136,9 @@
 
   .contact-form .note {
     text-align: left;
+  }
+
+  .form-group {
+    flex-direction: column;
   }
 }

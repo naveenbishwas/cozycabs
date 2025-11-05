@@ -29,15 +29,15 @@ const Contact = () => {
       {/* ---- Main Contact Section ---- */}
       <section className="contact-wrapper">
         <h2>Let’s Start a Conversation</h2>
-        <p className="intro-text">
+        {/* <p className="intro-text">
           Ask how we can help you make your travel easier, safer, and more
           reliable.
-        </p>
+        </p> */}
 
         <div className="contact-main">
           {/* ---- Left Column ---- */}
           <div className="contact-info">
-            <h4>Ask how we can help you:</h4>
+            {/* <h4>Ask how we can help you:</h4> */}
             <ul>
               <li>
                 <strong>Book your ride with ease</strong>
