@@ -39,6 +39,11 @@
   align-items: center;
 }
 
+.footer__brand img {
+  width: 180px;
+  height: auto;
+}
+
 /* Brand block */
 .footer__brand .brand__row {
   display: flex;

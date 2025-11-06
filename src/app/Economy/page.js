@@ -12,19 +12,19 @@ import Link from "next/link";
 const desktopSlides = [
   {
     id: 1,
-    image: "/economy1.png",
+    image: "/economy-banner3.png",
     heading: "Smart Travel, Smarter Prices”",
     subtext: "Comfort that fits your budget.",
   },
   {
     id: 2,
-    image: "/economy2.png",
+    image: "/economy-banner2.png",
     heading: "Everyday Journeys, Elevated",
     subtext: "Simple. Reliable. Affordable",
   },
   {
     id: 3,
-    image: "/economy3.png",
+    image: "/economy1.png",
     heading: "Value You Can Feel",
     subtext: "“Low cost, high trust.",
   },

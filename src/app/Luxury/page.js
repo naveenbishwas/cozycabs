@@ -12,7 +12,7 @@ import Link from "next/link";
 const desktopSlides = [
   {
     id: 1,
-    image: "/banner1.png",
+    image: "/luxurySlide.png",
     heading: "Where Prestige Meets Power",
     subtext: "Elegance built to move.",
   },

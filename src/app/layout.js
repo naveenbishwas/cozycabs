@@ -22,13 +22,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <title>
-          CozyCabz – Reliable & Affordable Car Rental Service in India
-        </title>
+        <title>Car Rental Service in India | CozyCabz</title>
         <meta
           name="description"
           content="Book safe, clean, and affordable cabs in 200+ cities with CozyCabz. Enjoy premium rides, expert drivers, 24/7 support, and trusted service for every trip."
-        />
+        ></meta>
       </head>
 
       <body className={`${geistSans.variable} ${geistMono.variable}`}>

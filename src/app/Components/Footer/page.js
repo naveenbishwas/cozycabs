@@ -16,10 +16,11 @@ export default function SiteFooter() {
           {/* ---- Brand ---- */}
           <div className="footer__brand">
             <Image
-              src="/white.png"
-              alt="CozyCabz Logo"
-              width={150}
-              height={50}
+              src="/Cozy-cabz-logo.png"
+              width={0}
+              height={0}
+              unoptimized
+              alt="logo"
             />
             <p className="brand__about">
               India&apos;s leading car rental service with 10+ years of

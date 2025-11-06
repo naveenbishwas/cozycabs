@@ -18,7 +18,7 @@ const desktopSlides = [
   },
   {
     id: 2,
-    image: "/Buscouch2.png",
+    image: "/buse2.jpeg",
     heading: "Ride. Relax. Repeat",
     subtext: "Room for everyone.",
   },

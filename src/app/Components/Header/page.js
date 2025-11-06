@@ -22,9 +22,9 @@ export default function Header() {
         <Link href="/">
           <div className="logo">
             <Image
-              src="/white.png"
-              width={100}
-              height={50}
+              src="/Cozy-cabz-logo.png"
+              width={0}
+              height={0}
               unoptimized
               alt="logo"
             />

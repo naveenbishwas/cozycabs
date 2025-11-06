@@ -13,7 +13,7 @@ import Link from "next/link";
 const desktopSlides = [
   {
     id: 1,
-    image: "/premium-banner1.png",
+    image: "/premium.png",
     heading: "Luxury at Every Turn",
     subtext: "Experience the elegance of premium cars that define perfection.",
   },
