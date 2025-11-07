@@ -107,6 +107,8 @@ const WeddingCarRental = () => {
       <NumberCounter />
 
       {/* Ride Section */}
+
+      {/* section */}
       <section className="smooth-ride section-container">
         <div className="ride-images">
           <div className="main-img">
