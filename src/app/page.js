@@ -799,6 +799,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Booking Form */}
       <CityForm />
 
       <section className="trust">
