@@ -81,6 +81,10 @@
   transition: all 0.3s ease;
 }
 
+.price {
+  display: none;
+}
+
 .arrow.left {
   left: 40px;
 }
@@ -354,7 +358,7 @@
 .bottom-row {
   margin-top: 15px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 

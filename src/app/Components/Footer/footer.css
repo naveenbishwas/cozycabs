@@ -44,6 +44,12 @@
   height: auto;
 }
 
+.phone-number {
+  display: flex;
+  align-items: center;
+  gap: 3%;
+}
+
 /* Brand block */
 .footer__brand .brand__row {
   display: flex;

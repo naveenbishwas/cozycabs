@@ -374,7 +374,7 @@
 .bottom-row {
   margin-top: 15px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
@@ -382,6 +382,7 @@
   font-size: 1.1rem;
   font-weight: 700;
   color: #e00028;
+  display: none;
 }
 
 button {

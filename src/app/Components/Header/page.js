@@ -48,9 +48,9 @@ export default function Header() {
                     Employee Transport Solutions
                   </Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link href="/GcarRental">Global Car Rental</Link>
-                </li>
+                </li> */}
                 <li>
                   <Link href="/HotelTravelDesk">Hotel Travel Desk</Link>
                 </li>
@@ -122,7 +122,7 @@ export default function Header() {
                   ></path>
                 </svg>
               </span>
-              <span>+91 7387382383</span>
+              <span>+91 9899132460</span>
             </button>
           </Link>
         </div>

@@ -28,9 +28,14 @@ export default function SiteFooter() {
               transportation across 250+ cities.
             </p>
             <ul className="footer__contacts">
-              <li>
-                <Link href="tel:+919220994735">+91 92209 94735</Link>
-              </li>
+              <span className="phone-number">
+                <li>
+                  <Link href="tel:+919220994735">+91 92209 94735</Link>
+                </li>
+                <li>
+                  <Link href="tel:+919899132460">+91 9899132460</Link>
+                </li>
+              </span>
               <li>
                 <Link href="mailto:support@cozycabz.com">
                   support@cozycabz.com

@@ -11,6 +11,10 @@
   height: 100%;
 }
 
+.price {
+  display: none;
+}
+
 .slide {
   position: absolute;
   inset: 0;
@@ -348,7 +352,7 @@
 .bottom-row {
   margin-top: 15px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
