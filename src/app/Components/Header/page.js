@@ -94,7 +94,7 @@ export default function Header() {
               </ul>
             </li>
             <Link href="/ClientSection" onClick={() => setIsOpen(false)}>
-              Client
+              Our Clients
             </Link>
             <li>
               <Link href="/About">About</Link>
@@ -273,7 +273,7 @@ export default function Header() {
           </li>
           <li>
             <Link href="/ClientSection" onClick={() => setIsOpen(false)}>
-              Client
+              Our Clients
             </Link>
           </li>
           <li>

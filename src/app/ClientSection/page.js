@@ -18,7 +18,7 @@ export default function ClientsSection() {
     // { name: "Pure & Cure Healthcare", img: "/PUREANDCURE.png" },
     { name: "RTM Healthcare", img: "/RTM.jpeg" },
     { name: "GH Energy", img: "/GH.jpg" },
-    { name: "VERDEEN CHEMICALS PRIVATE LIMITED", img: "/VERDEEN.jpEg" },
+    { name: "VERDEEN CHEMICALS PRIVATE LIMITED", img: "/VERDEEN.jpeg" },
   ];
 
   return (
