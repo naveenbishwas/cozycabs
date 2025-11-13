@@ -1,12 +1,8 @@
 /* 🌆 Hero Section */
 .about-hero {
   position: relative;
-  background: linear-gradient(
-      120deg,
-      rgba(251, 73, 73, 0.9),
-      rgb(244, 174, 174)
-    ),
-    url("/contact-bg.jpg") center / cover no-repeat;
+  background: linear-gradient(120deg, #ff3b3b90, #514444c0),
+    center / cover no-repeat;
 
   height: 65vh;
   display: flex;
@@ -21,7 +17,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, #ad2e3b 40%, #707070 115%);
+  /* background: linear-gradient(135deg, #ad2e3b 40%, #707070 115%); */
 }
 
 .about-hero-content {
