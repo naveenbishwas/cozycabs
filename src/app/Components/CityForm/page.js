@@ -342,7 +342,6 @@
 
 import React, { useRef, useState } from "react";
 import Image from "next/image";
-import emailjs from "@emailjs/browser";
 import "./cityform.css";
 
 const CityForm = () => {
@@ -426,25 +425,21 @@ const CityForm = () => {
       return;
     }
 
-    // Email.js;
     setSending(true);
+
     try {
-      const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
-      const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
-      const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
-
-      if (!serviceId || !templateId || !publicKey) {
-        throw new Error(
-          "EmailJS env vars missing. Please set NEXT_PUBLIC_EMAILJS_SERVICE_ID, NEXT_PUBLIC_EMAILJS_TEMPLATE_ID, NEXT_PUBLIC_EMAILJS_PUBLIC_KEY."
-        );
-      }
-
-      // Send form DOM directly so all inputs with name="" are captured
-      await emailjs.sendForm(serviceId, templateId, formRef.current, {
-        publicKey,
+      const res = await fetch("/api/send-mail", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
       });
 
+      const data = await res.json();
+
+      if (!data.success) throw new Error(data.error || "Failed sending email");
+
       alert("Thanks! Your enquiry has been sent.");
+
       setFormData({
         name: "",
         email: "",
@@ -459,21 +454,14 @@ const CityForm = () => {
         message: "",
         accepted: false,
       });
-      setSelectedService("");
       setVehicleOptions([]);
-      formRef.current?.reset(); // also resets native form state
+      setSelectedService("");
     } catch (err) {
-      console.error("EmailJS error:", err);
-      alert("Sorry, something went wrong while sending. Please try again.");
+      console.error("Error sending:", err);
+      alert("Something went wrong. Please try again.");
     } finally {
       setSending(false);
     }
-
-    console.log("ENV CHECK:", {
-      serviceId: process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
-      templateId: process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
-      publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY,
-    });
   };
 
   function DropdownIcon() {
@@ -562,7 +550,6 @@ const CityForm = () => {
                 <option value="">Select Service Option</option>
                 <option>Corporate Car Rental</option>
                 <option>Employee Transport Solutions</option>
-                <option>Global Car Rental</option>
                 <option>Hotel Travel Desk</option>
                 <option>Conference & Delegation</option>
                 <option>Event Transportation</option>
