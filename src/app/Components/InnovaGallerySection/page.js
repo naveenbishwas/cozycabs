@@ -6,7 +6,7 @@ const InnovaGallerySection = ({ city = "Delhi" }) => {
   // 👈 added city prop with default
   const carImages = [
     "/innova-car2.jpeg",
-    "/innova-car3.jpeg",
+    "/innova-31.jpeg",
     "/innova-car4.jpeg",
     "/innova-car5.jpeg",
   ];
