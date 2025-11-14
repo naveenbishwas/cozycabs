@@ -11,6 +11,8 @@ const InnovaGallerySection = ({ city = "Delhi" }) => {
     "/innova-car5.jpeg",
   ];
 
+  // Team Video
+
   return (
     <section className="innova-gallery-section">
       <h1 className="innova-section-title">
