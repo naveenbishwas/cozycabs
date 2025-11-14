@@ -889,24 +889,18 @@ export default function Home() {
                   <li>Continuous learning and growth</li>
                 </ul>
               </div>
-
-              {/* <div className="teamShowcase-btn">
-                <button>Know More</button>
-              </div> */}
             </div>
 
             <div className="teamShowcase-image">
               <div className="teamShowcase-imageWrapper">
-                <Image
-                  src="/team.png"
-                  width={0}
-                  height={0}
-                  alt="team-img"
-                  unoptimized
-                />
-                <div className="teamShowcase-overlay">
-                  <p>Together we achieve more</p>
-                </div>
+                <video
+                  src="/video-team.mp4"
+                  muted
+                  autoPlay
+                  loop
+                  playsInline
+                  className="your-class"
+                ></video>
               </div>
             </div>
           </div>

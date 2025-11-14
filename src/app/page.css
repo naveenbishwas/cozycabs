@@ -557,6 +557,26 @@ html {
   margin-bottom: 15px;
 }
 
+.teamShowcase-image {
+  width: 100%;
+  height: 100%;
+}
+
+.teamShowcase-imageWrapper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* IMPORTANT */
+  border-radius: 20px; /* your corner radius */
+}
+
+.teamShowcase-imageWrapper video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Fills the entire box */
+  object-position: center; /* Centers the video */
+  display: block;
+}
+
 .fleet-info {
   display: flex;
   justify-content: space-between;
@@ -2469,11 +2489,12 @@ p {
 .teamShowcase-content {
   display: flex;
   align-items: center;
+  gap: 5%;
 }
 
 .teamShowcase-text {
   color: white;
-  flex: 5;
+  flex: 4;
 }
 
 #meet-title p {
@@ -2481,7 +2502,7 @@ p {
 }
 
 .teamShowcase-title {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 700;
   margin-bottom: 16px;
   background: linear-gradient(45deg, #fff, #f0f0f0);
