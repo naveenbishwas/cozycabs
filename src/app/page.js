@@ -893,14 +893,14 @@ export default function Home() {
 
             <div className="teamShowcase-image">
               <div className="teamShowcase-imageWrapper">
-                <video
-                  // src="/video-team.mp4"
+                {/* <video
+                  src="/video-team.mp4"
                   muted
                   autoPlay
                   loop
                   playsInline
                   className="your-class"
-                ></video>
+                ></video> */}
               </div>
             </div>
           </div>
