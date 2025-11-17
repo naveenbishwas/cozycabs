@@ -901,6 +901,16 @@ export default function Home() {
                   playsInline
                   className="your-class"
                 ></video> */}
+                <iframe
+                  // width="560"
+                  // height="315"
+                  src="https://www.youtube.com/embed/RlHTIpc1hbI?autoplay=1&mute=1&loop=1&controls=0&playlist=RlHTIpc1hbI"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
               </div>
             </div>
           </div>
