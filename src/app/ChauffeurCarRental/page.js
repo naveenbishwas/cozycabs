@@ -73,7 +73,7 @@ const ChauffeurCarRental = () => {
       {/* Hero Section */}
       <section className="employee-transport section-container" id="desktop">
         <Image
-          src="./inn7.png"
+          src="./service-red-desktop-4.jpeg"
           width={1440}
           height={600}
           className="innova-backgound"
@@ -84,7 +84,7 @@ const ChauffeurCarRental = () => {
 
       <section className="employee-transport section-container" id="mobile">
         <Image
-          src="./9.png"
+          src="./188.png"
           width={1440}
           height={600}
           className="innova-backgound "

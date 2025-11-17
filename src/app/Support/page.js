@@ -58,14 +58,14 @@ const Support = () => {
             <div className="support-card">
               <h4>📞 Quick Help</h4>
               <p>
-                Call us anytime at <b>+91 7387382383</b>
+                Call us anytime at <b>+91 9899132460</b>
               </p>
             </div>
 
             <div className="support-card">
               <h4>💬 Chat Assistance</h4>
               <p>
-                WhatsApp us: <b>+91 7387382383</b>
+                WhatsApp us: <b>+91 9899132460</b>
               </p>
             </div>
 

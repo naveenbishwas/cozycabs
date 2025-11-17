@@ -118,9 +118,9 @@ export default function SiteFooter() {
                   Employee Transport Solutions
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href="/GcarRental">Global Car Rental</Link>
-              </li>
+              </li> */}
               <li>
                 <Link href="/HotelTravelDesk">Hotel Travel Desk</Link>
               </li>

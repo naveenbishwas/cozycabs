@@ -116,7 +116,7 @@ const EventTransportation = () => {
       </section> */}
       <section className="employee-transport section-container" id="desktop">
         <Image
-          src="./inn4.png"
+          src="./service-red-desktop-7.jpeg"
           width={1440}
           height={600}
           className="innova-backgound"
@@ -126,7 +126,7 @@ const EventTransportation = () => {
       </section>
       <section className="employee-transport section-container" id="mobile">
         <Image
-          src="./6.png"
+          src="./15.png"
           width={1440}
           height={600}
           className="innova-backgound"

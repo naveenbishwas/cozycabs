@@ -108,7 +108,7 @@ const CorporateCarRental = () => {
 
       <section className="employee-transport section-container" id="desktop">
         <Image
-          src="./inn8.jpg"
+          src="./service-red-desktop-4.jpeg"
           width={1440}
           height={600}
           className="innova-backgound"
@@ -118,7 +118,7 @@ const CorporateCarRental = () => {
       </section>
       <section className="employee-transport section-container" id="mobile">
         <Image
-          src="./1.png"
+          src="./11.png"
           width={1440}
           height={600}
           className="innova-backgound"

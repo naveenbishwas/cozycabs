@@ -83,7 +83,7 @@ const WeddingCarRental = () => {
       {/* Hero Section */}
       <section className="employee-transport section-container" id="desktop">
         <Image
-          src="./inn5.png"
+          src="/service-red-desktop-1.jpeg"
           width={1440}
           height={600}
           className="innova-backgound"
@@ -94,7 +94,7 @@ const WeddingCarRental = () => {
 
       <section className="employee-transport section-container" id="mobile">
         <Image
-          src="./10.png"
+          src="./16.png"
           width={1440}
           height={600}
           className="innova-backgound "

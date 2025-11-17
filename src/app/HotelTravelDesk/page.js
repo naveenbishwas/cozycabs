@@ -72,7 +72,7 @@ const HotelTravelDesk = () => {
 
       <section className="employee-transport section-container" id="desktop">
         <Image
-          src="./inn2.jpg"
+          src="./service-red-desktop-8.jpeg"
           width={1440}
           height={600}
           className="innova-backgound"
@@ -83,7 +83,7 @@ const HotelTravelDesk = () => {
 
       <section className="employee-transport section-container" id="mobile">
         <Image
-          src="./4.png"
+          src="./13.png"
           width={1440}
           height={600}
           className="innova-backgound"

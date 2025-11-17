@@ -132,7 +132,7 @@ const TransportSolution = () => {
 
       <section className="employee-transport section-container" id="desktop">
         <Image
-          src="./inn1.jpg"
+          src="./service-red-desktop-3.jpeg"
           width={1440}
           height={600}
           className="innova-backgound"
@@ -142,7 +142,7 @@ const TransportSolution = () => {
       </section>
       <section className="employee-transport section-container" id="mobile">
         <Image
-          src="./2.png"
+          src="./12.png"
           width={1440}
           height={600}
           className="innova-backgound"

@@ -103,7 +103,7 @@ const ConferenceDelegationTravel = () => {
       </section> */}
       <section className="employee-transport section-container" id="desktop">
         <Image
-          src="./inn3.png"
+          src="./service-red-desktop-6.jpeg"
           width={1440}
           height={600}
           className="innova-backgound"
@@ -113,7 +113,7 @@ const ConferenceDelegationTravel = () => {
       </section>
       <section className="employee-transport section-container" id="mobile">
         <Image
-          src="./5.png"
+          src="./14.png"
           width={1440}
           height={600}
           className="innova-backgound"

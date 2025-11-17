@@ -705,6 +705,20 @@ export default function Home() {
     console.log("Form Data Submitted:", formData);
   };
 
+  const clients = [
+    { name: "BrahMos Aerospace", img: "/BRAH.png" },
+    { name: "Raphe MPhibr", img: "/RAPHE.png" },
+    { name: "Nasm Petro Innovations", img: "/NASM.png" },
+    { name: "Akumentis Healthcare", img: "/akum.jpeg" },
+    { name: "Travel Food Services", img: "/TRAVEL.png" },
+    { name: "Agrim Wholesale", img: "/AGRIM.jpeg" },
+    { name: "Param Capital", img: "/PARAM.jpeg" },
+    { name: "Da Open World", img: "/DA.jpeg" },
+    { name: "RTM Healthcare", img: "/RTM.jpeg" },
+    { name: "GH Energy", img: "/GH.jpg" },
+    { name: "VERDEEN CHEMICALS PRIVATE LIMITED", img: "/VERDEEN.jpeg" },
+  ];
+
   return (
     <>
       <Header />
@@ -801,6 +815,26 @@ export default function Home() {
 
       {/* Booking Form */}
       <CityForm />
+
+      <div className="logo-slider">
+        <h1>
+          Trusted by <span className="red-black">Brands</span>
+        </h1>
+
+        <div className="logo-track">
+          {[...clients, ...clients].map((client, index) => (
+            <Image
+              key={index}
+              src={client.img}
+              width={0}
+              height={0}
+              alt={client.name}
+              unoptimized
+              className="logo-img"
+            />
+          ))}
+        </div>
+      </div>
 
       <section className="trust">
         <div className="wrap">
@@ -906,10 +940,10 @@ export default function Home() {
                   // height="315"
                   src="https://www.youtube.com/embed/RlHTIpc1hbI?autoplay=1&mute=1&loop=1&controls=0&playlist=RlHTIpc1hbI"
                   title="YouTube video player"
-                  frameborder="0"
+                  frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  referrerpolicy="strict-origin-when-cross-origin"
-                  allowfullscreen
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
                 ></iframe>
               </div>
             </div>

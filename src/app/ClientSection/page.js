@@ -9,7 +9,7 @@ export default function ClientsSection() {
     { name: "BrahMos Aerospace", img: "/BRAH.png" },
     { name: "Raphe MPhibr", img: "/RAPHE.png" },
     { name: "Nasm Petro Innovations", img: "/NASM.png" },
-    { name: "Akumentis Healthcare", img: "/AKUMENTIS.png" },
+    { name: "Akumentis Healthcare", img: "/akum.jpeg" },
     { name: "Travel Food Services", img: "/TRAVEL.png" },
     { name: "Agrim Wholesale", img: "/AGRIM.jpeg" },
     // { name: "Multistrato Capital Advisors", img: "/MULTISTRATO.png" },

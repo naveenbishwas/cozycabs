@@ -85,7 +85,7 @@ const TravelPartnersProgram = () => {
       {/* Hero Section */}
       <section className="employee-transport section-container" id="desktop">
         <Image
-          src="./inn6.png"
+          src="./service-red-desktop-2.jpeg"
           width={1440}
           height={600}
           className="innova-backgound"
@@ -96,7 +96,7 @@ const TravelPartnersProgram = () => {
 
       <section className="employee-transport section-container" id="mobile">
         <Image
-          src="./traval-partners.jpg"
+          src="./17.png"
           width={1440}
           height={600}
           className="innova-backgound "
