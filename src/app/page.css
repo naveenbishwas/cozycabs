@@ -2674,6 +2674,23 @@ p {
   margin: 0;
 }
 
+/* Mobile Fix */
+@media (max-width: 768px) {
+  .teamShowcase-imageWrapper {
+    height: 45vh; /* MUCH better for mobile */
+    transform: none; /* remove 3D tilt */
+    border-radius: 16px;
+  }
+
+  .teamShowcase-imageWrapper iframe {
+    width: 100%; /* perfect match */
+    height: 100%;
+    transform: none;
+    top: 0;
+    left: 0;
+  }
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .teamShowcase {
