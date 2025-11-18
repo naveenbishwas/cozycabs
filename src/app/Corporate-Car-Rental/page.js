@@ -3,7 +3,7 @@
 import React, { useRef, useEffect } from "react";
 import Header from "../Components/Header/page";
 import SiteFooter from "../Components/Footer/page";
-import "../TransportSolution/TransportSolution.css";
+import "../Transport-Solution/TransportSolution.css";
 import Image from "next/image";
 import { FaBuilding, FaUsers, FaBus, FaMapMarkerAlt } from "react-icons/fa";
 import Link from "next/link";

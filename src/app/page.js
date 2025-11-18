@@ -377,7 +377,7 @@ export default function Home() {
       status: "Car Rental Available",
       desc: "Explore hassle-free rides with 24/7 car rental—perfect for daily commutes or weekend getaways.",
       cta: "Book in Bangalore",
-      href: "/InBangalore",
+      href: "/car-rental-in-bangalore",
       img: "./bangalore123.jpeg",
       alt: "India Gate, Delhi",
     },
@@ -386,7 +386,7 @@ export default function Home() {
       status: "Car Rental Available",
       desc: "Experience seamless travel with our reliable and affordable car —available round the clock.",
       cta: "Book in Mumbai",
-      href: "/InMumbai",
+      href: "/car-rental-in-mumbai",
       img: "Mumbai2.png",
       alt: "Marine Drive, Mumbai",
     },
@@ -395,7 +395,7 @@ export default function Home() {
       status: "Car Rental Available",
       desc: "Discover the Pink City in comfort with our premium car rental services—available anytime, anywhere in Jaipur.",
       cta: "Book in Jaipur",
-      href: "/InJaipur",
+      href: "/car-rental-in-jaipur",
       img: "Jaipur2.png", // no image → shows placeholder state
       alt: "Jaipur",
     },
@@ -404,7 +404,7 @@ export default function Home() {
       status: "Car Rental Available",
       desc: "Comfortable and reliable rides across Chandigarh with 24/7 support.",
       cta: "Book in Chandigarh",
-      href: "/InChandigarh",
+      href: "/car-rental-in-chandigarh",
       img: "chd.png",
       alt: "Hills near Chandigarh",
     },
@@ -413,7 +413,7 @@ export default function Home() {
       status: "Car Rental Available",
       desc: "On-time pickups and well-maintained cars for business and family travel.",
       cta: "Book in Kolkata",
-      href: "/InKolkata",
+      href: "/car-rental-in-kolkata",
       img: "Kolkata2.png",
       alt: "Mountains",
     },
@@ -423,7 +423,7 @@ export default function Home() {
       status: "Car Rental Available",
       desc: "Safe, clean, and comfortable travel across Hyderabad—available round the clock.",
       cta: "Book in Hyderabad",
-      href: "/in-hyderabad",
+      href: "/car-rental-in-hyderabad",
       img: "hyderabad221.jpeg",
       alt: "Hyderabad",
     },
@@ -805,7 +805,7 @@ export default function Home() {
             <hr className="about__divider" />
             {/* /////Read More//////// */}
             <span className="about__cta-div">
-              <Link href="/About" className="about__cta">
+              <Link href="/About-us" className="about__cta">
                 <span>Read More</span>
               </Link>
             </span>
@@ -1179,7 +1179,7 @@ export default function Home() {
 
         <div className="fleet-grid" id="flex">
           {/* Buses & Coaches */}
-          <Link href="/BusesAndCoach">
+          <Link href="/Buses-And-Coach">
             <div className="fleet-card">
               <div className="fleet-image">
                 <Image
@@ -1216,7 +1216,7 @@ export default function Home() {
           </Link>
 
           {/* Innova Crysta */}
-          <Link href="/InnovaDelhi">
+          <Link href="/innova-car-rental-in-delhi">
             <div className="fleet-card">
               <div className="fleet-image">
                 <Image

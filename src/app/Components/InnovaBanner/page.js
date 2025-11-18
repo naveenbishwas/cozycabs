@@ -138,7 +138,7 @@ export default function InnovaHeroSection() {
             <a href="tel:7387382383" className="innova-call-btn">
               📞 Call: 7387382383
             </a>
-            <a href="#" className="innova-book-btn">
+            <a href="#book-your-car" className="innova-book-btn">
               Book Online →
             </a>
           </div>

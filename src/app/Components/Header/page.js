@@ -41,10 +41,10 @@ export default function Header() {
               <span className="dropbtn">Our Services ▾</span>
               <ul className="dropdown-content">
                 <li>
-                  <Link href="/CorporateCarRental">Corporate Car Rental</Link>
+                  <Link href="/Corporate-Car-Rental">Corporate Car Rental</Link>
                 </li>
                 <li>
-                  <Link href="/TransportSolution">
+                  <Link href="/Transport-Solution">
                     Employee Transport Solutions
                   </Link>
                 </li>
@@ -52,26 +52,28 @@ export default function Header() {
                   <Link href="/GcarRental">Global Car Rental</Link>
                 </li> */}
                 <li>
-                  <Link href="/HotelTravelDesk">Hotel Travel Desk</Link>
+                  <Link href="/Hotel-Travel-Desk">Hotel Travel Desk</Link>
                 </li>
                 <li>
-                  <Link href="/ConferenceDelegationTravel">
+                  <Link href="/Conference-Delegation-Travel">
                     Conference & Delegation
                   </Link>
                 </li>
                 <li>
-                  <Link href="/EventTransportation">Event Transportation</Link>
+                  <Link href="/Event-Transportation">Event Transportation</Link>
                 </li>
                 <li>
-                  <Link href="/WeddingCarRental">Wedding Car Rental</Link>
+                  <Link href="/Wedding-Car-Rental">Wedding Car Rental</Link>
                 </li>
                 <li>
-                  <Link href="/TravelPartnersProgram">
+                  <Link href="/Travel-Partners-Program">
                     Travel Partners Program
                   </Link>
                 </li>
                 <li>
-                  <Link href="/ChauffeurCarRental">Chauffeured Car Rental</Link>
+                  <Link href="/Chauffeur-CarRental">
+                    Chauffeured Car Rental
+                  </Link>
                 </li>
               </ul>
             </li>
@@ -89,18 +91,18 @@ export default function Header() {
                   <Link href="/Economy">Economy</Link>
                 </li>
                 <li>
-                  <Link href="/BusesAndCoach">Buses & Coach</Link>
+                  <Link href="/Buses-And-Coach">Buses & Coach</Link>
                 </li>
               </ul>
             </li>
-            <Link href="/ClientSection" onClick={() => setIsOpen(false)}>
+            <Link href="/Client-Section" onClick={() => setIsOpen(false)}>
               Our Clients
             </Link>
             <li>
-              <Link href="/About">About</Link>
+              <Link href="/About-us">About</Link>
             </li>
             <li>
-              <Link href="/Contact">Contact</Link>
+              <Link href="/Contact-us">Contact</Link>
             </li>
           </ul>
         </nav>
@@ -167,7 +169,7 @@ export default function Header() {
               <ul className="submenu" id="submenu">
                 <li>
                   <Link
-                    href="/CorporateCarRental"
+                    href="/Corporate-Car-Rental"
                     onClick={() => setIsOpen(false)}
                   >
                     Corporate Car Rental
@@ -175,7 +177,7 @@ export default function Header() {
                 </li>
                 <li>
                   <Link
-                    href="/TransportSolution"
+                    href="/Transport-Solution"
                     onClick={() => setIsOpen(false)}
                   >
                     Employee Transport Solutions
@@ -188,7 +190,7 @@ export default function Header() {
                 </li> */}
                 <li>
                   <Link
-                    href="/HotelTravelDesk"
+                    href="/Hotel-Travel-Desk"
                     onClick={() => setIsOpen(false)}
                   >
                     Hotel Travel Desk
@@ -196,7 +198,7 @@ export default function Header() {
                 </li>
                 <li>
                   <Link
-                    href="/ConferenceDelegationTravel"
+                    href="/Conference-Delegation-Travel"
                     onClick={() => setIsOpen(false)}
                   >
                     Conference & Delegation
@@ -204,7 +206,7 @@ export default function Header() {
                 </li>
                 <li>
                   <Link
-                    href="/EventTransportation"
+                    href="/Event-Transportation"
                     onClick={() => setIsOpen(false)}
                   >
                     Event Transportation
@@ -212,7 +214,7 @@ export default function Header() {
                 </li>
                 <li>
                   <Link
-                    href="/WeddingCarRental"
+                    href="/Wedding-Car-Rental"
                     onClick={() => setIsOpen(false)}
                   >
                     Wedding Car Rental
@@ -220,7 +222,7 @@ export default function Header() {
                 </li>
                 <li>
                   <Link
-                    href="/TravelPartnersProgram"
+                    href="/Travel-Partners-Program"
                     onClick={() => setIsOpen(false)}
                   >
                     Travel Partners Program
@@ -228,7 +230,7 @@ export default function Header() {
                 </li>
                 <li>
                   <Link
-                    href="/ChauffeurCarRental"
+                    href="/Chauffeur-CarRental"
                     onClick={() => setIsOpen(false)}
                   >
                     Chauffeured Car Rental
@@ -264,7 +266,10 @@ export default function Header() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/BusesAndCoach" onClick={() => setIsOpen(false)}>
+                  <Link
+                    href="/Buses-And-Coach"
+                    onClick={() => setIsOpen(false)}
+                  >
                     Buses & Coach
                   </Link>
                 </li>
@@ -272,17 +277,17 @@ export default function Header() {
             )}
           </li>
           <li>
-            <Link href="/ClientSection" onClick={() => setIsOpen(false)}>
+            <Link href="/Client-Section" onClick={() => setIsOpen(false)}>
               Our Clients
             </Link>
           </li>
           <li>
-            <Link href="/About" onClick={() => setIsOpen(false)}>
+            <Link href="/About-us" onClick={() => setIsOpen(false)}>
               About
             </Link>
           </li>
           <li>
-            <Link href="/Contact" onClick={() => setIsOpen(false)}>
+            <Link href="/Contact-us" onClick={() => setIsOpen(false)}>
               Contact
             </Link>
           </li>

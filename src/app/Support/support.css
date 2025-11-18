@@ -55,7 +55,7 @@
   margin-bottom: 12px;
 }
 .support-info ul {
-  padding-left: 20px;
+  list-style: none;
   margin-bottom: 20px;
   line-height: 1.7;
 }
