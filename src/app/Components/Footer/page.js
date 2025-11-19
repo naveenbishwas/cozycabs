@@ -131,7 +131,7 @@ export default function SiteFooter() {
                 </Link>
               </li>
               <li>
-                <Link href="/EventTransportation">Event Transportation</Link>
+                <Link href="/Event-Transportation">Event Transportation</Link>
               </li>
               <li>
                 <Link href="/Wedding-Car-Rental">Wedding Car Rental</Link>
