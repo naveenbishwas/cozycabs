@@ -2605,7 +2605,7 @@ p {
 .teamShowcase-imageWrapper {
   position: relative;
   width: 100%;
-  height: 75vh;
+  aspect-ratio: 16 / 9;
   overflow: hidden;
   border-radius: 24px;
   background: #000; /* fallback for loading */
@@ -2642,11 +2642,11 @@ p {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 130%;
-  height: 130%;
+  width: 100%;
+  height: 100%;
   transform: translate(-50%, -50%);
   filter: saturate(1.1) contrast(1.05);
-  pointer-events: auto; /* IMPORTANT FIX */
+  pointer-events: auto;
 }
 
 /* Bottom overlay (optional improvement) */

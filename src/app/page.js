@@ -763,6 +763,70 @@ export default function Home() {
     };
   }, []);
 
+  useEffect(() => {
+    // Load YouTube API script
+    const tag = document.createElement("script");
+    tag.src = "https://www.youtube.com/iframe_api";
+    document.body.appendChild(tag);
+
+    let player;
+
+    // Quality forcing function
+    const forceQuality = (playerInstance) => {
+      const qualities = ["highres", "hd2160", "hd1440", "hd1080", "hd720"];
+      let i = 0;
+
+      const interval = setInterval(() => {
+        playerInstance.setPlaybackQuality(qualities[i]);
+        i++;
+        if (i >= qualities.length) clearInterval(interval);
+      }, 300);
+    };
+
+    // YouTube callback
+    window.onYouTubeIframeAPIReady = () => {
+      player = new window.YT.Player("player", {
+        videoId: "RlHTIpc1hbI",
+        playerVars: {
+          autoplay: 0,
+          mute: 0,
+          controls: 1,
+          loop: 1,
+          playlist: "RlHTIpc1hbI",
+          modestbranding: 1,
+          rel: 0,
+        },
+        events: {
+          onReady: () => {
+            forceQuality(player);
+
+            const btn = document.getElementById("video-play-btn");
+
+            btn.addEventListener("click", () => {
+              player.playVideo();
+
+              // Try again after play
+              setTimeout(() => forceQuality(player), 800);
+
+              btn.style.display = "none";
+            });
+          },
+
+          onStateChange: (event) => {
+            if (event.data === window.YT.PlayerState.PLAYING) {
+              forceQuality(player); // Try again whenever it starts playing
+            }
+          },
+        },
+      });
+    };
+
+    return () => {
+      // cleanup
+      if (player && player.destroy) player.destroy();
+    };
+  }, []);
+
   return (
     <>
       <Header />
