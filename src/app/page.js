@@ -719,6 +719,50 @@ export default function Home() {
     { name: "VERDEEN CHEMICALS PRIVATE LIMITED", img: "/VERDEEN.jpeg" },
   ];
 
+  useEffect(() => {
+    const tag = document.createElement("script");
+    tag.src = "https://www.youtube.com/iframe_api";
+    document.body.appendChild(tag);
+
+    let ytPlayer;
+
+    window.onYouTubeIframeAPIReady = () => {
+      ytPlayer = new window.YT.Player("player", {
+        videoId: "RlHTIpc1hbI",
+        playerVars: {
+          autoplay: 0,
+          mute: 0,
+          controls: 1,
+          loop: 1,
+          playlist: "RlHTIpc1hbI",
+          modestbranding: 1,
+          rel: 0,
+        },
+        events: {
+          onReady: () => {
+            // Force 4K if available
+            setTimeout(() => {
+              ytPlayer.setPlaybackQuality("highres"); // 4K / 2160p
+            }, 500);
+
+            const btn = document.getElementById("video-play-btn");
+
+            btn.addEventListener("click", () => {
+              ytPlayer.playVideo();
+
+              // Force 4K again after play begins
+              setTimeout(() => {
+                ytPlayer.setPlaybackQuality("highres");
+              }, 800);
+
+              btn.style.display = "none";
+            });
+          },
+        },
+      });
+    };
+  }, []);
+
   return (
     <>
       <Header />
@@ -927,24 +971,13 @@ export default function Home() {
 
             <div className="teamShowcase-image">
               <div className="teamShowcase-imageWrapper">
-                {/* <video
-                  src="/video-team.mp4"
-                  muted
-                  autoPlay
-                  loop
-                  playsInline
-                  className="your-class"
-                ></video> */}
-                <iframe
-                  // width="560"
-                  // height="315"
-                  src="https://www.youtube.com/embed/RlHTIpc1hbI?autoplay=1&mute=1&loop=1&controls=0&playlist=RlHTIpc1hbI"
-                  title="YouTube video player"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  referrerPolicy="strict-origin-when-cross-origin"
-                  allowFullScreen
-                ></iframe>
+                <section className="video-section">
+                  <div id="player" className="youtube-player"></div>
+
+                  <button id="video-play-btn" className="video-play-btn">
+                    ▶ Play Video
+                  </button>
+                </section>
               </div>
             </div>
           </div>

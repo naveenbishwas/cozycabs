@@ -20,7 +20,7 @@ html {
 /* Initially hide mobile */
 .hero.mobile {
   height: 100vh;
-  background: url("/home-mobile.png") center/cover no-repeat;
+  background: url("/hm-1.jpeg") center/cover no-repeat;
   display: none;
   align-items: center;
   justify-content: center;
@@ -2645,8 +2645,8 @@ p {
   width: 130%;
   height: 130%;
   transform: translate(-50%, -50%);
-  pointer-events: none;
   filter: saturate(1.1) contrast(1.05);
+  pointer-events: auto; /* IMPORTANT FIX */
 }
 
 /* Bottom overlay (optional improvement) */
@@ -3005,7 +3005,7 @@ p {
   width: max-content; /* shrink-wrap content */
   gap: 60px;
   align-items: center;
-  animation: scroll 40s linear infinite;
+  animation: scroll 10s linear infinite;
 }
 
 .logo-track img {

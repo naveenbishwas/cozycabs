@@ -144,6 +144,23 @@
     padding: 20px 6%;
   }
 
+  .innova-features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-items: center; /* centers items inside each cell */
+  }
+
+  .innova-features > div:nth-child(3) {
+    grid-column: 1 / -1; /* span full row */
+    justify-self: center; /* center inside the row */
+  }
+
+  .innova-call-btn {
+    background-color: #e74c3c;
+    padding: 12px 7px;
+  }
+
   .innova-title {
     font-size: 1.8rem;
   }
