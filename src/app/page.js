@@ -830,7 +830,7 @@ export default function Home() {
   return (
     <>
       <Header />
-
+      {/* ///////Desktop//////////// */}
       <section className="hero desktop">
         <div className="overlay">
           <p className="welcome-text">Welcome To Best Cabs</p>
