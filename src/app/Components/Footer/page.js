@@ -115,34 +115,51 @@ export default function SiteFooter() {
             <h4>Services</h4>
             <ul className="linklist">
               <li>
-                <Link href="/Corporate-Car-Rental">Corporate Car Rental</Link>
+                <Link href="/our-services/corporate-car-rental">
+                  Corporate Car Rental
+                </Link>
               </li>
+
               <li>
-                <Link href="/Transport-Solution">
+                <Link href="/our-services/transport-solution">
                   Employee Transport Solutions
                 </Link>
               </li>
+
               <li>
-                <Link href="/Hotel-Travel-Desk">Hotel Travel Desk</Link>
+                <Link href="/our-services/hotel-travel-desk">
+                  Hotel Travel Desk
+                </Link>
               </li>
+
               <li>
-                <Link href="/Conference-Delegation-Travel">
+                <Link href="/our-services/conference-delegation-travel">
                   Conference & Delegation
                 </Link>
               </li>
+
               <li>
-                <Link href="/Event-Transportation">Event Transportation</Link>
+                <Link href="/our-services/event-transportation">
+                  Event Transportation
+                </Link>
               </li>
+
               <li>
-                <Link href="/Wedding-Car-Rental">Wedding Car Rental</Link>
+                <Link href="/our-services/wedding-car-rental">
+                  Wedding Car Rental
+                </Link>
               </li>
+
               <li>
-                <Link href="/Travel-Partners-Program">
+                <Link href="/our-services/travel-partners-program">
                   Travel Partners Program
                 </Link>
               </li>
+
               <li>
-                <Link href="/Chauffeur-Car-Rental">Chauffeured Car Rental</Link>
+                <Link href="/our-services/chauffeur-car-rental">
+                  Chauffeured Car Rental
+                </Link>
               </li>
             </ul>
           </nav>

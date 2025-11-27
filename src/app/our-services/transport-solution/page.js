@@ -1,18 +1,45 @@
 "use client";
 
 import React, { useRef, useEffect } from "react";
-import Header from "../Components/Header/page";
-import SiteFooter from "../Components/Footer/page";
-import "../Transport-Solution/TransportSolution.css";
+import Header from "@/app/Components/Header/page";
+import SiteFooter from "@/app/Components/Footer/page";
+import "./TransportSolution.css";
 import Image from "next/image";
 import { FaBuilding, FaUsers, FaBus, FaMapMarkerAlt } from "react-icons/fa";
 import Link from "next/link";
-import ServiceBookingForm from "../Components/ServicesBookingForm/page";
-import CityForm from "../Components/CityForm/page";
-import CityBestChoice from "../Components/CityBestChoice/page";
-import NumberCounter from "../Components/NumberCounter/page";
+import ServiceBookingForm from "@/app/Components/ServicesBookingForm/page";
+import CityForm from "@/app/Components/CityForm/page";
+import CityBestChoice from "@/app/Components/CityBestChoice/page";
+import NumberCounter from "@/app/Components/NumberCounter/page";
 
-const CorporateCarRental = () => {
+const stats = [
+  {
+    id: 1,
+    icon: <FaBuilding />,
+    value: "500+",
+    label: "Corporate Clients",
+  },
+  {
+    id: 2,
+    icon: <FaUsers />,
+    value: "50,000+",
+    label: "Employees Served",
+  },
+  {
+    id: 3,
+    icon: <FaBus />,
+    value: "1,200+",
+    label: "Fleet Size",
+  },
+  {
+    id: 4,
+    icon: <FaMapMarkerAlt />,
+    value: "25+",
+    label: "Cities Covered",
+  },
+];
+
+const TransportSolution = () => {
   const trackRef = useRef(null);
 
   const stats = [
@@ -90,25 +117,22 @@ const CorporateCarRental = () => {
     return rootRef;
   };
   const aboutCountersRef = useAboutCountersObserver();
-
   return (
     <div>
       <head>
         <title>
-          Corporate Car Rental | Reliable Employee Transport Across India –
-          CozyCabz
+          Corporate Employee Transport Services | Safe & Reliable Fleet in India
         </title>
         <meta
           name="description"
-          content="CozyCabz provides corporate car rental and employee transport solutions across 25+ cities in India. 500+ corporate clients, 1200+ fleet, and 50,000+ employees served with safety, punctuality, and comfort."
+          content="Trusted employee transport solutions for businesses. 500+ corporate clients, 1200+ fleet, serving 50,000+ employees across 25+ Indian cities with safe, punctual rides."
         />
       </head>
-
       <Header />
 
       <section className="employee-transport section-container" id="desktop">
         <Image
-          src="./service-red-desktop-4.jpeg"
+          src="../service-red-desktop-3.jpeg"
           width={1440}
           height={600}
           className="innova-backgound"
@@ -118,7 +142,7 @@ const CorporateCarRental = () => {
       </section>
       <section className="employee-transport section-container" id="mobile">
         <Image
-          src="./11.png"
+          src="../12.png"
           width={1440}
           height={600}
           className="innova-backgound"
@@ -128,6 +152,7 @@ const CorporateCarRental = () => {
       </section>
 
       <NumberCounter />
+
       <section className="smooth-ride section-container">
         <div className="ride-images">
           <div className="main-img">
@@ -139,35 +164,53 @@ const CorporateCarRental = () => {
               className="image"
             />
           </div>
+          {/* Uncomment if sub-images needed
+          <div className="sub-images">
+            <Image
+              src="/ride-van1.jpg"
+              alt="Fleet Van"
+              width={240}
+              height={180}
+              className="image"
+            />
+            <Image
+              src="/ride-van2.jpg"
+              alt="Driver with van"
+              width={240}
+              height={180}
+              className="image"
+            />
+          </div>
+          */}
         </div>
         <div className="ride-content">
           <h2>
-            A <span>Smooth</span> Ride for Your Workforce
+            A <span>smooth</span> ride for your workforce
           </h2>
           <p>
-            Looking for safe, comfortable, and dependable corporate car rental
-            services for your team? Youre in the right place. At Cozy Cabz, we
-            understand that reliable transport not only boosts employee morale
-            but also drives productivity by ensuring punctuality and reducing
-            stress.
+            Looking for safe, comfortable and reliable employee transportation
+            services for your team? You’ve come to the right place. We
+            understand that assurance of reliable transport boosts employee
+            morale and drives productivity by improving punctuality and
+            eliminating stress.
           </p>
           <p>
-            Our extensive fleet of well-maintained cars and professional
-            chauffeurs help businesses streamline travel, save time and energy
-            for employees, and eliminate resource wastage. Whether your
-            workforce is small or large, we guarantee a smooth and trustworthy
-            rental experience tailored to your requirements.
+            Our large fleet of cars and experienced chauffeurs help businesses
+            put in place systems that save time and energy for employees, and
+            prevent wastage of resources. Regardless of workforce size, we
+            ensure a seamless transition to efficient and reliable transport
+            solutions.
           </p>
           <p>
-            Have questions? Schedule a presentation with us, and our team will
-            walk you through the best rental plan designed for your company’s
-            mobility needs.
+            Get all your doubts answered with a presentation. Call us to arrange
+            a session at your convenience.
           </p>
         </div>
       </section>
 
       <CityBestChoice />
 
+      {/* <ServiceBookingForm /> */}
       <CityForm />
 
       <SiteFooter />
@@ -175,4 +218,4 @@ const CorporateCarRental = () => {
   );
 };
 
-export default CorporateCarRental;
+export default TransportSolution;

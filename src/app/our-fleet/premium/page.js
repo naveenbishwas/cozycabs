@@ -1,116 +1,95 @@
 "use client";
-import React, { useState, useEffect, useRef } from "react";
-import "./Luxury.css";
-import Header from "../Components/Header/page";
-import SiteFooter from "../Components/Footer/page";
-import CityForm from "../Components/CityForm/page";
+import React, { useState, useEffect } from "react";
+// import "./Premium.css";
+import "./premium.css";
+import Header from "@/app/Components/Header/page";
+import SiteFooter from "@/app/Components/Footer/page";
+import CityForm from "@/app/Components/CityForm/page";
 import Image from "next/image";
-import NumberCounter from "../Components/NumberCounter/page";
+import NumberCounter from "@/app/Components/NumberCounter/page";
 import Link from "next/link";
 
-// ===== Desktop Slides =====
+// Desktop slides
 const desktopSlides = [
   {
     id: 1,
-    image: "/luxurySlide.png",
-    heading: "Where Prestige Meets Power",
-    subtext: "Elegance built to move.",
+    image: "/premium.png",
+    heading: "Luxury at Every Turn",
+    subtext: "Experience the elegance of premium cars that define perfection.",
   },
   {
     id: 2,
-    image: "/banner2.png",
-    heading: "Ride Like Royalty",
-    subtext: "Comfort with class.",
+    image: "/premium-banner2.png",
+    heading: "Performance Meets Power",
+    subtext: "Engineered for thrill — crafted for excellence.",
   },
   {
     id: 3,
-    image: "/banner3.png",
-    heading: "Elegance in Motion",
-    subtext: "Every journey, refined.",
+    image: "/premium-banner3.png",
+    heading: "Drive the Dream",
+    subtext: "From streets to highways, own the road with style.",
   },
 ];
 
-// ===== Mobile Slides =====
+// Mobile slides
 const mobileSlides = [
   {
     id: 1,
-    image: "/Luxury-m1.png",
-    heading: "Where Prestige Meets Power",
-    subtext: "Elegance built to move.",
+    image: "/premium-m1.png",
+    heading: "Ride Smart, Ride Premium",
+    subtext: "Comfort and class in every journey.",
   },
   {
     id: 2,
-    image: "/Luxury-m2.png",
-    heading: "Ride Like Royalty",
-    subtext: "Comfort with class.",
+    image: "/premium-m2.png",
+    heading: "Book, Relax, Arrive",
+    subtext: "Luxury that moves with you.",
   },
   {
     id: 3,
-    image: "/Luxury-m3.png",
-    heading: "Elegance in Motion",
-    subtext: "Every journey, refined.",
+    image: "/premium-m3.png",
+    heading: "Your Comfort, Our Priority",
+    subtext: "Every trip feels first-class.",
   },
 ];
 
 const cars = [
   {
     id: 1,
-    title: "Audi A6",
-    subtitle: "Sophistication in motion",
-    image: "/AudiA6.png",
+    title: "Toyota Fortuner",
+    subtitle: "Crysta",
+    image: "/premium-toyota-fortuner.png",
+    badge: "Top Choice",
     description:
-      "Experience German luxury with seamless comfort, cutting-edge design, and quiet confidence. The Audi A6 turns every drive into a statement of class.",
-    seating: 5,
-    luggage: 3,
-    fuel: "Petrol",
+      "Perfect for family trips and group travel. Spacious, comfortable, and reliable.",
+    seating: 7,
+    luggage: 4,
+    fuel: "Diesel",
     price: "₹25/km",
   },
   {
     id: 2,
-    title: "Audi Q7",
-    subtitle: "Power meets prestige",
-    image: "/AudiQ6.png",
+    title: "Toyota Innova Crysta",
+    subtitle: "Honda City / Verna",
+    image: "/premium-toyota-innove-crysta.png",
+    badge: "Best for Business Trips",
     description:
-      "Command attention with the Audi Q7 — a full-size luxury SUV built for those who demand performance, space, and elegance wherever they go.",
-    seating: 7,
-    luggage: 4,
-    fuel: "Diesel",
+      "Ideal for business meetings and airport transfers. Elegant, stylish, and efficient.",
+    seating: 4,
+    luggage: 3,
+    fuel: "Petrol",
     price: "₹18/km",
   },
   {
     id: 3,
-    title: "BMW 5 Series",
-    subtitle: "Drive brilliance",
-    image: "/BMW5series.png",
+    title: "Toyota Innova Hycross",
+    subtitle: "Fortuner / Endeavour",
+    image: "/premium-toyota-innova-hycros.png",
     description:
-      "The BMW 5 Series blends executive refinement with thrilling performance. Ideal for high-profile meetings, city rides, and elegant arrivals.",
-    seating: 5,
-    luggage: 4,
-    fuel: "Petrol",
-    price: "₹35/km",
-  },
-  {
-    id: 4,
-    title: "Mercedes-Benz GLS",
-    subtitle: "The S-Class of SUVs",
-    image: "/MercedesBenzGLS.png",
-    description:
-      "Commanding presence meets first-class luxury. The GLS delivers effortless power, unmatched comfort, and a cabin so refined you won’t want to leave.",
+      "Make a statement with our premium SUVs. Perfect for special occasions and long drives.",
     seating: 7,
     luggage: 5,
     fuel: "Diesel",
-    price: "₹35/km",
-  },
-  {
-    id: 5,
-    title: "Mercedes-Benz E-Class",
-    subtitle: "Business luxury, perfected",
-    image: "/MercedesBenzEClass.png",
-    description:
-      "A timeless sedan that blends grace with technology. The E-Class offers plush interiors, smooth performance, and quiet confidence for every ride.",
-    seating: 5,
-    luggage: 4,
-    fuel: "Petrol",
     price: "₹35/km",
   },
 ];
@@ -118,71 +97,91 @@ const cars = [
 const features = [
   {
     id: 1,
-    image: "/luxury-seamless-experience.png",
-    title: "Seamless Experience",
-    desc: "From booking to drop-off, every detail is handled with care and precision.",
+    image: "/premium-luxorious_comfort.png",
+    title: "Luxurious Comfort",
+    desc: "Leather interiors, whisper-quiet rides, space to unwind.",
   },
   {
     id: 2,
-    image: "/luxury-safe&reliable.png",
-    title: "Safety & Reliability",
-    desc: "Every ride meets top safety standards and undergoes regular inspections.",
+    image: "/Premium-profssional_driver.png",
+    title: "Professional Drivers",
+    desc: "Courteous, trained, and always punctual.",
   },
   {
     id: 3,
-    image: "/luxury-Style-that-moves.png",
-    title: "Style That Moves",
-    desc: "Make an impression with vehicles built for elegance and performance.",
+    image: "/premium-ontime-guarntee.png",
+    title: "On-Time Guarantee",
+    desc: "Precision scheduling to keep your plans on track.",
   },
   {
     id: 4,
-    image: "/luxury-24-7.png",
-    title: "24/7 Concierge Support",
-    desc: "Our support team is available round-the-clock for any special requests.",
+    image: "/premium-verified-safety.png",
+    title: "Verified Safety",
+    desc: "Background-checked drivers and fully insured rides.",
   },
 ];
 
 const faqs = [
   {
-    q: "Can I personalize my ride experience?",
-    a: "Yes — choose your music, temperature, routes, and more for your comfort.",
+    q: "Can I choose a specific car model?",
+    a: "You can request your preferred model, and we’ll do our best to accommodate it based on availability.",
   },
   {
-    q: "What amenities are offered in luxury vehicles?",
-    a: "Premium leather interiors, Wi-Fi, bottled water, chargers, and quiet elegance.",
+    q: "Is Wi-Fi available in premium vehicles?",
+    a: "Yes, complimentary Wi-Fi is available in all premium cars.",
   },
   {
-    q: "Do you provide luxury cars for events?",
-    a: "Yes, our fleet is booked for weddings, corporate events, and red-carpet arrivals.",
+    q: "How early should I book a premium car?",
+    a: "We recommend booking at least 24 hours in advance for the best availability.",
   },
   {
-    q: "Can I rent for a full day or multiple days?",
-    a: "Absolutely, flexible hourly, daily, and multi-day packages are available.",
+    q: "What is the cancellation policy for premium rides?",
+    a: "You can cancel for free up to 12 hours before the pickup time.",
+  },
+  {
+    q: "Do you offer hourly or full-day bookings?",
+    a: "Yes, you can hire a premium vehicle by the hour or for the entire day.",
   },
 ];
 
-const Luxury = () => {
+const Premium = () => {
   const [current, setCurrent] = useState(0);
   const [currentMobile, setCurrentMobile] = useState(0);
   const [openIndex, setOpenIndex] = useState(null);
 
-  // Slider controls
-  const handlePrev = () =>
+  const handlePrev = () => {
     setCurrent((prev) => (prev === 0 ? desktopSlides.length - 1 : prev - 1));
-  const handleNext = () =>
+  };
+
+  const handleNext = () => {
     setCurrent((prev) => (prev === desktopSlides.length - 1 ? 0 : prev + 1));
+  };
+
+  const handlePrevMob = () => {
+    setCurrentMobile((prev) =>
+      prev === 0 ? mobileSlides.length - 1 : prev - 1
+    );
+  };
+
+  const handleNextMob = () => {
+    setCurrentMobile((prev) =>
+      prev === mobileSlides.length - 1 ? 0 : prev + 1
+    );
+  };
 
   useEffect(() => {
-    const interval = setInterval(() => handleNext(), 5000);
+    const interval = setInterval(handleNext, 5000);
     return () => clearInterval(interval);
   }, [current]);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentMobile((prev) =>
-        prev === mobileSlides.length - 1 ? 0 : prev + 1
-      );
-    }, 5000);
+    const interval = setInterval(
+      () =>
+        setCurrentMobile((prev) =>
+          prev === mobileSlides.length - 1 ? 0 : prev + 1
+        ),
+      5000
+    );
     return () => clearInterval(interval);
   }, [currentMobile]);
 
@@ -191,18 +190,25 @@ const Luxury = () => {
   return (
     <>
       <head>
-        <title>
-          Luxury Car Rental | Premium Chauffeur & Business Rides – CozyCabz
-        </title>
+        <title>Premium Car Rental | Luxury Cars with Chauffeurs</title>
         <meta
           name="description"
-          content="Experience elegance and comfort with CozyCabz luxury car rentals. Choose from Audi, BMW, and Mercedes vehicles for corporate travel, weddings, and VIP events across India."
+          content="Rent luxury cars like Fortuner, Innova Crysta, and Vellfire with CozyCabz. Enjoy comfort, safety & style with professional chauffeurs and on-time service."
         />
+        <meta
+          property="og:title"
+          content="Premium Car Rental | Luxury Cars with Chauffeurs"
+        />
+        <meta
+          property="og:description"
+          content="Book high-end cars for business, family trips, or special occasions. Premium comfort, reliable chauffeurs & nationwide service with CozyCabz."
+        />
+        <meta property="og:image" content="/premium-banner1.png" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.cozycabz.com/Premium" />
       </head>
 
       <Header />
-
-      {/* ===== SLIDESHOW ===== */}
       <section className="slideshow-section">
         {/* Desktop Slider */}
         <div className="slideshow-container desktop-slider">
@@ -256,6 +262,13 @@ const Luxury = () => {
             </div>
           ))}
 
+          <button className="arrow left" onClick={handlePrevMob}>
+            ‹
+          </button>
+          <button className="arrow right" onClick={handleNextMob}>
+            ›
+          </button>
+
           <div className="dots">
             {mobileSlides.map((_, index) => (
               <span
@@ -269,15 +282,16 @@ const Luxury = () => {
       </section>
 
       <NumberCounter />
+
       <CityForm />
 
-      {/* Vehicles */}
+      {/* Fleet Section */}
       <section className="fleet-section">
         <div className="fleet-header">
           <h2>
-            Luxury <span className="red-black">Vehicles</span>
+            Premium <span className="red-black">Vehicles</span>
           </h2>
-          <p>Find your premium ride for business, travel, or celebration.</p>
+          <p>Find the right ride for your journey.</p>
         </div>
 
         <div className="fleet-grid">
@@ -285,6 +299,7 @@ const Luxury = () => {
             <div key={car.id} className="fleet-card">
               <div className="image-wrapper-premium">
                 <img src={car.image} alt={car.title} />
+                {car.badge && <div className="badge">{car.badge}</div>}
               </div>
               <div className="fleet-content">
                 <h3>{car.title}</h3>
@@ -302,27 +317,24 @@ const Luxury = () => {
         </div>
       </section>
 
-      {/* Why Choose Luxury */}
-      <section className="why-premium-section" id="luxury">
+      {/* Why Premium */}
+      <section className="why-premium-section">
         <div className="why-header">
           <h2>
-            Why Ride <span className="red-black">Luxury?</span>
+            Why Ride <span className="red-black">Premium?</span>
           </h2>
-          <p>Because perfection should be part of every journey.</p>
+          <p>Because comfort, safety, and class should come standard.</p>
         </div>
-
         <div className="features-row">
           {features.map((feature) => (
             <div key={feature.id} className="feature-box">
-              <div className="icon-wrapper">
-                <Image
-                  src={feature.image}
-                  alt={feature.title}
-                  width={50}
-                  height={50}
-                  unoptimized
-                />
-              </div>
+              <Image
+                src={feature.image}
+                width={50}
+                height={50}
+                alt={feature.title}
+                unoptimized
+              />
               <h3>{feature.title}</h3>
               <p>{feature.desc}</p>
             </div>
@@ -330,7 +342,7 @@ const Luxury = () => {
         </div>
       </section>
 
-      {/* FAQ */}
+      {/* FAQ Section */}
       <section className="faq">
         <div className="faq-header">
           <h2>
@@ -369,4 +381,4 @@ const Luxury = () => {
   );
 };
 
-export default Luxury;
+export default Premium;

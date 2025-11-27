@@ -1,35 +1,18 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
-import Header from "../Components/Header/page";
-import SiteFooter from "../Components/Footer/page";
+import React, { useRef, useEffect } from "react";
+import Header from "@/app/Components/Header/page";
+import SiteFooter from "@/app/Components/Footer/page";
+import "./ChauffeurCarRental.css";
 import Image from "next/image";
+import { FaBuilding, FaUsers, FaBus, FaMapMarkerAlt } from "react-icons/fa";
 import Link from "next/link";
-import "./WeddingCarRental.css";
-import {
-  FaCar,
-  FaHeart,
-  FaUsers,
-  FaUserShield,
-  FaGlobe,
-  FaBalanceScale,
-} from "react-icons/fa";
-import ServiceBookingForm from "../Components/ServicesBookingForm/page";
-import CityForm from "../Components/CityForm/page";
-import CityBestChoice from "../Components/CityBestChoice/page";
-import NumberCounter from "../Components/NumberCounter/page";
+import ServiceBookingForm from "@/app/Components/ServicesBookingForm/page";
+import CityForm from "@/app/Components/CityForm/page";
+import CityBestChoice from "@/app/Components/CityBestChoice/page";
+import NumberCounter from "@/app/Components/NumberCounter/page";
 
-function Feature({ icon, title, text }) {
-  return (
-    <div className="why-card">
-      <div className="why-icon">{icon}</div>
-      <h3 className="why-card-title">{title}</h3>
-      <p className="why-card-text">{text}</p>
-    </div>
-  );
-}
-
-const WeddingCarRental = () => {
+const ChauffeurCarRental = () => {
   const aboutCountersRef = useRef(null);
 
   function runCounter(el, to) {
@@ -70,11 +53,12 @@ const WeddingCarRental = () => {
     <div>
       <head>
         <title>
-          Wedding Car Rental | Luxury Cars for Your Special Day – CozyCabz
+          Chauffeur Car Rental | Luxury Chauffeur-Driven Cars in India –
+          CozyCabz
         </title>
         <meta
           name="description"
-          content="Make your wedding unforgettable with CozyCabz. Choose from luxury, vintage, and premium cars with professional chauffeurs for a stylish and seamless ride on your special day."
+          content="Book professional chauffeur-driven car rentals with CozyCabz. Enjoy luxury sedans, SUVs, and premium cars with trained chauffeurs for meetings, airport transfers, and intercity rides."
         />
       </head>
 
@@ -83,7 +67,7 @@ const WeddingCarRental = () => {
       {/* Hero Section */}
       <section className="employee-transport section-container" id="desktop">
         <Image
-          src="/service-red-desktop-1.jpeg"
+          src="../service-red-desktop-5.jpeg"
           width={1440}
           height={600}
           className="innova-backgound"
@@ -94,7 +78,7 @@ const WeddingCarRental = () => {
 
       <section className="employee-transport section-container" id="mobile">
         <Image
-          src="./16.png"
+          src="../188.png"
           width={1440}
           height={600}
           className="innova-backgound "
@@ -106,44 +90,45 @@ const WeddingCarRental = () => {
       {/* Stats Section */}
       <NumberCounter />
 
-      {/* Ride Section */}
-
-      {/* section */}
+      {/* Premium Ride Section */}
       <section className="smooth-ride section-container">
         <div className="ride-images">
           <div className="main-img">
             <Image
               src="/service-car-img.png"
-              alt="Wedding car ride"
-              width={0}
-              height={0}
+              alt="Chauffeur ride"
+              width={500}
+              height={350}
               className="image"
-              unoptimized
             />
           </div>
         </div>
         <div className="ride-content">
           <h2>
-            A grand ride for your <span>special day</span>
+            A Premium Ride with a <span>Professional Touch</span>
           </h2>
           <p>
-            Looking for the perfect wedding car that adds elegance and style to
-            your celebrations? You’re in the right place. We understand that
-            weddings are once-in-a-lifetime occasions, and the right car can
-            make all the difference.
+            Looking for more than just a basic car rental? Our chauffeur-driven
+            car services are designed to provide a complete blend of luxury,
+            comfort, and reliability.
           </p>
           <p>
-            Our wedding car rental service ensures that every moment of travel
-            on your big day is seamless, stress-free, and memorable. With a wide
-            fleet of luxury cars, SUVs, and vintage models, driven by
-            professional chauffeurs, we provide personalized experiences for
-            couples and their families.
+            Whether it’s top executives attending meetings, families going on
+            vacations, or couples booking stylish rides for occasions, every
+            journey feels exclusive. With a personal chauffeur at the wheel, you
+            no longer need to worry about traffic, directions, or parking —
+            everything is handled with professionalism.
           </p>
           <p>
-            From timely pickups and smooth rides to beautifully decorated cars,
-            our services are designed to match the charm of your wedding. Book
-            with us and let your journey to forever begin with style, comfort,
-            and sophistication.
+            Our fleet includes luxury sedans, spacious SUVs, and premium cars,
+            each maintained for performance and comfort. Every ride is managed
+            by trained, uniformed, and background-verified chauffeurs who ensure
+            safety, punctuality, and courtesy.
+          </p>
+          <p>
+            From airport pickups and hotel transfers to intercity trips and city
+            tours, we take care of logistics while you focus on what matters
+            most.
           </p>
         </div>
       </section>
@@ -152,11 +137,11 @@ const WeddingCarRental = () => {
       <CityBestChoice />
 
       {/* Quote Section with Form */}
-
       <CityForm />
+
       <SiteFooter />
     </div>
   );
 };
 
-export default WeddingCarRental;
+export default ChauffeurCarRental;

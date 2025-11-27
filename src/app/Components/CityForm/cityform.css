@@ -105,6 +105,10 @@ textarea {
   height: auto !important;
 }
 
+input[type="date"] {
+  width: 100%;
+}
+
 .terms a {
   color: #ff3b3b;
   text-decoration: none;

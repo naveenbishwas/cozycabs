@@ -1,23 +1,16 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
-import Header from "../Components/Header/page";
-import SiteFooter from "../Components/Footer/page";
-import Image from "next/image";
-import Link from "next/link";
+import React, { useRef, useEffect } from "react";
+import Header from "@/app/Components/Header/page";
+import SiteFooter from "@/app/Components/Footer/page";
 import "./ConferenceDelegationTravel.css";
-import {
-  FaBuilding,
-  FaUsers,
-  FaGlobe,
-  FaBus,
-  FaUserTie,
-  FaClipboardList,
-} from "react-icons/fa";
-import ServiceBookingForm from "../Components/ServicesBookingForm/page";
-import CityForm from "../Components/CityForm/page";
-import CityBestChoice from "../Components/CityBestChoice/page";
-import NumberCounter from "../Components/NumberCounter/page";
+import Image from "next/image";
+import { FaBuilding, FaUsers, FaBus, FaMapMarkerAlt } from "react-icons/fa";
+import Link from "next/link";
+import ServiceBookingForm from "@/app/Components/ServicesBookingForm/page";
+import CityForm from "@/app/Components/CityForm/page";
+import CityBestChoice from "@/app/Components/CityBestChoice/page";
+import NumberCounter from "@/app/Components/NumberCounter/page";
 
 const ConferenceDelegationTravel = () => {
   const aboutCountersRef = useRef(null);
@@ -103,7 +96,7 @@ const ConferenceDelegationTravel = () => {
       </section> */}
       <section className="employee-transport section-container" id="desktop">
         <Image
-          src="./service-red-desktop-6.jpeg"
+          src="../service-red-desktop-6.jpeg"
           width={1440}
           height={600}
           className="innova-backgound"
@@ -113,7 +106,7 @@ const ConferenceDelegationTravel = () => {
       </section>
       <section className="employee-transport section-container" id="mobile">
         <Image
-          src="./14.png"
+          src="../14.png"
           width={1440}
           height={600}
           className="innova-backgound"

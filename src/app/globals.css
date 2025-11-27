@@ -437,6 +437,18 @@ a {
   .btn-submit {
     width: 100%;
   }
+
+  .stepsGrid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .stepsGrid {
+    display: flex !important;
+  }
+
+  .step {
+    flex-direction: row !important;
+  }
 }
 @media (max-width: 640px) {
   .booking-form {
@@ -2212,7 +2224,7 @@ section.innova-why {
   }
 
   .arrow {
-    display: none !important;
+    top: 61% !important;
   }
 }
 

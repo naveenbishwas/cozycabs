@@ -1,24 +1,18 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
-import Header from "../Components/Header/page";
-import SiteFooter from "../Components/Footer/page";
+import React, { useRef, useEffect } from "react";
+import Header from "@/app/Components/Header/page";
+import SiteFooter from "@/app/Components/Footer/page";
+import "./HotelTravelDesk.css";
 import Image from "next/image";
+import { FaBuilding, FaUsers, FaBus, FaMapMarkerAlt } from "react-icons/fa";
 import Link from "next/link";
-import "./ChauffeurCarRental.css";
-import {
-  FaCar,
-  FaUserTie,
-  FaCrown,
-  FaUserShield,
-  FaGlobe,
-  FaBalanceScale,
-} from "react-icons/fa";
-import CityForm from "../Components/CityForm/page";
-import CityBestChoice from "../Components/CityBestChoice/page";
-import NumberCounter from "../Components/NumberCounter/page";
+import ServiceBookingForm from "@/app/Components/ServicesBookingForm/page";
+import CityForm from "@/app/Components/CityForm/page";
+import CityBestChoice from "@/app/Components/CityBestChoice/page";
+import NumberCounter from "@/app/Components/NumberCounter/page";
 
-const ChauffeurCarRental = () => {
+const HotelTravelDesk = () => {
   const aboutCountersRef = useRef(null);
 
   function runCounter(el, to) {
@@ -59,21 +53,19 @@ const ChauffeurCarRental = () => {
     <div>
       <head>
         <title>
-          Chauffeur Car Rental | Luxury Chauffeur-Driven Cars in India –
-          CozyCabz
+          Hotel Travel Desk | Guest Transportation & Chauffeur Services
         </title>
         <meta
           name="description"
-          content="Book professional chauffeur-driven car rentals with CozyCabz. Enjoy luxury sedans, SUVs, and premium cars with trained chauffeurs for meetings, airport transfers, and intercity rides."
+          content="Offer your hotel guests premium travel experiences with our reliable chauffeur-driven cars. Safe airport transfers, city tours & 24/7 guest support."
         />
       </head>
 
       <Header />
 
-      {/* Hero Section */}
       <section className="employee-transport section-container" id="desktop">
         <Image
-          src="./service-red-desktop-4.jpeg"
+          src="../service-red-desktop-8.jpeg"
           width={1440}
           height={600}
           className="innova-backgound"
@@ -84,10 +76,10 @@ const ChauffeurCarRental = () => {
 
       <section className="employee-transport section-container" id="mobile">
         <Image
-          src="./188.png"
+          src="../13.png"
           width={1440}
           height={600}
-          className="innova-backgound "
+          className="innova-backgound"
           alt="Background-img"
           unoptimized
         />
@@ -96,13 +88,13 @@ const ChauffeurCarRental = () => {
       {/* Stats Section */}
       <NumberCounter />
 
-      {/* Premium Ride Section */}
+      {/* Ride Section */}
       <section className="smooth-ride section-container">
         <div className="ride-images">
           <div className="main-img">
             <Image
               src="/service-car-img.png"
-              alt="Chauffeur ride"
+              alt="Hotel guest travel"
               width={500}
               height={350}
               className="image"
@@ -111,30 +103,25 @@ const ChauffeurCarRental = () => {
         </div>
         <div className="ride-content">
           <h2>
-            A Premium Ride with a <span>Professional Touch</span>
+            A hassle-free travel <span>experience</span> for your guests
           </h2>
           <p>
-            Looking for more than just a basic car rental? Our chauffeur-driven
-            car services are designed to provide a complete blend of luxury,
-            comfort, and reliability.
+            Looking for reliable and well-organized travel services for your
+            hotel guests? You’re in the right place. We understand that a smooth
+            travel experience enhances guest satisfaction, improves loyalty, and
+            makes their stay more memorable.
           </p>
           <p>
-            Whether it’s top executives attending meetings, families going on
-            vacations, or couples booking stylish rides for occasions, every
-            journey feels exclusive. With a personal chauffeur at the wheel, you
-            no longer need to worry about traffic, directions, or parking —
-            everything is handled with professionalism.
+            Our wide fleet of cars and professional chauffeurs ensure timely
+            pickups, safe rides, and hassle-free transportation. Whether it’s an
+            airport transfer, local tour, or a business trip, our travel desk
+            solutions save time, reduce stress, and provide complete peace of
+            mind.
           </p>
           <p>
-            Our fleet includes luxury sedans, spacious SUVs, and premium cars,
-            each maintained for performance and comfort. Every ride is managed
-            by trained, uniformed, and background-verified chauffeurs who ensure
-            safety, punctuality, and courtesy.
-          </p>
-          <p>
-            From airport pickups and hotel transfers to intercity trips and city
-            tours, we take care of logistics while you focus on what matters
-            most.
+            With customized travel plans, multilingual drivers, and 24/7
+            support, we make sure your guests experience the highest standard of
+            hospitality both inside and outside your hotel.
           </p>
         </div>
       </section>
@@ -150,4 +137,4 @@ const ChauffeurCarRental = () => {
   );
 };
 
-export default ChauffeurCarRental;
+export default HotelTravelDesk;

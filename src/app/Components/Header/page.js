@@ -41,37 +41,49 @@ export default function Header() {
               <span className="dropbtn">Our Services ▾</span>
               <ul className="dropdown-content">
                 <li>
-                  <Link href="/Corporate-Car-Rental">Corporate Car Rental</Link>
+                  <Link href="/our-services/corporate-car-rental">
+                    Corporate Car Rental
+                  </Link>
                 </li>
+
                 <li>
-                  <Link href="/Transport-Solution">
+                  <Link href="/our-services/transport-solution">
                     Employee Transport Solutions
                   </Link>
                 </li>
-                {/* <li>
-                  <Link href="/GcarRental">Global Car Rental</Link>
-                </li> */}
+
                 <li>
-                  <Link href="/Hotel-Travel-Desk">Hotel Travel Desk</Link>
+                  <Link href="/our-services/hotel-travel-desk">
+                    Hotel Travel Desk
+                  </Link>
                 </li>
+
                 <li>
-                  <Link href="/Conference-Delegation-Travel">
+                  <Link href="/our-services/conference-delegation-travel">
                     Conference & Delegation
                   </Link>
                 </li>
+
                 <li>
-                  <Link href="/Event-Transportation">Event Transportation</Link>
+                  <Link href="/our-services/event-transportation">
+                    Event Transportation
+                  </Link>
                 </li>
+
                 <li>
-                  <Link href="/Wedding-Car-Rental">Wedding Car Rental</Link>
+                  <Link href="/our-services/wedding-car-rental">
+                    Wedding Car Rental
+                  </Link>
                 </li>
+
                 <li>
-                  <Link href="/Travel-Partners-Program">
+                  <Link href="/our-services/travel-partners-program">
                     Travel Partners Program
                   </Link>
                 </li>
+
                 <li>
-                  <Link href="/Chauffeur-CarRental">
+                  <Link href="/our-services/chauffeur-car-rental">
                     Chauffeured Car Rental
                   </Link>
                 </li>
@@ -82,16 +94,16 @@ export default function Header() {
               <span className="dropbtn">Our Fleet ▾</span>
               <ul className="dropdown-content">
                 <li>
-                  <Link href="/Premium">Premium</Link>
+                  <Link href="/our-fleet/premium">Premium</Link>
                 </li>
                 <li>
-                  <Link href="/Luxury">Luxury</Link>
+                  <Link href="/our-fleet/luxury">Luxury</Link>
                 </li>
                 <li>
-                  <Link href="/Economy">Economy</Link>
+                  <Link href="/our-fleet/economy">Economy</Link>
                 </li>
                 <li>
-                  <Link href="/Buses-And-Coach">Buses & Coach</Link>
+                  <Link href="/our-fleet/buses-and-coach">Buses & Coach</Link>
                 </li>
               </ul>
             </li>
@@ -168,71 +180,49 @@ export default function Header() {
             {servicesOpen && (
               <ul className="submenu" id="submenu">
                 <li>
-                  <Link
-                    href="/Corporate-Car-Rental"
-                    onClick={() => setIsOpen(false)}
-                  >
+                  <Link href="/our-services/corporate-car-rental">
                     Corporate Car Rental
                   </Link>
                 </li>
+
                 <li>
-                  <Link
-                    href="/Transport-Solution"
-                    onClick={() => setIsOpen(false)}
-                  >
+                  <Link href="/our-services/transport-solution">
                     Employee Transport Solutions
                   </Link>
                 </li>
-                {/* <li>
-                  <Link href="/GcarRental" onClick={() => setIsOpen(false)}>
-                    Global Car Rental
-                  </Link>
-                </li> */}
+
                 <li>
-                  <Link
-                    href="/Hotel-Travel-Desk"
-                    onClick={() => setIsOpen(false)}
-                  >
+                  <Link href="/our-services/hotel-travel-desk">
                     Hotel Travel Desk
                   </Link>
                 </li>
+
                 <li>
-                  <Link
-                    href="/Conference-Delegation-Travel"
-                    onClick={() => setIsOpen(false)}
-                  >
+                  <Link href="/our-services/conference-delegation-travel">
                     Conference & Delegation
                   </Link>
                 </li>
+
                 <li>
-                  <Link
-                    href="/Event-Transportation"
-                    onClick={() => setIsOpen(false)}
-                  >
+                  <Link href="/our-services/event-transportation">
                     Event Transportation
                   </Link>
                 </li>
+
                 <li>
-                  <Link
-                    href="/Wedding-Car-Rental"
-                    onClick={() => setIsOpen(false)}
-                  >
+                  <Link href="/our-services/wedding-car-rental">
                     Wedding Car Rental
                   </Link>
                 </li>
+
                 <li>
-                  <Link
-                    href="/Travel-Partners-Program"
-                    onClick={() => setIsOpen(false)}
-                  >
+                  <Link href="/our-services/travel-partners-program">
                     Travel Partners Program
                   </Link>
                 </li>
+
                 <li>
-                  <Link
-                    href="/Chauffeur-CarRental"
-                    onClick={() => setIsOpen(false)}
-                  >
+                  <Link href="/our-services/chauffeur-car-rental">
                     Chauffeured Car Rental
                   </Link>
                 </li>
@@ -251,27 +241,16 @@ export default function Header() {
             {fleetOpen && (
               <ul className="submenu" id="submenu">
                 <li>
-                  <Link href="/Premium" onClick={() => setIsOpen(false)}>
-                    Premium
-                  </Link>
+                  <Link href="/our-fleet/premium">Premium</Link>
                 </li>
                 <li>
-                  <Link href="/Luxury" onClick={() => setIsOpen(false)}>
-                    Luxury
-                  </Link>
+                  <Link href="/our-fleet/luxury">Luxury</Link>
                 </li>
                 <li>
-                  <Link href="/Economy" onClick={() => setIsOpen(false)}>
-                    Economy
-                  </Link>
+                  <Link href="/our-fleet/economy">Economy</Link>
                 </li>
                 <li>
-                  <Link
-                    href="/Buses-And-Coach"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    Buses & Coach
-                  </Link>
+                  <Link href="/our-fleet/buses-and-coach">Buses & Coach</Link>
                 </li>
               </ul>
             )}

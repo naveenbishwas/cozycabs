@@ -86,7 +86,8 @@ export default function InnovaHeroSection() {
 
   // Extract last part of URL (e.g. /InnovaMumbai → Mumbai)
   const city =
-    pathname?.split("Innova")[1]?.replace(/[-_]/g, " ")?.trim() || "City";
+    pathname?.split("innova-car-rental-in")[1]?.replace(/[-_]/g, " ")?.trim() ||
+    "City";
 
   const formattedCity = city.charAt(0).toUpperCase() + city.slice(1);
 

@@ -1,11 +1,11 @@
 "use client";
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import "./Bus-Coach.css";
-import Header from "../Components/Header/page";
-import SiteFooter from "../Components/Footer/page";
-import CityForm from "../Components/CityForm/page";
+import Header from "@/app/Components/Header/page";
+import SiteFooter from "@/app/Components/Footer/page";
+import CityForm from "@/app/Components/CityForm/page";
 import Image from "next/image";
-import NumberCounter from "../Components/NumberCounter/page";
+import NumberCounter from "@/app/Components/NumberCounter/page";
 import Link from "next/link";
 
 // Desktop slides
@@ -128,6 +128,18 @@ const Premium = () => {
     setCurrent((prev) => (prev === desktopSlides.length - 1 ? 0 : prev + 1));
   };
 
+  const handlePrevMob = () => {
+    setCurrentMobile((prev) =>
+      prev === 0 ? mobileSlides.length - 1 : prev - 1
+    );
+  };
+
+  const handleNextMob = () => {
+    setCurrentMobile((prev) =>
+      prev === mobileSlides.length - 1 ? 0 : prev + 1
+    );
+  };
+
   // Auto-slide for desktop
   useEffect(() => {
     const interval = setInterval(() => {
@@ -221,6 +233,13 @@ const Premium = () => {
               </div>
             </div>
           ))}
+
+          <button className="arrow left" onClick={handlePrevMob}>
+            ‹
+          </button>
+          <button className="arrow right" onClick={handleNextMob}>
+            ›
+          </button>
 
           <div className="dots">
             {mobileSlides.map((_, index) => (
