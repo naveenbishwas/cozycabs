@@ -117,6 +117,8 @@ textarea {
     -webkit-appearance: none !important;
     appearance: none !important;
     box-sizing: border-box !important;
+    color: #333;
+    text-align: left;
   }
 
   /* Fix Safari cropping & centering issue */
