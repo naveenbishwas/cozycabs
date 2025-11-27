@@ -105,8 +105,32 @@ textarea {
   height: auto !important;
 }
 
-input[type="date"] {
-  width: 100%;
+/* iPhone Safari fixes for form fields */
+@supports (-webkit-touch-callout: none) {
+  /* Fix width issue */
+  .bookcar-section .bookcar-form input,
+  .bookcar-section .bookcar-form select,
+  .bookcar-section .bookcar-form textarea {
+    width: 100% !important;
+    -webkit-appearance: none !important;
+    appearance: none !important;
+    box-sizing: border-box !important;
+    display: block !important;
+  }
+
+  /* Fix placeholder not showing */
+  .bookcar-section .bookcar-form input::placeholder,
+  .bookcar-section .bookcar-form textarea::placeholder {
+    opacity: 1 !important;
+    color: #888 !important;
+  }
+
+  /* Fix Safari bug where select text does not appear */
+  .bookcar-section .bookcar-form select {
+    background-color: #fff !important;
+    color: #000 !important;
+    padding-left: 12px !important;
+  }
 }
 
 .terms a {
