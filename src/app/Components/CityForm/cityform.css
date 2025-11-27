@@ -106,30 +106,41 @@ textarea {
 }
 
 /* iPhone Safari fixes for form fields */
+/* iPhone Safari Fixes for Select + Input Fields */
 @supports (-webkit-touch-callout: none) {
-  /* Fix width issue */
-  .bookcar-section .bookcar-form input,
-  .bookcar-section .bookcar-form select,
-  .bookcar-section .bookcar-form textarea {
+  /* Force width correct */
+  .bookcar-form select,
+  .bookcar-form input,
+  .bookcar-form textarea {
     width: 100% !important;
+    display: block !important;
     -webkit-appearance: none !important;
     appearance: none !important;
     box-sizing: border-box !important;
+  }
+
+  /* Fix Safari cropping & centering issue */
+  .bookcar-form select {
+    background-color: #fff !important;
+    padding: 10px 12px !important;
+    height: auto !important;
+    min-height: 50px !important;
+    line-height: normal !important;
+    color: #000 !important;
+  }
+
+  /* Fix missing placeholder for first <select> */
+  .bookcar-form select option[disabled][selected] {
+    color: #999 !important;
+    opacity: 1 !important;
     display: block !important;
   }
 
-  /* Fix placeholder not showing */
-  .bookcar-section .bookcar-form input::placeholder,
-  .bookcar-section .bookcar-form textarea::placeholder {
+  /* Fix placeholder for input fields */
+  .bookcar-form input::placeholder,
+  .bookcar-form textarea::placeholder {
     opacity: 1 !important;
-    color: #888 !important;
-  }
-
-  /* Fix Safari bug where select text does not appear */
-  .bookcar-section .bookcar-form select {
-    background-color: #fff !important;
-    color: #000 !important;
-    padding-left: 12px !important;
+    color: #999 !important;
   }
 }
 
