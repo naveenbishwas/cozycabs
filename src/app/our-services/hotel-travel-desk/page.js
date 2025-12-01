@@ -65,7 +65,7 @@ const HotelTravelDesk = () => {
 
       <section className="employee-transport section-container" id="desktop">
         <Image
-          src="../service-red-desktop-8.jpeg"
+          src="../service-red-desktop-82.jpeg"
           width={1440}
           height={600}
           className="innova-backgound"

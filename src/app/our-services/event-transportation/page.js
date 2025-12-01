@@ -109,7 +109,7 @@ const EventTransportation = () => {
       </section> */}
       <section className="employee-transport section-container" id="desktop">
         <Image
-          src="../service-red-desktop-7.jpeg"
+          src="../service-red-desktop-72.jpeg"
           width={1440}
           height={600}
           className="innova-backgound"

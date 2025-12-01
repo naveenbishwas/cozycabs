@@ -20,7 +20,7 @@ html {
 /* Initially hide mobile */
 .hero.mobile {
   height: 100vh;
-  background: url("/hm-1.jpeg") center/cover no-repeat;
+  background: url("/new-b.jpeg") center/cover no-repeat;
   display: none;
   align-items: center;
   justify-content: center;

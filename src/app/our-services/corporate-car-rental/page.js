@@ -3,7 +3,7 @@
 import React, { useRef, useEffect } from "react";
 import Header from "@/app/Components/Header/page";
 import SiteFooter from "@/app/Components/Footer/page";
-// import "./TransportSolution.css";
+import "./CorporateCarRental.css";
 import Image from "next/image";
 import { FaBuilding, FaUsers, FaBus, FaMapMarkerAlt } from "react-icons/fa";
 import Link from "next/link";
@@ -108,7 +108,7 @@ const CorporateCarRental = () => {
 
       <section className="employee-transport section-container" id="desktop">
         <Image
-          src="../service-red-desktop-4.jpeg"
+          src="../service-red-desktop-42.jpeg"
           width={1440}
           height={600}
           className="innova-backgound"

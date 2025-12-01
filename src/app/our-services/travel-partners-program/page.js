@@ -78,7 +78,7 @@ const TravelPartnersProgram = () => {
       {/* Hero Section */}
       <section className="employee-transport section-container" id="desktop">
         <Image
-          src="../service-red-desktop-2.jpeg"
+          src="../service-red-desktop-22.jpeg"
           width={1440}
           height={600}
           className="innova-backgound"

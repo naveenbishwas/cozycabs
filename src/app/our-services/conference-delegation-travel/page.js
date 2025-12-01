@@ -96,7 +96,7 @@ const ConferenceDelegationTravel = () => {
       </section> */}
       <section className="employee-transport section-container" id="desktop">
         <Image
-          src="../service-red-desktop-6.jpeg"
+          src="../service-red-desktop-62.jpeg"
           width={1440}
           height={600}
           className="innova-backgound"
