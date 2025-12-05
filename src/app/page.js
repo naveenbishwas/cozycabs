@@ -1162,7 +1162,7 @@ export default function Home() {
         {/* Fleet Cards */}
         <div className="fleet-grid">
           {/* Premium */}
-          <Link href="/Premium">
+          <Link href="our-fleet/premium">
             <div className="fleet-card">
               <div className="fleet-image">
                 <Image
@@ -1200,7 +1200,7 @@ export default function Home() {
           </Link>
 
           {/* Luxury */}
-          <Link href="/Luxury">
+          <Link href="our-fleet/luxury">
             <div className="fleet-card">
               <div className="fleet-image">
                 <Image
@@ -1237,7 +1237,7 @@ export default function Home() {
           </Link>
 
           {/* Economy */}
-          <Link href="/Economy">
+          <Link href="our-fleet/economy">
             <div className="fleet-card">
               <div className="fleet-image">
                 <Image
@@ -1276,7 +1276,7 @@ export default function Home() {
 
         <div className="fleet-grid" id="flex">
           {/* Buses & Coaches */}
-          <Link href="/Buses-And-Coach">
+          <Link href="our-fleet/buses-and-coach">
             <div className="fleet-card">
               <div className="fleet-image">
                 <Image
