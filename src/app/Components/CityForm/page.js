@@ -77,6 +77,9 @@ const CityForm = () => {
     setFormData((s) => ({ ...s, serviceType: service, vehicleType: "" }));
   };
 
+  // console.log("Sending client email to:", process.env.MAIL_TO);
+  // console.log("Sending user email to:", body.email);
+
   const handleSubmitEmailJS = async (e) => {
     e.preventDefault();
 
@@ -137,6 +140,105 @@ const CityForm = () => {
       </svg>
     );
   }
+
+  const cities = [
+    "Agra",
+    "Ahmedabad",
+    "Aizawl",
+    "Ajmer",
+    "Aligarh",
+    "Allahabad",
+    "Amritsar",
+    "Aurangabad",
+    "Bangalore",
+    "Bareilly",
+    "Belgaum",
+    "Bhopal",
+    "Bhubaneswar",
+    "Bilaspur",
+    "Chandigarh",
+    "Chennai",
+    "Coimbatore",
+    "Cuttack",
+    "Dehradun",
+    "Delhi",
+    "Dhanbad",
+    "Dibrugarh",
+    "Dispur",
+    "Durgapur",
+    "Ernakulam",
+    "Faridabad",
+    "Firozabad",
+    "Gandhinagar",
+    "Gaya",
+    "Ghaziabad",
+    "Gorakhpur",
+    "Gulbarga",
+    "Guntur",
+    "Gurgaon",
+    "Guwahati",
+    "Gwalior",
+    "Hisar",
+    "Hubli",
+    "Hyderabad",
+    "Imphal",
+    "Indore",
+    "Jabalpur",
+    "Jaipur",
+    "Jalandhar",
+    "Jammu",
+    "Jamnagar",
+    "Jamshedpur",
+    "Jhansi",
+    "Jodhpur",
+    "Kannur",
+    "Kanpur",
+    "Kochi",
+    "Kolhapur",
+    "Kolkata",
+    "Kollam",
+    "Kota",
+    "Kozhikode",
+    "Lucknow",
+    "Ludhiana",
+    "Madurai",
+    "Mangalore",
+    "Meerut",
+    "Moradabad",
+    "Mumbai",
+    "Mysore",
+    "Nanded",
+    "Nashik",
+    "Navi Mumbai",
+    "Noida",
+    "Patna",
+    "Pondicherry",
+    "Pune",
+    "Raipur",
+    "Rajkot",
+    "Ranchi",
+    "Rourkela",
+    "Salem",
+    "Siliguri",
+    "Solapur",
+    "Srinagar",
+    "Surat",
+    "Thane",
+    "Thiruvananthapuram",
+    "Thrissur",
+    "Tiruchirapalli",
+    "Tirunelveli",
+    "Tirupati",
+    "Udaipur",
+    "Ujjain",
+    "Vadodara",
+    "Varanasi",
+    "Vasai-Virar",
+    "Vellore",
+    "Vijayawada",
+    "Visakhapatnam",
+    "Warangal",
+  ];
 
   return (
     <>
@@ -277,29 +379,36 @@ const CityForm = () => {
               </div>
 
               {/* Vehicle Type */}
-              <select
-                name="vehicle_type"
-                value={formData.vehicleType}
-                onChange={(e) =>
-                  setFormData((s) => ({ ...s, vehicleType: e.target.value }))
-                }
-                disabled={!vehicleOptions.length}
-                required
-              >
-                <option value="">
-                  {vehicleOptions.length
-                    ? "Select Vehicle Type"
-                    : "Select Service First"}
-                </option>
-                {vehicleOptions.map((vehicle, index) => (
-                  <option key={index} value={vehicle}>
-                    {vehicle}
+              <div className="custom-dropdown">
+                <select
+                  name="vehicle_type"
+                  value={formData.vehicleType}
+                  onChange={(e) =>
+                    setFormData((s) => ({ ...s, vehicleType: e.target.value }))
+                  }
+                  disabled={!vehicleOptions.length}
+                  required
+                >
+                  <option value="">
+                    {vehicleOptions.length
+                      ? "Select Vehicle Type"
+                      : "Select Service First"}
                   </option>
-                ))}
-              </select>
+
+                  {vehicleOptions.map((vehicle, index) => (
+                    <option key={index} value={vehicle}>
+                      {vehicle}
+                    </option>
+                  ))}
+                </select>
+
+                <span className="dropdown-icon">
+                  <DropdownIcon />
+                </span>
+              </div>
 
               {/* City Input */}
-              <input
+              {/* <input
                 type="text"
                 name="city"
                 placeholder="Enter City Name"
@@ -308,7 +417,28 @@ const CityForm = () => {
                   setFormData((s) => ({ ...s, city: e.target.value }))
                 }
                 required
-              />
+              /> */}
+              <div className="custom-dropdown">
+                <select
+                  name="city"
+                  value={formData.city}
+                  onChange={(e) =>
+                    setFormData((s) => ({ ...s, city: e.target.value }))
+                  }
+                  required
+                >
+                  <option value="">Select City</option>
+                  {cities.map((city) => (
+                    <option key={city} value={city}>
+                      {city}
+                    </option>
+                  ))}
+                </select>
+
+                <span className="dropdown-icon">
+                  <DropdownIcon />
+                </span>
+              </div>
             </div>
 
             {/* Row 4 */}

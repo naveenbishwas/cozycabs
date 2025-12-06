@@ -105,6 +105,29 @@ textarea {
   height: auto !important;
 }
 
+.custom-dropdown {
+  position: relative;
+  width: 100%;
+}
+
+.custom-dropdown select {
+  width: 100%;
+  padding-right: 40px; /* space for icon */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.custom-dropdown .dropdown-icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none; /* icon will NOT block selecting */
+  display: flex;
+  align-items: center;
+}
+
 .terms a {
   color: #ff3b3b;
   text-decoration: none;

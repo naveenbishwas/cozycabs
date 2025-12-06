@@ -57,9 +57,9 @@ export async function POST(req) {
 
     // 1️⃣ Send email to CLIENT
     await transporter.sendMail({
-      from: `"Cozy Cabs" <${process.env.MAIL_USER}>`,
+      from: `"CozyCabz" <${process.env.MAIL_USER}>`,
       to: process.env.MAIL_TO,
-      subject: "New Cozy Cab Enquiry",
+      subject: "New CozyCabz Enquiry",
       html: `
         <h2>New Enquiry</h2>
         <p><b>Name:</b> ${body.name}</p>
@@ -76,12 +76,12 @@ export async function POST(req) {
 
     // 2️⃣ Send confirmation email to USER
     await transporter.sendMail({
-      from: `"Cozy Cabs" <${process.env.MAIL_USER}>`,
+      from: `"CozyCabz" <${process.env.MAIL_USER}>`,
       to: body.email,
-      subject: "Thank You! Your Cozy Cabs Enquiry Was Received",
+      subject: "Thank You! Your CozyCazs Enquiry Was Received",
       html: `
         <h2>Hello ${body.name},</h2>
-        <p>Thank you for choosing Cozy Cabs!</p>
+        <p>Thank you for choosing CozyCabz!</p>
         <p>We have received your enquiry and will contact you shortly.</p>
 
         <h3>Your Submitted Details</h3>
@@ -97,7 +97,7 @@ export async function POST(req) {
 
         <br/>
         <p>We appreciate your interest. Our team will reach out as soon as possible.</p>
-        <p><b>– Team Cozy Cabs</b></p>
+        <p><b>– Team CozyCabz</b></p>
       `,
     });
 
