@@ -97,7 +97,7 @@ export async function POST(req) {
 
         <br/>
         <p>We appreciate your interest. Our team will reach out as soon as possible.</p>
-        <p><b>– Team CozyCabz</b></p>
+        <p><b>-Team CozyCabz</b></p>
       `,
     });
 
