@@ -18,7 +18,7 @@ const InRajkot = () => {
   const items = [
     {
       title: "Professional & Verified Drivers",
-      desc: "Our trained drivers know every corner of Rajkot, from Kalavad Road to Jubilee Garden. For safe and punctual Rajkot car rental services, Cozy Cabz is a trusted name.",
+      desc: "Our trained drivers know every corner of Rajkot, from Kalavad Road to Jubilee Garden. For safe and punctual Rajkot car rental services, CozyCabz is a trusted name.",
       icon: (
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <path d="M12 2l7 3v6c0 5-3.5 9-7 11-3.5-2-7-6-7-11V5l7-3z" />
@@ -59,7 +59,7 @@ const InRajkot = () => {
     },
     {
       title: "Safety & Hygiene",
-      desc: "Every vehicle is sanitized, GPS-enabled, and insured. Families, corporates, and tourists rely on Cozy Cabz for secure car hire in Rajkot.",
+      desc: "Every vehicle is sanitized, GPS-enabled, and insured. Families, corporates, and tourists rely on CozyCabz for secure car hire in Rajkot.",
       icon: (
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <path d="M4 12a8 8 0 1116 0v5a2 2 0 01-2 2h-3v-4h3v-3a6 6 0 10-12 0v3h3v4H6a2 2 0 01-2-2v-5z" />
@@ -115,7 +115,7 @@ const InRajkot = () => {
       alt: "Aji Dam and Garden family spot in Rajkot",
       paragraphs: [
         "A popular recreational spot with lush gardens, fountains, and play areas—great for picnics, boating, and evening strolls, especially scenic during monsoon.",
-        "With Cozy Cabz rent a car in Rajkot, exploring these attractions is easy, comfortable, and convenient.",
+        "With CozyCabz rent a car in Rajkot, exploring these attractions is easy, comfortable, and convenient.",
       ],
     },
   ];
@@ -123,7 +123,7 @@ const InRajkot = () => {
   const faqs = [
     {
       q: "How much does car rental in Rajkot cost?",
-      a: "Economy cars start at ₹12/km, sedans at ₹25/km, and premium SUVs from ₹35/km. Cozy Cabz provides transparent Rajkot car rental rates.",
+      a: "Economy cars start at ₹12/km, sedans at ₹25/km, and premium SUVs from ₹35/km. CozyCabz provides transparent Rajkot car rental rates.",
     },
     {
       q: "Can I book a car on rent in Rajkot with driver for one day?",
@@ -241,7 +241,7 @@ const InRajkot = () => {
           <p className="heroeco__sub">
             Rajkot, one of Gujarat’s fastest-growing cities, blends culture,
             business, and modern life. From Kaba Gandhi No Delo to temples,
-            lakes, and markets, it has much to offer. Cozy Cabz Car Rental in
+            lakes, and markets, it has much to offer. CozyCabz Car Rental in
             Rajkot provides safe, stress-free local trips, self drive, and group
             travel.
           </p>
@@ -258,7 +258,7 @@ const InRajkot = () => {
         <div className="attractions__container">
           <header className="attractions__head">
             <h2 id="attractions-title">
-              Must-Visit Places in Rajkot with Cozy Cabz
+              Must-Visit Places in Rajkot with CozyCabz
             </h2>
             <p>
               Explore cultural landmarks, museums, temples, and scenic spots at

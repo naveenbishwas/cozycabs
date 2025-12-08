@@ -59,7 +59,7 @@ const InPatna = () => {
     },
     {
       title: "Safety & Hygiene First",
-      desc: "Every car is sanitized, GPS-enabled, and insured for passenger safety. Families, corporates, and tourists rely on Cozy Cabz for stress-free travel.",
+      desc: "Every car is sanitized, GPS-enabled, and insured for passenger safety. Families, corporates, and tourists rely on CozyCabz for stress-free travel.",
       icon: (
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <path d="M4 12a8 8 0 1116 0v5a2 2 0 01-2 2h-3v-4h3v-3a6 6 0 10-12 0v3h3v4H6a2 2 0 01-2-2v-5z" />
@@ -122,7 +122,7 @@ const InPatna = () => {
   const faqs = [
     {
       q: "How much does car rental in Patna cost?",
-      a: "Rates depend on car type and trip distance. Cozy Cabz provides transparent pricing for every Patna car rental.",
+      a: "Rates depend on car type and trip distance. CozyCabz provides transparent pricing for every Patna car rental.",
     },
     {
       q: "Can I book a car on rent in Patna with driver for one day?",
@@ -215,19 +215,19 @@ const InPatna = () => {
     <div>
       <head>
         <title>
-          Car Rental in Patna | Cozy Cabz – Self Drive & Chauffeur Cars
+          Car Rental in Patna | CozyCabz – Self Drive & Chauffeur Cars
         </title>
         <meta
           name="description"
-          content="Book car rental in Patna with driver or self-drive options. Cozy Cabz offers safe, clean, and affordable car hire in Patna with luxury and budget vehicles available 24×7."
+          content="Book car rental in Patna with driver or self-drive options. CozyCabz offers safe, clean, and affordable car hire in Patna with luxury and budget vehicles available 24×7."
         />
         <meta
           property="og:title"
-          content="Car Rental in Patna | Cozy Cabz – Reliable Self Drive & Driver Cars"
+          content="Car Rental in Patna | CozyCabz – Reliable Self Drive & Driver Cars"
         />
         <meta
           property="og:description"
-          content="Hire cars in Patna for airport transfers, sightseeing, and long trips. Choose from sedans, SUVs, and luxury cars with Cozy Cabz’s transparent pricing and professional chauffeurs."
+          content="Hire cars in Patna for airport transfers, sightseeing, and long trips. Choose from sedans, SUVs, and luxury cars with CozyCabz’s transparent pricing and professional chauffeurs."
         />
         <meta property="og:image" content="/inpatna/Golghar.png" />
         <meta property="og:type" content="website" />
@@ -247,7 +247,7 @@ const InPatna = () => {
           <p className="heroeco__sub">
             Patna, Bihar’s historic capital, blends heritage, spirituality, and
             modern growth. From Patna Sahib Gurudwara to Golghar and busy
-            markets, the city offers plenty to explore. Cozy Cabz provides car
+            markets, the city offers plenty to explore. CozyCabz provides car
             rental in Patna with driver, self drive car rental in Patna, and
             luxury options
           </p>
@@ -264,7 +264,7 @@ const InPatna = () => {
         <div className="attractions__container">
           <header className="attractions__head">
             <h2 id="attractions-title">
-              Must-Visit Places in Patna with Cozy Cabz
+              Must-Visit Places in Patna with CozyCabz
             </h2>
             <p>
               Explore religious landmarks, heritage sites, and cultural

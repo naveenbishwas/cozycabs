@@ -19,7 +19,7 @@ const InBhopal = () => {
   const items = [
     {
       title: "Professional & Verified Drivers",
-      desc: "Our drivers are experienced, background-checked, and familiar with Bhopal’s roads—from New Market and MP Nagar to old city routes. For dependable Bhopal car rental service, Cozy Cabz ensures safe and timely rides.",
+      desc: "Our drivers are experienced, background-checked, and familiar with Bhopal’s roads—from New Market and MP Nagar to old city routes. For dependable Bhopal car rental service, CozyCabz ensures safe and timely rides.",
       icon: (
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <path d="M12 2l7 3v6c0 5-3.5 9-7 11-3.5-2-7-6-7-11V5l7-3z" />
@@ -39,7 +39,7 @@ const InBhopal = () => {
     },
     {
       title: "Transparent Pricing",
-      desc: "With Cozy Cabz, what you see is what you pay. Our Bhopal car rental rates include driver charges, fuel, tolls, and parking—no hidden costs.",
+      desc: "With CozyCabz, what you see is what you pay. Our Bhopal car rental rates include driver charges, fuel, tolls, and parking—no hidden costs.",
       icon: (
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <path d="M3 12l9-9 9 9-9 9-9-9z" />
@@ -60,7 +60,7 @@ const InBhopal = () => {
     },
     {
       title: "Safety & Hygiene First",
-      desc: "All vehicles are sanitized after each trip, GPS-enabled, and insured for your safety. Families, corporates, and tourists trust Cozy Cabz for car rental in Bhopal.",
+      desc: "All vehicles are sanitized after each trip, GPS-enabled, and insured for your safety. Families, corporates, and tourists trust CozyCabz for car rental in Bhopal.",
       icon: (
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <path d="M4 12a8 8 0 1116 0v5a2 2 0 01-2 2h-3v-4h3v-3a6 6 0 10-12 0v3h3v4H6a2 2 0 01-2-2v-5z" />
@@ -116,7 +116,7 @@ const InBhopal = () => {
       alt: "State Museum artifacts and exhibits in Bhopal",
       paragraphs: [
         "Artifacts, sculptures, coins, and manuscripts reflecting Madhya Pradesh’s rich past—from prehistoric findings to tribal art.",
-        "With Cozy Cabz rent a car in Bhopal, exploring the city’s lakes, mosques, and cultural centers becomes simple and comfortable.",
+        "With CozyCabz rent a car in Bhopal, exploring the city’s lakes, mosques, and cultural centers becomes simple and comfortable.",
       ],
     },
   ];
@@ -124,11 +124,11 @@ const InBhopal = () => {
   const faqs = [
     {
       q: "How much does car rental in Bhopal cost?",
-      a: "Economy rentals start at ₹12/km, sedans from ₹25/km, and premium cars from ₹35/km. Cozy Cabz offers transparent rates for car rent in Bhopal.",
+      a: "Economy rentals start at ₹12/km, sedans from ₹25/km, and premium cars from ₹35/km. CozyCabz offers transparent rates for car rent in Bhopal.",
     },
     {
       q: "Can I book a car on rent in Bhopal with driver for one day?",
-      a: "Yes. Cozy Cabz provides flexible car on rent in Bhopal packages, including daily and hourly rentals.",
+      a: "Yes. CozyCabz provides flexible car on rent in Bhopal packages, including daily and hourly rentals.",
     },
     {
       q: "Do you provide self drive cars in Bhopal?",
@@ -136,11 +136,11 @@ const InBhopal = () => {
     },
     {
       q: "Can I rent cars for outstation trips from Bhopal?",
-      a: "Absolutely. Cozy Cabz offers car rental in Bhopal for nearby getaways like Sanchi, Pachmarhi, and Indore.",
+      a: "Absolutely. CozyCabz offers car rental in Bhopal for nearby getaways like Sanchi, Pachmarhi, and Indore.",
     },
     {
       q: "Is driver-only service available in Bhopal?",
-      a: "Yes. Cozy Cabz also provides driver on hire in Bhopal for your personal car.",
+      a: "Yes. CozyCabz also provides driver on hire in Bhopal for your personal car.",
     },
   ];
 
@@ -240,7 +240,7 @@ const InBhopal = () => {
           </span>
           <p className="heroeco__sub">
             Bhopal, the City of Lakes, blends heritage, culture, and natural
-            beauty with sites like Upper Lake and Taj-ul-Masajid. Cozy Cabz Car
+            beauty with sites like Upper Lake and Taj-ul-Masajid. CozyCabz Car
             Rental in Bhopal offers safe, stress-free travel through
             well-maintained cars, professional chauffeurs, self drive rentals,
             and flexible car hire options.
@@ -258,7 +258,7 @@ const InBhopal = () => {
         <div className="attractions__container">
           <header className="attractions__head">
             <h2 id="attractions-title">
-              Must-Visit Places in Bhopal with Cozy Cabz
+              Must-Visit Places in Bhopal with CozyCabz
             </h2>
             <p>
               Enjoy Bhopal’s heritage and natural beauty at your own pace

@@ -115,7 +115,7 @@ const InKanpur = () => {
       alt: "Blue World Theme Park rides and water attractions",
       paragraphs: [
         "A top family destination on the outskirts—rides, water attractions, and themed zones for thrill-seekers and kids alike.",
-        "With Cozy Cabz rent a car in Kanpur, exploring these attractions is comfortable and hassle-free.",
+        "With CozyCabz rent a car in Kanpur, exploring these attractions is comfortable and hassle-free.",
       ],
     },
   ];
@@ -131,7 +131,7 @@ const InKanpur = () => {
     },
     {
       q: "Do you provide self-drive cars in Kanpur?",
-      a: "Absolutely. Cozy Cabz offers self drive cars in Kanpur with convenient plans for privacy and independence.",
+      a: "Absolutely. CozyCabz offers self drive cars in Kanpur with convenient plans for privacy and independence.",
     },
     {
       q: "Are there amusement or family attractions in Kanpur?",
@@ -240,7 +240,7 @@ const InKanpur = () => {
           <p className="heroeco__sub">
             Kanpur, Uttar Pradesh’s industrial and cultural hub, blends ghats,
             markets, and heritage with the Ganges, JK Temple, and Memorial
-            Church. Exploring can be easy with Cozy Cabz. We offer car rental in
+            Church. Exploring can be easy with CozyCabz. We offer car rental in
             Kanpur with driver and self drive car in Kanpur.
           </p>
         </div>
@@ -256,7 +256,7 @@ const InKanpur = () => {
         <div className="attractions__container">
           <header className="attractions__head">
             <h2 id="attractions-title">
-              Must-Visit Places in Kanpur with Cozy Cabz
+              Must-Visit Places in Kanpur with CozyCabz
             </h2>
             <p>
               Explore heritage spots, gardens, and entertainment venues without

@@ -142,7 +142,7 @@ const Innovainbhopal = () => {
           <p>
             Bhopal, one of India’s major cities, offers a unique mix of culture,
             business, and lifestyle. Whether you’re traveling for work,
-            sightseeing, or leisure, Cozy Cabz Innova car rental in Bhopal
+            sightseeing, or leisure, CozyCabz Innova car rental in Bhopal
             ensures a safe, comfortable, and convenient journey.
           </p>
         </div>
@@ -155,7 +155,7 @@ const Innovainbhopal = () => {
         </p>
         <p>
           In Bhopal’s busy roads, booking an Innova with driver in Bhopal gives
-          you complete peace of mind. Cozy Cabz provides professional chauffeurs
+          you complete peace of mind. CozyCabz provides professional chauffeurs
           and flexible rental packages – from airport transfers to day trips and
           multi-day tours – making every ride simple, safe, and stress-free.
         </p>

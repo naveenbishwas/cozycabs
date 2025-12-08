@@ -8,10 +8,10 @@ const Support = () => {
   return (
     <>
       <head>
-        <title>Customer Support | 24×7 Help & Assistance – Cozy Cabz</title>
+        <title>Customer Support | 24×7 Help & Assistance – CozyCabz</title>
         <meta
           name="description"
-          content="Need help with your Cozy Cabz booking, refund, or travel query? Contact our 24×7 customer support via call, WhatsApp, or email for fast, friendly assistance."
+          content="Need help with your CozyCabz booking, refund, or travel query? Contact our 24×7 customer support via call, WhatsApp, or email for fast, friendly assistance."
         />
       </head>
 
@@ -22,7 +22,7 @@ const Support = () => {
         <div className="overlay">
           <h1>Customer Support</h1>
           <p>
-            Need help? Our support team is available 24/7 to make your Cozy Cabz
+            Need help? Our support team is available 24/7 to make your CozyCabz
             experience smooth, safe, and stress-free.
           </p>
         </div>
@@ -80,7 +80,7 @@ const Support = () => {
 
         <div className="support-footer">
           <p>
-            Cozy Cabz Support —{" "}
+            CozyCabz Support —{" "}
             <strong>Fast, Friendly, and Always Available.</strong>
           </p>
         </div>

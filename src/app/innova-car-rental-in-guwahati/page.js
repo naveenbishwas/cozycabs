@@ -105,20 +105,20 @@ const Innovainguwahati = () => {
     <div className="innova-page">
       <head>
         <title>
-          Innova Car Rental in Guwahati | Cozy Cabz - Crysta & Hycross with
+          Innova Car Rental in Guwahati | CozyCabz - Crysta & Hycross with
           Driver
         </title>
         <meta
           name="description"
-          content="Book Toyota Innova Crysta or Hycross in Guwahati for airport transfers, sightseeing, corporate or outstation trips. Comfortable, chauffeur-driven rides by Cozy Cabz."
+          content="Book Toyota Innova Crysta or Hycross in Guwahati for airport transfers, sightseeing, corporate or outstation trips. Comfortable, chauffeur-driven rides by CozyCabz."
         />
         <meta
           property="og:title"
-          content="Innova Car Rental in Guwahati | Cozy Cabz - Crysta & Hycross with Driver"
+          content="Innova Car Rental in Guwahati | CozyCabz - Crysta & Hycross with Driver"
         />
         <meta
           property="og:description"
-          content="Hire an Innova in Guwahati with driver for business, family, or travel needs. 24×7 booking support, sanitized vehicles, and trusted service from Cozy Cabz."
+          content="Hire an Innova in Guwahati with driver for business, family, or travel needs. 24×7 booking support, sanitized vehicles, and trusted service from CozyCabz."
         />
         <meta property="og:image" content="/innova-3.png" />
         <meta property="og:type" content="website" />
@@ -153,7 +153,7 @@ const Innovainguwahati = () => {
           <p>
             Guwahati, one of India’s major cities, offers a unique mix of
             culture, business, and lifestyle. Whether you’re traveling for work,
-            sightseeing, or leisure, Cozy Cabz Innova car rental in Guwahati
+            sightseeing, or leisure, CozyCabz Innova car rental in Guwahati
             ensures a safe, comfortable, and convenient journey.
           </p>
         </div>
@@ -166,7 +166,7 @@ const Innovainguwahati = () => {
         </p>
         <p>
           In Guwahati’s busy roads, booking an Innova with driver in Guwahati
-          gives you complete peace of mind. Cozy Cabz provides professional
+          gives you complete peace of mind. CozyCabz provides professional
           chauffeurs and flexible rental packages – from airport transfers to
           day trips and multi-day tours – making every ride simple, safe, and
           stress-free.

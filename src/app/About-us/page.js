@@ -32,7 +32,7 @@ const About = () => {
       {/* 🌆 Hero Banner Section */}
       <section className="about-hero">
         <div className="about-hero-content">
-          <h1>About Cozy Cabz</h1>
+          <h1>About CozyCabz</h1>
           <p>
             India’s most trusted cab rental platform offering premium rides,
             reliable chauffeurs, and comfort that travels with you.
@@ -46,7 +46,7 @@ const About = () => {
           <div className="info-text">
             <h2>Who We Are</h2>
             <p>
-              <b>Cozy Cabz</b> is India’s trusted cab rental platform offering
+              <b>CozyCabz</b> is India’s trusted cab rental platform offering
               reliable, comfortable, and affordable rides across 250+ cities. We
               specialize in premium MPV and SUV rentals for families,
               corporates, and travellers.
@@ -73,18 +73,18 @@ const About = () => {
             </ul>
 
             <p className="info-footer">
-              We drive people, not just cars — <b>Cozy Cabz</b> makes every ride
+              We drive people, not just cars — <b>CozyCabz</b> makes every ride
               memorable.
             </p>
           </div>
 
           {/* 🚘 Side Image */}
           <div className="info-image">
-            <img src="./innova-7.jpg" alt="Cozy Cabz Car" />
+            <img src="./innova-7.jpg" alt="CozyCabz Car" />
             {/* 🚖 CTA Section */}
             <div className="cta-section">
               <h3>Ready to ride with us?</h3>
-              <p>Experience Cozy Cabz comfort today.</p>
+              <p>Experience CozyCabz comfort today.</p>
               <Link href="/#book-your-car" className="cta-button">
                 Book Your Cab Now →
               </Link>

@@ -48,7 +48,7 @@ const Contact = () => {
               <li>
                 <strong>Corporate & Event Travel</strong>
                 <br />
-                Learn how Cozy Cabz helps businesses manage large-scale travel
+                Learn how CozyCabz helps businesses manage large-scale travel
                 efficiently.
               </li>
               <li>

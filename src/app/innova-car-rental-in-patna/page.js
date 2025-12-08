@@ -142,8 +142,8 @@ const Innovainpatna = () => {
           <p>
             Patna, one of India’s major cities, offers a unique mix of culture,
             business, and lifestyle. Whether you’re traveling for work,
-            sightseeing, or leisure, Cozy Cabz Innova car rental in Patna
-            ensures a safe, comfortable, and convenient journey.
+            sightseeing, or leisure, CozyCabz Innova car rental in Patna ensures
+            a safe, comfortable, and convenient journey.
           </p>
         </div>
         <p>
@@ -155,7 +155,7 @@ const Innovainpatna = () => {
         </p>
         <p>
           In Patna’s busy roads, booking an Innova with driver in Patna gives
-          you complete peace of mind. Cozy Cabz provides professional chauffeurs
+          you complete peace of mind. CozyCabz provides professional chauffeurs
           and flexible rental packages – from airport transfers to day trips and
           multi-day tours – making every ride simple, safe, and stress-free.
         </p>

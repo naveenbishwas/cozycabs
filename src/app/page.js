@@ -889,24 +889,24 @@ export default function Home() {
 
           <div className="about__right">
             <p className="about__lead">
-              Kuldeep Cozy Cabz Pvt Ltd is a renowned online cab service
-              provider in India. After helping thousands of people reach their
+              Kuldeep CozyCabz Pvt Ltd is a renowned online cab service provider
+              in India. After helping thousands of people reach their
               destinations on time safely through its offline services, it has
               made its presence online to provide easy 'online cab booking',
               anytime, anywhere. Online cab booking has never been so easy. You
               can book a cab/car online in just a few clicks by visiting our
               website on your mobile or through desktop/laptop.
               <br /> <br /> With its efficient and reliable services, Kuldeep
-              Cozy Cabz has left competitions miles behind when it comes to
-              online cab/taxi booking. Cozy Cabz services are available in over
+              CozyCabz has left competitions miles behind when it comes to
+              online cab/taxi booking. CozyCabz services are available in over
               200 + Indian cities which help you reach your destination on time.
               Our experienced team with in-depth information are available 24x7
               to assist you, in case of any queries/help.
               <br />
               <br />
-              With its efficient and reliable services, Kuldeep Cozy Cabz has
+              With its efficient and reliable services, Kuldeep CozyCabz has
               left competitors miles behind when it comes to online cab/taxi
-              booking. Cozy Cabz services are available in over 200+ Indian
+              booking. CozyCabz services are available in over 200+ Indian
               cities, helping you reach your destination on time.
             </p>
 
@@ -1810,7 +1810,7 @@ export default function Home() {
               Prestigious <span>Associations</span>
             </h2>
             <p>
-              Cozy Cabz is proud to have provided cab services for the DRDO
+              CozyCabz is proud to have provided cab services for the DRDO
               department during the prestigious G20 Summit. Our reliable fleet
               and professional service ensured seamless travel support for
               dignitaries and officials.
@@ -1847,7 +1847,7 @@ export default function Home() {
           {/* Left Content */}
           <div className="prestigious-content">
             <p>
-              Cozy Cabz is proud to have provided cab services for the DRDO
+              CozyCabz is proud to have provided cab services for the DRDO
               department during the prestigious G20 Summit. Our reliable fleet
               and professional service ensured seamless travel support for
               dignitaries and officials.

@@ -19,7 +19,7 @@ const InCoimbatore = () => {
   const items = [
     {
       title: "Professional & Verified Drivers",
-      desc: "Our chauffeurs are trained, background-checked, and know Coimbatore’s routes well—from Gandhipuram to Peelamedu, RS Puram to the airport. For dependable car rental in Coimbatore with driver, Cozy Cabz is your best choice.",
+      desc: "Our chauffeurs are trained, background-checked, and know Coimbatore’s routes well—from Gandhipuram to Peelamedu, RS Puram to the airport. For dependable car rental in Coimbatore with driver, CozyCabz is your best choice.",
       icon: (
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <path d="M12 2l7 3v6c0 5-3.5 9-7 11-3.5-2-7-6-7-11V5l7-3z" />
@@ -60,7 +60,7 @@ const InCoimbatore = () => {
     },
     {
       title: "Safety & Hygiene First",
-      desc: "Every car is sanitized, GPS-enabled, and insured. Families, corporates, and tourists rely on Cozy Cabz for secure rental cars in Coimbatore.",
+      desc: "Every car is sanitized, GPS-enabled, and insured. Families, corporates, and tourists rely on CozyCabz for secure rental cars in Coimbatore.",
       icon: (
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <path d="M4 12a8 8 0 1116 0v5a2 2 0 01-2 2h-3v-4h3v-3a6 6 0 10-12 0v3h3v4H6a2 2 0 01-2-2v-5z" />
@@ -116,7 +116,7 @@ const InCoimbatore = () => {
       alt: "Brookefields Mall shopping and leisure in Coimbatore",
       paragraphs: [
         "Brookefields Mall is Coimbatore’s top shopping and entertainment hub with branded outlets, restaurants, and a multiplex—perfect to unwind after sightseeing.",
-        "With Cozy Cabz rent a car in Coimbatore, exploring these places becomes safe, comfortable, and convenient.",
+        "With CozyCabz rent a car in Coimbatore, exploring these places becomes safe, comfortable, and convenient.",
       ],
     },
   ];
@@ -124,7 +124,7 @@ const InCoimbatore = () => {
   const faqs = [
     {
       q: "How much does car rental in Coimbatore cost?",
-      a: "Economy rides start at ₹12/km, sedans from ₹25/km, and luxury cars from ₹35/km. Cozy Cabz offers clear car rental Coimbatore rates.",
+      a: "Economy rides start at ₹12/km, sedans from ₹25/km, and luxury cars from ₹35/km. CozyCabz offers clear car rental Coimbatore rates.",
     },
     {
       q: "Can I rent a car in Coimbatore with driver for outstation trips?",
@@ -132,7 +132,7 @@ const InCoimbatore = () => {
     },
     {
       q: "Do you provide luxury cars in Coimbatore?",
-      a: "Absolutely. Cozy Cabz offers luxury car rental in Coimbatore for weddings, VIP events, and corporate travel.",
+      a: "Absolutely. CozyCabz offers luxury car rental in Coimbatore for weddings, VIP events, and corporate travel.",
     },
     {
       q: "Are group vehicles available?",
@@ -140,7 +140,7 @@ const InCoimbatore = () => {
     },
     {
       q: "Do you also provide taxi and travel services?",
-      a: "Yes. Cozy Cabz covers both car hire in Coimbatore and car travels in Coimbatore, catering to local and outstation needs.",
+      a: "Yes. CozyCabz covers both car hire in Coimbatore and car travels in Coimbatore, catering to local and outstation needs.",
     },
   ];
 
@@ -252,8 +252,8 @@ const InCoimbatore = () => {
           </span>
           <p className="heroeco__sub">
             Coimbatore, the Manchester of South India, is known for textiles,
-            temples, malls, and hill stations like Ooty. That’s why Cozy Cabz
-            Car Rental in Coimbatore with driver offers safe, convenient rides,
+            temples, malls, and hill stations like Ooty. That’s why CozyCabz Car
+            Rental in Coimbatore with driver offers safe, convenient rides,
             including luxury rentals and 7 seater car rental in Coimbatore.
           </p>
         </div>
@@ -269,10 +269,10 @@ const InCoimbatore = () => {
         <div className="attractions__container">
           <header className="attractions__head">
             <h2 id="attractions-title">
-              Must-Visit Places in Coimbatore with Cozy Cabz
+              Must-Visit Places in Coimbatore with CozyCabz
             </h2>
             <p>
-              With Cozy Cabz rent a car in Coimbatore, exploring the city’s
+              With CozyCabz rent a car in Coimbatore, exploring the city’s
               temples, museums, parks, and shopping hubs becomes safe and
               convenient. Enjoy every landmark at your own pace with complete
               comfort.

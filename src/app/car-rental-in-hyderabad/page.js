@@ -20,7 +20,7 @@ const InHyderabad = () => {
   const items = [
     {
       title: "Professional & Verified Drivers",
-      desc: "Our chauffeurs know Hyderabad’s roads inside out—whether it’s the crowded lanes of Charminar, the IT corridors of Hitech City, or the fast route to Shamshabad Airport. Every driver is trained, background-checked, and committed to safe travel. If you’re looking to rent a car with driver in Hyderabad, cozy cabz is your reliable choice.",
+      desc: "Our chauffeurs know Hyderabad’s roads inside out—whether it’s the crowded lanes of Charminar, the IT corridors of Hitech City, or the fast route to Shamshabad Airport. Every driver is trained, background-checked, and committed to safe travel. If you’re looking to rent a car with driver in Hyderabad, CozyCabz is your reliable choice.",
       icon: (
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <path d="M12 2l7 3v6c0 5-3.5 9-7 11-3.5-2-7-6-7-11V5l7-3z" />
@@ -30,7 +30,7 @@ const InHyderabad = () => {
     },
     {
       title: "Wide Range of Vehicles",
-      desc: "From budget sedans to spacious SUVs and luxury cars, our fleet suits every purpose. Whether you want a 7 seater car for rent in Hyderabad for family outings, an economy car for daily commutes, or a premium vehicle for business trips, cozy cabz has the perfect option.",
+      desc: "From budget sedans to spacious SUVs and luxury cars, our fleet suits every purpose. Whether you want a 7 seater car for rent in Hyderabad for family outings, an economy car for daily commutes, or a premium vehicle for business trips, CozyCabz has the perfect option.",
       icon: (
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <path d="M3 13l1.2-3.6A3 3 0 017.1 7h9.8a3 3 0 012.9 2.4L21 13v5a1 1 0 01-1 1h-1a2 2 0 11-4 0H9a2 2 0 01-4 0H4a1 1 0 01-1-1v-5z" />
@@ -61,7 +61,7 @@ const InHyderabad = () => {
     },
     {
       title: "Safety & Hygiene First",
-      desc: "Every car is GPS-enabled, sanitized after every ride, and insured for passenger safety. Families, tourists, and corporate travelers trust cozy cabz for secure and comfortable rides across Hyderabad.",
+      desc: "Every car is GPS-enabled, sanitized after every ride, and insured for passenger safety. Families, tourists, and corporate travelers trust CozyCabz for secure and comfortable rides across Hyderabad.",
       icon: (
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <path d="M4 12a8 8 0 1116 0v5a2 2 0 01-2 2h-3v-4h3v-3a6 6 0 10-12 0v3h3v4H6a2 2 0 01-2-2v-5z" />
@@ -132,7 +132,7 @@ const InHyderabad = () => {
   const faqs = [
     {
       q: "How much does car rental in Hyderabad cost per km?",
-      a: "Economy rides start at ₹12–₹15 per km, premium cars at ₹25 per km, and luxury cars from ₹35 per km. With cozy cabz, all fares are transparent, whether for car hire in Hyderabad or outstation trips.",
+      a: "Economy rides start at ₹12–₹15 per km, premium cars at ₹25 per km, and luxury cars from ₹35 per km. With CozyCabz, all fares are transparent, whether for car hire in Hyderabad or outstation trips.",
     },
     {
       q: "Can I rent a car in Hyderabad for outstation travel?",
@@ -261,7 +261,7 @@ const InHyderabad = () => {
           <p className="heroeco__sub">
             Hyderabad, the City of Pearls, blends history, culture, and
             modernity—from centuries-old monuments and bazaars to IT hubs and
-            luxury malls. Navigating the traffic can be stressful. Cozy cabz
+            luxury malls. Navigating the traffic can be stressful. CozyCabz
             offers car rental in Hyderabad with driver for smooth, safe, and
             hassle-free journeys—local, outstation, or airport.
           </p>
@@ -277,7 +277,7 @@ const InHyderabad = () => {
         <div className="attractions__container">
           <header className="attractions__head">
             <h2 id="attractions-title">
-              Must-Visit Places in Hyderabad with Cozy Cabz
+              Must-Visit Places in Hyderabad with CozyCabz
             </h2>
             <p>
               Explore Hyderabad’s royal heritage and modern charm with cozy

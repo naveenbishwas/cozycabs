@@ -105,20 +105,20 @@ const Innovainludhiana = () => {
     <div className="innova-page">
       <head>
         <title>
-          Innova Car Rental in Ludhiana | Cozy Cabz – Crysta & Hycross with
+          Innova Car Rental in Ludhiana | CozyCabz – Crysta & Hycross with
           Driver
         </title>
         <meta
           name="description"
-          content="Book Toyota Innova Crysta or Hycross in Ludhiana for airport transfers, outstation trips, and local sightseeing. Enjoy comfortable, chauffeur-driven rides with Cozy Cabz 24×7 service."
+          content="Book Toyota Innova Crysta or Hycross in Ludhiana for airport transfers, outstation trips, and local sightseeing. Enjoy comfortable, chauffeur-driven rides with CozyCabz 24×7 service."
         />
         <meta
           property="og:title"
-          content="Innova Car Rental in Ludhiana | Cozy Cabz – Crysta & Hycross with Driver"
+          content="Innova Car Rental in Ludhiana | CozyCabz – Crysta & Hycross with Driver"
         />
         <meta
           property="og:description"
-          content="Hire an Innova in Ludhiana with professional drivers for family, business, or travel needs. Clean, reliable, and affordable Innova rentals by Cozy Cabz."
+          content="Hire an Innova in Ludhiana with professional drivers for family, business, or travel needs. Clean, reliable, and affordable Innova rentals by CozyCabz."
         />
         <meta property="og:image" content="/innova-3.png" />
         <meta property="og:type" content="website" />
@@ -153,7 +153,7 @@ const Innovainludhiana = () => {
           <p>
             Ludhiana, one of India’s major cities, offers a unique mix of
             culture, business, and lifestyle. Whether you’re traveling for work,
-            sightseeing, or leisure, Cozy Cabz Innova car rental in Ludhiana
+            sightseeing, or leisure, CozyCabz Innova car rental in Ludhiana
             ensures a safe, comfortable, and convenient journey.
           </p>
         </div>
@@ -166,7 +166,7 @@ const Innovainludhiana = () => {
         </p>
         <p>
           In Ludhiana’s busy roads, booking an Innova with driver in Ludhiana
-          gives you complete peace of mind. Cozy Cabz provides professional
+          gives you complete peace of mind. CozyCabz provides professional
           chauffeurs and flexible rental packages – from airport transfers to
           day trips and multi-day tours – making every ride simple, safe, and
           stress-free.

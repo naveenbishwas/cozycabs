@@ -20,7 +20,7 @@ const InJaipur = () => {
   const items = [
     {
       title: "Professional & Verified Drivers",
-      desc: "Our drivers are experienced and know Jaipur’s roads well—Johari Bazaar, Amer Road, and the quickest route to the airport. For reliable Jaipur car rental with driver, Cozy Cabz is your best choice.",
+      desc: "Our drivers are experienced and know Jaipur’s roads well—Johari Bazaar, Amer Road, and the quickest route to the airport. For reliable Jaipur car rental with driver, CozyCabz is your best choice.",
       icon: (
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <path d="M12 2l7 3v6c0 5-3.5 9-7 11-3.5-2-7-6-7-11V5l7-3z" />
@@ -50,7 +50,7 @@ const InJaipur = () => {
     },
     {
       title: "24×7 Availability",
-      desc: "From early-morning airport transfers to late-night pickups, Cozy Cabz provides car on rent in Jaipur round the clock.",
+      desc: "From early-morning airport transfers to late-night pickups, CozyCabz provides car on rent in Jaipur round the clock.",
       icon: (
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <circle cx="10.5" cy="10.5" r="7.5" />
@@ -61,7 +61,7 @@ const InJaipur = () => {
     },
     {
       title: "Safety & Hygiene First",
-      desc: "All vehicles are sanitized, GPS-enabled, and insured. Families, tourists, and corporate clients trust Cozy Cabz for safe and comfortable car rentals in Jaipur.",
+      desc: "All vehicles are sanitized, GPS-enabled, and insured. Families, tourists, and corporate clients trust CozyCabz for safe and comfortable car rentals in Jaipur.",
       icon: (
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <path d="M4 12a8 8 0 1116 0v5a2 2 0 01-2 2h-3v-4h3v-3a6 6 0 10-12 0v3h3v4H6a2 2 0 01-2-2v-5z" />
@@ -276,7 +276,7 @@ const InJaipur = () => {
           </span>
           <p className="heroeco__sub">
             Jaipur, the Pink City, blends royal heritage with modern comforts.
-            Cozy Cabz offers trusted car rental in Jaipur with driver—safe,
+            CozyCabz offers trusted car rental in Jaipur with driver—safe,
             comfortable, and affordable for sightseeing, business trips, airport
             transfers, and weekend getaways.
           </p>
@@ -293,7 +293,7 @@ const InJaipur = () => {
         <div className="attractions__container">
           <header className="attractions__head">
             <h2 id="attractions-title">
-              Must-Visit Places in Jaipur with Cozy Cabz
+              Must-Visit Places in Jaipur with CozyCabz
             </h2>
             <p>
               Explore Jaipur’s rich heritage and cultural landmarks at your own

@@ -105,20 +105,20 @@ const Innovainvisakhapatnam = () => {
     <div className="innova-page">
       <head>
         <title>
-          Innova Car Rental in Visakhapatnam | Cozy Cabz – Crysta & Hycross with
+          Innova Car Rental in Visakhapatnam | CozyCabz – Crysta & Hycross with
           Driver
         </title>
         <meta
           name="description"
-          content="Book Innova Crysta in Visakhapatnam for airport transfers, sightseeing, and outstation trips. Cozy Cabz offers 24×7 chauffeur service, luxury comfort, and affordable pricing."
+          content="Book Innova Crysta in Visakhapatnam for airport transfers, sightseeing, and outstation trips. CozyCabz offers 24×7 chauffeur service, luxury comfort, and affordable pricing."
         />
         <meta
           property="og:title"
-          content="Innova Car Rental in Visakhapatnam | Cozy Cabz – Reliable Chauffeur Service"
+          content="Innova Car Rental in Visakhapatnam | CozyCabz – Reliable Chauffeur Service"
         />
         <meta
           property="og:description"
-          content="Hire Innova Crysta or Hycross in Visakhapatnam for Araku trips, airport rides, and city travel. Clean cars, verified chauffeurs, and 24×7 customer support with Cozy Cabz."
+          content="Hire Innova Crysta or Hycross in Visakhapatnam for Araku trips, airport rides, and city travel. Clean cars, verified chauffeurs, and 24×7 customer support with CozyCabz."
         />
         <meta property="og:image" content="/innova-6.png" />
         <meta property="og:type" content="website" />
@@ -156,7 +156,7 @@ const Innovainvisakhapatnam = () => {
         <div className="innova-highlight-box">
           <p>
             Visakhapatnam, or Vizag, is a coastal beauty of Andhra Pradesh known
-            for beaches and hills. Cozy Cabz Innova car rental in Visakhapatnam
+            for beaches and hills. CozyCabz Innova car rental in Visakhapatnam
             ensures smooth travel whether for business, sightseeing, or family
             tours. Visit popular sites like RK Beach, Kailasagiri, or Araku
             Valley with our professional drivers.

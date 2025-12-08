@@ -105,19 +105,19 @@ const Innovainkanpur = () => {
     <div className="innova-page">
       <head>
         <title>
-          Innova Car Rental in Kanpur | Cozy Cabz – Crysta & Hycross with Driver
+          Innova Car Rental in Kanpur | CozyCabz – Crysta & Hycross with Driver
         </title>
         <meta
           name="description"
-          content="Book Toyota Innova Crysta or Hycross in Kanpur for airport transfers, sightseeing, and outstation trips. Reliable chauffeur-driven rides with Cozy Cabz 24×7 booking support."
+          content="Book Toyota Innova Crysta or Hycross in Kanpur for airport transfers, sightseeing, and outstation trips. Reliable chauffeur-driven rides with CozyCabz 24×7 booking support."
         />
         <meta
           property="og:title"
-          content="Innova Car Rental in Kanpur | Cozy Cabz – Crysta & Hycross with Driver"
+          content="Innova Car Rental in Kanpur | CozyCabz – Crysta & Hycross with Driver"
         />
         <meta
           property="og:description"
-          content="Hire an Innova in Kanpur with professional drivers for family, corporate, or travel needs. Clean, comfortable, and affordable service by Cozy Cabz."
+          content="Hire an Innova in Kanpur with professional drivers for family, corporate, or travel needs. Clean, comfortable, and affordable service by CozyCabz."
         />
         <meta property="og:image" content="/innova-3.png" />
         <meta property="og:type" content="website" />
@@ -151,8 +151,8 @@ const Innovainkanpur = () => {
         <div className="innova-highlight-box">
           <p>
             Kanpur, a commercial and educational city, deserves a comfortable
-            travel companion. Cozy Cabz Innova car rental in Kanpur makes it
-            easy for family outings, airport pickups, or business travel.
+            travel companion. CozyCabz Innova car rental in Kanpur makes it easy
+            for family outings, airport pickups, or business travel.
           </p>
         </div>
       </section>

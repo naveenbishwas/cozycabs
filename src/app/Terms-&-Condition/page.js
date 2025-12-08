@@ -9,19 +9,19 @@ const Terms = () => {
     <>
       <head>
         <title>
-          Terms & Conditions | Cozy Cabz – Reliable Car Rental in India
+          Terms & Conditions | CozyCabz – Reliable Car Rental in India
         </title>
         <meta
           name="description"
-          content="Read the official Terms & Conditions of Cozy Cabz. Learn about our booking policy, payments, cancellations, and travel guidelines for safe car rentals across India."
+          content="Read the official Terms & Conditions of CozyCabz. Learn about our booking policy, payments, cancellations, and travel guidelines for safe car rentals across India."
         />
         <meta
           property="og:title"
-          content="Cozy Cabz Terms & Conditions – Transparent Car Rental Policies"
+          content="CozyCabz Terms & Conditions – Transparent Car Rental Policies"
         />
         <meta
           property="og:description"
-          content="Before booking your next ride with Cozy Cabz, read our updated terms covering usage, payments, liability, and customer support for a seamless travel experience."
+          content="Before booking your next ride with CozyCabz, read our updated terms covering usage, payments, liability, and customer support for a seamless travel experience."
         />
         <meta property="og:image" content="/terms-banner.jpg" />
         <meta property="og:type" content="website" />
@@ -47,7 +47,7 @@ const Terms = () => {
       <section className="terms-wrapper terms-single">
         <h2>Understanding Our Policy</h2>
         <p className="intro-text">
-          By using Cozy Cabz services or visiting our website, you agree to
+          By using CozyCabz services or visiting our website, you agree to
           comply with our policies and operational guidelines. Please review the
           following terms before using our services.
         </p>
@@ -58,7 +58,7 @@ const Terms = () => {
             All bookings are subject to vehicle availability, route feasibility,
             and company confirmation. Prices displayed may vary depending on
             distance, vehicle category, and real-time conditions. Bookings are
-            confirmed only after verification by Cozy Cabz, and we reserve the
+            confirmed only after verification by CozyCabz, and we reserve the
             right to modify or decline bookings based on operational
             feasibility.
           </p>
@@ -74,7 +74,7 @@ const Terms = () => {
 
           <h3>Liability</h3>
           <p>
-            Cozy Cabz will not be held responsible for delays, cancellations, or
+            CozyCabz will not be held responsible for delays, cancellations, or
             disruptions caused by events beyond our control, such as heavy
             traffic, weather conditions, or technical issues. Our liability is
             limited to the extent of the booking cost and does not cover
@@ -99,7 +99,7 @@ const Terms = () => {
 
           <div className="terms-footer">
             <p>
-              Thank you for choosing <strong>Cozy Cabz Pvt Ltd</strong>. Your
+              Thank you for choosing <strong>CozyCabz Pvt Ltd</strong>. Your
               comfort, safety, and satisfaction are our top priorities.
             </p>
           </div>

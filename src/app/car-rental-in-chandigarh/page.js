@@ -20,7 +20,7 @@ const InChandigarh = () => {
   const items = [
     {
       title: "Professional, Verified Drivers",
-      desc: " Our chauffeurs are trained, polite, and know every corner of the city—from the lanes of Andheri to the sea breeze of Marine Drive. If you’re searching for rent a car in Mumbai with driver or car hire in Mumbai with driver, Cozy Cabz provides you with the most reliable option.",
+      desc: " Our chauffeurs are trained, polite, and know every corner of the city—from the lanes of Andheri to the sea breeze of Marine Drive. If you’re searching for rent a car in Mumbai with driver or car hire in Mumbai with driver, CozyCabz provides you with the most reliable option.",
       icon: (
         // Shield check
         <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -122,7 +122,7 @@ const InChandigarh = () => {
       alt: "Japanese Garden pagoda, waterfalls, and landscaped paths",
       paragraphs: [
         "Located in Sector 31, the Japanese Garden offers a peaceful oasis in the city. With waterfalls, pagoda structures, themed gardens, and a meditation centre, it’s a tranquil place to unwind and connect with nature.",
-        "With Cozy Cabz car rental Chandigarh, enjoying these attractions becomes effortless, letting you soak in the city’s beauty without the stress of driving or parking.",
+        "With CozyCabz car rental Chandigarh, enjoying these attractions becomes effortless, letting you soak in the city’s beauty without the stress of driving or parking.",
       ],
     },
   ];
@@ -130,7 +130,7 @@ const InChandigarh = () => {
   const faqs = [
     {
       q: "What are the charges for car rental in Chandigarh?",
-      a: "Economy rides start at ₹12–₹15/km, premium sedans from ₹25/km, and luxury cars from ₹35/km. Cozy Cabz offers transparent Chandigarh car rental rates.",
+      a: "Economy rides start at ₹12–₹15/km, premium sedans from ₹25/km, and luxury cars from ₹35/km. CozyCabz offers transparent Chandigarh car rental rates.",
     },
     {
       q: "Can I rent a car in Chandigarh with driver for outstation trips?",
@@ -142,11 +142,11 @@ const InChandigarh = () => {
     },
     {
       q: "Are self-drive cars available in Chandigarh?",
-      a: "Yes. Cozy Cabz offers self drive cars in Chandigarh for those who prefer privacy and independence.",
+      a: "Yes. CozyCabz offers self drive cars in Chandigarh for those who prefer privacy and independence.",
     },
     {
       q: "Do you offer SUVs or tempo travelers for group travel?",
-      a: "Yes, Cozy Cabz provides SUVs and 7-seater car rental in Chandigarh for family or corporate trips.",
+      a: "Yes, CozyCabz provides SUVs and 7-seater car rental in Chandigarh for family or corporate trips.",
     },
   ];
 
@@ -260,7 +260,7 @@ const InChandigarh = () => {
           <p className="heroeco__sub">
             Chandigarh, the City Beautiful, is known for its clean roads,
             planned design, gardens, and lakes. Yet travel can be
-            time-consuming. That’s why Cozy Cabz Car Rental in Chandigarh with
+            time-consuming. That’s why CozyCabz Car Rental in Chandigarh with
             driver ensures safe, smooth rides for sightseeing, airport
             transfers, business trips, and weekend journeys.
           </p>
@@ -298,11 +298,11 @@ const InChandigarh = () => {
         <div className="attractions__container">
           <header className="attractions__head">
             <h2 id="attractions-title">
-              Must-Visit Places in Chandigarh with Cozy Cabz
+              Must-Visit Places in Chandigarh with CozyCabz
             </h2>
             <p>
-              With Cozy Cabz rent a car in Chandigarh, you can explore the
-              city’s iconic landmarks comfortably and at your own pace.
+              With CozyCabz rent a car in Chandigarh, you can explore the city’s
+              iconic landmarks comfortably and at your own pace.
             </p>
           </header>
 

@@ -31,7 +31,7 @@ const InIndore = () => {
     },
     {
       title: "Wide Range of Vehicles",
-      desc: "From budget hatchbacks to premium sedans, SUVs, tempo travelers, and luxury models, Cozy Cabz has something for every need. Looking for privacy? Choose our car rental Indore self drive option for flexibility.",
+      desc: "From budget hatchbacks to premium sedans, SUVs, tempo travelers, and luxury models, CozyCabz has something for every need. Looking for privacy? Choose our car rental Indore self drive option for flexibility.",
       icon: (
         // Sedan
         <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -42,7 +42,7 @@ const InIndore = () => {
     },
     {
       title: "Transparent & Affordable Pricing",
-      desc: "With Cozy Cabz, what you see is what you pay. Our car rental rates in Indore include driver charges, fuel, tolls, and parking. Whether you need a rental car in Indore for a day or a weekend, we guarantee fair and transparent pricing.",
+      desc: "With CozyCabz, what you see is what you pay. Our car rental rates in Indore include driver charges, fuel, tolls, and parking. Whether you need a rental car in Indore for a day or a weekend, we guarantee fair and transparent pricing.",
       icon: (
         // Tag
         <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -65,7 +65,7 @@ const InIndore = () => {
     },
     {
       title: "Safety & Hygiene First",
-      desc: "All vehicles are sanitized after every ride, GPS-enabled, and fully insured. Families, corporates, and tourists prefer Cozy Cabz for secure car rentals in Indore.",
+      desc: "All vehicles are sanitized after every ride, GPS-enabled, and fully insured. Families, corporates, and tourists prefer CozyCabz for secure car rentals in Indore.",
       icon: (
         // Headset
         <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -122,7 +122,7 @@ const InIndore = () => {
       alt: "Central Museum, Indore",
       paragraphs: [
         "Also known as Indore Museum, this place houses rare artifacts, coins, and sculptures from Madhya Pradesh’s history. It’s a great spot for those interested in archaeology and culture, offering insights into the region’s rich heritage.",
-        "With Indore car hire from Cozy Cabz, visiting these attractions becomes comfortable, safe, and enjoyable, giving you the freedom to experience the best of the city.",
+        "With Indore car hire from CozyCabz, visiting these attractions becomes comfortable, safe, and enjoyable, giving you the freedom to experience the best of the city.",
       ],
     },
   ];
@@ -130,11 +130,11 @@ const InIndore = () => {
   const faqs = [
     {
       q: "How much does car rental in Indore cost?",
-      a: "Economy rides start at ₹12/km, sedans from ₹25/km, and luxury cars from ₹35/km. Cozy Cabz offers fair and transparent car rental rates in Indore.",
+      a: "Economy rides start at ₹12/km, sedans from ₹25/km, and luxury cars from ₹35/km. CozyCabz offers fair and transparent car rental rates in Indore.",
     },
     {
       q: "Can I book car rental in Indore with driver for outstation trips?",
-      a: "Yes. Cozy Cabz provides car rental in Indore for outstation travel with one-way or round-trip options.",
+      a: "Yes. CozyCabz provides car rental in Indore for outstation travel with one-way or round-trip options.",
     },
     {
       q: "Do you provide airport transfers in Indore?",
@@ -142,11 +142,11 @@ const InIndore = () => {
     },
     {
       q: "Are self-drive cars available in Indore?",
-      a: "Yes. Cozy Cabz offers car rental Indore self drive for customers seeking privacy and flexibility.",
+      a: "Yes. CozyCabz offers car rental Indore self drive for customers seeking privacy and flexibility.",
     },
     {
       q: "Do you provide drivers separately in Indore?",
-      a: "Yes. Cozy Cabz also provides driver on rent in Indore for your personal vehicle.",
+      a: "Yes. CozyCabz also provides driver on rent in Indore for your personal vehicle.",
     },
   ];
 
@@ -257,7 +257,7 @@ const InIndore = () => {
           <p className="heroeco__sub">
             Indore, Madhya Pradesh’s commercial capital, blends heritage and
             modern life with Rajwada Palace, Sarafa Bazaar, and IT hubs. Yet
-            traffic can be exhausting. That’s why Cozy Cabz Car Rental in Indore
+            traffic can be exhausting. That’s why CozyCabz Car Rental in Indore
             with driver ensures safe, smooth rides for sightseeing, business
             travel, and outstation journeys.
           </p>
@@ -295,12 +295,12 @@ const InIndore = () => {
         <div className="attractions__container">
           <header className="attractions__head">
             <h2 id="attractions-title">
-              Must-Visit Places in Indore with Cozy Cabz
+              Must-Visit Places in Indore with CozyCabz
             </h2>
             <p>
-              With Cozy Cabz car rental Indore, exploring the city’s cultural
-              and fun places becomes convenient and stress-free. You can travel
-              at your own pace while enjoying comfort and safety.
+              With CozyCabz car rental Indore, exploring the city’s cultural and
+              fun places becomes convenient and stress-free. You can travel at
+              your own pace while enjoying comfort and safety.
             </p>
           </header>
 

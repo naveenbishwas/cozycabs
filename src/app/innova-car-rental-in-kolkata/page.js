@@ -136,17 +136,17 @@ const Innovainkolkata = () => {
         <p>
           Kolkata, one of India’s major cities, offers a unique mix of culture,
           business, and lifestyle. Whether you’re traveling for work,
-          sightseeing, or leisure, Cozy Cabz Innova car rental in Kolkata
-          ensures a safe, comfortable, and convenient journey. The Toyota Innova
-          on rent in Kolkata is known for its spacious interiors and smooth
-          ride. Whether you’re a tourist exploring or on an outstation trip,
-          it’s ideal for families, corporate groups, or friends. With seating
-          for up to 7 passengers, every journey becomes easy and enjoyable.
+          sightseeing, or leisure, CozyCabz Innova car rental in Kolkata ensures
+          a safe, comfortable, and convenient journey. The Toyota Innova on rent
+          in Kolkata is known for its spacious interiors and smooth ride.
+          Whether you’re a tourist exploring or on an outstation trip, it’s
+          ideal for families, corporate groups, or friends. With seating for up
+          to 7 passengers, every journey becomes easy and enjoyable.
         </p>
         <div className="innova-highlight-box">
           <p>
             In Kolkata’s busy roads, booking an Innova with driver in Kolkata
-            gives you complete peace of mind. Cozy Cabz provides professional
+            gives you complete peace of mind. CozyCabz provides professional
             chauffeurs and flexible rental packages – from airport transfers to
             day trips and multi-day tours – making every ride simple, safe, and
             stress-free.

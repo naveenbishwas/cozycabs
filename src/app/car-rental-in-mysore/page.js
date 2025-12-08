@@ -250,7 +250,7 @@ const InMysore = () => {
           <p className="heroeco__sub">
             Mysore, the city of palaces and gardens, blends royal heritage,
             temples, and bustling markets. From Mysore Palace to Chamundi Hills,
-            there’s much to explore. Cozy Cabz Car Rental in Mysore with driver
+            there’s much to explore. CozyCabz Car Rental in Mysore with driver
             and self drive options ensures safe, stress-free travel.
           </p>
         </div>
@@ -266,7 +266,7 @@ const InMysore = () => {
         <div className="attractions__container">
           <header className="attractions__head">
             <h2 id="attractions-title">
-              Must-Visit Places in Mysore with Cozy Cabz
+              Must-Visit Places in Mysore with CozyCabz
             </h2>
             <p>
               Cover palaces, gardens, temples, and markets comfortably at your

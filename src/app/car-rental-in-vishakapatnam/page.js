@@ -116,7 +116,7 @@ const InVisakhapatnam = () => {
       alt: "Hilltop temple and ISKCON in Vizag",
       paragraphs: [
         "A tranquil hilltop spiritual center offering sunrise views and peaceful worship ambience—an escape from the city bustle.",
-        "With Cozy Cabz rent a car in Visakhapatnam, visiting these attractions is comfortable and logistics-free.",
+        "With CozyCabz rent a car in Visakhapatnam, visiting these attractions is comfortable and logistics-free.",
       ],
     },
   ];
@@ -136,7 +136,7 @@ const InVisakhapatnam = () => {
     },
     {
       q: "Do you offer outstation trips from Visakhapatnam?",
-      a: "Yes. Cozy Cabz covers car rental for nearby destinations like Araku, Vizag coast, and hill regions.",
+      a: "Yes. CozyCabz covers car rental for nearby destinations like Araku, Vizag coast, and hill regions.",
     },
     {
       q: "Does the fare include all charges?",
@@ -242,7 +242,7 @@ const InVisakhapatnam = () => {
           <p className="heroeco__sub">
             Visakhapatnam, or Vizag, blends beaches, hills, temples, and modern
             life. From Kailasagiri’s Bay of Bengal views to Buddhist sites and
-            sanctuaries, the city has much to explore. Cozy Cabz offers car
+            sanctuaries, the city has much to explore. CozyCabz offers car
             rental in Visakhapatnam with driver for smooth journeys.
           </p>
         </div>
@@ -258,7 +258,7 @@ const InVisakhapatnam = () => {
         <div className="attractions__container">
           <header className="attractions__head">
             <h2 id="attractions-title">
-              Must-Visit Places in Visakhapatnam with Cozy Cabz
+              Must-Visit Places in Visakhapatnam with CozyCabz
             </h2>
             <p>
               Visit top attractions comfortably, without worrying about parking

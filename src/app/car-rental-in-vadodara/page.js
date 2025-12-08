@@ -19,7 +19,7 @@ const InVadodara = () => {
   const items = [
     {
       title: "Professional & Verified Drivers",
-      desc: "Our chauffeurs are trained, background-checked, and experienced. From Sayajigunj to Gotri, Alkapuri to the airport, they know every route. For dependable car and driver rental, Cozy Cabz is your trusted travel partner.",
+      desc: "Our chauffeurs are trained, background-checked, and experienced. From Sayajigunj to Gotri, Alkapuri to the airport, they know every route. For dependable car and driver rental, CozyCabz is your trusted travel partner.",
       icon: (
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <path d="M12 2l7 3v6c0 5-3.5 9-7 11-3.5-2-7-6-7-11V5l7-3z" />
@@ -60,7 +60,7 @@ const InVadodara = () => {
     },
     {
       title: "Safety & Hygiene First",
-      desc: "Every vehicle is sanitized, GPS-enabled, and fully insured. Families, corporates, and tourists rely on Cozy Cabz for safe and hygienic car rentals in Vadodara Gujarat.",
+      desc: "Every vehicle is sanitized, GPS-enabled, and fully insured. Families, corporates, and tourists rely on CozyCabz for safe and hygienic car rentals in Vadodara Gujarat.",
       icon: (
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <path d="M4 12a8 8 0 1116 0v5a2 2 0 01-2 2h-3v-4h3v-3a6 6 0 10-12 0v3h3v4H6a2 2 0 01-2-2v-5z" />
@@ -116,7 +116,7 @@ const InVadodara = () => {
       alt: "Sursagar Lake with Shiva statue in Vadodara",
       paragraphs: [
         "Situated in the heart of the city, Sursagar Lake is ideal for relaxation and boating. Evenings are magical when the lake is lit up, with a towering Shiva statue adding to its charm.",
-        "With Cozy Cabz rent a car in Vadodara, exploring these landmarks becomes simple, comfortable, and stress-free.",
+        "With CozyCabz rent a car in Vadodara, exploring these landmarks becomes simple, comfortable, and stress-free.",
       ],
     },
   ];
@@ -124,7 +124,7 @@ const InVadodara = () => {
   const faqs = [
     {
       q: "How much does car rental in Vadodara cost?",
-      a: "Economy rides start at ₹12/km, sedans from ₹25/km, and luxury cars from ₹35/km. Cozy Cabz provides transparent Vadodara car rental rates.",
+      a: "Economy rides start at ₹12/km, sedans from ₹25/km, and luxury cars from ₹35/km. CozyCabz provides transparent Vadodara car rental rates.",
     },
     {
       q: "Can I book a car on rent in Vadodara with driver for one day?",
@@ -132,7 +132,7 @@ const InVadodara = () => {
     },
     {
       q: "Do you provide cars for outstation trips from Vadodara?",
-      a: "Absolutely. Cozy Cabz offers car rental in Vadodara Gujarat for one-way and round-trip outstation journeys.",
+      a: "Absolutely. CozyCabz offers car rental in Vadodara Gujarat for one-way and round-trip outstation journeys.",
     },
     {
       q: "Do you provide corporate and business car hire in Vadodara?",
@@ -140,7 +140,7 @@ const InVadodara = () => {
     },
     {
       q: "Do you also provide luxury and premium vehicles?",
-      a: "Yes. Cozy Cabz offers luxury car rental in Vadodara for weddings, VIP transfers, and corporate use.",
+      a: "Yes. CozyCabz offers luxury car rental in Vadodara for weddings, VIP transfers, and corporate use.",
     },
   ];
 
@@ -221,19 +221,19 @@ const InVadodara = () => {
     <div>
       <head>
         <title>
-          Car Rental in Vadodara | Cozy Cabz – Self Drive & Chauffeur Cars
+          Car Rental in Vadodara | CozyCabz – Self Drive & Chauffeur Cars
         </title>
         <meta
           name="description"
-          content="Book car rental in Vadodara with driver or self drive car rental in Vadodara. Cozy Cabz offers reliable, safe, and affordable car hire in Baroda for airport transfers, city tours, and business trips."
+          content="Book car rental in Vadodara with driver or self drive car rental in Vadodara. CozyCabz offers reliable, safe, and affordable car hire in Baroda for airport transfers, city tours, and business trips."
         />
         <meta
           property="og:title"
-          content="Car Rental in Vadodara | Cozy Cabz – Reliable Car Hire in Baroda"
+          content="Car Rental in Vadodara | CozyCabz – Reliable Car Hire in Baroda"
         />
         <meta
           property="og:description"
-          content="Hire cars in Vadodara for sightseeing, corporate travel, and outstation trips. From sedans to luxury cars, Cozy Cabz provides verified drivers and transparent pricing 24×7."
+          content="Hire cars in Vadodara for sightseeing, corporate travel, and outstation trips. From sedans to luxury cars, CozyCabz provides verified drivers and transparent pricing 24×7."
         />
         <meta property="og:image" content="/invadodara/Lakshmi.png" />
         <meta property="og:type" content="website" />
@@ -253,7 +253,7 @@ const InVadodara = () => {
           <p className="heroeco__sub">
             Vadodara, or Baroda, blends royal heritage with modern charm, from
             Lakshmi Vilas Palace to the Champaner-Pavagadh UNESCO site and
-            industrial hubs. To explore stress-free, Cozy Cabz offers car rental
+            industrial hubs. To explore stress-free, CozyCabz offers car rental
             in Vadodara with driver and flexible packages.
           </p>
         </div>
@@ -269,10 +269,10 @@ const InVadodara = () => {
         <div className="attractions__container">
           <header className="attractions__head">
             <h2 id="attractions-title">
-              Must-Visit Places in Vadodara with Cozy Cabz
+              Must-Visit Places in Vadodara with CozyCabz
             </h2>
             <p>
-              With Cozy Cabz rent a car in Vadodara, exploring the city’s iconic
+              With CozyCabz rent a car in Vadodara, exploring the city’s iconic
               landmarks becomes simple, comfortable, and stress-free.
             </p>
           </header>

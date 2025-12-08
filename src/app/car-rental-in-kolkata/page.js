@@ -276,7 +276,7 @@ const InKolkata = () => {
           </span>
           <p className="heroeco__sub">
             Kolkata, the City of Joy, blends colonial architecture, vibrant
-            culture, and modern lifestyle. Cozy Cabz provides dependable car
+            culture, and modern lifestyle. CozyCabz provides dependable car
             rental with driver for safe, smooth, and stress-free travel—local
             trips, business, outstation, or airport.
           </p>
@@ -292,10 +292,10 @@ const InKolkata = () => {
         <div className="attractions__container">
           <header className="attractions__head">
             <h2 id="attractions-title">
-              Must-Visit Places in Kolkata with Cozy Cabz
+              Must-Visit Places in Kolkata with CozyCabz
             </h2>
             <p>
-              Explore Kolkata’s famous landmarks comfortably with Cozy Cabz—no
+              Explore Kolkata’s famous landmarks comfortably with CozyCabz—no
               traffic or parking worries.
             </p>
           </header>

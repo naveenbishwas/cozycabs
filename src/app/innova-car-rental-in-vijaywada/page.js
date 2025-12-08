@@ -141,7 +141,7 @@ const Innovainvijayawada = () => {
         <div className="innova-highlight-box">
           <p>
             Vijayawada, one of the busiest cities in Andhra Pradesh, combines
-            commerce and spirituality. Cozy Cabz Innova car rental in Vijayawada
+            commerce and spirituality. CozyCabz Innova car rental in Vijayawada
             provides the perfect ride for temple visits, business trips, or
             airport transfers.
           </p>

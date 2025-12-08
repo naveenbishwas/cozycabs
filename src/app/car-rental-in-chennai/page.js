@@ -120,7 +120,7 @@ const InChennai = () => {
   const faqs = [
     {
       q: "How much does a car rental in Chennai cost per km?",
-      a: "Economy rides start at ₹12–₹15 per km, premium cars from ₹25 per km, and luxury cars from ₹35 per km. With cozy cabz, whether you choose car hire in Chennai for a short trip or an outstation journey, you’ll always get transparent pricing.",
+      a: "Economy rides start at ₹12–₹15 per km, premium cars from ₹25 per km, and luxury cars from ₹35 per km. With CozyCabz, whether you choose car hire in Chennai for a short trip or an outstation journey, you’ll always get transparent pricing.",
     },
     {
       q: "Can I book a car in Chennai for outstation travel?",
@@ -132,7 +132,7 @@ const InChennai = () => {
     },
     {
       q: "Can I rent a car in Chennai for one day?",
-      a: "Yes. cozy cabz offers one day car rental in Chennai with driver packages (8 hrs/80 km) that are perfect for sightseeing or business meetings.",
+      a: "Yes. CozyCabz offers one day car rental in Chennai with driver packages (8 hrs/80 km) that are perfect for sightseeing or business meetings.",
     },
   ];
 
@@ -233,8 +233,8 @@ const InChennai = () => {
           <p className="heroeco__sub">
             Chennai, the cultural capital of South India, blends temples,
             colonial landmarks, Marina Beach, and IT hubs. But traffic and long
-            distances make travel stressful. That’s where Cozy Cabz Car Rental
-            in Chennai with driver ensures smooth, safe, and convenient rides.
+            distances make travel stressful. That’s where CozyCabz Car Rental in
+            Chennai with driver ensures smooth, safe, and convenient rides.
           </p>
         </div>
       </section>
@@ -248,7 +248,7 @@ const InChennai = () => {
         <div className="attractions__container">
           <header className="attractions__head">
             <h2 id="attractions-title">
-              Must-Visit Places in Chennai with Cozy Cabz
+              Must-Visit Places in Chennai with CozyCabz
             </h2>
             <p>
               Chennai beautifully blends spirituality, history, and modern

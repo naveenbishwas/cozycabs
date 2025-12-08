@@ -20,7 +20,7 @@ const InPune = () => {
   const items = [
     {
       title: "Professional & Verified Drivers",
-      desc: "Our chauffeurs know Pune’s roads and shortcuts—whether it’s the bustling lanes of FC Road, IT corridors of Hinjewadi, or the highway to Mumbai. Every driver is trained, background-checked, and focused on passenger safety. For dependable Pune car rental with driver, Cozy Cabz is your trusted choice.",
+      desc: "Our chauffeurs know Pune’s roads and shortcuts—whether it’s the bustling lanes of FC Road, IT corridors of Hinjewadi, or the highway to Mumbai. Every driver is trained, background-checked, and focused on passenger safety. For dependable Pune car rental with driver, CozyCabz is your trusted choice.",
       icon: (
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <path d="M12 2l7 3v6c0 5-3.5 9-7 11-3.5-2-7-6-7-11V5l7-3z" />
@@ -30,7 +30,7 @@ const InPune = () => {
     },
     {
       title: "Wide Range of Vehicles",
-      desc: "From budget-friendly sedans to SUVs and premium cars, our fleet suits every travel need. Whether you want a 7-seater for family trips, an economy car for daily use, or a luxury car for special occasions, Cozy Cabz has the perfect option.",
+      desc: "From budget-friendly sedans to SUVs and premium cars, our fleet suits every travel need. Whether you want a 7-seater for family trips, an economy car for daily use, or a luxury car for special occasions, CozyCabz has the perfect option.",
       icon: (
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <path d="M3 13l1.2-3.6A3 3 0 017.1 7h9.8a3 3 0 012.9 2.4L21 13v5a1 1 0 01-1 1h-1a2 2 0 11-4 0H9a2 2 0 11-4 0H4v-5z" />
@@ -61,7 +61,7 @@ const InPune = () => {
     },
     {
       title: "Safety & Hygiene First",
-      desc: "Every car is sanitized after each ride, GPS-enabled, and insured for passenger safety. Families, tourists, and business travelers trust Cozy Cabz for secure and comfortable rides across Pune.",
+      desc: "Every car is sanitized after each ride, GPS-enabled, and insured for passenger safety. Families, tourists, and business travelers trust CozyCabz for secure and comfortable rides across Pune.",
       icon: (
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <path d="M4 12a8 8 0 1116 0v5a2 2 0 01-2 2h-3v-4h3v-3a6 6 0 10-12 0v3h3v4H6a2 2 0 01-2-2v-5z" />
@@ -132,7 +132,7 @@ const InPune = () => {
   const faqs = [
     {
       q: "How much does car rental in Pune cost per km?",
-      a: "Economy cars start at ₹12–₹15 per km, premium cars at ₹25 per km, and luxury cars from ₹35 per km. With Cozy Cabz, all fares are transparent.",
+      a: "Economy cars start at ₹12–₹15 per km, premium cars at ₹25 per km, and luxury cars from ₹35 per km. With CozyCabz, all fares are transparent.",
     },
     {
       q: "Can I rent a car in Pune for outstation travel?",
@@ -148,7 +148,7 @@ const InPune = () => {
     },
     {
       q: "Do you have SUVs or luxury cars available in Pune?",
-      a: "Yes, Cozy Cabz offers SUVs, tempo travelers, and luxury car rental in Pune with driver—ideal for families, weddings, and corporate needs.",
+      a: "Yes, CozyCabz offers SUVs, tempo travelers, and luxury car rental in Pune with driver—ideal for families, weddings, and corporate needs.",
     },
   ];
 
@@ -249,7 +249,7 @@ const InPune = () => {
           </span>
           <p className="heroeco__sub">
             Pune, the cultural capital of Maharashtra, blends heritage,
-            education hubs, IT parks, and modern living. Cozy Cabz offers car
+            education hubs, IT parks, and modern living. CozyCabz offers car
             rental in Pune with driver so every ride is safe, smooth, and
             hassle-free—local, outstation, or airport.
           </p>
@@ -264,7 +264,7 @@ const InPune = () => {
         <div className="attractions__container">
           <header className="attractions__head">
             <h2 id="attractions-title">
-              Must-Visit Places in Pune with Cozy Cabz
+              Must-Visit Places in Pune with CozyCabz
             </h2>
             <p>
               Explore Pune’s history, culture, and modern charm with Cozy

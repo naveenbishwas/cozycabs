@@ -9,12 +9,12 @@ const RefundPolicy = () => {
     <>
       <head>
         <title>
-          Refund & Cancellation Policy | Cozy Cabz Pvt Ltd – Transparent Travel
+          Refund & Cancellation Policy | CozyCabz Pvt Ltd – Transparent Travel
           Refunds
         </title>
         <meta
           name="description"
-          content="Read Cozy Cabz Pvt Ltd’s refund and cancellation policy. Understand refund timelines, cancellation terms, and how we ensure transparent and fair travel bookings for all customers."
+          content="Read CozyCabz Pvt Ltd’s refund and cancellation policy. Understand refund timelines, cancellation terms, and how we ensure transparent and fair travel bookings for all customers."
         />
       </head>
 
@@ -68,9 +68,9 @@ const RefundPolicy = () => {
             depending on your bank or payment gateway’s processing speed.
           </p>
 
-          <h3>Service Cancellations by Cozy Cabz</h3>
+          <h3>Service Cancellations by CozyCabz</h3>
           <p>
-            In rare cases, if Cozy Cabz cancels a confirmed booking due to
+            In rare cases, if CozyCabz cancels a confirmed booking due to
             unforeseen operational reasons, we will either provide an equivalent
             vehicle category at no extra charge or issue a full refund
             immediately.
@@ -85,7 +85,7 @@ const RefundPolicy = () => {
 
           <div className="refund-footer">
             <p>
-              Thank you for choosing <strong>Cozy Cabz Pvt Ltd</strong>. Your
+              Thank you for choosing <strong>CozyCabz Pvt Ltd</strong>. Your
               satisfaction and comfort remain our top priorities.
             </p>
           </div>

@@ -146,7 +146,7 @@ const CorporateCarRental = () => {
           </h2>
           <p>
             Looking for safe, comfortable, and dependable corporate car rental
-            services for your team? Youre in the right place. At Cozy Cabz, we
+            services for your team? Youre in the right place. At CozyCabz, we
             understand that reliable transport not only boosts employee morale
             but also drives productivity by ensuring punctuality and reducing
             stress.

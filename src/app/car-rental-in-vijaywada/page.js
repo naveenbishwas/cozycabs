@@ -38,7 +38,7 @@ const InVijayawada = () => {
     },
     {
       title: "Transparent Pricing",
-      desc: "With Cozy Cabz, you get upfront quotes with no hidden charges. From daily car rent in Vijayawada to rental car in Vijayawada for long trips, our prices are clear and fair.",
+      desc: "With CozyCabz, you get upfront quotes with no hidden charges. From daily car rent in Vijayawada to rental car in Vijayawada for long trips, our prices are clear and fair.",
       icon: (
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <path d="M3 12l9-9 9 9-9 9-9-9z" />
@@ -59,7 +59,7 @@ const InVijayawada = () => {
     },
     {
       title: "Safety & Hygiene",
-      desc: "All vehicles are sanitized, GPS-enabled, and fully insured. Families, corporates, and tourists trust Cozy Cabz for secure car hire in Vijayawada.",
+      desc: "All vehicles are sanitized, GPS-enabled, and fully insured. Families, corporates, and tourists trust CozyCabz for secure car hire in Vijayawada.",
       icon: (
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <path d="M4 12a8 8 0 1116 0v5a2 2 0 01-2 2h-3v-4h3v-3a6 6 0 10-12 0v3h3v4H6a2 2 0 01-2-2v-5z" />
@@ -115,7 +115,7 @@ const InVijayawada = () => {
       alt: "Rajiv Gandhi Park gardens and fountains",
       paragraphs: [
         "Located at the entrance of the city, Rajiv Gandhi Park is a landscaped garden with musical fountains and children’s play areas—a peaceful spot for evening strolls and family outings.",
-        "With Cozy Cabz rent a car in Vijayawada, exploring these highlights becomes easy and enjoyable.",
+        "With CozyCabz rent a car in Vijayawada, exploring these highlights becomes easy and enjoyable.",
       ],
     },
   ];
@@ -123,7 +123,7 @@ const InVijayawada = () => {
   const faqs = [
     {
       q: "How much does car rental in Vijayawada cost?",
-      a: "Economy rentals start from ₹12/km, sedans from ₹25/km, and premium cars from ₹35/km. Cozy Cabz offers fair Vijayawada car rental rates.",
+      a: "Economy rentals start from ₹12/km, sedans from ₹25/km, and premium cars from ₹35/km. CozyCabz offers fair Vijayawada car rental rates.",
     },
     {
       q: "Can I book a car on rent in Vijayawada with driver for one day?",
@@ -139,7 +139,7 @@ const InVijayawada = () => {
     },
     {
       q: "Are luxury cars available in Vijayawada?",
-      a: "Yes. Cozy Cabz provides luxury car rental in Vijayawada for weddings, VIP travel, and corporate needs.",
+      a: "Yes. CozyCabz provides luxury car rental in Vijayawada for weddings, VIP travel, and corporate needs.",
     },
   ];
 
@@ -240,7 +240,7 @@ const InVijayawada = () => {
           <p className="heroeco__sub">
             Vijayawada, the Business Capital of Andhra Pradesh, blends culture,
             temples, and modern life. From Kanaka Durga Temple to Prakasam
-            Barrage and Bhavani Island, the city shines. Cozy Cabz Car Rental in
+            Barrage and Bhavani Island, the city shines. CozyCabz Car Rental in
             Vijayawada ensures safe, smooth travel for local trips, self drive,
             and outstation rides.
           </p>
@@ -257,10 +257,10 @@ const InVijayawada = () => {
         <div className="attractions__container">
           <header className="attractions__head">
             <h2 id="attractions-title">
-              Must-Visit Places in Vijayawada with Cozy Cabz
+              Must-Visit Places in Vijayawada with CozyCabz
             </h2>
             <p>
-              With Cozy Cabz rent a car in Vijayawada, exploring the city’s
+              With CozyCabz rent a car in Vijayawada, exploring the city’s
               temples, riverfronts, and natural escapes becomes easy and
               enjoyable.
             </p>

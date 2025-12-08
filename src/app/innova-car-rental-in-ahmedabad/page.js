@@ -105,7 +105,7 @@ const Innovainahmedabad = () => {
     <div className="innova-page">
       <head>
         <title>
-          Innova Car Rental in Ahmedabad | Cozy Cabz with Driver & Self Drive
+          Innova Car Rental in Ahmedabad | CozyCabz with Driver & Self Drive
         </title>
         <meta
           name="description"
@@ -113,11 +113,11 @@ const Innovainahmedabad = () => {
         />
         <meta
           property="og:title"
-          content="Innova Car Rental in Ahmedabad | Cozy Cabz with Driver & Self Drive"
+          content="Innova Car Rental in Ahmedabad | CozyCabz with Driver & Self Drive"
         />
         <meta
           property="og:description"
-          content="Book Innova on rent in Ahmedabad with Cozy Cabz. Well-maintained Crysta & Hycross models, verified drivers, and 24×7 airport pickup/drop service."
+          content="Book Innova on rent in Ahmedabad with CozyCabz. Well-maintained Crysta & Hycross models, verified drivers, and 24×7 airport pickup/drop service."
         />
         <meta property="og:image" content="/innova-1.png" />
         <meta property="og:type" content="website" />
@@ -155,7 +155,7 @@ const Innovainahmedabad = () => {
           <p>
             Ahmedabad, one of India’s major cities, offers a unique mix of
             culture, business, and lifestyle. Whether you’re traveling for work,
-            sightseeing, or leisure, Cozy Cabz Innova car rental in Ahmedabad
+            sightseeing, or leisure, CozyCabz Innova car rental in Ahmedabad
             ensures a safe, comfortable, and convenient journey.
           </p>
         </div>
@@ -168,7 +168,7 @@ const Innovainahmedabad = () => {
         </p>
         <p>
           In Ahmedabad’s busy roads, booking an Innova with driver in Ahmedabad
-          gives you complete peace of mind. Cozy Cabz provides professional
+          gives you complete peace of mind. CozyCabz provides professional
           chauffeurs and flexible rental packages – from airport transfers to
           day trips and multi-day tours – making every ride simple, safe, and
           stress-free.

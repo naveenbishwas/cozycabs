@@ -88,11 +88,11 @@ const Inbanglore = () => {
   const faqs = [
     {
       q: "How much does a car rental in Bangalore cost per km?",
-      a: "Economy rides usually start at ₹12–₹15 per km, premium cars at ₹25 per km, and luxury cars from ₹35 per km. With cozy cabz, you’ll always get a transparent fare estimate before confirming your booking, whether it’s for a car rental in Bangalore with driver or an outstation trip.",
+      a: "Economy rides usually start at ₹12–₹15 per km, premium cars at ₹25 per km, and luxury cars from ₹35 per km. With CozyCabz, you’ll always get a transparent fare estimate before confirming your booking, whether it’s for a car rental in Bangalore with driver or an outstation trip.",
     },
     {
       q: "Can I rent a car in Bangalore for outstation travel?",
-      a: "Yes, absolutely. cozy cabz offers car rentals in Bangalore for routes like Bangalore to Mysore, Coorg, Chikmagalur, and Nandi Hills. Choose one-way or round-trip packages as per your plan.",
+      a: "Yes, absolutely. CozyCabz offers car rentals in Bangalore for routes like Bangalore to Mysore, Coorg, Chikmagalur, and Nandi Hills. Choose one-way or round-trip packages as per your plan.",
     },
     {
       q: "Do you provide airport pickup and drop services in Bangalore?",
@@ -205,7 +205,7 @@ const Inbanglore = () => {
           <p className="heroeco__sub">
             Bangalore, the Silicon Valley of India, blends IT hubs, gardens,
             landmarks, and nightlife. Yet traffic makes travel challenging.
-            That’s where Cozy Cabz Car Rental in Bangalore helps, offering clean
+            That’s where CozyCabz Car Rental in Bangalore helps, offering clean
             cars, verified chauffeurs, transparent pricing, 24×7 service.
           </p>
         </div>
@@ -220,10 +220,10 @@ const Inbanglore = () => {
         <div className="attractions__container">
           <header className="attractions__head">
             <h2 id="attractions-title">
-              Must-Visit Places in Bangalore with Cozy Cabz
+              Must-Visit Places in Bangalore with CozyCabz
             </h2>
             <p>
-              Discover the charm of Bangalore with cozy cabz—your trusted travel
+              Discover the charm of Bangalore with CozyCabz—your trusted travel
               partner. From grand palaces and lush gardens to buzzing shopping
               hubs and spiritual retreats, the city offers something for
               everyone.
@@ -251,12 +251,12 @@ const Inbanglore = () => {
       {/* <section className="trustcc" aria-labelledby="closing-title">
         <div className="trustcc__container">
           <h2 id="closing-title">
-            cozy cabz – Your Trusted Car Rental in Bangalore
+            CozyCabz – Your Trusted Car Rental in Bangalore
           </h2>
           <p>
             Whether you need a car on rent in Bangalore for daily use, a car
             rental Bangalore with driver for corporate travel, or a 7 seater car
-            for rent in Bangalore for family holidays, cozy cabz has you
+            for rent in Bangalore for family holidays, CozyCabz has you
             covered. With affordable rates, professional drivers, and a wide
             fleet, we are committed to being the best car rental in Bangalore.
             From cheap car rental in Bangalore to premium luxury rides, every

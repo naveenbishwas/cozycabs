@@ -218,8 +218,8 @@ const InDelhi = () => {
           <p className="heroeco__sub">
             Delhi, India’s capital, blends history and modern life with forts,
             markets, and business hubs. But heavy traffic and crowds make travel
-            stressful. That’s where Cozy Cabz Car Rental in Delhi ensures
-            smooth, safe, and hassle-free journeys every time.
+            stressful. That’s where CozyCabz Car Rental in Delhi ensures smooth,
+            safe, and hassle-free journeys every time.
           </p>
         </div>
       </section>
@@ -256,13 +256,13 @@ const InDelhi = () => {
         <div className="attractions__container">
           <header className="attractions__head">
             <h2 id="attractions-title">
-              Must-Visit Places in Delhi with Cozy Cabz
+              Must-Visit Places in Delhi with CozyCabz
             </h2>
             <p>
               Delhi is a city where every street has a story to tell. From
               centuries-old Mughal forts to modern shopping hubs, the capital is
               a mix of history, culture, spirituality, and vibrant city life.
-              With cozy cabz car rental in Delhi with driver, exploring becomes
+              With CozyCabz car rental in Delhi with driver, exploring becomes
               stress-free—you just sit back and enjoy while we take care of
               traffic, routes, and parking.
             </p>

@@ -115,7 +115,7 @@ const InGuwahati = () => {
     //   alt: "Srimanta Sankardev Kalakshetra cultural complex",
     //   paragraphs: [
     //     "Cultural center with museums, art galleries, and open-air theaters—celebrating Assam’s art, culture, and traditions.",
-    //     "With Cozy Cabz rent a car in Guwahati, explore these comfortably and stress-free.",
+    //     "With CozyCabz rent a car in Guwahati, explore these comfortably and stress-free.",
     //   ],
     // },
   ];
@@ -240,7 +240,7 @@ const InGuwahati = () => {
           <p className="heroeco__sub">
             Guwahati, the gateway to Northeast India, blends temples, wildlife
             sanctuaries, and modern city life. Yet traffic makes travel hectic.
-            Cozy Cabz Car Rental in Guwahati with driver ensures safe, reliable
+            CozyCabz Car Rental in Guwahati with driver ensures safe, reliable
             journeys with well-maintained cars—covering luxury rentals,
             affordable rides, airport transfers.
           </p>
@@ -257,7 +257,7 @@ const InGuwahati = () => {
         <div className="attractions__container">
           <header className="attractions__head">
             <h2 id="attractions-title">
-              Must-Visit Places in Guwahati with Cozy Cabz
+              Must-Visit Places in Guwahati with CozyCabz
             </h2>
             <p>Travel at your own pace—comfortable and stress-free.</p>
           </header>

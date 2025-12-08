@@ -245,13 +245,13 @@ const InMumbai = () => {
         <div className="attractions__container">
           <header className="attractions__head">
             <h2 id="attractions-title">
-              Must-Visit Places in Mumbai with Cozy Cabz
+              Must-Visit Places in Mumbai with CozyCabz
             </h2>
             <p>
               Mumbai is a city that blends history, culture, glamour, and
               nature—all in one. From colonial-era monuments to vibrant markets,
               spiritual centers, and Bollywood hotspots, there’s so much to
-              explore. With Cozy Cabz car hire in Mumbai, you can cover these
+              explore. With CozyCabz car hire in Mumbai, you can cover these
               places comfortably, without the hassle of traffic, parking, or
               last-minute cab hunting.
             </p>

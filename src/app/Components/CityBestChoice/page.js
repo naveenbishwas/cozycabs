@@ -23,7 +23,7 @@ const CityBestChoice = () => {
             <h2>What Makes Us the Best Choice</h2>
             <p>
               Our dedication to quality and customer satisfaction sets us apart.
-              Here’s why corporates across India choose Cozy Cabz for corporate
+              Here’s why corporates across India choose CozyCabz for corporate
               car rental services:
             </p>
           </header>

@@ -105,19 +105,19 @@ const Innovainsurat = () => {
     <div className="innova-page">
       <head>
         <title>
-          Innova Car Rental in Surat | Cozy Cabz – Crysta & Hycross with Driver
+          Innova Car Rental in Surat | CozyCabz – Crysta & Hycross with Driver
         </title>
         <meta
           name="description"
-          content="Book Innova Crysta or Hycross in Surat for airport transfers, sightseeing, and business travel. Cozy Cabz offers 24×7 chauffeur service, premium comfort, and affordable rates."
+          content="Book Innova Crysta or Hycross in Surat for airport transfers, sightseeing, and business travel. CozyCabz offers 24×7 chauffeur service, premium comfort, and affordable rates."
         />
         <meta
           property="og:title"
-          content="Innova Car Rental in Surat | Cozy Cabz – Reliable Chauffeur Service"
+          content="Innova Car Rental in Surat | CozyCabz – Reliable Chauffeur Service"
         />
         <meta
           property="og:description"
-          content="Hire Innova in Surat for airport pickups, outstation trips, and city rides. Enjoy professional drivers, sanitized vehicles, and transparent pricing with Cozy Cabz."
+          content="Hire Innova in Surat for airport pickups, outstation trips, and city rides. Enjoy professional drivers, sanitized vehicles, and transparent pricing with CozyCabz."
         />
         <meta property="og:image" content="/innova-6.png" />
         <meta property="og:type" content="website" />
@@ -153,8 +153,8 @@ const Innovainsurat = () => {
           <p>
             Surat, one of India’s major cities, offers a unique mix of culture,
             business, and lifestyle. Whether you’re traveling for work,
-            sightseeing, or leisure, Cozy Cabz Innova car rental in Surat
-            ensures a safe, comfortable, and convenient journey.
+            sightseeing, or leisure, CozyCabz Innova car rental in Surat ensures
+            a safe, comfortable, and convenient journey.
           </p>
         </div>
         <p>
@@ -166,7 +166,7 @@ const Innovainsurat = () => {
         </p>
         <p>
           In Surat’s busy roads, booking an Innova with driver in Surat gives
-          you complete peace of mind. Cozy Cabz provides professional chauffeurs
+          you complete peace of mind. CozyCabz provides professional chauffeurs
           and flexible rental packages – from airport transfers to day trips and
           multi-day tours – making every ride simple, safe, and stress-free.
         </p>

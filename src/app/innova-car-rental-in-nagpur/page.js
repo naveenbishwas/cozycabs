@@ -107,19 +107,19 @@ const Innovainnagpur = () => {
     <div className="innova-page">
       <head>
         <title>
-          Innova Car Rental in Nagpur | Cozy Cabz – Crysta & Hycross with Driver
+          Innova Car Rental in Nagpur | CozyCabz – Crysta & Hycross with Driver
         </title>
         <meta
           name="description"
-          content="Hire Toyota Innova Crysta or Hycross in Nagpur for airport transfers, city tours, and outstation trips. 24×7 chauffeur service, clean cars & transparent pricing by Cozy Cabz."
+          content="Hire Toyota Innova Crysta or Hycross in Nagpur for airport transfers, city tours, and outstation trips. 24×7 chauffeur service, clean cars & transparent pricing by CozyCabz."
         />
         <meta
           property="og:title"
-          content="Innova Car Rental in Nagpur | Cozy Cabz – Reliable Chauffeur Service"
+          content="Innova Car Rental in Nagpur | CozyCabz – Reliable Chauffeur Service"
         />
         <meta
           property="og:description"
-          content="Book Innova car rental in Nagpur for business, family travel, or sightseeing. Cozy Cabz ensures comfort, safety, and affordability for every ride."
+          content="Book Innova car rental in Nagpur for business, family travel, or sightseeing. CozyCabz ensures comfort, safety, and affordability for every ride."
         />
         <meta property="og:image" content="/innova-6.png" />
         <meta property="og:type" content="website" />
@@ -155,7 +155,7 @@ const Innovainnagpur = () => {
           <p>
             Nagpur, one of India’s major cities, offers a unique mix of culture,
             business, and lifestyle. Whether you’re traveling for work,
-            sightseeing, or leisure, Cozy Cabz Innova car rental in Nagpur
+            sightseeing, or leisure, CozyCabz Innova car rental in Nagpur
             ensures a safe, comfortable, and convenient journey.
           </p>
         </div>
@@ -168,7 +168,7 @@ const Innovainnagpur = () => {
         </p>
         <p>
           In Nagpur’s busy roads, booking an Innova with driver in Nagpur gives
-          you complete peace of mind. Cozy Cabz provides professional chauffeurs
+          you complete peace of mind. CozyCabz provides professional chauffeurs
           and flexible rental packages – from airport transfers to day trips and
           multi-day tours – making every ride simple, safe, and stress-free.
         </p>

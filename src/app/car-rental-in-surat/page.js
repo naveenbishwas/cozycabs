@@ -20,7 +20,7 @@ const InSurat = () => {
   const items = [
     {
       title: "Professional & Verified Drivers",
-      desc: "Our drivers are trained, background-checked, and know Surat’s roads—from Ring Road and textile markets to Dumas Beach and the airport. For secure car hire in Surat, Cozy Cabz is your trusted partner.",
+      desc: "Our drivers are trained, background-checked, and know Surat’s roads—from Ring Road and textile markets to Dumas Beach and the airport. For secure car hire in Surat, CozyCabz is your trusted partner.",
       icon: (
         // Shield check
         <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -53,7 +53,7 @@ const InSurat = () => {
     },
     {
       title: "24×7 Availability",
-      desc: "From early-morning airport transfers to late-night pickups, Cozy Cabz provides car rental Surat services round the clock.",
+      desc: "From early-morning airport transfers to late-night pickups, CozyCabz provides car rental Surat services round the clock.",
       icon: (
         // Clock + tick
         <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -65,7 +65,7 @@ const InSurat = () => {
     },
     {
       title: "Safety & Hygiene First",
-      desc: "Every car is sanitized, GPS-enabled, and insured for passenger safety. Families, corporates, and tourists trust Cozy Cabz for rental cars in Surat.",
+      desc: "Every car is sanitized, GPS-enabled, and insured for passenger safety. Families, corporates, and tourists trust CozyCabz for rental cars in Surat.",
       icon: (
         // Headset
         <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -122,7 +122,7 @@ const InSurat = () => {
       alt: "Dutch Garden, Surat",
       paragraphs: [
         "Known for its colonial influence, Dutch Garden is a beautifully landscaped park with historical tombs of Dutch and Armenian traders. Its peaceful lawns and serene atmosphere make it an ideal place for relaxation. It’s a perfect mix of heritage and greenery.",
-        "With Surat car rental services from Cozy Cabz, you can explore these landmarks without hassle, enjoying comfort and flexibility throughout your journey.",
+        "With Surat car rental services from CozyCabz, you can explore these landmarks without hassle, enjoying comfort and flexibility throughout your journey.",
       ],
     },
   ];
@@ -134,7 +134,7 @@ const InSurat = () => {
     },
     {
       q: "Can I book self drive cars in Surat?",
-      a: "Yes. Cozy Cabz offers self drive car rental in Surat for those who prefer independence.",
+      a: "Yes. CozyCabz offers self drive car rental in Surat for those who prefer independence.",
     },
     {
       q: "Do you provide airport transfers in Surat?",
@@ -142,7 +142,7 @@ const InSurat = () => {
     },
     {
       q: "Are luxury cars available in Surat?",
-      a: "Yes. Cozy Cabz offers luxury car rental in Surat for weddings, events, and VIP transfers.",
+      a: "Yes. CozyCabz offers luxury car rental in Surat for weddings, events, and VIP transfers.",
     },
     {
       q: "Do you offer cars for outstation travel?",
@@ -227,20 +227,18 @@ const InSurat = () => {
   return (
     <div>
       <head>
-        <title>
-          Car Rental in Surat | Cozy Cabz – Self Drive & Luxury Cars
-        </title>
+        <title>Car Rental in Surat | CozyCabz – Self Drive & Luxury Cars</title>
         <meta
           name="description"
-          content="Book car rental in Surat with driver or self drive car rental in Surat. Cozy Cabz offers safe, reliable, and affordable car hire in Surat 24×7 for airport transfers, trips, and events."
+          content="Book car rental in Surat with driver or self drive car rental in Surat. CozyCabz offers safe, reliable, and affordable car hire in Surat 24×7 for airport transfers, trips, and events."
         />
         <meta
           property="og:title"
-          content="Car Rental in Surat | Cozy Cabz – Reliable Self Drive & Chauffeur Cars"
+          content="Car Rental in Surat | CozyCabz – Reliable Self Drive & Chauffeur Cars"
         />
         <meta
           property="og:description"
-          content="Hire cars in Surat for sightseeing, business travel, and outstation trips. From budget sedans to luxury cars, Cozy Cabz provides transparent pricing and verified drivers."
+          content="Hire cars in Surat for sightseeing, business travel, and outstation trips. From budget sedans to luxury cars, CozyCabz provides transparent pricing and verified drivers."
         />
         <meta property="og:image" content="/insurat/Dumas.png" />
         <meta property="og:type" content="website" />
@@ -260,7 +258,7 @@ const InSurat = () => {
           <p className="heroeco__sub">
             Surat, the Diamond City of India, blends heritage, trade, markets,
             and seaside getaways. Exploring is exciting but traffic makes travel
-            challenging. That’s why Cozy Cabz offers car rental in Surat with
+            challenging. That’s why CozyCabz offers car rental in Surat with
             driver and self drive car rental in Surat.
           </p>
         </div>
@@ -276,10 +274,10 @@ const InSurat = () => {
         <div className="attractions__container">
           <header className="attractions__head">
             <h2 id="attractions-title">
-              Must-Visit Places in Surat with Cozy Cabz
+              Must-Visit Places in Surat with CozyCabz
             </h2>
             <p>
-              With Cozy Cabz rent a car in Surat, exploring the city’s top
+              With CozyCabz rent a car in Surat, exploring the city’s top
               attractions becomes easy and comfortable. From historic forts to
               beaches and gardens, you can enjoy every corner of the city at
               your own pace.

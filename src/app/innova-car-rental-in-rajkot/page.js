@@ -105,19 +105,19 @@ const Innovainrajkot = () => {
     <div className="innova-page">
       <head>
         <title>
-          Innova Car Rental in Rajkot | Cozy Cabz – Crysta & Hycross with Driver
+          Innova Car Rental in Rajkot | CozyCabz – Crysta & Hycross with Driver
         </title>
         <meta
           name="description"
-          content="Hire Toyota Innova Crysta or Hycross in Rajkot for airport transfers, business trips, and outstation rides. Enjoy 24×7 chauffeur service, clean vehicles, and transparent pricing from Cozy Cabz."
+          content="Hire Toyota Innova Crysta or Hycross in Rajkot for airport transfers, business trips, and outstation rides. Enjoy 24×7 chauffeur service, clean vehicles, and transparent pricing from CozyCabz."
         />
         <meta
           property="og:title"
-          content="Innova Car Rental in Rajkot | Cozy Cabz – Reliable Chauffeur Service"
+          content="Innova Car Rental in Rajkot | CozyCabz – Reliable Chauffeur Service"
         />
         <meta
           property="og:description"
-          content="Book Innova in Rajkot for airport pickups, sightseeing, or family trips. Cozy Cabz offers premium comfort, safety, and convenience for every journey."
+          content="Book Innova in Rajkot for airport pickups, sightseeing, or family trips. CozyCabz offers premium comfort, safety, and convenience for every journey."
         />
         <meta property="og:image" content="/innova-6.png" />
         <meta property="og:type" content="website" />
@@ -153,7 +153,7 @@ const Innovainrajkot = () => {
           <p>
             Rajkot, one of India’s major cities, offers a unique mix of culture,
             business, and lifestyle. Whether you’re traveling for work,
-            sightseeing, or leisure, Cozy Cabz Innova car rental in Rajkot
+            sightseeing, or leisure, CozyCabz Innova car rental in Rajkot
             ensures a safe, comfortable, and convenient journey.
           </p>
         </div>
@@ -166,7 +166,7 @@ const Innovainrajkot = () => {
         </p>
         <p>
           In Rajkot’s busy roads, booking an Innova with driver in Rajkot gives
-          you complete peace of mind. Cozy Cabz provides professional chauffeurs
+          you complete peace of mind. CozyCabz provides professional chauffeurs
           and flexible rental packages – from airport transfers to day trips and
           multi-day tours – making every ride simple, safe, and stress-free.
         </p>

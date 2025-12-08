@@ -105,16 +105,16 @@ const Innovainchandigarh = () => {
     <div className="innova-page">
       <head>
         <title>
-          Innova Car Rental in Chandigarh | Cozy Cabz - Crysta & Hycross with
+          Innova Car Rental in Chandigarh | CozyCabz - Crysta & Hycross with
           Driver
         </title>
         <meta
           name="description"
-          content="Book Toyota Innova Crysta or Hycross in Chandigarh for airport transfers, local sightseeing, and outstation trips. Safe, comfortable rides with professional drivers by Cozy Cabz."
+          content="Book Toyota Innova Crysta or Hycross in Chandigarh for airport transfers, local sightseeing, and outstation trips. Safe, comfortable rides with professional drivers by CozyCabz."
         />
         <meta
           property="og:title"
-          content="Innova Car Rental in Chandigarh | Cozy Cabz - Crysta & Hycross with Driver"
+          content="Innova Car Rental in Chandigarh | CozyCabz - Crysta & Hycross with Driver"
         />
         <meta
           property="og:description"
@@ -156,7 +156,7 @@ const Innovainchandigarh = () => {
           <p>
             Chandigarh, one of India’s major cities, offers a unique mix of
             culture, business, and lifestyle. Whether you’re traveling for work,
-            sightseeing, or leisure, Cozy Cabz Innova car rental in Chandigarh
+            sightseeing, or leisure, CozyCabz Innova car rental in Chandigarh
             ensures a safe, comfortable, and convenient journey.
           </p>
         </div>
@@ -169,7 +169,7 @@ const Innovainchandigarh = () => {
         </p>
         <p>
           In Chandigarh’s busy roads, booking an Innova with driver in
-          Chandigarh gives you complete peace of mind. Cozy Cabz provides
+          Chandigarh gives you complete peace of mind. CozyCabz provides
           professional chauffeurs and flexible rental packages – from airport
           transfers to day trips and multi-day tours – making every ride simple,
           safe, and stress-free.

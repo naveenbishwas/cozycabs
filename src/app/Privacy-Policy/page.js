@@ -9,19 +9,19 @@ const PrivacyPolicy = () => {
     <>
       <head>
         <title>
-          Privacy Policy | Cozy Cabz – Safe & Secure Car Rental in India
+          Privacy Policy | CozyCabz – Safe & Secure Car Rental in India
         </title>
         <meta
           name="description"
-          content="Read Cozy Cabz Privacy Policy. Learn how we collect, use, and protect your personal data while providing trusted car rental services across India."
+          content="Read CozyCabz Privacy Policy. Learn how we collect, use, and protect your personal data while providing trusted car rental services across India."
         />
         <meta
           property="og:title"
-          content="Cozy Cabz Privacy Policy – Your Data, Our Responsibility"
+          content="CozyCabz Privacy Policy – Your Data, Our Responsibility"
         />
         <meta
           property="og:description"
-          content="At Cozy Cabz, your privacy matters. Explore how we safeguard customer data with transparency and industry-standard security practices."
+          content="At CozyCabz, your privacy matters. Explore how we safeguard customer data with transparency and industry-standard security practices."
         />
         <meta property="og:image" content="/privacy-banner.jpg" />
         <meta property="og:type" content="website" />
@@ -39,7 +39,7 @@ const PrivacyPolicy = () => {
         <div className="overlay">
           <h1>Privacy Policy</h1>
           <p>
-            At Cozy Cabz, we value your trust and are committed to protecting
+            At CozyCabz, we value your trust and are committed to protecting
             your personal information with complete transparency.
           </p>
         </div>
@@ -50,7 +50,7 @@ const PrivacyPolicy = () => {
         <h2>Our Commitment to Your Privacy</h2>
         <p className="intro-text">
           Your privacy is important to us. This policy explains how we collect,
-          use, and safeguard your personal data when you interact with Cozy Cabz
+          use, and safeguard your personal data when you interact with CozyCabz
           services.
         </p>
 
@@ -115,7 +115,7 @@ const PrivacyPolicy = () => {
 
           <div className="privacy-footer">
             <p>
-              Thank you for trusting <strong>Cozy Cabz Pvt Ltd</strong>. We are
+              Thank you for trusting <strong>CozyCabz Pvt Ltd</strong>. We are
               committed to keeping your travel experience safe and secure.
             </p>
           </div>

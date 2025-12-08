@@ -21,7 +21,7 @@ const InAhmedabad = () => {
   const items = [
     {
       title: "Professional & Verified Drivers",
-      desc: "Our trained chauffeurs know Ahmedabad’s routes—Ashram Road, SG Highway, and the fastest way to the airport. For secure and comfortable Ahmedabad car rental with driver, Cozy Cabz is your trusted partner.",
+      desc: "Our trained chauffeurs know Ahmedabad’s routes—Ashram Road, SG Highway, and the fastest way to the airport. For secure and comfortable Ahmedabad car rental with driver, CozyCabz is your trusted partner.",
       icon: (
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <path d="M12 2l7 3v6c0 5-3.5 9-7 11-3.5-2-7-6-7-11V5l7-3z" />
@@ -152,7 +152,7 @@ const InAhmedabad = () => {
   const faqs = [
     {
       q: "How much does car rental in Ahmedabad cost per km?",
-      a: "Economy cars start at ₹12/km, premium sedans at ₹25/km, and luxury cars at ₹35/km. Transparent rates with Cozy Cabz.",
+      a: "Economy cars start at ₹12/km, premium sedans at ₹25/km, and luxury cars at ₹35/km. Transparent rates with CozyCabz.",
     },
     {
       q: "Can I book a car rental in Ahmedabad with driver for outstation trips?",
@@ -280,7 +280,7 @@ const InAhmedabad = () => {
           </span>
           <p className="heroeco__sub">
             Ahmedabad blends heritage with modern living—from Sabarmati Ashram
-            and stepwells to buzzing markets and IT zones. Cozy Cabz provides
+            and stepwells to buzzing markets and IT zones. CozyCabz provides
             trusted car rental with driver so every journey is safe and
             convenient.
           </p>
@@ -296,10 +296,10 @@ const InAhmedabad = () => {
         <div className="attractions__container">
           <header className="attractions__head">
             <h2 id="attractions-title">
-              Must-Visit Places in Ahmedabad with Cozy Cabz
+              Must-Visit Places in Ahmedabad with CozyCabz
             </h2>
             <p>
-              Explore top attractions comfortably with Cozy Cabz—travel at your
+              Explore top attractions comfortably with CozyCabz—travel at your
               pace without traffic or parking worries.
             </p>
           </header>

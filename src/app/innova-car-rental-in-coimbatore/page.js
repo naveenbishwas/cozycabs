@@ -142,7 +142,7 @@ const Innovaincoimbatore = () => {
           <p>
             Coimbatore, one of India’s major cities, offers a unique mix of
             culture, business, and lifestyle. Whether you’re traveling for work,
-            sightseeing, or leisure, Cozy Cabz Innova car rental in Coimbatore
+            sightseeing, or leisure, CozyCabz Innova car rental in Coimbatore
             ensures a safe, comfortable, and convenient journey.
           </p>
         </div>
@@ -155,7 +155,7 @@ const Innovaincoimbatore = () => {
         </p>
         <p>
           In Coimbatore’s busy roads, booking an Innova with driver in
-          Coimbatore gives you complete peace of mind. Cozy Cabz provides
+          Coimbatore gives you complete peace of mind. CozyCabz provides
           professional chauffeurs and flexible rental packages – from airport
           transfers to day trips and multi-day tours – making every ride simple,
           safe, and stress-free.

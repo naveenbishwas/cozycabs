@@ -18,7 +18,7 @@ const InNagpur = () => {
   const items = [
     {
       title: "Professional & Verified Drivers",
-      desc: "Our trained chauffeurs know every corner of Nagpur—from Zero Mile to Sitabuldi, Civil Lines to the airport. For reliable car rental services in Nagpur with driver, Cozy Cabz ensures safe and punctual rides.",
+      desc: "Our trained chauffeurs know every corner of Nagpur—from Zero Mile to Sitabuldi, Civil Lines to the airport. For reliable car rental services in Nagpur with driver, CozyCabz ensures safe and punctual rides.",
       icon: (
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <path d="M12 2l7 3v6c0 5-3.5 9-7 11-3.5-2-7-6-7-11V5l7-3z" />
@@ -38,7 +38,7 @@ const InNagpur = () => {
     },
     {
       title: "Transparent Pricing",
-      desc: "With Cozy Cabz, fares are clear and upfront. Our Nagpur car rental rates include driver charges, fuel, tolls, and parking, ensuring no hidden costs.",
+      desc: "With CozyCabz, fares are clear and upfront. Our Nagpur car rental rates include driver charges, fuel, tolls, and parking, ensuring no hidden costs.",
       icon: (
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <path d="M3 12l9-9 9 9-9 9-9-9z" />
@@ -59,7 +59,7 @@ const InNagpur = () => {
     },
     {
       title: "Safety & Hygiene First",
-      desc: "Every car is sanitized, GPS-enabled, and insured. Tourists, corporates, and families trust Cozy Cabz for car rental Nagpur that is both safe and comfortable.",
+      desc: "Every car is sanitized, GPS-enabled, and insured. Tourists, corporates, and families trust CozyCabz for car rental Nagpur that is both safe and comfortable.",
       icon: (
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <path d="M4 12a8 8 0 1116 0v5a2 2 0 01-2 2h-3v-4h3v-3a6 6 0 10-12 0v3h3v4H6a2 2 0 01-2-2v-5z" />
@@ -115,7 +115,7 @@ const InNagpur = () => {
       alt: "Raman Science Centre exhibits in Nagpur",
       paragraphs: [
         "Raman Science Centre is a must-visit for students and science lovers. With interactive exhibits, fun experiments, and a planetarium, it makes learning exciting for families and school groups.",
-        "With Nagpur car rental services from Cozy Cabz, exploring these attractions becomes easy, comfortable, and memorable.",
+        "With Nagpur car rental services from CozyCabz, exploring these attractions becomes easy, comfortable, and memorable.",
       ],
     },
   ];
@@ -123,11 +123,11 @@ const InNagpur = () => {
   const faqs = [
     {
       q: "How much does car rental in Nagpur cost per day?",
-      a: "Economy rides start at ₹12/km, sedans from ₹25/km, and luxury cars from ₹35/km. Cozy Cabz offers transparent car rental Nagpur rates.",
+      a: "Economy rides start at ₹12/km, sedans from ₹25/km, and luxury cars from ₹35/km. CozyCabz offers transparent car rental Nagpur rates.",
     },
     {
       q: "Can I book a self drive car in Nagpur?",
-      a: "Yes. Cozy Cabz provides self drive cars in Nagpur and self driven cars in Nagpur for privacy and flexibility.",
+      a: "Yes. CozyCabz provides self drive cars in Nagpur and self driven cars in Nagpur for privacy and flexibility.",
     },
     {
       q: "Do you provide cars for outstation travel?",
@@ -135,7 +135,7 @@ const InNagpur = () => {
     },
     {
       q: "Can I hire just a driver in Nagpur?",
-      a: "Yes. Cozy Cabz also provides driver on hire Nagpur services for your personal vehicle.",
+      a: "Yes. CozyCabz also provides driver on hire Nagpur services for your personal vehicle.",
     },
     {
       q: "Do you offer SUVs or 7-seater rentals?",
@@ -240,7 +240,7 @@ const InNagpur = () => {
           <p className="heroeco__sub">
             Nagpur, the Orange City of India, blends history, culture, and
             commerce with Deekshabhoomi, Sitabuldi Fort, Futala Lake, and
-            business hubs.That’s why Cozy Cabz offers car rental in Nagpur with
+            business hubs.That’s why CozyCabz offers car rental in Nagpur with
             driver and self drive cars in Nagpur. From daily rentals to luxury
             car rental.
           </p>
@@ -257,10 +257,10 @@ const InNagpur = () => {
         <div className="attractions__container">
           <header className="attractions__head">
             <h2 id="attractions-title">
-              Must-Visit Places in Nagpur with Cozy Cabz
+              Must-Visit Places in Nagpur with CozyCabz
             </h2>
             <p>
-              With Cozy Cabz rent a car in Nagpur, you can explore the city’s
+              With CozyCabz rent a car in Nagpur, you can explore the city’s
               cultural landmarks, spiritual sites, and scenic spots at your own
               pace, without worrying about traffic or parking.
             </p>

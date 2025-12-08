@@ -20,7 +20,7 @@ const InLucknow = () => {
   const items = [
     {
       title: "Professional & Verified Drivers",
-      desc: "Our chauffeurs are trained, background-checked, and know Lucknow’s routes—from Chowk to Gomti Nagar, Hazratganj to Charbagh Railway Station. For dependable car hire in Lucknow, Cozy Cabz is the right choice.",
+      desc: "Our chauffeurs are trained, background-checked, and know Lucknow’s routes—from Chowk to Gomti Nagar, Hazratganj to Charbagh Railway Station. For dependable car hire in Lucknow, CozyCabz is the right choice.",
       icon: (
         // Shield check
         <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -31,7 +31,7 @@ const InLucknow = () => {
     },
     {
       title: "Wide Range of Vehicles",
-      desc: "From hatchbacks and sedans to SUVs and tempo travelers, our fleet covers all needs. Whether you’re looking for a car on rent in Lucknow for a day or a self drive car in Lucknow for privacy, Cozy Cabz has flexible options.",
+      desc: "From hatchbacks and sedans to SUVs and tempo travelers, our fleet covers all needs. Whether you’re looking for a car on rent in Lucknow for a day or a self drive car in Lucknow for privacy, CozyCabz has flexible options.",
       icon: (
         // Sedan
         <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -42,7 +42,7 @@ const InLucknow = () => {
     },
     {
       title: "Transparent & Affordable Pricing",
-      desc: "With Cozy Cabz, you get upfront quotes with no hidden charges. Our Lucknow car rental services include driver fees, tolls, parking, and fuel estimates—making us one of the best car rental in Lucknow.",
+      desc: "With CozyCabz, you get upfront quotes with no hidden charges. Our Lucknow car rental services include driver fees, tolls, parking, and fuel estimates—making us one of the best car rental in Lucknow.",
       icon: (
         // Tag
         <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -65,7 +65,7 @@ const InLucknow = () => {
     },
     {
       title: "Safety & Hygiene First",
-      desc: "Every vehicle is sanitized after each trip, GPS-enabled, and fully insured. Families, corporates, and tourists trust Cozy Cabz for safe car rentals in Lucknow.",
+      desc: "Every vehicle is sanitized after each trip, GPS-enabled, and fully insured. Families, corporates, and tourists trust CozyCabz for safe car rentals in Lucknow.",
       icon: (
         // Headset
         <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -122,7 +122,7 @@ const InLucknow = () => {
       alt: "Lucknow Zoo (Nawab Wajid Ali Shah Zoological Garden)",
       paragraphs: [
         "Also known as Nawab Wajid Ali Shah Zoological Garden, Lucknow Zoo is a family favorite. Home to tigers, lions, elephants, and rare birds, it offers both education and entertainment. The zoo also has a toy train and nature museum, making it ideal for children and wildlife lovers.",
-        "With Lucknow car rental services from Cozy Cabz, visiting these attractions becomes comfortable, convenient, and enjoyable, giving you the freedom to discover the city’s charm.",
+        "With Lucknow car rental services from CozyCabz, visiting these attractions becomes comfortable, convenient, and enjoyable, giving you the freedom to discover the city’s charm.",
       ],
     },
   ];
@@ -130,11 +130,11 @@ const InLucknow = () => {
   const faqs = [
     {
       q: "How much does car rental in Lucknow cost?",
-      a: "Economy rides start at ₹12/km, sedans at ₹25/km, and luxury cars at ₹35/km. Cozy Cabz offers transparent Lucknow car rental rates.",
+      a: "Economy rides start at ₹12/km, sedans at ₹25/km, and luxury cars at ₹35/km. CozyCabz offers transparent Lucknow car rental rates.",
     },
     {
       q: "Can I book a car rental in Lucknow with driver for outstation trips?",
-      a: "Yes. Cozy Cabz provides one-way and round-trip rental cars in Lucknow for nearby destinations.",
+      a: "Yes. CozyCabz provides one-way and round-trip rental cars in Lucknow for nearby destinations.",
     },
     {
       q: "Do you provide airport transfers in Lucknow?",
@@ -142,11 +142,11 @@ const InLucknow = () => {
     },
     {
       q: "Are self-drive cars available in Lucknow?",
-      a: "Yes. Cozy Cabz offers Lucknow car rental self drive options for those who prefer privacy.",
+      a: "Yes. CozyCabz offers Lucknow car rental self drive options for those who prefer privacy.",
     },
     {
       q: "Do you provide drivers for personal cars?",
-      a: "Yes, Cozy Cabz offers driver on rent in Lucknow, making your personal travel safe and easy.",
+      a: "Yes, CozyCabz offers driver on rent in Lucknow, making your personal travel safe and easy.",
     },
   ];
 
@@ -248,7 +248,7 @@ const InLucknow = () => {
           <p className="heroeco__sub">
             Lucknow, the City of Nawabs, blends Mughal architecture, vibrant
             markets, and rich culture. Yet exploring can be difficult without
-            the right transport. That’s why Cozy Cabz Car Rental in Lucknow with
+            the right transport. That’s why CozyCabz Car Rental in Lucknow with
             driver ensures safe, smooth rides for tourists, corporates,
             families, and outstation trips
           </p>
@@ -265,10 +265,10 @@ const InLucknow = () => {
         <div className="attractions__container">
           <header className="attractions__head">
             <h2 id="attractions-title">
-              Must-Visit Places in Lucknow with Cozy Cabz
+              Must-Visit Places in Lucknow with CozyCabz
             </h2>
             <p>
-              With Cozy Cabz car rental Lucknow, exploring the city’s cultural
+              With CozyCabz car rental Lucknow, exploring the city’s cultural
               gems and modern attractions becomes easy and stress-free. You can
               travel at your own pace without worrying about parking or traffic.
             </p>

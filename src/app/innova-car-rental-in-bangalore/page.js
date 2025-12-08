@@ -105,19 +105,19 @@ const Innovainbangalore = () => {
     <div className="innova-page">
       <head>
         <title>
-          Innova Car Rental in Bangalore | Cozy Cabz with Driver & Self Drive
+          Innova Car Rental in Bangalore | CozyCabz with Driver & Self Drive
         </title>
         <meta
           name="description"
-          content="Book Innova Crysta or Hycross in Bangalore with driver or self drive options. Cozy Cabz offers airport pickup, outstation trips, and local sightseeing with verified chauffeurs."
+          content="Book Innova Crysta or Hycross in Bangalore with driver or self drive options. CozyCabz offers airport pickup, outstation trips, and local sightseeing with verified chauffeurs."
         />
         <meta
           property="og:title"
-          content="Innova Car Rental in Bangalore | Cozy Cabz with Driver & Self Drive"
+          content="Innova Car Rental in Bangalore | CozyCabz with Driver & Self Drive"
         />
         <meta
           property="og:description"
-          content="Hire Innova in Bangalore for family, business, or airport travel. Clean, safe, and comfortable rides by Cozy Cabz with 24×7 service support."
+          content="Hire Innova in Bangalore for family, business, or airport travel. Clean, safe, and comfortable rides by CozyCabz with 24×7 service support."
         />
         <meta property="og:image" content="/innova-1.png" />
         <meta property="og:type" content="website" />
@@ -154,7 +154,7 @@ const Innovainbangalore = () => {
         <div className="innova-highlight-box">
           <p>
             Bangalore, India’s tech hub, is known for its busy roads and modern
-            lifestyle. Cozy Cabz Innova car rental in Bangalore provides a
+            lifestyle. CozyCabz Innova car rental in Bangalore provides a
             premium travel solution for both corporate and personal trips. Ideal
             for airport transfers, meetings, or exploring places like Lalbagh,
             Cubbon Park, and Nandi Hills.

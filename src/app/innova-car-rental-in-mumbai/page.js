@@ -105,19 +105,19 @@ const Innovainmumbai = () => {
     <div className="innova-page">
       <head>
         <title>
-          Innova Car Rental in Mumbai | Cozy Cabz – Crysta & Hycross with Driver
+          Innova Car Rental in Mumbai | CozyCabz – Crysta & Hycross with Driver
         </title>
         <meta
           name="description"
-          content="Hire Toyota Innova Crysta or Hycross in Mumbai for airport transfers, business trips, or weekend getaways. 24×7 chauffeur service, clean cars & transparent pricing with Cozy Cabz."
+          content="Hire Toyota Innova Crysta or Hycross in Mumbai for airport transfers, business trips, or weekend getaways. 24×7 chauffeur service, clean cars & transparent pricing with CozyCabz."
         />
         <meta
           property="og:title"
-          content="Innova Car Rental in Mumbai | Cozy Cabz – Reliable Chauffeur Service"
+          content="Innova Car Rental in Mumbai | CozyCabz – Reliable Chauffeur Service"
         />
         <meta
           property="og:description"
-          content="Book Innova car rental in Mumbai for airport pickup, outstation travel, and sightseeing. Cozy Cabz offers comfort, safety, and affordability for every trip."
+          content="Book Innova car rental in Mumbai for airport pickup, outstation travel, and sightseeing. CozyCabz offers comfort, safety, and affordability for every trip."
         />
         <meta property="og:image" content="/innova-6.png" />
         <meta property="og:type" content="website" />
@@ -152,7 +152,7 @@ const Innovainmumbai = () => {
         <div className="innova-highlight-box">
           <p>
             Mumbai, India’s financial hub, is a blend of fast life and scenic
-            drives. Cozy Cabz Innova car rental in Mumbai offers a luxury
+            drives. CozyCabz Innova car rental in Mumbai offers a luxury
             experience for corporate meetings, family travel, or airport
             commutes.
           </p>
