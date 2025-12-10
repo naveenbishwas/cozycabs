@@ -76,8 +76,6 @@ const CityForm = () => {
     setFormData((s) => ({ ...s, serviceType: service, vehicleType: "" }));
   };
 
-  console.log("FORM DATA:", formData);
-
   const handleSubmitEmailJS = async (e) => {
     e.preventDefault();
 
