@@ -364,28 +364,22 @@ const CityForm = () => {
                   required
                 />
               </div> */}
-              <div className="form-row travellers-select">
-                <select
+              <div className="form-row travellers-number">
+                <input
+                  type="number"
                   name="travellers"
+                  placeholder="No. of Travellers"
                   value={formData.travellers}
+                  min={1}
+                  max={10}
                   onChange={(e) =>
                     setFormData({
                       ...formData,
-                      travellers: Number(e.target.value),
+                      travellers: Math.max(1, Number(e.target.value || 1)),
                     })
                   }
                   required
-                >
-                  {Array.from({ length: 10 }, (_, i) => i + 1).map((num) => (
-                    <option key={num} value={num}>
-                      {num} Traveller{num > 1 ? "s" : ""}
-                    </option>
-                  ))}
-                </select>
-
-                <span className="dropdown-icon">
-                  <DropdownIcon />
-                </span>
+                />
               </div>
             </div>
 
