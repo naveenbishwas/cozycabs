@@ -332,7 +332,6 @@ const CityForm = () => {
                 selected={startDate}
                 onChange={(date) => {
                   setStartDate(date);
-
                   setFormData((s) => ({
                     ...s,
                     date: date
@@ -350,6 +349,8 @@ const CityForm = () => {
                 showPopperArrow={false}
                 calendarClassName="coxy-calendar"
                 className="date-input"
+                popperPlacement="bottom-start"
+                portalId="datepicker-portal"
               />
 
               {/* <div className="form-row" id="travel-input">

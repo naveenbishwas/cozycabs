@@ -149,6 +149,7 @@ export default function RootLayout({ children }) {
 
         {children}
         <Whatsapp />
+        <div id="datepicker-portal"></div>
       </body>
     </html>
   );
