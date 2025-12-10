@@ -100,7 +100,7 @@ const CityForm = () => {
       if (!data.success) throw new Error(data.error || "Failed sending email");
 
       // alert("Thanks! Your enquiry has been sent.");
-      router.push("/ThankuPage");
+      router.push("/ThankYouPage");
 
       setFormData({
         name: "",

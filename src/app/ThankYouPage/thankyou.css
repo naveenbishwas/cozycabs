@@ -1,0 +1,120 @@
+/* Page base */
+.page {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
+
+/* Background image */
+.bg-image {
+  position: absolute;
+  inset: 0;
+  background-image: url("https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?q=80&w=2070");
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
+
+.bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+/* Content wrapper */
+.content-wrapper {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 16px;
+}
+
+/* Container */
+.container {
+  max-width: 960px;
+  width: 100%;
+}
+
+/* Card wrapper */
+.card-wrapper {
+  position: relative;
+}
+
+/* Decorative curve */
+.curve {
+  position: absolute;
+  left: -128px;
+  top: 0;
+  bottom: 0;
+  width: 256px;
+  background: #fff;
+  border-radius: 0 999px 999px 0;
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .curve {
+    display: none;
+  }
+}
+
+/* Card */
+.card {
+  background: #ffffff;
+  border-radius: 32px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
+  padding: 64px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .card {
+    padding: 48px 24px;
+  }
+}
+
+/* Text styles */
+.title {
+  font-size: 42px;
+  color: #0840ba;
+  margin-bottom: 24px;
+}
+
+.message {
+  color: #616666;
+  max-width: 600px;
+  margin: 0 auto 24px;
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+.secondary {
+  margin-top: 16px;
+}
+
+/* Button */
+.btn-wrap {
+  margin-top: 32px;
+}
+
+.download-btn {
+  font-weight: 600;
+  color: #fff;
+  padding: 14px 46px;
+  font-size: 16px;
+  border: none;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #d42d2d, #7b0c0c);
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.download-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
