@@ -92,18 +92,6 @@ textarea {
   text-align: left;
   margin-top: 10px;
 }
-.terms {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 14px;
-  color: #333;
-}
-
-.terms input[type="checkbox"] {
-  width: unset !important;
-  height: auto !important;
-}
 
 .custom-dropdown {
   position: relative;
@@ -128,13 +116,100 @@ textarea {
   align-items: center;
 }
 
-.terms a {
-  color: #ff3b3b;
-  text-decoration: none;
+.travellers-select {
+  position: relative;
+}
+
+.travellers-select select {
+  width: 100%;
+  padding: 0.9rem 2.8rem 0.9rem 1rem;
+  font-size: 0.95rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fff;
+  appearance: none; /* removes default arrow */
+  -webkit-appearance: none;
+  cursor: pointer;
+}
+
+.travellers-select select:focus {
+  outline: none;
+  border-color: #e96301;
+}
+
+.travellers-select .dropdown-icon {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #666;
+}
+
+/* Input */
+.date-input {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+/* Calendar container */
+.coxy-calendar {
+  border-radius: 14px;
+  border: none;
+  padding: 0.75rem;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.18);
+}
+
+/* Header */
+.calendar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #d80117;
+  color: #fff;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
   font-weight: 600;
 }
-.terms a:hover {
-  text-decoration: underline;
+
+.calendar-header button {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+/* Week days */
+.react-datepicker__day-name {
+  color: #666;
+  font-weight: 600;
+}
+
+/* Days */
+.react-datepicker__day {
+  border-radius: 8px;
+}
+
+.react-datepicker__day:hover {
+  background: #ffe2cf;
+}
+
+/* Selected day */
+.react-datepicker__day--selected,
+.react-datepicker__day--keyboard-selected {
+  background: #d80117 !important;
+  color: #fff !important;
+}
+
+/* Disabled days */
+.react-datepicker__day--disabled {
+  color: #ccc;
 }
 
 /* Button */
@@ -289,5 +364,66 @@ textarea {
   .terms p {
     font-size: 10px;
     max-width: 80%;
+  }
+}
+
+.terms-checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 0.85rem;
+  color: #555;
+  cursor: pointer;
+  line-height: 1.5;
+}
+
+.terms-checkbox input {
+  display: none;
+}
+
+/* Custom checkbox */
+.terms-checkbox .checkmark {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  position: relative;
+  margin-top: 2px;
+  transition: all 0.2s ease;
+}
+
+/* Checked state */
+.terms-checkbox input:checked + .checkmark {
+  background: #d80117;
+  border-color: #d80117;
+}
+
+.terms-checkbox input:checked + .checkmark::after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 2px;
+  width: 4px;
+  height: 8px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+/* Links */
+.terms-checkbox a {
+  color: #d80117;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.terms-checkbox a:hover {
+  text-decoration: underline;
+}
+
+/* Mobile alignment */
+@media (max-width: 600px) {
+  .terms-checkbox {
+    font-size: 0.8rem;
   }
 }

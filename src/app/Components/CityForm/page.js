@@ -3,20 +3,25 @@
 import React, { useRef, useState } from "react";
 import Image from "next/image";
 import "./cityform.css";
+import { useRouter } from "next/navigation";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 const CityForm = () => {
   const formRef = useRef(null);
+  const router = useRouter();
 
   const [selectedService, setSelectedService] = useState("");
   const [vehicleOptions, setVehicleOptions] = useState([]);
   const [sending, setSending] = useState(false);
+  const [startDate, setStartDate] = useState(null);
 
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phoneCode: "+91",
     phone: "",
-    travellers: 1,
+    travellers: "Number of Travellers",
     date: "",
     businessService: "",
     city: "",
@@ -39,12 +44,6 @@ const CityForm = () => {
   const handlePhoneChange = (e) => {
     const value = e.target.value.replace(/\D/g, "").slice(0, 10);
     setFormData((s) => ({ ...s, phone: value }));
-  };
-
-  // Prevent negative travellers, minimum 1
-  const handleTravellerChange = (e) => {
-    const val = Math.max(1, Number(e.target.value || 1));
-    setFormData((s) => ({ ...s, travellers: val }));
   };
 
   const serviceToVehicles = {
@@ -77,8 +76,7 @@ const CityForm = () => {
     setFormData((s) => ({ ...s, serviceType: service, vehicleType: "" }));
   };
 
-  // console.log("Sending client email to:", process.env.MAIL_TO);
-  // console.log("Sending user email to:", body.email);
+  console.log("FORM DATA:", formData);
 
   const handleSubmitEmailJS = async (e) => {
     e.preventDefault();
@@ -101,14 +99,15 @@ const CityForm = () => {
 
       if (!data.success) throw new Error(data.error || "Failed sending email");
 
-      alert("Thanks! Your enquiry has been sent.");
+      // alert("Thanks! Your enquiry has been sent.");
+      router.push("/ThankuPage");
 
       setFormData({
         name: "",
         email: "",
         phoneCode: "+91",
         phone: "",
-        travellers: 1,
+        travellers: "No of Travellers",
         date: "",
         businessService: "",
         city: "",
@@ -331,28 +330,63 @@ const CityForm = () => {
                   <DropdownIcon />
                 </span>
               </div>
+              <DatePicker
+                selected={startDate}
+                onChange={(date) => {
+                  setStartDate(date);
 
-              <input
-                type="date"
-                name="date"
-                min={today}
-                value={formData.date}
-                onChange={(e) =>
-                  setFormData((s) => ({ ...s, date: e.target.value }))
-                }
-                required
+                  setFormData((s) => ({
+                    ...s,
+                    date: date
+                      ? date.toLocaleDateString("en-GB", {
+                          day: "2-digit",
+                          month: "short",
+                          year: "numeric",
+                        })
+                      : "",
+                  }));
+                }}
+                placeholderText="Select Date"
+                dateFormat="dd MMM yyyy"
+                minDate={new Date()}
+                showPopperArrow={false}
+                calendarClassName="coxy-calendar"
+                className="date-input"
               />
 
-              <div className="form-row" id="travel-input">
+              {/* <div className="form-row" id="travel-input">
                 <input
                   type="number"
                   placeholder="No. of Travellers"
                   name="travellers"
                   value={formData.travellers}
-                  onChange={handleTravellerChange}
-                  min="1"
+                  // onChange={handleTravellerChange}
+                  // min="1"
                   required
                 />
+              </div> */}
+              <div className="form-row travellers-select">
+                <select
+                  name="travellers"
+                  value={formData.travellers}
+                  onChange={(e) =>
+                    setFormData({
+                      ...formData,
+                      travellers: Number(e.target.value),
+                    })
+                  }
+                  required
+                >
+                  {Array.from({ length: 10 }, (_, i) => i + 1).map((num) => (
+                    <option key={num} value={num}>
+                      {num} Traveller{num > 1 ? "s" : ""}
+                    </option>
+                  ))}
+                </select>
+
+                <span className="dropdown-icon">
+                  <DropdownIcon />
+                </span>
               </div>
             </div>
 
@@ -407,17 +441,6 @@ const CityForm = () => {
                 </span>
               </div>
 
-              {/* City Input */}
-              {/* <input
-                type="text"
-                name="city"
-                placeholder="Enter City Name"
-                value={formData.city}
-                onChange={(e) =>
-                  setFormData((s) => ({ ...s, city: e.target.value }))
-                }
-                required
-              /> */}
               <div className="custom-dropdown">
                 <select
                   name="city"
@@ -454,7 +477,7 @@ const CityForm = () => {
 
             {/* Footer */}
             <div className="form-footer">
-              <label className="terms">
+              <label className="terms-checkbox">
                 <input
                   type="checkbox"
                   name="accepted_terms"
@@ -464,10 +487,19 @@ const CityForm = () => {
                   }
                   required
                 />
+
+                <span className="checkmark"></span>
+
                 <p>
-                  By clicking <strong>"Send Enquiry"</strong> button, you agree
-                  to our <a href="#">Terms & Conditions</a> and{" "}
-                  <a href="#">Privacy Policy</a>.
+                  By clicking <strong>“Send Enquiry”</strong>, you agree to our{" "}
+                  <a href="/terms" target="_blank">
+                    Terms & Conditions
+                  </a>{" "}
+                  and{" "}
+                  <a href="/privacy-policy" target="_blank">
+                    Privacy Policy
+                  </a>
+                  .
                 </p>
               </label>
 
