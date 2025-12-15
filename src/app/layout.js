@@ -129,6 +129,24 @@ export default function RootLayout({ children }) {
           `}
         </Script>
 
+        <Script id="google-tags" strategy="afterInteractive">
+          {`
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+
+    gtag('js', new Date());
+
+    // GA4
+    gtag('config', 'G-CVMF02X5Z3');
+
+    // Google Ads (existing)
+    gtag('config', 'AW-596807168');
+
+    // Google Ads (NEW)
+    gtag('config', 'AW-650029308');
+  `}
+        </Script>
+
         <title>Car Rental Service in India | CozyCabz</title>
         <meta
           name="description"
