@@ -33,6 +33,7 @@ export default function SiteFooter() {
                 <li>
                   <Link href="tel:+919220994735">+91 92209 94735</Link>
                 </li>
+                |
                 <li>
                   <Link href="tel:+919899132460">+91 9899132460</Link>
                 </li>
