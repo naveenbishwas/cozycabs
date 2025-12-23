@@ -1,0 +1,120 @@
+/* ---- Hero Section ---- */
+.support-hero {
+  position: relative;
+  background: linear-gradient(120deg, #ff3b3b90, #000000c0),
+    url("/support-bg.jpg") center/cover no-repeat;
+  color: #fff;
+  text-align: center;
+  padding: 150px 20px 140px;
+  margin-top: 4%;
+}
+.support-hero .overlay {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.support-hero h1 {
+  font-size: 46px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+.support-hero p {
+  font-size: 18px;
+  color: #f1f1f1;
+}
+
+/* ---- Main Wrapper ---- */
+.support-wrapper {
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 0 24px;
+}
+.support-wrapper h2 {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+.intro-text {
+  text-align: center;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+/* ---- Layout ---- */
+.support-main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+/* ---- Left Info ---- */
+.support-info h3 {
+  font-size: 20px;
+  color: #111;
+  margin-bottom: 12px;
+}
+.support-info ul {
+  list-style: none;
+  margin-bottom: 20px;
+  line-height: 1.7;
+}
+.support-info li {
+  color: #444;
+  margin-bottom: 6px;
+}
+.support-info p {
+  color: #444;
+  line-height: 1.7;
+}
+
+/* ---- Right Cards ---- */
+.support-grid {
+  display: grid;
+  gap: 20px;
+}
+.support-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.support-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+.support-card h4 {
+  color: #d40000;
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+.support-card p {
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ---- Footer ---- */
+.support-footer {
+  margin-top: 40px;
+  text-align: center;
+  border-top: 1px solid #eee;
+  padding-top: 16px;
+  font-weight: 600;
+  color: #222;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 900px) {
+  .support-main {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .support-hero {
+    padding: 80px 20px 60px;
+  }
+  .support-card {
+    padding: 20px;
+  }
+}
