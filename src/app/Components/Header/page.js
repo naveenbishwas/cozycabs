@@ -107,14 +107,14 @@ export default function Header() {
                 </li>
               </ul>
             </li>
-            <Link href="/Client-Section" onClick={() => setIsOpen(false)}>
+            <Link href="/client-section" onClick={() => setIsOpen(false)}>
               Our Clients
             </Link>
             <li>
-              <Link href="/About-us">About</Link>
+              <Link href="/about-us">About</Link>
             </li>
             <li>
-              <Link href="/Contact-us">Contact</Link>
+              <Link href="/contact-us">Contact</Link>
             </li>
           </ul>
         </nav>
@@ -256,17 +256,17 @@ export default function Header() {
             )}
           </li>
           <li>
-            <Link href="/Client-Section" onClick={() => setIsOpen(false)}>
+            <Link href="/client-section" onClick={() => setIsOpen(false)}>
               Our Clients
             </Link>
           </li>
           <li>
-            <Link href="/About-us" onClick={() => setIsOpen(false)}>
+            <Link href="/about-us" onClick={() => setIsOpen(false)}>
               About
             </Link>
           </li>
           <li>
-            <Link href="/Contact-us" onClick={() => setIsOpen(false)}>
+            <Link href="/contact-us" onClick={() => setIsOpen(false)}>
               Contact
             </Link>
           </li>

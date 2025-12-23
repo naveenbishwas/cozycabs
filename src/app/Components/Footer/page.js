@@ -471,22 +471,22 @@ export default function SiteFooter() {
           <p className="copyright">© 2024 CozyCabz. All rights reserved.</p>
           <ul className="footer__legal">
             <li>
-              <Link href="/Privacy-Policy">Privacy Policy</Link>
+              <Link href="/privacy-policy">Privacy Policy</Link>
             </li>
             <li>
-              <Link href="/About-us">About us</Link>
+              <Link href="/about-us">About us</Link>
             </li>
             <li>
-              <Link href="/Contact-us">Contact us</Link>
+              <Link href="/contact-us">Contact us</Link>
             </li>
             <li>
-              <Link href="/Terms-&-Condition">Terms of Service</Link>
+              <Link href="/terms-&-condition">Terms of Service</Link>
             </li>
             <li>
-              <Link href="/Refund-Policy">Refund Policy</Link>
+              <Link href="/refund-policy">Refund Policy</Link>
             </li>
             <li>
-              <Link href="/Support">Support</Link>
+              <Link href="/support">Support</Link>
             </li>
           </ul>
         </div>
