@@ -228,57 +228,6 @@ textarea {
   background: #e03434;
 }
 
-/* Mobile responsiveness */
-@media (max-width: 992px) {
-  .form-row {
-    grid-template-columns: 1fr;
-  }
-  .submit-btn {
-    align-self: center;
-    align-self: center;
-    font-size: 11px;
-    padding: 5px 15px;
-    border-radius: 10px;
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1200px) {
-  .why-card {
-    width: 100% !important;
-  }
-
-  .about__grid {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .about__imagewrap {
-    height: auto;
-    width: 100%;
-  }
-
-  .about__image {
-    object-fit: cover;
-    object-position: center;
-    width: 100%;
-    height: auto;
-  }
-
-  .hero {
-    height: 40vh;
-    background: url(/hm.png) center / cover no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    margin-top: 6%;
-  }
-
-  .hero h1 {
-    font-size: 3rem;
-  }
-}
-
 .bookcar-form input,
 .bookcar-form select,
 .bookcar-form textarea {
@@ -348,25 +297,6 @@ textarea {
   color: #666;
 }
 
-@media screen and (max-width: 768px) {
-  .bookcar-section .bookcar-form input,
-  .bookcar-section .bookcar-form select,
-  .bookcar-section .bookcar-form textarea {
-    height: 40px !important;
-    font-size: 13px !important;
-    line-height: unset !important;
-  }
-
-  .bookcar-form {
-    gap: 0 !important;
-  }
-
-  .terms p {
-    font-size: 10px;
-    max-width: 80%;
-  }
-}
-
 .terms-checkbox {
   display: flex;
   align-items: flex-start;
@@ -421,7 +351,219 @@ textarea {
   text-decoration: underline;
 }
 
-/* Mobile alignment */
+/* ========================================
+   BIG SCREEN OPTIMIZATIONS (1201px+)
+   ======================================== */
+
+@media screen and (min-width: 1201px) {
+  .bookcar-section {
+    padding: 80px 40px 100px;
+  }
+
+  .bookcar-title {
+    font-size: 42px;
+    margin-bottom: 50px;
+  }
+
+  .bookcar-form {
+    max-width: 1400px;
+    gap: 25px;
+  }
+
+  .form-row {
+    gap: 25px;
+    margin-bottom: 15px !important;
+  }
+
+  .bookcar-form input,
+  .bookcar-form select,
+  .bookcar-form textarea {
+    height: 60px !important;
+    padding: 18px 16px !important;
+    font-size: 16px !important;
+    border-radius: 8px !important;
+  }
+
+  .bookcar-form select {
+    height: 60px !important;
+    line-height: 60px !important;
+    padding: 0 16px !important;
+  }
+
+  .bookcar-form textarea {
+    height: 140px !important;
+  }
+
+  .submit-btn {
+    padding: 16px 40px;
+    font-size: 18px;
+  }
+
+  .form-footer {
+    gap: 30px;
+    margin-top: 15px;
+  }
+
+  .terms-checkbox {
+    font-size: 0.9rem;
+  }
+}
+
+/* Extra large screens (1600px+) */
+@media screen and (min-width: 1600px) {
+  .bookcar-section {
+    padding: 100px 60px 120px;
+  }
+
+  .bookcar-title {
+    font-size: 48px;
+    margin-bottom: 60px;
+  }
+
+  .bookcar-form {
+    max-width: 1600px;
+    gap: 30px;
+  }
+
+  .form-row {
+    gap: 30px;
+    margin-bottom: 20px !important;
+  }
+
+  .bookcar-form input,
+  .bookcar-form select,
+  .bookcar-form textarea {
+    height: 65px !important;
+    padding: 20px 18px !important;
+    font-size: 17px !important;
+    border-radius: 10px !important;
+  }
+
+  .bookcar-form select {
+    height: 65px !important;
+    line-height: 65px !important;
+    padding: 0 18px !important;
+  }
+
+  .bookcar-form textarea {
+    height: 160px !important;
+  }
+
+  .submit-btn {
+    padding: 18px 50px;
+    font-size: 19px;
+  }
+
+  .terms-checkbox {
+    font-size: 0.95rem;
+  }
+}
+
+/* Ultra-wide screens (2000px+) */
+@media screen and (min-width: 2000px) {
+  .bookcar-form {
+    max-width: 1800px;
+  }
+
+  .form-row {
+    gap: 35px;
+  }
+
+  .bookcar-form input,
+  .bookcar-form select,
+  .bookcar-form textarea {
+    height: 70px !important;
+    padding: 22px 20px !important;
+    font-size: 18px !important;
+  }
+
+  .bookcar-form select {
+    height: 70px !important;
+    line-height: 70px !important;
+    padding: 0 20px !important;
+  }
+
+  .bookcar-form textarea {
+    height: 180px !important;
+  }
+}
+
+/* ========================================
+   TABLET RESPONSIVENESS (Unchanged)
+   ======================================== */
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .why-card {
+    width: 100% !important;
+  }
+
+  .about__grid {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about__imagewrap {
+    height: auto;
+    width: 100%;
+  }
+
+  .about__image {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: auto;
+  }
+
+  .hero {
+    height: 40vh;
+    background: url(/hm.png) center / cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-top: 6%;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+  }
+}
+
+/* ========================================
+   MOBILE RESPONSIVENESS (Unchanged)
+   ======================================== */
+
+@media (max-width: 992px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  .submit-btn {
+    align-self: center;
+    font-size: 11px;
+    padding: 5px 15px;
+    border-radius: 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .bookcar-section .bookcar-form input,
+  .bookcar-section .bookcar-form select,
+  .bookcar-section .bookcar-form textarea {
+    height: 40px !important;
+    font-size: 13px !important;
+    line-height: unset !important;
+  }
+
+  .bookcar-form {
+    gap: 0 !important;
+  }
+
+  .terms p {
+    font-size: 10px;
+    max-width: 80%;
+  }
+}
+
 @media (max-width: 600px) {
   .terms-checkbox {
     font-size: 0.8rem;

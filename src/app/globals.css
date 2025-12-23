@@ -709,6 +709,13 @@ a {
   padding: 5px 0;
 }
 
+.desc {
+  overflow: hidden;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+}
+
 .heroeco__sub {
   font-size: 28px;
 }

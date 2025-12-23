@@ -213,7 +213,9 @@ const Economy = () => {
               <div className="slide-content">
                 <h2>{slide.heading}</h2>
                 <p>{slide.subtext}</p>
-                <button>Book Your Ride</button>
+                <Link href="#book-your-car">
+                  <button>Book Your Ride</button>
+                </Link>
               </div>
             </div>
           ))}
