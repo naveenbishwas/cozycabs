@@ -15,6 +15,7 @@ const Contact = () => {
 
   const [errors, setErrors] = useState({});
   const [touched, setTouched] = useState({});
+  const [sending, setSending] = useState(false);
 
   // Validation functions
   const validateFirstName = (value) => {
@@ -108,7 +109,7 @@ const Contact = () => {
   };
 
   // Handle form submission
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     // Mark all fields as touched
@@ -135,18 +136,43 @@ const Contact = () => {
     const hasErrors = Object.values(newErrors).some((error) => error !== "");
 
     if (!hasErrors) {
-      console.log("Form submitted successfully:", formData);
-      alert("Form submitted successfully!");
-      // Reset form
-      setFormData({
-        firstName: "",
-        lastName: "",
-        email: "",
-        phone: "",
-        message: "",
-      });
-      setTouched({});
-      setErrors({});
+      setSending(true);
+
+      try {
+        const res = await fetch("/api/send-mail", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            name: `${formData.firstName} ${formData.lastName}`,
+            email: formData.email,
+            phone: formData.phone,
+            message: formData.message,
+          }),
+        });
+
+        const data = await res.json();
+
+        if (!data.success)
+          throw new Error(data.error || "Failed sending email");
+
+        alert("Thank you! Your message has been sent successfully.");
+
+        // Reset form
+        setFormData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          phone: "",
+          message: "",
+        });
+        setTouched({});
+        setErrors({});
+      } catch (err) {
+        console.error("Error sending:", err);
+        alert("Something went wrong. Please try again.");
+      } finally {
+        setSending(false);
+      }
     }
   };
 
@@ -167,22 +193,17 @@ const Contact = () => {
       <section className="contact-hero">
         <div className="overlay">
           <h1>Contact Us</h1>
-          <p>We’d love to hear from you — let’s start a conversation.</p>
+          <p>We'd love to hear from you — let's start a conversation.</p>
         </div>
       </section>
 
       {/* ---- Main Contact Section ---- */}
       <section className="contact-wrapper">
-        <h2>Let’s Start a Conversation</h2>
-        {/* <p className="intro-text">
-          Ask how we can help you make your travel easier, safer, and more
-          reliable.
-        </p> */}
+        <h2>Let's Start a Conversation</h2>
 
         <div className="contact-main">
           {/* ---- Left Column ---- */}
           <div className="contact-info">
-            {/* <h4>Ask how we can help you:</h4> */}
             <ul>
               <li>
                 <strong>Book your ride with ease</strong>
@@ -294,8 +315,8 @@ const Contact = () => {
                 )}
               </div>
 
-              <button type="button" onClick={handleSubmit}>
-                Send Message
+              <button type="button" onClick={handleSubmit} disabled={sending}>
+                {sending ? "Sending..." : "Send Message"}
               </button>
             </div>
 
@@ -381,14 +402,19 @@ const Contact = () => {
           transition: all 0.3s ease;
         }
 
-        .contact-form button:hover {
+        .contact-form button:hover:not(:disabled) {
           background: linear-gradient(90deg, #e03434, #c00000);
           transform: translateY(-2px);
           box-shadow: 0 4px 12px rgba(212, 0, 0, 0.3);
         }
 
-        .contact-form button:active {
+        .contact-form button:active:not(:disabled) {
           transform: translateY(0);
+        }
+
+        .contact-form button:disabled {
+          opacity: 0.6;
+          cursor: not-allowed;
         }
 
         /* Mobile responsive */
