@@ -466,7 +466,7 @@ export default function SiteFooter() {
         </div>
 
         <hr className="footer__rule" />
-
+        {/* footer */}
         <div className="footer__bottom">
           <p className="copyright">© 2024 CozyCabz. All rights reserved.</p>
           <ul className="footer__legal">
