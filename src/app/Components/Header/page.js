@@ -106,11 +106,11 @@ export default function Header() {
                   <Link href="/our-fleet/buses-and-coach">Buses & Coach</Link>
                 </li>
               </ul>
-            </li>
+            {/* </li>
             <Link href="/client-section" onClick={() => setIsOpen(false)}>
               Our Clients
             </Link>
-            <li>
+            <li> */}
               <Link href="/about-us">About</Link>
             </li>
             <li>
@@ -255,11 +255,11 @@ export default function Header() {
               </ul>
             )}
           </li>
-          <li>
+          {/* <li>
             <Link href="/client-section" onClick={() => setIsOpen(false)}>
               Our Clients
             </Link>
-          </li>
+          </li> */}
           <li>
             <Link href="/about-us" onClick={() => setIsOpen(false)}>
               About
