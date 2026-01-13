@@ -37,7 +37,7 @@ const Whatsapp = () => {
 
         {/* WhatsApp Button */}
         <a
-          href="https://wa.me/9220994735?text=Hello%20there!%20I%20need%20help."
+      href="https://wa.me/9220994735?text=I%20want%20to%20book%20a%20cab%20for%20rental.%20Please%20share%20availability%20and%20price."
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Chat on WhatsApp"
