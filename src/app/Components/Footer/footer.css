@@ -624,12 +624,20 @@
   color: #d80117;
   margin-bottom: 20px;
 }
-
+h4.seo-heading {
+    text-transform: capitalize;
+    color: #d80117;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
 .seo-content {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   animation: fadeIn 0.3s ease-in-out;
+}
+.seo-content h5{
+  color: #fff;
 }
 
 button.seo-toggle-btn {

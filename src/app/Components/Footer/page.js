@@ -9,7 +9,7 @@ import { usePathname } from "next/navigation";
 export default function SiteFooter() {
   const [showInnova, setShowInnova] = useState(false);
   const [showMoreCities, setShowMoreCities] = useState(false);
-  const [showKeywords, setShowKeywords] = useState(false);
+  // const [showKeywords, setShowKeywords] = useState(false);
   
 const pathname = usePathname();
 
@@ -478,56 +478,50 @@ const currentCity = cityMatch
         </div>
 
 
+
 {/* ---- SEO Keywords Section (Only on City Pages) ---- */}
 {currentCity && (
   <div className="footer__seo">
-    <button
-      className="seo-toggle-btn"
-      onClick={() => setShowKeywords(!showKeywords)}
-    >
-      {showKeywords
-        ? `Hide ${currentCity} Searches ↑`
-        : `Popular Searches in ${currentCity} ↓`}
-    </button>
+    <h4 className="seo-heading">
+      Popular Searches in {currentCity}
+    </h4>
 
-    {showKeywords && (
-      <div className="seo-content">
-        {[
-          `Car Rental ${currentCity}`,
-          `Car Hire ${currentCity}`,
-          `Cab Service in ${currentCity}`,
-          `${currentCity} Taxi Service`,
-          `Best Cab Service in ${currentCity}`,
-          `Outstation Cabs from ${currentCity}`,
-          `One Way Taxi ${currentCity}`,
-          `Luxury Car Rental ${currentCity}`,
-          `Car Rental ${currentCity} Airport`,
-          `Monthly Car Rental ${currentCity}`,
-          `Car Rental ${currentCity} With Driver`,
-          `SUV Rental ${currentCity}`,
-          `Wedding Car Rental ${currentCity}`,
-          `Intercity Cab Service ${currentCity}`,
-          `Private Taxi Service ${currentCity}`,
-          `Taxi Booking ${currentCity}`,
-          `Online Cab Booking ${currentCity}`,
-          `Car Rental in ${currentCity} NCR`,
-          `Premium Car Rental ${currentCity}`,
-          `Chauffeur Driven Car Rental ${currentCity}`,
-          `Outstation Taxi Service ${currentCity}`,
-          `Car on Rent in ${currentCity}`,
-          `Car Rental Services in ${currentCity}`,
-          `Car Hire in ${currentCity} with Driver`,
-          `Full Day Car Rental ${currentCity}`,
-          `Long Term Car Rental ${currentCity}`,
-          `Car Rental Rates in ${currentCity}`,
-          `Best Taxi in ${currentCity}`,
-          `Local Cab Service in ${currentCity}`,
-          `Car Booking ${currentCity}`,
-        ].map((keyword, index) => (
-          <h5 key={index}>{keyword}</h5>
-        ))}
-      </div>
-    )}
+    <div className="seo-content">
+      {[
+        `Car Rental ${currentCity}`,
+        `Car Hire ${currentCity}`,
+        `Cab Service in ${currentCity}`,
+        `${currentCity} Taxi Service`,
+        `Best Cab Service in ${currentCity}`,
+        `Outstation Cabs from ${currentCity}`,
+        `One Way Taxi ${currentCity}`,
+        `Luxury Car Rental ${currentCity}`,
+        `Car Rental ${currentCity} Airport`,
+        `Monthly Car Rental ${currentCity}`,
+        `Car Rental ${currentCity} With Driver`,
+        `SUV Rental ${currentCity}`,
+        `Wedding Car Rental ${currentCity}`,
+        `Intercity Cab Service ${currentCity}`,
+        `Private Taxi Service ${currentCity}`,
+        `Taxi Booking ${currentCity}`,
+        `Online Cab Booking ${currentCity}`,
+        `Car Rental in ${currentCity} NCR`,
+        `Premium Car Rental ${currentCity}`,
+        `Chauffeur Driven Car Rental ${currentCity}`,
+        `Outstation Taxi Service ${currentCity}`,
+        `Car on Rent in ${currentCity}`,
+        `Car Rental Services in ${currentCity}`,
+        `Car Hire in ${currentCity} with Driver`,
+        `Full Day Car Rental ${currentCity}`,
+        `Long Term Car Rental ${currentCity}`,
+        `Car Rental Rates in ${currentCity}`,
+        `Best Taxi in ${currentCity}`,
+        `Local Cab Service in ${currentCity}`,
+        `Car Booking ${currentCity}`,
+      ].map((keyword, index) => (
+        <h5 key={index}>{keyword}</h5>
+      ))}
+    </div>
   </div>
 )}
 
