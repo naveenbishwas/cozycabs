@@ -638,6 +638,7 @@ h4.seo-heading {
 }
 .seo-content h5{
   color: #fff;
+  text-transform: lowercase;
 }
 
 button.seo-toggle-btn {
