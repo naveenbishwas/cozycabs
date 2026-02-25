@@ -4,6 +4,7 @@ import Image from "next/image";
 import React, { useState, useRef, useEffect } from "react";
 import "./OutOfStation.css";
 import NumberCounter from "@/app/Components/NumberCounter/page";
+import AllBookingCars from "@/app/Components/AllBookingCars/page";
 
 const CITIES = [
   "Amritsar",
@@ -340,6 +341,8 @@ export default function OutOfStation() {
         </div>
       </section>
       <NumberCounter />
+      {/* Delhi to Anywhere */}
+      <AllBookingCars />
     </>
   );
 }
