@@ -4,21 +4,25 @@ import Link from "next/link";
 import Image from "next/image";
 import "./footer.css";
 import { usePathname } from "next/navigation";
-
+import city from "../../../../src/app/all-city-data/city.json";
+import { GoEye, GoEyeClosed } from "react-icons/go";
 
 export default function SiteFooter() {
   const [showInnova, setShowInnova] = useState(false);
   const [showMoreCities, setShowMoreCities] = useState(false);
+  const [showService, setShowService] = useState(true);
   // const [showKeywords, setShowKeywords] = useState(false);
-  
-const pathname = usePathname();
 
-// Match URL like: /car-rental-in-delhi
-const cityMatch = pathname.match(/car-rental-in-([a-z-]+)/);
+  const pathname = usePathname();
+  const slug = pathname?.split("/").filter(Boolean)[0];
+  const cityName = slug?.split("in-")[1];
 
-const currentCity = cityMatch
-  ? cityMatch[1].replace(/-/g, " ")
-  : null;
+  const cityMatch = city.find((item) => item.city === cityName);
+
+  // Match URL like: /car-rental-in-delhi
+  // const cityMatch = pathname.match(/car-rental-in-([a-z-]+)/);
+
+  // const currentCity = cityMatch ? cityMatch[1].replace(/-/g, " ") : null;
 
   return (
     <footer className="site-footer">
@@ -477,55 +481,76 @@ const currentCity = cityMatch
           </div>
         </div>
 
+        {/* ---- SEO Keywords Section (Only on City Pages) ---- */}
+        {cityName && (
+          <div className="footer__seo">
+            <div className="footer__service-wrapper">
+              <h4 className="seo-heading">Popular Searches in {cityName}</h4>
+              <span>
+                {showService ? (
+                  <GoEye
+                    size={25}
+                    onClick={() => setShowService(!showService)}
+                  />
+                ) : (
+                  <GoEyeClosed
+                    size={25}
+                    onClick={() => setShowService(!showService)}
+                  />
+                )}
+              </span>
+            </div>
+            {showService && (
+              <div className="seo-content">
+                {cityMatch?.service.map((item, index) => (
+                  <h5 key={index}>{item}</h5>
+                ))}
+              </div>
+            )}
+            {/* <div className="seo-content">
+              {cityMatch?.service.map((item, index) => (
+                <h5 key={index}>{item}</h5>
+              ))}
+            </div> */}
 
-
-{/* ---- SEO Keywords Section (Only on City Pages) ---- */}
-{currentCity && (
-  <div className="footer__seo">
-    <h4 className="seo-heading">
-      Popular Searches in {currentCity}
-    </h4>
-
-    <div className="seo-content">
-      {[
-        `Car Rental ${currentCity}`,
-        `Car Hire ${currentCity}`,
-        `Cab Service in ${currentCity}`,
-        `${currentCity} Taxi Service`,
-        `Best Cab Service in ${currentCity}`,
-        `Outstation Cabs from ${currentCity}`,
-        `One Way Taxi ${currentCity}`,
-        `Luxury Car Rental ${currentCity}`,
-        `Car Rental ${currentCity} Airport`,
-        `Monthly Car Rental ${currentCity}`,
-        `Car Rental ${currentCity} With Driver`,
-        `SUV Rental ${currentCity}`,
-        `Wedding Car Rental ${currentCity}`,
-        `Intercity Cab Service ${currentCity}`,
-        `Private Taxi Service ${currentCity}`,
-        `Taxi Booking ${currentCity}`,
-        `Online Cab Booking ${currentCity}`,
-        `Car Rental in ${currentCity} NCR`,
-        `Premium Car Rental ${currentCity}`,
-        `Chauffeur Driven Car Rental ${currentCity}`,
-        `Outstation Taxi Service ${currentCity}`,
-        `Car on Rent in ${currentCity}`,
-        `Car Rental Services in ${currentCity}`,
-        `Car Hire in ${currentCity} with Driver`,
-        `Full Day Car Rental ${currentCity}`,
-        `Long Term Car Rental ${currentCity}`,
-        `Car Rental Rates in ${currentCity}`,
-        `Best Taxi in ${currentCity}`,
-        `Local Cab Service in ${currentCity}`,
-        `Car Booking ${currentCity}`,
-      ].map((keyword, index) => (
-        <h5 key={index}>{keyword}</h5>
-      ))}
-    </div>
-  </div>
-)}
-
-
+            {/* <div className="seo-content">
+              {[
+                `Car Rental ${currentCity}`,
+                `Car Hire ${currentCity}`,
+                `Cab Service in ${currentCity}`,
+                `${currentCity} Taxi Service`,
+                `Best Cab Service in ${currentCity}`,
+                `Outstation Cabs from ${currentCity}`,
+                `One Way Taxi ${currentCity}`,
+                `Luxury Car Rental ${currentCity}`,
+                `Car Rental ${currentCity} Airport`,
+                `Monthly Car Rental ${currentCity}`,
+                `Car Rental ${currentCity} With Driver`,
+                `SUV Rental ${currentCity}`,
+                `Wedding Car Rental ${currentCity}`,
+                `Intercity Cab Service ${currentCity}`,
+                `Private Taxi Service ${currentCity}`,
+                `Taxi Booking ${currentCity}`,
+                `Online Cab Booking ${currentCity}`,
+                `Car Rental in ${currentCity} NCR`,
+                `Premium Car Rental ${currentCity}`,
+                `Chauffeur Driven Car Rental ${currentCity}`,
+                `Outstation Taxi Service ${currentCity}`,
+                `Car on Rent in ${currentCity}`,
+                `Car Rental Services in ${currentCity}`,
+                `Car Hire in ${currentCity} with Driver`,
+                `Full Day Car Rental ${currentCity}`,
+                `Long Term Car Rental ${currentCity}`,
+                `Car Rental Rates in ${currentCity}`,
+                `Best Taxi in ${currentCity}`,
+                `Local Cab Service in ${currentCity}`,
+                `Car Booking ${currentCity}`,
+              ].map((keyword, index) => (
+                <h5 key={index}>{keyword}</h5>
+              ))}
+            </div> */}
+          </div>
+        )}
 
         <hr className="footer__rule" />
         {/* footer */}

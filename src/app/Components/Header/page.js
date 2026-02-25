@@ -41,6 +41,11 @@ export default function Header() {
               <span className="dropbtn">Our Services ▾</span>
               <ul className="dropdown-content">
                 <li>
+                  <Link href="/our-services/out-of-station">
+                    Out Of Station
+                  </Link>
+                </li>
+                <li>
                   <Link href="/our-services/corporate-car-rental">
                     Corporate Car Rental
                   </Link>
@@ -106,7 +111,7 @@ export default function Header() {
                   <Link href="/our-fleet/buses-and-coach">Buses & Coach</Link>
                 </li>
               </ul>
-            {/* </li>
+              {/* </li>
             <Link href="/client-section" onClick={() => setIsOpen(false)}>
               Our Clients
             </Link>
@@ -179,6 +184,11 @@ export default function Header() {
             </button>
             {servicesOpen && (
               <ul className="submenu" id="submenu">
+                <li>
+                  <Link href="/our-services/out-of-station">
+                    Out of Station
+                  </Link>
+                </li>
                 <li>
                   <Link href="/our-services/corporate-car-rental">
                     Corporate Car Rental

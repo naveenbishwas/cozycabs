@@ -129,7 +129,9 @@
   background: #1a1a1a;
   border: 1px solid #222;
   color: #fff;
-  transition: transform 0.2s ease, background 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
 }
 .footer__social a:hover {
   transform: translateY(-2px);
@@ -614,6 +616,16 @@
   margin-top: 40px;
   padding-top: 20px;
 }
+.footer__service-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer__service-wrapper span {
+  cursor: pointer;
+}
 
 .seo-toggle-btn {
   background: transparent;
@@ -625,10 +637,11 @@
   margin-bottom: 20px;
 }
 h4.seo-heading {
-    text-transform: capitalize;
-    color: #d80117;
-    font-size: 18px;
-    margin-bottom: 15px;
+  text-transform: capitalize;
+  color: #d80117;
+  font-size: 18px;
+  margin-bottom: 15px;
+  display: inline-block;
 }
 .seo-content {
   display: flex;
@@ -636,13 +649,13 @@ h4.seo-heading {
   gap: 20px;
   animation: fadeIn 0.3s ease-in-out;
 }
-.seo-content h5{
+.seo-content h5 {
   color: #fff;
   text-transform: lowercase;
 }
 
 button.seo-toggle-btn {
-    text-transform: capitalize;
+  text-transform: capitalize;
 }
 
 .seo-item h5 {
@@ -664,5 +677,74 @@ button.seo-toggle-btn {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+.footer__seo {
+  margin-top: 40px;
+
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+
+  padding: 0 20px;
+}
+
+/* Heading */
+.seo-heading {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 18px;
+  color: #fff;
+}
+
+/* GRID LAYOUT */
+.seo-content {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* default = big screen */
+  gap: 10px 18px;
+  margin: auto;
+}
+
+/* Each Item */
+.seo-item {
+  font-size: 14px;
+  color: #bdbdbd;
+  font-weight: 400;
+  line-height: 1.4;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.seo-item:hover {
+  color: #ffb300; /* amber hover (tumhare theme ke according) */
+}
+
+/* ===============================
+   RESPONSIVE BREAKPOINTS
+   =============================== */
+
+/* <= 1400px (Laptop) → 5 columns */
+@media (max-width: 1400px) {
+  .seo-content {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* <= 1024px (Tablet) → 3 columns */
+@media (max-width: 1024px) {
+  .seo-content {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* <= 640px (Mobile) → ALWAYS 2 columns */
+@media (max-width: 640px) {
+  .seo-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .seo-item {
+    font-size: 13px;
   }
 }

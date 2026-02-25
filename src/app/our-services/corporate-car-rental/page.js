@@ -80,7 +80,7 @@ const CorporateCarRental = () => {
               });
           }
         },
-        { threshold: 0.35 }
+        { threshold: 0.35 },
       );
 
       io.observe(rootRef.current);
@@ -109,7 +109,7 @@ const CorporateCarRental = () => {
       <section className="employee-transport section-container" id="desktop">
         <Image
           src="../service-red-desktop-42.jpeg"
-          width={1440}
+          width={1920}
           height={600}
           className="innova-backgound"
           alt="Background-img"
