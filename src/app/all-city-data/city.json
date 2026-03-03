@@ -3,12 +3,20 @@
     "id": 1,
     "city": "mumbai",
     "service": [
-      "mumbai to delhi cab",
-      "taxi from mumbai to delhi",
-      "mumbai to delhi car rental",
-      "car from mumbai to delhi",
-      "mumbai to delhi cab fare",
-      "cab from mumbai to delhi"
+      " mumbai to shirdi cab",
+      "mumbai to shirdi cab fare",
+      "cab from nasik to mumbai",
+      "taxi to lonavala from mumbai",
+      "trimbakeshwar to mumbai taxi",
+      "taxi from mumbai airport to shirdi",
+      "pune to mumbai airport cab sharing",
+      "mumbai to matheran cab",
+      "mumbai to goa cab charges",
+      "mumbai to aurangabad cab",
+      "cheap cab from pune to mumbai",
+      "mumbai to panchgani taxi",
+      "pune to mumbai airport shared taxi",
+      "taxi from vapi to mumbai"
     ]
   },
   {
@@ -566,6 +574,72 @@
       "vrindavan to delhi by car",
       "taxi for vrindavan from delhi",
       "vrindavan to new delhi taxi service"
+    ]
+  },
+  {
+    "id": 19,
+    "city": "bangalore",
+    "service": [""]
+  },
+  {
+    "id": 20,
+    "city": "ahmedabad",
+    "service": [
+      " ahmedabad to vadodara taxi",
+      "ahmedabad to surat cab",
+      "taxi from ahmedabad to rajkot",
+      "ahmedabad to dwarka cab",
+      "ahmedabad to anand cab",
+      "ahmedabad to statue of unity cab",
+      "taxi fare from ahmedabad to mount abu",
+      "ahmedabad to statue of unity taxi fare",
+      "ahmedabad to gandhidham taxi",
+      "ahmedabad to udaipur cab price",
+      "one way cab ahmedabad airport to vadodara",
+      "ahmedabad to surat cab price",
+      "one side taxi ahmedabad to udaipur",
+      "ahmedabad to bhuj one way cab"
+    ]
+  },
+  {
+    "id": 21,
+    "city": "chennai",
+    "service": [
+      "cab to chennai",
+      "taxi to chennai",
+      "chennai to bangalore cab",
+      "chennai to pondicherry cab cost",
+      "chennai airport to pondicherry cab",
+      "chennai to bangalore cab price",
+      "chennai to tiruvannamalai taxi fare",
+      "chennai to tiruvannamalai cab fare",
+      "chennai airport to vellore cab",
+      "chennai to trichy cab fare",
+      "chennai airport to mahabalipuram taxi fare",
+      "chennai airport to velankanni church taxi fare",
+      "chennai egmore to chennai airport taxi fare",
+      "chennai to rameshwaram taxi",
+      "one way taxi from chennai to tirupati"
+    ]
+  },
+  {
+    "id": 22,
+    "city": "hyderabad",
+    "service": [
+      "cab from hyderabad to srisailam",
+      "hyderabad to srisailam taxi fare",
+      "hyderabad to srisailam taxi service",
+      "hyderabad to srisailam innova"
+    ]
+  },
+  {
+    "id": 23,
+    "city": "coimbatore",
+    "service": [
+      "coimbatore to ooty cab booking",
+      "coimbatore to ooty cab fare",
+      "coimbatore to chennai taxi",
+      "coimbatore to coonoor cab"
     ]
   }
 ]

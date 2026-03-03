@@ -2,10 +2,12 @@
 import Header from "@/app/Components/Header/page";
 import Image from "next/image";
 import React, { useState, useRef, useEffect } from "react";
+import { useRouter } from "next/navigation";
 import "./OutOfStation.css";
 import NumberCounter from "@/app/Components/NumberCounter/page";
 import AllBookingCars from "@/app/Components/AllBookingCars/page";
-
+import SiteFooter from "@/app/Components/Footer/page";
+import carListings from "../../data/carListings.json";
 const CITIES = [
   "Amritsar",
   "Pathankot",
@@ -31,7 +33,7 @@ const CITIES = [
   "Aligarh",
   "Mathura",
   "Vrindavan",
-  "Mehandipur ",
+  "Mehandipur",
   "Balaji",
   "Neemrana",
   "Alwar",
@@ -73,34 +75,130 @@ const CITIES = [
   "Shimla",
 ];
 
+/* ── Icons (same as before) ──────────────────────────────────── */
+const IconLocation = ({ color = "#aaa", size = 15 }) => (
+  <svg
+    className="wf__ico"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke={color}
+    strokeWidth="2"
+    width={size}
+    height={size}
+  >
+    <circle cx="12" cy="10" r="3" />
+    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" />
+  </svg>
+);
+
+const IconLocationFill = ({ color = "#d80117", size = 14 }) => (
+  <svg
+    className="wf__ico"
+    viewBox="0 0 24 24"
+    fill={color}
+    width={size}
+    height={size}
+  >
+    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" />
+  </svg>
+);
+
+const IconCalendar = ({ size = 14 }) => (
+  <svg
+    className="wf__ico"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="#aaa"
+    strokeWidth="2"
+    width={size}
+    height={size}
+  >
+    <rect x="3" y="4" width="18" height="18" rx="2" />
+    <path d="M16 2v4M8 2v4M3 10h18" />
+  </svg>
+);
+
+const IconClock = ({ size = 14 }) => (
+  <svg
+    className="wf__ico"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="#aaa"
+    strokeWidth="2"
+    width={size}
+    height={size}
+  >
+    <circle cx="12" cy="12" r="10" />
+    <path d="M12 6v6l4 2" />
+  </svg>
+);
+
+const IconSwap = () => (
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2.5"
+    width="16"
+    height="16"
+  >
+    <path d="M7 16V4m0 0L3 8m4-4 4 4M17 8v12m0 0 4-4m-4 4-4-4" />
+  </svg>
+);
+
+const IconLock = () => (
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2.5"
+    width="9"
+    height="9"
+  >
+    <rect x="5" y="11" width="14" height="10" rx="2" />
+    <path d="M8 11V7a4 4 0 0 1 8 0v4" />
+  </svg>
+);
+
+/* ═══════════════════════════════════════════════════════════════ */
+
 export default function OutOfStation() {
   const [tripType, setTripType] = useState("oneway");
-  const [from, setFrom] = useState("Delhi");
+  const [from] = useState("Delhi");
   const [to, setTo] = useState("");
   const [date, setDate] = useState("");
   const [time, setTime] = useState("07:00");
-  const [showFrom, setShowFrom] = useState(false);
   const [showTo, setShowTo] = useState(false);
+  const [searchData, setSearchData] = useState(null);
+  const router = useRouter();
 
   const today = new Date().toISOString().split("T")[0];
-  const fromRef = useRef(null);
   const toRef = useRef(null);
 
   useEffect(() => {
     const close = (e) => {
-      if (!fromRef.current?.contains(e.target)) setShowFrom(false);
       if (!toRef.current?.contains(e.target)) setShowTo(false);
     };
     document.addEventListener("mousedown", close);
     return () => document.removeEventListener("mousedown", close);
   }, []);
 
-  const fFrom = CITIES.filter(
-    (c) => c.toLowerCase().includes(from.toLowerCase()) && c !== to,
-  );
   const fTo = CITIES.filter(
     (c) => c.toLowerCase().includes(to.toLowerCase()) && c !== from,
   );
+  const handleSearch = () => {
+    const carDetails = carListings.find((car) => car.destination.includes(to));
+    if (carDetails === null || carDetails === undefined) {
+      alert("No cabs available for this destination");
+      setTo("");
+      return;
+    }
+    const slug = carDetails.destination
+      .trim()
+      .toLowerCase()
+      .replace(/\s+/g, "-");
+    router.push(`/cabs/${slug}?type=${carDetails.title[0].toLowerCase()}`);
+  };
 
   return (
     <>
@@ -127,10 +225,9 @@ export default function OutOfStation() {
             <span className="hero__pill">✦ Trusted by 10 Lakh+ Travelers</span>
             <h1 className="hero__h1">
               Your Trusted <br /> Partner <br />
-              <h1 className="hero__h1">
-                From Here to
-                <span> Anywhere.</span>
-              </h1>
+              <p className="hero__h1">
+                From Here to<span> Anywhere.</span>
+              </p>
             </h1>
             <p className="hero__sub">
               Professional drivers · Clean cabs · On-time pickup · Pan India
@@ -138,7 +235,7 @@ export default function OutOfStation() {
             </p>
           </div>
 
-          {/* Booking Widget */}
+          {/* ══ Booking Widget ══ */}
           <div className="widget">
             {/* Trip type tabs */}
             <div className="widget__tabs">
@@ -162,25 +259,17 @@ export default function OutOfStation() {
 
             {/* Fields */}
             <div className="widget__fields">
-              {/* FROM */}
-              <div className="wf wf--grow" ref={fromRef}>
+              {/* ── FROM (disabled — Delhi locked) ── */}
+              <div className="wf wf--grow wf--disabled">
+                {/* Locked badge */}
+                <span className="wf__locked-badge">
+                  <IconLock /> Fixed
+                </span>
                 <label className="wf__lbl">FROM</label>
                 <div className="wf__wrap">
-                  <svg
-                    className="wf__ico"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="#aaa"
-                    strokeWidth="2"
-                    width="15"
-                    height="15"
-                  >
-                    <circle cx="12" cy="10" r="3" />
-                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" />
-                  </svg>
+                  <IconLocation color="#bbb" size={15} />
                   <input
                     className="wf__inp__dis"
-                    placeholder="Enter pickup city"
                     value={from}
                     disabled
                     readOnly
@@ -188,52 +277,27 @@ export default function OutOfStation() {
                 </div>
               </div>
 
-              {/* Divider */}
-              <div className="wf__div" />
-
-              {/* Swap */}
+              {/* ── Swap button ── */}
               <button
                 className="wf__swap"
                 title="Swap"
-                // onClick={() => {
-                //   const t = from;
-                //   setFrom(to);
-                //   setTo(t);
-                // }}
+                disabled
+                style={{ opacity: 0.4, cursor: "not-allowed" }}
               >
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2.5"
-                  width="16"
-                  height="16"
-                >
-                  <path d="M7 16V4m0 0L3 8m4-4 4 4M17 8v12m0 0 4-4m-4 4-4-4" />
-                </svg>
+                <IconSwap />
               </button>
 
-              {/* Divider */}
-              <div className="wf__div" />
-
-              {/* TO */}
+              {/* ── TO ── */}
               <div className="wf wf--grow" ref={toRef}>
                 <label className="wf__lbl">TO</label>
                 <div className="wf__wrap">
-                  <svg
-                    className="wf__ico"
-                    viewBox="0 0 24 24"
-                    fill="#d80117"
-                    width="14"
-                    height="14"
-                  >
-                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" />
-                  </svg>
+                  <IconLocationFill color="#d80117" size={14} />
                   <input
                     className="wf__inp"
                     placeholder="Enter drop city"
                     value={to}
                     autoComplete="off"
+                    autoFocus
                     onChange={(e) => {
                       setTo(e.target.value);
                       setShowTo(true);
@@ -251,14 +315,7 @@ export default function OutOfStation() {
                           setShowTo(false);
                         }}
                       >
-                        <svg
-                          width="11"
-                          height="11"
-                          viewBox="0 0 24 24"
-                          fill="#d80117"
-                        >
-                          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" />
-                        </svg>
+                        <IconLocationFill color="#d80117" size={11} />
                         {c}
                       </li>
                     ))}
@@ -266,25 +323,11 @@ export default function OutOfStation() {
                 )}
               </div>
 
-              {/* Divider */}
-              <div className="wf__div" />
-
-              {/* PICKUP DATE */}
+              {/* ── PICKUP DATE ── */}
               <div className="wf">
                 <label className="wf__lbl">PICKUP DATE</label>
                 <div className="wf__wrap">
-                  <svg
-                    className="wf__ico"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="#aaa"
-                    strokeWidth="2"
-                    width="14"
-                    height="14"
-                  >
-                    <rect x="3" y="4" width="18" height="18" rx="2" />
-                    <path d="M16 2v4M8 2v4M3 10h18" />
-                  </svg>
+                  <IconCalendar size={14} />
                   <input
                     type="date"
                     className="wf__inp wf__inp--dt"
@@ -295,25 +338,11 @@ export default function OutOfStation() {
                 </div>
               </div>
 
-              {/* Divider */}
-              <div className="wf__div" />
-
-              {/* TIME */}
+              {/* ── PICKUP TIME ── */}
               <div className="wf">
                 <label className="wf__lbl">PICKUP TIME</label>
                 <div className="wf__wrap">
-                  <svg
-                    className="wf__ico"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="#aaa"
-                    strokeWidth="2"
-                    width="14"
-                    height="14"
-                  >
-                    <circle cx="12" cy="12" r="10" />
-                    <path d="M12 6v6l4 2" />
-                  </svg>
+                  <IconClock size={14} />
                   <input
                     type="time"
                     className="wf__inp wf__inp--dt"
@@ -323,8 +352,10 @@ export default function OutOfStation() {
                 </div>
               </div>
 
-              {/* SEARCH BTN */}
-              <button className="wf__btn">Search Cabs</button>
+              {/* ── SEARCH ── */}
+              <button onClick={handleSearch} className="wf__btn">
+                Search Cabs
+              </button>
             </div>
           </div>
 
@@ -340,9 +371,10 @@ export default function OutOfStation() {
           </div>
         </div>
       </section>
+
       <NumberCounter />
-      {/* Delhi to Anywhere */}
       <AllBookingCars />
+      <SiteFooter />
     </>
   );
 }
