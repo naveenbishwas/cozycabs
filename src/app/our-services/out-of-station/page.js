@@ -307,7 +307,7 @@ export default function OutOfStation() {
                 </div>
                 {showTo && fTo.length > 0 && (
                   <ul className="wf__drop">
-                    {fTo.map((c) => (
+                    {fTo?.sort().map((c) => (
                       <li
                         key={c}
                         onMouseDown={() => {
@@ -354,7 +354,7 @@ export default function OutOfStation() {
 
               {/* ── SEARCH ── */}
               <button onClick={handleSearch} className="wf__btn">
-                Search Cabs
+                Search Cab
               </button>
             </div>
           </div>

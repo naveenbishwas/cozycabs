@@ -5058,11 +5058,11 @@
       },
       {
         "title": "Maruti Ciaz",
-        "image": "Maruti-Ciaz.png"
+        "image": "/Maruti-Ciaz.png"
       },
       {
         "title": "Swift Dzire",
-        "image": "Maruti-Swift.png"
+        "image": "/Maruti-Swift.png"
       }
     ],
     "destination": "Delhi to Bhimtal",
@@ -5097,11 +5097,11 @@
       },
       {
         "title": "Maruti Ciaz",
-        "image": "Maruti-Ciaz.png"
+        "image": "/Maruti-Ciaz.png"
       },
       {
         "title": "Swift Dzire",
-        "image": "Maruti-Swift.png"
+        "image": "/Maruti-Swift.png"
       }
     ],
     "destination": "Delhi to Nainital",
@@ -5136,11 +5136,11 @@
       },
       {
         "title": "Maruti Ciaz",
-        "image": "Maruti-Ciaz.png"
+        "image": "/Maruti-Ciaz.png"
       },
       {
         "title": "Swift Dzire",
-        "image": "Maruti-Swift.png"
+        "image": "/Maruti-Swift.png"
       }
     ],
     "destination": "Delhi to Ludhiana",
@@ -5175,11 +5175,11 @@
       },
       {
         "title": "Maruti Ciaz",
-        "image": "Maruti-Ciaz.png"
+        "image": "/Maruti-Ciaz.png"
       },
       {
         "title": "Swift Dzire",
-        "image": "Maruti-Swift.png"
+        "image": "/Maruti-Swift.png"
       }
     ],
     "destination": "Delhi to Gwalior",
@@ -5214,11 +5214,11 @@
       },
       {
         "title": "Maruti Ciaz",
-        "image": "Maruti-Ciaz.png"
+        "image": "/Maruti-Ciaz.png"
       },
       {
         "title": "Swift Dzire",
-        "image": "Maruti-Swift.png"
+        "image": "/Maruti-Swift.png"
       }
     ],
     "destination": "Delhi to Ramnagar",
@@ -5253,11 +5253,11 @@
       },
       {
         "title": "Maruti Ciaz",
-        "image": "Maruti-Ciaz.png"
+        "image": "/Maruti-Ciaz.png"
       },
       {
         "title": "Swift Dzire",
-        "image": "Maruti-Swift.png"
+        "image": "/Maruti-Swift.png"
       }
     ],
     "destination": "Delhi to Ranikhet",
@@ -5292,11 +5292,11 @@
       },
       {
         "title": "Maruti Ciaz",
-        "image": "Maruti-Ciaz.png"
+        "image": "/Maruti-Ciaz.png"
       },
       {
         "title": "Swift Dzire",
-        "image": "Maruti-Swift.png"
+        "image": "/Maruti-Swift.png"
       }
     ],
     "destination": "Delhi to Shimla",
@@ -5331,11 +5331,11 @@
       },
       {
         "title": "Maruti Ciaz",
-        "image": "Maruti-Ciaz.png"
+        "image": "/Maruti-Ciaz.png"
       },
       {
         "title": "Swift Dzire",
-        "image": "Maruti-Swift.png"
+        "image": "/Maruti-Swift.png"
       }
     ],
     "destination": "Delhi to Almora",
@@ -5370,11 +5370,11 @@
       },
       {
         "title": "Maruti Ciaz",
-        "image": "Maruti-Ciaz.png"
+        "image": "/Maruti-Ciaz.png"
       },
       {
         "title": "Swift Dzire",
-        "image": "Maruti-Swift.png"
+        "image": "/Maruti-Swift.png"
       }
     ],
     "destination": "Delhi to Jalandhar",
@@ -5409,11 +5409,11 @@
       },
       {
         "title": "Maruti Ciaz",
-        "image": "Maruti-Ciaz.png"
+        "image": "/Maruti-Ciaz.png"
       },
       {
         "title": "Swift Dzire",
-        "image": "Maruti-Swift.png"
+        "image": "/Maruti-Swift.png"
       }
     ],
     "destination": "Delhi to Ajmer",
@@ -5448,11 +5448,11 @@
       },
       {
         "title": "Maruti Ciaz",
-        "image": "Maruti-Ciaz.png"
+        "image": "/Maruti-Ciaz.png"
       },
       {
         "title": "Swift Dzire",
-        "image": "Maruti-Swift.png"
+        "image": "/Maruti-Swift.png"
       }
     ],
     "destination": "Delhi to Moga",
@@ -5474,6 +5474,10 @@
       {
         "title": "Toyota Innova Crysta",
         "image": "/premium-toyota-innove-crysta.png"
+      },
+      {
+        "title": "Toyota Innova Hycross",
+        "image": "/premium-toyota-innova-hycros.png"
       }
     ],
     "economy": [
@@ -5483,11 +5487,11 @@
       },
       {
         "title": "Maruti Ciaz",
-        "image": "Maruti-Ciaz.png"
+        "image": "/Maruti-Ciaz.png"
       },
       {
         "title": "Swift Dzire",
-        "image": "Maruti-Swift.png"
+        "image": "/Maruti-Swift.png"
       }
     ],
     "destination": "Delhi to Kota",
@@ -5497,5 +5501,1763 @@
     "seats": 7,
     "ac": true,
     "included": 440
+  },
+  {
+    "id": 142,
+    "title": ["Crysta", "Sedan", "Ertiga"],
+    "premium": [
+      {
+        "title": "Toyota Fortuner",
+        "image": "/premium-toyota-fortuner.png"
+      },
+      {
+        "title": "Toyota Innova Crysta",
+        "image": "/premium-toyota-innove-crysta.png"
+      },
+      {
+        "title": "Toyota Innova Hycross",
+        "image": "/premium-toyota-innova-hycros.png"
+      }
+    ],
+    "economy": [
+      {
+        "title": "Honda City",
+        "image": "/Honda-City.png"
+      },
+      {
+        "title": "Maruti Ciaz",
+        "image": "/Maruti-Ciaz.png"
+      },
+      {
+        "title": "Swift Dzire",
+        "image": "/Maruti-Swift.png"
+      }
+    ],
+    "destination": "Delhi to Amritsar",
+    "image": "/crysta.png",
+    "duration": "3 hr 42 mins",
+    "extraFare": 18,
+    "seats": 7,
+    "ac": true,
+    "included": 226
+  },
+  {
+    "id": 143,
+    "title": ["Ertiga", "Sedan", "Crysta"],
+    "premium": [
+      {
+        "title": "Toyota Fortuner",
+        "image": "/premium-toyota-fortuner.png"
+      },
+      {
+        "title": "Toyota Innova Crysta",
+        "image": "/premium-toyota-innove-crysta.png"
+      },
+      {
+        "title": "Toyota Innova Hycross",
+        "image": "/premium-toyota-innova-hycros.png"
+      }
+    ],
+    "economy": [
+      {
+        "title": "Honda City",
+        "image": "/Honda-City.png"
+      },
+      {
+        "title": "Maruti Ciaz",
+        "image": "/Maruti-Ciaz.png"
+      },
+      {
+        "title": "Swift Dzire",
+        "image": "/Maruti-Swift.png"
+      }
+    ],
+    "destination": "Delhi to Amritsar",
+    "image": "/Ertiga.png",
+    "duration": "3 hr 42 mins",
+    "extraFare": 14,
+    "seats": 7,
+    "ac": true,
+    "included": 226
+  },
+  {
+    "id": 144,
+    "title": ["Sedan", "Crysta", "Ertiga"],
+    "premium": [
+      {
+        "title": "Toyota Fortuner",
+        "image": "/premium-toyota-fortuner.png"
+      },
+      {
+        "title": "Toyota Innova Crysta",
+        "image": "/premium-toyota-innove-crysta.png"
+      },
+      {
+        "title": "Toyota Innova Hycross",
+        "image": "/premium-toyota-innova-hycros.png"
+      }
+    ],
+    "economy": [
+      {
+        "title": "Honda City",
+        "image": "/Honda-City.png"
+      },
+      {
+        "title": "Maruti Ciaz",
+        "image": "/Maruti-Ciaz.png"
+      },
+      {
+        "title": "Swift Dzire",
+        "image": "/Maruti-Swift.png"
+      }
+    ],
+    "destination": "Delhi to Amritsar",
+    "image": "/sweden.png",
+    "duration": "3 hr 42 mins",
+    "extraFare": 10,
+    "seats": 4,
+    "ac": true,
+    "included": 226
+  },
+
+  {
+    "id": 145,
+    "title": ["Crysta", "Sedan", "Ertiga"],
+    "premium": [
+      {
+        "title": "Toyota Fortuner",
+        "image": "/premium-toyota-fortuner.png"
+      },
+      {
+        "title": "Toyota Innova Crysta",
+        "image": "/premium-toyota-innove-crysta.png"
+      },
+      {
+        "title": "Toyota Innova Hycross",
+        "image": "/premium-toyota-innova-hycros.png"
+      }
+    ],
+    "economy": [
+      {
+        "title": "Honda City",
+        "image": "/Honda-City.png"
+      },
+      {
+        "title": "Maruti Ciaz",
+        "image": "/Maruti-Ciaz.png"
+      },
+      {
+        "title": "Swift Dzire",
+        "image": "/Maruti-Swift.png"
+      }
+    ],
+    "destination": "Delhi to Pathankot",
+    "image": "/crysta.png",
+    "duration": "8 hr 20 mins",
+    "extraFare": 18,
+    "seats": 7,
+    "ac": true,
+    "included": 482
+  },
+  {
+    "id": 146,
+    "title": ["Ertiga", "Sedan", "Crysta"],
+    "premium": [
+      {
+        "title": "Toyota Fortuner",
+        "image": "/premium-toyota-fortuner.png"
+      },
+      {
+        "title": "Toyota Innova Crysta",
+        "image": "/premium-toyota-innove-crysta.png"
+      },
+      {
+        "title": "Toyota Innova Hycross",
+        "image": "/premium-toyota-innova-hycros.png"
+      }
+    ],
+    "economy": [
+      {
+        "title": "Honda City",
+        "image": "/Honda-City.png"
+      },
+      {
+        "title": "Maruti Ciaz",
+        "image": "/Maruti-Ciaz.png"
+      },
+      {
+        "title": "Swift Dzire",
+        "image": "/Maruti-Swift.png"
+      }
+    ],
+    "destination": "Delhi to Pathankot",
+    "image": "/Ertiga.png",
+    "duration": "8 hr 10 mins",
+    "extraFare": 14,
+    "seats": 7,
+    "ac": true,
+    "included": 482
+  },
+  {
+    "id": 147,
+    "title": ["Sedan", "Crysta", "Ertiga"],
+    "premium": [
+      {
+        "title": "Toyota Fortuner",
+        "image": "/premium-toyota-fortuner.png"
+      },
+      {
+        "title": "Toyota Innova Crysta",
+        "image": "/premium-toyota-innove-crysta.png"
+      },
+      {
+        "title": "Toyota Innova Hycross",
+        "image": "/premium-toyota-innova-hycros.png"
+      }
+    ],
+    "economy": [
+      {
+        "title": "Honda City",
+        "image": "/Honda-City.png"
+      },
+      {
+        "title": "Maruti Ciaz",
+        "image": "/Maruti-Ciaz.png"
+      },
+      {
+        "title": "Swift Dzire",
+        "image": "/Maruti-Swift.png"
+      }
+    ],
+    "destination": "Delhi to Pathankot",
+    "image": "/sweden.png",
+    "duration": "8 hr 30 mins",
+    "extraFare": 10,
+    "seats": 4,
+    "ac": true,
+    "included": 482
+  },
+
+  {
+    "id": 148,
+    "title": ["Crysta", "Sedan", "Ertiga"],
+    "premium": [
+      {
+        "title": "Toyota Fortuner",
+        "image": "/premium-toyota-fortuner.png"
+      },
+      {
+        "title": "Toyota Innova Crysta",
+        "image": "/premium-toyota-innove-crysta.png"
+      },
+      {
+        "title": "Toyota Innova Hycross",
+        "image": "/premium-toyota-innova-hycros.png"
+      }
+    ],
+    "economy": [
+      {
+        "title": "Honda City",
+        "image": "/Honda-City.png"
+      },
+      {
+        "title": "Maruti Ciaz",
+        "image": "/Maruti-Ciaz.png"
+      },
+      {
+        "title": "Swift Dzire",
+        "image": "/Maruti-Swift.png"
+      }
+    ],
+    "destination": "Delhi to Manali",
+    "image": "/crysta.png",
+    "duration": "9 hr 20 mins",
+    "extraFare": 18,
+    "seats": 7,
+    "ac": true,
+    "included": 495
+  },
+  {
+    "id": 149,
+    "title": ["Ertiga", "Sedan", "Crysta"],
+    "premium": [
+      {
+        "title": "Toyota Fortuner",
+        "image": "/premium-toyota-fortuner.png"
+      },
+      {
+        "title": "Toyota Innova Crysta",
+        "image": "/premium-toyota-innove-crysta.png"
+      },
+      {
+        "title": "Toyota Innova Hycross",
+        "image": "/premium-toyota-innova-hycros.png"
+      }
+    ],
+    "economy": [
+      {
+        "title": "Honda City",
+        "image": "/Honda-City.png"
+      },
+      {
+        "title": "Maruti Ciaz",
+        "image": "/Maruti-Ciaz.png"
+      },
+      {
+        "title": "Swift Dzire",
+        "image": "/Maruti-Swift.png"
+      }
+    ],
+    "destination": "Delhi to Manali",
+    "image": "/Ertiga.png",
+    "duration": "9 hr 10 mins",
+    "extraFare": 14,
+    "seats": 7,
+    "ac": true,
+    "included": 495
+  },
+  {
+    "id": 150,
+    "title": ["Sedan", "Crysta", "Ertiga"],
+    "premium": [
+      {
+        "title": "Toyota Fortuner",
+        "image": "/premium-toyota-fortuner.png"
+      },
+      {
+        "title": "Toyota Innova Crysta",
+        "image": "/premium-toyota-innove-crysta.png"
+      },
+      {
+        "title": "Toyota Innova Hycross",
+        "image": "/premium-toyota-innova-hycros.png"
+      }
+    ],
+    "economy": [
+      {
+        "title": "Honda City",
+        "image": "/Honda-City.png"
+      },
+      {
+        "title": "Maruti Ciaz",
+        "image": "/Maruti-Ciaz.png"
+      },
+      {
+        "title": "Swift Dzire",
+        "image": "/Maruti-Swift.png"
+      }
+    ],
+    "destination": "Delhi to Manali",
+    "image": "/sweden.png",
+    "duration": "9 hr 30 mins",
+    "extraFare": 10,
+    "seats": 4,
+    "ac": true,
+    "included": 495
+  },
+
+  {
+    "id": 151,
+    "title": ["Crysta", "Sedan", "Ertiga"],
+    "premium": [
+      {
+        "title": "Toyota Fortuner",
+        "image": "/premium-toyota-fortuner.png"
+      },
+      {
+        "title": "Toyota Innova Crysta",
+        "image": "/premium-toyota-innove-crysta.png"
+      },
+      {
+        "title": "Toyota Innova Hycross",
+        "image": "/premium-toyota-innova-hycros.png"
+      }
+    ],
+    "economy": [
+      {
+        "title": "Honda City",
+        "image": "/Honda-City.png"
+      },
+      {
+        "title": "Maruti Ciaz",
+        "image": "/Maruti-Ciaz.png"
+      },
+      {
+        "title": "Swift Dzire",
+        "image": "/Maruti-Swift.png"
+      }
+    ],
+    "destination": "Delhi to Kasol",
+    "image": "/crysta.png",
+    "duration": "9 hr 20 mins",
+    "extraFare": 18,
+    "seats": 7,
+    "ac": true,
+    "included": 475
+  },
+  {
+    "id": 152,
+    "title": ["Ertiga", "Sedan", "Crysta"],
+    "premium": [
+      {
+        "title": "Toyota Fortuner",
+        "image": "/premium-toyota-fortuner.png"
+      },
+      {
+        "title": "Toyota Innova Crysta",
+        "image": "/premium-toyota-innove-crysta.png"
+      },
+      {
+        "title": "Toyota Innova Hycross",
+        "image": "/premium-toyota-innova-hycros.png"
+      }
+    ],
+    "economy": [
+      {
+        "title": "Honda City",
+        "image": "/Honda-City.png"
+      },
+      {
+        "title": "Maruti Ciaz",
+        "image": "/Maruti-Ciaz.png"
+      },
+      {
+        "title": "Swift Dzire",
+        "image": "/Maruti-Swift.png"
+      }
+    ],
+    "destination": "Delhi to Kasol",
+    "image": "/Ertiga.png",
+    "duration": "9 hr 05 mins",
+    "extraFare": 14,
+    "seats": 7,
+    "ac": true,
+    "included": 475
+  },
+  {
+    "id": 153,
+    "title": ["Sedan", "Crysta", "Ertiga"],
+    "premium": [
+      {
+        "title": "Toyota Fortuner",
+        "image": "/premium-toyota-fortuner.png"
+      },
+      {
+        "title": "Toyota Innova Crysta",
+        "image": "/premium-toyota-innove-crysta.png"
+      },
+      {
+        "title": "Toyota Innova Hycross",
+        "image": "/premium-toyota-innova-hycros.png"
+      }
+    ],
+    "economy": [
+      {
+        "title": "Honda City",
+        "image": "/Honda-City.png"
+      },
+      {
+        "title": "Maruti Ciaz",
+        "image": "/Maruti-Ciaz.png"
+      },
+      {
+        "title": "Swift Dzire",
+        "image": "/Maruti-Swift.png"
+      }
+    ],
+    "destination": "Delhi to Kasol",
+    "image": "/sweden.png",
+    "duration": "9 hr 30 mins",
+    "extraFare": 10,
+    "seats": 4,
+    "ac": true,
+    "included": 475
+  },
+  {
+    "id": 154,
+    "title": ["Crysta", "Sedan", "Ertiga"],
+    "premium": [
+      {
+        "title": "Toyota Fortuner",
+        "image": "/premium-toyota-fortuner.png"
+      },
+      {
+        "title": "Toyota Innova Crysta",
+        "image": "/premium-toyota-innove-crysta.png"
+      },
+      {
+        "title": "Toyota Innova Hycross",
+        "image": "/premium-toyota-innova-hycros.png"
+      }
+    ],
+    "economy": [
+      {
+        "title": "Honda City",
+        "image": "/Honda-City.png"
+      },
+      {
+        "title": "Maruti Ciaz",
+        "image": "/Maruti-Ciaz.png"
+      },
+      {
+        "title": "Swift Dzire",
+        "image": "/Maruti-Swift.png"
+      }
+    ],
+    "destination": "Delhi to Kullu",
+    "image": "/crysta.png",
+    "duration": "8 hr 40 mins",
+    "extraFare": 18,
+    "seats": 7,
+    "ac": true,
+    "included": 465
+  },
+  {
+    "id": 155,
+    "title": ["Ertiga", "Sedan", "Crysta"],
+    "premium": [
+      {
+        "title": "Toyota Fortuner",
+        "image": "/premium-toyota-fortuner.png"
+      },
+      {
+        "title": "Toyota Innova Crysta",
+        "image": "/premium-toyota-innove-crysta.png"
+      },
+      {
+        "title": "Toyota Innova Hycross",
+        "image": "/premium-toyota-innova-hycros.png"
+      }
+    ],
+    "economy": [
+      {
+        "title": "Honda City",
+        "image": "/Honda-City.png"
+      },
+      {
+        "title": "Maruti Ciaz",
+        "image": "/Maruti-Ciaz.png"
+      },
+      {
+        "title": "Swift Dzire",
+        "image": "/Maruti-Swift.png"
+      }
+    ],
+    "destination": "Delhi to Kullu",
+    "image": "/Ertiga.png",
+    "duration": "8 hr 20 mins",
+    "extraFare": 14,
+    "seats": 7,
+    "ac": true,
+    "included": 495
+  },
+  {
+    "id": 156,
+    "title": ["Sedan", "Crysta", "Ertiga"],
+    "premium": [
+      {
+        "title": "Toyota Fortuner",
+        "image": "/premium-toyota-fortuner.png"
+      },
+      {
+        "title": "Toyota Innova Crysta",
+        "image": "/premium-toyota-innove-crysta.png"
+      },
+      {
+        "title": "Toyota Innova Hycross",
+        "image": "/premium-toyota-innova-hycros.png"
+      }
+    ],
+    "economy": [
+      {
+        "title": "Honda City",
+        "image": "/Honda-City.png"
+      },
+      {
+        "title": "Maruti Ciaz",
+        "image": "/Maruti-Ciaz.png"
+      },
+      {
+        "title": "Swift Dzire",
+        "image": "/Maruti-Swift.png"
+      }
+    ],
+    "destination": "Delhi to Kullu",
+    "image": "/sweden.png",
+    "duration": "8 hr 50 mins",
+    "extraFare": 10,
+    "seats": 4,
+    "ac": true,
+    "included": 495
+  },
+  {
+    "id": 157,
+    "title": ["Crysta", "Sedan", "Ertiga"],
+    "premium": [
+      {
+        "title": "Toyota Fortuner",
+        "image": "/premium-toyota-fortuner.png"
+      },
+      {
+        "title": "Toyota Innova Crysta",
+        "image": "/premium-toyota-innove-crysta.png"
+      },
+      {
+        "title": "Toyota Innova Hycross",
+        "image": "/premium-toyota-innova-hycros.png"
+      }
+    ],
+    "economy": [
+      {
+        "title": "Honda City",
+        "image": "/Honda-City.png"
+      },
+      {
+        "title": "Maruti Ciaz",
+        "image": "/Maruti-Ciaz.png"
+      },
+      {
+        "title": "Swift Dzire",
+        "image": "/Maruti-Swift.png"
+      }
+    ],
+    "destination": "Delhi to Dharamshala",
+    "image": "/crysta.png",
+    "duration": "9 hr 20 mins",
+    "extraFare": 18,
+    "seats": 7,
+    "ac": true,
+    "included": 471
+  },
+  {
+    "id": 158,
+    "title": ["Ertiga", "Sedan", "Crysta"],
+    "premium": [
+      {
+        "title": "Toyota Fortuner",
+        "image": "/premium-toyota-fortuner.png"
+      },
+      {
+        "title": "Toyota Innova Crysta",
+        "image": "/premium-toyota-innove-crysta.png"
+      },
+      {
+        "title": "Toyota Innova Hycross",
+        "image": "/premium-toyota-innova-hycros.png"
+      }
+    ],
+    "economy": [
+      {
+        "title": "Honda City",
+        "image": "/Honda-City.png"
+      },
+      {
+        "title": "Maruti Ciaz",
+        "image": "/Maruti-Ciaz.png"
+      },
+      {
+        "title": "Swift Dzire",
+        "image": "/Maruti-Swift.png"
+      }
+    ],
+    "destination": "Delhi to Dharamshala",
+    "image": "/Ertiga.png",
+    "duration": "9 hr 20 mins",
+    "extraFare": 14,
+    "seats": 7,
+    "ac": true,
+    "included": 475
+  },
+  {
+    "id": 159,
+    "title": ["Sedan", "Crysta", "Ertiga"],
+    "premium": [
+      {
+        "title": "Toyota Fortuner",
+        "image": "/premium-toyota-fortuner.png"
+      },
+      {
+        "title": "Toyota Innova Crysta",
+        "image": "/premium-toyota-innove-crysta.png"
+      },
+      {
+        "title": "Toyota Innova Hycross",
+        "image": "/premium-toyota-innova-hycros.png"
+      }
+    ],
+    "economy": [
+      {
+        "title": "Honda City",
+        "image": "/Honda-City.png"
+      },
+      {
+        "title": "Maruti Ciaz",
+        "image": "/Maruti-Ciaz.png"
+      },
+      {
+        "title": "Swift Dzire",
+        "image": "/Maruti-Swift.png"
+      }
+    ],
+    "destination": "Delhi to Dharamshala",
+    "image": "/sweden.png",
+    "duration": "9 hr 40 mins",
+    "extraFare": 10,
+    "seats": 4,
+    "ac": true,
+    "included": 471
+  },
+  {
+    "id": 160,
+    "title": ["Crysta", "Sedan", "Ertiga"],
+    "premium": [
+      {
+        "title": "Toyota Fortuner",
+        "image": "/premium-toyota-fortuner.png"
+      },
+      {
+        "title": "Toyota Innova Crysta",
+        "image": "/premium-toyota-innove-crysta.png"
+      },
+      {
+        "title": "Toyota Innova Hycross",
+        "image": "/premium-toyota-innova-hycros.png"
+      }
+    ],
+    "economy": [
+      {
+        "title": "Honda City",
+        "image": "/Honda-City.png"
+      },
+      {
+        "title": "Maruti Ciaz",
+        "image": "/Maruti-Ciaz.png"
+      },
+      {
+        "title": "Swift Dzire",
+        "image": "/Maruti-Swift.png"
+      }
+    ],
+    "destination": "Delhi to McLeodganj",
+    "image": "/crysta.png",
+    "duration": "9 hr 20 mins",
+    "extraFare": 18,
+    "seats": 7,
+    "ac": true,
+    "included": 480
+  },
+  {
+    "id": 161,
+    "title": ["Ertiga", "Sedan", "Crysta"],
+    "premium": [
+      {
+        "title": "Toyota Fortuner",
+        "image": "/premium-toyota-fortuner.png"
+      },
+      {
+        "title": "Toyota Innova Crysta",
+        "image": "/premium-toyota-innove-crysta.png"
+      },
+      {
+        "title": "Toyota Innova Hycross",
+        "image": "/premium-toyota-innova-hycros.png"
+      }
+    ],
+    "economy": [
+      {
+        "title": "Honda City",
+        "image": "/Honda-City.png"
+      },
+      {
+        "title": "Maruti Ciaz",
+        "image": "/Maruti-Ciaz.png"
+      },
+      {
+        "title": "Swift Dzire",
+        "image": "/Maruti-Swift.png"
+      }
+    ],
+    "destination": "Delhi to McLeodganj",
+    "image": "/Ertiga.png",
+    "duration": "9 hr 10 mins",
+    "extraFare": 14,
+    "seats": 7,
+    "ac": true,
+    "included": 495
+  },
+  {
+    "id": 162,
+    "title": ["Sedan", "Crysta", "Ertiga"],
+    "premium": [
+      {
+        "title": "Toyota Fortuner",
+        "image": "/premium-toyota-fortuner.png"
+      },
+      {
+        "title": "Toyota Innova Crysta",
+        "image": "/premium-toyota-innove-crysta.png"
+      },
+      {
+        "title": "Toyota Innova Hycross",
+        "image": "/premium-toyota-innova-hycros.png"
+      }
+    ],
+    "economy": [
+      {
+        "title": "Honda City",
+        "image": "/Honda-City.png"
+      },
+      {
+        "title": "Maruti Ciaz",
+        "image": "/Maruti-Ciaz.png"
+      },
+      {
+        "title": "Swift Dzire",
+        "image": "/Maruti-Swift.png"
+      }
+    ],
+    "destination": "Delhi to McLeodganj",
+    "image": "/sweden.png",
+    "duration": "9 hr 30 mins",
+    "extraFare": 10,
+    "seats": 4,
+    "ac": true,
+    "included": 495
+  },
+  {
+    "id": 163,
+    "title": ["Crysta", "Sedan", "Ertiga"],
+    "premium": [
+      {
+        "title": "Toyota Fortuner",
+        "image": "/premium-toyota-fortuner.png"
+      },
+      {
+        "title": "Toyota Innova Crysta",
+        "image": "/premium-toyota-innove-crysta.png"
+      },
+      {
+        "title": "Toyota Innova Hycross",
+        "image": "/premium-toyota-innova-hycros.png"
+      }
+    ],
+    "economy": [
+      {
+        "title": "Honda City",
+        "image": "/Honda-City.png"
+      },
+      {
+        "title": "Maruti Ciaz",
+        "image": "/Maruti-Ciaz.png"
+      },
+      {
+        "title": "Swift Dzire",
+        "image": "/Maruti-Swift.png"
+      }
+    ],
+    "destination": "Delhi to Dalhousie",
+    "image": "/crysta.png",
+    "duration": "10 hr 40 mins",
+    "extraFare": 18,
+    "seats": 7,
+    "ac": true,
+    "included": 555
+  },
+  {
+    "id": 164,
+    "title": ["Ertiga", "Sedan", "Crysta"],
+    "premium": [
+      {
+        "title": "Toyota Fortuner",
+        "image": "/premium-toyota-fortuner.png"
+      },
+      {
+        "title": "Toyota Innova Crysta",
+        "image": "/premium-toyota-innove-crysta.png"
+      },
+      {
+        "title": "Toyota Innova Hycross",
+        "image": "/premium-toyota-innova-hycros.png"
+      }
+    ],
+    "economy": [
+      {
+        "title": "Honda City",
+        "image": "/Honda-City.png"
+      },
+      {
+        "title": "Maruti Ciaz",
+        "image": "/Maruti-Ciaz.png"
+      },
+      {
+        "title": "Swift Dzire",
+        "image": "/Maruti-Swift.png"
+      }
+    ],
+    "destination": "Delhi to Dalhousie",
+    "image": "/Ertiga.png",
+    "duration": "10 hr 35 mins",
+    "extraFare": 14,
+    "seats": 7,
+    "ac": true,
+    "included": 555
+  },
+  {
+    "id": 165,
+    "title": ["Sedan", "Crysta", "Ertiga"],
+    "premium": [
+      {
+        "title": "Toyota Fortuner",
+        "image": "/premium-toyota-fortuner.png"
+      },
+      {
+        "title": "Toyota Innova Crysta",
+        "image": "/premium-toyota-innove-crysta.png"
+      },
+      {
+        "title": "Toyota Innova Hycross",
+        "image": "/premium-toyota-innova-hycros.png"
+      }
+    ],
+    "economy": [
+      {
+        "title": "Honda City",
+        "image": "/Honda-City.png"
+      },
+      {
+        "title": "Maruti Ciaz",
+        "image": "/Maruti-Ciaz.png"
+      },
+      {
+        "title": "Swift Dzire",
+        "image": "/Maruti-Swift.png"
+      }
+    ],
+    "destination": "Delhi to Dalhousie",
+    "image": "/sweden.png",
+    "duration": "10 hr 40 mins",
+    "extraFare": 10,
+    "seats": 4,
+    "ac": true,
+    "included": 555
+  },
+  {
+    "id": 166,
+    "title": ["Crysta", "Sedan", "Ertiga"],
+    "premium": [
+      {
+        "title": "Toyota Fortuner",
+        "image": "/premium-toyota-fortuner.png"
+      },
+      {
+        "title": "Toyota Innova Crysta",
+        "image": "/premium-toyota-innove-crysta.png"
+      },
+      {
+        "title": "Toyota Innova Hycross",
+        "image": "/premium-toyota-innova-hycros.png"
+      }
+    ],
+    "economy": [
+      {
+        "title": "Honda City",
+        "image": "/Honda-City.png"
+      },
+      {
+        "title": "Maruti Ciaz",
+        "image": "/Maruti-Ciaz.png"
+      },
+      {
+        "title": "Swift Dzire",
+        "image": "/Maruti-Swift.png"
+      }
+    ],
+    "destination": "Delhi to Badrinath",
+    "image": "/crysta.png",
+    "duration": "11 hr 20 mins",
+    "extraFare": 18,
+    "seats": 7,
+    "ac": true,
+    "included": 533
+  },
+  {
+    "id": 167,
+    "title": ["Ertiga", "Sedan", "Crysta"],
+    "premium": [
+      {
+        "title": "Toyota Fortuner",
+        "image": "/premium-toyota-fortuner.png"
+      },
+      {
+        "title": "Toyota Innova Crysta",
+        "image": "/premium-toyota-innove-crysta.png"
+      },
+      {
+        "title": "Toyota Innova Hycross",
+        "image": "/premium-toyota-innova-hycros.png"
+      }
+    ],
+    "economy": [
+      {
+        "title": "Honda City",
+        "image": "/Honda-City.png"
+      },
+      {
+        "title": "Maruti Ciaz",
+        "image": "/Maruti-Ciaz.png"
+      },
+      {
+        "title": "Swift Dzire",
+        "image": "/Maruti-Swift.png"
+      }
+    ],
+    "destination": "Delhi to Badrinath",
+    "image": "/Ertiga.png",
+    "duration": "11 hr 05 mins",
+    "extraFare": 14,
+    "seats": 7,
+    "ac": true,
+    "included": 475
+  },
+  {
+    "id": 168,
+    "title": ["Sedan", "Crysta", "Ertiga"],
+    "premium": [
+      {
+        "title": "Toyota Fortuner",
+        "image": "/premium-toyota-fortuner.png"
+      },
+      {
+        "title": "Toyota Innova Crysta",
+        "image": "/premium-toyota-innove-crysta.png"
+      },
+      {
+        "title": "Toyota Innova Hycross",
+        "image": "/premium-toyota-innova-hycros.png"
+      }
+    ],
+    "economy": [
+      {
+        "title": "Honda City",
+        "image": "/Honda-City.png"
+      },
+      {
+        "title": "Maruti Ciaz",
+        "image": "/Maruti-Ciaz.png"
+      },
+      {
+        "title": "Swift Dzire",
+        "image": "/Maruti-Swift.png"
+      }
+    ],
+    "destination": "Delhi to Badrinath",
+    "image": "/sweden.png",
+    "duration": "11 hr 30 mins",
+    "extraFare": 10,
+    "seats": 4,
+    "ac": true,
+    "included": 475
+  },
+  {
+    "id": 169,
+    "title": ["Crysta", "Sedan", "Ertiga"],
+    "premium": [
+      {
+        "title": "Toyota Fortuner",
+        "image": "/premium-toyota-fortuner.png"
+      },
+      {
+        "title": "Toyota Innova Crysta",
+        "image": "/premium-toyota-innove-crysta.png"
+      },
+      {
+        "title": "Toyota Innova Hycross",
+        "image": "/premium-toyota-innova-hycros.png"
+      }
+    ],
+    "economy": [
+      {
+        "title": "Honda City",
+        "image": "/Honda-City.png"
+      },
+      {
+        "title": "Maruti Ciaz",
+        "image": "/Maruti-Ciaz.png"
+      },
+      {
+        "title": "Swift Dzire",
+        "image": "/Maruti-Swift.png"
+      }
+    ],
+    "destination": "Delhi to Joshimath",
+    "image": "/crysta.png",
+    "duration": "11 hr 40 mins",
+    "extraFare": 18,
+    "seats": 7,
+    "ac": true,
+    "included": 495
+  },
+  {
+    "id": 170,
+    "title": ["Ertiga", "Sedan", "Crysta"],
+    "premium": [
+      {
+        "title": "Toyota Fortuner",
+        "image": "/premium-toyota-fortuner.png"
+      },
+      {
+        "title": "Toyota Innova Crysta",
+        "image": "/premium-toyota-innove-crysta.png"
+      },
+      {
+        "title": "Toyota Innova Hycross",
+        "image": "/premium-toyota-innova-hycros.png"
+      }
+    ],
+    "economy": [
+      {
+        "title": "Honda City",
+        "image": "/Honda-City.png"
+      },
+      {
+        "title": "Maruti Ciaz",
+        "image": "/Maruti-Ciaz.png"
+      },
+      {
+        "title": "Swift Dzire",
+        "image": "/Maruti-Swift.png"
+      }
+    ],
+    "destination": "Delhi to Joshimath",
+    "image": "/Ertiga.png",
+    "duration": "11 hr 55 mins",
+    "extraFare": 14,
+    "seats": 7,
+    "ac": true,
+    "included": 475
+  },
+  {
+    "id": 171,
+    "title": ["Sedan", "Crysta", "Ertiga"],
+    "premium": [
+      {
+        "title": "Toyota Fortuner",
+        "image": "/premium-toyota-fortuner.png"
+      },
+      {
+        "title": "Toyota Innova Crysta",
+        "image": "/premium-toyota-innove-crysta.png"
+      },
+      {
+        "title": "Toyota Innova Hycross",
+        "image": "/premium-toyota-innova-hycros.png"
+      }
+    ],
+    "economy": [
+      {
+        "title": "Honda City",
+        "image": "/Honda-City.png"
+      },
+      {
+        "title": "Maruti Ciaz",
+        "image": "/Maruti-Ciaz.png"
+      },
+      {
+        "title": "Swift Dzire",
+        "image": "/Maruti-Swift.png"
+      }
+    ],
+    "destination": "Delhi to Joshimath",
+    "image": "/sweden.png",
+    "duration": "11 hr 30 mins",
+    "extraFare": 10,
+    "seats": 4,
+    "ac": true,
+    "included": 475
+  },
+  {
+    "id": 172,
+    "title": ["Crysta", "Sedan", "Ertiga"],
+    "premium": [
+      {
+        "title": "Toyota Fortuner",
+        "image": "/premium-toyota-fortuner.png"
+      },
+      {
+        "title": "Toyota Innova Crysta",
+        "image": "/premium-toyota-innove-crysta.png"
+      },
+      {
+        "title": "Toyota Innova Hycross",
+        "image": "/premium-toyota-innova-hycros.png"
+      }
+    ],
+    "economy": [
+      {
+        "title": "Honda City",
+        "image": "/Honda-City.png"
+      },
+      {
+        "title": "Maruti Ciaz",
+        "image": "/Maruti-Ciaz.png"
+      },
+      {
+        "title": "Swift Dzire",
+        "image": "/Maruti-Swift.png"
+      }
+    ],
+    "destination": "Delhi to Auli",
+    "image": "/crysta.png",
+    "duration": "12 hr 20 mins",
+    "extraFare": 18,
+    "seats": 7,
+    "ac": true,
+    "included": 500
+  },
+  {
+    "id": 173,
+    "title": ["Ertiga", "Sedan", "Crysta"],
+    "premium": [
+      {
+        "title": "Toyota Fortuner",
+        "image": "/premium-toyota-fortuner.png"
+      },
+      {
+        "title": "Toyota Innova Crysta",
+        "image": "/premium-toyota-innove-crysta.png"
+      },
+      {
+        "title": "Toyota Innova Hycross",
+        "image": "/premium-toyota-innova-hycros.png"
+      }
+    ],
+    "economy": [
+      {
+        "title": "Honda City",
+        "image": "/Honda-City.png"
+      },
+      {
+        "title": "Maruti Ciaz",
+        "image": "/Maruti-Ciaz.png"
+      },
+      {
+        "title": "Swift Dzire",
+        "image": "/Maruti-Swift.png"
+      }
+    ],
+    "destination": "Delhi to Auli",
+    "image": "/Ertiga.png",
+    "duration": "12 hr 25 mins",
+    "extraFare": 14,
+    "seats": 7,
+    "ac": true,
+    "included": 500
+  },
+  {
+    "id": 174,
+    "title": ["Sedan", "Crysta", "Ertiga"],
+    "premium": [
+      {
+        "title": "Toyota Fortuner",
+        "image": "/premium-toyota-fortuner.png"
+      },
+      {
+        "title": "Toyota Innova Crysta",
+        "image": "/premium-toyota-innove-crysta.png"
+      },
+      {
+        "title": "Toyota Innova Hycross",
+        "image": "/premium-toyota-innova-hycros.png"
+      }
+    ],
+    "economy": [
+      {
+        "title": "Honda City",
+        "image": "/Honda-City.png"
+      },
+      {
+        "title": "Maruti Ciaz",
+        "image": "/Maruti-Ciaz.png"
+      },
+      {
+        "title": "Swift Dzire",
+        "image": "/Maruti-Swift.png"
+      }
+    ],
+    "destination": "Delhi to Auli",
+    "image": "/sweden.png",
+    "duration": "12 hr 20 mins",
+    "extraFare": 10,
+    "seats": 4,
+    "ac": true,
+    "included": 500
+  },
+  {
+    "id": 175,
+    "title": ["Crysta", "Sedan", "Ertiga"],
+    "premium": [
+      {
+        "title": "Toyota Fortuner",
+        "image": "/premium-toyota-fortuner.png"
+      },
+      {
+        "title": "Toyota Innova Crysta",
+        "image": "/premium-toyota-innove-crysta.png"
+      },
+      {
+        "title": "Toyota Innova Hycross",
+        "image": "/premium-toyota-innova-hycros.png"
+      }
+    ],
+    "economy": [
+      {
+        "title": "Honda City",
+        "image": "/Honda-City.png"
+      },
+      {
+        "title": "Maruti Ciaz",
+        "image": "/Maruti-Ciaz.png"
+      },
+      {
+        "title": "Swift Dzire",
+        "image": "/Maruti-Swift.png"
+      }
+    ],
+    "destination": "Delhi to Udaipur",
+    "image": "/crysta.png",
+    "duration": "11 hr 20 mins",
+    "extraFare": 18,
+    "seats": 7,
+    "ac": true,
+    "included": 720
+  },
+  {
+    "id": 176,
+    "title": ["Ertiga", "Sedan", "Crysta"],
+    "premium": [
+      {
+        "title": "Toyota Fortuner",
+        "image": "/premium-toyota-fortuner.png"
+      },
+      {
+        "title": "Toyota Innova Crysta",
+        "image": "/premium-toyota-innove-crysta.png"
+      },
+      {
+        "title": "Toyota Innova Hycross",
+        "image": "/premium-toyota-innova-hycros.png"
+      }
+    ],
+    "economy": [
+      {
+        "title": "Honda City",
+        "image": "/Honda-City.png"
+      },
+      {
+        "title": "Maruti Ciaz",
+        "image": "/Maruti-Ciaz.png"
+      },
+      {
+        "title": "Swift Dzire",
+        "image": "/Maruti-Swift.png"
+      }
+    ],
+    "destination": "Delhi to Udaipur",
+    "image": "/Ertiga.png",
+    "duration": "11 hr 25 mins",
+    "extraFare": 14,
+    "seats": 7,
+    "ac": true,
+    "included": 720
+  },
+  {
+    "id": 177,
+    "title": ["Sedan", "Crysta", "Ertiga"],
+    "premium": [
+      {
+        "title": "Toyota Fortuner",
+        "image": "/premium-toyota-fortuner.png"
+      },
+      {
+        "title": "Toyota Innova Crysta",
+        "image": "/premium-toyota-innove-crysta.png"
+      },
+      {
+        "title": "Toyota Innova Hycross",
+        "image": "/premium-toyota-innova-hycros.png"
+      }
+    ],
+    "economy": [
+      {
+        "title": "Honda City",
+        "image": "/Honda-City.png"
+      },
+      {
+        "title": "Maruti Ciaz",
+        "image": "/Maruti-Ciaz.png"
+      },
+      {
+        "title": "Swift Dzire",
+        "image": "/Maruti-Swift.png"
+      }
+    ],
+    "destination": "Delhi to Udaipur",
+    "image": "/sweden.png",
+    "duration": "11 hr 20 mins",
+    "extraFare": 10,
+    "seats": 4,
+    "ac": true,
+    "included": 720
+  },
+  {
+    "id": 178,
+    "title": ["Crysta", "Sedan", "Ertiga"],
+    "premium": [
+      {
+        "title": "Toyota Fortuner",
+        "image": "/premium-toyota-fortuner.png"
+      },
+      {
+        "title": "Toyota Innova Crysta",
+        "image": "/premium-toyota-innove-crysta.png"
+      },
+      {
+        "title": "Toyota Innova Hycross",
+        "image": "/premium-toyota-innova-hycros.png"
+      }
+    ],
+    "economy": [
+      {
+        "title": "Honda City",
+        "image": "/Honda-City.png"
+      },
+      {
+        "title": "Maruti Ciaz",
+        "image": "/Maruti-Ciaz.png"
+      },
+      {
+        "title": "Swift Dzire",
+        "image": "/Maruti-Swift.png"
+      }
+    ],
+    "destination": "Delhi to Jodhpur",
+    "image": "/crysta.png",
+    "duration": "10 hr 20 mins",
+    "extraFare": 18,
+    "seats": 7,
+    "ac": true,
+    "included": 660
+  },
+  {
+    "id": 179,
+    "title": ["Ertiga", "Sedan", "Crysta"],
+    "premium": [
+      {
+        "title": "Toyota Fortuner",
+        "image": "/premium-toyota-fortuner.png"
+      },
+      {
+        "title": "Toyota Innova Crysta",
+        "image": "/premium-toyota-innove-crysta.png"
+      },
+      {
+        "title": "Toyota Innova Hycross",
+        "image": "/premium-toyota-innova-hycros.png"
+      }
+    ],
+    "economy": [
+      {
+        "title": "Honda City",
+        "image": "/Honda-City.png"
+      },
+      {
+        "title": "Maruti Ciaz",
+        "image": "/Maruti-Ciaz.png"
+      },
+      {
+        "title": "Swift Dzire",
+        "image": "/Maruti-Swift.png"
+      }
+    ],
+    "destination": "Delhi to Jodhpur",
+    "image": "/Ertiga.png",
+    "duration": "10 hr 25 mins",
+    "extraFare": 14,
+    "seats": 7,
+    "ac": true,
+    "included": 660
+  },
+  {
+    "id": 180,
+    "title": ["Sedan", "Crysta", "Ertiga"],
+    "premium": [
+      {
+        "title": "Toyota Fortuner",
+        "image": "/premium-toyota-fortuner.png"
+      },
+      {
+        "title": "Toyota Innova Crysta",
+        "image": "/premium-toyota-innove-crysta.png"
+      },
+      {
+        "title": "Toyota Innova Hycross",
+        "image": "/premium-toyota-innova-hycros.png"
+      }
+    ],
+    "economy": [
+      {
+        "title": "Honda City",
+        "image": "/Honda-City.png"
+      },
+      {
+        "title": "Maruti Ciaz",
+        "image": "/Maruti-Ciaz.png"
+      },
+      {
+        "title": "Swift Dzire",
+        "image": "/Maruti-Swift.png"
+      }
+    ],
+    "destination": "Delhi to Jodhpur",
+    "image": "/sweden.png",
+    "duration": "10 hr 30 mins",
+    "extraFare": 10,
+    "seats": 4,
+    "ac": true,
+    "included": 660
+  },
+  {
+    "id": 181,
+    "title": ["Crysta", "Sedan", "Ertiga"],
+    "premium": [
+      {
+        "title": "Toyota Fortuner",
+        "image": "/premium-toyota-fortuner.png"
+      },
+      {
+        "title": "Toyota Innova Crysta",
+        "image": "/premium-toyota-innove-crysta.png"
+      },
+      {
+        "title": "Toyota Innova Hycross",
+        "image": "/premium-toyota-innova-hycros.png"
+      }
+    ],
+    "economy": [
+      {
+        "title": "Honda City",
+        "image": "/Honda-City.png"
+      },
+      {
+        "title": "Maruti Ciaz",
+        "image": "/Maruti-Ciaz.png"
+      },
+      {
+        "title": "Swift Dzire",
+        "image": "/Maruti-Swift.png"
+      }
+    ],
+    "destination": "Delhi to Lucknow",
+    "image": "/crysta.png",
+    "duration": "7 hr 20 mins",
+    "extraFare": 18,
+    "seats": 7,
+    "ac": true,
+    "included": 540
+  },
+  {
+    "id": 182,
+    "title": ["Ertiga", "Sedan", "Crysta"],
+    "premium": [
+      {
+        "title": "Toyota Fortuner",
+        "image": "/premium-toyota-fortuner.png"
+      },
+      {
+        "title": "Toyota Innova Crysta",
+        "image": "/premium-toyota-innove-crysta.png"
+      },
+      {
+        "title": "Toyota Innova Hycross",
+        "image": "/premium-toyota-innova-hycros.png"
+      }
+    ],
+    "economy": [
+      {
+        "title": "Honda City",
+        "image": "/Honda-City.png"
+      },
+      {
+        "title": "Maruti Ciaz",
+        "image": "/Maruti-Ciaz.png"
+      },
+      {
+        "title": "Swift Dzire",
+        "image": "/Maruti-Swift.png"
+      }
+    ],
+    "destination": "Delhi to Lucknow",
+    "image": "/Ertiga.png",
+    "duration": "7 hr 25 mins",
+    "extraFare": 14,
+    "seats": 7,
+    "ac": true,
+    "included": 540
+  },
+  {
+    "id": 183,
+    "title": ["Sedan", "Crysta", "Ertiga"],
+    "premium": [
+      {
+        "title": "Toyota Fortuner",
+        "image": "/premium-toyota-fortuner.png"
+      },
+      {
+        "title": "Toyota Innova Crysta",
+        "image": "/premium-toyota-innove-crysta.png"
+      },
+      {
+        "title": "Toyota Innova Hycross",
+        "image": "/premium-toyota-innova-hycros.png"
+      }
+    ],
+    "economy": [
+      {
+        "title": "Honda City",
+        "image": "/Honda-City.png"
+      },
+      {
+        "title": "Maruti Ciaz",
+        "image": "/Maruti-Ciaz.png"
+      },
+      {
+        "title": "Swift Dzire",
+        "image": "/Maruti-Swift.png"
+      }
+    ],
+    "destination": "Delhi to Lucknow",
+    "image": "/sweden.png",
+    "duration": "9 hr 30 mins",
+    "extraFare": 10,
+    "seats": 4,
+    "ac": true,
+    "included": 475
+  },
+  {
+    "id": 184,
+    "title": ["Crysta", "Sedan", "Ertiga"],
+    "premium": [
+      {
+        "title": "Toyota Fortuner",
+        "image": "/premium-toyota-fortuner.png"
+      },
+      {
+        "title": "Toyota Innova Crysta",
+        "image": "/premium-toyota-innove-crysta.png"
+      },
+      {
+        "title": "Toyota Innova Hycross",
+        "image": "/premium-toyota-innova-hycros.png"
+      }
+    ],
+    "economy": [
+      {
+        "title": "Honda City",
+        "image": "/Honda-City.png"
+      },
+      {
+        "title": "Maruti Ciaz",
+        "image": "/Maruti-Ciaz.png"
+      },
+      {
+        "title": "Swift Dzire",
+        "image": "/Maruti-Swift.png"
+      }
+    ],
+    "destination": "Delhi to Kanpur",
+    "image": "/crysta.png",
+    "duration": "7 hr 35 mins",
+    "extraFare": 18,
+    "seats": 7,
+    "ac": true,
+    "included": 485
+  },
+  {
+    "id": 185,
+    "title": ["Ertiga", "Sedan", "Crysta"],
+    "premium": [
+      {
+        "title": "Toyota Fortuner",
+        "image": "/premium-toyota-fortuner.png"
+      },
+      {
+        "title": "Toyota Innova Crysta",
+        "image": "/premium-toyota-innove-crysta.png"
+      },
+      {
+        "title": "Toyota Innova Hycross",
+        "image": "/premium-toyota-innova-hycros.png"
+      }
+    ],
+    "economy": [
+      {
+        "title": "Honda City",
+        "image": "/Honda-City.png"
+      },
+      {
+        "title": "Maruti Ciaz",
+        "image": "/Maruti-Ciaz.png"
+      },
+      {
+        "title": "Swift Dzire",
+        "image": "/Maruti-Swift.png"
+      }
+    ],
+    "destination": "Delhi to Kanpur",
+    "image": "/Ertiga.png",
+    "duration": "7 hr 35 mins",
+    "extraFare": 14,
+    "seats": 7,
+    "ac": true,
+    "included": 485
+  },
+  {
+    "id": 186,
+    "title": ["Sedan", "Crysta", "Ertiga"],
+    "premium": [
+      {
+        "title": "Toyota Fortuner",
+        "image": "/premium-toyota-fortuner.png"
+      },
+      {
+        "title": "Toyota Innova Crysta",
+        "image": "/premium-toyota-innove-crysta.png"
+      },
+      {
+        "title": "Toyota Innova Hycross",
+        "image": "/premium-toyota-innova-hycros.png"
+      }
+    ],
+    "economy": [
+      {
+        "title": "Honda City",
+        "image": "/Honda-City.png"
+      },
+      {
+        "title": "Maruti Ciaz",
+        "image": "/Maruti-Ciaz.png"
+      },
+      {
+        "title": "Swift Dzire",
+        "image": "/Maruti-Swift.png"
+      }
+    ],
+    "destination": "Delhi to Kanpur",
+    "image": "/sweden.png",
+    "duration": "7 hr 40 mins",
+    "extraFare": 10,
+    "seats": 4,
+    "ac": true,
+    "included": 485
   }
 ]
