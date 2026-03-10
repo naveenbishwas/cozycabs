@@ -297,7 +297,7 @@ export default function OutOfStation() {
                     placeholder="Enter drop city"
                     value={to}
                     autoComplete="off"
-                    autoFocus
+                    // autoFocus
                     onChange={(e) => {
                       setTo(e.target.value);
                       setShowTo(true);
