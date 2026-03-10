@@ -214,6 +214,8 @@ textarea {
 
 /* Button */
 .submit-btn {
+  position: relative;
+  z-index: 9999;
   background: linear-gradient(90deg, #d40000, #a60000);
   color: #fff;
   border: none;

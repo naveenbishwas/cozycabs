@@ -8,6 +8,7 @@ import NumberCounter from "@/app/Components/NumberCounter/page";
 import AllBookingCars from "@/app/Components/AllBookingCars/page";
 import SiteFooter from "@/app/Components/Footer/page";
 import carListings from "../../data/carListings.json";
+
 const CITIES = [
   "Amritsar",
   "Pathankot",
@@ -75,7 +76,7 @@ const CITIES = [
   "Shimla",
 ];
 
-/* ── Icons (same as before) ──────────────────────────────────── */
+/* ── Icons ── */
 const IconLocation = ({ color = "#aaa", size = 15 }) => (
   <svg
     className="wf__ico"
@@ -103,12 +104,13 @@ const IconLocationFill = ({ color = "#d80117", size = 14 }) => (
   </svg>
 );
 
-const IconCalendar = ({ size = 14 }) => (
+/* Calendar icon — SVG, always visible */
+const IconCalendar = ({ size = 15 }) => (
   <svg
-    className="wf__ico"
+    className="wf__cal-ico"
     viewBox="0 0 24 24"
     fill="none"
-    stroke="#aaa"
+    stroke="currentColor"
     strokeWidth="2"
     width={size}
     height={size}
@@ -118,12 +120,13 @@ const IconCalendar = ({ size = 14 }) => (
   </svg>
 );
 
-const IconClock = ({ size = 14 }) => (
+/* Clock icon */
+const IconClock = ({ size = 15 }) => (
   <svg
-    className="wf__ico"
+    className="wf__cal-ico"
     viewBox="0 0 24 24"
     fill="none"
-    stroke="#aaa"
+    stroke="currentColor"
     strokeWidth="2"
     width={size}
     height={size}
@@ -160,6 +163,27 @@ const IconLock = () => (
   </svg>
 );
 
+/* Format date for display */
+const formatDate = (val) => {
+  if (!val) return null;
+  const d = new Date(val + "T00:00:00");
+  return d.toLocaleDateString("en-IN", {
+    day: "2-digit",
+    month: "short",
+    year: "numeric",
+  });
+};
+
+/* Format time for display */
+const formatTime = (val) => {
+  if (!val) return null;
+  const [h, m] = val.split(":");
+  const hr = parseInt(h);
+  const ampm = hr >= 12 ? "PM" : "AM";
+  const hr12 = hr % 12 || 12;
+  return `${hr12}:${m} ${ampm}`;
+};
+
 /* ═══════════════════════════════════════════════════════════════ */
 
 export default function OutOfStation() {
@@ -169,7 +193,6 @@ export default function OutOfStation() {
   const [date, setDate] = useState("");
   const [time, setTime] = useState("07:00");
   const [showTo, setShowTo] = useState(false);
-  const [searchData, setSearchData] = useState(null);
   const router = useRouter();
 
   const today = new Date().toISOString().split("T")[0];
@@ -186,9 +209,10 @@ export default function OutOfStation() {
   const fTo = CITIES.filter(
     (c) => c.toLowerCase().includes(to.toLowerCase()) && c !== from,
   );
+
   const handleSearch = () => {
     const carDetails = carListings.find((car) => car.destination.includes(to));
-    if (carDetails === null || carDetails === undefined) {
+    if (!carDetails) {
       alert("No cabs available for this destination");
       setTo("");
       return;
@@ -220,7 +244,6 @@ export default function OutOfStation() {
 
         {/* Body */}
         <div className="hero__body">
-          {/* Heading */}
           <div className="hero__text">
             <span className="hero__pill">✦ Trusted by 10 Lakh+ Travelers</span>
             <h1 className="hero__h1">
@@ -237,7 +260,6 @@ export default function OutOfStation() {
 
           {/* ══ Booking Widget ══ */}
           <div className="widget">
-            {/* Trip type tabs */}
             <div className="widget__tabs">
               <button
                 className={`widget__tab ${tripType === "oneway" ? "active" : ""}`}
@@ -257,11 +279,9 @@ export default function OutOfStation() {
               </button>
             </div>
 
-            {/* Fields */}
             <div className="widget__fields">
-              {/* ── FROM (disabled — Delhi locked) ── */}
+              {/* ── FROM (locked) ── */}
               <div className="wf wf--grow wf--disabled">
-                {/* Locked badge */}
                 <span className="wf__locked-badge">
                   <IconLock /> Fixed
                 </span>
@@ -277,10 +297,9 @@ export default function OutOfStation() {
                 </div>
               </div>
 
-              {/* ── Swap button ── */}
+              {/* ── Swap (disabled) ── */}
               <button
                 className="wf__swap"
-                title="Swap"
                 disabled
                 style={{ opacity: 0.4, cursor: "not-allowed" }}
               >
@@ -297,7 +316,7 @@ export default function OutOfStation() {
                     placeholder="Enter drop city"
                     value={to}
                     autoComplete="off"
-                    // autoFocus
+                    autoFocus
                     onChange={(e) => {
                       setTo(e.target.value);
                       setShowTo(true);
@@ -307,7 +326,7 @@ export default function OutOfStation() {
                 </div>
                 {showTo && fTo.length > 0 && (
                   <ul className="wf__drop">
-                    {fTo?.sort().map((c) => (
+                    {fTo.map((c) => (
                       <li
                         key={c}
                         onMouseDown={() => {
@@ -323,38 +342,48 @@ export default function OutOfStation() {
                 )}
               </div>
 
-              {/* ── PICKUP DATE ── */}
-              <div className="wf">
+              {/* ── PICKUP DATE — full area clickable ── */}
+              <div className="wf wf--date">
                 <label className="wf__lbl">PICKUP DATE</label>
                 <div className="wf__wrap">
-                  <IconCalendar size={14} />
-                  <input
-                    type="date"
-                    className="wf__inp wf__inp--dt"
-                    value={date}
-                    min={today}
-                    onChange={(e) => setDate(e.target.value)}
-                  />
+                  <IconCalendar size={15} />
+                  <span
+                    className={`wf__date-display ${!date ? "wf__date-display--placeholder" : ""}`}
+                  >
+                    {date ? formatDate(date) : "Select date"}
+                  </span>
                 </div>
+                {/* Hidden input overlays entire card */}
+                <input
+                  type="date"
+                  value={date}
+                  min={today}
+                  onChange={(e) => setDate(e.target.value)}
+                />
               </div>
 
-              {/* ── PICKUP TIME ── */}
-              <div className="wf">
+              {/* ── PICKUP TIME — full area clickable ── */}
+              <div className="wf wf--date">
                 <label className="wf__lbl">PICKUP TIME</label>
                 <div className="wf__wrap">
-                  <IconClock size={14} />
-                  <input
-                    type="time"
-                    className="wf__inp wf__inp--dt"
-                    value={time}
-                    onChange={(e) => setTime(e.target.value)}
-                  />
+                  <IconClock size={15} />
+                  <span
+                    className={`wf__date-display ${!time ? "wf__date-display--placeholder" : ""}`}
+                  >
+                    {time ? formatTime(time) : "Select time"}
+                  </span>
                 </div>
+                {/* Hidden input overlays entire card */}
+                <input
+                  type="time"
+                  value={time}
+                  onChange={(e) => setTime(e.target.value)}
+                />
               </div>
 
               {/* ── SEARCH ── */}
               <button onClick={handleSearch} className="wf__btn">
-                Search Cab
+                Search Cabs
               </button>
             </div>
           </div>
@@ -372,7 +401,7 @@ export default function OutOfStation() {
         </div>
       </section>
 
-      <div style={{ position: "relative", zIndex: 1 }}>
+      <div style={{ position: "relative", zIndex: 10, background: "#fff" }}>
         <NumberCounter />
       </div>
       <AllBookingCars />

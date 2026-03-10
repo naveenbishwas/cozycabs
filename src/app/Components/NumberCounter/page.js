@@ -38,7 +38,7 @@ const NumberCounter = () => {
               });
           }
         },
-        { threshold: 0.35 }
+        { threshold: 0.35 },
       );
       io.observe(rootRef.current);
       return () => io.disconnect();

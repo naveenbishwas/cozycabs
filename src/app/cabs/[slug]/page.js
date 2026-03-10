@@ -188,7 +188,7 @@ const Page = () => {
               <div className="cc__price-row">
                 <span className="cc__price">
                   {/* ₹{price.toLocaleString("en-IN")} */}
-                  N/A
+                  {/* N/A */}
                 </span>
                 <span className="cc__orig">
                   {/* ₹{original.toLocaleString("en-IN")} */}
