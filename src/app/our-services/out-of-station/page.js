@@ -372,7 +372,9 @@ export default function OutOfStation() {
         </div>
       </section>
 
-      <NumberCounter />
+      <div style={{ position: "relative", zIndex: 1 }}>
+        <NumberCounter />
+      </div>
       <AllBookingCars />
       <SiteFooter />
     </>
