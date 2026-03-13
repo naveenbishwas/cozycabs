@@ -194,7 +194,8 @@ const AllBookingCars = () => {
                         .trim()
                         .toLowerCase()
                         .replace(/\s+/g, "-");
-                      router.push(`/cabs/${slug}?type=${selectedType.name}`);
+                      // router.push(`/cabs/${slug}?type=${selectedType.name}`);
+                      router.push(`/cabs/${slug}`);
                     }}
                     className="vsel-row__btn"
                   >

@@ -18,6 +18,7 @@ import { FiZap } from "react-icons/fi";
 import { SiToll } from "react-icons/si";
 import { CiCreditCard1 } from "react-icons/ci";
 import SiteFooter from "@/app/Components/Footer/page";
+import Link from "next/link";
 
 const Page = () => {
   const { slug } = useParams();
@@ -376,7 +377,8 @@ const Page = () => {
       <div className="cbp-hero">
         <div className="cbp-hero__inner">
           <p className="cbp-crumb">
-            Home / Outstation /{" "}
+            <Link href={"/"}>Home /</Link>
+            <Link href={"/our-services/out-of-station"}> Outstation / </Link>
             <span>
               {fromCity} to {toCity}
             </span>
