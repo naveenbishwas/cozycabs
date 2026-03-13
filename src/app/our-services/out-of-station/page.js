@@ -76,10 +76,9 @@ const CITIES = [
   "Shimla",
 ];
 
-/* ── Icons ── */
 const IconLocation = ({ color = "#aaa", size = 15 }) => (
   <svg
-    className="wf__ico"
+    className="oos-f__ico"
     viewBox="0 0 24 24"
     fill="none"
     stroke={color}
@@ -91,10 +90,9 @@ const IconLocation = ({ color = "#aaa", size = 15 }) => (
     <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" />
   </svg>
 );
-
 const IconLocationFill = ({ color = "#d80117", size = 14 }) => (
   <svg
-    className="wf__ico"
+    className="oos-f__ico"
     viewBox="0 0 24 24"
     fill={color}
     width={size}
@@ -103,11 +101,9 @@ const IconLocationFill = ({ color = "#d80117", size = 14 }) => (
     <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" />
   </svg>
 );
-
-/* Calendar icon — SVG, always visible */
 const IconCalendar = ({ size = 15 }) => (
   <svg
-    className="wf__cal-ico"
+    className="oos-f__cal-ico"
     viewBox="0 0 24 24"
     fill="none"
     stroke="currentColor"
@@ -119,11 +115,9 @@ const IconCalendar = ({ size = 15 }) => (
     <path d="M16 2v4M8 2v4M3 10h18" />
   </svg>
 );
-
-/* Clock icon */
 const IconClock = ({ size = 15 }) => (
   <svg
-    className="wf__cal-ico"
+    className="oos-f__cal-ico"
     viewBox="0 0 24 24"
     fill="none"
     stroke="currentColor"
@@ -135,7 +129,6 @@ const IconClock = ({ size = 15 }) => (
     <path d="M12 6v6l4 2" />
   </svg>
 );
-
 const IconSwap = () => (
   <svg
     viewBox="0 0 24 24"
@@ -148,7 +141,6 @@ const IconSwap = () => (
     <path d="M7 16V4m0 0L3 8m4-4 4 4M17 8v12m0 0 4-4m-4 4-4-4" />
   </svg>
 );
-
 const IconLock = () => (
   <svg
     viewBox="0 0 24 24"
@@ -163,7 +155,6 @@ const IconLock = () => (
   </svg>
 );
 
-/* Format date for display */
 const formatDate = (val) => {
   if (!val) return null;
   const d = new Date(val + "T00:00:00");
@@ -173,18 +164,13 @@ const formatDate = (val) => {
     year: "numeric",
   });
 };
-
-/* Format time for display */
 const formatTime = (val) => {
   if (!val) return null;
   const [h, m] = val.split(":");
   const hr = parseInt(h);
   const ampm = hr >= 12 ? "PM" : "AM";
-  const hr12 = hr % 12 || 12;
-  return `${hr12}:${m} ${ampm}`;
+  return `${hr % 12 || 12}:${m} ${ampm}`;
 };
-
-/* ═══════════════════════════════════════════════════════════════ */
 
 export default function OutOfStation() {
   const [tripType, setTripType] = useState("oneway");
@@ -194,9 +180,8 @@ export default function OutOfStation() {
   const [time, setTime] = useState("07:00");
   const [showTo, setShowTo] = useState(false);
   const router = useRouter();
-
-  const today = new Date().toISOString().split("T")[0];
   const toRef = useRef(null);
+  const today = new Date().toISOString().split("T")[0];
 
   useEffect(() => {
     const close = (e) => {
@@ -211,58 +196,49 @@ export default function OutOfStation() {
   );
 
   const handleSearch = () => {
-    const carDetails = carListings.find((car) => car.destination.includes(to));
-    if (!carDetails) {
+    const car = carListings.find((c) => c.destination.includes(to));
+    if (!car) {
       alert("No cabs available for this destination");
       setTo("");
       return;
     }
-    const slug = carDetails.destination
-      .trim()
-      .toLowerCase()
-      .replace(/\s+/g, "-");
-    router.push(`/cabs/${slug}?type=${carDetails.title[0].toLowerCase()}`);
+    const slug = car.destination.trim().toLowerCase().replace(/\s+/g, "-");
+    router.push(`/cabs/${slug}?type=${car.title[0].toLowerCase()}`);
   };
 
   return (
     <>
       <Header />
-
-      <section className="hero">
-        {/* Background */}
-        <div className="hero__bg">
+      <section className="oos-hero">
+        <div className="oos-hero__bg">
           <Image
             src="../out-of-stations.png"
             fill
-            className="hero__img"
+            className="oos-hero__img"
             alt="Out of Station"
             unoptimized
             priority
           />
-          <div className="hero__dim" />
+          <div className="oos-hero__dim" />
         </div>
-
-        {/* Body */}
-        <div className="hero__body">
-          <div className="hero__text">
-            <span className="hero__pill">✦ Trusted by 10 Lakh+ Travelers</span>
-            <h1 className="hero__h1">
-              Your Trusted <br /> Partner <br />
-              <p className="hero__h1">
-                From Here to<span> Anywhere.</span>
-              </p>
+        <div className="oos-hero__body">
+          <div className="oos-text">
+            <span className="oos-pill">✦ Trusted by 10 Lakh+ Travelers</span>
+            <h1 className="oos-h1">
+              Your Trusted <br />
+              Partner <br />
+              From Here to <span>Anywhere.</span>
             </h1>
-            <p className="hero__sub">
+            <p className="oos-sub">
               Professional drivers · Clean cabs · On-time pickup · Pan India
               coverage
             </p>
           </div>
 
-          {/* ══ Booking Widget ══ */}
-          <div className="widget">
-            <div className="widget__tabs">
+          <div className="oos-widget">
+            <div className="oos-tabs">
               <button
-                className={`widget__tab ${tripType === "oneway" ? "active" : ""}`}
+                className={`oos-tab ${tripType === "oneway" ? "active" : ""}`}
                 onClick={() => setTripType("oneway")}
               >
                 <svg
@@ -279,17 +255,17 @@ export default function OutOfStation() {
               </button>
             </div>
 
-            <div className="widget__fields">
-              {/* ── FROM (locked) ── */}
-              <div className="wf wf--grow wf--disabled">
-                <span className="wf__locked-badge">
+            <div className="oos-fields">
+              {/* FROM */}
+              <div className="oos-f oos-f--grow oos-f--dis">
+                <span className="oos-f__badge">
                   <IconLock /> Fixed
                 </span>
-                <label className="wf__lbl">FROM</label>
-                <div className="wf__wrap">
+                <label className="oos-f__lbl">FROM</label>
+                <div className="oos-f__wrap">
                   <IconLocation color="#bbb" size={15} />
                   <input
-                    className="wf__inp__dis"
+                    className="oos-f__inp--dis"
                     value={from}
                     disabled
                     readOnly
@@ -297,26 +273,25 @@ export default function OutOfStation() {
                 </div>
               </div>
 
-              {/* ── Swap (disabled) ── */}
+              {/* Swap */}
               <button
-                className="wf__swap"
+                className="oos-swap"
                 disabled
                 style={{ opacity: 0.4, cursor: "not-allowed" }}
               >
                 <IconSwap />
               </button>
 
-              {/* ── TO ── */}
-              <div className="wf wf--grow" ref={toRef}>
-                <label className="wf__lbl">TO</label>
-                <div className="wf__wrap">
+              {/* TO */}
+              <div className="oos-f oos-f--grow" ref={toRef}>
+                <label className="oos-f__lbl">TO</label>
+                <div className="oos-f__wrap">
                   <IconLocationFill color="#d80117" size={14} />
                   <input
-                    className="wf__inp"
+                    className="oos-f__inp"
                     placeholder="Enter drop city"
                     value={to}
                     autoComplete="off"
-                    autoFocus
                     onChange={(e) => {
                       setTo(e.target.value);
                       setShowTo(true);
@@ -325,8 +300,8 @@ export default function OutOfStation() {
                   />
                 </div>
                 {showTo && fTo.length > 0 && (
-                  <ul className="wf__drop">
-                    {fTo.map((c) => (
+                  <ul className="oos-drop">
+                    {fTo.sort().map((c) => (
                       <li
                         key={c}
                         onMouseDown={() => {
@@ -342,18 +317,17 @@ export default function OutOfStation() {
                 )}
               </div>
 
-              {/* ── PICKUP DATE — full area clickable ── */}
-              <div className="wf wf--date">
-                <label className="wf__lbl">PICKUP DATE</label>
-                <div className="wf__wrap">
+              {/* DATE */}
+              <div className="oos-f oos-f--dt">
+                <label className="oos-f__lbl">PICKUP DATE</label>
+                <div className="oos-f__wrap">
                   <IconCalendar size={15} />
                   <span
-                    className={`wf__date-display ${!date ? "wf__date-display--placeholder" : ""}`}
+                    className={`oos-f__dtxt ${!date ? "oos-f__dtxt--ph" : ""}`}
                   >
                     {date ? formatDate(date) : "Select date"}
                   </span>
                 </div>
-                {/* Hidden input overlays entire card */}
                 <input
                   type="date"
                   value={date}
@@ -362,18 +336,17 @@ export default function OutOfStation() {
                 />
               </div>
 
-              {/* ── PICKUP TIME — full area clickable ── */}
-              <div className="wf wf--date">
-                <label className="wf__lbl">PICKUP TIME</label>
-                <div className="wf__wrap">
+              {/* TIME */}
+              <div className="oos-f oos-f--dt">
+                <label className="oos-f__lbl">PICKUP TIME</label>
+                <div className="oos-f__wrap">
                   <IconClock size={15} />
                   <span
-                    className={`wf__date-display ${!time ? "wf__date-display--placeholder" : ""}`}
+                    className={`oos-f__dtxt ${!time ? "oos-f__dtxt--ph" : ""}`}
                   >
                     {time ? formatTime(time) : "Select time"}
                   </span>
                 </div>
-                {/* Hidden input overlays entire card */}
                 <input
                   type="time"
                   value={time}
@@ -381,29 +354,26 @@ export default function OutOfStation() {
                 />
               </div>
 
-              {/* ── SEARCH ── */}
-              <button onClick={handleSearch} className="wf__btn">
+              {/* SEARCH */}
+              <button onClick={handleSearch} className="oos-btn">
                 Search Cabs
               </button>
             </div>
           </div>
 
-          {/* Trust strip */}
-          <div className="hero__trust">
+          <div className="oos-trust">
             <span>✓ Free Cancellation</span>
-            <span className="hero__trust-dot" />
+            <span className="oos-trust-dot" />
             <span>✓ No Hidden Charges</span>
-            <span className="hero__trust-dot" />
+            <span className="oos-trust-dot" />
             <span>✓ 24/7 Customer Support</span>
-            <span className="hero__trust-dot" />
+            <span className="oos-trust-dot" />
             <span>✓ 10 Lakh+ Happy Customers</span>
           </div>
         </div>
       </section>
 
-      <div style={{ position: "relative", zIndex: 10, background: "#fff" }}>
-        <NumberCounter />
-      </div>
+      <NumberCounter />
       <AllBookingCars />
       <SiteFooter />
     </>

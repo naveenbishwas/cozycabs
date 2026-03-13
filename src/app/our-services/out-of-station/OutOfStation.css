@@ -1,42 +1,46 @@
-/* =======================================
-   HERO SECTION
-   ======================================= */
+/* ================================================================
+   oos.css — OutOfStation Page (conflict-free rewrite)
+   ================================================================ */
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&display=swap");
 
-.hero {
+/* ================================================================
+   HERO
+   ================================================================ */
+.oos-hero {
   position: relative;
   width: 100%;
-  min-height: 97vh;
+  min-height: 100svh;
   display: flex;
   align-items: center;
   justify-content: center;
-  isolation: isolate;
+  font-family: "Outfit", sans-serif;
 }
 
-.hero__bg {
+.oos-hero__bg {
   position: absolute;
   inset: 0;
   z-index: 0;
   overflow: hidden;
 }
 
-.hero__img {
+.oos-hero__img {
   object-fit: cover;
   object-position: center;
 }
 
-.hero__dim {
+.oos-hero__dim {
   position: absolute;
   inset: 0;
   background: linear-gradient(
     120deg,
-    rgba(0, 0, 0, 0.8) 0%,
-    rgba(5, 0, 0, 0.72) 60%,
-    rgba(0, 0, 0, 0.6) 100%
+    rgba(0, 0, 0, 0.82) 0%,
+    rgba(5, 0, 0, 0.74) 60%,
+    rgba(0, 0, 0, 0.62) 100%
   );
+  z-index: 1;
 }
 
-/* Body */
-.hero__body {
+.oos-hero__body {
   position: relative;
   z-index: 2;
   width: 100%;
@@ -46,17 +50,17 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 30px;
+  gap: 28px;
 }
 
 /* ── Text ── */
-.hero__text {
+.oos-text {
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 16px;
 }
 
-.hero__pill {
+.oos-pill {
   display: inline-flex;
   align-items: center;
   gap: 6px;
@@ -69,58 +73,61 @@
   font-weight: 700;
   letter-spacing: 0.5px;
   width: fit-content;
+  font-family: "Outfit", sans-serif;
 }
 
-.hero__h1 {
-  font-size: clamp(35px, 4.5vw, 58px);
+.oos-h1 {
+  font-size: clamp(32px, 4.5vw, 58px);
   font-weight: 800;
   color: #fff;
   max-width: 800px;
   line-height: 1.1;
   margin: 0;
   letter-spacing: -0.5px;
+  font-family: "Outfit", sans-serif;
 }
 
-.hero__h1 span {
+.oos-h1 span {
   color: #d80117;
 }
 
-.hero__sub {
-  font-size: 15px;
+.oos-sub {
+  font-size: 14px;
   color: rgba(255, 255, 255, 0.6);
   margin: 0;
   font-weight: 400;
   letter-spacing: 0.2px;
+  font-family: "Outfit", sans-serif;
 }
 
-/* ================================
-   WIDGET (booking bar)
-   ================================ */
-
-.widget {
+/* ================================================================
+   WIDGET
+   ================================================================ */
+.oos-widget {
   width: 100%;
   background: #fff;
-  border-radius: 10px;
+  border-radius: 12px;
   overflow: visible;
   box-shadow:
     0 20px 60px rgba(0, 0, 0, 0.45),
     0 2px 8px rgba(0, 0, 0, 0.2);
+  font-family: "Outfit", sans-serif;
 }
 
 /* Tabs */
-.widget__tabs {
+.oos-tabs {
   display: flex;
   background: #111;
-  border-radius: 10px 10px 0 0;
+  border-radius: 12px 12px 0 0;
   padding: 0 20px;
   gap: 2px;
 }
 
-.widget__tab {
+.oos-tab {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 11px 20px;
+  padding: 12px 20px;
   background: transparent;
   border: none;
   border-bottom: 3px solid transparent;
@@ -132,108 +139,111 @@
   transition:
     color 0.2s,
     border-color 0.2s;
-  font-family: inherit;
+  font-family: "Outfit", sans-serif;
 }
 
-.widget__tab:hover {
+.oos-tab:hover {
   color: #ccc;
 }
-
-.widget__tab.active {
+.oos-tab.active {
   color: #fff;
   border-bottom-color: #d80117;
 }
 
-/* ── Fields row ── */
-.widget__fields {
+/* Fields row */
+.oos-fields {
   display: flex;
   align-items: stretch;
   padding: 10px 14px;
   gap: 8px;
-  position: relative;
 }
 
-/* ── Individual field card ── */
-.wf {
+/* ── Field card ── */
+.oos-f {
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 4px;
   padding: 8px 18px;
   position: relative;
-  min-width: 120px;
+  min-width: 100px;
   border: 1.5px solid #b0b0b0;
   border-radius: 50px;
   background: #fff;
   transition:
     border-color 0.2s,
     box-shadow 0.2s;
+  font-family: "Outfit", sans-serif;
 }
 
-.wf:hover {
+.oos-f:hover {
   border-color: #888;
 }
 
-.wf:focus-within {
+.oos-f:focus-within {
   border-color: #d80117;
   box-shadow: 0 0 0 3px rgba(216, 1, 23, 0.08);
 }
 
-/* Disabled FROM field — distinct locked style */
-.wf--disabled {
+/* Disabled FROM */
+.oos-f--dis {
   background: #f5f5f5;
   border-color: #b0b0b0;
   border-style: dashed;
   cursor: not-allowed;
 }
-
-.wf--disabled:hover {
+.oos-f--dis:hover {
   border-color: #b0b0b0;
 }
-
-.wf--disabled:focus-within {
+.oos-f--dis:focus-within {
   border-color: #b0b0b0;
   box-shadow: none;
 }
 
-.wf--grow {
+.oos-f--grow {
   flex: 1;
 }
 
-.wf--slide {
-  animation: slideIn 0.25s ease both;
+/* Date field — full area clickable */
+.oos-f--dt {
+  cursor: pointer;
 }
-
-@keyframes slideIn {
-  from {
-    opacity: 0;
-    transform: translateX(-8px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+.oos-f--dt input[type="date"],
+.oos-f--dt input[type="time"] {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 3;
+  border: none;
+  background: transparent;
+}
+.oos-f--dt:hover {
+  border-color: #d80117;
+}
+.oos-f--dt:hover .oos-f__cal-ico {
+  color: #d80117;
 }
 
 /* Label */
-.wf__lbl {
+.oos-f__lbl {
   font-size: 9.5px;
   font-weight: 800;
   letter-spacing: 1.2px;
   color: #aaa;
   text-transform: uppercase;
-  font-family: inherit;
+  font-family: "Outfit", sans-serif;
   white-space: nowrap;
   line-height: 1;
 }
-
-/* Disabled label */
-.wf--disabled .wf__lbl {
+.oos-f--dis .oos-f__lbl {
   color: #bbb;
 }
 
-/* ── Locked badge on FROM ── */
-.wf__locked-badge {
+/* Locked badge */
+.oos-f__badge {
   position: absolute;
   top: -9px;
   right: 14px;
@@ -249,21 +259,18 @@
   letter-spacing: 0.5px;
   color: #999;
   text-transform: uppercase;
+  font-family: "Outfit", sans-serif;
 }
 
-/* Input wrapper */
-.wf__wrap {
+/* Wrap */
+.oos-f__wrap {
   display: flex;
   align-items: center;
   gap: 7px;
 }
 
-.wf__ico {
-  flex-shrink: 0;
-}
-
-/* Active input */
-.wf__inp {
+/* Text input */
+.oos-f__inp {
   border: none;
   outline: none;
   background: transparent;
@@ -272,12 +279,16 @@
   color: #111;
   width: 100%;
   padding: 0;
-  font-family: inherit;
+  font-family: "Outfit", sans-serif;
   min-width: 0;
 }
+.oos-f__inp::placeholder {
+  color: #bbb;
+  font-weight: 400;
+}
 
-/* Disabled input */
-.wf__inp__dis {
+/* Disabled text input */
+.oos-f__inp--dis {
   border: none;
   outline: none;
   background: transparent;
@@ -286,35 +297,38 @@
   color: #888;
   width: 100%;
   padding: 0;
-  font-family: inherit;
+  font-family: "Outfit", sans-serif;
   min-width: 0;
   cursor: not-allowed;
 }
 
-.wf__inp::placeholder {
+/* Date display text */
+.oos-f__dtxt {
+  font:
+    600 14px/1 "Outfit",
+    sans-serif;
+  color: #111;
+  white-space: nowrap;
+  pointer-events: none;
+}
+.oos-f__dtxt--ph {
   color: #bbb;
   font-weight: 400;
 }
 
-/* Date / time inputs */
-.wf__inp--dt {
-  cursor: pointer;
-  color: #222;
+/* Icons */
+.oos-f__ico {
+  flex-shrink: 0;
+}
+.oos-f__cal-ico {
+  flex-shrink: 0;
+  color: #aaa;
+  pointer-events: none;
+  transition: color 0.2s;
 }
 
-.wf__inp--dt::-webkit-calendar-picker-indicator {
-  opacity: 0.5;
-  cursor: pointer;
-  filter: invert(0.3);
-}
-
-.wf__inp--dt::-webkit-calendar-picker-indicator:hover {
-  opacity: 1;
-  filter: invert(0) sepia(1) saturate(5) hue-rotate(320deg);
-}
-
-/* Swap button — sits between fields, not inside */
-.wf__swap {
+/* Swap btn */
+.oos-swap {
   width: 32px;
   height: 32px;
   border-radius: 50%;
@@ -328,10 +342,8 @@
   flex-shrink: 0;
   align-self: center;
   transition: all 0.25s ease;
-  z-index: 2;
 }
-
-.wf__swap:hover {
+.oos-swap:hover {
   background: #d80117;
   border-color: #d80117;
   color: #fff;
@@ -339,7 +351,7 @@
 }
 
 /* Dropdown */
-.wf__drop {
+.oos-drop {
   position: absolute;
   top: calc(100% + 6px);
   left: 0;
@@ -357,23 +369,18 @@
   scrollbar-width: thin;
   scrollbar-color: #d80117 #f0f0f0;
 }
-
-.wf__drop::-webkit-scrollbar {
+.oos-drop::-webkit-scrollbar {
   width: 3px;
 }
-.wf__drop::-webkit-scrollbar-track {
+.oos-drop::-webkit-scrollbar-track {
   background: #f0f0f0;
   border-radius: 6px;
 }
-.wf__drop::-webkit-scrollbar-thumb {
+.oos-drop::-webkit-scrollbar-thumb {
   background: #d80117;
   border-radius: 6px;
 }
-.wf__drop::-webkit-scrollbar-thumb:hover {
-  background: #b40013;
-}
-
-.wf__drop li {
+.oos-drop li {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -383,60 +390,77 @@
   cursor: pointer;
   font-weight: 500;
   transition: background 0.15s;
+  font-family: "Outfit", sans-serif;
 }
-
-.wf__drop li:hover {
+.oos-drop li:hover {
   background: #fff5f5;
   color: #d80117;
 }
 
-/* Search Button */
-.wf__btn {
+/* Search button */
+.oos-btn {
   background: #d80117;
   color: #fff;
   border: none;
   padding: 0 26px;
-  min-height: 60px;
+  min-height: 52px;
   font-size: 13.5px;
   font-weight: 700;
   letter-spacing: 0.5px;
   cursor: pointer;
   border-radius: 50px;
   white-space: nowrap;
-  font-family: inherit;
+  font-family: "Outfit", sans-serif;
+  flex-shrink: 0;
+  align-self: center;
+  box-shadow: 0 4px 16px rgba(216, 1, 23, 0.3);
   transition:
     background 0.2s,
     transform 0.15s,
     box-shadow 0.2s;
-  flex-shrink: 0;
-  align-self: center;
-  box-shadow: 0 4px 16px rgba(216, 1, 23, 0.3);
+  position: relative;
+  overflow: hidden;
 }
-
-.wf__btn:hover {
+.oos-btn::after {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 -100%;
+  width: 60%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transform: skewX(-20deg);
+  transition: left 0.4s ease;
+}
+.oos-btn:hover {
   background: #b40013;
-  box-shadow: 0 6px 20px rgba(216, 1, 23, 0.4);
+  box-shadow: 0 6px 20px rgba(216, 1, 23, 0.44);
+  transform: translateY(-2px);
 }
-
-.wf__btn:active {
+.oos-btn:hover::after {
+  left: 160%;
+}
+.oos-btn:active {
   transform: scale(0.98);
 }
 
 /* ── Trust strip ── */
-.hero__trust {
+.oos-trust {
   display: flex;
   align-items: center;
   gap: 12px;
   flex-wrap: wrap;
 }
-
-.hero__trust span {
+.oos-trust span {
   font-size: 13px;
-  color: rgba(255, 255, 255, 0.65);
+  color: rgba(255, 255, 255, 0.7);
   font-weight: 500;
+  font-family: "Outfit", sans-serif;
 }
-
-.hero__trust-dot {
+.oos-trust-dot {
   width: 4px;
   height: 4px;
   background: rgba(216, 1, 23, 0.7);
@@ -445,133 +469,92 @@
 }
 
 /* ================================================================
-   DATE / TIME FIELD — full area clickable + visible icon
+   RESPONSIVE — TABLET ≤860px
    ================================================================ */
-
-.wf--date {
-  cursor: pointer;
-  position: relative;
-}
-
-.wf--date input[type="date"],
-.wf--date input[type="time"] {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  cursor: pointer;
-  z-index: 3;
-  border: none;
-  background: transparent;
-}
-
-.wf__date-display {
-  font: 600 14px/1 inherit;
-  color: #111;
-  white-space: nowrap;
-  pointer-events: none;
-}
-.wf__date-display--placeholder {
-  color: #bbb;
-  font-weight: 400;
-}
-
-.wf__cal-ico {
-  flex-shrink: 0;
-  color: #aaa;
-  pointer-events: none;
-  transition: color 0.2s;
-}
-.wf--date:hover .wf__cal-ico {
-  color: #d80117;
-}
-.wf--date:hover {
-  border-color: #d80117;
-}
-
-/* ================================
-   RESPONSIVE
-   ================================ */
 @media (max-width: 860px) {
-  .widget__fields {
+  .oos-hero__body {
+    padding: 100px 20px 60px;
+    gap: 24px;
+  }
+
+  .oos-fields {
     flex-direction: column;
     align-items: stretch;
     padding: 12px;
     gap: 8px;
   }
 
-  .wf {
+  .oos-f {
     border-radius: 50px;
-    padding: 10px 12px;
+    padding: 12px 16px;
+    min-width: unset;
   }
 
-  .wf__swap {
+  .oos-f--dt input[type="date"],
+  .oos-f--dt input[type="time"] {
+    border-radius: 14px;
+  }
+
+  .oos-swap {
     align-self: center;
     transform: rotate(90deg);
-    margin: 0;
   }
-
-  .wf__swap:hover {
+  .oos-swap:hover {
     transform: rotate(270deg);
   }
 
-  .wf__btn {
-    min-height: 48px;
-    padding: 14px;
-    text-align: center;
-    border-radius: 8px;
+  .oos-btn {
+    min-height: 50px;
+    border-radius: 12px;
+    align-self: stretch;
+    padding: 0 20px;
   }
-
-  .hero__body {
-    padding: 90px 18px 50px;
-  }
-}
-
-@media (max-width: 500px) {
-  .hero__h1 {
-    font-size: 26px;
-  }
-  .hero__trust {
-    gap: 8px;
-  }
-  .hero__trust span {
-    font-size: 12px;
-  }
-  .hero__trust-dot {
-    display: none;
-  }
-}
-
-/* ── Prevent hero overlap with content below ── */
-.hero {
-  contain: layout;
-}
-.hero__body {
-  padding-bottom: 80px;
 }
 
 /* ================================================================
-   STACKING FIX — hero ke baad content overlap nahi hoga
+   RESPONSIVE — MOBILE ≤500px
    ================================================================ */
-.hero {
-  z-index: 0;
-  position: relative;
-}
+@media (max-width: 500px) {
+  .oos-hero {
+    min-height: 100svh;
+  }
 
-/* Hero ka bg strictly hero ke andar rahe */
-.hero__bg,
-.hero__dim {
-  z-index: 1;
-}
+  .oos-hero__body {
+    padding: 88px 14px 50px;
+    gap: 20px;
+  }
 
-.hero__body {
-  z-index: 2;
-}
+  .oos-h1 {
+    font-size: 28px;
+  }
 
-/* NumberCounter aur baaki content hero ke baad normal flow mein */
-section + *,
-.hero + * {
-  position: relative;
-  z-index: 1;
+  .oos-sub {
+    font-size: 13px;
+  }
+
+  .oos-trust {
+    gap: 8px;
+  }
+  .oos-trust span {
+    font-size: 11.5px;
+  }
+  .oos-trust-dot {
+    display: none;
+  }
+
+  .oos-fields {
+    padding: 10px;
+    gap: 7px;
+  }
+
+  .oos-f {
+    border-radius: 50px;
+    padding: 10px 14px;
+  }
+
+  .oos-btn {
+    min-height: 48px;
+    font-size: 13px;
+    border-radius: 50px;
+  }
 }
