@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { useParams } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
 import Header from "@/app/Components/Header/page";
 import carListings from "../../data/carListings.json";
 import "./cabPage.css";
@@ -18,38 +18,90 @@ import { FiZap } from "react-icons/fi";
 import { SiToll } from "react-icons/si";
 import { CiCreditCard1 } from "react-icons/ci";
 import SiteFooter from "@/app/Components/Footer/page";
-import CityForm from "@/app/Components/CityForm/page";
 
 const Page = () => {
   const { slug } = useParams();
+  const router = useRouter();
 
   // Modal state
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedCab, setSelectedCab] = useState(null);
 
+  // Mini form state
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    date: "",
+    travellers: "",
+    message: "",
+  });
+  const [sending, setSending] = useState(false);
+  const [sent, setSent] = useState(false);
+
   const openModal = (cabName, price, isPremium) => {
     setSelectedCab({ cabName, price, isPremium, route: formatedSlug });
+    setSent(false);
+    setForm({
+      name: "",
+      email: "",
+      phone: "",
+      date: "",
+      travellers: "",
+      message: "",
+    });
     setModalOpen(true);
+    document.body.style.overflow = "hidden";
   };
   const closeModal = () => {
     setModalOpen(false);
     setSelectedCab(null);
+    document.body.style.overflow = "";
+  };
+
+  const handleFormChange = (e) => {
+    const { name, value } = e.target;
+    if (name === "phone") {
+      setForm((s) => ({ ...s, phone: value.replace(/\D/g, "").slice(0, 10) }));
+    } else if (name === "name") {
+      setForm((s) => ({ ...s, name: value.replace(/[^a-zA-Z\s]/g, "") }));
+    } else {
+      setForm((s) => ({ ...s, [name]: value }));
+    }
+  };
+
+  const handleBookingSubmit = async (e) => {
+    e.preventDefault();
+    setSending(true);
+    try {
+      const payload = {
+        ...form,
+        cabName: selectedCab?.cabName,
+        route: selectedCab?.route,
+        price: selectedCab?.price,
+        type: selectedCab?.isPremium ? "Premium" : "Economy",
+      };
+      const res = await fetch("/api/send-mail", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+      const data = await res.json();
+      if (!data.success) throw new Error(data.error || "Failed");
+      setSent(true);
+      setTimeout(() => {
+        closeModal();
+        router.push("/thank-you-page");
+      }, 1200);
+    } catch (err) {
+      alert("Something went wrong. Please try again.");
+    } finally {
+      setSending(false);
+    }
   };
 
   // "delhi-to-amritsar" → "delhi to amritsar"
   const formatedSlug = slug.split("-").join(" ");
-
-  /*
-   * Naye JSON mein ek destination ke liye 3 entries hain:
-   *   { title: ["Crysta", ...], extraFare: 18, premium: [...], economy: [...] }
-   *   { title: ["Ertiga",  ...], extraFare: 14, premium: [...], economy: [...] }
-   *   { title: ["Sedan",  ...], extraFare: 10, premium: [...], economy: [...] }
-   *
-   * Premium section → Crysta entry ka premium[] + uska price (18 × included)
-   * Economy section → Ertiga + Sedan entries ka economy[], price unka apna (14×, 10×)
-   */
-
-  // Is destination ki saari entries
   const allEntries = carListings.filter(
     (car) => car.destination.toLowerCase() === formatedSlug.toLowerCase(),
   );
@@ -170,7 +222,7 @@ const Page = () => {
                 <FiZap /> Extra per km
               </span>
               <span className="cc__fare-val">
-                ₹{crystaEntry.extraFare}/km after {crystaEntry.included} km
+                {/* ₹{crystaEntry.extraFare}/km after {crystaEntry.included} km */}
               </span>
             </div>
             <div className="cc__fare-row">
@@ -188,14 +240,14 @@ const Page = () => {
               <div className="cc__price-row">
                 <span className="cc__price">
                   {/* ₹{price.toLocaleString("en-IN")} */}
-                  {/* N/A */}
+                  N/A
                 </span>
                 <span className="cc__orig">
                   {/* ₹{original.toLocaleString("en-IN")} */}
                 </span>
-                {/* <span className="cc__disc">{discount}% OFF</span> */}
+                <span className="cc__disc">{discount}% OFF</span>
               </div>
-              {/* <span className="cc__tax">+ Toll extra · GST incl.</span> */}
+              <span className="cc__tax">+ Toll extra · GST incl.</span>
             </div>
             <button
               className="cc__btn cc__btn--p"
@@ -420,7 +472,7 @@ const Page = () => {
                 <span className="cbp-sec__from-lbl">From</span>
                 <span className="cbp-sec__from-val">
                   {/* ₹{crystaPrice.toLocaleString("en-IN")} */}
-                  Call to Discuss
+                  Call To Discuss
                 </span>
               </div>
             </div>
@@ -517,9 +569,9 @@ const Page = () => {
       {modalOpen && (
         <div className="cbp-modal-overlay" onClick={closeModal}>
           <div className="cbp-modal" onClick={(e) => e.stopPropagation()}>
-            {/* Modal Header */}
+            {/* Header */}
             <div className="cbp-modal__hd">
-              <div>
+              <div className="cbp-modal__hd-left">
                 <h3 className="cbp-modal__title">Complete Your Booking</h3>
                 {selectedCab && (
                   <div className="cbp-modal__meta">
@@ -535,11 +587,15 @@ const Page = () => {
                     <span className="cbp-modal__cab">
                       {selectedCab.cabName}
                     </span>
+                    <span className="cbp-modal__sep">·</span>
                     <span className="cbp-modal__route">
                       {fromCity} → {toCity}
                     </span>
+                    <span className="cbp-modal__sep">·</span>
                     <span className="cbp-modal__price">
-                      ₹{selectedCab.price.toLocaleString("en-IN")}
+                      {selectedCab?.isPremium
+                        ? "₹ Call to Discuss"
+                        : `₹${selectedCab.price.toLocaleString("en-IN")}`}
                     </span>
                   </div>
                 )}
@@ -549,9 +605,118 @@ const Page = () => {
               </button>
             </div>
 
-            {/* CityForm inside modal */}
+            {/* Mini Booking Form */}
             <div className="cbp-modal__body">
-              <CityForm />
+              {sent ? (
+                <div className="cbp-success">
+                  <div className="cbp-success__icon">✓</div>
+                  <p className="cbp-success__msg">Enquiry sent! Redirecting…</p>
+                </div>
+              ) : (
+                <form className="cbp-form" onSubmit={handleBookingSubmit}>
+                  {/* Row 1 — Name + Email */}
+                  <div className="cbp-form__row">
+                    <div className="cbp-form__field">
+                      <label className="cbp-form__lbl">Full Name *</label>
+                      <input
+                        className="cbp-form__inp"
+                        type="text"
+                        name="name"
+                        placeholder="Enter your name"
+                        value={form.name}
+                        onChange={handleFormChange}
+                        required
+                      />
+                    </div>
+                    <div className="cbp-form__field">
+                      <label className="cbp-form__lbl">Email *</label>
+                      <input
+                        className="cbp-form__inp"
+                        type="email"
+                        name="email"
+                        placeholder="Enter email address"
+                        value={form.email}
+                        onChange={handleFormChange}
+                        required
+                      />
+                    </div>
+                  </div>
+
+                  {/* Row 2 — Phone + Date */}
+                  <div className="cbp-form__row">
+                    <div className="cbp-form__field">
+                      <label className="cbp-form__lbl">Phone *</label>
+                      <div className="cbp-form__phone">
+                        <span className="cbp-form__phone-code">+91</span>
+                        <input
+                          className="cbp-form__inp cbp-form__inp--phone"
+                          type="tel"
+                          name="phone"
+                          placeholder="10-digit number"
+                          value={form.phone}
+                          onChange={handleFormChange}
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div className="cbp-form__field">
+                      <label className="cbp-form__lbl">Pickup Date *</label>
+                      <input
+                        className="cbp-form__inp cbp-form__inp--date"
+                        type="date"
+                        name="date"
+                        value={form.date}
+                        min={new Date().toISOString().split("T")[0]}
+                        onChange={handleFormChange}
+                        required
+                      />
+                    </div>
+                  </div>
+
+                  {/* Row 3 — Travellers */}
+                  <div className="cbp-form__row cbp-form__row--single">
+                    <div className="cbp-form__field">
+                      <label className="cbp-form__lbl">
+                        No. of Travellers *
+                      </label>
+                      <input
+                        className="cbp-form__inp"
+                        type="number"
+                        name="travellers"
+                        placeholder="e.g. 2"
+                        value={form.travellers}
+                        min={1}
+                        max={50}
+                        onChange={handleFormChange}
+                        required
+                      />
+                    </div>
+                  </div>
+
+                  {/* Row 4 — Message */}
+                  <div className="cbp-form__field">
+                    <label className="cbp-form__lbl">
+                      Specific Requirement
+                    </label>
+                    <textarea
+                      className="cbp-form__textarea"
+                      name="message"
+                      placeholder="Any specific requirement or itinerary details…"
+                      rows={3}
+                      value={form.message}
+                      onChange={handleFormChange}
+                    />
+                  </div>
+
+                  <button
+                    type="submit"
+                    className="cbp-form__submit"
+                    disabled={sending}
+                  >
+                    {sending ? "Sending…" : "Send Enquiry →"}
+                  </button>
+                </form>
+              )}
             </div>
           </div>
         </div>

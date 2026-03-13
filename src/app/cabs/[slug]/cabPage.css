@@ -703,7 +703,7 @@
   background: #fff;
   border-radius: 18px;
   width: 100%;
-  max-width: 1260px;
+  max-width: 860px;
   max-height: 90vh;
   overflow-y: auto;
   box-shadow: 0 24px 64px rgba(0, 0, 0, 0.22);
@@ -799,19 +799,221 @@
   color: #111;
 }
 
-.cbp-modal__body {
-  padding: 0 8px 8px;
+.cbp-modal__hd-left {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
 }
 
-/* Override CityForm styles inside modal */
-.cbp-modal__body .bookcar-section {
-  padding: 16px 18px 8px !important;
-  box-shadow: none !important;
-  border-radius: 0 !important;
-  background: transparent !important;
+.cbp-modal__sep {
+  color: #ccc;
+  font-size: 0.75rem;
 }
-.cbp-modal__body .bookcar-title {
-  display: none !important;
+
+.cbp-modal__body {
+  padding: 24px 26px 28px;
+}
+
+/* ── Mini Booking Form ── */
+.cbp-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.cbp-form__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.cbp-form__row--single {
+  grid-template-columns: 1fr;
+  max-width: 50%;
+}
+
+.cbp-form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.cbp-form__lbl {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #999;
+}
+
+.cbp-form__inp {
+  height: 46px;
+  border: 1.5px solid #e2e2e2;
+  border-radius: 10px;
+  padding: 0 14px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #111;
+  font-family: inherit;
+  background: #fafafa;
+  outline: none;
+  transition:
+    border-color 0.18s,
+    box-shadow 0.18s;
+  width: 100%;
+  box-sizing: border-box;
+}
+.cbp-form__inp:focus {
+  border-color: #d80117;
+  box-shadow: 0 0 0 3px rgba(216, 1, 23, 0.07);
+  background: #fff;
+}
+.cbp-form__inp::placeholder {
+  color: #bbb;
+  font-weight: 400;
+}
+
+/* Date input — remove default arrow on mobile */
+.cbp-form__inp--date {
+  cursor: pointer;
+  color: #111;
+}
+.cbp-form__inp--date::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+/* Phone group */
+.cbp-form__phone {
+  display: flex;
+  align-items: center;
+  border: 1.5px solid #e2e2e2;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fafafa;
+  transition:
+    border-color 0.18s,
+    box-shadow 0.18s;
+}
+.cbp-form__phone:focus-within {
+  border-color: #d80117;
+  box-shadow: 0 0 0 3px rgba(216, 1, 23, 0.07);
+  background: #fff;
+}
+.cbp-form__phone-code {
+  padding: 0 12px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #555;
+  border-right: 1.5px solid #e8e8e8;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  background: #f5f5f5;
+}
+.cbp-form__inp--phone {
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  padding-left: 12px;
+  height: 44px;
+}
+.cbp-form__inp--phone:focus {
+  border: none;
+  box-shadow: none;
+}
+
+/* Textarea */
+.cbp-form__textarea {
+  border: 1.5px solid #e2e2e2;
+  border-radius: 10px;
+  padding: 12px 14px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #111;
+  font-family: inherit;
+  background: #fafafa;
+  outline: none;
+  resize: vertical;
+  width: 100%;
+  box-sizing: border-box;
+  transition:
+    border-color 0.18s,
+    box-shadow 0.18s;
+  min-height: 90px;
+}
+.cbp-form__textarea:focus {
+  border-color: #d80117;
+  box-shadow: 0 0 0 3px rgba(216, 1, 23, 0.07);
+  background: #fff;
+}
+.cbp-form__textarea::placeholder {
+  color: #bbb;
+  font-weight: 400;
+}
+
+/* Submit button */
+.cbp-form__submit {
+  background: #d80117;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  height: 50px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  font-family: inherit;
+  transition:
+    background 0.2s,
+    transform 0.15s,
+    box-shadow 0.2s;
+  box-shadow: 0 4px 16px rgba(216, 1, 23, 0.28);
+  margin-top: 4px;
+}
+.cbp-form__submit:hover {
+  background: #b40013;
+  box-shadow: 0 6px 20px rgba(216, 1, 23, 0.4);
+  transform: translateY(-1px);
+}
+.cbp-form__submit:active {
+  transform: scale(0.98);
+}
+.cbp-form__submit:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Success state */
+.cbp-success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 24px;
+  gap: 16px;
+}
+.cbp-success__icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #f0fdf4;
+  border: 2px solid #86efac;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: #16a34a;
+}
+.cbp-success__msg {
+  font-size: 15px;
+  font-weight: 600;
+  color: #111;
+  margin: 0;
 }
 
 /* ================================================================
@@ -1018,6 +1220,18 @@
   }
   .cbp-modal__hd {
     padding: 16px 18px 12px;
+  }
+
+  /* Form mobile */
+  .cbp-modal__body {
+    padding: 16px 18px 24px;
+  }
+  .cbp-form__row {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .cbp-form__row--single {
+    max-width: 100%;
   }
 }
 
