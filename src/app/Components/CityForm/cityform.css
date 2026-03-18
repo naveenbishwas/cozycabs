@@ -207,7 +207,7 @@ textarea {
   color: #fff !important;
 }
 
-/* Disabled days */
+/* Disabled days  */
 .react-datepicker__day--disabled {
   color: #ccc;
 }

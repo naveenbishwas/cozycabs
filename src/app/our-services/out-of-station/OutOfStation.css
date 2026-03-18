@@ -468,6 +468,25 @@
   flex-shrink: 0;
 }
 
+/* ── Return date field — slide in animation ── */
+.oos-f--return {
+  animation: oos-slideIn 0.22s cubic-bezier(0.16, 1, 0.3, 1) both;
+  border-color: #d80117;
+  border-style: dashed;
+}
+
+@keyframes oos-slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-10px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+/* Round trip tab — no extra styles needed, same .oos-tab class */
 /* ================================================================
    RESPONSIVE — TABLET ≤860px
    ================================================================ */
@@ -485,7 +504,7 @@
   }
 
   .oos-f {
-    border-radius: 50px;
+    border-radius: 14px;
     padding: 12px 16px;
     min-width: unset;
   }
@@ -548,13 +567,13 @@
   }
 
   .oos-f {
-    border-radius: 50px;
+    border-radius: 12px;
     padding: 10px 14px;
   }
 
   .oos-btn {
     min-height: 48px;
     font-size: 13px;
-    border-radius: 50px;
+    border-radius: 12px;
   }
 }

@@ -297,7 +297,7 @@ const Page = () => {
 
           <div className="cc__chips">
             <span className="cc__chip">
-              <MdAirlineSeatReclineExtra /> {entry.seats} Seater
+              <MdAirlineSeatReclineExtra /> 4 Seater
             </span>
             <span className="cc__chip">
               <FaWindowMaximize /> AC

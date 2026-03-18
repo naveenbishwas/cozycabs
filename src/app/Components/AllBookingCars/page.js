@@ -16,8 +16,6 @@ const vehicleTypes = [
 const HEADER_HEIGHT = 64;
 
 /* ── Price helpers ────────────────────────────────────────────── */
-// Actual price = extraFare * included
-// Original (strikethrough) = ~20% higher
 const getPrice = (car) => car.extraFare * car.included;
 const getOriginal = (car) =>
   Math.round((car.extraFare * car.included * 1.22) / 10) * 10;
@@ -157,14 +155,14 @@ const AllBookingCars = () => {
                 {/* COL 1 — Destination + duration */}
                 <div className="vsel-row__col vsel-row__col--dest">
                   <div className="vsel-row__dest-info">
-                    <p className="vsel-row__dest">{car.destination} Cab</p>
+                    <h3 className="vsel-row__dest">{car.destination} Cab</h3>
                     <p className="vsel-row__meta">{car.duration} (appx.)</p>
                   </div>
                 </div>
 
                 {/* COL 2 — Extra fare only */}
                 <div className="vsel-row__col vsel-row__col--fare">
-                  <p className="vsel-row__dest">{car.included} kms</p>
+                  <h3 className="vsel-row__dest">{car.included} kms</h3>
                   <div className="vsel-fare__info">
                     <span className="vsel-row__extra-tag">⚡ Extra fare</span>
                     <p className="vsel-row__extra">

@@ -174,13 +174,17 @@ const formatTime = (val) => {
 
 export default function OutOfStation() {
   const [tripType, setTripType] = useState("oneway");
-  const [from] = useState("Delhi");
+  const [from, setFrom] = useState("Delhi");
   const [to, setTo] = useState("");
   const [date, setDate] = useState("");
+  const [returnDate, setReturnDate] = useState("");
   const [time, setTime] = useState("07:00");
   const [showTo, setShowTo] = useState(false);
   const router = useRouter();
   const toRef = useRef(null);
+  const dateRef = useRef(null);
+  const timeRef = useRef(null);
+  const returnDateRef = useRef(null);
   const today = new Date().toISOString().split("T")[0];
 
   useEffect(() => {
@@ -253,6 +257,25 @@ export default function OutOfStation() {
                 </svg>
                 One Way
               </button>
+              <button
+                className={`oos-tab ${tripType === "roundtrip" ? "active" : ""}`}
+                onClick={() => setTripType("roundtrip")}
+              >
+                <svg
+                  width="13"
+                  height="13"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2.5"
+                >
+                  <path d="M17 1l4 4-4 4" />
+                  <path d="M3 11V9a4 4 0 0 1 4-4h14" />
+                  <path d="M7 23l-4-4 4-4" />
+                  <path d="M21 13v2a4 4 0 0 1-4 4H3" />
+                </svg>
+                Round Trip
+              </button>
             </div>
 
             <div className="oos-fields">
@@ -276,8 +299,11 @@ export default function OutOfStation() {
               {/* Swap */}
               <button
                 className="oos-swap"
-                disabled
-                style={{ opacity: 0.4, cursor: "not-allowed" }}
+                onClick={() => {
+                  setFrom(to);
+                  setTo(from);
+                }}
+                style={{ opacity: 0.8 }}
               >
                 <IconSwap />
               </button>
@@ -318,7 +344,10 @@ export default function OutOfStation() {
               </div>
 
               {/* DATE */}
-              <div className="oos-f oos-f--dt">
+              <div
+                className="oos-f oos-f--dt"
+                onClick={() => dateRef.current?.showPicker()}
+              >
                 <label className="oos-f__lbl">PICKUP DATE</label>
                 <div className="oos-f__wrap">
                   <IconCalendar size={15} />
@@ -329,6 +358,7 @@ export default function OutOfStation() {
                   </span>
                 </div>
                 <input
+                  ref={dateRef}
                   type="date"
                   value={date}
                   min={today}
@@ -337,7 +367,10 @@ export default function OutOfStation() {
               </div>
 
               {/* TIME */}
-              <div className="oos-f oos-f--dt">
+              <div
+                className="oos-f oos-f--dt"
+                onClick={() => timeRef.current?.showPicker()}
+              >
                 <label className="oos-f__lbl">PICKUP TIME</label>
                 <div className="oos-f__wrap">
                   <IconClock size={15} />
@@ -348,11 +381,37 @@ export default function OutOfStation() {
                   </span>
                 </div>
                 <input
+                  ref={timeRef}
                   type="time"
                   value={time}
                   onChange={(e) => setTime(e.target.value)}
                 />
               </div>
+
+              {/* RETURN DATE — only for Round Trip */}
+              {tripType === "roundtrip" && (
+                <div
+                  className="oos-f oos-f--dt oos-f--return"
+                  onClick={() => returnDateRef.current?.showPicker()}
+                >
+                  <label className="oos-f__lbl">RETURN DATE</label>
+                  <div className="oos-f__wrap">
+                    <IconCalendar size={15} />
+                    <span
+                      className={`oos-f__dtxt ${!returnDate ? "oos-f__dtxt--ph" : ""}`}
+                    >
+                      {returnDate ? formatDate(returnDate) : "Select date"}
+                    </span>
+                  </div>
+                  <input
+                    ref={returnDateRef}
+                    type="date"
+                    value={returnDate}
+                    min={date || today}
+                    onChange={(e) => setReturnDate(e.target.value)}
+                  />
+                </div>
+              )}
 
               {/* SEARCH */}
               <button onClick={handleSearch} className="oos-btn">
