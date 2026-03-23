@@ -1,6 +1,6 @@
 import nodemailer from "nodemailer";
 
-// Helper — sirf defined values ko row banao
+// Helper — ony for defined values
 const row = (label, value) => (value ? `<p><b>${label}:</b> ${value}</p>` : "");
 
 export async function POST(req) {

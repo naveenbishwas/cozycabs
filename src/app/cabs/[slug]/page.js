@@ -13,12 +13,19 @@ import {
   MdCall,
   MdOutlineLoop,
 } from "react-icons/md";
-import { FaWindowMaximize } from "react-icons/fa";
+import { FaCar, FaCartPlus, FaWindowMaximize } from "react-icons/fa";
 import { FiZap } from "react-icons/fi";
 import { SiToll } from "react-icons/si";
 import { CiCreditCard1 } from "react-icons/ci";
 import SiteFooter from "@/app/Components/Footer/page";
 import Link from "next/link";
+
+const PREMIUM_IMAGES = {
+  "Toyota Fortuner": "/premium-toyota-fortuner.png",
+  "Toyota Innova Hycross": "/premium-toyota-innova-hycros.png",
+  "Toyota Innova Crysta": "/crysta-1.png",
+};
+const getPremiumImage = (title) => PREMIUM_IMAGES[title] || "/crysta-1.png";
 
 const Page = () => {
   const { slug } = useParams();
@@ -28,7 +35,7 @@ const Page = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedCab, setSelectedCab] = useState(null);
 
-  // Mini form state
+  // Mini form
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -40,8 +47,8 @@ const Page = () => {
   const [sending, setSending] = useState(false);
   const [sent, setSent] = useState(false);
 
-  const openModal = (cabName, price, isPremium) => {
-    setSelectedCab({ cabName, price, isPremium, route: formatedSlug });
+  const openModal = (cabName, price, type) => {
+    setSelectedCab({ cabName, price, type, route: formatedSlug });
     setSent(false);
     setForm({
       name: "",
@@ -62,30 +69,27 @@ const Page = () => {
 
   const handleFormChange = (e) => {
     const { name, value } = e.target;
-    if (name === "phone") {
+    if (name === "phone")
       setForm((s) => ({ ...s, phone: value.replace(/\D/g, "").slice(0, 10) }));
-    } else if (name === "name") {
+    else if (name === "name")
       setForm((s) => ({ ...s, name: value.replace(/[^a-zA-Z\s]/g, "") }));
-    } else {
-      setForm((s) => ({ ...s, [name]: value }));
-    }
+    else setForm((s) => ({ ...s, [name]: value }));
   };
 
   const handleBookingSubmit = async (e) => {
     e.preventDefault();
     setSending(true);
     try {
-      const payload = {
-        ...form,
-        cabName: selectedCab?.cabName,
-        route: selectedCab?.route,
-        price: selectedCab?.price,
-        type: selectedCab?.isPremium ? "Premium" : "Economy",
-      };
       const res = await fetch("/api/send-mail", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
+        body: JSON.stringify({
+          ...form,
+          cabName: selectedCab?.cabName,
+          route: selectedCab?.route,
+          price: selectedCab?.price,
+          type: selectedCab?.type,
+        }),
       });
       const data = await res.json();
       if (!data.success) throw new Error(data.error || "Failed");
@@ -94,20 +98,22 @@ const Page = () => {
         closeModal();
         router.push("/thank-you-page");
       }, 1200);
-    } catch (err) {
+    } catch {
       alert("Something went wrong. Please try again.");
     } finally {
       setSending(false);
     }
   };
 
-  // "delhi-to-amritsar" → "delhi to amritsar"
+  // slug → "delhi to dehradun"
   const formatedSlug = slug.split("-").join(" ");
-  const allEntries = carListings.filter(
-    (car) => car.destination.toLowerCase() === formatedSlug.toLowerCase(),
+
+  // Find single entry matching this destination
+  const car = carListings.find(
+    (c) => c.destination?.toLowerCase() === formatedSlug.toLowerCase(),
   );
 
-  if (!allEntries.length) {
+  if (!car) {
     return (
       <>
         <Header />
@@ -120,166 +126,50 @@ const Page = () => {
     );
   }
 
-  // Helper — title[0] lowercase (array ya string dono handle)
-  const getType = (car) =>
-    Array.isArray(car.title)
-      ? car.title[0].toLowerCase()
-      : car.title.toLowerCase();
+  const fromCity = car.destination.split(" to ")[0];
+  const toCity = car.destination.split(" to ")[1];
 
-  // Crysta entry → premium section
-  const crystaEntry = allEntries.find((c) => getType(c) === "crysta");
+  // Safe image getter
+  const getImg = (idx) =>
+    Array.isArray(car.image) ? car.image[idx] || "" : car.image || "";
 
-  // Sedan pehle, Ertiga baad mein
-  const economyEntries = allEntries
-    .filter((c) => getType(c) !== "crysta")
-    .sort((a, b) => {
-      const order = { sedan: 0, swedan: 0, ertiga: 1 };
-      const aOrder = order[getType(a)] ?? 2;
-      const bOrder = order[getType(b)] ?? 2;
-      return aOrder - bOrder;
-    });
+  // Parse price string "2,100" → number 2100
+  const parsePrice = (str) => parseInt(String(str).replace(/,/g, ""), 10) || 0;
 
-  // Route info from first entry
-  const routeInfo = allEntries[0];
-  const fromCity = routeInfo.destination.split(" to ")[0];
-  const toCity = routeInfo.destination.split(" to ")[1];
-
-  // Prices
-  const crystaPrice = crystaEntry
-    ? crystaEntry.extraFare * crystaEntry.included
-    : 0;
-
-  // Economy "From" = lowest among economy entries
-  const economyFromPrice = economyEntries.length
-    ? Math.min(...economyEntries.map((e) => e.extraFare * e.included))
-    : 0;
-
-  /* ── Card for Premium variants (all use crystaEntry price) ── */
-  const PremiumCard = ({ variant }) => {
-    const price = crystaPrice;
-    const original = Math.round(price * 1.2);
-    const discount = Math.round((1 - price / original) * 100);
-
-    return (
-      <div className="cc cc--premium">
-        <div className="cc__left">
-          <div className="cc__img-wrap">
-            <img src={variant.image} alt={variant.title} className="cc__img" />
-          </div>
-          <div className="cc__left-meta">
-            <span className="cc__type-tag cc__type-tag--p">⭐ Premium</span>
-            <div className="cc__rating">
-              <span className="cc__stars">★★★★★</span>
-              <span className="cc__rating-num">4.8</span>
-              <span className="cc__rating-cnt">(240+ rides)</span>
-            </div>
-          </div>
-        </div>
-
-        <div className="cc__right">
-          <div className="cc__head">
-            <div>
-              <h3 className="cc__name">{variant.title}</h3>
-              <p className="cc__route">
-                {fromCity} → {toCity}&nbsp;·&nbsp;{crystaEntry.duration}
-              </p>
-            </div>
-            <span className="cc__avail">Available</span>
-          </div>
-
-          <div className="cc__chips">
-            <span className="cc__chip">
-              <MdAirlineSeatReclineExtra /> {crystaEntry.seats} Seater
-            </span>
-            <span className="cc__chip">
-              <FaWindowMaximize /> AC
-            </span>
-            <span className="cc__chip">
-              <MdLuggage /> Large Boot
-            </span>
-            <span className="cc__chip">
-              <GiPathDistance /> Google Maps Route
-            </span>
-          </div>
-
-          <div className="cc__fare-box">
-            <div className="cc__fare-row">
-              <span className="cc__fare-lbl cc__fare-lbl--green">
-                <svg viewBox="0 0 12 12" fill="none" width="11" height="11">
-                  <path
-                    d="M2 6l2.5 2.5 5.5-5"
-                    stroke="#16a34a"
-                    strokeWidth="1.6"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-                {crystaEntry.included} kms included
-              </span>
-              <span className="cc__fare-val cc__fare-val--green">Free</span>
-            </div>
-            <div className="cc__fare-row">
-              <span className="cc__fare-lbl">
-                <FiZap /> Extra per km
-              </span>
-              <span className="cc__fare-val">
-                {/* ₹{crystaEntry.extraFare}/km after {crystaEntry.included} km */}
-              </span>
-            </div>
-            <div className="cc__fare-row">
-              <span className="cc__fare-lbl">
-                <SiToll /> Toll / State tax
-              </span>
-              <span className="cc__fare-val cc__fare-val--muted">
-                As per govt. rules
-              </span>
-            </div>
-          </div>
-
-          <div className="cc__footer">
-            <div className="cc__price-block">
-              <div className="cc__price-row">
-                <span className="cc__price">
-                  {/* ₹{price.toLocaleString("en-IN")} */}
-                  N/A
-                </span>
-                <span className="cc__orig">
-                  {/* ₹{original.toLocaleString("en-IN")} */}
-                </span>
-                <span className="cc__disc">{discount}% OFF</span>
-              </div>
-              <span className="cc__tax">+ Toll extra · GST incl.</span>
-            </div>
-            <button
-              className="cc__btn cc__btn--p"
-              onClick={() => openModal(variant.title, price, true)}
-            >
-              Book Now →
-            </button>
-          </div>
-        </div>
-      </div>
-    );
+  // Discount calc
+  const calcDiscount = (price, mul = 1.22) => {
+    const orig = Math.round((price * mul) / 100) * 100;
+    return { orig, discount: Math.round((1 - price / orig) * 100) };
   };
 
-  /* ── Card for Economy variants (each entry has its own price) ── */
-  const EconomyCard = ({ variant, entry }) => {
-    const price = entry.extraFare * entry.included;
-    const original = Math.round(price * 1.22);
-    const discount = Math.round((1 - price / original) * 100);
+  /* ────────────────────────────────────────────────
+     ECONOMY CARD — Dzire or Ertiga
+  ──────────────────────────────────────────────── */
+  const EconomyCard = ({
+    keyName,
+    imgIdx,
+    stars,
+    ratingNum,
+    ratingCnt,
+    seatLabel,
+  }) => {
+    const data = car[keyName];
+    if (!data) return null;
+    const price = parsePrice(data.finalPrice);
+    const { orig, discount } = calcDiscount(price, 1.22);
 
     return (
       <div className="cc cc--economy">
         <div className="cc__left cc__left--e">
           <div className="cc__img-wrap">
-            <img src={variant.image} alt={variant.title} className="cc__img" />
+            <img src={getImg(imgIdx)} alt={data.carName} className="cc__img" />
           </div>
           <div className="cc__left-meta">
             <span className="cc__type-tag cc__type-tag--e">💰 Economy</span>
             <div className="cc__rating">
-              <span className="cc__stars">★★★★☆</span>
-              <span className="cc__rating-num">4.4</span>
-              <span className="cc__rating-cnt">(180+ rides)</span>
+              <span className="cc__stars">{stars}</span>
+              <span className="cc__rating-num">{ratingNum}</span>
+              <span className="cc__rating-cnt">({ratingCnt}+ rides)</span>
             </div>
           </div>
         </div>
@@ -287,9 +177,9 @@ const Page = () => {
         <div className="cc__right">
           <div className="cc__head">
             <div>
-              <h3 className="cc__name">{variant.title}</h3>
+              <h3 className="cc__name">{data.carName}</h3>
               <p className="cc__route">
-                {fromCity} → {toCity}&nbsp;·&nbsp;{entry.duration}
+                {fromCity} → {toCity} · {car.duration}
               </p>
             </div>
             <span className="cc__avail cc__avail--e">Available</span>
@@ -297,7 +187,7 @@ const Page = () => {
 
           <div className="cc__chips">
             <span className="cc__chip">
-              <MdAirlineSeatReclineExtra /> 4 Seater
+              <MdAirlineSeatReclineExtra /> {data.seat} Seater
             </span>
             <span className="cc__chip">
               <FaWindowMaximize /> AC
@@ -322,7 +212,7 @@ const Page = () => {
                     strokeLinejoin="round"
                   />
                 </svg>
-                {entry.included} kms included
+                {car.included} kms included
               </span>
               <span className="cc__fare-val cc__fare-val--green">Free</span>
             </div>
@@ -331,7 +221,7 @@ const Page = () => {
                 <FiZap /> Extra per km
               </span>
               <span className="cc__fare-val">
-                ₹{entry.extraFare}/km after {entry.included} km
+                ₹{data.perKm}/km after {car.included} km
               </span>
             </div>
             <div className="cc__fare-row">
@@ -347,11 +237,9 @@ const Page = () => {
           <div className="cc__footer">
             <div className="cc__price-block">
               <div className="cc__price-row">
-                <span className="cc__price">
-                  ₹{price.toLocaleString("en-IN")}
-                </span>
+                <span className="cc__price">₹{data.finalPrice}</span>
                 <span className="cc__orig">
-                  ₹{original.toLocaleString("en-IN")}
+                  ₹{orig.toLocaleString("en-IN")}
                 </span>
                 <span className="cc__disc cc__disc--e">{discount}% OFF</span>
               </div>
@@ -359,7 +247,7 @@ const Page = () => {
             </div>
             <button
               className="cc__btn cc__btn--e"
-              onClick={() => openModal(variant.title, price, false)}
+              onClick={() => openModal(data.carName, price, "Economy")}
             >
               Book Now →
             </button>
@@ -369,6 +257,233 @@ const Page = () => {
     );
   };
 
+  /* ────────────────────────────────────────────────
+     CRYSTA CARD
+  ──────────────────────────────────────────────── */
+  const CrystaCard = () => {
+    const data = car.crysta;
+    if (!data) return null;
+    const price = parsePrice(data.finalPrice);
+    const { orig, discount } = calcDiscount(price, 1.2);
+
+    return (
+      <div className="cc cc--premium">
+        <div className="cc__left">
+          <div className="cc__img-wrap">
+            <img src={getImg(1)} alt={data.carName} className="cc__img" />
+          </div>
+          <div className="cc__left-meta">
+            <span className="cc__type-tag cc__type-tag--p">
+              <FaCar /> Crysta
+            </span>
+            <div className="cc__rating">
+              <span className="cc__stars">★★★★★</span>
+              <span className="cc__rating-num">4.7</span>
+              <span className="cc__rating-cnt">(200+ rides)</span>
+            </div>
+          </div>
+        </div>
+
+        <div className="cc__right">
+          <div className="cc__head">
+            <div>
+              <h3 className="cc__name">{data.carName}</h3>
+              <p className="cc__route">
+                {fromCity} → {toCity} · {car.duration}
+              </p>
+            </div>
+            <span className="cc__avail">Available</span>
+          </div>
+
+          <div className="cc__chips">
+            <span className="cc__chip">
+              <MdAirlineSeatReclineExtra /> {data.seat} Seater
+            </span>
+            <span className="cc__chip">
+              <FaWindowMaximize /> AC
+            </span>
+            <span className="cc__chip">
+              <MdLuggage /> Large Boot
+            </span>
+            <span className="cc__chip">
+              <GiPathDistance /> Google Maps Route
+            </span>
+          </div>
+
+          <div className="cc__fare-box">
+            <div className="cc__fare-row">
+              <span className="cc__fare-lbl cc__fare-lbl--green">
+                <svg viewBox="0 0 12 12" fill="none" width="11" height="11">
+                  <path
+                    d="M2 6l2.5 2.5 5.5-5"
+                    stroke="#16a34a"
+                    strokeWidth="1.6"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+                {car.included} kms included
+              </span>
+              <span className="cc__fare-val cc__fare-val--green">Free</span>
+            </div>
+            <div className="cc__fare-row">
+              <span className="cc__fare-lbl">
+                <FiZap /> Extra per km
+              </span>
+              <span className="cc__fare-val">
+                ₹{data.perKm}/km after {car.included} km
+              </span>
+            </div>
+            <div className="cc__fare-row">
+              <span className="cc__fare-lbl">
+                <SiToll /> Toll / State tax
+              </span>
+              <span className="cc__fare-val cc__fare-val--muted">
+                As per govt. rules
+              </span>
+            </div>
+          </div>
+
+          <div className="cc__footer">
+            <div className="cc__price-block">
+              <div className="cc__price-row">
+                <span className="cc__price">₹{data.finalPrice}</span>
+                <span className="cc__orig">
+                  ₹{orig.toLocaleString("en-IN")}
+                </span>
+                <span className="cc__disc">{discount}% OFF</span>
+              </div>
+              <span className="cc__tax">+ Toll extra · GST incl.</span>
+            </div>
+            <button
+              className="cc__btn cc__btn--e"
+              onClick={() => openModal(data.carName, price, "Crysta")}
+            >
+              Book Now →
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  };
+
+  /* ────────────────────────────────────────────────
+     PREMIUM CARD — Fortuner, Hycross
+  ──────────────────────────────────────────────── */
+  const PremiumCard = ({ variant }) => (
+    <div className="cc cc--premium">
+      <div className="cc__left">
+        <div className="cc__img-wrap">
+          <img
+            src={getPremiumImage(variant.title)}
+            alt={variant.title}
+            className="cc__img"
+          />
+        </div>
+        <div className="cc__left-meta">
+          <span className="cc__type-tag cc__type-tag--p">⭐ Premium</span>
+          <div className="cc__rating">
+            <span className="cc__stars">★★★★★</span>
+            <span className="cc__rating-num">4.9</span>
+            <span className="cc__rating-cnt">(120+ rides)</span>
+          </div>
+        </div>
+      </div>
+
+      <div className="cc__right">
+        <div className="cc__head">
+          <div>
+            <h3 className="cc__name">{variant.title}</h3>
+            <p className="cc__route">
+              {fromCity} → {toCity} · {car.duration}
+            </p>
+          </div>
+          <span className="cc__avail">Available</span>
+        </div>
+
+        <div className="cc__chips">
+          <span className="cc__chip">
+            <MdAirlineSeatReclineExtra /> {variant.seat} Seater
+          </span>
+          <span className="cc__chip">
+            <FaWindowMaximize /> AC
+          </span>
+          <span className="cc__chip">
+            <MdLuggage /> Large Boot
+          </span>
+          <span className="cc__chip">
+            <GiPathDistance /> Google Maps Route
+          </span>
+        </div>
+
+        <div className="cc__fare-box">
+          <div className="cc__fare-row">
+            <span className="cc__fare-lbl cc__fare-lbl--green">
+              <svg viewBox="0 0 12 12" fill="none" width="11" height="11">
+                <path
+                  d="M2 6l2.5 2.5 5.5-5"
+                  stroke="#16a34a"
+                  strokeWidth="1.6"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+              {car.included} kms included
+            </span>
+            <span className="cc__fare-val cc__fare-val--green">Free</span>
+          </div>
+          <div className="cc__fare-row">
+            <span className="cc__fare-lbl">
+              <FiZap /> Extra per km
+            </span>
+            <span className="cc__fare-val cc__fare-val--muted">
+              Call to confirm
+            </span>
+          </div>
+          <div className="cc__fare-row">
+            <span className="cc__fare-lbl">
+              <SiToll /> Toll / State tax
+            </span>
+            <span className="cc__fare-val cc__fare-val--muted">
+              As per govt. rules
+            </span>
+          </div>
+        </div>
+
+        <div className="cc__footer">
+          <div className="cc__price-block">
+            <div className="cc__price-row">
+              <span
+                className="cc__price"
+                style={{ fontSize: "18px", letterSpacing: 0 }}
+              >
+                Call to Discuss
+              </span>
+            </div>
+            <span className="cc__tax">Price on request · GST incl.</span>
+          </div>
+          <button
+            className="cc__btn cc__btn--p"
+            onClick={() =>
+              openModal(variant.title, "Call to Discuss", "Premium")
+            }
+          >
+            Enquire Now →
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+
+  // Economy lowest price
+  const economyPrices = ["dzire", "ertiga"]
+    .map((k) => parsePrice(car[k]?.finalPrice))
+    .filter(Boolean);
+  const lowestEconomy = economyPrices.length ? Math.min(...economyPrices) : 0;
+
+  // Find the dzire/ertiga finalPrice for display
+  const crystaPrice = parsePrice(car.crysta?.finalPrice);
+
   return (
     <>
       <Header />
@@ -377,12 +492,13 @@ const Page = () => {
       <div className="cbp-hero">
         <div className="cbp-hero__inner">
           <p className="cbp-crumb">
-            <Link href={"/"}>Home /</Link>
-            <Link href={"/our-services/out-of-station"}> Outstation / </Link>
+            <Link href="/">Home /</Link>
+            <Link href="/our-services/out-of-station"> Outstation / </Link>
             <span>
               {fromCity} to {toCity}
             </span>
           </p>
+
           <div className="cbp-route">
             <div className="cbp-route__city">
               <span className="cbp-route__lbl">FROM</span>
@@ -408,19 +524,15 @@ const Page = () => {
 
           <div className="cbp-stats">
             {[
-              {
-                icon: <FaRegClock />,
-                val: routeInfo.duration,
-                lbl: "Duration",
-              },
+              { icon: <FaRegClock />, val: car.duration, lbl: "Duration" },
               {
                 icon: <GiPathDistance />,
-                val: `${routeInfo.included} km`,
+                val: `${car.included} km`,
                 lbl: "Included",
               },
               {
                 icon: <MdAirlineSeatReclineExtra />,
-                val: `${routeInfo.seats} Seats`,
+                val: "Up to 7 Seats",
                 lbl: "Capacity",
               },
               { icon: <FaWindowMaximize />, val: "Full AC", lbl: "All Cabs" },
@@ -454,8 +566,54 @@ const Page = () => {
       </div>
 
       <main className="cbp-main">
-        {/* PREMIUM — Crysta entry ke premium[] variants */}
-        {crystaEntry && crystaEntry.premium?.length > 0 && (
+        {/* ── ALL CABS — Dzire + Ertiga + Crysta ek section mein ── */}
+        {(car.dzire || car.ertiga || car.crysta) && (
+          <div className="cbp-sec">
+            <div className="cbp-sec__hd">
+              <div>
+                <span className="cbp-badge cbp-badge--e">
+                  🚗 Available Cabs
+                </span>
+                <h2 className="cbp-sec__title">
+                  Cabs — {fromCity} to {toCity}
+                </h2>
+                <p className="cbp-sec__sub">
+                  Dzire · Ertiga · Innova Crysta · All AC · On-time pickup
+                </p>
+              </div>
+              {lowestEconomy > 0 && (
+                <div className="cbp-sec__from">
+                  <span className="cbp-sec__from-lbl">From</span>
+                  <span className="cbp-sec__from-val cbp-sec__from-val--e">
+                    ₹{lowestEconomy.toLocaleString("en-IN")}
+                  </span>
+                </div>
+              )}
+            </div>
+            <div className="cbp-cards">
+              <EconomyCard
+                keyName="dzire"
+                imgIdx={2}
+                stars="★★★★☆"
+                ratingNum="4.3"
+                ratingCnt="150"
+                seatLabel="4"
+              />
+              <EconomyCard
+                keyName="ertiga"
+                imgIdx={0}
+                stars="★★★★☆"
+                ratingNum="4.5"
+                ratingCnt="180"
+                seatLabel="7"
+              />
+              <CrystaCard />
+            </div>
+          </div>
+        )}
+
+        {/* ── PREMIUM — Fortuner + Hycross — niche ── */}
+        {car.premium?.length > 0 && (
           <div className="cbp-sec">
             <div className="cbp-sec__hd">
               <div>
@@ -467,60 +625,23 @@ const Page = () => {
                 </h2>
                 <p className="cbp-sec__sub">
                   Luxury · Top-rated drivers · Extra legroom ·{" "}
-                  {crystaEntry.premium.length} vehicles
+                  {car.premium.length} vehicles
                 </p>
               </div>
               <div className="cbp-sec__from">
-                <span className="cbp-sec__from-lbl">From</span>
-                <span className="cbp-sec__from-val">
-                  {/* ₹{crystaPrice.toLocaleString("en-IN")} */}
-                  Call To Discuss
+                <span className="cbp-sec__from-lbl">Price</span>
+                <span
+                  className="cbp-sec__from-val"
+                  style={{ fontSize: "16px" }}
+                >
+                  On Request
                 </span>
               </div>
             </div>
             <div className="cbp-cards">
-              {crystaEntry.premium.map((variant, i) => (
+              {car.premium.map((variant, i) => (
                 <PremiumCard key={i} variant={variant} />
               ))}
-            </div>
-          </div>
-        )}
-
-        {/* ECONOMY — Ertiga + Sedan entries, har ek ka apna economy[] + apni price */}
-        {economyEntries.length > 0 && (
-          <div className="cbp-sec">
-            <div className="cbp-sec__hd">
-              <div>
-                <span className="cbp-badge cbp-badge--e">💰 Economy</span>
-                <h2 className="cbp-sec__title">
-                  Economy Cabs — {fromCity} to {toCity}
-                </h2>
-                <p className="cbp-sec__sub">
-                  Budget-friendly · Comfortable · On-time ·{" "}
-                  {economyEntries.reduce(
-                    (sum, e) => sum + (e.economy?.length || 0),
-                    0,
-                  )}{" "}
-                  vehicles
-                </p>
-              </div>
-              <div className="cbp-sec__from">
-                <span className="cbp-sec__from-lbl">From</span>
-                <span className="cbp-sec__from-val cbp-sec__from-val--e">
-                  ₹{economyFromPrice.toLocaleString("en-IN")}
-                </span>
-              </div>
-            </div>
-            <div className="cbp-cards">
-              {economyEntries.map((entry) =>
-                (entry.economy || []).map((variant, i) => (
-                  <EconomyCard
-                    key={`${entry.id}-${i}`}
-                    variant={variant}
-                    entry={entry}
-                  />
-                )),
-              )}
             </div>
           </div>
         )}
@@ -567,24 +688,23 @@ const Page = () => {
 
       <SiteFooter />
 
-      {/* ── BOOKING MODAL ── */}
+      {/* BOOKING MODAL */}
       {modalOpen && (
         <div className="cbp-modal-overlay" onClick={closeModal}>
           <div className="cbp-modal" onClick={(e) => e.stopPropagation()}>
-            {/* Header */}
             <div className="cbp-modal__hd">
               <div className="cbp-modal__hd-left">
                 <h3 className="cbp-modal__title">Complete Your Booking</h3>
                 {selectedCab && (
                   <div className="cbp-modal__meta">
                     <span
-                      className={
-                        selectedCab.isPremium
-                          ? "cbp-modal__badge cbp-modal__badge--p"
-                          : "cbp-modal__badge cbp-modal__badge--e"
-                      }
+                      className={`cbp-modal__badge ${selectedCab.type === "Premium" ? "cbp-modal__badge--p" : "cbp-modal__badge--e"}`}
                     >
-                      {selectedCab.isPremium ? "⭐ Premium" : "💰 Economy"}
+                      {selectedCab.type === "Premium"
+                        ? "⭐ Premium"
+                        : selectedCab.type === "Crysta"
+                          ? "🚗 Crysta"
+                          : "💰 Economy"}
                     </span>
                     <span className="cbp-modal__cab">
                       {selectedCab.cabName}
@@ -595,9 +715,9 @@ const Page = () => {
                     </span>
                     <span className="cbp-modal__sep">·</span>
                     <span className="cbp-modal__price">
-                      {selectedCab?.isPremium
-                        ? "₹ Call to Discuss"
-                        : `₹${selectedCab.price.toLocaleString("en-IN")}`}
+                      {typeof selectedCab.price === "number"
+                        ? `₹${selectedCab.price.toLocaleString("en-IN")}`
+                        : selectedCab.price}
                     </span>
                   </div>
                 )}
@@ -607,7 +727,6 @@ const Page = () => {
               </button>
             </div>
 
-            {/* Mini Booking Form */}
             <div className="cbp-modal__body">
               {sent ? (
                 <div className="cbp-success">
@@ -616,7 +735,6 @@ const Page = () => {
                 </div>
               ) : (
                 <form className="cbp-form" onSubmit={handleBookingSubmit}>
-                  {/* Row 1 — Name + Email */}
                   <div className="cbp-form__row">
                     <div className="cbp-form__field">
                       <label className="cbp-form__lbl">Full Name *</label>
@@ -643,8 +761,6 @@ const Page = () => {
                       />
                     </div>
                   </div>
-
-                  {/* Row 2 — Phone + Date */}
                   <div className="cbp-form__row">
                     <div className="cbp-form__field">
                       <label className="cbp-form__lbl">Phone *</label>
@@ -674,8 +790,6 @@ const Page = () => {
                       />
                     </div>
                   </div>
-
-                  {/* Row 3 — Travellers */}
                   <div className="cbp-form__row cbp-form__row--single">
                     <div className="cbp-form__field">
                       <label className="cbp-form__lbl">
@@ -694,8 +808,6 @@ const Page = () => {
                       />
                     </div>
                   </div>
-
-                  {/* Row 4 — Message */}
                   <div className="cbp-form__field">
                     <label className="cbp-form__lbl">
                       Specific Requirement
@@ -709,7 +821,6 @@ const Page = () => {
                       onChange={handleFormChange}
                     />
                   </div>
-
                   <button
                     type="submit"
                     className="cbp-form__submit"

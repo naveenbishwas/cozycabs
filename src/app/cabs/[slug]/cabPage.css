@@ -160,7 +160,7 @@
   margin: 0 auto;
   padding: 28px 28px;
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   gap: 44px;
   background: var(--bg);
 }
