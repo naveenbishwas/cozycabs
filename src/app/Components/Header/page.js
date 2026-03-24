@@ -40,11 +40,11 @@ export default function Header() {
             <li className="dropdown">
               <span className="dropbtn">Our Services ▾</span>
               <ul className="dropdown-content">
-                <li>
+                {/* <li>
                   <Link href="/our-services/out-of-station">
                     Out Of Station
                   </Link>
-                </li>
+                </li> */}
                 <li>
                   <Link href="/our-services/corporate-car-rental">
                     Corporate Car Rental
@@ -184,11 +184,11 @@ export default function Header() {
             </button>
             {servicesOpen && (
               <ul className="submenu" id="submenu">
-                <li>
+                {/* <li>
                   <Link href="/our-services/out-of-station">
                     Out of Station
                   </Link>
-                </li>
+                </li> */}
                 <li>
                   <Link href="/our-services/corporate-car-rental">
                     Corporate Car Rental

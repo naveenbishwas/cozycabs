@@ -131,7 +131,9 @@ const Page = () => {
 
   // Safe image getter
   const getImg = (idx) =>
-    Array.isArray(car.image) ? car.image[idx] || "" : car.image || "";
+    Array.isArray(car.image)
+      ? car.image[idx] || "/Ertiga.webp"
+      : car.image || "/Ertiga.webp";
 
   // Parse price string "2,100" → number 2100
   const parsePrice = (str) => parseInt(String(str).replace(/,/g, ""), 10) || 0;
@@ -165,7 +167,9 @@ const Page = () => {
             <img src={getImg(imgIdx)} alt={data.carName} className="cc__img" />
           </div>
           <div className="cc__left-meta">
-            <span className="cc__type-tag cc__type-tag--e">💰 Economy</span>
+            <span className="cc__type-tag cc__type-tag--e">
+              <FaCar /> Economy
+            </span>
             <div className="cc__rating">
               <span className="cc__stars">{stars}</span>
               <span className="cc__rating-num">{ratingNum}</span>
@@ -385,7 +389,7 @@ const Page = () => {
           <div className="cc__rating">
             <span className="cc__stars">★★★★★</span>
             <span className="cc__rating-num">4.9</span>
-            <span className="cc__rating-cnt">(120+ rides)</span>
+            <span className="cc__rating-cnt">(320+ rides)</span>
           </div>
         </div>
       </div>
@@ -572,7 +576,7 @@ const Page = () => {
             <div className="cbp-sec__hd">
               <div>
                 <span className="cbp-badge cbp-badge--e">
-                  🚗 Available Cabs
+                  <FaCar /> Available Cabs
                 </span>
                 <h2 className="cbp-sec__title">
                   Cabs — {fromCity} to {toCity}

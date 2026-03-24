@@ -119,7 +119,7 @@
         "seat": 7
       }
     ],
-
+    "destination": "Delhi to Meerut",
     "image": ["/Ertiga.png", "/crysta-1.png", "/maruti.png"],
     "duration": "2 hr 20 mins",
     "ac": true,

@@ -187,16 +187,16 @@ export default function OutOfStation() {
   const returnDateRef = useRef(null);
   const today = new Date().toISOString().split("T")[0];
 
-  useEffect(() => {
-    const close = (e) => {
-      if (!toRef.current?.contains(e.target)) setShowTo(false);
-    };
-    document.addEventListener("mousedown", close);
-    return () => document.removeEventListener("mousedown", close);
-  }, []);
+  // useEffect(() => {
+  //   const close = (e) => {
+  //     if (!toRef.current?.contains(e.target)) setShowTo(false);
+  //   };
+  //   document.addEventListener("mousedown", close);
+  //   return () => document.removeEventListener("mousedown", close);
+  // }, []);
 
   const fTo = CITIES.filter(
-    (c) => c.toLowerCase().includes(to.toLowerCase()) && c !== from,
+    (c) => c?.toLowerCase()?.includes(to.toLowerCase()) && c !== from,
   );
 
   const handleSearch = () => {

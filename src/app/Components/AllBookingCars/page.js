@@ -5,12 +5,17 @@ import { IoCarSport } from "react-icons/io5";
 import { useRouter } from "next/navigation";
 import "./allbookingcars.css";
 import carListings from "../../data/carListings.json";
-
 const TABS = [
-  { id: 0, name: "Ertiga", key: "ertiga" },
-  { id: 1, name: "Crysta", key: "crysta" },
-  { id: 2, name: "Dzire", key: "dzire" },
+  { id: 0, name: "Dzire", key: "dzire", imgIdx: 2 }, // image[2]
+  { id: 1, name: "Ertiga", key: "ertiga", imgIdx: 0 }, // image[0]
+  { id: 2, name: "Crysta", key: "crysta", imgIdx: 1 }, // image[1]
 ];
+
+// const TABS = [
+//   { id: 0, name: "Ertiga", key: "ertiga" },
+//   { id: 1, name: "Crysta", key: "crysta" },
+//   { id: 2, name: "Dzire", key: "dzire" },
+// ];
 
 // Fixed tab images (fallback if JSON image array missing)
 const TAB_FALLBACK_IMAGES = ["/Ertiga.webp", "/crysta-1.png", "/maruti.avif"];
@@ -37,8 +42,9 @@ const AllBookingCars = () => {
   // Get image for a car entry at current tab index
   const getTabImage = (car) => {
     const imgs = car.image;
-    if (Array.isArray(imgs) && imgs[activeTab.id]) return imgs[activeTab.id];
-    return TAB_FALLBACK_IMAGES[activeTab.id];
+    if (Array.isArray(imgs) && imgs[activeTab.imgIdx])
+      return imgs[activeTab.imgIdx];
+    return TAB_FALLBACK_IMAGES[activeTab.imgIdx];
   };
 
   // Get price data for active tab
@@ -104,9 +110,9 @@ const AllBookingCars = () => {
                 const sampleCar = carListings.find((c) => c[tab.key]);
                 const tabImg = sampleCar
                   ? Array.isArray(sampleCar.image)
-                    ? sampleCar.image[tab.id]
-                    : TAB_FALLBACK_IMAGES[tab.id]
-                  : TAB_FALLBACK_IMAGES[tab.id];
+                    ? sampleCar.image[tab.imgIdx]
+                    : TAB_FALLBACK_IMAGES[tab.imgIdx]
+                  : TAB_FALLBACK_IMAGES[tab.imgIdx];
 
                 return (
                   <button
