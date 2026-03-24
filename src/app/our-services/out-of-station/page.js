@@ -216,7 +216,7 @@ export default function OutOfStation() {
       <section className="oos-hero">
         <div className="oos-hero__bg">
           <Image
-            src="../out-of-stations.png"
+            src="../station.png"
             fill
             className="oos-hero__img"
             alt="Out of Station"
@@ -231,7 +231,7 @@ export default function OutOfStation() {
             <h1 className="oos-h1">
               Your Trusted <br />
               Partner <br />
-              From Here to <span>Anywhere.</span>
+              From Here to Anywhere.
             </h1>
             <p className="oos-sub">
               Professional drivers · Clean cabs · On-time pickup · Pan India
@@ -415,7 +415,7 @@ export default function OutOfStation() {
 
               {/* SEARCH */}
               <button onClick={handleSearch} className="oos-btn">
-                Search Cabs
+                Search Cab
               </button>
             </div>
           </div>

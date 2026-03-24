@@ -228,14 +228,14 @@ const Page = () => {
                 ₹{data.perKm}/km after {car.included} km
               </span>
             </div>
-            <div className="cc__fare-row">
+            {/* <div className="cc__fare-row">
               <span className="cc__fare-lbl">
                 <SiToll /> Toll / State tax
               </span>
               <span className="cc__fare-val cc__fare-val--muted">
                 As per govt. rules
               </span>
-            </div>
+            </div> */}
           </div>
 
           <div className="cc__footer">
@@ -271,7 +271,7 @@ const Page = () => {
     const { orig, discount } = calcDiscount(price, 1.2);
 
     return (
-      <div className="cc cc--premium">
+      <div className="cc cc--economy">
         <div className="cc__left">
           <div className="cc__img-wrap">
             <img src={getImg(1)} alt={data.carName} className="cc__img" />
@@ -296,7 +296,7 @@ const Page = () => {
                 {fromCity} → {toCity} · {car.duration}
               </p>
             </div>
-            <span className="cc__avail">Available</span>
+            <span className="cc__avail cc__avail--e">Available</span>
           </div>
 
           <div className="cc__chips">
@@ -338,14 +338,14 @@ const Page = () => {
                 ₹{data.perKm}/km after {car.included} km
               </span>
             </div>
-            <div className="cc__fare-row">
+            {/* <div className="cc__fare-row">
               <span className="cc__fare-lbl">
                 <SiToll /> Toll / State tax
               </span>
               <span className="cc__fare-val cc__fare-val--muted">
                 As per govt. rules
               </span>
-            </div>
+            </div> */}
           </div>
 
           <div className="cc__footer">
@@ -355,7 +355,7 @@ const Page = () => {
                 <span className="cc__orig">
                   ₹{orig.toLocaleString("en-IN")}
                 </span>
-                <span className="cc__disc">{discount}% OFF</span>
+                <span className="cc__disc cc__disc--e">{discount}% OFF</span>
               </div>
               <span className="cc__tax">+ Toll extra · GST incl.</span>
             </div>
@@ -385,7 +385,9 @@ const Page = () => {
           />
         </div>
         <div className="cc__left-meta">
-          <span className="cc__type-tag cc__type-tag--p">⭐ Premium</span>
+          <span className="cc__type-tag cc__type-tag--p">
+            <FaCar /> Premium
+          </span>
           <div className="cc__rating">
             <span className="cc__stars">★★★★★</span>
             <span className="cc__rating-num">4.9</span>
@@ -444,14 +446,14 @@ const Page = () => {
               Call to confirm
             </span>
           </div>
-          <div className="cc__fare-row">
+          {/* <div className="cc__fare-row">
             <span className="cc__fare-lbl">
               <SiToll /> Toll / State tax
             </span>
             <span className="cc__fare-val cc__fare-val--muted">
               As per govt. rules
             </span>
-          </div>
+          </div> */}
         </div>
 
         <div className="cc__footer">
