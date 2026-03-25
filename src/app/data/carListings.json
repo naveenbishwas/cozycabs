@@ -2358,19 +2358,19 @@
     "title": ["Ertiga", "Crysta", "Dzire"],
     "dzire": {
       "carName": "Swift Dzire",
-      "finalPrice": "1,600",
+      "finalPrice": "12,951",
       "perKm": 11,
       "seat": 4
     },
     "ertiga": {
       "carName": "Toyota Ertiga",
-      "finalPrice": "2,100",
+      "finalPrice": "14,477",
       "perKm": 15,
       "seat": 6
     },
     "crysta": {
       "carName": "Toyota Crysta",
-      "finalPrice": "4,700",
+      "finalPrice": "23,457",
       "perKm": 19,
       "seat": 7
     },
@@ -2391,9 +2391,9 @@
 
     "destination": "Delhi to Auli",
     "image": ["/Ertiga.png", "/crysta-1.png", "/maruti.png"],
-    "duration": "1 hr 04 mins",
+    "duration": "10 hr 04 mins",
     "ac": true,
-    "included": 40
+    "included": 502
   },
   {
     "id": 58,
