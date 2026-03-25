@@ -338,14 +338,6 @@ const Page = () => {
                 ₹{data.perKm}/km after {car.included} km
               </span>
             </div>
-            {/* <div className="cc__fare-row">
-              <span className="cc__fare-lbl">
-                <SiToll /> Toll / State tax
-              </span>
-              <span className="cc__fare-val cc__fare-val--muted">
-                As per govt. rules
-              </span>
-            </div> */}
           </div>
 
           <div className="cc__footer">
@@ -446,14 +438,6 @@ const Page = () => {
               Call to confirm
             </span>
           </div>
-          {/* <div className="cc__fare-row">
-            <span className="cc__fare-lbl">
-              <SiToll /> Toll / State tax
-            </span>
-            <span className="cc__fare-val cc__fare-val--muted">
-              As per govt. rules
-            </span>
-          </div> */}
         </div>
 
         <div className="cc__footer">

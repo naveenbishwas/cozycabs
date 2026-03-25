@@ -217,9 +217,7 @@ const AllBookingCars = () => {
                         </span>
                       )}
                     </div>
-                    <p className="vsel-row__tax">
-                      + Toll tax as per govt. rules
-                    </p>
+                    <p className="vsel-row__tax">Parking charges may apply</p>
                   </div>
                   <button
                     className="vsel-row__btn"
