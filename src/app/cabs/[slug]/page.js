@@ -49,7 +49,7 @@ const Page = () => {
   const [sent, setSent] = useState(false);
 
   const openModal = (cabName, price, type) => {
-    setSelectedCab({ cabName, price, type, route: formatedSlug });
+    setSelectedCab({ cabName, price, type, route: route });
     setSent(false);
     setForm({
       name: "",
@@ -129,6 +129,7 @@ const Page = () => {
 
   const fromCity = car.destination.split(" to ")[0];
   const toCity = car.destination.split(" to ")[1];
+  const route = `${token ? `${toCity} to ${fromCity}` : `${fromCity} to ${toCity}`}`;
 
   // Safe image getter
   const getImg = (idx) =>

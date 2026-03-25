@@ -8,6 +8,7 @@ import NumberCounter from "@/app/Components/NumberCounter/page";
 import AllBookingCars from "@/app/Components/AllBookingCars/page";
 import SiteFooter from "@/app/Components/Footer/page";
 import carListings from "../../data/carListings.json";
+import { FaLock } from "react-icons/fa";
 
 const CITIES = [
   "Amritsar",
@@ -394,13 +395,11 @@ export default function OutOfStation() {
                 className="oos-swap"
                 onClick={() => {
                   if (fromIsDelhi) {
-                    // Switch to City→Delhi mode: unlock FROM, lock TO=Delhi
                     setFrom("");
                     setFromInput("");
                     setTo("Delhi");
                     setTimeout(() => setShowFrom(true), 50);
                   } else {
-                    // Switch back to Delhi→City mode
                     setFrom("Delhi");
                     setFromInput("Delhi");
                     setTo("");
@@ -420,7 +419,7 @@ export default function OutOfStation() {
                 {/* 2-sec warning */}
                 {toWarning && (
                   <div className="oos-warning">
-                    🔒 Delhi is fixed as drop city
+                    <FaLock /> Delhi is fixed as drop city
                   </div>
                 )}
                 <label className="oos-f__lbl">TO</label>
