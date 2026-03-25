@@ -168,48 +168,111 @@ const formatTime = (val) => {
   if (!val) return null;
   const [h, m] = val.split(":");
   const hr = parseInt(h);
-  const ampm = hr >= 12 ? "PM" : "AM";
-  return `${hr % 12 || 12}:${m} ${ampm}`;
+  return `${hr % 12 || 12}:${m} ${hr >= 12 ? "PM" : "AM"}`;
 };
 
 export default function OutOfStation() {
   const [tripType, setTripType] = useState("oneway");
   const [from, setFrom] = useState("Delhi");
+  const [fromInput, setFromInput] = useState("Delhi"); // controlled input display
   const [to, setTo] = useState("");
   const [date, setDate] = useState("");
   const [returnDate, setReturnDate] = useState("");
   const [time, setTime] = useState("07:00");
+  const [showFrom, setShowFrom] = useState(false);
   const [showTo, setShowTo] = useState(false);
+  const [toWarning, setToWarning] = useState(false);
+
   const router = useRouter();
+  const fromRef = useRef(null);
   const toRef = useRef(null);
   const dateRef = useRef(null);
   const timeRef = useRef(null);
   const returnDateRef = useRef(null);
+  const warnTimer = useRef(null);
   const today = new Date().toISOString().split("T")[0];
 
-  // useEffect(() => {
-  //   const close = (e) => {
-  //     if (!toRef.current?.contains(e.target)) setShowTo(false);
-  //   };
-  //   document.addEventListener("mousedown", close);
-  //   return () => document.removeEventListener("mousedown", close);
-  // }, []);
+  // fromIsDelhi
+  const fromIsDelhi = from === "Delhi";
 
-  const fTo = CITIES.filter(
-    (c) => c?.toLowerCase()?.includes(to.toLowerCase()) && c !== from,
+  // Close dropdowns on outside click
+  useEffect(() => {
+    const close = (e) => {
+      if (!fromRef.current?.contains(e.target)) setShowFrom(false);
+      if (!toRef.current?.contains(e.target)) setShowTo(false);
+    };
+    document.addEventListener("mousedown", close);
+    return () => document.removeEventListener("mousedown", close);
+  }, []);
+
+  useEffect(() => () => clearTimeout(warnTimer.current), []);
+
+  // FROM suggestions
+  const fFrom = CITIES.filter(
+    (c) => c.toLowerCase().includes(fromInput.toLowerCase()) && c !== "Delhi",
   );
 
-  const handleSearch = () => {
-    const car = carListings.find((c) => c.destination.includes(to));
-    if (!car) {
-      alert("No cabs available for this destination");
-      setTo("");
-      return;
-    }
-    const slug = car.destination.trim().toLowerCase().replace(/\s+/g, "-");
-    router.push(`/cabs/${slug}?type=${car.title[0].toLowerCase()}`);
+  // TO suggestions
+  const fTo = CITIES.filter(
+    (c) => c.toLowerCase().includes(to.toLowerCase()) && c !== "Delhi",
+  );
+
+  // Show 2-sec warning
+  const triggerToWarning = () => {
+    setToWarning(true);
+    clearTimeout(warnTimer.current);
+    warnTimer.current = setTimeout(() => setToWarning(false), 2000);
   };
 
+  // Select FROM city → auto-set TO to Delhi
+  const handleFromSelect = (city) => {
+    setFrom(city);
+    setFromInput(city);
+    setShowFrom(false);
+    setTo("Delhi");
+  };
+
+  // FROM input change
+  const handleFromInputChange = (e) => {
+    const val = e.target.value;
+    setFromInput(val);
+    setShowFrom(true);
+    setShowTo(false);
+    // If cleared, reset to Delhi mode
+    if (val === "") {
+      setFrom("Delhi");
+      setFromInput("Delhi");
+      setTo("");
+    }
+  };
+
+  // Search
+  const handleSearch = () => {
+    // const token = crypto.randomUUID();
+    const destination = fromIsDelhi ? to : from;
+
+    if (!destination) {
+      alert("Please enter a destination city");
+      return;
+    }
+
+    const car = carListings.find((c) =>
+      c.destination?.toLowerCase().includes(destination.toLowerCase()),
+    );
+
+    if (!car) {
+      alert("No cabs available for this destination");
+      return;
+    }
+
+    const slug = car.destination.trim().toLowerCase().replace(/\s+/g, "-");
+    const token = crypto.randomUUID();
+    if (from !== "Delhi") {
+      router.push(`/cabs/${slug}?q=${token}`);
+    } else {
+      router.push(`/cabs/${slug}`);
+    }
+  };
   return (
     <>
       <Header />
@@ -279,53 +342,120 @@ export default function OutOfStation() {
             </div>
 
             <div className="oos-fields">
-              {/* FROM */}
-              <div className="oos-f oos-f--grow oos-f--dis">
-                <span className="oos-f__badge">
-                  <IconLock /> Fixed
-                </span>
+              {/* ── FROM ── */}
+              <div
+                className={`oos-f oos-f--grow ${fromIsDelhi ? "oos-f--dis" : ""}`}
+                ref={fromRef}
+                style={fromIsDelhi ? { cursor: "default" } : {}}
+              >
+                {fromIsDelhi && (
+                  <span className="oos-f__badge">
+                    <IconLock /> Fixed
+                  </span>
+                )}
                 <label className="oos-f__lbl">FROM</label>
                 <div className="oos-f__wrap">
-                  <IconLocation color="#bbb" size={15} />
+                  <IconLocation
+                    color={fromIsDelhi ? "#bbb" : "#d80117"}
+                    size={15}
+                  />
                   <input
-                    className="oos-f__inp--dis"
-                    value={from}
-                    disabled
-                    readOnly
+                    className={fromIsDelhi ? "oos-f__inp--dis" : "oos-f__inp"}
+                    value={fromIsDelhi ? "Delhi" : fromInput}
+                    placeholder="Enter pickup city"
+                    autoComplete="off"
+                    readOnly={fromIsDelhi}
+                    onChange={fromIsDelhi ? undefined : handleFromInputChange}
+                    onFocus={
+                      fromIsDelhi
+                        ? undefined
+                        : () => {
+                            setShowFrom(true);
+                            setShowTo(false);
+                          }
+                    }
                   />
                 </div>
+                {/* FROM dropdown — only in City→Delhi mode */}
+                {!fromIsDelhi && showFrom && fFrom.length > 0 && (
+                  <ul className="oos-drop">
+                    {fFrom.sort().map((c) => (
+                      <li key={c} onMouseDown={() => handleFromSelect(c)}>
+                        <IconLocationFill color="#d80117" size={11} />
+                        {c}
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </div>
 
-              {/* Swap */}
+              {/* ── SWAP ── */}
               <button
                 className="oos-swap"
                 onClick={() => {
-                  setFrom(to);
-                  setTo(from);
+                  if (fromIsDelhi) {
+                    // Switch to City→Delhi mode: unlock FROM, lock TO=Delhi
+                    setFrom("");
+                    setFromInput("");
+                    setTo("Delhi");
+                    setTimeout(() => setShowFrom(true), 50);
+                  } else {
+                    // Switch back to Delhi→City mode
+                    setFrom("Delhi");
+                    setFromInput("Delhi");
+                    setTo("");
+                  }
                 }}
-                style={{ opacity: 0.8 }}
               >
                 <IconSwap />
               </button>
 
-              {/* TO */}
-              <div className="oos-f oos-f--grow" ref={toRef}>
+              {/* ── TO ── */}
+              <div
+                className={`oos-f oos-f--grow ${!fromIsDelhi ? "oos-f--dis" : ""}`}
+                ref={toRef}
+                onClick={!fromIsDelhi ? triggerToWarning : undefined}
+                style={!fromIsDelhi ? { cursor: "pointer" } : {}}
+              >
+                {/* 2-sec warning */}
+                {toWarning && (
+                  <div className="oos-warning">
+                    🔒 Delhi is fixed as drop city
+                  </div>
+                )}
                 <label className="oos-f__lbl">TO</label>
                 <div className="oos-f__wrap">
-                  <IconLocationFill color="#d80117" size={14} />
-                  <input
-                    className="oos-f__inp"
-                    placeholder="Enter drop city"
-                    value={to}
-                    autoComplete="off"
-                    onChange={(e) => {
-                      setTo(e.target.value);
-                      setShowTo(true);
-                    }}
-                    onFocus={() => setShowTo(true)}
+                  <IconLocationFill
+                    color={!fromIsDelhi ? "#bbb" : "#d80117"}
+                    size={14}
                   />
+                  {fromIsDelhi ? (
+                    <input
+                      className="oos-f__inp"
+                      placeholder="Enter drop city"
+                      value={to}
+                      autoComplete="off"
+                      onChange={(e) => {
+                        setTo(e.target.value);
+                        setShowTo(true);
+                        setShowFrom(false);
+                      }}
+                      onFocus={() => {
+                        setShowTo(true);
+                        setShowFrom(false);
+                      }}
+                    />
+                  ) : (
+                    <input
+                      className="oos-f__inp--dis"
+                      value="Delhi"
+                      disabled
+                      readOnly
+                    />
+                  )}
                 </div>
-                {showTo && fTo.length > 0 && (
+                {/* TO dropdown — Delhi→City mode only */}
+                {fromIsDelhi && showTo && fTo.length > 0 && (
                   <ul className="oos-drop">
                     {fTo.sort().map((c) => (
                       <li
@@ -343,7 +473,7 @@ export default function OutOfStation() {
                 )}
               </div>
 
-              {/* DATE */}
+              {/* ── PICKUP DATE ── */}
               <div
                 className="oos-f oos-f--dt"
                 onClick={() => dateRef.current?.showPicker()}
@@ -366,7 +496,7 @@ export default function OutOfStation() {
                 />
               </div>
 
-              {/* TIME */}
+              {/* ── PICKUP TIME ── */}
               <div
                 className="oos-f oos-f--dt"
                 onClick={() => timeRef.current?.showPicker()}
@@ -388,7 +518,7 @@ export default function OutOfStation() {
                 />
               </div>
 
-              {/* RETURN DATE — only for Round Trip */}
+              {/* ── RETURN DATE ── */}
               {tripType === "roundtrip" && (
                 <div
                   className="oos-f oos-f--dt oos-f--return"
@@ -413,7 +543,7 @@ export default function OutOfStation() {
                 </div>
               )}
 
-              {/* SEARCH */}
+              {/* ── SEARCH ── */}
               <button onClick={handleSearch} className="oos-btn">
                 Search Cab
               </button>

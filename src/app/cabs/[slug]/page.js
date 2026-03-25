@@ -1,6 +1,6 @@
 "use client";
-import React, { useState } from "react";
-import { useParams, useRouter } from "next/navigation";
+import React, { useEffect, useState } from "react";
+import { useParams, useRouter, useSearchParams } from "next/navigation";
 import Header from "@/app/Components/Header/page";
 import carListings from "../../data/carListings.json";
 import "./cabPage.css";
@@ -15,7 +15,6 @@ import {
 } from "react-icons/md";
 import { FaCar, FaCartPlus, FaWindowMaximize } from "react-icons/fa";
 import { FiZap } from "react-icons/fi";
-import { SiToll } from "react-icons/si";
 import { CiCreditCard1 } from "react-icons/ci";
 import SiteFooter from "@/app/Components/Footer/page";
 import Link from "next/link";
@@ -29,7 +28,9 @@ const getPremiumImage = (title) => PREMIUM_IMAGES[title] || "/crysta-1.png";
 
 const Page = () => {
   const { slug } = useParams();
+  const searchParams = useSearchParams();
   const router = useRouter();
+  const token = searchParams.get("q");
 
   // Modal state
   const [modalOpen, setModalOpen] = useState(false);
@@ -75,6 +76,11 @@ const Page = () => {
       setForm((s) => ({ ...s, name: value.replace(/[^a-zA-Z\s]/g, "") }));
     else setForm((s) => ({ ...s, [name]: value }));
   };
+  // useEffect(() => {
+  //   if (token) {
+  //     setFromTO(true);
+  //   }
+  // }, []);
 
   const handleBookingSubmit = async (e) => {
     e.preventDefault();
@@ -147,14 +153,7 @@ const Page = () => {
   /* ────────────────────────────────────────────────
      ECONOMY CARD — Dzire or Ertiga
   ──────────────────────────────────────────────── */
-  const EconomyCard = ({
-    keyName,
-    imgIdx,
-    stars,
-    ratingNum,
-    ratingCnt,
-    seatLabel,
-  }) => {
+  const EconomyCard = ({ keyName, imgIdx, stars, ratingNum, ratingCnt }) => {
     const data = car[keyName];
     if (!data) return null;
     const price = parsePrice(data.finalPrice);
@@ -470,8 +469,6 @@ const Page = () => {
     .map((k) => parsePrice(car[k]?.finalPrice))
     .filter(Boolean);
   const lowestEconomy = economyPrices.length ? Math.min(...economyPrices) : 0;
-
-  // Find the dzire/ertiga finalPrice for display
   const crystaPrice = parsePrice(car.crysta?.finalPrice);
 
   return (
@@ -485,14 +482,16 @@ const Page = () => {
             <Link href="/">Home /</Link>
             <Link href="/our-services/out-of-station"> Outstation / </Link>
             <span>
-              {fromCity} to {toCity}
+              {token ? `${toCity} → ${fromCity}` : `${fromCity} → ${toCity}`}
             </span>
           </p>
 
           <div className="cbp-route">
             <div className="cbp-route__city">
               <span className="cbp-route__lbl">FROM</span>
-              <span className="cbp-route__name">{fromCity}</span>
+              <span className="cbp-route__name">
+                {token ? toCity : fromCity}
+              </span>
             </div>
             <div className="cbp-route__mid">
               <svg viewBox="0 0 48 14" fill="none" width="44" height="13">
@@ -508,7 +507,9 @@ const Page = () => {
             </div>
             <div className="cbp-route__city cbp-route__city--red">
               <span className="cbp-route__lbl">TO</span>
-              <span className="cbp-route__name">{toCity}</span>
+              <span className="cbp-route__name">
+                {token ? fromCity : toCity}
+              </span>
             </div>
           </div>
 
