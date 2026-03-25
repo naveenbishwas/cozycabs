@@ -76,11 +76,6 @@ const Page = () => {
       setForm((s) => ({ ...s, name: value.replace(/[^a-zA-Z\s]/g, "") }));
     else setForm((s) => ({ ...s, [name]: value }));
   };
-  // useEffect(() => {
-  //   if (token) {
-  //     setFromTO(true);
-  //   }
-  // }, []);
 
   const handleBookingSubmit = async (e) => {
     e.preventDefault();
@@ -702,7 +697,9 @@ const Page = () => {
                     </span>
                     <span className="cbp-modal__sep">·</span>
                     <span className="cbp-modal__route">
-                      {fromCity} → {toCity}
+                      {token
+                        ? `${toCity} to ${fromCity}`
+                        : `${fromCity} to ${toCity}`}
                     </span>
                     <span className="cbp-modal__sep">·</span>
                     <span className="cbp-modal__price">

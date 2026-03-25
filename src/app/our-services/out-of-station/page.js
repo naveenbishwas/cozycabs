@@ -348,11 +348,11 @@ export default function OutOfStation() {
                 ref={fromRef}
                 style={fromIsDelhi ? { cursor: "default" } : {}}
               >
-                {fromIsDelhi && (
+                {/* {fromIsDelhi && (
                   <span className="oos-f__badge">
                     <IconLock /> Fixed
                   </span>
-                )}
+                )} */}
                 <label className="oos-f__lbl">FROM</label>
                 <div className="oos-f__wrap">
                   <IconLocation
