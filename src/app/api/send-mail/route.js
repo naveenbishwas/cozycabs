@@ -17,7 +17,7 @@ export async function POST(req) {
       },
     });
 
-    // This only for slug=>route
+    // This only for slug route
     const cabSection = body.route
       ? `
         <h3>🚗 Cab Details</h3>
@@ -33,7 +33,7 @@ export async function POST(req) {
       ? `${body.phoneCode || "+91"} ${body.phone}`
       : null;
 
-    // 1️⃣ Client ko email
+    // 1️⃣ Client confirmation email
     await transporter.sendMail({
       from: `"CozyCabz" <${process.env.MAIL_USER}>`,
       to: process.env.MAIL_TO,
@@ -56,7 +56,7 @@ export async function POST(req) {
       `,
     });
 
-    // 2️⃣ User ko confirmation email
+    // 2️⃣ User confirmation email
     await transporter.sendMail({
       from: `"CozyCabz" <${process.env.MAIL_USER}>`,
       to: body.email,

@@ -106,7 +106,7 @@ const Page = () => {
     }
   };
 
-  // slug → "delhi to dehradun"
+  // slug //
   const formatedSlug = slug.split("-").join(" ");
 
   // Find single entry matching this destination
@@ -137,7 +137,7 @@ const Page = () => {
       ? car.image[idx] || "/Ertiga.webp"
       : car.image || "/Ertiga.webp";
 
-  // Parse price string "2,100" → number 2100
+  // Parse price string 
   const parsePrice = (str) => parseInt(String(str).replace(/,/g, ""), 10) || 0;
 
   // Discount calc
