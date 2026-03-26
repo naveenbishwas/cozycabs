@@ -175,7 +175,7 @@ const formatTime = (val) => {
 export default function OutOfStation() {
   const [tripType, setTripType] = useState("oneway");
   const [from, setFrom] = useState("Delhi");
-  const [fromInput, setFromInput] = useState("Delhi"); // controlled input display
+  const [fromInput, setFromInput] = useState("Delhi");
   const [to, setTo] = useState("");
   const [date, setDate] = useState("");
   const [returnDate, setReturnDate] = useState("");
@@ -321,7 +321,7 @@ export default function OutOfStation() {
                 </svg>
                 One Way
               </button>
-              <button
+              {/* <button
                 className={`oos-tab ${tripType === "roundtrip" ? "active" : ""}`}
                 onClick={() => setTripType("roundtrip")}
               >
@@ -339,7 +339,7 @@ export default function OutOfStation() {
                   <path d="M21 13v2a4 4 0 0 1-4 4H3" />
                 </svg>
                 Round Trip
-              </button>
+              </button> */}
             </div>
 
             <div className="oos-fields">
