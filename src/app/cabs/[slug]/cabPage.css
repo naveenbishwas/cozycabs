@@ -177,7 +177,6 @@
   max-width: var(--mw);
   margin: 0 auto;
   background: var(--bg);
-  /* padding-bottom: 60px; */
 }
 
 /* ================================================================
@@ -247,9 +246,6 @@
   color: var(--amber);
 }
 
-/* ================================================================
-   CARDS LIST — vertical stack
-   ================================================================ */
 .cbp-cards {
   display: flex;
   flex-direction: column;
@@ -265,7 +261,7 @@
   border: 1px solid var(--bd);
   overflow: hidden;
   display: flex;
-  flex-direction: row; /* ← horizontal layout */
+  flex-direction: row;
   align-items: stretch;
   transition:
     transform 0.2s,
@@ -1239,12 +1235,7 @@
   .cbp-route__name {
     font-size: 17px;
   }
-  .cc__left {
-    width: 110px;
-  }
-  .cc__img-wrap {
-    height: 76px;
-  }
+
   .cc__price {
     font-size: 19px;
   }
