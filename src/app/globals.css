@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -1177,6 +1179,8 @@ a {
     font-size: 14px;
   }
 }
+
+/* Rental pages top css */
 
 /* styles/why-choose-us.css */
 :root {

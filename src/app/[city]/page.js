@@ -1,16 +1,20 @@
 "use client";
 
 import React, { useState } from "react";
+import { useParams } from "next/navigation";
+// import "../InMumbai/internalOne.css";
+import Image from "next/image";
 import Header from "../Components/Header/page";
 import Footer from "../Components/Footer/page";
-
 import Trustcc from "../Components/Trustcc";
 import Howto from "../Components/Howto";
 import Howrent from "../Components/Howrent";
 import CityForm from "../Components/CityForm/page";
 
-const InVadodara = () => {
+/// Ahmedabad
+const InAhmedabad = () => {
   const [openIndex, setOpenIndex] = useState(null);
+  const { city } = useParams();
 
   const toggle = (i) => {
     setOpenIndex((prev) => (prev === i ? null : i));
@@ -19,7 +23,7 @@ const InVadodara = () => {
   const items = [
     {
       title: "Professional & Verified Drivers",
-      desc: "Our chauffeurs are trained, background-checked, and experienced. From Sayajigunj to Gotri, Alkapuri to the airport, they know every route. For dependable car and driver rental, CozyCabz is your trusted travel partner.",
+      desc: "Our trained chauffeurs know Ahmedabad’s routes—Ashram Road, SG Highway, and the fastest way to the airport. For secure and comfortable Ahmedabad car rental with driver, CozyCabz is your trusted partner.",
       icon: (
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <path d="M12 2l7 3v6c0 5-3.5 9-7 11-3.5-2-7-6-7-11V5l7-3z" />
@@ -29,7 +33,7 @@ const InVadodara = () => {
     },
     {
       title: "Wide Range of Vehicles",
-      desc: "Choose from hatchbacks, sedans, SUVs, tempo travelers, and premium cars. Whether it’s a car on rent in Vadodara with driver, a rental car with driver for business, or car travels in Vadodara for sightseeing, we have the right option.",
+      desc: "From budget-friendly hatchbacks to SUVs, sedans, tempo travelers, and luxury cars. Whether you prefer self-drive or chauffeur-driven, we’ve got it covered.",
       icon: (
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <path d="M3 13l1.2-3.6A3 3 0 017.1 7h9.8a3 3 0 012.9 2.4L21 13v5a1 1 0 01-1 1h-1a2 2 0 11-4 0H9a2 2 0 11-4 0H4a1 1 0 01-1-1v-5z" />
@@ -39,7 +43,7 @@ const InVadodara = () => {
     },
     {
       title: "Transparent Pricing",
-      desc: "No hidden charges. Our Vadodara car rental rates are upfront, covering driver fees, fuel, tolls, and parking. Be it a rental car in Vadodara for a day or long-term car rental in Baroda, you get fair pricing.",
+      desc: "What you see is what you pay—upfront pricing including fuel, tolls, and driver charges. No hidden costs.",
       icon: (
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <path d="M3 12l9-9 9 9-9 9-9-9z" />
@@ -49,7 +53,7 @@ const InVadodara = () => {
     },
     {
       title: "24×7 Availability",
-      desc: "From early morning airport transfers to late-night pickups, our car hire Vadodara services are available round the clock.",
+      desc: "Early-morning airport transfers or late-night pickups—our car hire in Ahmedabad is available round the clock.",
       icon: (
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <circle cx="10.5" cy="10.5" r="7.5" />
@@ -60,7 +64,7 @@ const InVadodara = () => {
     },
     {
       title: "Safety & Hygiene First",
-      desc: "Every vehicle is sanitized, GPS-enabled, and fully insured. Families, corporates, and tourists rely on CozyCabz for safe and hygienic car rentals in Vadodara Gujarat.",
+      desc: "All cars are sanitized after each trip, GPS-enabled, and insured for passenger safety. Trusted by families, corporates, and tourists.",
       icon: (
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <path d="M4 12a8 8 0 1116 0v5a2 2 0 01-2 2h-3v-4h3v-3a6 6 0 10-12 0v3h3v4H6a2 2 0 01-2-2v-5z" />
@@ -69,78 +73,104 @@ const InVadodara = () => {
     },
   ];
 
+  const services = [
+    {
+      title: "Local Rentals",
+      text: "Hourly or full-day packages for shopping, meetings, or sightseeing.",
+    },
+    {
+      title: "Airport Transfers",
+      text: "Reliable rides to and from Sardar Vallabhbhai Patel International Airport.",
+    },
+    {
+      title: "Outstation Trips",
+      text: "Round-trip and one-way travel to Vadodara, Udaipur, Dwarka, Somnath and more.",
+    },
+    {
+      title: "Luxury Cars",
+      text: "Premium sedans and SUVs for weddings, VIP events, and corporate travel.",
+    },
+    {
+      title: "Self-Drive Options",
+      text: "Affordable self-drive rentals for privacy and flexibility.",
+    },
+    {
+      title: "Corporate & Long-Term Leasing",
+      text: "Tailored monthly plans with competitive rates for businesses and regular travelers.",
+    },
+  ];
+
   const spots = [
     {
-      title: "Lakshmi Vilas Palace",
-      img: "/invadodara/Lakshmi.png",
-      alt: "Lakshmi Vilas Palace in Vadodara",
+      title: "Sabarmati Ashram",
+      img: "/inahmedabad/Sabarmati.png",
+      alt: "Sabarmati Ashram campus",
       paragraphs: [
-        "One of the grandest palaces in India, Lakshmi Vilas Palace was built by the Gaekwad dynasty and is said to be four times the size of Buckingham Palace. Its Indo-Saracenic architecture, royal artifacts, and lush gardens make it a cultural treasure.",
+        "Once the residence of Mahatma Gandhi, Sabarmati Ashram is a peaceful retreat that showcases India’s freedom struggle. Visitors can see Gandhi’s personal belongings, letters, and photographs while walking through the serene campus along the Sabarmati River. It remains one of the most inspiring landmarks in Ahmedabad",
       ],
     },
     {
-      title: "Sayaji Baug (Kamati Baug)",
-      img: "/invadodara/Sayaji.png",
-      alt: "Sayaji Baug gardens and attractions",
+      title: "Kankaria Lake",
+      img: "/inahmedabad/Kankaria.png",
+      alt: "Kankaria Lakefront",
       paragraphs: [
-        "Spread over 100 acres, Sayaji Baug is a green retreat housing a zoo, planetarium, toy train, and gardens—popular for morning walks, picnics, and family leisure.",
+        "Kankaria Lake is a lively recreational spot perfect for families and tourists. It features boat rides, a zoo, toy train, balloon rides, and landscaped gardens. The lakefront hosts vibrant evening activities, making it a favorite hangout for locals and travelers looking to enjoy a fun-filled day in the city.",
       ],
     },
     {
-      title: "Champaner-Pavagadh Archaeological Park",
-      img: "/invadodara/Champaner.png",
-      alt: "Champaner-Pavagadh UNESCO site near Vadodara",
+      title: "Sidi Saiyyed Mosque",
+      img: "/inahmedabad/Sidi.png",
+      alt: "Sidi Saiyyed Jali",
       paragraphs: [
-        "Located just outside Vadodara, this UNESCO World Heritage Site is known for forts, palaces, mosques, and ancient temples—perfect for history lovers and day trips.",
+        "Built in the 16th century, this mosque is world-famous for its intricate stone latticework windows, especially the iconic “Tree of Life” design. A masterpiece of Indo-Islamic art, it attracts both devotees and history lovers. The mosque remains one of Ahmedabad’s most photographed and celebrated monuments.",
       ],
     },
     {
-      title: "EME Temple",
-      img: "./EME-temple.jpeg",
-      alt: "EME Dakshinamurthy Temple modern architecture",
+      title: "Adalaj Stepwell",
+      img: "/inahmedabad/Adalaj.png",
+      alt: "Adalaj Stepwell carvings",
       paragraphs: [
-        "Also called Dakshinamurthy Temple, the EME Temple is unique for its modern architecture by the Indian Army. Dedicated to Lord Shiva, it blends spirituality with contemporary design.",
+        "Adalaj Stepwell is a stunning five-story water reservoir showcasing Indo-Islamic architecture and detailed stone carvings. Built in the 15th century, it was not only a source of water but also a resting place for travelers. Its beautifully sculpted corridors and pillars make it a must-visit for heritage enthusiasts.",
       ],
     },
     {
-      title: "Baroda Museum & Picture Gallery",
-      img: "/invadodara/Baroda.png",
-      alt: "Baroda Museum and Picture Gallery exhibits",
+      title: "Sabarmati Riverfront",
+      img: "/inahmedabad/Sabarmati-Riverfront.png",
+      alt: "Sabarmati Riverfront walkway",
       paragraphs: [
-        "Established in the 19th century, the Baroda Museum & Picture Gallery showcases art, sculptures, manuscripts, and global artifacts. It provides deep insights into history and culture, making it an enriching stop for visitors. Art lovers and students often find it a must-visit attraction in Vadodara.",
+        "The Sabarmati Riverfront is a modern landmark offering landscaped gardens, cycling tracks, and boating facilities along the river. Stretching for kilometers, it’s ideal for morning walks, evening leisure, or photography. With its blend of nature and urban development, it has become a favorite spot for locals and tourists alike.",
       ],
     },
     {
-      title: "Sursagar Lake",
-      img: "/invadodara/Sursagar.png",
-      alt: "Sursagar Lake with Shiva statue in Vadodara",
+      title: "Jama Masjid",
+      img: "/inahmedabad/Jama-Masjid.png",
+      alt: "Ahmedabad Jama Masjid",
       paragraphs: [
-        "Situated in the heart of the city, Sursagar Lake is ideal for relaxation and boating. Evenings are magical when the lake is lit up, with a towering Shiva statue adding to its charm.",
-        "With CozyCabz rent a car in Vadodara, exploring these landmarks becomes simple, comfortable, and stress-free.",
+        "Constructed in the 15th century by Sultan Ahmed Shah, Jama Masjid is one of India’s most elegant mosques. Built with yellow sandstone, it features intricate carvings, grand domes, and a vast courtyard. The mosque reflects the city’s rich architectural heritage and continues to draw devotees and visitors every day.",
       ],
     },
   ];
 
   const faqs = [
     {
-      q: "How much does car rental in Vadodara cost?",
-      a: "Economy rides start at ₹12/km, sedans from ₹25/km, and luxury cars from ₹35/km. CozyCabz provides transparent Vadodara car rental rates.",
+      q: "How much does car rental in Ahmedabad cost per km?",
+      a: "Economy cars start at ₹12/km, premium sedans at ₹25/km, and luxury cars at ₹35/km. Transparent rates with CozyCabz.",
     },
     {
-      q: "Can I book a car on rent in Vadodara with driver for one day?",
-      a: "Yes. We provide flexible packages, including one day car rental with driver.",
+      q: "Can I book a car rental in Ahmedabad with driver for outstation trips?",
+      a: "Yes—one-way and round-trip packages to nearby destinations are available.",
     },
     {
-      q: "Do you provide cars for outstation trips from Vadodara?",
-      a: "Absolutely. CozyCabz offers car rental in Vadodara Gujarat for one-way and round-trip outstation journeys.",
+      q: "Do you provide airport transfers in Ahmedabad?",
+      a: "Absolutely. On-time transfers to and from Sardar Vallabhbhai Patel International Airport.",
     },
     {
-      q: "Do you provide corporate and business car hire in Vadodara?",
-      a: "Yes. Our car hire in Vadodara is popular for meetings, events, and client pickups.",
+      q: "Are self-drive cars available in Ahmedabad?",
+      a: "Yes—self-drive options are available for independence and flexibility.",
     },
     {
-      q: "Do you also provide luxury and premium vehicles?",
-      a: "Yes. CozyCabz offers luxury car rental in Vadodara for weddings, VIP transfers, and corporate use.",
+      q: "How do I book quickly?",
+      a: "Book online in a few steps—confirmation and driver details are shared instantly.",
     },
   ];
 
@@ -220,47 +250,46 @@ const InVadodara = () => {
   return (
     <div>
       <head>
-        <title>
-          Car Rental in Vadodara | CozyCabz – Self Drive & Chauffeur Cars
-        </title>
+        <title>Car Rental in {city} | CozyCabz with Driver</title>
         <meta
           name="description"
-          content="Book car rental in Vadodara with driver or self drive car rental in Vadodara. CozyCabz offers reliable, safe, and affordable car hire in Baroda for airport transfers, city tours, and business trips."
+          content="Book car rental in Ahmedabad with driver for local, airport & outstation trips. Affordable, safe, and 24×7 service with professional chauffeurs."
         />
         <meta
           property="og:title"
-          content="Car Rental in Vadodara | CozyCabz – Reliable Car Hire in Baroda"
+          content="Car Rental in Ahmedabad | CozyCabz with Driver"
         />
         <meta
           property="og:description"
-          content="Hire cars in Vadodara for sightseeing, corporate travel, and outstation trips. From sedans to luxury cars, CozyCabz provides verified drivers and transparent pricing 24×7."
+          content="Rent cars in Ahmedabad for business, family, or leisure travel. Transparent pricing, verified chauffeurs, and comfortable rides by CozyCabz."
         />
-        <meta property="og:image" content="/invadodara/Lakshmi.png" />
+        <meta property="og:image" content="/inahmedabad/Sabarmati.png" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.cozycabz.com/InVadodara" />
-        <meta name="robots" content="index, follow" />
+        <meta
+          property="og:url"
+          content="https://www.cozycabz.com/InAhmedabad"
+        />
       </head>
 
       <Header />
       <section className="heroeco" aria-label="Car Rental Hero Section">
         <div className="heroeco__copy">
           <p className="heroeco__eyebrow">India’s Trusted Car Rental</p>
-          <h1 className="heroeco__title">Car Rental in Vadodara</h1>
+          <h1 className="heroeco__title">Car Rental in {city}</h1>
           <span className="small-head">
             <br />
             <h4>Reliable, Safe & Affordable</h4>
           </span>
           <p className="heroeco__sub">
-            Vadodara, or Baroda, blends royal heritage with modern charm, from
-            Lakshmi Vilas Palace to the Champaner-Pavagadh UNESCO site and
-            industrial hubs. To explore stress-free, CozyCabz offers car rental
-            in Vadodara with driver and flexible packages.
+            Ahmedabad blends heritage with modern living—from Sabarmati Ashram
+            and stepwells to buzzing markets and IT zones. CozyCabz provides
+            trusted car rental with driver so every journey is safe and
+            convenient.
           </p>
         </div>
       </section>
 
       <CityForm />
-
       <Trustcc />
       <Howto />
       <Howrent />
@@ -269,14 +298,13 @@ const InVadodara = () => {
         <div className="attractions__container">
           <header className="attractions__head">
             <h2 id="attractions-title">
-              Must-Visit Places in Vadodara with CozyCabz
+              Must-Visit Places in Ahmedabad with CozyCabz
             </h2>
             <p>
-              With CozyCabz rent a car in Vadodara, exploring the city’s iconic
-              landmarks becomes simple, comfortable, and stress-free.
+              Explore top attractions comfortably with CozyCabz—travel at your
+              pace without traffic or parking worries.
             </p>
           </header>
-
           <div className="attractions__grid">
             {spots.map((s) => (
               <article className="spot" key={s.title}>
@@ -299,11 +327,9 @@ const InVadodara = () => {
         <div className="faq-header">
           <h2>Frequently Asked Questions</h2>
           <p>
-            Answers to common questions about our car rental services in
-            Vadodara.
+            Answers to the most common questions about our Ahmedabad services.
           </p>
         </div>
-
         <div className="faq-list" role="list">
           {faqs.map((item, i) => {
             const open = openIndex === i;
@@ -323,7 +349,6 @@ const InVadodara = () => {
                   <span className="faq-q-text">{item.q}</span>
                   <span className="faq-icon" aria-hidden="true" />
                 </button>
-
                 <div
                   id={`faq-panel-${i}`}
                   role="region"
@@ -344,4 +369,4 @@ const InVadodara = () => {
   );
 };
 
-export default InVadodara;
+export default InAhmedabad;
