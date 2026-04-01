@@ -239,7 +239,7 @@ export default function OutOfStation() {
     setFromInput(val);
     setShowFrom(true);
     setShowTo(false);
-    // If cleared, reset to Delhi mode
+
     if (val === "") {
       setFrom("Delhi");
       setFromInput("Delhi");

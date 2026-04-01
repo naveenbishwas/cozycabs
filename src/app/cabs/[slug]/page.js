@@ -553,7 +553,7 @@ const Page = () => {
       </div>
 
       <main className="cbp-main">
-        {/* ── ALL CABS — Dzire + Ertiga + Crysta ek section mein ── */}
+        {/* ── ALL CABS — Dzire + Ertiga + Crysta with one secction ── */}
         {(car.dzire || car.ertiga || car.crysta) && (
           <div className="cbp-sec">
             <div className="cbp-sec__hd">
@@ -599,7 +599,7 @@ const Page = () => {
           </div>
         )}
 
-        {/* ── PREMIUM — Fortuner + Hycross — niche ── */}
+        {/* PREMIUM - Fortuner + Hycross */}
         {car.premium?.length > 0 && (
           <div className="cbp-sec">
             <div className="cbp-sec__hd">

@@ -1,6 +1,3 @@
-/* ================================================================
-   oos.css — OutOfStation Page (conflict-free rewrite)
-   ================================================================ */
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&display=swap");
 
 /* ================================================================
@@ -204,7 +201,7 @@
   flex: 1;
 }
 
-/* Date field — full area clickable */
+/* Date field  */
 .oos-f--dt {
   cursor: pointer;
 }
@@ -447,7 +444,7 @@
   transform: scale(0.98);
 }
 
-/* ── Trust strip ── */
+/* ── Trust badge ── */
 .oos-trust {
   display: flex;
   align-items: center;
