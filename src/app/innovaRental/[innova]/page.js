@@ -4,7 +4,6 @@ import React, { useEffect, useRef, useState } from "react";
 import { useParams } from "next/navigation";
 import SiteFooter from "../../Components/Footer/page";
 import Header from "../../Components/Header/page";
-import Image from "next/image";
 import NumberCounter from "../../Components/NumberCounter/page";
 import InnovaBanner from "../../Components/InnovaBanner/page";
 import InnovaSpecsCard from "../../Components/InnovaSpecsCard/page";

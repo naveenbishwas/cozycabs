@@ -45,9 +45,13 @@ export default function SiteFooter() {
   const pathname = usePathname();
   const router = useRouter();
 
-  const slug = pathname?.split("/").filter(Boolean)[0];
-  const cityName = slug;
-  const cityMatch = city.find((item) => item.city.toLowerCase() === cityName);
+  const slug = pathname?.split("-").pop(); // ahmedabad
+
+  const cityName = slug?.charAt(0).toUpperCase() + slug?.slice(1);
+
+  const cityMatch = city.find(
+    (item) => item.city.toLowerCase() === slug?.toLowerCase(),
+  );
 
   function cityClickHandler(citie) {
     if (showInnova) {
