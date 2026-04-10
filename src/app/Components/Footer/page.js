@@ -194,7 +194,9 @@ export default function SiteFooter() {
         {cityName && (
           <div className="footer__seo">
             <div className="footer__service-wrapper">
-              <h4 className="seo-heading">Popular Searches in {cityName}</h4>
+              {cityMatch?.service?.length > 0 && (
+                <h4 className="seo-heading">Popular Searches in {cityName}</h4>
+              )}
               <span>
                 {showService ? (
                   <GoEye size={25} onClick={() => setShowService(false)} />
