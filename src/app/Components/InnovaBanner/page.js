@@ -81,21 +81,21 @@ import { usePathname } from "next/navigation";
 import "./InnovaBanner.css";
 import Image from "next/image";
 
-export default function InnovaHeroSection() {
+export default function InnovaHeroSection({ city }) {
   const pathname = usePathname();
 
   // Extract last part of URL (e.g. /InnovaMumbai → Mumbai)
-  const city =
-    pathname?.split("innova-car-rental-in")[1]?.replace(/[-_]/g, " ")?.trim() ||
-    "City";
+  // const city =
+  //   pathname?.split("innova-car-rental-in")[1]?.replace(/[-_]/g, " ")?.trim() ||
+  //   "City";
 
-  const formattedCity = city.charAt(0).toUpperCase() + city.slice(1);
+  // const formattedCity = city.charAt(0).toUpperCase() + city.slice(1);
 
   return (
     <section className="innova-hero">
       <div className="innova-overlay">
         <div className="innova-content">
-          <h1 className="innova-title">Innova Car Rental in {formattedCity}</h1>
+          <h1 className="innova-title">Innova Car Rental in {city}</h1>
           <p className="innova-subtitle">
             Experience premium comfort and reliability with India's most trusted
             MPV. Perfect for family trips, corporate travel, and special

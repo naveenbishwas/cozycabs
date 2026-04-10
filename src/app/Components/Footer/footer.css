@@ -159,6 +159,9 @@
   gap: 8px;
   margin-top: 9%;
 }
+.linklist li {
+  cursor: pointer;
+}
 .linklist a {
   color: #cbd1d8;
   text-decoration: none;
@@ -345,6 +348,9 @@
 
 .city-column li a:hover {
   color: #fff;
+}
+.city-column li button {
+  cursor: pointer;
 }
 
 .fade-in {
@@ -652,6 +658,7 @@ h4.seo-heading {
 .seo-content h5 {
   color: #fff;
   text-transform: lowercase;
+  cursor: pointer;
 }
 
 button.seo-toggle-btn {

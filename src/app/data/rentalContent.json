@@ -1,0 +1,976 @@
+[
+  {
+    "id": 1,
+    "city": "Mumbai",
+    "title": "Car Rental in Mumbai",
+    "description": "Exploring Mumbai can be exciting but also overwhelming with traffic, long distances, and the city’s non-stop energy. That’s where Cozy Cabz Car Rental in Mumbai makes your journey easier.",
+    "placeDecrip": "Mumbai is a city that blends history, culture, glamour, and nature—all in one. From colonial-era monuments to vibrant markets, spiritual centers, and Bollywood hotspots, there’s so much to explore. With CozyCabz car hire in Mumbai, you can cover these places comfortably, without the hassle of traffic, parking, or last-minute cab hunting",
+    "spots": [
+      {
+        "id": 1,
+        "image": "/g1.webp",
+        "title": "Gateway of India & Colaba Causeway",
+        "descrip": "Standing tall by the Arabian Sea, the Gateway of India is Mumbai’s most iconic landmark. Built during the British era, it’s not just a tourist attraction but a piece of history. Just a short walk away lies Colaba Causeway, a bustling market street filled with trendy clothes, antique jewelry, handicrafts, and cozy cafés. With our car rental with driver, you can explore both spots in one go—without the stress of crowded lanes or parking issues"
+      },
+      {
+        "id": 2,
+        "image": "/g2.webp",
+        "title": "Marine Drive & Girgaon Chowpatty",
+        "descrip": "Known as the Queen’s Necklace because of its glittering night view, Marine Drive is perfect for long seaside walks, photography, and sunset views. Close by is Girgaon Chowpatty, a popular beach where you can indulge in Mumbai’s famous street food like pav bhaji, bhel puri, and ice gola. Booking a car on rent in Mumbai ensures you enjoy the evening at your own pace, without worrying about transport after dark."
+      },
+      {
+        "id": 3,
+        "image": "/g3.webp",
+        "title": "Siddhivinayak Temple & Haji Ali Dargah",
+        "descrip": "Mumbai is as spiritual as it is fast-paced. The Siddhivinayak Temple, dedicated to Lord Ganesha, attracts lakhs of devotees every week. Equally famous is the Haji Ali Dargah, located on a small islet in the Arabian Sea, offering both peace and breathtaking views. With our car rental service in Mumbai, you can plan your visit conveniently, avoiding long waits and ensuring you reach at the best times of the day."
+      },
+      {
+        "id": 4,
+        "image": "/g4.webp",
+        "title": "Elephanta Caves & Sanjay Gandhi National Park",
+        "descrip": "If you want to step away from the chaos of the city, Elephanta Caves and Sanjay Gandhi National Park are perfect day trips. The Elephanta Caves, a UNESCO World Heritage site, house ancient rock-cut temples dedicated to Lord Shiva. Meanwhile, Sanjay Gandhi National Park offers greenery, trekking trails, and a mini train ride, making it a favorite for nature lovers and families. By booking a rental car in Mumbai with driver, you can comfortably plan a full-day outing, knowing your car and driver will be with you throughout the trip."
+      },
+      {
+        "id": 5,
+        "image": "/m1.jpg",
+        "title": "Juhu Beach & Bandra Bandstand",
+        "descrip": "For a taste of Mumbai’s glam life, head to Juhu Beach and Bandra Bandstand. Juhu is buzzing with food stalls, local entertainment, and sometimes even Bollywood celebrity sightings. On the other hand, Bandra Bandstand offers a quieter seaside walk, along with famous attractions like Mannat, Shah Rukh Khan’s residence. Our cars on rent in Mumbai make it easy to cover both locations in one smooth ride, whether for leisure, family outings, or a casual evening."
+      }
+    ]
+  },
+
+  {
+    "id": 2,
+    "city": "Delhi",
+    "title": "Car Rental in Delhi",
+    "description": "Delhi, India’s capital, blends history and modern life with forts, markets, and business hubs. But heavy traffic and crowds make travel stressful. That’s where CozyCabz Car Rental in Delhi ensures smooth, safe, and hassle-free journeys every time.",
+    "placeDecrip": "Delhi is a city where every street has a story to tell. From centuries-old Mughal forts to modern shopping hubs, the capital is a mix of history, culture, spirituality, and vibrant city life. With CozyCabz car rental in Delhi with driver, exploring becomes stress-free—you just sit back and enjoy while we take care of traffic, routes, and parking.",
+    "spots": [
+      {
+        "id": 1,
+        "image": "/indelhi/Red-Fort.png",
+        "title": "Red Fort & Chandni Chowk",
+        "descrip": "Begin your journey at the majestic Red Fort, a UNESCO World Heritage site that symbolizes India’s rich history. Just nearby is Chandni Chowk, one of Delhi’s oldest and busiest markets—perfect for heritage lovers and foodies alike."
+      },
+      {
+        "id": 2,
+        "image": "/indelhi/Qutub-Minar.png",
+        "title": "Qutub Minar & Humayun’s Tomb",
+        "descrip": "For architecture admirers, Qutub Minar and Humayun’s Tomb are must-visits. The tallest brick minaret and the Mughal-era tomb that inspired the Taj Mahal make for stunning photography spots."
+      },
+      {
+        "id": 3,
+        "image": "/indelhi/India-Gate%20(1).png",
+        "title": "India Gate & Rajpath",
+        "descrip": "At the heart of the city, India Gate stands tall as a war memorial. An evening walk along Rajpath with glowing lights is truly memorable and iconic."
+      },
+      {
+        "id": 4,
+        "image": "/indelhi/Lotus-Temple%20(1).png",
+        "title": "Lotus Temple & Akshardham",
+        "descrip": "Seek peace at the Lotus Temple or explore the grand Akshardham Temple—both blend spirituality, art, and culture, ideal for travelers seeking calm and beauty."
+      },
+      {
+        "id": 5,
+        "image": "indelhi/Connaught%20(1).png",
+        "title": "Connaught Place & Khan Market",
+        "descrip": "For shopping and city vibes, Connaught Place is packed with branded stores and eateries, while Khan Market offers upscale cafés, bookstores, and boutiques."
+      },
+      {
+        "id": 6,
+        "image": "indelhi/Lodhi-Gardens%20(1).png",
+        "title": "Lodhi Gardens & Hauz Khas Village",
+        "descrip": "Enjoy a natural and cultural mix at Lodhi Gardens and Hauz Khas Village—perfect for walks, heritage tombs, art galleries, cafés, and nightlife."
+      }
+    ]
+  },
+
+  {
+    "id": 3,
+    "city": "Bangalore",
+    "title": "Car Rental in Bangalore",
+    "description": "Bangalore, the Silicon Valley of India, blends IT hubs, gardens, landmarks, and nightlife. Yet traffic makes travel challenging. That’s where CozyCabz Car Rental in Bangalore helps, offering clean cars, verified chauffeurs, transparent pricing, 24×7 service.",
+    "placeDecrip": "Discover the charm of Bangalore with CozyCabz—your trusted travel partner. From grand palaces and lush gardens to buzzing shopping hubs and spiritual retreats, the city offers something for everyone.",
+    "spots": [
+      {
+        "id": 1,
+        "image": "/Bangalore-Palace.png",
+        "title": "Bangalore Palace",
+        "descrip": "For any visitor, the iconic Bangalore Palace is one of the city’s most fascinating landmarks. Spread across sprawling grounds, the palace instantly transports you into a royal era amidst the bustling modern city. Its Tudor-style architecture, complete with turrets and battlements, makes it look like a fairytale castle right in the heart of Bangalore , Step inside, and the grandeur grows even more. The interiors are adorned with floral motifs, elegant wood carvings, and age-old paintings. Built in 1878, the palace showcases furniture and decor from Victorian, Edwardian, and Neo-Classical periods, making it a true reflection of timeless elegance. A visit here is incomplete without strolling through its lush lawns and experiencing the charm of Bangalore’s regal past"
+      },
+      {
+        "id": 2,
+        "image": "/Vidhana.png",
+        "title": "Vidhana Soudha",
+        "descrip": "When it comes to modern history, Vidhana Soudha is the pride of Karnataka. This majestic building, which houses the state legislature, is often described as an “architectural marvel” for its sheer scale and design. It stands as a symbol of democracy while reflecting the cultural richness of the state. Constructed in 1951, the building follows the Neo-Dravidian style of architecture, with influences of Indo-Saracenic design. Spread over 60 acres, it is the largest legislative building in India. While entry inside is restricted, the entire structure lights up beautifully every Sunday evening and on public holidays, turning into a breathtaking spectacle that highlights Bangalore’s grandeur and heritage."
+      },
+      {
+        "id": 3,
+        "image": "/Lalbagh.png",
+        "title": "Lalbagh Botanical Garden",
+        "descrip": "Known as the “green heart” of the city, Lalbagh Botanical Garden spreads across 240 acres and houses one of India’s richest collections of tropical plants. Commissioned by Hyder Ali and later expanded by Tipu Sultan, the garden carries Mughal influences and has been a center of horticultural excellence for centuries.The highlight of Lalbagh is the iconic Glass House, modeled after London’s Crystal Palace, which hosts the famous annual flower shows. The garden also features the historic Lalbagh Rock, dating back 3,000 million years, along with a serene lake and diverse birdlife. Whether you’re a nature enthusiast, a photographer, or a family seeking a quiet retreat, Lalbagh is an unmissable attraction in Bangalore."
+      },
+      {
+        "id": 4,
+        "image": "/Cubbon.png",
+        "title": "Cubbon Park & Seshadri Iyer Memorial Hall",
+        "descrip": "Nestled in the heart of the city, Cubbon Park is a peaceful green escape spread across 300 acres. With walking trails, shady avenues, and beautiful landscapes, it is a favorite spot for morning joggers, families, and tourists alike. The park’s charm lies in its calm ambiance, making it a perfect place to relax amid Bangalore’s busy streets. Within Cubbon Park stands the striking Seshadri Iyer Memorial Hall, a red-colored heritage building that houses the Central Library. Built in 1915, it features classic European architecture and an extensive collection of over 2.5 lakh books, including rare manuscripts and a Braille section. For book lovers and history enthusiasts, this hall adds cultural depth to the lush greenery of Cubbon Park."
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "city": "Chennai",
+    "title": "Car Rental in Chennai",
+    "description": "Chennai, the cultural capital of South India, blends temples, colonial landmarks, Marina Beach, and IT hubs. But traffic and long distances make travel stressful. That’s where CozyCabz Car Rental in Chennai with driver ensures smooth, safe, and convenient rides.",
+    "placeDecrip": "Chennai beautifully blends spirituality, history, and modern culture. Explore the city’s best attractions at your own pace while our professional drivers ensure a smooth ride.",
+    "spots": [
+      {
+        "id": 1,
+        "image": "/inchennai/Marina-Beach.png",
+        "title": "Marina Beach",
+        "descrip": "Stretching for over 13 km, Marina Beach is the longest urban beach in India and a must-visit landmark of Chennai. It’s perfect for morning walks, sunrise views, and evening gatherings, with food stalls and local vendors adding to the lively vibe. Both locals and tourists flock here daily to enjoy the sea breeze and stunning coastal views."
+      },
+      {
+        "id": 2,
+        "image": "/kapaleeshwarar.png",
+        "title": "Kapaleeshwarar Temple",
+        "descrip": "One of Chennai’s most famous temples, the Kapaleeshwarar Temple in Mylapore is a fine example of Dravidian architecture. Its towering, colorful gopuram is a sight to behold, while the temple’s spiritual atmosphere offers peace to thousands of devotees and visitors every day. Festivals here are celebrated with grandeur, making it a cultural highlight of the city."
+      },
+      {
+        "id": 3,
+        "image": "/Fort.png",
+        "title": "Fort St. George",
+        "descrip": "Built in 1644, Fort St. George marks the beginning of British rule in India. Today, it serves as a historic monument housing a museum with paintings, coins, weapons, and relics from the colonial era. The fort is not just an architectural marvel but also a reminder of Chennai’s rich past."
+      },
+      {
+        "id": 4,
+        "image": "Government.png",
+        "title": "Government Museum & National Art Gallery",
+        "descrip": "Founded in 1851, the Government Museum is one of India’s oldest and most important cultural institutions. It showcases collections of art, archaeology, and anthropology, including rare South Indian bronzes and paintings. A visit here is perfect for history lovers and art enthusiasts wanting to explore Tamil Nadu’s heritage."
+      },
+      {
+        "id": 5,
+        "image": "/Kalakshetra.png",
+        "title": "Kalakshetra Foundation",
+        "descrip": "Kalakshetra is a cultural academy dedicated to preserving classical dance, music, and art forms of South India. Visitors can watch live performances, interact with artists, and experience the essence of Tamil traditions. It’s an inspiring space that reflects Chennai’s deep connection to art and culture"
+      },
+      {
+        "id": 6,
+        "image": "T.png",
+        "title": "T. Nagar & Express Avenue Mall",
+        "descrip": "T. Nagar is the busiest shopping hub of Chennai, known for silk sarees, gold jewelry, and buzzing street markets. In contrast, Express Avenue Mall offers a modern shopping and entertainment experience with luxury brands, cafés, and multiplexes. Together, they represent the city’s traditional charm and cosmopolitan lifestyle."
+      },
+      {
+        "id": 7,
+        "image": "/Mahabalipuram.png",
+        "title": "Mahabalipuram",
+        "descrip": "Located just 60 km from Chennai, Mahabalipuram is a UNESCO World Heritage site renowned for its rock-cut temples and sculptures. The Shore Temple, Arjuna’s Penance, and Pancha Rathas showcase incredible artistry dating back to the Pallava dynasty. A trip here is a perfect blend of history, spirituality, and coastal beauty"
+      },
+      {
+        "id": 8,
+        "image": "/Guindy-National-Park-channei.png",
+        "title": "Guindy National Park",
+        "descrip": "Spread across 600 acres, Guindy National Park is one of the few national parks located inside a metro city. It is home to blackbucks, deer, jackals, and over 130 bird species, making it a favorite for nature enthusiasts. The park also has a children’s park and snake park, making it a family-friendly destination."
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "city": "Hyderabad",
+    "title": "Car Rental in Hyderabad",
+    "description": "Hyderabad, the City of Pearls, blends history, culture, and modernity—from centuries-old monuments and bazaars to IT hubs and luxury malls. Navigating the traffic can be stressful. CozyCabz offers car rental in Hyderabad with driver for smooth, safe, and hassle-free journeys—local, outstation, or airport.",
+    "placeDecrip": "Explore Hyderabad’s royal heritage and modern charm with cozy cabz. Travel comfortably without worrying about traffic or parking.",
+    "spots": [
+      {
+        "id": 1,
+        "image": "/charminar.png",
+        "title": "Charminar",
+        "descrip": "The heart of Old Hyderabad, Charminar is a 16th-century monument and the city’s most recognized landmark. Surrounded by Laad Bazaar and other vibrant markets, it’s the perfect place to shop for pearls, bangles, and handicrafts while tasting authentic Hyderabadi street food."
+      },
+      {
+        "id": 2,
+        "image": "/golconda.png",
+        "title": "Golconda Fort",
+        "descrip": "A majestic structure from the medieval Golconda Sultanate, Golconda Fort is famous for its unique acoustics and breathtaking views of the city. The evening light-and-sound show adds life to its rich history, making it a must-visit for culture and history lovers."
+      },
+      {
+        "id": 3,
+        "image": "/inhyderabad/Hussain.png",
+        "title": "Hussain Sagar Lake & Tank Bund",
+        "descrip": "Connecting Hyderabad and Secunderabad, Hussain Sagar Lake is a serene spot known for its giant Buddha statue standing tall in the middle of the water. Tank Bund, along the lake, offers beautiful evening views and is a popular hangout for families and couples alike"
+      },
+      {
+        "id": 4,
+        "image": "/Chowmahalla.png",
+        "title": "Chowmahalla Palace",
+        "descrip": "Once the residence of the Nizams, Chowmahalla Palace reflects Mughal and Persian influences in its grand courtyards, halls, and chandeliers. The palace showcases royal artifacts and gives visitors a glimpse into Hyderabad’s regal past."
+      },
+      {
+        "id": 5,
+        "image": "/ramoji.png",
+        "title": "Ramoji Film City",
+        "descrip": "Spread over 2,000 acres, Ramoji Film City is the world’s largest integrated film studio complex. With movie sets, adventure rides, live shows, and gardens, it’s a paradise for cinema lovers and families looking for a fun-filled day."
+      },
+      {
+        "id": 6,
+        "image": "/inhyderabad/Birla.png",
+        "title": "Birla Mandir",
+        "descrip": "Built entirely from white marble, Birla Mandir sits atop Naubat Pahad hill and is dedicated to Lord Venkateswara. The temple not only offers spiritual peace but also provides panoramic views of Hyderabad city, especially beautiful at sunset."
+      },
+      {
+        "id": 7,
+        "image": "/Salar.png",
+        "title": "Salar Jung Museum",
+        "descrip": "One of the largest museums in India, the Salar Jung Museum houses rare collections of art, manuscripts, weapons, and sculptures gathered by the Salar Jung family. From Persian carpets to European clocks, it’s a treasure trove for history and art enthusiasts."
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "city": "Pune",
+    "title": "Car Rental in Pune",
+    "description": "Pune, the cultural capital of Maharashtra, blends heritage, education hubs, IT parks, and modern living. CozyCabz offers car rental in Pune with driver so every ride is safe, smooth, and hassle-free—local, outstation, or airport.",
+    "placeDecrip": "Explore Pune’s history, culture, and modern charm with Cozy Cabz—travel comfortably without traffic or parking worries.",
+    "spots": [
+      {
+        "id": 1,
+        "image": "/inpune/Shaniwar.png",
+        "title": "Shaniwar Wada",
+        "descrip": "The grand fort built by the Peshwas, Shaniwar Wada is Pune’s most iconic historical site. Known for its Maratha legacy, it features massive gates, intricate architecture, and tales of royal life. Evening light shows recreate its glorious past, making it a must-see for history enthusiasts."
+      },
+      {
+        "id": 2,
+        "image": "/aga-khan.jpeg",
+        "title": "Aga Khan Palace",
+        "descrip": "A national monument of India’s freedom struggle, the Aga Khan Palace once served as a prison for Mahatma Gandhi and his associates. Surrounded by sprawling gardens, it is both a memorial and a place of peace. Visitors can explore exhibits, photographs, and Gandhi’s personal belongings."
+      },
+      {
+        "id": 3,
+        "image": "/inpune/Sinhagad.png",
+        "title": "Sinhagad Fort",
+        "descrip": "Situated on the Sahyadri hills, Sinhagad Fort is a popular trekking spot offering panoramic views of valleys and mountains. The fort carries rich historical significance, with tales of Maratha bravery. Visitors also enjoy local food stalls at the top, making it a blend of adventure and culture."
+      },
+      {
+        "id": 4,
+        "image": "/inpune/Osho-ashram.jpeg",
+        "title": "Osho Ashram, Koregaon Park",
+        "descrip": "Known worldwide, Osho Ashram is a serene meditation center attracting thousands of visitors. Set amidst lush greenery, it offers yoga, wellness programs, and tranquil spaces for self-discovery. The peaceful environment makes it a unique attraction for those seeking relaxation and spiritual growth."
+      },
+      {
+        "id": 5,
+        "image": "/inpune/Pataleshwar-cave.jpeg",
+        "title": "Pataleshwar Cave Temple",
+        "descrip": "Carved from a single rock in the 8th century, this temple is dedicated to Lord Shiva. Its unique cave architecture, stone pillars, and sanctum reflect ancient craftsmanship. Located in the heart of Pune, it’s a quiet retreat for devotees and those interested in historical monuments."
+      },
+      {
+        "id": 6,
+        "image": "inpune/Raja-Dinkar-Kelkar-Museum.jpeg",
+        "title": "Raja Dinkar Kelkar Museum",
+        "descrip": "This museum houses an impressive collection of artifacts, sculptures, musical instruments, and everyday objects from India’s past. Each display tells a story of India’s rich cultural traditions. It is a fascinating place for students, travelers, and anyone passionate about history and art."
+      },
+      {
+        "id": 7,
+        "image": "/inpune/Parvati-hill.jpeg",
+        "title": "Parvati Hill",
+        "descrip": "Rising above the city, Parvati Hill is a scenic spot known for its temples, museum, and breathtaking city views. The climb of over 100 steps rewards visitors with panoramic landscapes of Pune. It’s especially popular during sunrise and sunset, offering a peaceful break from city life."
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "title": "Car Rental in Kolkata",
+    "city": "Kolkata",
+    "description": "Kolkata, the City of Joy, blends colonial architecture, vibrant culture, and modern lifestyle. CozyCabz provides dependable car rental with driver for safe, smooth, and stress-free travel—local trips, business, outstation, or airport.",
+    "placeDecrip": "Explore Kolkata’s famous landmarks comfortably with CozyCabz—no traffic or parking worries.",
+    "spots": [
+      {
+        "id": 1,
+        "image": "/inkolkata/Victoria.png",
+        "title": "Victoria Memorial",
+        "descrip": "Built in memory of Queen Victoria, this marble monument is one of Kolkata’s most iconic attractions. Surrounded by lush gardens and housing an impressive museum, it offers visitors a chance to admire colonial architecture and explore art, sculptures, and historical exhibits that reflect the city’s royal past."
+      },
+      {
+        "id": 2,
+        "image": "/inkolkata/Howrah.png",
+        "title": "Howrah Bridge",
+        "descrip": "Known as Rabindra Setu, the Howrah Bridge is an engineering marvel and the lifeline of Kolkata. Stretching over the Hooghly River, it carries thousands of vehicles daily. Driving across it is a unique experience that captures the pulse of the city, making it a must for anyone exploring Kolkata."
+      },
+      {
+        "id": 3,
+        "image": "/inkolkata/Dakshineswar.png",
+        "title": "Dakshineswar Kali Temple",
+        "descrip": "Dedicated to Goddess Kali, Dakshineswar Temple is a renowned pilgrimage spot located on the banks of the Hooghly River. Built in the 19th century, it features stunning architecture with 12 Shiva temples surrounding the main shrine. It is both a spiritual and cultural landmark that attracts visitors from across the country."
+      },
+      {
+        "id": 4,
+        "image": "/indian-museum.jpeg",
+        "title": "Indian Museum",
+        "descrip": "Founded in 1814, the Indian Museum is the oldest and largest museum in India. Its vast collection includes rare antiques, fossils, Mughal paintings, textiles, and even an Egyptian mummy. For history and culture enthusiasts, it provides an unmatched journey into India’s past and global heritage."
+      },
+      {
+        "id": 5,
+        "image": "/science-city.jpeg",
+        "title": "Science City",
+        "descrip": "Science City is one of Asia’s largest science centers, blending education with entertainment. With interactive exhibits, 3D shows, and a space theater, it appeals to students, families, and curious minds. It’s the perfect place to enjoy hands-on learning while spending a fun-filled day."
+      },
+      {
+        "id": 6,
+        "image": "/inkolkata/Marble.png",
+        "title": "Marble Palace",
+        "descrip": "The Marble Palace is a 19th-century mansion showcasing exquisite neoclassical architecture and stunning art collections. Visitors can admire European paintings, statues, chandeliers, and ornamental birds in its private zoo. It offers a fascinating glimpse into Kolkata’s artistic and aristocratic legacy."
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "city": "Ahmedabad",
+    "title": "Car Rental in Ahmedabad",
+    "description": "Ahmedabad blends heritage with modern living—from Sabarmati Ashram and stepwells to buzzing markets and IT zones. CozyCabz provides trusted car rental with driver so every journey is safe and convenient.",
+    "placeDecrip": "Explore top attractions comfortably with CozyCabz—travel at your pace without traffic or parking worries.",
+    "spots": [
+      {
+        "id": 1,
+        "image": "/inahmedabad/Sabarmati.png",
+        "title": "Sabarmati Ashram",
+        "descrip": "Once the residence of Mahatma Gandhi, Sabarmati Ashram is a peaceful retreat that showcases India’s freedom struggle. Visitors can see Gandhi’s personal belongings, letters, and photographs while walking through the serene campus along the Sabarmati River. It remains one of the most inspiring landmarks in Ahmedabad"
+      },
+      {
+        "id": 2,
+        "image": "/inahmedabad/Kankaria.png",
+        "title": "Kankaria Lake",
+        "descrip": "Kankaria Lake is a lively recreational spot perfect for families and tourists. It features boat rides, a zoo, toy train, balloon rides, and landscaped gardens. The lakefront hosts vibrant evening activities, making it a favorite hangout for locals and travelers looking to enjoy a fun-filled day in the city."
+      },
+      {
+        "id": 3,
+        "image": "/inahmedabad/Sidi.png",
+        "title": "Sidi Saiyyed Mosque",
+        "descrip": "Built in the 16th century, this mosque is world-famous for its intricate stone latticework windows, especially the iconic “Tree of Life” design. A masterpiece of Indo-Islamic art, it attracts both devotees and history lovers. The mosque remains one of Ahmedabad’s most photographed and celebrated monuments."
+      },
+      {
+        "id": 4,
+        "image": "/inahmedabad/Adalaj.png",
+        "title": "Adalaj Stepwell",
+        "descrip": "Adalaj Stepwell is a stunning five-story water reservoir showcasing Indo-Islamic architecture and detailed stone carvings. Built in the 15th century, it was not only a source of water but also a resting place for travelers. Its beautifully sculpted corridors and pillars make it a must-visit for heritage enthusiasts."
+      },
+      {
+        "id": 5,
+        "image": "/inahmedabad/Sabarmati-Riverfront.png",
+        "title": "Sabarmati Riverfront",
+        "descrip": "The Sabarmati Riverfront is a modern landmark offering landscaped gardens, cycling tracks, and boating facilities along the river. Stretching for kilometers, it’s ideal for morning walks, evening leisure, or photography. With its blend of nature and urban development, it has become a favorite spot for locals and tourists alike."
+      },
+      {
+        "id": 6,
+        "image": "/inahmedabad/Jama-Masjid.png",
+        "title": "Jama Masjid",
+        "descrip": "Constructed in the 15th century by Sultan Ahmed Shah, Jama Masjid is one of India’s most elegant mosques. Built with yellow sandstone, it features intricate carvings, grand domes, and a vast courtyard. The mosque reflects the city’s rich architectural heritage and continues to draw devotees and visitors every day."
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "city": "Jaipur",
+    "title": "Car Rental in Jaipur",
+    "description": "Jaipur, the Pink City, blends royal heritage with modern comforts. CozyCabz offers trusted car rental in Jaipur with driver—safe, comfortable, and affordable for sightseeing, business trips, airport transfers, and weekend getaways.",
+    "placeDecrip": "Explore Jaipur’s rich heritage and cultural landmarks at your own pace, without the stress of traffic or parking.",
+    "spots": [
+      {
+        "id": 1,
+        "image": "/injaipur/Amber.png",
+        "title": "Amber Fort",
+        "descrip": "Amber Fort is one of Jaipur’s grandest monuments, known for its artistic blend of Hindu and Mughal architecture. The fort features majestic gates, expansive courtyards, and the breathtaking Sheesh Mahal (Mirror Palace). Overlooking Maota Lake, it offers stunning views and cultural light shows that bring Rajasthan’s history to life."
+      },
+      {
+        "id": 2,
+        "image": "/injaipur/City-Palace.png",
+        "title": "City Palace",
+        "descrip": "Located at the center of Jaipur, City Palace showcases a fine mix of Rajput and Mughal styles. With grand courtyards, beautifully decorated museums, and a royal residence, it gives visitors a glimpse into the luxurious lifestyle of Jaipur’s rulers. It’s a must-visit for history buffs and culture enthusiasts."
+      },
+      {
+        "id": 3,
+        "image": "/injaipur/Hawa.png",
+        "title": "Hawa Mahal",
+        "descrip": "Known as the “Palace of Winds,” Hawa Mahal is Jaipur’s most iconic landmark. Its honeycomb façade of 953 windows was designed for royal women to observe city life unseen. Today, it is a favorite for photographers and tourists, offering both cultural significance and architectural brilliance."
+      },
+      {
+        "id": 4,
+        "image": "/jantar-mantar.jpeg",
+        "title": "Jantar Mantar",
+        "descrip": "A UNESCO World Heritage Site, Jantar Mantar is an astronomical wonder built by Maharaja Jai Singh II. It houses 19 instruments, including the world’s largest stone sundial, still accurate today. The observatory is a fascinating site for those interested in science, astronomy, and Indian innovation."
+      },
+      {
+        "id": 5,
+        "image": "/injaipur/Jal.png",
+        "title": "Jal Mahal",
+        "descrip": "Situated in the middle of Man Sagar Lake, Jal Mahal is a picturesque palace that appears to float on water. Surrounded by the Aravalli hills, it is especially stunning during sunrise and sunset. The peaceful setting makes it an ideal stop for travelers seeking relaxation and scenic views."
+      },
+      {
+        "id": 6,
+        "image": "/injaipur/Nahargarh.png",
+        "title": "Nahargarh Fort",
+        "descrip": "Perched high on the Aravalli hills, Nahargarh Fort provides breathtaking panoramic views of Jaipur city. Once a royal retreat, the fort is now a popular spot for evening outings. Its blend of history, architecture, and natural beauty makes it one of Jaipur’s most visited attractions."
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "city": "Chandigarh",
+    "title": "Car Rental in Chandigarh",
+    "description": "Chandigarh, the City Beautiful, is known for its clean roads, planned design, gardens, and lakes. Yet travel can be time-consuming. That’s why CozyCabz Car Rental in Chandigarh with driver ensures safe, smooth rides for sightseeing, airport transfers, business trips, and weekend journeys.",
+    "placeDecrip": "With CozyCabz rent a car in Chandigarh, you can explore the city’s iconic landmarks comfortably and at your own pace.",
+    "spots": [
+      {
+        "id": 1,
+        "image": "/inchandigarh/Rose.png",
+        "title": "Rose Garden (Zakir Rose Garden)",
+        "descrip": "Spread over 30+ acres, this is Asia’s largest rose garden. With hundreds of rose varieties in full bloom, wide green lawns, and quiet corners, it’s a calm spot for nature lovers and a refreshing contrast to urban life."
+      },
+      {
+        "id": 2,
+        "image": "/inchandigarh/Capitol.png",
+        "title": "Capitol Complex & Open Hand Monument",
+        "descrip": "Designed by Le Corbusier, the Capitol Complex is Chandigarh’s UNESCO architectural gem, housing the Legislative Assembly, High Court, and Secretariat. The nearby Open Hand Monument—symbolizing peace and unity—is a striking modern landmark."
+      },
+      {
+        "id": 3,
+        "image": "/inchandigarh/Government.png",
+        "title": "Government Museum & Art Gallery",
+        "descrip": "This museum houses rich collections of ancient sculptures, Gandharan art, Pahari paintings, and modern Indian works. It’s a cultural hub that showcases Chandigarh’s heritage and its progressive spirit."
+      },
+      {
+        "id": 4,
+        "image": "/inchandigarh/Japanese.png",
+        "title": "Japanese Garden",
+        "descrip": "Located in Sector 31, the Japanese Garden offers a peaceful oasis in the city. With waterfalls, pagoda structures, themed gardens, and a meditation centre, it’s a tranquil place to unwind and connect with nature.With CozyCabz car rental Chandigarh, enjoying these attractions becomes effortless, letting you soak in the city’s beauty without the stress of driving or parking."
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "city": "Lucknow",
+    "title": "Car Rental in Lucknow",
+    "description": "Lucknow, the City of Nawabs, blends Mughal architecture, vibrant markets, and rich culture. Yet exploring can be difficult without the right transport. That’s why CozyCabz Car Rental in Lucknow with driver ensures safe, smooth rides for tourists, corporates, families, and outstation trips.",
+    "placeDecrip": "With CozyCabz car rental Lucknow, exploring the city’s cultural gems and modern attractions becomes easy and stress-free. You can travel at your own pace without worrying about parking or traffic.",
+    "spots": [
+      {
+        "id": 1,
+        "image": "/inlucknow/Bara.png",
+        "title": "Bara Imambara",
+        "descrip": "Built in 1784 by Nawab Asaf-ud-Daula, Bara Imambara is an architectural masterpiece of the Mughal era. Famous for its central hall, which is one of the largest arched constructions without support beams, it also houses the fascinating Bhool Bhulaiya (labyrinth). It’s a must-visit for history enthusiasts and culture seekers."
+      },
+      {
+        "id": 2,
+        "image": "/inlucknow/Chota.png",
+        "title": "Chota Imambara",
+        "descrip": "Often called the Hussainabad Imambara, this monument is admired for its stunning chandeliers, calligraphy, and intricate decoration. Constructed in the 19th century, it reflects Lucknow’s Nawabi culture and grandeur. At night, when lit up, the building glows beautifully, earning it the title “Palace of Lights."
+      },
+      {
+        "id": 3,
+        "image": "/inlucknow/Rumi.png",
+        "title": "Rumi Darwaza",
+        "descrip": "Standing 60 feet tall, Rumi Darwaza is one of Lucknow’s most iconic landmarks. Built in 1784, this Mughal-style gateway is often referred to as the “Gateway to Lucknow.” Its unique design and historical charm make it one of the most photographed spots in the city."
+      },
+      {
+        "id": 4,
+        "image": "/inlucknow/Hazratganj.png",
+        "title": "Hazratganj Market",
+        "descrip": "Hazratganj is Lucknow’s most popular shopping district, blending tradition with modernity. From chikankari clothing and jewelry to branded stores and cafés, it has something for everyone. It’s also a foodie’s delight, offering delicious street snacks and authentic Awadhi cuisine."
+      },
+      {
+        "id": 5,
+        "image": "/inlucknow/Ambedkar.png",
+        "title": "Ambedkar Memorial Park",
+        "descrip": "Spread across 107 acres, Ambedkar Memorial Park is a grand structure built with red sandstone. Dedicated to Dr. B.R. Ambedkar and other social reformers, it features statues, museums, and impressive architecture. The park is a modern symbol of Lucknow’s cultural pride and vision."
+      },
+      {
+        "id": 6,
+        "image": "/inlucknow/Lucknow-zoo.png",
+        "title": "Lucknow Zoo",
+        "descrip": "Also known as Nawab Wajid Ali Shah Zoological Garden, Lucknow Zoo is a family favorite. Home to tigers, lions, elephants, and rare birds, it offers both education and entertainment. The zoo also has a toy train and nature museum, making it ideal for children and wildlife lovers.With Lucknow car rental services from CozyCabz, visiting these attractions becomes comfortable, convenient, and enjoyable, giving you the freedom to discover the city’s charm."
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "city": "Indore",
+    "title": "Car Rental in Indore",
+    "description": "Indore, Madhya Pradesh’s commercial capital, blends heritage and modern life with Rajwada Palace, Sarafa Bazaar, and IT hubs. Yet traffic can be exhausting. That’s why CozyCabz Car Rental in Indore with driver ensures safe, smooth rides for sightseeing, business travel, and outstation journeys.",
+    "placeDecrip": "With CozyCabz car rental Indore, exploring the city’s cultural and fun places becomes convenient and stress-free. You can travel at your own pace while enjoying comfort and safety.",
+    "spots": [
+      {
+        "id": 1,
+        "image": "/inindore/Rajwada.png",
+        "title": "Rajwada Palace",
+        "descrip": "Rajwada Palace is a historic seven-story palace built by the Holkars over 200 years ago. It combines Mughal, Maratha, and French styles, making it an architectural gem. Located in the heart of the city, it is a must-visit for history lovers and photographers."
+      },
+      {
+        "id": 2,
+        "image": "/inindore/Lal.png",
+        "title": "Lal Bagh Palace",
+        "descrip": "Once the residence of the Holkar rulers, Lal Bagh Palace showcases the grandeur of European architecture. The lavish interiors, ornate furniture, and expansive gardens give visitors a glimpse of royal lifestyle. It’s one of Indore’s finest heritage landmarks."
+      },
+      {
+        "id": 3,
+        "image": "/inindore/Kanch.png",
+        "title": "Kanch Mandir",
+        "descrip": "This Jain temple, made entirely of glass and mirrors, is a dazzling sight. Intricate glasswork covers the walls, ceilings, and floors, creating a unique and spiritual ambiance. It is one of Indore’s most striking and sacred attractions."
+      },
+      {
+        "id": 4,
+        "image": "/inindore/Sarafa.png",
+        "title": "Sarafa Bazaar",
+        "descrip": "Sarafa Bazaar is Indore’s most vibrant spot, buzzing with jewelry shops by day and transforming into a food street by night. From chaat to sweets, it’s a paradise for food lovers. Exploring this market is a must for anyone who enjoys nightlife and local flavors."
+      },
+      {
+        "id": 5,
+        "image": "/inindore/Patalpani.png",
+        "title": "Patalpani Waterfall",
+        "descrip": "Located about 30 km from Indore, Patalpani is a scenic waterfall surrounded by greenery. It’s a popular picnic spot and a great escape from the city. Monsoon season makes the view especially breathtaking, attracting tourists and locals alike."
+      },
+      {
+        "id": 6,
+        "image": "/inindore/Central.png",
+        "title": "Central Museum",
+        "descrip": "Also known as Indore Museum, this place houses rare artifacts, coins, and sculptures from Madhya Pradesh’s history. It’s a great spot for those interested in archaeology and culture, offering insights into the region’s rich heritage.With Indore car hire from CozyCabz, visiting these attractions becomes comfortable, safe, and enjoyable, giving you the freedom to experience the best of the city."
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "city": "Surat",
+    "title": "Car Rental in Surat",
+    "description": "Surat, the Diamond City of India, blends heritage, trade, markets, and seaside getaways. Exploring is exciting but traffic makes travel challenging. That’s why CozyCabz offers car rental in Surat with driver and self drive car rental in Surat.",
+    "placeDecrip": "With CozyCabz rent a car in Surat, exploring the city’s top attractions becomes easy and comfortable. From historic forts to beaches and gardens, you can enjoy every corner of the city at your own pace.",
+    "spots": [
+      {
+        "id": 1,
+        "image": "/insurat/Surat-Castle.png",
+        "title": "Surat Castle",
+        "descrip": "Built in the 16th century by Sultan Mahmud III, Surat Castle is a grand fort that once protected the city from invasions. Its massive stone walls and strategic riverside location reflect the city’s historic importance. Today, it stands as a popular tourist landmark and heritage site."
+      },
+      {
+        "id": 2,
+        "image": "/insurat/Sarthana.png",
+        "title": "Sarthana Nature Park & Zoo",
+        "descrip": "Spread over a large green area, this zoo is home to lions, tigers, leopards, and exotic birds. It’s one of the best fun places in Surat for families, offering both entertainment and learning for children. The natural surroundings make it a refreshing getaway within the city."
+      },
+      {
+        "id": 3,
+        "image": "/insurat/Dumas.png",
+        "title": "Dumas Beach",
+        "descrip": "Famous for its unique black sand, Dumas Beach along the Arabian Sea is a favorite evening spot for locals and tourists. Visitors enjoy seaside snacks, sunset views, and the cool breeze. It’s perfect for a peaceful walk or a lively outing with friends and family."
+      },
+      {
+        "id": 4,
+        "image": "/insurat/Ambika.png",
+        "title": "Ambika Niketan Temple",
+        "descrip": "Dedicated to Goddess Ashtabhuja Ambika, this riverside temple is one of Surat’s most spiritual places. Its calm setting along the Tapi River attracts devotees and tourists seeking peace. Festivals here are celebrated with great devotion, adding to the temple’s charm."
+      },
+      {
+        "id": 5,
+        "image": "/insurat/Gopi.png",
+        "title": "Gopi Talav",
+        "descrip": "Originally built in the 16th century, Gopi Talav is now a lively recreational hub. With boating, gardens, fountains, and food courts, it’s a fun destination for families. The blend of history and modern development makes it a popular attraction in Surat."
+      },
+      {
+        "id": 6,
+        "image": "/insurat/Dutch.png",
+        "title": "Dutch Garden",
+        "descrip": "Known for its colonial influence, Dutch Garden is a beautifully landscaped park with historical tombs of Dutch and Armenian traders. Its peaceful lawns and serene atmosphere make it an ideal place for relaxation. It’s a perfect mix of heritage and greenery.With Surat car rental services from CozyCabz, you can explore these landmarks without hassle, enjoying comfort and flexibility throughout your journey."
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "city": "Coimbatore",
+    "title": "Car Rental in Coimbatore",
+    "description": "Coimbatore, the Manchester of South India, is known for textiles, temples, malls, and hill stations like Ooty. That’s why CozyCabz Car Rental in Coimbatore with driver offers safe, convenient rides, including luxury rentals and 7 seater car rental in Coimbatore.",
+    "placeDecrip": "With CozyCabz rent a car in Coimbatore, exploring the city’s temples, museums, parks, and shopping hubs becomes safe and convenient. Enjoy every landmark at your own pace with complete comfort.",
+    "spots": [
+      {
+        "id": 1,
+        "image": "/incoimbatore/Marudamalai.png",
+        "title": "Marudamalai Temple",
+        "descrip": "Situated on a scenic hilltop, Marudamalai Temple is dedicated to Lord Murugan and is one of Coimbatore’s most sacred sites. The temple’s peaceful atmosphere and panoramic city views make it a favourite for devotees and tourists alike.Situated on a scenic hilltop, Marudamalai Temple is dedicated to Lord Murugan and is one of Coimbatore’s most sacred sites. The temple’s peaceful atmosphere and panoramic city views make it a favourite for devotees and tourists alike."
+      },
+      {
+        "id": 2,
+        "image": "/incoimbatore/Gass.png",
+        "title": "Gass Forest Museum",
+        "descrip": "Gass Forest Museum offers a fascinating collection of preserved animals, birds, and plants. It’s an educational hotspot where students, researchers, and families can learn about biodiversity."
+      },
+      {
+        "id": 3,
+        "image": "/incoimbatore/VOC.png",
+        "title": "VOC Park & Zoo",
+        "descrip": "A lively recreation spot, VOC Park & Zoo is home to animal enclosures, lush gardens, and children’s play areas—perfect for families spending a relaxed day outdoors."
+      },
+      {
+        "id": 4,
+        "image": "/incoimbatore/Perur.png",
+        "title": "Perur Pateeswarar Temple",
+        "descrip": "Perur Temple, dedicated to Lord Shiva, is a centuries-old shrine renowned for its beautifully carved pillars and spiritual ambiance—one of the most significant pilgrimage spots in Coimbatore."
+      },
+      {
+        "id": 5,
+        "image": "/incoimbatore/Black.png",
+        "title": "Black Thunder Water Park",
+        "descrip": "Located near Mettupalayam, Black Thunder is one of India’s largest water parks with thrilling slides, wave pools, and entertainment zones—a hotspot for youngsters and families."
+      },
+      {
+        "id": 6,
+        "image": "/incoimbatore/Brookefields.png",
+        "title": "Brookefields Mall",
+        "descrip": "Brookefields Mall is Coimbatore’s top shopping and entertainment hub with branded outlets, restaurants, and a multiplex—perfect to unwind after sightseeing.With CozyCabz rent a car in Coimbatore, exploring these places becomes safe, comfortable, and convenient."
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "city": "Vadodara",
+    "title": "Car Rental in Vadodara",
+    "description": "Vadodara, or Baroda, blends royal heritage with modern charm, from Lakshmi Vilas Palace to the Champaner-Pavagadh UNESCO site and industrial hubs. To explore stress-free, CozyCabz offers car rental in Vadodara with driver and flexible packages.",
+    "placeDecrip": "With CozyCabz rent a car in Vadodara, exploring the city’s iconic landmarks becomes simple, comfortable, and stress-free.",
+    "spots": [
+      {
+        "id": 1,
+        "image": "/invadodara/Lakshmi.png",
+        "title": "Lakshmi Vilas Palace",
+        "descrip": "One of the grandest palaces in India, Lakshmi Vilas Palace was built by the Gaekwad dynasty and is said to be four times the size of Buckingham Palace. Its Indo-Saracenic architecture, royal artifacts, and lush gardens make it a cultural treasure."
+      },
+      {
+        "id": 2,
+        "image": "/invadodara/Sayaji.png",
+        "title": "Sayaji Baug (Kamati Baug)",
+        "descrip": "Spread over 100 acres, Sayaji Baug is a green retreat housing a zoo, planetarium, toy train, and gardens—popular for morning walks, picnics, and family leisure."
+      },
+      {
+        "id": 3,
+        "image": "/invadodara/Champaner.png",
+        "title": "Champaner-Pavagadh Archaeological Park",
+        "descrip": "Located just outside Vadodara, this UNESCO World Heritage Site is known for forts, palaces, mosques, and ancient temples—perfect for history lovers and day trips."
+      },
+      {
+        "id": 4,
+        "image": "/EME-temple.jpeg",
+        "title": "EME Temple",
+        "descrip": "Also called Dakshinamurthy Temple, the EME Temple is unique for its modern architecture by the Indian Army. Dedicated to Lord Shiva, it blends spirituality with contemporary design."
+      },
+      {
+        "id": 5,
+        "image": "/invadodara/Baroda.png",
+        "title": "Baroda Museum & Picture Gallery",
+        "descrip": "Established in the 19th century, the Baroda Museum & Picture Gallery showcases art, sculptures, manuscripts, and global artifacts. It provides deep insights into history and culture, making it an enriching stop for visitors. Art lovers and students often find it a must-visit attraction in Vadodara."
+      },
+      {
+        "id": 6,
+        "image": "/invadodara/Sursagar.png",
+        "title": "Sursagar Lake",
+        "descrip": "Situated in the heart of the city, Sursagar Lake is ideal for relaxation and boating. Evenings are magical when the lake is lit up, with a towering Shiva statue adding to its charm. With CozyCabz rent a car in Vadodara, exploring these landmarks becomes simple, comfortable, and stress-free."
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "city": "Rajkot",
+    "title": "Car Rental in Rajkot",
+    "description": "Rajkot, one of Gujarat’s fastest-growing cities, blends culture, business, and modern life. From Kaba Gandhi No Delo to temples, lakes, and markets, it has much to offer. CozyCabz Car Rental in Rajkot provides safe, stress-free local trips, self drive, and group travel.",
+    "placeDecrip": "Explore cultural landmarks, museums, temples, and scenic spots at your own pace.",
+    "spots": [
+      {
+        "id": 1,
+        "image": "/inrajkot/Kaba.png",
+        "title": "Kaba Gandhi No Delo",
+        "descrip": "Mahatma Gandhi’s childhood home, now a museum with photographs, writings, and personal belongings—offering deep insights into India’s freedom movement."
+      },
+      {
+        "id": 2,
+        "image": "/inrajkot/Watson.png",
+        "title": "Watson Museum",
+        "descrip": "Inside Jubilee Garden, this museum showcases sculptures, coins, artifacts, and paintings from different eras—highlighting Rajkot’s cultural heritage."
+      },
+      {
+        "id": 3,
+        "image": "/inrajkot/Rotary.png",
+        "title": "Rotary Dolls Museum",
+        "descrip": "With 1,500+ dolls from 100+ countries, this colorful museum introduces diverse cultures through miniature costumes and displays—fun and educational."
+      },
+      {
+        "id": 4,
+        "image": "/inrajkot/Nyari.png",
+        "title": "Nyari Dam",
+        "descrip": "A calm retreat surrounded by greenery—ideal for picnics, evening outings, and nature photography away from the city buzz."
+      },
+      {
+        "id": 5,
+        "image": "/inrajkot/Prem.png",
+        "title": "Prem Mandir",
+        "descrip": "A beautiful temple known for intricate carvings and peaceful ambiance, drawing devotees and tourists alike."
+      },
+      {
+        "id": 6,
+        "image": "/inrajkot/Aji.png",
+        "title": "Aji Dam & Garden",
+        "descrip": "A popular recreational spot with lush gardens, fountains, and play areas—great for picnics, boating, and evening strolls, especially scenic during monsoon. With CozyCabz rent a car in Rajkot, exploring these attractions is easy, comfortable, and convenient."
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "city": "Kanpur",
+    "title": "Car Rental in Kanpur",
+    "description": "Kanpur, Uttar Pradesh’s industrial and cultural hub, blends ghats, markets, and heritage with the Ganges, JK Temple, and Memorial Church. Exploring can be easy with CozyCabz. We offer car rental in Kanpur with driver and self drive car in Kanpur.",
+    "placeDecrip": "Explore heritage spots, gardens, and entertainment venues without parking or navigation stress.",
+    "spots": [
+      {
+        "id": 1,
+        "image": "/inkanpur/Kanpur.png",
+        "title": "Kanpur Zoological Park (Allen Forest Zoo)",
+        "descrip": "Covering more than 110 hectares, this open-air wildlife sanctuary features big cats, exotic birds, and serene nature walks amid the city."
+      },
+      {
+        "id": 2,
+        "image": "/inkanpur/Nana.png",
+        "title": "Nana Rao Park",
+        "descrip": "A historic city park on Mall Road—great for morning walks, quiet reflection, and enjoying the urban greenery tied to India’s freedom struggle."
+      },
+      {
+        "id": 3,
+        "image": "/inkanpur/Moti.png",
+        "title": "Moti Jheel",
+        "descrip": "An artificial lake with gardens and play areas—perfect for boating and evening strolls along landscaped banks."
+      },
+      {
+        "id": 4,
+        "image": "/inkanpur/JK.png",
+        "title": "JK Temple",
+        "descrip": "Blending ancient and modern styles, JK Temple offers a calm spiritual ambiance and a glimpse into Kanpur’s architectural diversity."
+      },
+      {
+        "id": 5,
+        "image": "/inkanpur/Kanpur-Memorial.png",
+        "title": "Kanpur Memorial Church",
+        "descrip": "Built in Gothic style with elegant stained-glass windows, this serene memorial honors soldiers from the 1857 uprising."
+      },
+      {
+        "id": 6,
+        "image": "/inkanpur/Blue.png",
+        "title": "Blue World Theme Park",
+        "descrip": "A top family destination on the outskirts—rides, water attractions, and themed zones for thrill-seekers and kids alike. With CozyCabz rent a car in Kanpur, exploring these attractions is comfortable and hassle-free."
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "city": "Mysore",
+    "title": "Car Rental in Mysore",
+    "description": "Mysore, the city of palaces and gardens, blends royal heritage, temples, and bustling markets. From Mysore Palace to Chamundi Hills, there’s much to explore. CozyCabz Car Rental in Mysore with driver and self drive options ensures safe, stress-free travel.",
+    "placeDecrip": "Cover palaces, gardens, temples, and markets comfortably at your pace.",
+    "spots": [
+      {
+        "id": 1,
+        "image": "/mysore-palace.jpeg",
+        "title": "Mysore Palace",
+        "descrip": "The heart of Mysore’s identity, Mysore Palace is an Indo-Saracenic architectural masterpiece. Known for its ornate halls, stained glass windows, and royal artifacts, it offers a glimpse into the grandeur of the Wadiyar dynasty. On Sundays and during festivals like Dussehra, the palace glows under thousands of lights, creating a magical spectacle that attracts visitors worldwide."
+      },
+      {
+        "id": 2,
+        "image": "/Chamundi-Hills&Chamundeshwari-Temple.jpeg",
+        "title": "Chamundi Hills & Chamundeshwari Temple",
+        "descrip": "Located 13 km from the city center, Chamundi Hills is a spiritual and scenic landmark. Atop the hill stands the Chamundeshwari Temple, dedicated to Goddess Chamundi. The panoramic views of Mysore city from here are breathtaking, especially at sunset. A giant Nandi statue carved from a single granite block also sits halfway up the hill, adding to the site’s charm."
+      },
+      {
+        "id": 3,
+        "image": "/Brindavan-Gardens&KRS-Dam.jpeg",
+        "title": "Brindavan Gardens & KRS Dam",
+        "descrip": "Just outside Mysore lies the iconic Brindavan Gardens, adjoining the Krishnarajasagara (KRS) Dam. Spread over terraces, the gardens are famous for their musical fountain shows, colorful flower beds, and serene walking paths. Evenings here are especially enchanting, making it one of Mysore’s most visited attractions."
+      },
+      {
+        "id": 4,
+        "image": "/Sri-Chamarajendra-Zoological-Gardens.jpeg",
+        "title": "Sri Chamarajendra Zoological Gardens (Mysore Zoo)",
+        "descrip": "Established in 1892, Mysore Zoo is one of India’s oldest and most well-maintained zoological parks. It houses a wide variety of animals, including big cats, elephants, reptiles, and exotic birds. Families love its spacious enclosures, greenery, and educational exhibits, making it an ideal outing for kids and wildlife enthusiasts."
+      },
+      {
+        "id": 5,
+        "image": "/Jaganmohan-Palace&Art-Gallery.jpeg",
+        "title": "Jaganmohan Palace & Art Gallery",
+        "descrip": "A former royal residence, Jaganmohan Palace now functions as an art gallery displaying one of the largest collections of South Indian traditional art. Visitors can admire works by renowned artists like Raja Ravi Varma, along with rare paintings, artifacts, and antiques that narrate Mysore’s artistic heritage."
+      },
+      {
+        "id": 6,
+        "image": "/Devaraja-Market-mysora.png",
+        "title": "Devaraja Market",
+        "descrip": "A bustling bazaar in the heart of Mysore, Devaraja Market is a sensory delight. Known for fresh produce, spices, flowers, silk sarees, and handicrafts, it’s the perfect place to experience the city’s local life. The colorful stalls and lively atmosphere make it a photographer’s favorite as well as a shopper’s paradise."
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "city": "Nagpur",
+    "title": "Car Rental in Nagpur",
+    "description": "Nagpur, the Orange City of India, blends history, culture, and commerce with Deekshabhoomi, Sitabuldi Fort, Futala Lake, and business hubs.That’s why CozyCabz offers car rental in Nagpur with driver and self drive cars in Nagpur. From daily rentals to luxury car rental.",
+    "placeDecrip": "With CozyCabz rent a car in Nagpur, you can explore the city’s cultural landmarks, spiritual sites, and scenic spots at your own pace, without worrying about traffic or parking.",
+    "spots": [
+      {
+        "id": 1,
+        "image": "/innagpur/Deekshabhoomi.png",
+        "title": "Deekshabhoomi",
+        "descrip": "Deekshabhoomi is a sacred Buddhist monument where Dr. B.R. Ambedkar embraced Buddhism in 1956. The massive stupa here is a symbol of peace, equality, and social justice, drawing visitors and devotees from around the world."
+      },
+      {
+        "id": 2,
+        "image": "/innagpur/Sitabuldi.png",
+        "title": "Sitabuldi Fort",
+        "descrip": "Built in the early 19th century, Sitabuldi Fort is a historic site reflecting Nagpur’s military legacy. Located on twin hills, it offers panoramic views of the city and a glimpse into its storied past."
+      },
+      {
+        "id": 3,
+        "image": "/innagpur/Futala.png",
+        "title": "Futala Lake",
+        "descrip": "Futala Lake is one of Nagpur’s most popular hangout spots, famous for its colorful light fountains, food stalls, and peaceful surroundings—perfect for families, couples, and friends."
+      },
+      {
+        "id": 4,
+        "image": "/innagpur/Maharaj.png",
+        "title": "Maharaj Bagh Zoo",
+        "descrip": "Originally established by the Bhonsle kings, Maharaj Bagh Zoo is home to tigers, lions, leopards, and exotic birds. Its lush greenery offers a refreshing break from the city rush."
+      },
+      {
+        "id": 5,
+        "image": "/innagpur/Ambazari.png",
+        "title": "Ambazari Lake & Garden",
+        "descrip": "Ambazari Lake, the largest in Nagpur, is surrounded by a beautiful garden with walking paths and boating. It’s ideal for morning walks, picnics, and nature outings."
+      },
+      {
+        "id": 6,
+        "image": "/innagpur/Raman.png",
+        "title": "Raman Science Centre",
+        "descrip": "Raman Science Centre is a must-visit for students and science lovers. With interactive exhibits, fun experiments, and a planetarium, it makes learning exciting for families and school groups. With Nagpur car rental services from CozyCabz, exploring these attractions becomes easy, comfortable, and memorable."
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "city": "Bhopal",
+    "title": "Car Rental in Bhopal",
+    "description": "Bhopal, the City of Lakes, blends heritage, culture, and natural beauty with sites like Upper Lake and Taj-ul-Masajid. CozyCabz Car Rental in Bhopal offers safe, stress-free travel through well-maintained cars, professional chauffeurs, self drive rentals, and flexible car hire options.",
+    "placeDecrip": "Enjoy Bhopal’s heritage and natural beauty at your own pace without travel hassles.",
+    "spots": [
+      {
+        "id": 1,
+        "image": "/inbhopal/Upper.png",
+        "title": "Upper Lake & Lower Lake",
+        "descrip": "Known as Bhojtal, Upper Lake is one of the oldest man-made lakes in India—ideal for boating, sunsets, and peaceful surroundings. The adjoining Lower Lake enhances the city’s charm, making the twin lakes a must-visit."
+      },
+      {
+        "id": 2,
+        "image": "/inbhopal/Taj.png",
+        "title": "Taj-ul-Masajid",
+        "descrip": "Among the largest mosques in Asia, admired for Mughal-style domes, tall minarets, and sprawling courtyards—a spiritual and architectural landmark of Bhopal."
+      },
+      {
+        "id": 3,
+        "image": "/inbhopal/Van.png",
+        "title": "Van Vihar National Park",
+        "descrip": "A protected reserve beside Upper Lake, home to tigers, leopards, crocodiles, and exotic birds—animals live in near-natural habitats."
+      },
+      {
+        "id": 4,
+        "image": "/inbhopal/Bharat.png",
+        "title": "Bharat Bhavana",
+        "descrip": "A multi-arts complex celebrating creativity with galleries, libraries, theaters, and workshops—a cultural hotspot in Bhopal."
+      },
+      {
+        "id": 5,
+        "image": "/inbhopal/Shaukat.png",
+        "title": "Shaukat Mahal & Sadar Manzil",
+        "descrip": "These 19th-century architectural wonders showcase a rare mix of Indo-Islamic and European influences. Shaukat Mahal stands out for its Gothic and post-Renaissance style, while Sadar Manzil served as a royal durbar hall. Both are must-see heritage sites for history lovers."
+      },
+      {
+        "id": 6,
+        "image": "/inbhopal/State.png",
+        "title": "State Museum Bhopal",
+        "descrip": "Artifacts, sculptures, coins, and manuscripts reflecting Madhya Pradesh’s rich past—from prehistoric findings to tribal art. With CozyCabz rent a car in Bhopal, exploring the city’s lakes, mosques, and cultural centers becomes simple and comfortable."
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "city": "Patna",
+    "title": "Car Rental in Patna",
+    "description": "Patna, Bihar’s historic capital, blends heritage, spirituality, and modern growth. From Patna Sahib Gurudwara to Golghar and busy markets, the city offers plenty to explore. CozyCabz provides car rental in Patna with driver, self drive car rental in Patna, and luxury options.",
+    "placeDecrip": "Explore religious landmarks, heritage sites, and cultural attractions comfortably.",
+    "spots": [
+      {
+        "id": 1,
+        "image": "/inpatna/Takht.png",
+        "title": "Takht Sri Patna Sahib Gurudwara",
+        "descrip": "One of the holiest Sikh shrines, Patna Sahib is the birthplace of Guru Gobind Singh Ji. Its majestic structure, spiritual atmosphere, and rich history draw pilgrims from across the world, making it a must-visit in Patna."
+      },
+      {
+        "id": 2,
+        "image": "/inpatna/Golghar.png",
+        "title": "Golghar",
+        "descrip": "Built in 1786, Golghar is a massive granary with distinctive beehive-shaped architecture. Visitors can climb its spiral staircase to enjoy panoramic views of Patna city and the Ganges River, especially stunning at sunset."
+      },
+      {
+        "id": 3,
+        "image": "/inpatna/Kumhrar.png",
+        "title": "Kumhrar Park",
+        "descrip": "This archaeological park preserves the remains of the ancient Mauryan Empire. Featuring Ashokan pillars and ruins of monasteries, Kumhrar offers a glimpse into Patna’s glorious past and is a favorite among history enthusiasts"
+      },
+      {
+        "id": 4,
+        "image": "/Sanjay-Gandhi-Biological.jpeg",
+        "title": "Sanjay Gandhi Biological Park (Patna Zoo)",
+        "descrip": "Spread over lush green acres, Patna Zoo is home to tigers, elephants, leopards, and many exotic species. With gardens, boating facilities, and educational exhibits, it’s a perfect outing spot for families and children."
+      },
+      {
+        "id": 5,
+        "image": "/inpatna/Patna.png",
+        "title": "Patna Museum (Jadu Ghar)",
+        "descrip": "Popularly known as Jadu Ghar, Patna Museum displays rare artifacts, sculptures, and coins, including the famous Didarganj Yakshi statue. It’s a treasure trove for art lovers and those interested in Bihar’s heritage."
+      },
+      {
+        "id": 6,
+        "image": "/gandhi-maidan.jpeg",
+        "title": "Gandhi Maidan",
+        "descrip": "A landmark ground associated with India’s freedom movement, Gandhi Maidan is now a hub for political rallies, cultural events, and daily recreation. Its vast open space also makes it ideal for evening walks."
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "city": "Guwahati",
+    "title": "Car Rental in Guwahati",
+    "description": "Guwahati, the gateway to Northeast India, blends temples, wildlife sanctuaries, and modern city life. Yet traffic makes travel hectic. CozyCabz Car Rental in Guwahati with driver ensures safe, reliable journeys with well-maintained cars—covering luxury rentals, affordable rides, airport transfers.",
+    "placeDecrip": "Travel at your own pace—comfortable and stress-free.",
+    "spots": [
+      {
+        "id": 1,
+        "image": "/inguwahati/Kamakhya.png",
+        "title": "Kamakhya Temple",
+        "descrip": "One of the most revered pilgrimage sites in India, Kamakhya Temple is perched atop Nilachal Hill. Known for its spiritual significance and grand architecture, it is a must-visit for devotees and tourists alike."
+      },
+      {
+        "id": 2,
+        "image": "/inguwahati/Umananda.png",
+        "title": "Umananda Island",
+        "descrip": "Set in the middle of the Brahmaputra River, Umananda is a small island temple dedicated to Lord Shiva. Its natural beauty and serene surroundings make it perfect for a peaceful day trip."
+      },
+      {
+        "id": 3,
+        "image": "/inguwahati/Assam.png",
+        "title": "Assam State Zoo & Botanical Garden",
+        "descrip": "A favorite among families, this zoo is home to the one-horned rhinoceros, tigers, and exotic birds. Combined with a botanical garden, it offers both wildlife encounters and greenery to enjoy."
+      },
+      {
+        "id": 4,
+        "image": "/inguwahati/Pobitora.png",
+        "title": "Pobitora Wildlife Sanctuary",
+        "descrip": "Just a short drive from Guwahati, Pobitora is famous for having one of the highest populations of one-horned rhinos. With rental cars in Guwahati, it’s an ideal spot for a day trip into nature."
+      }
+    ]
+  }
+]

@@ -4,10 +4,9 @@ import Link from "next/link";
 import Image from "next/image";
 import "./footer.css";
 import { usePathname, useRouter } from "next/navigation";
-import city from "../../../../src/app/all-city-data/city.json";
+import city from "../../data/citySeoKeywords.json";
 import { GoEye, GoEyeClosed } from "react-icons/go";
 
-/* ── City data — same 23 cities, both tabs ── */
 const CITIES_MAIN = [
   "Mumbai",
   "Delhi",
@@ -36,7 +35,6 @@ const CITIES_MORE = [
   "Guwahati",
 ];
 
-/* slug helper */
 const toSlug = (c) => c.toLowerCase().replace(/\s+/g, "-");
 
 export default function SiteFooter() {
@@ -48,14 +46,17 @@ export default function SiteFooter() {
   const router = useRouter();
 
   const slug = pathname?.split("/").filter(Boolean)[0];
-
-  // ✅ FIXED (direct slug)
   const cityName = slug;
-
   const cityMatch = city.find((item) => item.city.toLowerCase() === cityName);
 
-  /* prefix based on tab (kept as-is, but not used in routing now) */
-  const prefix = showInnova ? "innova-car-rental-in" : "car-rental-in";
+  function cityClickHandler(citie) {
+    if (showInnova) {
+      router.push(`/innovaRental/innova-${toSlug(citie)}`);
+    } else {
+      router.push(`/car-rental-in-${toSlug(citie)}`);
+    }
+  }
+
   const label = showInnova ? "Innova Car Rental in" : "Car Rental in";
 
   const CityList = ({ cities }) => (
@@ -63,10 +64,7 @@ export default function SiteFooter() {
       <div className="city-column">
         {cities.slice(0, Math.ceil(cities.length / 2)).map((c) => (
           <li key={c}>
-            <button
-              onClick={() => router.push(`/${toSlug(c)}`)} // ✅ FIXED
-              className="city-link"
-            >
+            <button onClick={() => cityClickHandler(c)} className="city-link">
               {label} {c}
             </button>
           </li>
@@ -75,11 +73,9 @@ export default function SiteFooter() {
       <div className="city-column">
         {cities.slice(Math.ceil(cities.length / 2)).map((c) => (
           <li key={c}>
-            <Link href={`/${toSlug(c)}`}>
-              {" "}
-              {/* ✅ FIXED */}
+            <button onClick={() => cityClickHandler(c)} className="city-link">
               {label} {c}
-            </Link>
+            </button>
           </li>
         ))}
       </div>
@@ -105,7 +101,6 @@ export default function SiteFooter() {
               experience. We provide safe, reliable, and comfortable
               transportation across 250+ cities.
             </p>
-
             <ul className="footer__contacts">
               <span className="phone-number">
                 <li>
@@ -164,7 +159,6 @@ export default function SiteFooter() {
           {/* ── City Guides ── */}
           <div className="footer__col city-col">
             <h4>City Guides</h4>
-
             <div className="footer__toggle">
               <button
                 onClick={() => setShowInnova(false)}
@@ -181,7 +175,6 @@ export default function SiteFooter() {
             </div>
 
             <CityList cities={CITIES_MAIN} />
-
             {showMoreCities && <CityList cities={CITIES_MORE} />}
 
             <button
@@ -193,7 +186,7 @@ export default function SiteFooter() {
           </div>
         </div>
 
-        {/* ── SEO Keywords */}
+        {/* ── SEO Keywords ── */}
         {cityName && (
           <div className="footer__seo">
             <div className="footer__service-wrapper">
@@ -206,7 +199,6 @@ export default function SiteFooter() {
                 )}
               </span>
             </div>
-
             {showService && (
               <div className="seo-content">
                 {cityMatch?.service?.map((item, i) => (

@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import "./header.css";
 import Image from "next/image";
 import Link from "next/link";
+import ourServiceRoute from "../../data/ourServiceRoutes.json";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -37,61 +38,28 @@ export default function Header() {
             <li>
               <Link href="/">Home</Link>
             </li>
+
             <li className="dropdown">
               <span className="dropbtn">Our Services ▾</span>
               <ul className="dropdown-content">
                 <li>
                   <Link href="/our-services/out-of-station">
-                    Out Of Station
+                    Out of Station
                   </Link>
                 </li>
-                <li>
-                  <Link href="/our-services/corporate-car-rental">
-                    Corporate Car Rental
-                  </Link>
-                </li>
-
-                <li>
-                  <Link href="/our-services/transport-solution">
-                    Employee Transport Solutions
-                  </Link>
-                </li>
-
-                <li>
-                  <Link href="/our-services/hotel-travel-desk">
-                    Hotel Travel Desk
-                  </Link>
-                </li>
-
-                <li>
-                  <Link href="/our-services/conference-delegation-travel">
-                    Conference & Delegation
-                  </Link>
-                </li>
-
-                <li>
-                  <Link href="/our-services/event-transportation">
-                    Event Transportation
-                  </Link>
-                </li>
-
-                <li>
-                  <Link href="/our-services/wedding-car-rental">
-                    Wedding Car Rental
-                  </Link>
-                </li>
-
-                <li>
-                  <Link href="/our-services/travel-partners-program">
-                    Travel Partners Program
-                  </Link>
-                </li>
-
-                <li>
-                  <Link href="/our-services/chauffeur-car-rental">
-                    Chauffeured Car Rental
-                  </Link>
-                </li>
+                {ourServiceRoute.map((item) => (
+                  <li key={item.id}>
+                    <Link href={`/our-services/${item.route}`}>
+                      {item.route
+                        .split("-")
+                        .map(
+                          (char) =>
+                            char.charAt(0).toUpperCase() + char.slice(1),
+                        )
+                        .join(" ")}
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </li>
             {/* Fleet Dropdown */}
@@ -189,53 +157,19 @@ export default function Header() {
                     Out of Station
                   </Link>
                 </li>
-                <li>
-                  <Link href="/our-services/corporate-car-rental">
-                    Corporate Car Rental
-                  </Link>
-                </li>
-
-                <li>
-                  <Link href="/our-services/transport-solution">
-                    Employee Transport Solutions
-                  </Link>
-                </li>
-
-                <li>
-                  <Link href="/our-services/hotel-travel-desk">
-                    Hotel Travel Desk
-                  </Link>
-                </li>
-
-                <li>
-                  <Link href="/our-services/conference-delegation-travel">
-                    Conference & Delegation
-                  </Link>
-                </li>
-
-                <li>
-                  <Link href="/our-services/event-transportation">
-                    Event Transportation
-                  </Link>
-                </li>
-
-                <li>
-                  <Link href="/our-services/wedding-car-rental">
-                    Wedding Car Rental
-                  </Link>
-                </li>
-
-                <li>
-                  <Link href="/our-services/travel-partners-program">
-                    Travel Partners Program
-                  </Link>
-                </li>
-
-                <li>
-                  <Link href="/our-services/chauffeur-car-rental">
-                    Chauffeured Car Rental
-                  </Link>
-                </li>
+                {ourServiceRoute.map((item) => (
+                  <li key={item.id}>
+                    <Link href={`/our-services/${item.route}`}>
+                      {item.route
+                        .split("-")
+                        .map(
+                          (char) =>
+                            char.charAt(0).toUpperCase() + char.slice(1),
+                        )
+                        .join(" ")}
+                    </Link>
+                  </li>
+                ))}
               </ul>
             )}
           </li>

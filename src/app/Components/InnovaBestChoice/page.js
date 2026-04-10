@@ -30,7 +30,7 @@ const InnovaBestChoice = () => {
           </header>
           <div className="innova-why-grid">
             <Feature
-              image="./known.png"
+              image="/known.png"
               title="Well Known for Quality Services"
               text="Recognized across India for our commitment to excellence and premium service standards."
             />
