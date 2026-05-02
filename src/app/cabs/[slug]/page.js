@@ -976,8 +976,8 @@ const Page = () => {
               />
               <CarCard
                 label="Toyota Fortuner"
-                price={crystaPrice}
-                taxes={crystaTaxes}
+                price="By Request"
+                taxes="N/A"
                 perKm={crystaKm}
                 seats={7}
                 imgSrc="/premium-toyota-fortuner.png"
@@ -989,8 +989,8 @@ const Page = () => {
               />
               <CarCard
                 label="Toyota Innova Hycross"
-                price={crystaPrice}
-                taxes={crystaTaxes}
+                price="By Request"
+                taxes="N/A"
                 perKm={crystaKm}
                 seats={7}
                 imgSrc="/premium-toyota-innova-hycros.png"
@@ -1006,7 +1006,7 @@ const Page = () => {
 
         {/* Sticky map */}
         <div className="cbp-map-col">
-          <div className="cbp-map-card">
+          <div className="cbp-map-card ol">
             <MemoMap
               fromCoords={fromCoords}
               toCoords={toCoords}
