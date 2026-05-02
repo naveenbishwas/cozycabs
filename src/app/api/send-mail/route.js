@@ -1,12 +1,23 @@
 import nodemailer from "nodemailer";
+import { adminDb } from "@/app/lib/firebaseAdmin";
 
-// Helper — ony for defined values
+// ✅ Helper function (IMPORTANT)
 const row = (label, value) => (value ? `<p><b>${label}:</b> ${value}</p>` : "");
 
 export async function POST(req) {
   try {
+    // ✅ Get data from frontend
     const body = await req.json();
 
+    // 🔐 Safety check
+    if (!body.email || !body.name) {
+      return Response.json({
+        success: false,
+        error: "Missing required fields",
+      });
+    }
+
+    // 📧 Email transporter
     const transporter = nodemailer.createTransport({
       host: process.env.MAIL_HOST,
       port: Number(process.env.MAIL_PORT),
@@ -17,23 +28,32 @@ export async function POST(req) {
       },
     });
 
-    // This only for slug route
+    // 🚗 Cab details section
     const cabSection = body.route
       ? `
         <h3>🚗 Cab Details</h3>
         ${row("Route", body.route)}
-        ${row("Cab", body.cabName && body.type ? `${body.cabName} (${body.type})` : body.cabName)}
-        ${row("Price", body.price ? `₹${Number(body.price).toLocaleString("en-IN")}` : null)}
+        ${row(
+          "Cab",
+          body.cabName && body.type
+            ? `${body.cabName} (${body.type})`
+            : body.cabName,
+        )}
+        ${row(
+          "Price",
+          body.price ? `₹${Number(body.price).toLocaleString("en-IN")}` : null,
+        )}
         <hr/>
       `
       : "";
 
-    // Phone number
     const phone = body.phone
       ? `${body.phoneCode || "+91"} ${body.phone}`
       : null;
 
-    // 1️⃣ Client confirmation email
+    // ===========================
+    // ✅ 1. ADMIN EMAIL
+    // ===========================
     await transporter.sendMail({
       from: `"CozyCabz" <${process.env.MAIL_USER}>`,
       to: process.env.MAIL_TO,
@@ -41,7 +61,7 @@ export async function POST(req) {
         ? `New Booking: ${body.route} — ${body.cabName}`
         : "New CozyCabz Enquiry",
       html: `
-        <h2>New Enquiry</h2>
+        <h2>New Booking</h2>
         ${cabSection}
         <h3>👤 Customer Details</h3>
         ${row("Name", body.name)}
@@ -49,45 +69,91 @@ export async function POST(req) {
         ${row("Phone", phone)}
         ${row("Date", body.date)}
         ${row("Travellers", body.travellers)}
-        ${row("City", body.city)}
-        ${row("Service Type", body.serviceType)}
-        ${row("Vehicle Type", body.vehicleType)}
         ${row("Message", body.message)}
       `,
     });
 
-    // 2️⃣ User confirmation email
+    // ===========================
+    // ✅ 2. USER EMAIL
+    // ===========================
     await transporter.sendMail({
       from: `"CozyCabz" <${process.env.MAIL_USER}>`,
       to: body.email,
-      subject: "Thank You! Your CozyCabz Enquiry Was Received",
+      subject: "Booking Confirmed 🚗 CozyCabz",
       html: `
         <h2>Hello ${body.name},</h2>
-        <p>Thank you for choosing CozyCabz!</p>
-        <p>We have received your enquiry and will contact you shortly.</p>
+        <p>Your booking request has been received successfully.</p>
 
         ${cabSection}
 
-        <h3>📋 Your Submitted Details</h3>
+        <h3>📋 Your Details</h3>
         ${row("Name", body.name)}
         ${row("Email", body.email)}
         ${row("Phone", phone)}
         ${row("Date", body.date)}
-        ${row("Travellers", body.travellers)}
-        ${row("City", body.city)}
-        ${row("Service Type", body.serviceType)}
-        ${row("Vehicle Type", body.vehicleType)}
-        ${row("Message", body.message)}
 
         <br/>
-        <p>We appreciate your interest. Our team will reach out as soon as possible.</p>
+        <p>Our team will contact you shortly.</p>
         <p><b>— Team CozyCabz</b></p>
       `,
     });
 
+    // ===========================
+    // 🔥 3. SAVE TO FIRESTORE
+    // ===========================
+    const safe = (val) =>
+      val !== undefined && val !== null && val !== "" ? val : null;
+
+    await adminDb.collection("bookings").add({
+      userId: safe(body.userId),
+
+      // user
+      name: body.name,
+      email: body.email,
+      phone: safe(body.phone),
+
+      // route
+      pickup: safe(body.pickup),
+      drop: safe(body.drop),
+      route: safe(body.route),
+
+      // coords
+      pickupCoords: {
+        lat: safe(body.pickupLat),
+        lng: safe(body.pickupLng),
+      },
+      dropCoords: {
+        lat: safe(body.dropLat),
+        lng: safe(body.dropLng),
+      },
+
+      // map data — routeData null ho toh null save hoga, crash nahi
+      distanceKm: safe(body.distanceKm),
+      durationMin: safe(body.durationMin),
+      routeGeoJSON: safe(body.routeGeoJSON)
+        ? JSON.stringify(body.routeGeoJSON)
+        : null,
+
+      // cab
+      carType: safe(body.cabName),
+      price: safe(body.price),
+
+      // booking
+      date: safe(body.date),
+      travellers: safe(body.travellers),
+      message: safe(body.message),
+      status: "pending",
+
+      createdAt: new Date(),
+    });
+
+    // ===========================
     return Response.json({ success: true });
   } catch (error) {
-    console.log("SMTP ERROR:", error);
-    return Response.json({ success: false, error: error.message });
+    console.log("ERROR:", error);
+    return Response.json({
+      success: false,
+      error: error.message,
+    });
   }
 }

@@ -3,19 +3,14 @@
 import React, { useState, useRef, useEffect } from "react";
 import { IoCarSport } from "react-icons/io5";
 import { useRouter } from "next/navigation";
+import { fetchToSuggestions, fetchFromSuggestions } from "@/app/lib/mapbox";
 import "./allbookingcars.css";
 import carListings from "../../data/carListings.json";
 const TABS = [
-  { id: 0, name: "Dzire", key: "dzire", imgIdx: 2 }, // image[2]
-  { id: 1, name: "Ertiga", key: "ertiga", imgIdx: 0 }, // image[0]
-  { id: 2, name: "Crysta", key: "crysta", imgIdx: 1 }, // image[1]
+  { id: 0, name: "Dzire", key: "dzire", imgIdx: 2 },
+  { id: 1, name: "Ertiga", key: "ertiga", imgIdx: 0 },
+  { id: 2, name: "Crysta", key: "crysta", imgIdx: 1 },
 ];
-
-// const TABS = [
-//   { id: 0, name: "Ertiga", key: "ertiga" },
-//   { id: 1, name: "Crysta", key: "crysta" },
-//   { id: 2, name: "Dzire", key: "dzire" },
-// ];
 
 // Fixed tab images (fallback if JSON image array missing)
 const TAB_FALLBACK_IMAGES = ["/Ertiga.webp", "/crysta-1.png", "/maruti.avif"];
@@ -39,6 +34,38 @@ const AllBookingCars = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  const handleViewCab = async (destination) => {
+    try {
+      const toCity = destination.toLowerCase().split("to")[1]?.trim();
+
+      if (!toCity) {
+        alert("Invalid destination");
+        return;
+      }
+
+      // Delhi fixed
+      const fromRes = await fetchFromSuggestions("Delhi");
+      const toRes = await fetchToSuggestions(toCity);
+
+      const from = fromRes[0];
+      const to = toRes[0];
+
+      if (!from || !to) {
+        alert("Location not found");
+        return;
+      }
+
+      const slug = destination.toLowerCase().replace(/\s+/g, "-");
+
+      router.push(
+        `/cabs/${slug}?from=${encodeURIComponent(from.name)}&to=${encodeURIComponent(to.name)}&fromCoords=${from.coords[0]},${from.coords[1]}&toCoords=${to.coords[0]},${to.coords[1]}`,
+      );
+    } catch (err) {
+      console.log(err);
+      alert("Something went wrong");
+    }
+  };
+
   // Get image for a car entry at current tab index
   const getTabImage = (car) => {
     const imgs = car.image;
@@ -49,19 +76,16 @@ const AllBookingCars = () => {
 
   // Get price data for active tab
   const getPriceData = (car) => {
-    const data = car[activeTab.key]; // car.ertiga / car.crysta / car.dzire
+    const data = car[activeTab.key];
     if (!data) return { finalPrice: "N/A", perKm: "N/A", seat: 4 };
     return data;
   };
-
-  // Get original (strikethrough) price — 22% higher
   const getOriginal = (finalPrice) => {
     const num = parseInt(String(finalPrice).replace(/,/g, ""), 10);
     if (isNaN(num)) return null;
     return Math.round((num * 1.22) / 100) * 100;
   };
 
-  // All listings that have this tab's key defined
   const listings = carListings.filter((car) => car[activeTab.key]);
 
   return (
@@ -153,9 +177,9 @@ const AllBookingCars = () => {
           </div>
         </div>
       </div>
-      {/* ══ END SELECTOR BAR ══ */}
+      {/* END SELECTOR BAR */}
 
-      {/* ══ CAR LISTINGS ══ */}
+      {/* CAR LISTINGS */}
       <div className="vsel-listings">
         <div className="vsel-listings__inner">
           {/* Column headers */}
@@ -221,13 +245,7 @@ const AllBookingCars = () => {
                   </div>
                   <button
                     className="vsel-row__btn"
-                    onClick={() => {
-                      const slug = car.destination
-                        .trim()
-                        .toLowerCase()
-                        .replace(/\s+/g, "-");
-                      router.push(`/cabs/${slug}`);
-                    }}
+                    onClick={() => handleViewCab(car.destination)}
                   >
                     VIEW Cab
                   </button>

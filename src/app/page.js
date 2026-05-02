@@ -92,7 +92,7 @@ export default function Home() {
               });
           }
         },
-        { threshold: 0.35 }
+        { threshold: 0.35 },
       );
 
       io.observe(rootRef.current);
@@ -190,55 +190,8 @@ export default function Home() {
       </svg>
     );
   }
-
-  function TrustClockIcon() {
-    return (
-      <svg width="36" height="36" viewBox="0 0 24 24" fill="none">
-        <circle cx="12" cy="12" r="9" stroke="#fff" strokeWidth="2" />
-        <path
-          d="M12 7v5l3 2"
-          stroke="#fff"
-          strokeWidth="2"
-          strokeLinecap="round"
-        />
-      </svg>
-    );
-  }
-
-  function TrustDriverIcon() {
-    return (
-      <svg width="36" height="36" viewBox="0 0 24 24" fill="none">
-        <circle cx="12" cy="7" r="3" stroke="#fff" strokeWidth="2" />
-        <path d="M6 19a6 6 0 0112 0" stroke="#fff" strokeWidth="2" />
-      </svg>
-    );
-  }
-
-  function TrustFleetIcon() {
-    return (
-      <svg width="36" height="36" viewBox="0 0 24 24" fill="none">
-        <rect
-          x="3"
-          y="8"
-          width="18"
-          height="7"
-          rx="2"
-          stroke="#fff"
-          strokeWidth="2"
-        />
-        <path d="M6 8l2-3h8l2 3" stroke="#fff" strokeWidth="2" />
-        <circle cx="7" cy="17" r="2" fill="#fff" />
-        <circle cx="17" cy="17" r="2" fill="#fff" />
-      </svg>
-    );
-  }
-
   // About counters ref
   const aboutCountersRef = useAboutCountersObserver();
-
-  /* ---------------------------------------------------------------- */
-  /* Static content                                                   */
-  /* ---------------------------------------------------------------- */
   const services = [
     {
       title: "Ceramic Coating And Protection",
@@ -342,7 +295,8 @@ export default function Home() {
 
   const goPrimaryPrev = () =>
     setPrimaryIndex(
-      (i) => (i - 1 + TESTIMONIALS_PRIMARY.length) % TESTIMONIALS_PRIMARY.length
+      (i) =>
+        (i - 1 + TESTIMONIALS_PRIMARY.length) % TESTIMONIALS_PRIMARY.length,
     );
   const goPrimaryNext = () =>
     setPrimaryIndex((i) => (i + 1) % TESTIMONIALS_PRIMARY.length);
@@ -503,156 +457,6 @@ export default function Home() {
     </svg>
   );
 
-  function IconStar() {
-    return (
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M12 3l2.9 5.9 6.5.9-4.7 4.6 1.1 6.4L12 17.9 6.2 20.8l1.1-6.4L2.6 9.8l6.5-.9L12 3z" />
-      </svg>
-    );
-  }
-  function IconCheck() {
-    return (
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path
-          d="M20 6L9 17l-5-5"
-          strokeWidth="2"
-          fill="none"
-          stroke="currentColor"
-        />
-        <circle
-          cx="12"
-          cy="12"
-          r="11"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-        />
-      </svg>
-    );
-  }
-  function IconUsers() {
-    return (
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <circle cx="12" cy="8" r="3" />
-        <path d="M4 20c0-3.3 3.6-5 8-5s8 1.7 8 5" />
-      </svg>
-    );
-  }
-  function IconShield() {
-    return (
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M12 2l7 3v6c0 5-3.5 8.5-7 9-3.5-.5-7-4-7-9V5l7-3z" />
-      </svg>
-    );
-  }
-  function IconPin() {
-    return (
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M12 2a7 7 0 017 7c0 5.1-7 13-7 13S5 14.1 5 9a7 7 0 017-7z" />
-        <circle cx="12" cy="9" r="2.5" fill="#fff" />
-      </svg>
-    );
-  }
-  function IconCard() {
-    return (
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <rect x="2" y="5" width="20" height="14" rx="2" />
-        <rect x="4" y="9" width="8" height="2" fill="#fff" />
-      </svg>
-    );
-  }
-
-  const [altIndex, setAltIndex] = useState(0);
-  const activeAlt = TESTIMONIALS_ALT[altIndex];
-
-  const goAltPrev = () =>
-    setAltIndex(
-      (x) => (x - 1 + TESTIMONIALS_ALT.length) % TESTIMONIALS_ALT.length
-    );
-  const goAltNext = () => setAltIndex((x) => (x + 1) % TESTIMONIALS_ALT.length);
-
-  /* ---------------------------------------------------------------- */
-  /* RENDER                                                           */
-  /* ---------------------------------------------------------------- */
-
-  /* ---------- tiny inline icons (SVG) ---------- */
-
-  function handleSubmit(e) {
-    e.preventDefault();
-    const data = Object.fromEntries(new FormData(e.currentTarget).entries());
-    console.log("Contact form:", data);
-    alert("Thanks! Your message was captured in the console.");
-  }
-
-  function UserIcon() {
-    return (
-      <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
-        <path
-          d="M12 12a5 5 0 1 0-5-5 5 5 0 0 0 5 5Zm0 2c-5 0-9 2.5-9 5.5V22h18v-2.5C21 16.5 17 14 12 14Z"
-          fill="currentColor"
-        />
-      </svg>
-    );
-  }
-  function MailIcon() {
-    return (
-      <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
-        <path
-          d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5L4 8V6l8 5 8-5Z"
-          fill="currentColor"
-        />
-      </svg>
-    );
-  }
-
-  function DocIcon() {
-    return (
-      <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
-        <path
-          d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Zm0 0v6h6"
-          fill="currentColor"
-        />
-      </svg>
-    );
-  }
-  function MsgIcon() {
-    return (
-      <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M4 4h16v12H7l-3 3V4Z" fill="currentColor" />
-      </svg>
-    );
-  }
-  function FbIcon() {
-    return (
-      <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
-        <path
-          d="M13 9h3V6h-3c-1.7 0-3 1.3-3 3v2H8v3h2v7h3v-7h3l1-3h-4V9c0-.6.4-1 1-1Z"
-          fill="#fff"
-        />
-      </svg>
-    );
-  }
-  function TwIcon() {
-    return (
-      <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
-        <path
-          d="M21 5.5c-.7.3-1.5.6-2.3.7.8-.5 1.4-1.2 1.7-2.1-.8.5-1.7.9-2.6 1.1A3.7 3.7 0 0 0 12 7.9a10.5 10.5 0 0 1-7.6-3.9A3.7 3.7 0 0 0 5 10c-.6 0-1.2-.2-1.7-.5v.1c0 1.8 1.3 3.3 3 3.7-.3.1-.7.2-1.1.2-.3 0-.5 0-.8-.1.5 1.6 2 2.8 3.8 2.8A7.4 7.4 0 0 1 3 18.6 10.4 10.4 0 0 0 8.7 20c6.6 0 10.3-5.5 10.3-10.3v-.5c.7-.5 1.3-1.1 1.8-1.7Z"
-          fill="#fff"
-        />
-      </svg>
-    );
-  }
-  function InIcon() {
-    return (
-      <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
-        <path
-          d="M6.94 6.94A2.06 2.06 0 1 0 2.8 6.94a2.06 2.06 0 0 0 4.12 0ZM3 9h4v12H3V9Zm7 0h3.8v1.65h.05A4.16 4.16 0 0 1 18 8.73c4.4 0 5.2 2.9 5.2 6.6V21H19v-4.8c0-1.1 0-2.6-1.6-2.6s-1.9 1.2-1.9 2.5V21H10V9Z"
-          fill="#fff"
-        />
-      </svg>
-    );
-  }
-
   function Feature({ image, title, text }) {
     return (
       <div className="why-card">
@@ -764,14 +568,11 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    // Load YouTube API script
     const tag = document.createElement("script");
     tag.src = "https://www.youtube.com/iframe_api";
     document.body.appendChild(tag);
 
     let player;
-
-    // Quality forcing function
     const forceQuality = (playerInstance) => {
       const qualities = ["highres", "hd2160", "hd1440", "hd1080", "hd720"];
       let i = 0;
@@ -836,7 +637,7 @@ export default function Home() {
           <p className="welcome-text">Welcome To Best Cabs</p>
           <h1>Book Reliable & Affordable Cabs in 200+ Cities</h1>
 
-          <Link href="#book-your-car">
+          <Link href="/our-services/out-of-station">
             <button className="hero-btn">Book Now</button>
           </Link>
 

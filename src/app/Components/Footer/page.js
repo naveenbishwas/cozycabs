@@ -46,7 +46,10 @@ export default function SiteFooter() {
   const router = useRouter();
 
   const slug = pathname?.split("-").pop(); // ahmedabad
+<<<<<<< HEAD
 
+=======
+>>>>>>> shubham
   const cityName = slug?.charAt(0).toUpperCase() + slug?.slice(1);
 
   const cityMatch = city.find(
@@ -57,11 +60,11 @@ export default function SiteFooter() {
     if (showInnova) {
       router.push(`/innovaRental/innova-${toSlug(citie)}`);
     } else {
-      router.push(`/car-rental-in-${toSlug(citie)}`);
+      router.push(`/cab-service-in-${toSlug(citie)}`);
     }
   }
 
-  const label = showInnova ? "Innova Car Rental in" : "Car Rental in";
+  const label = showInnova ? "Innova Cab Service in" : " Cab Service in";
 
   const CityList = ({ cities }) => (
     <div className="city-lists">
@@ -218,7 +221,10 @@ export default function SiteFooter() {
         <hr className="footer__rule" />
 
         <div className="footer__bottom">
-          <p className="copyright">© 2024 CozyCabz. All rights reserved.</p>
+          <p className="copyright">
+            © 2024 <Link href="/Admin-Dashboard">CozyCabz</Link>. All rights
+            reserved.
+          </p>
           <ul className="footer__legal">
             {[
               ["Privacy Policy", "/privacy-policy"],
@@ -236,7 +242,8 @@ export default function SiteFooter() {
         </div>
 
         <p id="in-mob" className="copyright">
-          © 2024 CozyCabz. All rights reserved.
+          © 2024 <Link href="/Admin-Dashboard">CozyCabz</Link>. All rights
+          reserved.
         </p>
       </div>
     </footer>

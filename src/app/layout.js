@@ -81,6 +81,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Whatsapp from "./Components/Whatsapp/page";
 import Script from "next/script";
+import "mapbox-gl/dist/mapbox-gl.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -147,11 +148,11 @@ export default function RootLayout({ children }) {
   `}
         </Script>
 
-          <Script
-                  id="meta-pixel"
-                  strategy="afterInteractive"
-                  dangerouslySetInnerHTML={{
-                    __html: `
+        <Script
+          id="meta-pixel"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
                       !function(f,b,e,v,n,t,s)
                       {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
                       n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -163,8 +164,8 @@ export default function RootLayout({ children }) {
                       fbq('init', '717377001455206');
                       fbq('track', 'PageView');
                     `,
-                  }}
-                />
+          }}
+        />
 
         <title>Car Rental Service in India | CozyCabz</title>
         <meta
