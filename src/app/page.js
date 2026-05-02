@@ -650,7 +650,7 @@ export default function Home() {
           <p className="welcome-text">Welcome To Best Cabs</p>
           <h1>Book Reliable & Affordable Cabs in 200+ Cities</h1>
 
-          <Link href="#book-your-car" className="hero-btn-df">
+          <Link href="/our-services/out-of-station" className="hero-btn-df">
             <button className="hero-btn">Book Now</button>
           </Link>
 
