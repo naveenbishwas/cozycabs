@@ -337,7 +337,41 @@
 .hamburger.active span:nth-child(3) {
   transform: rotate(-45deg) translateY(-8px);
 }
-
+.header-cta {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.user-profile {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+.user-acc {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  height: 40px;
+  margin-top: 8px;
+}
+.acc-wrraper {
+  display: none;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+.user-acc span {
+  font-size: 12px;
+  font-weight: 500;
+}
+.user-acc:hover {
+  color: var(--brandColor);
+}
 /* --- Drawer --- */
 .drawer {
   position: fixed;
@@ -369,6 +403,9 @@
   font-weight: 600;
   text-decoration: none;
 }
+.drawer a :nth-child(1) {
+  display: none;
+}
 
 .drawer a:hover {
   color: var(--brandColor);
@@ -379,15 +416,33 @@
   .nav-list {
     display: none; /* hide desktop nav */
   }
+  .header-cta div {
+    display: none;
+  }
+  .acc-wrraper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+  }
+  .user-acc {
+    margin-top: 5px;
+  }
 
   .hamburger {
     display: flex; /* show hamburger */
   }
 
   .header-cta {
-    display: unset;
+    display: flex;
+    align-items: center;
+    gap: 10px;
   }
-
+  .user-acc span {
+    font-size: 9px;
+    font-weight: 900 !important;
+    /* display: none; */
+  }
   .contact-btn span {
     font-size: 12px;
   }
@@ -603,3 +658,90 @@
   cursor: pointer;
   line-height: 1.5;
 } */
+@media (max-width: 768px) {
+  .contact-btn {
+    display: none;
+  }
+}
+/* ── Account Dropdown ── */
+.acc-dropdown-wrap {
+  position: relative;
+}
+
+.acc-dropdown-menu {
+  position: absolute;
+  top: 50px !important;
+  right: 0;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  min-width: 180px;
+  padding: 8px 0;
+  z-index: 9999;
+  display: none;
+}
+
+.acc-dropdown-wrap:hover .acc-dropdown-menu {
+  display: block;
+}
+
+.acc-dropdown-menu a,
+.acc-dropdown-menu button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 11px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #111;
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.15s;
+}
+
+.acc-dropdown-menu a:hover,
+.acc-dropdown-menu button:hover {
+  background: #f5f5f5;
+  color: #d80117;
+}
+.activepath {
+  background: #f5f5f5 !important;
+  color: #050505c0 !important;
+  font-weight: 600;
+}
+.user-profile {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.acc-dropdown-menu .acc-dd-divider {
+  height: 1px;
+  background: #f0f0f0;
+  margin: 4px 0;
+}
+
+.acc-dropdown-menu .acc-dd-logout {
+  color: #d80117;
+}
+
+.drawer button :nth-child(1) {
+  display: none;
+}
+
+.acc-dropdown-menu .acc-dd-user {
+  padding: 10px 16px 8px;
+  font-size: 12px;
+  color: #888;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: default;
+  border-bottom: 1px solid #f0f0f0;
+  margin-bottom: 4px;
+}

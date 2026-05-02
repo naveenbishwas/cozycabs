@@ -91,19 +91,19 @@ const InnovaRental = () => {
     <div className="innova-page">
       <head>
         <title>
-          {`Innova Car Rental in ${city} | CozyCabz with Driver & Self Drive`}
+          {`Innova Cab Service in ${city} | CozyCabz with Driver & Self Drive`}
         </title>
         <meta
           name="description"
-          content={`Book Innova on rent in ${city} with CozyCabz. Well-maintained Crysta & Hycross models, verified drivers, and 24×7 airport pickup/drop service.`}
+          content={`Book Innova Cab Service in ${city} with CozyCabz. Well-maintained Crysta & Hycross models, verified drivers, and 24×7 airport pickup/drop service.`}
         />
         <meta
           property="og:title"
-          content={`Innova Car Rental in ${city} | CozyCabz with Driver & Self Drive`}
+          content={`Innova Cab Service in ${city} | CozyCabz with Driver & Self Drive`}
         />
         <meta
           property="og:description"
-          content={`Book Innova on rent in ${city} with CozyCabz. Well-maintained Crysta & Hycross models, verified drivers, and 24×7 airport pickup/drop service.`}
+          content={`Book Innova Cab Service in ${city} with CozyCabz. Well-maintained Crysta & Hycross models, verified drivers, and 24×7 airport pickup/drop service.`}
         />
         <meta property="og:image" content="/innova-1.png" />
         <meta property="og:type" content="website" />
@@ -115,22 +115,15 @@ const InnovaRental = () => {
 
       <Header />
 
-      {/* Hero Section */}
       <InnovaBanner city={city} />
-
-      {/* Number Counters */}
       <NumberCounter />
-
-      {/* Gallery Section */}
       <InnovaGallerySection city={city} />
-
-      {/* Specs */}
       <InnovaSpecsCard />
 
       {/* Content Section */}
       <section className="innova-content-section">
         <h2 className="innova-description-heading">
-          Innova Car Rental in <span>{city}</span>
+          Innova Cab Service in <span>{city}</span>
         </h2>
         <p>
           Experience premium comfort and reliability with India’s most trusted

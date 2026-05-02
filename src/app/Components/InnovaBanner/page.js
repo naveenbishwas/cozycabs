@@ -95,7 +95,7 @@ export default function InnovaHeroSection({ city }) {
     <section className="innova-hero">
       <div className="innova-overlay">
         <div className="innova-content">
-          <h1 className="innova-title">Innova Car Rental in {city}</h1>
+          <h1 className="innova-title">Innova Cab Service in {city}</h1>
           <p className="innova-subtitle">
             Experience premium comfort and reliability with India's most trusted
             MPV. Perfect for family trips, corporate travel, and special

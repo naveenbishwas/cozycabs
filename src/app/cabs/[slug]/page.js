@@ -1,57 +1,343 @@
 "use client";
-import React, { useEffect, useState } from "react";
-import { useParams, useRouter, useSearchParams } from "next/navigation";
+import React, { useState, useCallback, useRef, memo, useEffect } from "react";
+import { useSearchParams, useRouter } from "next/navigation";
+import MapboxRoute from "@/app/our-services/out-of-station/MapBoxRoute";
 import Header from "@/app/Components/Header/page";
-import carListings from "../../data/carListings.json";
 import "./cabPage.css";
 import { FaRegClock, FaStar } from "react-icons/fa6";
 import { GiPathDistance } from "react-icons/gi";
 import {
   MdAirlineSeatReclineExtra,
   MdLuggage,
-  MdVerified,
   MdCall,
   MdOutlineLoop,
+  MdCheckCircle,
+  MdVerified,
+  MdExpandMore,
+  MdClose,
 } from "react-icons/md";
-import { FaCar, FaCartPlus, FaWindowMaximize } from "react-icons/fa";
-import { FiZap } from "react-icons/fi";
+import { FaCar, FaWindowMaximize, FaMapMarkerAlt } from "react-icons/fa";
+import { FiArrowRight, FiZap, FiChevronDown } from "react-icons/fi";
 import { CiCreditCard1 } from "react-icons/ci";
+import { IoShieldCheckmark } from "react-icons/io5";
+import { auth } from "@/app/lib/firebase";
+import { getDistance } from "@/app/lib/mapbox";
 import SiteFooter from "@/app/Components/Footer/page";
-import Link from "next/link";
 
-const PREMIUM_IMAGES = {
-  "Toyota Fortuner": "/premium-toyota-fortuner.png",
-  "Toyota Innova Hycross": "/premium-toyota-innova-hycros.png",
-  "Toyota Innova Crysta": "/crysta-1.png",
+/*  Helpers */
+function formatDuration(minutes) {
+  if (!minutes || isNaN(minutes)) return "N/A";
+  const hrs = Math.floor(minutes / 60);
+  const mins = Math.round(minutes % 60);
+  if (hrs === 0) return `${mins} min`;
+  if (mins === 0) return `${hrs} hr`;
+  return `${hrs} hr ${mins} min`;
+}
+
+/*  Inclusions/Exclusions config */
+const INCLUSIONS_MAP = {
+  ECONOMY: {
+    included: [
+      "Driver Allowance",
+      "Base Fare and Fuel Charges",
+      "State Tax & Toll",
+      "Only One Pickup and Drop",
+      "GST (5%)",
+      "1-2 Bag",
+      "AC",
+    ],
+    excluded: [
+      "Beyond package km charged at ₹11/km",
+      "Airport Entry / Parking",
+    ],
+  },
+  COMFORT: {
+    included: [
+      "Driver Allowance",
+      "State Tax & Toll",
+      "Base Fare and Fuel Charges",
+      "Only One Pickup and Drop",
+      "GST (5%)",
+      "1-2 Bags",
+      "AC",
+    ],
+    excluded: [
+      "Beyond package km charged at ₹14/km",
+      "Airport Entry / Parking",
+    ],
+  },
+  PREMIUM: {
+    included: [
+      "Driver Allowance",
+      "Base Fare and Fuel Charges",
+      "State Tax & Toll",
+      "Only One Pickup and Drop",
+      "GST (5%)",
+      "2-3 Bags",
+      "AC + Extra Legroom",
+    ],
+    excluded: [
+      "Beyond package km charged at ₹18/km",
+      "Airport Entry / Parking",
+      "Hill station surcharge (if applicable)",
+    ],
+  },
 };
-const getPremiumImage = (title) => PREMIUM_IMAGES[title] || "/crysta-1.png";
 
-const Page = () => {
-  const { slug } = useParams();
-  const searchParams = useSearchParams();
-  const router = useRouter();
-  const token = searchParams.get("q");
+/* SVG Showcase Items  */
+const ShowcaseSVGs = [
+  {
+    id: "driver",
+    label: "Driver",
+    svg: (
+      <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle
+          cx="28"
+          cy="18"
+          r="9"
+          stroke="#d80117"
+          strokeWidth="2"
+          fill="none"
+        />
+        <path
+          d="M10 46c0-9.94 8.06-18 18-18s18 8.06 18 18"
+          stroke="#d80117"
+          strokeWidth="2"
+          strokeLinecap="round"
+          fill="none"
+        />
+        <circle cx="28" cy="18" r="4" fill="#ffd5d9" />
+      </svg>
+    ),
+  },
+  {
+    id: "ac",
+    label: "Full AC",
+    svg: (
+      <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect
+          x="10"
+          y="16"
+          width="36"
+          height="22"
+          rx="4"
+          stroke="#d80117"
+          strokeWidth="2"
+          fill="none"
+        />
+        <rect x="14" y="20" width="28" height="14" rx="2" fill="#ffd5d9" />
+        <path
+          d="M18 36v4M28 36v4M38 36v4"
+          stroke="#d80117"
+          strokeWidth="1.8"
+          strokeLinecap="round"
+        />
+        <path
+          d="M22 27h12"
+          stroke="#d80117"
+          strokeWidth="1.8"
+          strokeLinecap="round"
+        />
+        <path
+          d="M20 30h16"
+          stroke="#d80117"
+          strokeWidth="1.4"
+          strokeLinecap="round"
+        />
+      </svg>
+    ),
+  },
+  {
+    id: "luggage",
+    label: "Boot Space",
+    svg: (
+      <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect
+          x="13"
+          y="20"
+          width="30"
+          height="22"
+          rx="3"
+          stroke="#d80117"
+          strokeWidth="2"
+          fill="none"
+        />
+        <rect
+          x="20"
+          y="14"
+          width="16"
+          height="8"
+          rx="2"
+          stroke="#d80117"
+          strokeWidth="2"
+          fill="none"
+        />
+        <rect x="14" y="21" width="28" height="8" rx="1" fill="#ffd5d9" />
+        <path
+          d="M28 32v4"
+          stroke="#d80117"
+          strokeWidth="1.8"
+          strokeLinecap="round"
+        />
+      </svg>
+    ),
+  },
+  {
+    id: "toll",
+    label: "Toll Incl.",
+    svg: (
+      <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle
+          cx="28"
+          cy="28"
+          r="16"
+          stroke="#d80117"
+          strokeWidth="2"
+          fill="none"
+        />
+        <circle cx="28" cy="28" r="10" fill="#ffd5d9" />
+        <path
+          d="M24 28l3 3 5-5"
+          stroke="#d80117"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <path
+          d="M28 12v4M28 40v4M12 28h4M40 28h4"
+          stroke="#d80117"
+          strokeWidth="1.4"
+          strokeLinecap="round"
+        />
+      </svg>
+    ),
+  },
+];
 
-  // Modal state
-  const [modalOpen, setModalOpen] = useState(false);
-  const [selectedCab, setSelectedCab] = useState(null);
+/*  Left Panel Showcase  */
+const LeftShowcase = ({ expanded }) => (
+  <div className={`cc__showcase ${expanded ? "cc__showcase--open" : ""}`}>
+    <div className="cc__showcase-fade" />
+    <div className="cc__showcase-grid">
+      {ShowcaseSVGs.map((item) => (
+        <div className="cc__showcase-tile" key={item.id}>
+          <div className="cc__showcase-icon">{item.svg}</div>
+          <span className="cc__showcase-label">{item.label}</span>
+        </div>
+      ))}
+    </div>
+  </div>
+);
 
-  // Mini form
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    date: "",
-    travellers: "",
-    message: "",
-  });
-  const [sending, setSending] = useState(false);
-  const [sent, setSent] = useState(false);
+/*Inclusions Accordion*/
+const InclusionsAccordion = ({ badge, perKm, km, expanded, setExpanded }) => {
+  const config = INCLUSIONS_MAP[badge] || INCLUSIONS_MAP.ECONOMY;
+  const exclusions = config.excluded.map((ex) =>
+    ex.includes("charged at") && perKm
+      ? ex
+          .replace(/₹\d+\/km/, `₹${perKm}/km`)
+          .replace(/after \d+ km/, `after ${km} km`)
+      : ex,
+  );
+  const toggle = () => setExpanded((v) => !v);
 
-  const openModal = (cabName, price, type) => {
-    setSelectedCab({ cabName, price, type, route: route });
-    setSent(false);
-    setForm({
+  return (
+    <div className="cc__accordion">
+      <button
+        className={`cc__accordion-trigger ${expanded ? "cc__accordion-trigger--open" : ""}`}
+        onClick={toggle}
+        type="button"
+        aria-expanded={expanded}
+      >
+        <span className="cc__accordion-label">
+          <svg
+            className={`cc__accordion-icon ${expanded ? "cc__accordion-icon--minus" : ""}`}
+            width="14"
+            height="14"
+            viewBox="0 0 14 14"
+            fill="none"
+          >
+            <circle cx="7" cy="7" r="6.25" stroke="#d80117" strokeWidth="1.3" />
+            <path
+              className="cc__accordion-icon-plus"
+              d="M4.5 7h5M7 4.5v5"
+              stroke="#d80117"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+            />
+            <path
+              className="cc__accordion-icon-minus"
+              d="M4.5 7h5"
+              stroke="#d80117"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+            />
+          </svg>
+          View Inclusions &amp; Exclusions
+        </span>
+        <span
+          className={`cc__accordion-chevron ${expanded ? "cc__accordion-chevron--up" : ""}`}
+        >
+          <FiChevronDown />
+        </span>
+      </button>
+      <div
+        className={`cc__accordion-body ${expanded ? "cc__accordion-body--open" : ""}`}
+      >
+        <div className="cc__inclusions">
+          <p className="cc__inclusions-heading">Inclusions &amp; Exclusions</p>
+          <div className="cc__inclusions-list">
+            {config.included.map((item, i) => (
+              <div className="cc__inc-row" key={`inc-${i}`}>
+                <span className="cc__inc-icon cc__inc-icon--yes">
+                  <svg viewBox="0 0 14 14" fill="none" width="13" height="13">
+                    <path
+                      d="M2.5 7l3 3 6-6"
+                      stroke="#16a34a"
+                      strokeWidth="1.8"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </span>
+                <span className="cc__inc-text">{item}</span>
+              </div>
+            ))}
+            {exclusions.map((item, i) => (
+              <div className="cc__inc-row" key={`exc-${i}`}>
+                <span className="cc__inc-icon cc__inc-icon--no">
+                  <svg viewBox="0 0 14 14" fill="none" width="13" height="13">
+                    <path
+                      d="M3 3l8 8M11 3l-8 8"
+                      stroke="#d80117"
+                      strokeWidth="1.8"
+                      strokeLinecap="round"
+                    />
+                  </svg>
+                </span>
+                <span className="cc__inc-text">{item}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+/* Booking Form */
+const BookingForm = memo(
+  ({
+    selectedCab,
+    routeDataRef,
+    fromCity,
+    toCity,
+    fromCoords,
+    toCoords,
+    onClose,
+  }) => {
+    const router = useRouter();
+    const [form, setForm] = useState({
       name: "",
       email: "",
       phone: "",
@@ -59,134 +345,376 @@ const Page = () => {
       travellers: "",
       message: "",
     });
+    const [sending, setSending] = useState(false);
+    const [sent, setSent] = useState(false);
+
+    const handleFormChange = (e) => {
+      const { name, value } = e.target;
+      if (name === "phone")
+        setForm((s) => ({
+          ...s,
+          phone: value.replace(/\D/g, "").slice(0, 10),
+        }));
+      else if (name === "name")
+        setForm((s) => ({ ...s, name: value.replace(/[^a-zA-Z\s]/g, "") }));
+      else setForm((s) => ({ ...s, [name]: value }));
+    };
+
+    const handleBookingSubmit = async (e) => {
+      e.preventDefault();
+      const rd = routeDataRef.current;
+      setSending(true);
+      try {
+        const payload = {
+          name: form.name,
+          email: form.email,
+          phone: form.phone,
+          date: form.date,
+          travellers: form.travellers,
+          message: form.message || "",
+          userId: auth.currentUser?.uid || "",
+          cabName: selectedCab?.cabName || "",
+          route: selectedCab?.route || "",
+          price: selectedCab?.price || 0,
+          type: selectedCab?.type || "",
+          pickup: fromCity || "",
+          drop: toCity || "",
+          pickupLat: fromCoords?.[1] ?? null,
+          pickupLng: fromCoords?.[0] ?? null,
+          dropLat: toCoords?.[1] ?? null,
+          dropLng: toCoords?.[0] ?? null,
+          distanceKm: rd?.distanceKm ?? null,
+          durationMin: rd?.durationMin ?? null,
+          routeGeoJSON: rd?.routeGeoJSON ?? null,
+        };
+        const res = await fetch("/api/send-mail", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload),
+        });
+        const data = await res.json();
+        if (!data.success) throw new Error(data.error || "Failed");
+        setSent(true);
+        setTimeout(() => {
+          onClose();
+          router.push("/thank-you-page");
+        }, 1200);
+      } catch (err) {
+        console.log("Booking error:", err);
+        alert("Something went wrong. Please try again.");
+      } finally {
+        setSending(false);
+      }
+    };
+
+    if (sent)
+      return (
+        <div className="cbp-success">
+          <div className="cbp-success__icon">✓</div>
+          <p className="cbp-success__title">Enquiry Sent!</p>
+          <p className="cbp-success__msg">Redirecting…</p>
+        </div>
+      );
+
+    return (
+      <form className="cbp-form" onSubmit={handleBookingSubmit}>
+        <div className="cbp-form__row">
+          <div className="cbp-form__field">
+            <label className="cbp-form__lbl">Full Name *</label>
+            <input
+              className="cbp-form__inp"
+              type="text"
+              name="name"
+              placeholder="Enter your name"
+              value={form.name}
+              onChange={handleFormChange}
+              required
+            />
+          </div>
+          <div className="cbp-form__field">
+            <label className="cbp-form__lbl">Email *</label>
+            <input
+              className="cbp-form__inp"
+              type="email"
+              name="email"
+              placeholder="Enter email address"
+              value={form.email}
+              onChange={handleFormChange}
+              required
+            />
+          </div>
+        </div>
+        <div className="cbp-form__row">
+          <div className="cbp-form__field">
+            <label className="cbp-form__lbl">Phone *</label>
+            <div className="cbp-form__phone">
+              <span className="cbp-form__phone-code">+91</span>
+              <input
+                className="cbp-form__inp cbp-form__inp--phone"
+                type="tel"
+                name="phone"
+                placeholder="10-digit number"
+                value={form.phone}
+                onChange={handleFormChange}
+                required
+              />
+            </div>
+          </div>
+          <div className="cbp-form__field">
+            <label className="cbp-form__lbl">Pickup Date *</label>
+            <input
+              className="cbp-form__inp cbp-form__inp--date"
+              type="date"
+              name="date"
+              value={form.date}
+              min={new Date().toISOString().split("T")[0]}
+              onChange={handleFormChange}
+              required
+            />
+          </div>
+        </div>
+        <div className="cbp-form__row cbp-form__row--single">
+          <div className="cbp-form__field">
+            <label className="cbp-form__lbl">No. of Travellers *</label>
+            <input
+              className="cbp-form__inp"
+              type="number"
+              name="travellers"
+              placeholder="e.g. 2"
+              value={form.travellers}
+              min={1}
+              max={50}
+              onChange={handleFormChange}
+              required
+            />
+          </div>
+        </div>
+        <div className="cbp-form__field">
+          <label className="cbp-form__lbl">Specific Requirement</label>
+          <textarea
+            className="cbp-form__textarea"
+            name="message"
+            placeholder="Any specific requirement or itinerary details…"
+            rows={3}
+            value={form.message}
+            onChange={handleFormChange}
+          />
+        </div>
+        <button type="submit" className="cbp-form__submit" disabled={sending}>
+          {sending ? "Sending…" : "Send Enquiry →"}
+        </button>
+      </form>
+    );
+  },
+);
+BookingForm.displayName = "BookingForm";
+
+/*Memoized Map  */
+const MemoMap = memo(({ fromCoords, toCoords, onRouteData }) => (
+  <MapboxRoute
+    fromCoords={fromCoords}
+    toCoords={toCoords}
+    onRouteData={onRouteData}
+  />
+));
+MemoMap.displayName = "MemoMap";
+
+/* Skeleton Card */
+const CardSkeleton = () => (
+  <div className="cc cc--skeleton">
+    <div className="cc__left cc__left--sk" />
+    <div className="cc__right">
+      <div className="sk-line sk-line--title" />
+      <div className="sk-line sk-line--sub" />
+      <div className="sk-chips">
+        <div className="sk-chip" />
+        <div className="sk-chip" />
+        <div className="sk-chip" />
+      </div>
+      <div className="sk-line sk-line--fare" />
+      <div className="sk-footer">
+        <div className="sk-line sk-line--price" />
+        <div className="sk-btn" />
+      </div>
+    </div>
+  </div>
+);
+// Main Page.................
+const Page = () => {
+  const searchParams = useSearchParams();
+  const fromCity = searchParams.get("from") || "";
+  const toCity = searchParams.get("to") || "";
+  const token = searchParams.get("q");
+
+  const [modalOpen, setModalOpen] = useState(false);
+  const [selectedCab, setSelectedCab] = useState(null);
+  const [km, setKm] = useState(0);
+  const [duration, setDuration] = useState("Calculating...");
+  const [durationMin, setDurationMin] = useState(0);
+  const [loading, setLoading] = useState(true);
+
+  const fromCoords = searchParams.get("fromCoords")
+    ? searchParams.get("fromCoords").split(",").map(Number)
+    : null;
+  const toCoords = searchParams.get("toCoords")
+    ? searchParams.get("toCoords").split(",").map(Number)
+    : null;
+
+  /* Price engine */
+  const dzirePerMin = 2.5,
+    ertigaPerMin = 3.5,
+    crystaPerMin = 5.5;
+  const dzireKm = 13,
+    ertigaKm = 18,
+    crystaKm = 21;
+  const dzirePrice = km
+    ? Math.round(km * dzireKm) + Math.round(durationMin * dzirePerMin)
+    : 0;
+  const ertigaPrice = km
+    ? Math.round(km * ertigaKm) + Math.round(durationMin * ertigaPerMin)
+    : 0;
+  const crystaPrice = km
+    ? Math.round(km * crystaKm) + Math.round(durationMin * crystaPerMin)
+    : 0;
+  const extraServiceDzire = Math.round(dzirePrice * 0.01);
+  const extraServiceErtiga = Math.round(ertigaPrice * 0.02);
+  const extraServiceCrysta = Math.round(crystaPrice * 0.05);
+  const tollRatePerKm = 0.7;
+  const GST = 0.05;
+  const dzireTaxes = km
+    ? Math.round(km * tollRatePerKm) +
+      Math.round(dzirePrice * GST) +
+      (km < 50
+        ? extraServiceDzire + 60
+        : km < 120
+          ? extraServiceDzire + 130
+          : extraServiceDzire)
+    : 0;
+
+  const ertigaTaxes = km
+    ? Math.round(km * tollRatePerKm) +
+      Math.round(ertigaPrice * GST) +
+      (km < 50
+        ? extraServiceErtiga + 70
+        : km < 120
+          ? extraServiceErtiga + 140
+          : extraServiceErtiga)
+    : 0;
+  const crystaTaxes = km
+    ? Math.round(km * tollRatePerKm) +
+      Math.round(crystaPrice * GST) +
+      (km < 50
+        ? extraServiceCrysta + 80
+        : km < 120
+          ? extraServiceCrysta + 157
+          : extraServiceCrysta)
+    : 0;
+
+  /* fetch distance */
+  useEffect(() => {
+    async function loadDistance() {
+      if (!fromCoords || !toCoords) {
+        setLoading(false);
+        return;
+      }
+      try {
+        const result = await getDistance(fromCoords, toCoords);
+        setKm(Number(result.distance));
+        setDurationMin(Number(result.duration));
+        setDuration(formatDuration(Number(result.duration)));
+      } catch (err) {
+        console.log("Distance error:", err);
+        setDuration("N/A");
+      } finally {
+        setLoading(false);
+      }
+    }
+    loadDistance();
+  }, []);
+
+  const routeDataRef = useRef(null);
+  const handleRouteData = useCallback((data) => {
+    routeDataRef.current = data;
+  }, []);
+
+  const openModal = (cabName, price, type, extra = {}) => {
+    setSelectedCab({
+      cabName,
+      price,
+      type,
+      route: token ? `${toCity} to ${fromCity}` : `${fromCity} to ${toCity}`,
+      ...extra,
+    });
     setModalOpen(true);
     document.body.style.overflow = "hidden";
   };
+
   const closeModal = () => {
     setModalOpen(false);
     setSelectedCab(null);
     document.body.style.overflow = "";
   };
 
-  const handleFormChange = (e) => {
-    const { name, value } = e.target;
-    if (name === "phone")
-      setForm((s) => ({ ...s, phone: value.replace(/\D/g, "").slice(0, 10) }));
-    else if (name === "name")
-      setForm((s) => ({ ...s, name: value.replace(/[^a-zA-Z\s]/g, "") }));
-    else setForm((s) => ({ ...s, [name]: value }));
-  };
-
-  const handleBookingSubmit = async (e) => {
-    e.preventDefault();
-    setSending(true);
-    try {
-      const res = await fetch("/api/send-mail", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          ...form,
-          cabName: selectedCab?.cabName,
-          route: selectedCab?.route,
-          price: selectedCab?.price,
-          type: selectedCab?.type,
-        }),
-      });
-      const data = await res.json();
-      if (!data.success) throw new Error(data.error || "Failed");
-      setSent(true);
-      setTimeout(() => {
-        closeModal();
-        router.push("/thank-you-page");
-      }, 1200);
-    } catch {
-      alert("Something went wrong. Please try again.");
-    } finally {
-      setSending(false);
-    }
-  };
-
-  // slug //
-  const formatedSlug = slug.split("-").join(" ");
-
-  // Find single entry matching this destination
-  const car = carListings.find(
-    (c) => c.destination?.toLowerCase() === formatedSlug.toLowerCase(),
-  );
-
-  if (!car) {
+  if (!fromCity || !toCity)
     return (
       <>
         <Header />
         <div className="cbp-notfound">
           <span>🚫</span>
           <h2>No cabs found for this route</h2>
-          <p>Please try a different destination.</p>
         </div>
       </>
     );
-  }
 
-  const fromCity = car.destination.split(" to ")[0];
-  const toCity = car.destination.split(" to ")[1];
-  const route = `${token ? `${toCity} to ${fromCity}` : `${fromCity} to ${toCity}`}`;
+  const prices = [dzirePrice, ertigaPrice, crystaPrice].filter(Boolean);
+  const fromPrice = prices.length ? Math.min(...prices) : 0;
 
-  // Safe image getter
-  const getImg = (idx) =>
-    Array.isArray(car.image)
-      ? car.image[idx] || "/Ertiga.webp"
-      : car.image || "/Ertiga.webp";
-
-  // Parse price string 
-  const parsePrice = (str) => parseInt(String(str).replace(/,/g, ""), 10) || 0;
-
-  // Discount calc
-  const calcDiscount = (price, mul = 1.22) => {
-    const orig = Math.round((price * mul) / 100) * 100;
-    return { orig, discount: Math.round((1 - price / orig) * 100) };
-  };
-
-  /* ────────────────────────────────────────────────
-     ECONOMY CARD — Dzire or Ertiga
-  ──────────────────────────────────────────────── */
-  const EconomyCard = ({ keyName, imgIdx, stars, ratingNum, ratingCnt }) => {
-    const data = car[keyName];
-    if (!data) return null;
-    const price = parsePrice(data.finalPrice);
-    const { orig, discount } = calcDiscount(price, 1.22);
+  /* ── Car Card ── */
+  const CarCard = ({
+    label,
+    price,
+    taxes,
+    perKm,
+    seats,
+    imgSrc,
+    stars = 4.3,
+    ratingCnt = "150+",
+    badge = "ECONOMY",
+    type,
+    discountPct = 19,
+  }) => {
+    const [expanded, setExpanded] = useState(false);
+    if (!price) return null;
+    const origPrice = Math.round(price / (1 - discountPct / 100));
 
     return (
-      <div className="cc cc--economy">
-        <div className="cc__left cc__left--e">
-          <div className="cc__img-wrap">
-            <img src={getImg(imgIdx)} alt={data.carName} className="cc__img" />
+      <div className={`cc ${expanded ? "cc--expanded" : ""}`}>
+        <div className="cc__left">
+          <div className="cc__main-img-wrap">
+            <img src={imgSrc} className="cc__img" alt={label} />
           </div>
-          <div className="cc__left-meta">
-            <span className="cc__type-tag cc__type-tag--e">
-              <FaCar /> Economy
-            </span>
-            <div className="cc__rating">
-              <span className="cc__stars">{stars}</span>
-              <span className="cc__rating-num">{ratingNum}</span>
-              <span className="cc__rating-cnt">({ratingCnt}+ rides)</span>
-            </div>
+          <div className="cc__badge">
+            <FaCar />
+            <span>{badge}</span>
           </div>
+          <div className="cc__rating">
+            <FaStar />
+            {stars}
+            <span className="cc__rating-cnt">({ratingCnt} rides)</span>
+          </div>
+          <LeftShowcase expanded={expanded} />
         </div>
-
         <div className="cc__right">
           <div className="cc__head">
-            <div>
-              <h3 className="cc__name">{data.carName}</h3>
-              <p className="cc__route">
-                {fromCity} → {toCity} · {car.duration}
-              </p>
-            </div>
-            <span className="cc__avail cc__avail--e">Available</span>
+            <h3 className="cc__name">{label}</h3>
+            <span className="cc__avail-tag">Available</span>
           </div>
-
+          <p className="cc__route">
+            {fromCity} → {toCity} · {duration}
+          </p>
           <div className="cc__chips">
             <span className="cc__chip">
-              <MdAirlineSeatReclineExtra /> {data.seat} Seater
+              <MdAirlineSeatReclineExtra /> {seats} Seater
             </span>
             <span className="cc__chip">
               <FaWindowMaximize /> AC
@@ -195,162 +723,65 @@ const Page = () => {
               <MdLuggage /> Compact Boot
             </span>
             <span className="cc__chip">
-              <GiPathDistance /> Google Maps Route
+              <GiPathDistance /> MapBox Route
             </span>
           </div>
-
-          <div className="cc__fare-box cc__fare-box--e">
-            <div className="cc__fare-row">
-              <span className="cc__fare-lbl cc__fare-lbl--green">
-                <svg viewBox="0 0 12 12" fill="none" width="11" height="11">
-                  <path
-                    d="M2 6l2.5 2.5 5.5-5"
-                    stroke="#16a34a"
-                    strokeWidth="1.6"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-                {car.included} kms included
-              </span>
-              <span className="cc__fare-val cc__fare-val--green">Free</span>
-            </div>
-            <div className="cc__fare-row">
-              <span className="cc__fare-lbl">
-                <FiZap /> Extra per km
-              </span>
-              <span className="cc__fare-val">
-                ₹{data.perKm}/km after {car.included} km
-              </span>
-            </div>
-            {/* <div className="cc__fare-row">
-              <span className="cc__fare-lbl">
-                <SiToll /> Toll / State tax
-              </span>
-              <span className="cc__fare-val cc__fare-val--muted">
-                As per govt. rules
-              </span>
-            </div> */}
-          </div>
-
-          <div className="cc__footer">
-            <div className="cc__price-block">
-              <div className="cc__price-row">
-                <span className="cc__price">₹{data.finalPrice}</span>
-                <span className="cc__orig">
-                  ₹{orig.toLocaleString("en-IN")}
-                </span>
-                <span className="cc__disc cc__disc--e">{discount}% OFF</span>
-              </div>
-              <span className="cc__tax">+ Toll extra · GST incl.</span>
-            </div>
-            <button
-              className="cc__btn cc__btn--e"
-              onClick={() => openModal(data.carName, price, "Economy")}
-            >
-              Book Now →
-            </button>
-          </div>
-        </div>
-      </div>
-    );
-  };
-
-  /* ────────────────────────────────────────────────
-     CRYSTA CARD
-  ──────────────────────────────────────────────── */
-  const CrystaCard = () => {
-    const data = car.crysta;
-    if (!data) return null;
-    const price = parsePrice(data.finalPrice);
-    const { orig, discount } = calcDiscount(price, 1.2);
-
-    return (
-      <div className="cc cc--economy">
-        <div className="cc__left">
-          <div className="cc__img-wrap">
-            <img src={getImg(1)} alt={data.carName} className="cc__img" />
-          </div>
-          <div className="cc__left-meta">
-            <span className="cc__type-tag cc__type-tag--p">
-              <FaCar /> Crysta
-            </span>
-            <div className="cc__rating">
-              <span className="cc__stars">★★★★★</span>
-              <span className="cc__rating-num">4.7</span>
-              <span className="cc__rating-cnt">(200+ rides)</span>
-            </div>
-          </div>
-        </div>
-
-        <div className="cc__right">
-          <div className="cc__head">
-            <div>
-              <h3 className="cc__name">{data.carName}</h3>
-              <p className="cc__route">
-                {fromCity} → {toCity} · {car.duration}
-              </p>
-            </div>
-            <span className="cc__avail cc__avail--e">Available</span>
-          </div>
-
-          <div className="cc__chips">
-            <span className="cc__chip">
-              <MdAirlineSeatReclineExtra /> {data.seat} Seater
-            </span>
-            <span className="cc__chip">
-              <FaWindowMaximize /> AC
-            </span>
-            <span className="cc__chip">
-              <MdLuggage /> Large Boot
-            </span>
-            <span className="cc__chip">
-              <GiPathDistance /> Google Maps Route
-            </span>
-          </div>
-
           <div className="cc__fare-box">
             <div className="cc__fare-row">
-              <span className="cc__fare-lbl cc__fare-lbl--green">
-                <svg viewBox="0 0 12 12" fill="none" width="11" height="11">
-                  <path
-                    d="M2 6l2.5 2.5 5.5-5"
-                    stroke="#16a34a"
-                    strokeWidth="1.6"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-                {car.included} kms included
+              <span className="cc__fare-row__left">
+                <MdCheckCircle /> {km} kms included
               </span>
-              <span className="cc__fare-val cc__fare-val--green">Free</span>
+              <span className="cc__fare-row__right cc__fare-row__right--free">
+                Free
+              </span>
             </div>
             <div className="cc__fare-row">
-              <span className="cc__fare-lbl">
+              <span className="cc__fare-row__left">
                 <FiZap /> Extra per km
               </span>
-              <span className="cc__fare-val">
-                ₹{data.perKm}/km after {car.included} km
+              <span className="cc__fare-row__right">
+                ₹{perKm}/km after {km}
               </span>
             </div>
           </div>
-
+          <InclusionsAccordion
+            badge={badge}
+            perKm={perKm}
+            km={km}
+            expanded={expanded}
+            setExpanded={setExpanded}
+          />
           <div className="cc__footer">
             <div className="cc__price-block">
               <div className="cc__price-row">
-                <span className="cc__price">₹{data.finalPrice}</span>
-                <span className="cc__orig">
-                  ₹{orig.toLocaleString("en-IN")}
+                <span className="cc__price">₹{price.toLocaleString()}</span>
+                <span className="cc__price-original">
+                  ₹{origPrice.toLocaleString()}
                 </span>
-                <span className="cc__disc cc__disc--e">{discount}% OFF</span>
+                <span className="cc__discount-tag">{discountPct}% OFF</span>
               </div>
-              <span className="cc__tax">+ Toll extra · GST incl.</span>
+              <p className="cc__price-note">
+                {taxes
+                  ? `+ ₹${taxes} Taxes & Charges`
+                  : "+ Toll extra · GST incl."}
+              </p>
             </div>
             <button
-              className="cc__btn cc__btn--e"
-              onClick={() => openModal(data.carName, price, "Crysta")}
+              className="cc__btn"
+              onClick={() =>
+                openModal(label, price, type || badge, {
+                  imgSrc,
+                  badge,
+                  seats,
+                  stars,
+                  ratingCnt,
+                  discountPct,
+                  origPrice,
+                  taxes,
+                })
+              }
             >
-              Book Now →
+              Book Now <FiArrowRight />
             </button>
           </div>
         </div>
@@ -358,283 +789,270 @@ const Page = () => {
     );
   };
 
-  /* ────────────────────────────────────────────────
-     PREMIUM CARD — Fortuner, Hycross
-  ──────────────────────────────────────────────── */
-  const PremiumCard = ({ variant }) => (
-    <div className="cc cc--premium">
-      <div className="cc__left">
-        <div className="cc__img-wrap">
-          <img
-            src={getPremiumImage(variant.title)}
-            alt={variant.title}
-            className="cc__img"
-          />
-        </div>
-        <div className="cc__left-meta">
-          <span className="cc__type-tag cc__type-tag--p">
-            <FaCar /> Premium
-          </span>
-          <div className="cc__rating">
-            <span className="cc__stars">★★★★★</span>
-            <span className="cc__rating-num">4.9</span>
-            <span className="cc__rating-cnt">(320+ rides)</span>
-          </div>
-        </div>
-      </div>
+  /* ── derive individual tax components for modal ── */
+  const getTaxBreakdown = (price, taxesTotal) => {
+    if (!price || !taxesTotal) return null;
+    const toll = Math.round(km * tollRatePerKm);
+    const gst = Math.round(price * GST);
+    const svc = Math.round(price * 0.01);
+    return { toll, gst, svc };
+  };
 
-      <div className="cc__right">
-        <div className="cc__head">
-          <div>
-            <h3 className="cc__name">{variant.title}</h3>
-            <p className="cc__route">
-              {fromCity} → {toCity} · {car.duration}
-            </p>
-          </div>
-          <span className="cc__avail">Available</span>
-        </div>
-
-        <div className="cc__chips">
-          <span className="cc__chip">
-            <MdAirlineSeatReclineExtra /> {variant.seat} Seater
-          </span>
-          <span className="cc__chip">
-            <FaWindowMaximize /> AC
-          </span>
-          <span className="cc__chip">
-            <MdLuggage /> Large Boot
-          </span>
-          <span className="cc__chip">
-            <GiPathDistance /> Google Maps Route
-          </span>
-        </div>
-
-        <div className="cc__fare-box">
-          <div className="cc__fare-row">
-            <span className="cc__fare-lbl cc__fare-lbl--green">
-              <svg viewBox="0 0 12 12" fill="none" width="11" height="11">
-                <path
-                  d="M2 6l2.5 2.5 5.5-5"
-                  stroke="#16a34a"
-                  strokeWidth="1.6"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-              {car.included} kms included
-            </span>
-            <span className="cc__fare-val cc__fare-val--green">Free</span>
-          </div>
-          <div className="cc__fare-row">
-            <span className="cc__fare-lbl">
-              <FiZap /> Extra per km
-            </span>
-            <span className="cc__fare-val cc__fare-val--muted">
-              Call to confirm
-            </span>
-          </div>
-        </div>
-
-        <div className="cc__footer">
-          <div className="cc__price-block">
-            <div className="cc__price-row">
-              <span
-                className="cc__price"
-                style={{ fontSize: "18px", letterSpacing: 0 }}
-              >
-                Call to Discuss
-              </span>
-            </div>
-            <span className="cc__tax">Price on request · GST incl.</span>
-          </div>
-          <button
-            className="cc__btn cc__btn--p"
-            onClick={() =>
-              openModal(variant.title, "Call to Discuss", "Premium")
-            }
-          >
-            Enquire Now →
-          </button>
-        </div>
-      </div>
-    </div>
-  );
-
-  // Economy lowest price
-  const economyPrices = ["dzire", "ertiga"]
-    .map((k) => parsePrice(car[k]?.finalPrice))
-    .filter(Boolean);
-  const lowestEconomy = economyPrices.length ? Math.min(...economyPrices) : 0;
-  const crystaPrice = parsePrice(car.crysta?.finalPrice);
-
+  /* ════════════════════════════════════════════════════════════════
+     RENDER
+  ════════════════════════════════════════════════════════════════ */
   return (
     <>
       <Header />
 
-      {/* HERO */}
+      {/* Hero */}
       <div className="cbp-hero">
         <div className="cbp-hero__inner">
-          <p className="cbp-crumb">
-            <Link href="/">Home /</Link>
-            <Link href="/our-services/out-of-station"> Outstation / </Link>
+          <p className="cbp-breadcrumb">
+            Home / Outstation /{" "}
             <span>
               {token ? `${toCity} → ${fromCity}` : `${fromCity} → ${toCity}`}
             </span>
           </p>
-
-          <div className="cbp-route">
-            <div className="cbp-route__city">
-              <span className="cbp-route__lbl">FROM</span>
-              <span className="cbp-route__name">
-                {token ? toCity : fromCity}
+          <div className="cbp-route-header">
+            <span className="cbp-city">{token ? toCity : fromCity}</span>
+            <div className="cbp-arrow-wrap">
+              <span className="cbp-arrow-line">
+                <svg viewBox="0 0 48 14" fill="none" width="44" height="13">
+                  <path
+                    d="M0 7h44M36 2l8 5-8 5"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
               </span>
+              <span className="cbp-arrow-label">ONE WAY</span>
             </div>
-            <div className="cbp-route__mid">
-              <svg viewBox="0 0 48 14" fill="none" width="44" height="13">
-                <path
-                  d="M0 7h44M36 2l8 5-8 5"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-              <span className="cbp-route__oneway">One Way</span>
-            </div>
-            <div className="cbp-route__city cbp-route__city--red">
-              <span className="cbp-route__lbl">TO</span>
-              <span className="cbp-route__name">
-                {token ? fromCity : toCity}
-              </span>
-            </div>
+            <span className="cbp-city cbp-city--dest">
+              {token ? fromCity : toCity}
+            </span>
           </div>
-
-          <div className="cbp-stats">
-            {[
-              { icon: <FaRegClock />, val: car.duration, lbl: "Duration" },
-              {
-                icon: <GiPathDistance />,
-                val: `${car.included} km`,
-                lbl: "Included",
-              },
-              {
-                icon: <MdAirlineSeatReclineExtra />,
-                val: "Up to 7 Seats",
-                lbl: "Capacity",
-              },
-              { icon: <FaWindowMaximize />, val: "Full AC", lbl: "All Cabs" },
-            ].map((s, i) => (
-              <div className="cbp-stat" key={i}>
-                <span className="cbp-stat__ico">{s.icon}</span>
-                <div>
-                  <span className="cbp-stat__val">{s.val}</span>
-                  <span className="cbp-stat__lbl">{s.lbl}</span>
-                </div>
+          <div className="cbp-meta-row">
+            <div className="cbp-meta-pill">
+              <div className="cbp-meta-pill__icon">
+                <FaRegClock size={17} />
               </div>
-            ))}
+              <div className="cbp-meta-pill__text">
+                <strong>{duration}</strong>
+                <span>Duration</span>
+              </div>
+            </div>
+            <div className="cbp-meta-pill">
+              <div className="cbp-meta-pill__icon">
+                <GiPathDistance size={17} />
+              </div>
+              <div className="cbp-meta-pill__text">
+                <strong>{loading ? "—" : `${km} km`}</strong>
+                <span>Included</span>
+              </div>
+            </div>
+            <div className="cbp-meta-pill">
+              <div className="cbp-meta-pill__icon">
+                <MdAirlineSeatReclineExtra size={17} />
+              </div>
+              <div className="cbp-meta-pill__text">
+                <strong>Up to 7 Seats</strong>
+                <span>Capacity</span>
+              </div>
+            </div>
+            <div className="cbp-meta-pill">
+              <div className="cbp-meta-pill__icon">
+                <FaWindowMaximize size={17} />
+              </div>
+              <div className="cbp-meta-pill__text">
+                <strong>Full AC</strong>
+                <span>All Cabs</span>
+              </div>
+            </div>
           </div>
-
-          <div className="cbp-pills">
-            {[
-              "✓ Free Cancellation",
-              "✓ No Hidden Charges",
-              "✓ GST Included",
-              "✓ 24/7 Support",
-            ].map((p, i) => (
-              <span
-                key={i}
-                className={`cbp-pill ${i < 2 ? "cbp-pill--green" : ""}`}
-              >
-                {p}
-              </span>
-            ))}
+          <div className="cbp-trust-row">
+            <span className="cbp-trust-badge">
+              <MdCheckCircle /> Free Cancellation
+            </span>
+            <span className="cbp-trust-badge">
+              <MdCheckCircle /> No Hidden Charges
+            </span>
+            <span className="cbp-trust-badge">
+              <MdCheckCircle /> GST Included
+            </span>
+            <span className="cbp-trust-badge">
+              <MdCheckCircle /> 24/7 Support
+            </span>
           </div>
         </div>
       </div>
 
+      {/* Main */}
       <main className="cbp-main">
-        {/* ── ALL CABS — Dzire + Ertiga + Crysta with one secction ── */}
-        {(car.dzire || car.ertiga || car.crysta) && (
-          <div className="cbp-sec">
-            <div className="cbp-sec__hd">
-              <div>
-                <span className="cbp-badge cbp-badge--e">
-                  <FaCar /> Available Cabs
-                </span>
-                <h2 className="cbp-sec__title">
-                  Cabs — {fromCity} to {toCity}
-                </h2>
-                <p className="cbp-sec__sub">
-                  Dzire · Ertiga · Innova Crysta · All AC · On-time pickup
-                </p>
-              </div>
-              {lowestEconomy > 0 && (
-                <div className="cbp-sec__from">
-                  <span className="cbp-sec__from-lbl">From</span>
-                  <span className="cbp-sec__from-val cbp-sec__from-val--e">
-                    ₹{lowestEconomy.toLocaleString("en-IN")}
-                  </span>
+        <div className="cbp-cards-col">
+          <div className="cbp-section-header">
+            <div className="cbp-section-header__left">
+              <span className="cbp-available-tag">
+                <FaCar /> AVAILABLE CABS
+              </span>
+              <h2 className="cbp-section-title">
+                Cabs —{" "}
+                {token
+                  ? `${toCity} to ${fromCity}`
+                  : `${fromCity} to ${toCity}`}
+              </h2>
+              <p className="cbp-section-sub">
+                Dzire · Ertiga · Innova Crysta · All AC · On-time pickup
+              </p>
+            </div>
+            {!loading && fromPrice > 0 && (
+              <div className="cbp-section-header__right">
+                <span>From</span>
+                <div className="cbp-from-price">
+                  ₹{fromPrice.toLocaleString()}
                 </div>
-              )}
-            </div>
-            <div className="cbp-cards">
-              <EconomyCard
-                keyName="dzire"
-                imgIdx={2}
-                stars="★★★★☆"
-                ratingNum="4.3"
-                ratingCnt="150"
-                seatLabel="4"
-              />
-              <EconomyCard
-                keyName="ertiga"
-                imgIdx={0}
-                stars="★★★★☆"
-                ratingNum="4.5"
-                ratingCnt="180"
-                seatLabel="7"
-              />
-              <CrystaCard />
-            </div>
+              </div>
+            )}
           </div>
-        )}
 
-        {/* PREMIUM - Fortuner + Hycross */}
-        {car.premium?.length > 0 && (
-          <div className="cbp-sec">
-            <div className="cbp-sec__hd">
-              <div>
-                <span className="cbp-badge cbp-badge--p">
-                  <FaStar color="gold" /> Premium
-                </span>
-                <h2 className="cbp-sec__title">
-                  Premium Cabs — {fromCity} to {toCity}
-                </h2>
-                <p className="cbp-sec__sub">
-                  Luxury · Top-rated drivers · Extra legroom ·{" "}
-                  {car.premium.length} vehicles
+          {loading ? (
+            <div className="cbp-loading-wrap">
+              <div className="cbp-finding-route">
+                <div className="cbp-finding-route__dots">
+                  <span />
+                  <span />
+                  <span />
+                </div>
+                <p className="cbp-finding-route__text">
+                  Finding best route &amp; calculating fares…
                 </p>
               </div>
-              <div className="cbp-sec__from">
-                <span className="cbp-sec__from-lbl">Price</span>
-                <span
-                  className="cbp-sec__from-val"
-                  style={{ fontSize: "16px" }}
-                >
-                  On Request
-                </span>
+              <CardSkeleton />
+              <CardSkeleton />
+              <CardSkeleton />
+            </div>
+          ) : (
+            <>
+              <CarCard
+                label="Swift Dzire"
+                price={dzirePrice}
+                taxes={dzireTaxes}
+                perKm={dzireKm + 4}
+                seats={4}
+                imgSrc="/maruti.png"
+                badge="ECONOMY"
+                stars={4.3}
+                ratingCnt="150+"
+                type="Economy"
+                discountPct={19}
+              />
+              <CarCard
+                label="Toyota Ertiga"
+                price={ertigaPrice}
+                taxes={ertigaTaxes}
+                perKm={ertigaKm + 4}
+                seats={7}
+                imgSrc="/Ertiga1.png"
+                badge="COMFORT"
+                stars={4.5}
+                ratingCnt="200+"
+                type="Comfort"
+                discountPct={15}
+              />
+              <CarCard
+                label="Toyota Innova Crysta"
+                price={crystaPrice}
+                taxes={crystaTaxes}
+                perKm={crystaKm + 5}
+                seats={7}
+                imgSrc="/crysta-1.png"
+                badge="PREMIUM"
+                stars={4.7}
+                ratingCnt="300+"
+                type="Premium"
+                discountPct={12}
+              />
+              <CarCard
+                label="Toyota Fortuner"
+                price={crystaPrice}
+                taxes={crystaTaxes}
+                perKm={crystaKm}
+                seats={7}
+                imgSrc="/premium-toyota-fortuner.png"
+                badge="PREMIUM"
+                stars={4.7}
+                ratingCnt="320+"
+                type="Premium"
+                discountPct={12}
+              />
+              <CarCard
+                label="Toyota Innova Hycross"
+                price={crystaPrice}
+                taxes={crystaTaxes}
+                perKm={crystaKm}
+                seats={7}
+                imgSrc="/premium-toyota-innova-hycros.png"
+                badge="PREMIUM"
+                stars={4.7}
+                ratingCnt="270+"
+                type="Premium"
+                discountPct={12}
+              />
+            </>
+          )}
+        </div>
+
+        {/* Sticky map */}
+        <div className="cbp-map-col">
+          <div className="cbp-map-card">
+            <MemoMap
+              fromCoords={fromCoords}
+              toCoords={toCoords}
+              onRouteData={handleRouteData}
+            />
+            <div className="cbp-map-info">
+              <div className="cbp-map-route-label">
+                <FaMapMarkerAlt />
+                {token ? `${toCity} → ${fromCity}` : `${fromCity} → ${toCity}`}
+              </div>
+              <div className="cbp-map-stats">
+                <div className="cbp-map-stat">
+                  <div className="cbp-map-stat__val">
+                    {loading ? "—" : `${km} km`}
+                  </div>
+                  <div className="cbp-map-stat__lbl">Distance</div>
+                </div>
+                <div className="cbp-map-stat">
+                  <div className="cbp-map-stat__val">{duration}</div>
+                  <div className="cbp-map-stat__lbl">Duration</div>
+                </div>
+                <div className="cbp-map-stat">
+                  <div className="cbp-map-stat__val">NH-44</div>
+                  <div className="cbp-map-stat__lbl">Via</div>
+                </div>
+              </div>
+              <div className="cbp-map-highlights">
+                <div className="cbp-map-highlight">
+                  <IoShieldCheckmark /> Verified drivers
+                </div>
+                <div className="cbp-map-highlight">
+                  <MdOutlineLoop /> Free cancellation
+                </div>
+                <div className="cbp-map-highlight">
+                  <CiCreditCard1 /> Pay online or cash
+                </div>
+                <div className="cbp-map-highlight">
+                  <MdCall /> 24/7 support
+                </div>
               </div>
             </div>
-            <div className="cbp-cards">
-              {car.premium.map((variant, i) => (
-                <PremiumCard key={i} variant={variant} />
-              ))}
-            </div>
           </div>
-        )}
+        </div>
       </main>
 
-      {/* WHY COZYCABZ */}
+      {/* Why CozyCabz */}
       <div className="cbp-why-sec">
         <div className="cbp-why">
           <h3 className="cbp-why__title">Why CozyCabz?</h3>
@@ -675,154 +1093,179 @@ const Page = () => {
 
       <SiteFooter />
 
-      {/* BOOKING MODAL */}
-      {modalOpen && (
-        <div className="cbp-modal-overlay" onClick={closeModal}>
-          <div className="cbp-modal" onClick={(e) => e.stopPropagation()}>
-            <div className="cbp-modal__hd">
-              <div className="cbp-modal__hd-left">
-                <h3 className="cbp-modal__title">Complete Your Booking</h3>
-                {selectedCab && (
-                  <div className="cbp-modal__meta">
-                    <span
-                      className={`cbp-modal__badge ${selectedCab.type === "Premium" ? "cbp-modal__badge--p" : "cbp-modal__badge--e"}`}
-                    >
-                      {selectedCab.type === "Premium"
-                        ? "⭐ Premium"
-                        : selectedCab.type === "Crysta"
-                          ? "🚗 Crysta"
-                          : "💰 Economy"}
-                    </span>
-                    <span className="cbp-modal__cab">
-                      {selectedCab.cabName}
-                    </span>
-                    <span className="cbp-modal__sep">·</span>
-                    <span className="cbp-modal__route">
-                      {token
-                        ? `${toCity} to ${fromCity}`
-                        : `${fromCity} to ${toCity}`}
-                    </span>
-                    <span className="cbp-modal__sep">·</span>
-                    <span className="cbp-modal__price">
-                      {typeof selectedCab.price === "number"
-                        ? `₹${selectedCab.price.toLocaleString("en-IN")}`
-                        : selectedCab.price}
-                    </span>
-                  </div>
-                )}
-              </div>
-              <button className="cbp-modal__close" onClick={closeModal}>
-                ✕
-              </button>
-            </div>
+      {/* ══════════════════════════════════════════════════
+          MODAL — only this section is new
+      ══════════════════════════════════════════════════ */}
+      {modalOpen &&
+        selectedCab &&
+        (() => {
+          const p =
+            typeof selectedCab.price === "number" ? selectedCab.price : 0;
+          const orig =
+            typeof selectedCab.origPrice === "number"
+              ? selectedCab.origPrice
+              : 0;
+          const taxes = selectedCab.taxes || 0;
+          const tb = getTaxBreakdown(p, taxes);
+          const saved = orig > 0 ? orig - p : 0;
+          const total = p + taxes;
 
-            <div className="cbp-modal__body">
-              {sent ? (
-                <div className="cbp-success">
-                  <div className="cbp-success__icon">✓</div>
-                  <p className="cbp-success__msg">Enquiry sent! Redirecting…</p>
+          return (
+            <div className="cbp-modal-overlay" onClick={closeModal}>
+              <div className="cbp-modal" onClick={(e) => e.stopPropagation()}>
+                {/* ── Top bar ── */}
+                <div className="cbp-modal__topbar">
+                  <h3 className="cbp-modal__topbar-title">
+                    Complete Your Booking
+                  </h3>
+                  <button className="cbp-modal__close" onClick={closeModal}>
+                    ✕
+                  </button>
                 </div>
-              ) : (
-                <form className="cbp-form" onSubmit={handleBookingSubmit}>
-                  <div className="cbp-form__row">
-                    <div className="cbp-form__field">
-                      <label className="cbp-form__lbl">Full Name *</label>
-                      <input
-                        className="cbp-form__inp"
-                        type="text"
-                        name="name"
-                        placeholder="Enter your name"
-                        value={form.name}
-                        onChange={handleFormChange}
-                        required
+
+                {/* ── Two-col body ── */}
+                <div className="cbp-modal__cols">
+                  {/* LEFT */}
+                  <div className="cbp-modal__left-col">
+                    {/* Car strip */}
+                    <div className="cbp-modal__car-strip">
+                      <img
+                        src={selectedCab.imgSrc}
+                        alt={selectedCab.cabName}
+                        className="cbp-modal__car-img"
                       />
-                    </div>
-                    <div className="cbp-form__field">
-                      <label className="cbp-form__lbl">Email *</label>
-                      <input
-                        className="cbp-form__inp"
-                        type="email"
-                        name="email"
-                        placeholder="Enter email address"
-                        value={form.email}
-                        onChange={handleFormChange}
-                        required
-                      />
-                    </div>
-                  </div>
-                  <div className="cbp-form__row">
-                    <div className="cbp-form__field">
-                      <label className="cbp-form__lbl">Phone *</label>
-                      <div className="cbp-form__phone">
-                        <span className="cbp-form__phone-code">+91</span>
-                        <input
-                          className="cbp-form__inp cbp-form__inp--phone"
-                          type="tel"
-                          name="phone"
-                          placeholder="10-digit number"
-                          value={form.phone}
-                          onChange={handleFormChange}
-                          required
-                        />
+                      <div className="cbp-modal__car-info">
+                        <div className="cbp-modal__car-name">
+                          {selectedCab.cabName}
+                        </div>
+                        <div className="cbp-modal__car-meta">
+                          <span>{selectedCab.seats} Seater</span>
+                          <span className="cbp-modal__sep">·</span>
+                          <span className="cbp-model__ratingss">
+                            <FaStar
+                              style={{
+                                color: "#f5a623",
+                                fontSize: 11,
+                                verticalAlign: "middle",
+                              }}
+                            />{" "}
+                            {selectedCab.stars} ({selectedCab.ratingCnt} rides)
+                          </span>
+                        </div>
+                        <div className="cbp-modal__car-route">
+                          <span>Route:&nbsp;</span>
+                          <strong>{selectedCab.route}</strong>
+                        </div>
                       </div>
                     </div>
-                    <div className="cbp-form__field">
-                      <label className="cbp-form__lbl">Pickup Date *</label>
-                      <input
-                        className="cbp-form__inp cbp-form__inp--date"
-                        type="date"
-                        name="date"
-                        value={form.date}
-                        min={new Date().toISOString().split("T")[0]}
-                        onChange={handleFormChange}
-                        required
-                      />
+
+                    {/* Payment details */}
+                    <div className="cbp-modal__payment">
+                      <p className="cbp-modal__payment-heading">
+                        Payment Details
+                      </p>
+
+                      {/* Base fare */}
+                      <div className="cbp-modal__pay-row">
+                        <span className="cbp-modal__pay-label">Base Fare</span>
+                        <span className="cbp-modal__pay-val">
+                          ₹{p.toLocaleString("en-IN")}
+                        </span>
+                      </div>
+
+                      {/* Tax breakdown — only if tb exists */}
+                      {tb && (
+                        <>
+                          <div className="cbp-modal__pay-row cbp-modal__pay-row--indent">
+                            <span className="cbp-modal__pay-label cbp-modal__pay-label--sub">
+                              ↳ Toll Charges ({km} km × ₹{tollRatePerKm})
+                            </span>
+                            <span className="cbp-modal__pay-val cbp-modal__pay-val--sub">
+                              ₹{tb.toll.toLocaleString("en-IN")}
+                            </span>
+                          </div>
+                          <div className="cbp-modal__pay-row cbp-modal__pay-row--indent">
+                            <span className="cbp-modal__pay-label cbp-modal__pay-label--sub">
+                              ↳ GST (5%)
+                            </span>
+                            <span className="cbp-modal__pay-val cbp-modal__pay-val--sub">
+                              ₹{tb.gst.toLocaleString("en-IN")}
+                            </span>
+                          </div>
+                          <div className="cbp-modal__pay-row cbp-modal__pay-row--indent">
+                            <span className="cbp-modal__pay-label cbp-modal__pay-label--sub">
+                              ↳ Service Fee (1%)
+                            </span>
+                            <span className="cbp-modal__pay-val cbp-modal__pay-val--sub">
+                              ₹{tb.svc.toLocaleString("en-IN")}
+                            </span>
+                          </div>
+                        </>
+                      )}
+
+                      {/* Taxes subtotal */}
+                      {taxes > 0 && (
+                        <div className="cbp-modal__pay-row cbp-modal__pay-row--subtotal">
+                          <span className="cbp-modal__pay-label">
+                            Taxes &amp; Charges
+                          </span>
+                          <span className="cbp-modal__pay-val">
+                            ₹{taxes.toLocaleString("en-IN")}
+                          </span>
+                        </div>
+                      )}
+
+                      {/* Discount */}
+                      {saved > 0 && (
+                        <div className="cbp-modal__pay-row">
+                          <span className="cbp-modal__pay-label">
+                            Discount ({selectedCab.discountPct}% OFF)
+                          </span>
+                          <span className="cbp-modal__pay-val cbp-modal__pay-val--green">
+                            − ₹{saved.toLocaleString("en-IN")}
+                          </span>
+                        </div>
+                      )}
+
+                      <div className="cbp-modal__pay-divider" />
+
+                      {/* Total */}
+                      <div className="cbp-modal__pay-row cbp-modal__pay-row--total">
+                        <span className="cbp-modal__pay-label">
+                          Total Payable
+                        </span>
+                        <span className="cbp-modal__pay-val cbp-modal__pay-val--total">
+                          ₹{total.toLocaleString("en-IN")}
+                        </span>
+                      </div>
+
+                      {saved > 0 && (
+                        <p className="cbp-modal__pay-saving">
+                          🎉 You save ₹{saved.toLocaleString("en-IN")} on this
+                          booking
+                        </p>
+                      )}
                     </div>
                   </div>
-                  <div className="cbp-form__row cbp-form__row--single">
-                    <div className="cbp-form__field">
-                      <label className="cbp-form__lbl">
-                        No. of Travellers *
-                      </label>
-                      <input
-                        className="cbp-form__inp"
-                        type="number"
-                        name="travellers"
-                        placeholder="e.g. 2"
-                        value={form.travellers}
-                        min={1}
-                        max={50}
-                        onChange={handleFormChange}
-                        required
-                      />
-                    </div>
-                  </div>
-                  <div className="cbp-form__field">
-                    <label className="cbp-form__lbl">
-                      Specific Requirement
-                    </label>
-                    <textarea
-                      className="cbp-form__textarea"
-                      name="message"
-                      placeholder="Any specific requirement or itinerary details…"
-                      rows={3}
-                      value={form.message}
-                      onChange={handleFormChange}
+
+                  {/* RIGHT — form */}
+                  <div className="cbp-modal__right-col">
+                    <p className="cbp-modal__form-heading">Traveller Details</p>
+                    <BookingForm
+                      selectedCab={selectedCab}
+                      routeDataRef={routeDataRef}
+                      fromCity={fromCity}
+                      toCity={toCity}
+                      fromCoords={fromCoords}
+                      toCoords={toCoords}
+                      onClose={closeModal}
                     />
                   </div>
-                  <button
-                    type="submit"
-                    className="cbp-form__submit"
-                    disabled={sending}
-                  >
-                    {sending ? "Sending…" : "Send Enquiry →"}
-                  </button>
-                </form>
-              )}
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-      )}
+          );
+        })()}
     </>
   );
 };

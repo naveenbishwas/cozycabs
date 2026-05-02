@@ -77,11 +77,11 @@ const carrental = () => {
 
   const faqs = [
     {
-      q: `How much does car rental in ${selectedCity.city} cost per km?`,
+      q: `How much does cab service in ${selectedCity.city} cost per km?`,
       a: "Economy cars start at ₹12/km, premium sedans at ₹25/km, and luxury cars at ₹35/km. Transparent rates with CozyCabz.",
     },
     {
-      q: `Can I book a car rental in ${selectedCity.city} with driver for outstation trips?`,
+      q: `Can I book a cab service in ${selectedCity.city} with driver for outstation trips?`,
       a: "Yes—one-way and round-trip packages to nearby destinations are available.",
     },
     {
@@ -101,10 +101,10 @@ const carrental = () => {
   return (
     <div>
       <head>
-        <title>{`Car Rental in ${selectedCity.city} | CozyCabz with Driver`}</title>
+        <title>{`Cab Service in ${selectedCity.city} | CozyCabz with Driver`}</title>
         <meta
           name="description"
-          content="Book car rental in Ahmedabad with driver for local, airport & outstation trips. Affordable, safe, and 24×7 service with professional chauffeurs."
+          content="Book cab service in Ahmedabad with driver for local, airport & outstation trips. Affordable, safe, and 24×7 service with professional chauffeurs."
         />
         <meta
           property="og:title"
@@ -112,7 +112,7 @@ const carrental = () => {
         />
         <meta
           property="og:description"
-          content="Rent cars in Ahmedabad for business, family, or leisure travel. Transparent pricing, verified chauffeurs, and comfortable rides by CozyCabz."
+          content="Service cars in Ahmedabad for business, family, or leisure travel. Transparent pricing, verified chauffeurs, and comfortable rides by CozyCabz."
         />
         <meta property="og:image" content="/inahmedabad/Sabarmati.png" />
         <meta property="og:type" content="website" />
@@ -125,8 +125,8 @@ const carrental = () => {
       <Header />
       <section className="heroeco" aria-label="Car Rental Hero Section">
         <div className="heroeco__copy">
-          <p className="heroeco__eyebrow">India’s Trusted Car Rental</p>
-          <h1 className="heroeco__title">{`${selectedCity.title}`}</h1>
+          <p className="heroeco__eyebrow">India's Trusted Cab Service</p>
+          <h1 className="heroeco__title">{`Chauffeur Service in ${selectedCity.city}`}</h1>
           <span className="small-head">
             <br />
             <h4>Reliable, Safe & Affordable</h4>

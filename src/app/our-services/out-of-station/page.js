@@ -8,75 +8,10 @@ import NumberCounter from "@/app/Components/NumberCounter/page";
 import AllBookingCars from "@/app/Components/AllBookingCars/page";
 import SiteFooter from "@/app/Components/Footer/page";
 import carListings from "../../data/carListings.json";
-import { FaLock } from "react-icons/fa";
+import { fetchFromSuggestions, getDistance } from "@/app/lib/mapbox";
+import { fetchToSuggestions } from "@/app/lib/mapbox";
 
-const CITIES = [
-  "Amritsar",
-  "Pathankot",
-  "Manali",
-  "Kasol",
-  "Kullu",
-  "Dharamshala",
-  "McLeodganj",
-  "Dalhousie",
-  "Badrinath",
-  "Joshimath",
-  "Auli",
-  "Udaipur",
-  "Jodhpur",
-  "Lucknow",
-  "Kanpur",
-  "Murthal",
-  "Panipat",
-  "Rohtak",
-  "Meerut",
-  "Bulandshahr",
-  "Muzaffarnagar",
-  "Aligarh",
-  "Mathura",
-  "Vrindavan",
-  "Mehandipur",
-  "Balaji",
-  "Neemrana",
-  "Alwar",
-  "Karnal",
-  "Ambala",
-  "Saharanpur",
-  "Agra",
-  "Bharatpur",
-  "Roorkee",
-  "Kashipur",
-  "Chandigarh",
-  "Haridwar",
-  "Rishikesh",
-  "Dehradun",
-  "Mussoorie",
-  "Jaipur",
-  "Patiala",
-  "Ludhiana",
-  "Haldwani",
-  "Rudrapur",
-  "Ramnagar",
-  "Jim",
-  "Corbett",
-  "Lansdowne",
-  "Kotdwar",
-  "Bhimtal",
-  "Nainital",
-  "Kasauli",
-  "Zirakpur",
-  "Bareilly",
-  "Moradabad",
-  "Gwalior",
-  "Ajmer",
-  "Moga",
-  "Kota",
-  "Jalandhar",
-  "Almora",
-  "Ranikhet",
-  "Shimla",
-];
-
+// ── Icons ──
 const IconLocation = ({ color = "#aaa", size = 15 }) => (
   <svg
     className="oos-f__ico"
@@ -142,20 +77,8 @@ const IconSwap = () => (
     <path d="M7 16V4m0 0L3 8m4-4 4 4M17 8v12m0 0 4-4m-4 4-4-4" />
   </svg>
 );
-const IconLock = () => (
-  <svg
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2.5"
-    width="9"
-    height="9"
-  >
-    <rect x="5" y="11" width="14" height="10" rx="2" />
-    <path d="M8 11V7a4 4 0 0 1 8 0v4" />
-  </svg>
-);
 
+// ── Helpers ──
 const formatDate = (val) => {
   if (!val) return null;
   const d = new Date(val + "T00:00:00");
@@ -172,17 +95,77 @@ const formatTime = (val) => {
   return `${hr % 12 || 12}:${m} ${hr >= 12 ? "PM" : "AM"}`;
 };
 
+// ── Reusable city input field ──
+function CityField({
+  label,
+  icon,
+  value,
+  onChange,
+  onSelect,
+  suggestions,
+  loading,
+  fieldRef,
+  show,
+  onFocus,
+}) {
+  return (
+    <div className="oos-f oos-f--grow" ref={fieldRef}>
+      <label className="oos-f__lbl">{label}</label>
+      <div className="oos-f__wrap">
+        {icon}
+        <input
+          className="oos-f__inp"
+          value={value}
+          placeholder={`Enter ${label.toLowerCase()}`}
+          autoComplete="off"
+          onChange={onChange}
+          onFocus={onFocus}
+        />
+        {loading && <span className="oos-spinner" />}
+      </div>
+      {show && suggestions.length > 0 && (
+        <ul className="oos-drop">
+          {suggestions.map((s) => (
+            <li key={s.id} onMouseDown={() => onSelect(s)}>
+              <IconLocationFill color="#d80117" size={11} />
+              <span>
+                <strong>{s.name}</strong>
+                <small
+                  style={{ color: "#aaa", fontSize: "11px", marginLeft: "6px" }}
+                >
+                  {s.full.split(",").slice(1).join(",").trim()}
+                </small>
+              </span>
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
+}
+
+// ── Main component ──
 export default function OutOfStation() {
   const [tripType, setTripType] = useState("oneway");
-  const [from, setFrom] = useState("Delhi");
-  const [fromInput, setFromInput] = useState("Delhi");
-  const [to, setTo] = useState("");
+
+  // From state
+  const [fromValue, setFromValue] = useState("");
+  const [fromCoords, setFromCoords] = useState(null);
+  const [fromSuggestions, setFromSuggestions] = useState([]);
+  const [fromLoading, setFromLoading] = useState(false);
+  const [showFrom, setShowFrom] = useState(false);
+
+  // To state
+  const [toValue, setToValue] = useState("");
+  const [toCoords, setToCoords] = useState(null);
+  const [toSuggestions, setToSuggestions] = useState([]);
+  const [toLoading, setToLoading] = useState(false);
+  const [showTo, setShowTo] = useState(false);
+
+  // Date / time
   const [date, setDate] = useState("");
   const [returnDate, setReturnDate] = useState("");
   const [time, setTime] = useState("07:00");
-  const [showFrom, setShowFrom] = useState(false);
-  const [showTo, setShowTo] = useState(false);
-  const [toWarning, setToWarning] = useState(false);
 
   const router = useRouter();
   const fromRef = useRef(null);
@@ -190,11 +173,9 @@ export default function OutOfStation() {
   const dateRef = useRef(null);
   const timeRef = useRef(null);
   const returnDateRef = useRef(null);
-  const warnTimer = useRef(null);
+  const fromDebounce = useRef(null);
+  const toDebounce = useRef(null);
   const today = new Date().toISOString().split("T")[0];
-
-  // fromIsDelhi
-  const fromIsDelhi = from === "Delhi";
 
   // Close dropdowns on outside click
   useEffect(() => {
@@ -206,74 +187,84 @@ export default function OutOfStation() {
     return () => document.removeEventListener("mousedown", close);
   }, []);
 
-  useEffect(() => () => clearTimeout(warnTimer.current), []);
-
-  // FROM suggestions
-  const fFrom = CITIES.filter(
-    (c) => c.toLowerCase().includes(fromInput.toLowerCase()) && c !== "Delhi",
-  );
-
-  // TO suggestions
-  const fTo = CITIES.filter(
-    (c) => c.toLowerCase().includes(to.toLowerCase()) && c !== "Delhi",
-  );
-
-  // Show 2-sec warning
-  const triggerToWarning = () => {
-    setToWarning(true);
-    clearTimeout(warnTimer.current);
-    warnTimer.current = setTimeout(() => setToWarning(false), 2000);
-  };
-
-  // Select FROM city → auto-set TO to Delhi
-  const handleFromSelect = (city) => {
-    setFrom(city);
-    setFromInput(city);
-    setShowFrom(false);
-    setTo("Delhi");
-  };
-
-  // FROM input change
-  const handleFromInputChange = (e) => {
+  const handleFromChange = (e) => {
     const val = e.target.value;
-    setFromInput(val);
+    setFromValue(val);
     setShowFrom(true);
     setShowTo(false);
 
-    if (val === "") {
-      setFrom("Delhi");
-      setFromInput("Delhi");
-      setTo("");
+    clearTimeout(fromDebounce.current);
+    fromDebounce.current = setTimeout(async () => {
+      setFromLoading(true);
+      const results = await fetchFromSuggestions(val);
+      setFromSuggestions(results);
+      setFromLoading(false);
+    }, 300);
+  };
+
+  const handleToChange = (e) => {
+    const val = e.target.value;
+    setToValue(val);
+    setShowTo(true);
+    setShowFrom(false);
+
+    clearTimeout(toDebounce.current);
+    toDebounce.current = setTimeout(async () => {
+      setToLoading(true);
+      const results = await fetchToSuggestions(val);
+      setToSuggestions(results);
+      setToLoading(false);
+    }, 300);
+  };
+
+  const handleFromSelect = (s) => {
+    setFromValue(s.name);
+    setFromCoords(s.coords);
+    setFromSuggestions([]);
+    setShowFrom(false);
+  };
+
+  const handleToSelect = (s) => {
+    setToValue(s.name);
+    setToCoords(s.coords);
+    setToSuggestions([]);
+    setShowTo(false);
+  };
+
+  const handleSwap = () => {
+    setFromValue(toValue);
+    setToValue(fromValue);
+    setFromSuggestions([]);
+    setToSuggestions([]);
+    setShowFrom(false);
+    setShowTo(false);
+  };
+
+  const handleSearch = async () => {
+    if (!fromValue.trim()) {
+      alert("Please enter a pickup city");
+      return;
+    }
+    if (!toValue.trim()) {
+      alert("Please enter a drop city");
+      return;
+    }
+    if (!fromCoords || !toCoords) {
+      alert("Please select pickup and drop locations");
+      return;
+    }
+    try {
+      const slug = `${fromValue}-to-${toValue}`
+        .toLowerCase()
+        .replace(/\s+/g, "-");
+      router.push(
+        `/cabs/${slug}?from=${encodeURIComponent(fromValue)}&to=${encodeURIComponent(toValue)}&fromCoords=${fromCoords[0]},${fromCoords[1]}&toCoords=${toCoords[0]},${toCoords[1]}`,
+      );
+    } catch {
+      alert("Something went wrong. Please try again.");
     }
   };
 
-  // Search
-  const handleSearch = () => {
-    // const token = crypto.randomUUID();
-    const destination = fromIsDelhi ? to : from;
-
-    if (!destination) {
-      alert("Please enter a destination city");
-      return;
-    }
-
-    const car = carListings.find((c) =>
-      c.destination?.toLowerCase().includes(destination.toLowerCase()),
-    );
-
-    if (!car) {
-      alert("No cabs available for this destination");
-      return;
-    }
-
-    const slug = car.destination.trim().toLowerCase().replace(/\s+/g, "-");
-    const token = crypto.randomUUID();
-    if (from !== "Delhi") {
-      router.push(`/cabs/${slug}?q=${token}`);
-    } else {
-      router.push(`/cabs/${slug}`);
-    }
-  };
   return (
     <>
       <Header />
@@ -289,6 +280,7 @@ export default function OutOfStation() {
           />
           <div className="oos-hero__dim" />
         </div>
+
         <div className="oos-hero__body">
           <div className="oos-text">
             <span className="oos-pill">✦ Trusted by 10 Lakh+ Travelers</span>
@@ -321,158 +313,49 @@ export default function OutOfStation() {
                 </svg>
                 One Way
               </button>
-              {/* <button
-                className={`oos-tab ${tripType === "roundtrip" ? "active" : ""}`}
-                onClick={() => setTripType("roundtrip")}
-              >
-                <svg
-                  width="13"
-                  height="13"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2.5"
-                >
-                  <path d="M17 1l4 4-4 4" />
-                  <path d="M3 11V9a4 4 0 0 1 4-4h14" />
-                  <path d="M7 23l-4-4 4-4" />
-                  <path d="M21 13v2a4 4 0 0 1-4 4H3" />
-                </svg>
-                Round Trip
-              </button> */}
             </div>
 
             <div className="oos-fields">
-              {/* ── FROM ── */}
-              <div
-                className={`oos-f oos-f--grow ${fromIsDelhi ? "oos-f--dis" : ""}`}
-                ref={fromRef}
-                style={fromIsDelhi ? { cursor: "default" } : {}}
-              >
-                {/* {fromIsDelhi && (
-                  <span className="oos-f__badge">
-                    <IconLock /> Fixed
-                  </span>
-                )} */}
-                <label className="oos-f__lbl">FROM</label>
-                <div className="oos-f__wrap">
-                  <IconLocation
-                    color={fromIsDelhi ? "#bbb" : "#d80117"}
-                    size={15}
-                  />
-                  <input
-                    className={fromIsDelhi ? "oos-f__inp--dis" : "oos-f__inp"}
-                    value={fromIsDelhi ? "Delhi" : fromInput}
-                    placeholder="Enter pickup city"
-                    autoComplete="off"
-                    readOnly={fromIsDelhi}
-                    onChange={fromIsDelhi ? undefined : handleFromInputChange}
-                    onFocus={
-                      fromIsDelhi
-                        ? undefined
-                        : () => {
-                            setShowFrom(true);
-                            setShowTo(false);
-                          }
-                    }
-                  />
-                </div>
-                {/* FROM dropdown — only in City→Delhi mode */}
-                {!fromIsDelhi && showFrom && fFrom.length > 0 && (
-                  <ul className="oos-drop">
-                    {fFrom.sort().map((c) => (
-                      <li key={c} onMouseDown={() => handleFromSelect(c)}>
-                        <IconLocationFill color="#d80117" size={11} />
-                        {c}
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </div>
-
-              {/* ── SWAP ── */}
-              <button
-                className="oos-swap"
-                onClick={() => {
-                  if (fromIsDelhi) {
-                    setFrom("");
-                    setFromInput("");
-                    setTo("Delhi");
-                    setTimeout(() => setShowFrom(true), 50);
-                  } else {
-                    setFrom("Delhi");
-                    setFromInput("Delhi");
-                    setTo("");
-                  }
+              {/* FROM */}
+              <CityField
+                label="Delhi location"
+                icon={<IconLocation color="#d80117" size={15} />}
+                value={fromValue}
+                onChange={handleFromChange}
+                onSelect={handleFromSelect}
+                suggestions={fromSuggestions}
+                loading={fromLoading}
+                fieldRef={fromRef}
+                show={showFrom}
+                onFocus={() => {
+                  setShowFrom(true);
+                  setShowTo(false);
                 }}
-              >
+              />
+
+              {/* SWAP */}
+              <button className="oos-swap" onClick={handleSwap}>
                 <IconSwap />
               </button>
 
-              {/* ── TO ── */}
-              <div
-                className={`oos-f oos-f--grow ${!fromIsDelhi ? "oos-f--dis" : ""}`}
-                ref={toRef}
-                onClick={!fromIsDelhi ? triggerToWarning : undefined}
-                style={!fromIsDelhi ? { cursor: "pointer" } : {}}
-              >
-                {/* 2-sec warning */}
-                {toWarning && (
-                  <div className="oos-warning">
-                    <FaLock /> Delhi is fixed as drop city
-                  </div>
-                )}
-                <label className="oos-f__lbl">TO</label>
-                <div className="oos-f__wrap">
-                  <IconLocationFill
-                    color={!fromIsDelhi ? "#bbb" : "#d80117"}
-                    size={14}
-                  />
-                  {fromIsDelhi ? (
-                    <input
-                      className="oos-f__inp"
-                      placeholder="Enter drop city"
-                      value={to}
-                      autoComplete="off"
-                      onChange={(e) => {
-                        setTo(e.target.value);
-                        setShowTo(true);
-                        setShowFrom(false);
-                      }}
-                      onFocus={() => {
-                        setShowTo(true);
-                        setShowFrom(false);
-                      }}
-                    />
-                  ) : (
-                    <input
-                      className="oos-f__inp--dis"
-                      value="Delhi"
-                      disabled
-                      readOnly
-                    />
-                  )}
-                </div>
-                {/* TO dropdown — Delhi→City mode only */}
-                {fromIsDelhi && showTo && fTo.length > 0 && (
-                  <ul className="oos-drop">
-                    {fTo.sort().map((c) => (
-                      <li
-                        key={c}
-                        onMouseDown={() => {
-                          setTo(c);
-                          setShowTo(false);
-                        }}
-                      >
-                        <IconLocationFill color="#d80117" size={11} />
-                        {c}
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </div>
+              {/* TO */}
+              <CityField
+                label="TO Drop Location"
+                icon={<IconLocationFill color="#d80117" size={14} />}
+                value={toValue}
+                onChange={handleToChange}
+                onSelect={handleToSelect}
+                suggestions={toSuggestions}
+                loading={toLoading}
+                fieldRef={toRef}
+                show={showTo}
+                onFocus={() => {
+                  setShowTo(true);
+                  setShowFrom(false);
+                }}
+              />
 
-              {/* ── PICKUP DATE ── */}
+              {/* PICKUP DATE */}
               <div
                 className="oos-f oos-f--dt"
                 onClick={() => dateRef.current?.showPicker()}
@@ -495,7 +378,7 @@ export default function OutOfStation() {
                 />
               </div>
 
-              {/* ── PICKUP TIME ── */}
+              {/* PICKUP TIME */}
               <div
                 className="oos-f oos-f--dt"
                 onClick={() => timeRef.current?.showPicker()}
@@ -517,7 +400,7 @@ export default function OutOfStation() {
                 />
               </div>
 
-              {/* ── RETURN DATE ── */}
+              {/* RETURN DATE */}
               {tripType === "roundtrip" && (
                 <div
                   className="oos-f oos-f--dt oos-f--return"
@@ -542,7 +425,7 @@ export default function OutOfStation() {
                 </div>
               )}
 
-              {/* ── SEARCH ── */}
+              {/* SEARCH */}
               <button onClick={handleSearch} className="oos-btn">
                 Search Cab
               </button>

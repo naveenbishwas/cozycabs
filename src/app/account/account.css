@@ -1,0 +1,728 @@
+/* ─── Account Page — Red · Black · White ───────────────────────── */
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap");
+
+:root {
+  --brand: #d80117;
+  --brand-dark: #d80117;
+  --brand-light: #fff0f1;
+  --black: #0d0d0d;
+  --white: #ffffff;
+  --grey-1: #f4f6f9;
+  --grey-2: #e8e8e8;
+  --grey-3: #888;
+  --txt: #1a1a2e;
+  --font: "DM Sans", "Segoe UI", sans-serif;
+  --r: 6px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── Page shell ── */
+.acc-page {
+  min-height: 100vh;
+  display: flex;
+  font-family: var(--font);
+  background: var(--black) !important;
+  margin-top: 60px;
+}
+
+/* ── Left panel (brand side) ── */
+.acc-panel {
+  width: 420px;
+  min-width: 420px;
+  /* background: var(--brand) !important; */
+  background: #d80117;
+  display: flex;
+  flex-direction: column;
+  padding: 48px 44px;
+  position: relative;
+  overflow: hidden;
+}
+
+.acc-panel::before,
+.acc-panel::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+}
+.acc-panel::before {
+  width: 340px;
+  height: 340px;
+  top: -80px;
+  right: -80px;
+}
+.acc-panel::after {
+  width: 220px;
+  height: 220px;
+  bottom: -60px;
+  left: -60px;
+}
+
+.acc-panel__logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 1;
+}
+
+.acc-panel__logo img {
+  width: 130px;
+  filter: brightness(0) invert(1);
+}
+
+.acc-panel__body {
+  z-index: 1;
+  margin-top: 60px;
+  margin-bottom: 30px;
+}
+
+.acc-panel__tag {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.18);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  padding: 5px 13px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.acc-panel__headline {
+  font-size: 34px;
+  font-weight: 900;
+  color: #fff;
+  line-height: 1.15;
+  letter-spacing: -0.8px;
+  margin-bottom: 16px;
+}
+
+.acc-panel__headline span {
+  display: block;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -0.3px;
+  margin-top: 4px;
+}
+
+.acc-panel__perks {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.acc-panel__perks li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 13.5px;
+  font-weight: 500;
+}
+
+.acc-panel__perks li::before {
+  content: "✓";
+  width: 22px;
+  height: 22px;
+  min-width: 22px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 800;
+  color: #fff;
+}
+
+.acc-panel__footer {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.5);
+  z-index: 1;
+  margin-top: auto;
+}
+
+/* ── Right panel (form side) ── */
+.acc-form-side {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 32px;
+  background: var(--grey-1);
+  overflow-y: auto;
+}
+
+.acc-box {
+  width: 100%;
+  max-width: 460px;
+}
+
+/* ── Tabs ── */
+.acc-tabs {
+  display: flex;
+  background: var(--white);
+  border: 1px solid var(--grey-2);
+  border-radius: 50px;
+  padding: 4px;
+  margin-bottom: 20px;
+  gap: 4px;
+}
+
+.acc-tab {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  background: transparent;
+  border-radius: 50px;
+  font-family: var(--font);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--grey-3);
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+
+.acc-tab.active {
+  background: #d80117;
+  color: #fff;
+}
+
+/* ── Form card ── */
+.acc-card {
+  background: var(--white);
+  border-radius: 12px;
+  border: 1px solid var(--grey-2);
+  padding: 32px 32px 28px;
+}
+
+.acc-card__title {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--txt);
+  letter-spacing: -0.4px;
+  margin-bottom: 4px;
+}
+
+.acc-card__sub {
+  font-size: 13px;
+  color: var(--grey-3);
+  margin-bottom: 20px;
+}
+
+/* ── Google btn ── */
+.acc-google-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px;
+  border: 1.5px solid var(--grey-2);
+  border-radius: var(--r);
+  background: var(--white);
+  font-family: var(--font);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--txt);
+  cursor: pointer;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+  margin-bottom: 0;
+  margin-top: 14px;
+}
+
+.acc-google-btn:hover {
+  border-color: #aaa;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.acc-google-btn svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+/* ── Divider ── */
+.acc-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+  font-size: 12px;
+  color: var(--grey-3);
+  font-weight: 500;
+}
+
+.acc-divider::before,
+.acc-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--grey-2);
+}
+
+/* ── Fields ── */
+.acc-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.acc-field label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--txt);
+}
+
+.acc-field input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1.5px solid var(--grey-2);
+  border-radius: var(--r);
+  font-family: var(--font);
+  font-size: 14px;
+  color: var(--txt);
+  background: var(--grey-1);
+  outline: none;
+  transition:
+    border-color 0.2s,
+    background 0.2s;
+}
+
+.acc-field input:focus {
+  border-color: #d80117;
+  background: var(--white);
+}
+
+.acc-field input::placeholder {
+  color: #bbb;
+}
+
+/* ── Forgot password ── */
+.acc-forgot-row {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -4px;
+  margin-bottom: 14px;
+}
+
+.acc-forgot-link {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #d80117;
+  text-decoration: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-family: var(--font);
+  padding: 0;
+}
+
+.acc-forgot-link:hover {
+  text-decoration: underline;
+}
+
+/* ── Submit btn ── */
+.acc-submit-btn {
+  width: 100%;
+  padding: 13px;
+  background: #d80117;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  font-family: var(--font);
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    transform 0.1s;
+  margin-top: 4px;
+}
+
+.acc-submit-btn:hover {
+  background: var(--brand-dark);
+  transform: translateY(-1px);
+}
+
+.acc-submit-btn:active {
+  transform: translateY(0);
+}
+
+/* ── Bottom switch ── */
+.acc-switch {
+  text-align: center;
+  margin-top: 16px;
+  font-size: 13px;
+  color: var(--grey-3);
+}
+
+.acc-switch button {
+  background: none;
+  border: none;
+  color: #d80117;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: var(--font);
+  padding: 0;
+  margin-left: 4px;
+}
+
+.acc-switch button:hover {
+  text-decoration: underline;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   MOBILE  ≤ 860px — panel niche, light bg, modern look
+═══════════════════════════════════════════════════════════ */
+@media (max-width: 860px) {
+  .acc-page {
+    flex-direction: column;
+    background: #f4f6f9;
+    margin-top: 0;
+  }
+
+  /* Form pehle (upar) */
+  .acc-form-side {
+    order: 1;
+    padding: 90px 16px 28px;
+    background: #f4f6f9;
+  }
+
+  /* Panel niche */
+  .acc-panel {
+    order: 2;
+    width: 100%;
+    min-width: 0;
+    min-height: unset;
+    padding: 32px 20px 28px;
+    border-radius: 0;
+    overflow: hidden;
+  }
+
+  .acc-panel::before,
+  .acc-panel::after {
+    display: none;
+  }
+
+  .acc-panel__logo {
+    margin-bottom: 0;
+  }
+
+  .acc-panel__body {
+    margin-top: 24px;
+    margin-bottom: 0;
+  }
+
+  .acc-panel__headline {
+    font-size: 22px;
+  }
+
+  .acc-panel__headline span {
+    font-size: 15px;
+  }
+
+  .acc-panel__perks {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 16px;
+    margin-top: 16px;
+  }
+
+  .acc-panel__perks li {
+    font-size: 12.5px;
+    gap: 8px;
+  }
+
+  .acc-panel__footer {
+    display: none;
+  }
+
+  /* Tabs & card — light theme on mobile */
+  .acc-tabs {
+    background: #fff;
+    border-color: #e8e8e8;
+  }
+
+  .acc-tab {
+    color: #888;
+  }
+
+  .acc-card {
+    border-radius: 12px;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
+  }
+}
+
+@media (max-width: 480px) {
+  .acc-card {
+    padding: 22px 16px 20px;
+  }
+
+  .acc-card__title {
+    font-size: 20px;
+  }
+
+  .acc-panel__perks {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .acc-panel {
+    padding: 28px 16px 24px;
+  }
+
+  .acc-panel__headline {
+    font-size: 20px;
+  }
+}
+/* ── Toast notifications ── */
+.acc-toast-wrap {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.acc-toast {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 18px;
+  border-radius: 10px;
+  font-family: var(--font);
+  font-size: 14px;
+  font-weight: 600;
+  min-width: 280px;
+  max-width: 360px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+  animation: acc-slideIn 0.35s cubic-bezier(0.22, 1, 0.36, 1) both;
+  pointer-events: auto;
+}
+
+.acc-toast.success {
+  background: #e6f9ee;
+  color: #1a7a45;
+  border: 1.5px solid #a3dbb8;
+}
+
+.acc-toast.error {
+  background: #fff0f1;
+  color: #c0001a;
+  border: 1.5px solid #f5bfc4;
+}
+
+.acc-toast.hiding {
+  animation: acc-slideOut 0.3s cubic-bezier(0.55, 0, 1, 0.45) forwards;
+}
+
+.acc-toast__icon {
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 900;
+  color: #fff;
+}
+
+.acc-toast.success .acc-toast__icon {
+  background: #1a7a45;
+}
+.acc-toast.error .acc-toast__icon {
+  background: #c0001a;
+}
+
+.acc-toast__msg {
+  flex: 1;
+}
+
+.acc-toast__close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 1;
+  opacity: 0.45;
+  color: inherit;
+  padding: 0;
+  font-family: var(--font);
+  margin-left: 4px;
+}
+.acc-toast__close:hover {
+  opacity: 1;
+}
+
+@keyframes acc-slideIn {
+  from {
+    transform: translateX(60px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes acc-slideOut {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+    max-height: 80px;
+  }
+  to {
+    transform: translateX(60px);
+    opacity: 0;
+    max-height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin: 0;
+  }
+}
+/* ── Paste these at the END of your account.css ── */
+
+/* Slide wrap — clips overflow during animation */
+.acc-slide-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+/* All panels stack via absolute, active one is relative (takes height) */
+.acc-slide-panel {
+  transition:
+    transform 0.42s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.42s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform, opacity;
+}
+
+/* Active — normal flow, fully visible */
+.acc-slide-panel--active {
+  position: relative;
+  transform: translateX(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Off-screen to the right (will enter from right) */
+.acc-slide-panel--enter-right {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  transform: translateX(52px);
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Off-screen to the left (exiting) */
+.acc-slide-panel--exit-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  transform: translateX(-52px);
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Hide tabs when forgot is open */
+.acc-tabs--hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-6px);
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+.acc-tabs {
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+/* Back button */
+.acc-back-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  color: var(--grey-3);
+  font-family: var(--font);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  margin-bottom: 20px;
+  transition: color 0.2s;
+}
+.acc-back-btn:hover {
+  color: var(--txt);
+}
+.acc-back-arrow {
+  width: 22px;
+  height: 22px;
+  border: 1.5px solid currentColor;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  transition: transform 0.2s;
+}
+.acc-back-btn:hover .acc-back-arrow {
+  transform: translateX(-2px);
+}
+
+/* Success icon */
+.acc-success-icon {
+  width: 56px;
+  height: 56px;
+  background: #e6f9ee;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+/* Sent email highlight */
+.acc-sent-email {
+  font-size: 14px;
+  font-weight: 700;
+  color: #d80117;
+  margin-bottom: 16px;
+  word-break: break-all;
+}
+
+/* Info text */
+.acc-info-text {
+  font-size: 13px;
+  color: var(--grey-3);
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
