@@ -545,6 +545,7 @@ const Page = () => {
   const fromCity = searchParams.get("from") || "";
   const toCity = searchParams.get("to") || "";
   const token = searchParams.get("q");
+  const router = useRouter();
 
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedCab, setSelectedCab] = useState(null);
@@ -638,6 +639,12 @@ const Page = () => {
   }, []);
 
   const openModal = (cabName, price, type, extra = {}) => {
+    const user = auth.currentUser;
+    if (!user) {
+      alert("Please log in to continue with booking.");
+      router.push("/account");
+      return;
+    }
     setSelectedCab({
       cabName,
       price,

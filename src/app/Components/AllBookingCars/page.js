@@ -36,24 +36,28 @@ const AllBookingCars = () => {
 
   const handleViewCab = async (destination) => {
     try {
-      const toCity = destination.toLowerCase().split("to")[1]?.trim();
+      const parts = destination.toLowerCase().split("to");
+      const toCity = parts.length > 1 ? parts[1].trim() : null;
 
       if (!toCity) {
         alert("Invalid destination");
         return;
       }
 
-      // Delhi fixed
-      const fromRes = await fetchFromSuggestions("Delhi");
+      // Delhi fixed (no API dependency)
+      const from = {
+        name: "Delhi",
+        coords: [77.1025, 28.7041],
+      };
+
       const toRes = await fetchToSuggestions(toCity);
 
-      const from = fromRes[0];
-      const to = toRes[0];
-
-      if (!from || !to) {
+      if (!toRes || toRes.length === 0) {
         alert("Location not found");
         return;
       }
+
+      const to = toRes[0];
 
       const slug = destination.toLowerCase().replace(/\s+/g, "-");
 
@@ -61,7 +65,7 @@ const AllBookingCars = () => {
         `/cabs/${slug}?from=${encodeURIComponent(from.name)}&to=${encodeURIComponent(to.name)}&fromCoords=${from.coords[0]},${from.coords[1]}&toCoords=${to.coords[0]},${to.coords[1]}`,
       );
     } catch (err) {
-      console.log(err);
+      console.error(err);
       alert("Something went wrong");
     }
   };
