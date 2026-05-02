@@ -193,9 +193,6 @@
   color: #555;
 }
 
-/* ════════════════════════════════════════════════
-   MAIN WRAP
-════════════════════════════════════════════════ */
 .trp-main-wrap {
   max-width: 900px;
   margin: 0 auto;
@@ -208,7 +205,7 @@
 .trp-filters {
   display: flex;
   gap: 8px;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   margin-bottom: 22px;
 }
 
@@ -216,8 +213,9 @@
   display: flex;
   align-items: center;
   gap: 5px;
+  white-space: nowrap;
   padding: 7px 16px;
-  border-radius: 20px;
+  border-radius: 6px;
   border: 1.5px solid #e0e0e0;
   background: #fff;
   font-size: 13px;
@@ -790,10 +788,172 @@
   max-width: 320px;
   margin: 0 auto;
 }
-
 /* ════════════════════════════════════════════════
-   RESPONSIVE
-════════════════════════════════════════════════ */
+   TRACK RIDE — MOBILE UX FIX
+   Existing trackRide.css ke saare @media (max-width: 640px)
+   blocks ko DELETE karke yeh paste karo
+   ════════════════════════════════════════════════ */
+
+/* ── Filter tabs — horizontal scroll, no wrap ── */
+.trp-filters {
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  flex-wrap: nowrap;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding-bottom: 2px;
+  margin-bottom: 18px;
+}
+
+.trp-filters::-webkit-scrollbar {
+  display: none;
+}
+
+.trp-filter-btn {
+  flex-shrink: 0;
+}
+
+/* ── Booking card top row — fixed 2-row layout ── */
+.bk-card__top {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: start;
+  gap: 10px;
+  padding: 14px 14px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.bk-card__top-left {
+  min-width: 0;
+  flex: unset;
+}
+
+/* Route row */
+.bk-card__route {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 5px;
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
+
+.bk-city {
+  font-size: 14px;
+  font-weight: 800;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 120px;
+}
+
+.bk-arrow {
+  flex-shrink: 0;
+  font-size: 13px;
+}
+
+/* Meta chips row */
+.bk-card__meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  font-size: 11.5px;
+  color: #888;
+  row-gap: 4px;
+}
+
+.bk-card__meta span {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  white-space: nowrap;
+}
+
+/* Right col — status pill + price + toggle stacked */
+.bk-card__top-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.bk-status-pill {
+  font-size: 10.5px;
+  padding: 3px 9px;
+  white-space: nowrap;
+}
+
+.bk-price {
+  font-size: 15px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.bk-toggle {
+  width: 30px;
+  height: 30px;
+  font-size: 14px;
+}
+
+/* ── Body ── */
+.bk-card__body {
+  padding: 0 14px 16px;
+}
+
+/* Detail grid — single col on mobile */
+.bk-detail-grid {
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  padding-top: 14px;
+  margin-bottom: 14px;
+}
+
+.bk-detail-block {
+  padding: 10px 12px;
+}
+
+.bk-detail-val {
+  font-size: 13.5px;
+}
+
+/* Action buttons — wrap nicely */
+.bk-actions {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  padding-top: 4px;
+}
+
+.bk-btn {
+  padding: 9px 14px;
+  font-size: 12px;
+}
+
+/* ── Stats bar ── */
+.trp-stats-bar__inner {
+  padding: 10px 14px;
+  gap: 7px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.trp-stats-bar__inner::-webkit-scrollbar {
+  display: none;
+}
+
+.trp-stat-pill {
+  flex-shrink: 0;
+  padding: 4px 10px;
+  font-size: 12px;
+}
+
+/* ── Hero ── */
 @media (max-width: 640px) {
   .trp-hero {
     padding: 40px 16px 36px;
@@ -805,69 +965,37 @@
   .trp-main-wrap {
     padding: 20px 14px 48px;
   }
-
-  .bk-card__top {
-    padding: 14px 14px;
-  }
-  .bk-card__body {
-    padding: 0 14px 16px;
-  }
-
-  .bk-city {
-    font-size: 14px;
-  }
-  .bk-price {
-    font-size: 14px;
-  }
-
-  .bk-detail-grid {
-    grid-template-columns: 1fr;
-    gap: 8px;
-  }
-
-  .bk-card__top {
-    flex-wrap: wrap;
-  }
-  .bk-card__top-right {
-    width: 100%;
-    justify-content: space-between;
-  }
-
-  .bk-actions {
-    gap: 6px;
-  }
-  .bk-btn {
-    padding: 9px 14px;
-    font-size: 12px;
-  }
-
-  .trp-stats-bar__inner {
-    padding: 12px 14px;
-    gap: 8px;
-  }
-  .trp-stat-pill {
-    padding: 4px 10px;
-    font-size: 12px;
-  }
-
-  .trp-filters {
-    gap: 6px;
-  }
-  .trp-filter-btn {
-    padding: 6px 12px;
-    font-size: 12px;
-  }
 }
 
 @media (max-width: 400px) {
   .trp-hero__title {
-    font-size: 24px;
+    font-size: 26px;
   }
+
+  .bk-city {
+    max-width: 90px;
+    font-size: 13px;
+  }
+
+  .bk-detail-grid {
+    grid-template-columns: 1fr;
+  }
+
   .bk-edit-form__row {
     flex-direction: column;
   }
+
   .bk-edit-form__input {
-    min-width: 0;
     width: 100%;
+    min-width: 0;
+  }
+
+  .bk-actions {
+    flex-direction: column;
+  }
+
+  .bk-btn {
+    width: 100%;
+    justify-content: center;
   }
 }
