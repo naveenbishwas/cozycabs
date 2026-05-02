@@ -46,10 +46,6 @@ export default function SiteFooter() {
   const router = useRouter();
 
   const slug = pathname?.split("-").pop(); // ahmedabad
-<<<<<<< HEAD
-
-=======
->>>>>>> shubham
   const cityName = slug?.charAt(0).toUpperCase() + slug?.slice(1);
 
   const cityMatch = city.find(
@@ -195,7 +191,7 @@ export default function SiteFooter() {
 
         {/* ── SEO Keywords ── */}
         {cityName && (
-          <div className="footer__seo">
+          <div className="footer__seo or">
             <div className="footer__service-wrapper">
               {cityMatch?.service?.length > 0 && (
                 <h4 className="seo-heading">Popular Searches in {cityName}</h4>
