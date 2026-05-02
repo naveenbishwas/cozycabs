@@ -2012,3 +2012,288 @@ body {
     font-size: 18px;
   }
 }
+/* ══════════════════════════════════════════════════════════════════
+   LOGIN REDIRECT POPUP — loginRedirectPopup.css
+   CozyCabz design system — matches cabPage.css exactly
+══════════════════════════════════════════════════════════════════ */
+
+.lrp-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  backdrop-filter: blur(6px);
+  animation: lrp-fade 0.22s ease;
+}
+
+@keyframes lrp-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.lrp-modal {
+  background: #fff;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 380px;
+  overflow: hidden;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.22);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  animation: lrp-up 0.28s cubic-bezier(0.34, 1.3, 0.64, 1);
+}
+
+@keyframes lrp-up {
+  from {
+    transform: translateY(28px) scale(0.96);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+/* ── Red header ── */
+.lrp-header {
+  background: #d80117;
+  width: 100%;
+  padding: 32px 24px 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  position: relative;
+}
+
+.lrp-avatar {
+  width: 64px;
+  height: 64px;
+  background: rgba(255, 255, 255, 0.18);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid rgba(255, 255, 255, 0.35);
+}
+
+.lrp-header__title {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 800;
+  margin: 0 0 4px;
+  letter-spacing: -0.3px;
+}
+
+.lrp-header__sub {
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 13px;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.lrp-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: rgba(255, 255, 255, 0.18);
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 14px;
+  transition: background 0.2s;
+}
+
+.lrp-close:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* ── Body ── */
+.lrp-body {
+  padding: 28px 24px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+
+/* Notice box */
+.lrp-notice {
+  background: #fff8f0;
+  border: 1px solid #ffd599;
+  border-radius: 6px;
+  padding: 12px 16px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  width: 100%;
+  text-align: left;
+}
+
+.lrp-notice__icon {
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.lrp-notice__text {
+  font-size: 12.5px;
+  color: #b36200;
+  margin: 0;
+  line-height: 1.55;
+}
+
+/* Countdown ring */
+.lrp-timer-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.lrp-timer-label {
+  font-size: 13px;
+  color: #888;
+  margin: 0;
+}
+
+.lrp-ring-wrap {
+  position: relative;
+  width: 72px;
+  height: 72px;
+}
+
+.lrp-ring-svg {
+  transform: rotate(-90deg);
+}
+
+.lrp-ring-track {
+  fill: none;
+  stroke: #f5e0e1;
+  stroke-width: 5;
+}
+
+.lrp-ring-progress {
+  fill: none;
+  stroke: #d80117;
+  stroke-width: 5;
+  stroke-dasharray: 188.5;
+  stroke-dashoffset: 0;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 1s linear;
+}
+
+.lrp-ring-count {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  font-weight: 800;
+  color: #d80117;
+  line-height: 1;
+}
+
+/* Buttons */
+.lrp-actions {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+
+.lrp-btn-cancel {
+  flex: 1;
+  height: 44px;
+  background: #f4f6f9;
+  border: 1.5px solid #e0e0e0;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #555;
+  font-family: inherit;
+  transition: background 0.2s;
+}
+
+.lrp-btn-cancel:hover {
+  background: #eaecef;
+}
+
+.lrp-btn-login {
+  flex: 2;
+  height: 44px;
+  background: #d80117;
+  border: none;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  font-family: inherit;
+  transition:
+    background 0.2s,
+    transform 0.1s;
+}
+
+.lrp-btn-login:hover {
+  background: #b3000f;
+  transform: translateY(-1px);
+}
+
+.lrp-btn-login:active {
+  transform: translateY(0);
+}
+
+/* Trust row */
+.lrp-trust {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: #2d9e2d;
+  font-weight: 500;
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   MOBILE ≤ 480px  — bottom sheet style
+══════════════════════════════════════════════════════════════════ */
+@media (max-width: 480px) {
+  .lrp-overlay {
+    align-items: flex-end;
+    padding: 0;
+  }
+
+  .lrp-modal {
+    border-radius: 20px 20px 0 0;
+    max-width: 100%;
+  }
+
+  .lrp-header {
+    padding: 26px 20px 22px;
+  }
+
+  .lrp-body {
+    padding: 22px 20px 36px;
+  }
+}

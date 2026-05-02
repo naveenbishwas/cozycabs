@@ -547,6 +547,7 @@ const Page = () => {
   const token = searchParams.get("q");
   const router = useRouter();
 
+  const [redirectPopupOpen, setRedirectPopupOpen] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedCab, setSelectedCab] = useState(null);
   const [km, setKm] = useState(0);
@@ -641,8 +642,7 @@ const Page = () => {
   const openModal = (cabName, price, type, extra = {}) => {
     const user = auth.currentUser;
     if (!user) {
-      alert("Please log in to continue with booking.");
-      router.push("/account");
+      setRedirectPopupOpen(true);
       return;
     }
     setSelectedCab({
@@ -1099,6 +1099,184 @@ const Page = () => {
       </div>
 
       <SiteFooter />
+      {redirectPopupOpen && (
+        <div
+          className="lrp-overlay"
+          onClick={() => {
+            clearInterval(window._lrpTimer);
+            setRedirectPopupOpen(false);
+          }}
+        >
+          <div className="lrp-modal" onClick={(e) => e.stopPropagation()}>
+            {/* ── Red Header ── */}
+            <div className="lrp-header">
+              <button
+                className="lrp-close"
+                onClick={() => {
+                  clearInterval(window._lrpTimer);
+                  setRedirectPopupOpen(false);
+                }}
+              >
+                ✕
+              </button>
+              <div className="lrp-avatar">
+                <svg width="28" height="28" viewBox="0 0 56 56" fill="none">
+                  <circle
+                    cx="28"
+                    cy="18"
+                    r="9"
+                    stroke="#fff"
+                    strokeWidth="2.2"
+                    fill="none"
+                  />
+                  <path
+                    d="M10 46c0-9.94 8.06-18 18-18s18 8.06 18 18"
+                    stroke="#fff"
+                    strokeWidth="2.2"
+                    strokeLinecap="round"
+                    fill="none"
+                  />
+                  <circle cx="28" cy="18" r="4" fill="rgba(255,255,255,0.35)" />
+                </svg>
+              </div>
+              <div>
+                <p className="lrp-header__title">Login Required</p>
+                <p className="lrp-header__sub">
+                  Please log in to book your cab
+                </p>
+              </div>
+            </div>
+
+            {/* ── Body ── */}
+            <div className="lrp-body">
+              {/* Notice */}
+              <div className="lrp-notice">
+                <svg
+                  width="15"
+                  height="15"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  className="lrp-notice__icon"
+                >
+                  <circle
+                    cx="12"
+                    cy="12"
+                    r="10"
+                    stroke="#b36200"
+                    strokeWidth="1.8"
+                  />
+                  <path
+                    d="M12 8v4M12 16h.01"
+                    stroke="#b36200"
+                    strokeWidth="1.8"
+                    strokeLinecap="round"
+                  />
+                </svg>
+                <p className="lrp-notice__text">
+                  Your selected cab has been saved. Log in to complete your
+                  booking.
+                </p>
+              </div>
+
+              {/* Circular countdown */}
+              <div className="lrp-timer-wrap">
+                <p className="lrp-timer-label">Redirecting to login in</p>
+                <div className="lrp-ring-wrap">
+                  <svg
+                    className="lrp-ring-svg"
+                    width="72"
+                    height="72"
+                    viewBox="0 0 72 72"
+                  >
+                    <circle className="lrp-ring-track" cx="36" cy="36" r="30" />
+                    <circle
+                      className="lrp-ring-progress"
+                      cx="36"
+                      cy="36"
+                      r="30"
+                      id="lrpRing"
+                    />
+                  </svg>
+                  <div className="lrp-ring-count" id="lrpCount">
+                    3
+                  </div>
+                </div>
+              </div>
+
+              {/* Buttons */}
+              <div className="lrp-actions">
+                <button
+                  className="lrp-btn-cancel"
+                  onClick={() => {
+                    clearInterval(window._lrpTimer);
+                    setRedirectPopupOpen(false);
+                  }}
+                >
+                  Cancel
+                </button>
+                <button
+                  className="lrp-btn-login"
+                  onClick={() => {
+                    clearInterval(window._lrpTimer);
+                    router.push("/account");
+                  }}
+                >
+                  Login Now
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none">
+                    <path
+                      d="M5 12h14M13 6l6 6-6 6"
+                      stroke="#fff"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </button>
+              </div>
+
+              {/* Trust */}
+              <div className="lrp-trust">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"
+                    stroke="#2d9e2d"
+                    strokeWidth="1.8"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+                Safe &amp; secure login
+              </div>
+            </div>
+          </div>
+
+          {/* Countdown script — runs when popup mounts */}
+          <span
+            ref={(el) => {
+              if (!el) return;
+              clearInterval(window._lrpTimer);
+              const TOTAL = 188.5;
+              let secs = 3;
+              const ring = document.getElementById("lrpRing");
+              const count = document.getElementById("lrpCount");
+              if (ring) ring.style.strokeDashoffset = "0";
+              if (count) count.textContent = "3";
+              window._lrpTimer = setInterval(() => {
+                secs--;
+                if (count) count.textContent = String(secs);
+                if (ring)
+                  ring.style.strokeDashoffset = String(
+                    TOTAL - TOTAL * (secs / 3),
+                  );
+                if (secs <= 0) {
+                  clearInterval(window._lrpTimer);
+                  router.push("/account");
+                }
+              }, 1000);
+            }}
+            style={{ display: "none" }}
+          />
+        </div>
+      )}
 
       {/* ══════════════════════════════════════════════════
           MODAL — only this section is new
