@@ -28,6 +28,13 @@ export default function AccountPage() {
   const [resetLoading, setResetLoading] = useState(false);
   const [resetSent, setResetSent] = useState(false);
 
+  // otp
+  const [otpSent, setOtpSent] = useState(false);
+  const [otpValues, setOtpValues] = useState(["", "", "", "", "", ""]);
+  const [otpError, setOtpError] = useState("");
+  const [otpLoading, setOtpLoading] = useState(false);
+  const otpRefs = useRef([]);
+
   const [fullName, setFullName] = useState("");
   const [signupLoading, setSignupLoading] = useState(false);
   const [loginLoading, setLoginLoading] = useState(false);
@@ -102,7 +109,7 @@ export default function AccountPage() {
     }
   };
 
-  /* ── Sign Up ── */
+  /* ── Sign Up — sends OTP via API ── */
   const handleSignUp = async () => {
     if (!fullName.trim() || !email.trim() || !password || !confirmPassword) {
       showToast("All fields are required.", "error");
@@ -118,6 +125,83 @@ export default function AccountPage() {
     }
     setSignupLoading(true);
     try {
+      const res = await fetch("/api/send-mail", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ type: "otp", email: email.trim() }),
+      });
+      const data = await res.json();
+      if (!data.success) throw new Error(data.error || "OTP send failed");
+      setOtpValues(["", "", "", "", "", ""]);
+      setOtpError("");
+      setOtpSent(true);
+      showToast("OTP sent to your email 📩", "success");
+    } catch (error) {
+      console.error(error);
+      showToast("Failed to send OTP. Try again.", "error");
+    } finally {
+      setSignupLoading(false);
+    }
+  };
+
+  /* ── OTP input handlers ── */
+  const handleOtpChange = (index, val) => {
+    if (!/^\d*$/.test(val)) return;
+    const next = [...otpValues];
+    next[index] = val.slice(-1);
+    setOtpValues(next);
+    setOtpError("");
+    if (val && index < 5) otpRefs.current[index + 1]?.focus();
+  };
+
+  const handleOtpKeyDown = (index, e) => {
+    if (e.key === "Backspace" && !otpValues[index] && index > 0) {
+      otpRefs.current[index - 1]?.focus();
+    }
+  };
+
+  const handleOtpPaste = (e) => {
+    const pasted = e.clipboardData
+      .getData("text")
+      .replace(/\D/g, "")
+      .slice(0, 6);
+    if (!pasted) return;
+    const next = [...otpValues];
+    pasted.split("").forEach((ch, i) => {
+      next[i] = ch;
+    });
+    setOtpValues(next);
+    otpRefs.current[Math.min(pasted.length, 5)]?.focus();
+  };
+
+  /* ── Verify OTP via server ── */
+  const handleVerifyOtp = async () => {
+    const entered = otpValues.join("");
+    if (entered.length < 6) {
+      setOtpError("Please enter all 6 digits.");
+      return;
+    }
+    setOtpLoading(true);
+    try {
+      // Server-side verify — safe, no direct Firestore client read
+      const res = await fetch("/api/send-mail", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          type: "verify-otp",
+          email: email.trim(),
+          otp: entered,
+        }),
+      });
+      const data = await res.json();
+
+      if (!data.success) {
+        setOtpError(data.error || "Incorrect OTP. Please try again.");
+        setOtpLoading(false);
+        return;
+      }
+
+      // OTP verified — create Firebase account
       const userCred = await createUserWithEmailAndPassword(
         auth,
         email.trim(),
@@ -128,23 +212,43 @@ export default function AccountPage() {
         email: email.trim(),
         role: "user",
         createdAt: new Date().toISOString(),
-      }).catch((e) => console.log("Firestore save failed:", e));
-      setSignupLoading(false);
+      });
+
       resetFields();
+      setOtpSent(false);
       setTab("login");
       showToast("Account created! You can now log in.", "success");
-    } catch (error) {
-      setSignupLoading(false);
+    } catch (err) {
       const msg =
-        error.code === "auth/email-already-in-use"
+        err.code === "auth/email-already-in-use"
           ? "Email already registered. Try logging in."
-          : error.code === "auth/invalid-email"
-            ? "Please enter a valid email."
-            : error.code === "auth/weak-password"
-              ? "Password too weak. Use 6+ characters."
-              : "Something went wrong. Please try again.";
-      showToast(msg, "error");
+          : "Account creation failed. Try again.";
+      setOtpError(msg);
+    } finally {
+      setOtpLoading(false);
     }
+  };
+
+  /* ── Resend OTP ── */
+  const handleResendOtp = async () => {
+    setOtpValues(["", "", "", "", "", ""]);
+    setOtpError("");
+    try {
+      const res = await fetch("/api/send-mail", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ type: "otp", email: email.trim() }),
+      });
+      const data = await res.json();
+      if (data.success) {
+        showToast("OTP resent to your email 📩", "success");
+      } else {
+        showToast("Failed to resend OTP. Try again.", "error");
+      }
+    } catch {
+      showToast("Failed to resend OTP. Try again.", "error");
+    }
+    setTimeout(() => otpRefs.current[0]?.focus(), 100);
   };
 
   /* ── Login ── */
@@ -168,11 +272,8 @@ export default function AccountPage() {
         return;
       }
       const role = snap.data().role;
-      if (role === "admin") {
-        router.push("/Admin-Dashboard");
-      } else if (role === "user") {
-        router.push("/track-your-ride");
-      }
+      if (role === "admin") router.push("/Admin-Dashboard");
+      else if (role === "user") router.push("/track-your-ride");
     } catch (error) {
       const msg =
         error.code === "auth/user-not-found" ||
@@ -196,6 +297,7 @@ export default function AccountPage() {
         {
           fullName: result.user.displayName || "",
           email: result.user.email || "",
+          role: "user",
         },
         { merge: true },
       );
@@ -232,11 +334,16 @@ export default function AccountPage() {
     </svg>
   );
 
+  const showLoginSignup = !forgotOpen && !otpSent;
+  const showForgot = forgotOpen && !resetSent;
+  const showResetDone = forgotOpen && resetSent;
+  const showOtp = otpSent;
+
   return (
     <>
       <Header />
 
-      {/* ── Toast ── */}
+      {/* Toast */}
       {toast && (
         <div className="acc-toast-wrap">
           <div className={`acc-toast ${toast.type}`}>
@@ -256,6 +363,7 @@ export default function AccountPage() {
       )}
 
       <div className="acc-page">
+        {/* Left brand panel */}
         <div className="acc-panel">
           <div className="acc-panel__logo">
             <Image
@@ -284,10 +392,13 @@ export default function AccountPage() {
           </p>
         </div>
 
-        {/* ── Right form side ── */}
+        {/* Right form side */}
         <div className="acc-form-side">
           <div className="acc-box">
-            <div className={`acc-tabs ${forgotOpen ? "acc-tabs--hidden" : ""}`}>
+            {/* Tabs */}
+            <div
+              className={`acc-tabs ${forgotOpen || otpSent ? "acc-tabs--hidden" : ""}`}
+            >
               <button
                 className={`acc-tab ${tab === "login" ? "active" : ""}`}
                 onClick={() => switchTab("login")}
@@ -304,15 +415,10 @@ export default function AccountPage() {
               </button>
             </div>
 
-            {/* ── Slide wrapper: holds all 3 panels ── */}
             <div className="acc-slide-wrap">
-              {/* LOGIN PANEL */}
+              {/* ══ LOGIN / SIGNUP PANEL ══ */}
               <div
-                className={`acc-card acc-slide-panel ${
-                  forgotOpen
-                    ? "acc-slide-panel--exit-left"
-                    : "acc-slide-panel--active"
-                }`}
+                className={`acc-card acc-slide-panel ${showLoginSignup ? "acc-slide-panel--active" : "acc-slide-panel--exit-left"}`}
               >
                 <h1 className="acc-card__title">
                   {tab === "login" ? "Welcome back" : "Create your account"}
@@ -445,7 +551,7 @@ export default function AccountPage() {
                         className="acc-submit-btn"
                         disabled={signupLoading}
                       >
-                        {signupLoading ? "Creating account…" : "Create Account"}
+                        {signupLoading ? "Sending OTP…" : "Create Account"}
                       </button>
                     </form>
                     <button
@@ -469,19 +575,12 @@ export default function AccountPage() {
                 )}
               </div>
 
-              {/* FORGOT PASSWORD PANEL */}
+              {/* ══ FORGOT PASSWORD PANEL ══ */}
               <div
-                className={`acc-card acc-slide-panel ${
-                  forgotOpen && !resetSent
-                    ? "acc-slide-panel--active"
-                    : forgotOpen && resetSent
-                      ? "acc-slide-panel--exit-left"
-                      : "acc-slide-panel--enter-right"
-                }`}
+                className={`acc-card acc-slide-panel ${showForgot ? "acc-slide-panel--active" : showResetDone ? "acc-slide-panel--exit-left" : "acc-slide-panel--enter-right"}`}
               >
                 <button className="acc-back-btn" onClick={closeForgot}>
-                  <span className="acc-back-arrow">&#8592;</span>
-                  Back to login
+                  <span className="acc-back-arrow">&#8592;</span>Back to login
                 </button>
                 <h1 className="acc-card__title">Reset password</h1>
                 <p className="acc-card__sub">
@@ -515,13 +614,9 @@ export default function AccountPage() {
                 </p>
               </div>
 
-              {/* RESET SUCCESS PANEL */}
+              {/* ══ RESET SUCCESS PANEL ══ */}
               <div
-                className={`acc-card acc-slide-panel ${
-                  resetSent
-                    ? "acc-slide-panel--active"
-                    : "acc-slide-panel--enter-right"
-                }`}
+                className={`acc-card acc-slide-panel ${showResetDone ? "acc-slide-panel--active" : "acc-slide-panel--enter-right"}`}
               >
                 <div className="acc-success-icon">
                   <svg viewBox="0 0 24 24" fill="none" width={28} height={28}>
@@ -547,28 +642,123 @@ export default function AccountPage() {
                 </p>
                 <p className="acc-sent-email">{forgotEmail}</p>
                 <p className="acc-info-text">
-                  Link will be valid for 15 minutes. please check your spam
-                  folder if not received.
+                  Link valid for 15 minutes. Check spam if not received.
                 </p>
                 <button className="acc-submit-btn" onClick={closeForgot}>
                   Back to login
                 </button>
                 <p className="acc-switch" style={{ marginTop: "14px" }}>
-                  Didn&apos;t receive the email?
-                  <button
-                    onClick={() => {
-                      setResetSent(false);
-                    }}
-                  >
+                  Didn&apos;t receive?
+                  <button onClick={() => setResetSent(false)}>
                     Resend link
                   </button>
                 </p>
               </div>
+
+              {/* ══ OTP VERIFICATION PANEL ══ */}
+              <div
+                className={`acc-card acc-slide-panel ${showOtp ? "acc-slide-panel--active" : "acc-slide-panel--enter-right"}`}
+              >
+                <button
+                  className="acc-back-btn"
+                  onClick={() => {
+                    setOtpSent(false);
+                    setOtpError("");
+                    setOtpValues(["", "", "", "", "", ""]);
+                  }}
+                >
+                  <span className="acc-back-arrow">&#8592;</span>Back
+                </button>
+
+                <div className="otp-header">
+                  <div className="otp-header__icon">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
+                      <rect
+                        x="2"
+                        y="4"
+                        width="20"
+                        height="16"
+                        rx="3"
+                        stroke="#d80117"
+                        strokeWidth="1.8"
+                      />
+                      <path
+                        d="M2 8l10 6 10-6"
+                        stroke="#d80117"
+                        strokeWidth="1.8"
+                        strokeLinecap="round"
+                      />
+                    </svg>
+                  </div>
+                  <h1 className="acc-card__title">Verify your email</h1>
+                  <p className="acc-card__sub">
+                    We sent a 6-digit OTP to{" "}
+                    <strong style={{ color: "#1a1a2e" }}>{email}</strong>
+                  </p>
+                </div>
+
+                <div className="otp-boxes" onPaste={handleOtpPaste}>
+                  {otpValues.map((val, i) => (
+                    <input
+                      key={i}
+                      ref={(el) => (otpRefs.current[i] = el)}
+                      className={`otp-box ${otpError ? "otp-box--error" : ""} ${val ? "otp-box--filled" : ""}`}
+                      type="text"
+                      inputMode="numeric"
+                      maxLength={1}
+                      value={val}
+                      onChange={(e) => handleOtpChange(i, e.target.value)}
+                      onKeyDown={(e) => handleOtpKeyDown(i, e)}
+                      autoFocus={i === 0 && otpSent}
+                      disabled={otpLoading}
+                    />
+                  ))}
+                </div>
+
+                {otpError && (
+                  <p className="otp-error">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none">
+                      <circle
+                        cx="12"
+                        cy="12"
+                        r="10"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                      />
+                      <path
+                        d="M12 8v4M12 16h.01"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                      />
+                    </svg>
+                    {otpError}
+                  </p>
+                )}
+
+                <button
+                  className="acc-submit-btn"
+                  onClick={handleVerifyOtp}
+                  disabled={otpLoading || otpValues.join("").length < 6}
+                  style={{ marginTop: "22px" }}
+                >
+                  {otpLoading ? "Verifying…" : "Verify & Create Account"}
+                </button>
+
+                <p className="acc-switch" style={{ marginTop: "16px" }}>
+                  Didn&apos;t receive the OTP?
+                  <button onClick={handleResendOtp} disabled={otpLoading}>
+                    Resend OTP
+                  </button>
+                </p>
+
+                <p className="otp-hint">OTP expires in 10 minutes</p>
+              </div>
             </div>
-            {/* end acc-slide-wrap */}
           </div>
         </div>
       </div>
+
       <SiteFooter />
     </>
   );

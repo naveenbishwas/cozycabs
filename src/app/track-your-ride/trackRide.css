@@ -728,9 +728,6 @@
   transform: none;
 }
 
-/* ════════════════════════════════════════════════
-   LOADING
-════════════════════════════════════════════════ */
 .trp-loading {
   text-align: center;
   padding: 60px 20px;
@@ -757,9 +754,6 @@
   }
 }
 
-/* ════════════════════════════════════════════════
-   EMPTY STATE
-════════════════════════════════════════════════ */
 .trp-empty {
   text-align: center;
   padding: 60px 20px;
@@ -788,13 +782,7 @@
   max-width: 320px;
   margin: 0 auto;
 }
-/* ════════════════════════════════════════════════
-   TRACK RIDE — MOBILE UX FIX
-   Existing trackRide.css ke saare @media (max-width: 640px)
-   blocks ko DELETE karke yeh paste karo
-   ════════════════════════════════════════════════ */
 
-/* ── Filter tabs — horizontal scroll, no wrap ── */
 .trp-filters {
   display: flex;
   gap: 6px;
@@ -814,7 +802,7 @@
   flex-shrink: 0;
 }
 
-/* ── Booking card top row — fixed 2-row layout ── */
+/*Booking card top row*/
 .bk-card__top {
   display: grid;
   grid-template-columns: 1fr auto;
@@ -872,7 +860,7 @@
   white-space: nowrap;
 }
 
-/* Right col — status pill + price + toggle stacked */
+/* Right col */
 .bk-card__top-right {
   display: flex;
   flex-direction: column;
@@ -904,7 +892,6 @@
   padding: 0 14px 16px;
 }
 
-/* Detail grid — single col on mobile */
 .bk-detail-grid {
   grid-template-columns: 1fr 1fr;
   gap: 8px;
@@ -920,7 +907,7 @@
   font-size: 13.5px;
 }
 
-/* Action buttons — wrap nicely */
+/* Action buttons */
 .bk-actions {
   display: flex;
   gap: 6px;

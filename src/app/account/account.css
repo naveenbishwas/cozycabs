@@ -726,3 +726,167 @@
   line-height: 1.6;
   margin-bottom: 20px;
 }
+/* ════════════════════════════════════════════════════════════════
+   OTP VERIFICATION UI — append at end of account.css
+════════════════════════════════════════════════════════════════ */
+
+/* ── OTP header block ── */
+.otp-header {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 28px;
+}
+
+.otp-header__icon {
+  width: 52px;
+  height: 52px;
+  background: #fff0f1;
+  border: 1.5px solid #ffc4c8;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 6px;
+}
+
+/* ── 6 digit input boxes ── */
+.otp-boxes {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 4px;
+}
+
+.otp-box {
+  width: 48px;
+  height: 56px;
+  border: 2px solid var(--grey-2);
+  border-radius: 10px;
+  background: var(--grey-1);
+  font-family: var(--font);
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--txt);
+  text-align: center;
+  outline: none;
+  caret-color: #d80117;
+  transition:
+    border-color 0.2s,
+    background 0.2s,
+    box-shadow 0.2s,
+    transform 0.15s;
+  -webkit-appearance: none;
+}
+
+.otp-box:focus {
+  border-color: #d80117;
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(216, 1, 23, 0.1);
+  transform: translateY(-2px);
+}
+
+.otp-box--filled {
+  border-color: #d80117;
+  background: #fff0f1;
+  color: #d80117;
+}
+
+.otp-box--error {
+  border-color: #d80117;
+  background: #fff0f1;
+  animation: otp-shake 0.35s ease;
+}
+
+@keyframes otp-shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-5px);
+  }
+  40% {
+    transform: translateX(5px);
+  }
+  60% {
+    transform: translateX(-4px);
+  }
+  80% {
+    transform: translateX(4px);
+  }
+}
+
+/* ── Error message ── */
+.otp-error {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #d80117;
+  margin-top: 10px;
+  padding: 9px 12px;
+  background: #fff0f1;
+  border: 1px solid #ffc4c8;
+  border-radius: 8px;
+  animation: otp-fade-in 0.2s ease;
+}
+
+.otp-error svg {
+  flex-shrink: 0;
+  color: #d80117;
+}
+
+@keyframes otp-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── Hint text ── */
+.otp-hint {
+  text-align: center;
+  font-size: 12px;
+  color: var(--grey-3);
+  margin-top: 12px;
+  font-weight: 500;
+}
+
+/* ── Mobile ── */
+@media (max-width: 480px) {
+  .otp-boxes {
+    gap: 7px;
+  }
+
+  .otp-box {
+    width: 42px;
+    height: 50px;
+    font-size: 20px;
+    border-radius: 8px;
+  }
+
+  .otp-header__icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+  }
+}
+
+@media (max-width: 360px) {
+  .otp-boxes {
+    gap: 5px;
+  }
+
+  .otp-box {
+    width: 36px;
+    height: 44px;
+    font-size: 18px;
+    border-radius: 7px;
+  }
+}
